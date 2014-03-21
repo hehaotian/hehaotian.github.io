@@ -1,0 +1,41 @@
+# Written by Haotian He
+# How to extract data:
+# 1. Open a Sound file first
+# 2. Choose the range of the Sound
+# 3. Run the script!
+# 4. Just wait for it!
+#
+# Getting the interval from the user:
+form Formant listing by specific interval value...
+  comment Supply the interval for listing:
+  positive Interval(sec) 0.01
+endform
+
+# Printing the table header:
+echo Formant listing by the interval of 'interval' sec:
+printline
+printline Time(sec)'tab$'F1(Hz)'tab$'F2(Hz)'tab$'F3(Hz)'tab$'F4(Hz)
+printline ------------------------------------------------
+
+# Initializing loop variables:
+begin=Get begin of selection
+end=Get end of selection
+time=begin
+
+# Listing by specific interval:
+while time<=end
+  Move cursor to... 'time'
+  f_1=Get first formant
+  f_2=Get second formant
+  f_3=Get third formant
+  f_4=Get fourth formant
+  printline 'time:8''tab$''f_1:2''tab$''f_2:2''tab$''f_3:2''tab$''f_4:2'
+  time=time+interval
+endwhile
+
+printline ------------------------------------------------
+
+# Recover the selection as ever:
+Select... 'begin' 'end'
+
+# END OF SCRIPT #

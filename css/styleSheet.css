@@ -1,0 +1,98 @@
+body {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: #050505;
+	color: #666;
+	font-family: 'Ideal Sans SSm A', 'Ideal Sans SSm B', 'Ideal Sans', 'Sans Serif';
+	font-weight: 300;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+}
+
+a {
+	text-decoration: none;
+	border: 0px;
+}
+
+a:link, a:visited {
+	color: #666;
+}
+
+#bigBox {
+	display: block;
+	position: relative;
+	left: 10px;
+	top: 100px;
+	height: 850px;
+	max-width: 1024px;
+	min-width: 840px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#leftSide, #rightSide {
+	display: table-cell;
+	vertical-align: top;
+	width: 400px;
+	max-width: 500px;
+	min-width: 420px;
+}
+
+#rightSide {
+	max-width: 700px;
+}
+#topSide {
+	display: none;
+}
+
+#appAndTagline h1 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 110px;
+	text-align: center;
+	font-size: 51px;
+	font-weight: normal;
+	color: #f8f8f8;
+	font-family: 'Ideal Sans A', 'Ideal Sans B', 'Ideal Sans', 'Sans Serif';
+	font-weight: 300;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+}
+#appAndTagline p {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 80px;
+	text-align: center;
+	font-size: 13px;
+	color: #696969;
+}
+
+#appStore img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 350px;
+}
+
+#appAndTaglineOnTop {
+	display: none;
+}
+
+
+img {
+	border: 0px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+     #bigBox {
+		background-image: url('../images/background@2x.jpg');
+     }
+}
+
