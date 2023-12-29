@@ -28,6 +28,11 @@
     hsl(240, 1%, 25%) 3%, 
     hsl(0, 0%, 19%) 97%
   );
+  --bg-gradient-pink: linear-gradient(
+    to bottom right, 
+    hsl(300, 30%, 75%) 3%, 
+    hsl(0, 0%, 19%) 97%
+  );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
     hsla(240, 1%, 18%, 0.251) 0%, 
@@ -331,10 +336,10 @@ main {
   gap: 15px;
 }
 
-.avatar-box {
-  background: var(--bg-gradient-onyx);
-  border-radius: 40px;
-}
+/* .avatar-box {
+  background: var(--bg-gradient-pink);
+  border-radius: 100px;
+} */
 
 .info-content .name {
   color: var(--white-2);
@@ -1337,9 +1342,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
+  .avatar-box { border-radius: 100px; }
 
-  .avatar-box img { width: 120px; }
+  .avatar-box img { width: 125px; height: auto; }
 
   .info-content .name { margin-bottom: 15px; }
 
@@ -1835,7 +1840,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 250px; height: auto;}
+  .avatar-box img { width: 180px; height: 180px;}
 
   .info-content .name {
     white-space: nowrap;
