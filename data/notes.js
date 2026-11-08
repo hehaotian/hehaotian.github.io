@@ -2,6 +2,7 @@
 // category: shown in grey next to the title.
 // blocks: [["p", zh, en] | ["h", zh, en, "01"] | ["sub", zh, en] | ["epi", zh, en]] for a long bilingual piece; refs: [{t, u}] for a reference list.
 // place: where it was written, shown at the end like a signature.
+// languages: languages used in the content, for the flag filter on the list page (e.g. ["Chinese", "English"]).
 // stanzas: [[line, line, ...], ...] for text that is neither poem nor prose.
 // pairStanzas: [[[original, translation], ...], ...] for the same, with each line translated; photo: { file, alt } adds a picture (in assets/photos/) under the text.
 // slug: optional short link name (needed when the title isn't plain English letters).
@@ -11,7 +12,9 @@ window.NOTES = [
   {
     "date": "2025-01-29",
     "title": "Stillness",
-    "category": "Reader Response",
+    "category": "Book",
+    "place": "Sokcho, Gangwon, Corée du Sud\nSokcho, Gangwon, South Korea",
+    "languages": ["French", "English"],
     "book": {
       "cover": "sokcho.jpeg",
       "title": "Hiver à Sokcho",
@@ -52,7 +55,7 @@ window.NOTES = [
     "date": "2026-10-11",
     "title": "Severance and the Name I Keep",
     "slug": "severance",
-    "category": "Reader Response",
+    "category": "Book",
     "book": {
       "cover": "severance.jpeg",
       "title": "Severance",
@@ -62,6 +65,8 @@ window.NOTES = [
         "A fever leaves its victims repeating the routines of their old lives. Candace Chen, a Bible production coordinator in New York, keeps going to work."
       ]
     },
+    "place": "于加州旧金山\nSan Francisco, CA",
+    "languages": ["Chinese", "English"],
     "prose": [
       [
         "马凌的小说《断裂》里的“申氏发热”是一则末日寓言，它的讽刺在于：患者并没有变成扑向活人的怪物，而是一遍遍重复生前的日常：折叠衣物、维护陈列、按时打卡。女主角 Candace 在一家出版公司负责《宝石圣经》的生产协调。纽约渐渐空了，她仍然每天走进那栋空楼上班。这算不上什么崇高的坚守，更像是习惯接管了她：没有人再需要那些《圣经》，工作却还在继续。病的症状和上班的样子，在这里几乎分不出来。",
@@ -98,6 +103,8 @@ window.NOTES = [
     "title": "東京夜想",
     "slug": "tokyo-night",
     "category": "Lines",
+    "place": "東京にて",
+    "languages": ["Japanese"],
     "stanzas": [
       [
         "夜の東京",
@@ -109,7 +116,7 @@ window.NOTES = [
   {
     "date": "2026-02-28",
     "title": "The One-Inch Gap",
-    "category": "Reader Response",
+    "category": "Book",
     "book": {
       "cover": "vuong.jpeg",
       "title": "On Earth We’re Briefly Gorgeous",
@@ -119,7 +126,8 @@ window.NOTES = [
         "A letter from a son, nicknamed Little Dog, to his mother, who cannot read it."
       ]
     },
-    "place": "Livermore, CA",
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": ["Chinese", "English"],
     "prose": [
       [
         "在《大地上我们转瞬即逝的绚烂》中，王鸥行不断将越战的历史缩小至单个器官的尺寸，而眼睛则是他处理得最为锐利之处。这场战争过去常常是从远距离被审视的：从飞机上、在地图上、在伤亡数字中，以及后来在将难民归类为编号、受害者和待处理案卷的文件里。王鸥行避开了那种视角，转而投向那个进行凝视的肉身。在此，莫里斯·梅洛-庞蒂的理论大有裨益，因为他主张我们并非作为超然的旁观者去观察。我们是以身体的形式、从特定之处、带着局限去观察的。在王鸥行的手中，凝视不再是控制的工具，而成为了孤独与饥渴的象征。",
@@ -162,7 +170,8 @@ window.NOTES = [
   {
     "date": "2025-01-27",
     "title": "Between Two Summers",
-    "place": "Sokcho, Gangwon, Korea",
+    "place": "于韩国江原道束草\nSokcho, Gangwon, Korea",
+    "languages": ["Chinese", "English"],
     "category": "Journal",
     "prose": [
       [
@@ -184,6 +193,7 @@ window.NOTES = [
     "title": "丽水",
     "slug": "yeosu",
     "place": "于韩国丽水",
+    "languages": ["Chinese"],
     "category": "Journal",
     "body": [
       "2025年的第一次旅行，在微鼾中突然醒来，拉开大巴的红色窗帘，看到全罗南道的海岸线时就开始了。耳机里单曲循环着那首无比催眠和治愈的《여수밤바다》。在陌生小城里，用蹩脚的韩语，我准备展开为期一周的慢节奏生活。",
@@ -197,6 +207,7 @@ window.NOTES = [
     "slug": "shadow",
     "category": "Lines",
     "place": "于葡萄牙里斯本",
+    "languages": ["Chinese"],
     "stanzas": [
       [
         "最近旅行的时候 总会想起小时候和家乡",
@@ -234,7 +245,8 @@ window.NOTES = [
     "title": "Fate and Plasticity",
     "slug": "fate-and-plasticity",
     "category": "Reflection",
-    "place": "于埃及开罗",
+    "place": "于埃及开罗\nCairo, Egypt",
+    "languages": ["Chinese", "English"],
     "prose": [
       [
         "Williams 2010年在《柳叶刀》上发表了关于ADHD相关罕见染色体拷贝数变异的研究，此后十多年来，越来越多人认同基因对ADHD有影响，Faraone和Larsson 2019年在《分子精神病学》上的综述则估计其遗传度约为74%。而我对这件事的想法却是，如果我们把多动症注意力不集中、时间管理能力差归为其症状而非特性的话，那么与其相反的在家庭学校教育中不遗余力宣扬的要后天培养习得的注意力集中、善于时间管理，是不是整个方向就错了呢？这些可能真的不是后天能习得培养的，和一个小孩努不努力没有任何关系，而也是在我们出生之时就早已确定了呢？",
@@ -263,7 +275,8 @@ window.NOTES = [
     "title": "사랑하는 당신에게",
     "slug": "dear-you",
     "category": "Lines",
-    "place": "于美国萨克拉门托 · 미국 새크라멘토에서",
+    "place": "于美国萨克拉门托\n미국 새크라멘토에서",
+    "languages": ["Chinese", "Korean"],
     "photo": {
       "file": "dear-you.jpeg",
       "alt": "The handwritten manuscript, held up against the window of the California Zephyr"
@@ -379,6 +392,7 @@ window.NOTES = [
     "slug": "taiwan",
     "category": "Lines",
     "place": "於台灣台北",
+    "languages": ["Chinese"],
     "stanzas": [
       [
         "台北的街頭總是熱鬧，",
@@ -400,25 +414,26 @@ window.NOTES = [
   },
   {
     "date": "2026-09-02",
-    "title": "走回来了",
+    "title": "Walked Back",
     "slug": "walked-back",
     "category": "Poem",
-    "place": "于美国西雅图",
-    "stanzas": [
+    "place": "于华州西雅图\nSeattle, WA",
+    "languages": ["Chinese", "English"],
+    "pairStanzas": [
       [
-        "那天下雨 阴郁又冰冷",
-        "沿着湖边一直走 却越走越绿",
-        "于是也没想过要往回走",
-        "就这么走了很久很久"
+        ["那天下雨 阴郁又冰冷", "That day it rained, gray and cold"],
+        ["沿着湖边一直走 却越走越绿", "I kept walking along the lake, and the farther I went the greener it got"],
+        ["于是也没想过要往回走", "so it never occurred to me to turn around"],
+        ["就这么走了很久很久", "I just walked, for a long, long time"]
       ],
       [
-        "后来很多次",
-        "一个人在陌生的路上走",
-        "也不知道走了多久 不知道走到了哪",
-        "但只要 Sound Transit 钻出 Beacon Hill 的地下道",
-        "天际线那么一出现",
-        "我就知道",
-        "我又走回来了"
+        ["后来很多次", "Many times since then"],
+        ["一个人在陌生的路上走", "alone on some unfamiliar road"],
+        ["也不知道走了多久 不知道走到了哪", "not knowing how long I\u2019d walked or where I\u2019d ended up"],
+        ["但只要 Sound Transit 钻出 Beacon Hill 的地下道", "but the moment the Sound Transit train climbs out of the Beacon Hill tunnel"],
+        ["天际线那么一出现", "and the skyline appears"],
+        ["我就知道", "I know"],
+        ["我又走回来了", "I\u2019m back"]
       ]
     ]
   },
@@ -427,7 +442,8 @@ window.NOTES = [
     "title": "Gestalt",
     "slug": "gestalt",
     "category": "Reflection",
-    "place": "Amsterdam, Netherlands",
+    "place": "于荷兰阿姆斯特丹\nAmsterdam, Netherlands",
+    "languages": ["Chinese", "English"],
     "prose": [
       [
         "30岁之后再想到的荷兰，不再是梵高风车，脑子里那条怡然自得的狗已经变成了30岁之后最喜欢的作家塞斯诺特博姆。在荷兰的这几天，总想起他那句话：时间这种东西，回头看时，总像是被压缩成完整的一块，只剩下一种味道。",
@@ -448,7 +464,8 @@ window.NOTES = [
     "title": "Goodbye, Expensive Hallucination",
     "slug": "expensive-hallucination",
     "category": "Journal",
-    "place": "Livermore, CA",
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": ["Chinese", "English"],
     "prose": [
       [
         "11月从战乱中的苏丹回来，经过两个月康复治疗，我终于在12月31日再次打开社交媒体。",
@@ -485,7 +502,8 @@ window.NOTES = [
     "title": "Denver",
     "slug": "denver",
     "category": "Journal",
-    "place": "Denver, CO",
+    "place": "于科罗拉多州丹佛\nDenver, CO",
+    "languages": ["Chinese", "English"],
     "prose": [
       [
         "记得凯鲁亚克在《在路上》里写丹佛：“突然间我们已下了山，可以俯瞰丹佛海一样博大的平原，热浪一下子向我们涌来。我们开始唱歌。现在我非常渴望去旧金山。”",
@@ -503,6 +521,7 @@ window.NOTES = [
     "slug": "grip",
     "category": "Lines",
     "place": "于加州库比蒂诺",
+    "languages": ["Chinese"],
     "stanzas": [
       [
         "跌跌撞撞的青春 现在想来从未",
@@ -530,6 +549,7 @@ window.NOTES = [
     "slug": "above-the-clouds",
     "category": "Journal",
     "place": "東京にて",
+    "languages": ["Japanese"],
     "body": [
       "長距離のフライトは、なぜか言いたいことがどんどん浮かんでくる。",
       "人生のほんの一部なのに、その後の生き方を大きく変えてしまう時間が、誰にでもあると思う。",
@@ -543,7 +563,8 @@ window.NOTES = [
     "title": "Desires and Fears",
     "slug": "desires-and-fears",
     "category": "Journal",
-    "place": "Florence, Tuscany, Italy",
+    "place": "于意大利托斯卡纳佛罗伦萨\nFlorence, Tuscany, Italy",
+    "languages": ["Chinese", "English"],
     "prose": [
       [
         "今年是曾经生活在托斯卡纳的卡尔维诺百年诞辰。他在《看不见的城市》中的这句名言“城市如同梦境，由欲望与恐惧构成”（Le città, come i sogni, sono costruite di desideri e di paure.）更加贴切地描述了佛罗伦萨这座时空交错的城市。美第奇家族，涉足金融业务而感到罪孽深重，施以慷慨资助各类艺术天才，催生了众多伟大的杰作，将佛罗伦萨打造成文艺复兴的巅峰。而美第奇之约，更是保障了这些珍贵的艺术珍品能够永远留在佛罗伦萨，让这座城市的文化遗产传承数百年。",
@@ -568,7 +589,8 @@ window.NOTES = [
     "title": "Continuous and Discrete",
     "slug": "continuous-and-discrete",
     "category": "Journal",
-    "place": "Livermore, CA",
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": ["Chinese", "English"],
     "prose": [
       [
         "最近在沉下心来搞语音技术研究，回顾这些年来的发展，我们从单纯对ASR生成的人造的音素特征这样离散变量的依赖，而转移到了更多甚至完全对通过HuBERT或wav2vec生成的连续变量来进行下一阶段大语言模型的工作了（当然，HuBERT本身就以离散的聚类单元作为训练目标，不少语音大模型也直接使用这类离散单元，连续与离散从来都是并存的）。近年来语言技术的突飞猛进，正是由我们越来越深刻地对事物本质的连续性和离散性的共同作用的理解所产生的。",
@@ -593,7 +615,8 @@ window.NOTES = [
     "title": "You Are Absolutely Right",
     "slug": "you-are-absolutely-right",
     "category": "Journal",
-    "place": "Dublin, CA",
+    "place": "于加州都柏林\nDublin, CA",
+    "languages": ["Chinese", "English"],
     "prose": [
       [
         "每次往人群里走近一点，我对这个社会就更失望一点。我花了20年挣脱与生俱来的那些关系，才可以远离人群，随心所欲。有意识地回来，是想讨点痛苦，也确实讨到了。",
@@ -613,8 +636,9 @@ window.NOTES = [
     "date": "2020-05-01",
     "title": "The Color of Law",
     "slug": "the-color-of-law",
-    "place": "Santa Clara, CA",
-    "category": "Reader Response",
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "category": "Book",
     "book": {
       "cover": "color_of_law.jpg",
       "title": "The Color of Law",
@@ -775,6 +799,8 @@ window.NOTES = [
     "title": "Before I Became a “Good Student”",
     "slug": "before-a-good-student",
     "category": "Reflection",
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
     "blocks": [
       [
         "p",
@@ -902,7 +928,7 @@ window.NOTES = [
     ]
   },
   {
-    date: "2026-11-03", title: "Polis and Civitas", category: "Reflection", place: "San Ramon, CA",
+    date: "2026-11-03", title: "Polis and Civitas", category: "Reflection", place: "于加州圣拉蒙\nSan Ramon, CA", languages: ["Chinese", "English"],
     prose: [
       [
         "古典学课上讲了Polis与Civitas相反的社会观。",
@@ -919,7 +945,7 @@ window.NOTES = [
     ]
   },
   {
-    date: "2026-09-27", title: "Delivery", category: "Poem", place: "Fremont, CA",
+    date: "2026-09-27", title: "Delivery", category: "Poem", place: "于加州弗里蒙特\nFremont, CA", languages: ["Chinese", "English"],
     poem: {
       heading: "Delivery",
       pairs: [
@@ -936,5 +962,59 @@ window.NOTES = [
         ["原来是给那些，什么都扛着的人", "It turns out it’s for the people, who are carrying everything."]
       ]
     }
+  },
+  {
+    "date": "2026-08-03",
+    "title": "Brugge",
+    "slug": "brugge",
+    "category": "Poem",
+    "place": "于比利时布鲁日\nBruges, Belgium",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "pairStanzas": [
+      [
+        [
+          "布鲁日最早的名字 据说只是停船的地方",
+          "The oldest name of Bruges, they say, meant only a place to moor a boat"
+        ],
+        [
+          "一个人到了这里 不用跟谁解释为什么停下",
+          "Come here alone, and you need not explain to anyone why you stopped"
+        ]
+      ],
+      [
+        [
+          "后来桥越来越多 桥不像街道",
+          "Later there were more and more bridges, and a bridge is not like a street"
+        ],
+        [
+          "没有门牌 也留不住谁",
+          "no house numbers, nothing to hold anyone"
+        ],
+        [
+          "你可以住在左岸 住在右岸",
+          "You can live on the left bank, or the right"
+        ],
+        [
+          "却没有人真正住过 桥中间那一截悬空",
+          "but no one has ever really lived in the middle of a bridge, that stretch hanging in the air"
+        ]
+      ],
+      [
+        ["1837年 雨果在桥上站了很久", "In 1837 Hugo stood on the bridge for a long time"],
+        ["朱丽叶叫过他 他没有回头", "Juliette called to him; he did not turn around"],
+        ["后来我觉得 那一夜他站着的 不是桥 也不是岸", "Later I came to think that what he stood on that night was neither bridge nor bank"],
+        ["水一直把灯影打散 又慢慢拼回去", "The water kept scattering the lamplight, then slowly piecing it back together"],
+        ["像一页写坏了的稿纸 改了一遍 又一遍", "like a spoiled sheet of manuscript, revised once, and again, and again"]
+      ],
+      [
+        [
+          "而人站在桥上 总有那么一会儿 谁也够不着",
+          "And a person standing on a bridge is, for a while, beyond everyone’s reach"
+        ]
+      ]
+    ]
   }
 ];

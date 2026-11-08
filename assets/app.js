@@ -33,6 +33,8 @@ window.addEventListener("hashchange", () => setMenu(false));
 // ---- shared pop-up page: "#tab/slug" opens an entry from Notes, Plates, Goods or Gigs over the current tab
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const fmtDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+// country flags for the filter buttons (Notes and Plates); unknown countries fall back to their name
+const FLAGS = { "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽", "Egypt": "🇪🇬" };
 const slugify = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const reader = document.createElement("div");
 reader.id = "reader"; reader.hidden = true;
@@ -102,19 +104,25 @@ function detailPage({ kind, title, meta, item }) {
   const longDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
   const listEl = document.getElementById("notes-list"), tagsEl = document.getElementById("notes-tags");
   const cats = [...new Set(list.map(n => n.category).filter(Boolean))];
-  let active = "";
+  const LANG_FLAGS = { Chinese: "🇨🇳", English: "🇺🇸", Japanese: "🇯🇵", Korean: "🇰🇷", French: "🇫🇷" };   // a flag stands for the language; unknown languages fall back to their name
+  const hasLang = (n, l) => (n.languages || []).includes(l);
+  const langs = [...new Set(list.flatMap(n => n.languages || []))].sort((a, b) => list.filter(n => hasLang(n, b)).length - list.filter(n => hasLang(n, a)).length || (a < b ? -1 : 1));
+  const langsEl = document.getElementById("notes-langs");
+  const on = { cat: "", lang: "" };
+  const row = (items, key) => items.length > 1 ? ["", ...items].map(v =>
+    `<button type="button" class="tag${v === on[key] ? " on" : ""}" data-key="${key}" data-v="${esc(v)}"${key === "lang" && LANG_FLAGS[v] ? ` title="${esc(v)}" aria-label="${esc(v)}"` : ""}>${v ? (key === "lang" && LANG_FLAGS[v]) || esc(v) : "All"}</button>`).join("") : "";
   const renderList = () => {
-    const shown = list.filter(n => !active || n.category === active);
+    const shown = list.filter(n => (!on.cat || n.category === on.cat) && (!on.lang || hasLang(n, on.lang)));
     listEl.innerHTML = shown.length ? shown.map(n => `
     <a class="note" href="#notes/${ids[list.indexOf(n)]}"><span class="d">${fmtDate(n.date)}</span><span class="t">${esc(n.title)}</span>
     ${n.category ? `<span class="cat">${esc(n.category)}</span>` : ""}</a>`).join("")
       : `<p class="empty">Nothing yet.</p>`;
-    tagsEl.innerHTML = cats.length > 1 ? ["", ...cats].map(c =>
-      `<button type="button" class="tag${c === active ? " on" : ""}" data-cat="${esc(c)}">${c ? esc(c) : "All"}</button>`).join("") : "";
+    tagsEl.innerHTML = row(cats, "cat");
+    langsEl.innerHTML = row(langs, "lang");
   };
-  tagsEl.addEventListener("click", e => {
-    const b = e.target.closest("button[data-cat]");
-    if (b) { active = b.dataset.cat; renderList(); }
+  document.getElementById("notes").addEventListener("click", e => {
+    const b = e.target.closest("button[data-key]");
+    if (b) { on[b.dataset.key] = b.dataset.v; renderList(); }
   });
   renderList();
   const ital = t => esc(t).replace(/\*(.+?)\*/g, "<em>$1</em>");
@@ -134,7 +142,7 @@ function detailPage({ kind, title, meta, item }) {
     : n.stanzas ? n.stanzas.map(st => `<p class="stanza">${st.map(esc).join("<br>")}</p>`).join("")
     : n.prose ? n.prose.map(([a, b]) => `<div class="prose"><p>${esc(a)}</p><p class="en">${esc(b).replace(/\*(.+?)\*/g, "<em>$1</em>")}</p></div>`).join("")
     : (n.body || []).map(p => `<p>${esc(p)}</p>`).join("");
-  // book intro for Reader Response: book: { cover: "file.jpg" (in assets/photos/), title, author, lines: ["detail", ...] }
+  // book intro for Book: book: { cover: "file.jpg" (in assets/photos/), title, author, lines: ["detail", ...] }
   const bookHtml = b => !b ? "" : `<div class="book">${b.cover ? `<img class="bcover" src="assets/photos/${esc(b.cover)}" alt="">` : ""}
     <div class="binfo"><p class="bt">${esc(b.title)}</p>${b.author ? `<p class="ba">${esc(b.author)}</p>` : ""}${(b.lines || []).map(l => `<p class="bl">${esc(l)}</p>`).join("")}</div></div>`;
   popups.notes = slug => {
@@ -144,7 +152,7 @@ function detailPage({ kind, title, meta, item }) {
       <p class="by">by Haotian He</p><p class="when">${longDate(n.date)}</p>${bookHtml(n.book)}<hr>
       <div class="text">${body(n)}</div>
       ${n.photo ? `<img class="pimg" src="assets/photos/${esc(n.photo.file)}" alt="${esc(n.photo.alt)}" loading="lazy">` : ""}
-      ${n.place ? `<p class="place">${esc(n.place)}</p>` : ""}
+      ${n.place ? `<p class="place">${esc(n.place).replace(/\n/g, "<br>")}</p>` : ""}
       ${refsHtml(n)}
       <p class="end">© ${n.date.slice(0, 4)} Haotian He. All rights reserved.</p>`;
   };
@@ -186,7 +194,6 @@ function detailPage({ kind, title, meta, item }) {
   const on = { cat: "", country: "" };
   const catsEl = document.getElementById("plates-cats"), countriesEl = document.getElementById("plates-countries"), listEl = document.getElementById("plates-list");
   const label = s => s.replace(/★/g, starImg).replace(/^Bib$/, bibImg).replace(/^REC$/, recImg);
-  const FLAGS = { "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽" };   // unknown countries fall back to their name
   const row = (items, key) => items.length > 1 ? [["", "All"], ...items].map(([v, l]) =>
     `<button type="button" class="tag${String(v) === on[key] ? " on" : ""}" data-key="${key}" data-v="${esc(String(v))}"${key === "country" && FLAGS[l] ? ` title="${esc(l)}" aria-label="${esc(l)}"` : ""}>${key === "cat" ? label(l) : FLAGS[l] || esc(l)}</button>`).join("") : "";
   const renderPlates = () => {
