@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Haotian</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header id="top">
+  <a class="brand" href="#home">Haotian</a>
+  <nav id="tabs" aria-label="Sections">
+    <a href="#steps" data-tab="steps">Steps</a>
+    <a href="#notes" data-tab="notes">Notes</a>
+    <a href="#plates" data-tab="plates">Plates</a>
+    <a href="#gigs" data-tab="gigs">Gigs</a>
+    <a href="#goods" data-tab="goods">Goods</a>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="tab" hidden>
+    <div class="col">
+      <h1>Haotian</h1>
+      <p class="intro">Have a nice day.</p>
+      <ul class="links">
+        <li><a href="#steps">Steps</a><span>Every place since 1989.</span></li>
+        <li><a href="#notes">Notes</a><span>No bots, just soul.</span></li>
+        <li><a href="#plates">Plates</a><span>Eating my way around.</span></li>
+        <li><a href="#gigs">Gigs</a><span>Hands busy, mind open.</span></li>
+        <li><a href="#goods">Goods</a><span>Small things, shared.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- The Steps map is its own page, loaded on first visit -->
+  <section id="steps" class="tab tab-full" hidden>
+    <iframe id="steps-frame" title="Map of places since 1989" data-src="steps/index.html" allow="fullscreen"></iframe>
+  </section>
+
+  <section id="plates" class="tab" hidden>
+    <div class="col">
+      <h2>Plates</h2>
+      <p class="total" id="plates-tally"></p>
+      <div id="plates-cats" class="tags filters"></div>
+      <div id="plates-countries" class="tags filters"></div>
+      <div class="plates" id="plates-list"></div>
+    </div>
+  </section>
+
+  <section id="goods" class="tab" hidden>
+    <div class="col">
+      <h2>Goods</h2>
+      <p class="total" id="goods-total"></p>
+      <div id="goods-list"></div>
+    </div>
+  </section>
+
+  <section id="gigs" class="tab" hidden>
+    <div class="col">
+      <h2>Gigs</h2>
+      <h3>Upcoming</h3>
+      <div id="gigs-upcoming"></div>
+      <h3>Past</h3>
+      <div id="gigs-past"></div>
+    </div>
+  </section>
+
+  <section id="notes" class="tab" hidden>
+    <div class="col">
+      <h2>Notes</h2>
+      <div id="notes-tags" class="tags"></div>
+      <div id="notes-list"></div>
+      <p class="copy" id="notes-copy"></p>
+    </div>
+  </section>
+</main>
+
+<script src="data/gigs.js"></script>
+<script src="data/plates.js"></script>
+<script src="data/goods.js"></script>
+<script src="data/notes.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/cursor.js"></script>
+</body>
+</html>

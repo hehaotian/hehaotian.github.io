@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Haotian's Steps — since 11 Oct 1989</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  html, body { margin: 0; height: 100%; font-family: -apple-system, system-ui, sans-serif; }
+  #map { position: absolute; inset: 0; background: #0e1a24; }
+  .panel {
+    position: absolute; z-index: 1000; background: rgba(15, 23, 32, .88); color: #fff;
+    border-radius: 12px; padding: 12px 16px; backdrop-filter: blur(6px);
+    box-shadow: 0 4px 20px rgba(0,0,0,.4);
+  }
+  #photo { position: absolute; z-index: 1000; right: 20px; top: 50%; transform: translateY(-50%) scale(.96); width: 340px;
+           background: #fff; padding: 10px 10px 8px; border-radius: 6px; box-shadow: 0 8px 28px rgba(0,0,0,.5);
+           opacity: 0; pointer-events: none; transition: opacity .35s, transform .35s; }
+  #photo.show { opacity: 1; transform: translateY(-50%) scale(1); }
+  #photo img { display: block; width: 100%; max-height: calc(100vh - 220px); object-fit: contain; background: #111; }
+  #photo-cap { color: #222; font-size: 14px; font-weight: 600; text-align: center; padding-top: 8px; }
+  #loading { display: none; position: absolute; z-index: 1100; top: 16px; left: 50%; transform: translateX(-50%);
+             background: rgba(15,23,32,.88); color: #fff; font-size: 13px; padding: 6px 14px; border-radius: 16px; }
+  #left { position: absolute; z-index: 1000; top: 16px; left: 56px; width: 330px;
+          display: flex; flex-direction: column; gap: 10px; max-height: calc(100% - 110px); }
+  #left .panel { position: static; }
+  #cities, #countries { min-height: 0; display: flex; flex-direction: column; }
+  #cities h3, #countries h3 { margin: 0 0 6px; font-size: 13px; font-weight: 600; opacity: .7; text-transform: uppercase; letter-spacing: .6px; }
+  /* lists show ~7 rows with an always-visible scrollbar on the right */
+  #cities ol, #countries ol { list-style: none; margin: 0; padding: 0 8px 0 0; overflow-y: scroll; min-height: 0; max-height: 205px; scrollbar-width: thin; scrollbar-color: #ffd166 rgba(255,255,255,.12); }
+  #cities ol::-webkit-scrollbar, #countries ol::-webkit-scrollbar { width: 7px; }
+  #cities ol::-webkit-scrollbar-track, #countries ol::-webkit-scrollbar-track { background: rgba(255,255,255,.12); border-radius: 4px; }
+  #cities ol::-webkit-scrollbar-thumb, #countries ol::-webkit-scrollbar-thumb { background: #ffd166; border-radius: 4px; }
+  #cities li, #countries li { display: flex; align-items: center; gap: 8px; padding: 3px 0; font-size: 14px; }
+  #cities .nm, #countries .nm { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #cities .lc, #countries .lc { opacity: .65; font-size: 13px; margin-left: 4px; }
+  #cities .ct, #countries .ct { opacity: .8; font-variant-numeric: tabular-nums; }
+  #cities .home, #countries .home { background: #ef476f; color: #fff; font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 6px; letter-spacing: .5px; }
+  #date { font-size: 26px; font-weight: 600; letter-spacing: .5px; }
+  #age { opacity: .7; font-size: 13px; margin-bottom: 6px; }
+  #place { font-size: 16px; color: #ffd166; }
+  #miles-row { white-space: nowrap; margin-top: 8px; font-size: 14px; color: #06d6a0; }
+  #local { font-size: 13px; color: #ffd166; opacity: .8; min-height: 0; }
+  #note { font-size: 13px; opacity: .8; }
+  #controls {
+    bottom: 20px; left: 410px; width: min(720px, calc(100vw - 434px));   /* starts right of the left boxes (they end at 386px) */
+  }
+  @media (max-width: 900px) { #controls { left: 12px; width: calc(100vw - 24px); } }
+  #ctl-row { display: flex; align-items: center; gap: 12px; }
+  #years { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; padding-top: 8px; margin-top: 8px; border-top: 1px solid rgba(255,255,255,.12); }
+  #years::-webkit-scrollbar { display: none; }
+  #years button { flex: none; background: none; color: #fff; opacity: .55; padding: 2px 7px; border-radius: 6px; font-size: 12px; font-weight: 500; font-variant-numeric: tabular-nums; }
+  #years button:hover { opacity: 1; background: rgba(255,255,255,.12); }
+  #years button.on { opacity: 1; background: #ffd166; color: #111; }
+  button, select {
+    background: #ffd166; border: 0; border-radius: 8px; padding: 6px 14px;
+    font-size: 14px; font-weight: 600; cursor: pointer;
+  }
+  #scrub { flex: 1; accent-color: #ffd166; }
+  .pin {
+    width: 14px; height: 14px; border-radius: 50%; background: #ef476f;
+    border: 2px solid #fff; box-shadow: 0 0 0 0 rgba(239,71,111,.7);
+    animation: pulse 1.8s infinite;
+  }
+  .pin.old { background: #06d6a0; animation: none; }
+  .walker {
+    width: 22px; height: 22px; border-radius: 50%; background: #ffd166;
+    border: 3px solid #fff; box-shadow: 0 0 14px #ffd166;
+  }
+  @keyframes pulse {
+    70% { box-shadow: 0 0 0 16px rgba(239,71,111,0); }
+    100% { box-shadow: 0 0 0 0 rgba(239,71,111,0); }
+  }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="photo"><img id="photo-img" alt=""><div id="photo-cap"></div></div>
+<div id="loading">Loading map…</div>
+<div id="left">
+<div id="info" class="panel">
+  <div id="date"></div>
+  <div id="age"></div>
+  <div id="place"></div>
+  <div id="local"></div>
+  <div id="note"></div>
+  <div id="miles-row">Travelled: <b id="miles">0 mi</b></div>
+</div>
+<div id="cities" class="panel"><h3>Cities Visited/Lived</h3><ol id="city-list"></ol></div>
+<div id="countries" class="panel"><h3>Countries Visited/Lived</h3><ol id="country-list"></ol></div>
+</div>
+<div id="controls" class="panel">
+  <div id="ctl-row">
+    <button id="play">Play</button>
+    <input id="scrub" type="range" min="0" value="0" step="0.001">
+    <select id="speed">
+      <option value="0.5">0.5×</option>
+      <option value="1" selected>1×</option>
+      <option value="2">2×</option>
+      <option value="4">4×</option>
+    </select>
+  </div>
+  <div id="years" aria-label="Jump to a year"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="places.js"></script>
+<script src="photos.js"></script>
+<script>
+const BIRTH = new Date("1989-10-11T00:00:00");
+const DAY = 86400000;
+const STAY_MS = 1000, HOP_MS = 1400, LONG_HOP_MS = 2600;   // 1x: every leg takes the same time, however far or long the gap
+const MIN_ZOOM = 4;             // below this the map is "whole earth" - avoid unless a single flight needs it
+const PHOTO_MS = 3200;            // every photo stays up at least 3s of REAL time (even at 2x/4x speed)
+const PHOTO_W = 340;              // width reserved on the right of the map while a photo is shown
+const AHEAD = 2;                 // camera frames this many stops before/after the current one
+const stops = window.PLACES.map(p => ({ ...p, date: new Date(p.from + "T00:00:00") }))
+                           .sort((a, b) => a.date - b.date);
+const n = stops.length;
+
+// ---- photos: img/cityname_YYYYMM.ext  ->  the stop of that city in that month (else the closest month, any distance)
+const slugOf = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z]/g, "");
+const stopSlugs = s => {
+  const city = s.name.split(",")[0];
+  const a = [slugOf(city), slugOf(city.split(" ")[0])];          // "Yosemite National Park" also answers to "yosemite"
+  if (a[0] === "saintlouis") a.push("stlouis");
+  if (a[0] === "koreandmz") a.push("dmz");
+  return a;
+};
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const monthIdx = (y, m) => y * 12 + m;
+(window.PHOTOS || []).forEach(file => {
+  // cityname_YYYYMM.ext = first visit that month; cityname_YYYYMM_2.ext = second visit, and so on
+  const m = file.match(/^([A-Za-z]+)_(\d{4})(\d{2})(?:_(\d+))?\./);
+  if (!m) return;
+  const key = m[1].toLowerCase(), pm = monthIdx(+m[2], +m[3] - 1), visit = +(m[4] || 1);
+  let bestD = 99, group = [];
+  stops.forEach(s => {                                            // stops are in date order
+    if (!stopSlugs(s).includes(key)) return;
+    const d = Math.abs(monthIdx(s.date.getFullYear(), s.date.getMonth()) - pm);
+    if (d < bestD) { bestD = d; group = []; }                     // closer month found: start over
+    if (d === bestD) group.push(s);
+  });
+  if (!group.length) { console.warn("photo has no stop for that city:", file); return; }
+  const best = group[Math.min(visit, group.length) - 1];          // asked-for visit, or the last one if there are fewer
+  if (bestD) console.info(`photo ${file} matched to the closest month (${bestD} away):`, best.from);
+  if (visit > group.length) console.info(`photo ${file}: only ${group.length} visit(s) that month, used the last`);
+  (best.photos = best.photos || []).push({ src: "img/" + file, caption: `${MON[+m[3] - 1]} ${m[2]}` });
+});
+
+// ---- geometry: great-circle distance and path, with longitudes unwrapped so Pacific crossings go the short way
+const rad = x => x * Math.PI / 180, deg = x => x * 180 / Math.PI;
+function miles(a, b) {
+  const h = Math.sin(rad(b.lat - a.lat) / 2) ** 2 +
+            Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(rad(b.lng - a.lng) / 2) ** 2;
+  return 2 * 3958.8 * Math.asin(Math.sqrt(h));
+}
+const wrap = x => ((x + 540) % 360) - 180;
+function gcPoint(a, b, f, d) {
+  if (d < 1) return [a.lat, a.dlng];
+  const v = p => [Math.cos(rad(p.lat)) * Math.cos(rad(p.lng)), Math.cos(rad(p.lat)) * Math.sin(rad(p.lng)), Math.sin(rad(p.lat))];
+  const A = v(a), B = v(b), w = d / 3958.8;
+  const ka = Math.sin((1 - f) * w) / Math.sin(w), kb = Math.sin(f * w) / Math.sin(w);
+  const x = ka * A[0] + kb * B[0], y = ka * A[1] + kb * B[1], z = ka * A[2] + kb * B[2];
+  return [deg(Math.atan2(z, Math.hypot(x, y))), a.dlng + wrap(deg(Math.atan2(y, x)) - a.lng)];
+}
+const LEG_PTS = 24;
+stops.forEach((s, i) => {
+  const prev = stops[i - 1];
+  s.dlng = prev ? prev.dlng + wrap(s.lng - prev.lng) : s.lng;   // continuous display longitude
+});
+let cum = 0;
+stops.forEach((s, i) => {
+  const nx = stops[i + 1];
+  s.cum = cum;                                                  // miles travelled on arrival here
+  s.legMiles = nx ? miles(s, nx) : 0;
+  s.path = nx ? Array.from({ length: LEG_PTS + 1 }, (_, k) => gcPoint(s, { ...nx, dlng: 0 }, k / LEG_PTS, s.legMiles)) : [];
+  cum += s.legMiles;
+});
+
+const map = L.map("map", { worldCopyJump: true, zoomControl: true }).setView([stops[0].lat, stops[0].dlng], 5);
+// No API key needed. OpenStreetMap first; Esri's faster CDN takes over if OSM errors or keeps stalling.
+const TILE_OPTS = { maxZoom: 18, keepBuffer: 4, updateWhenZooming: false };
+const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+  { ...TILE_OPTS, attribution: "&copy; OpenStreetMap contributors", referrerPolicy: "origin" });
+const esri = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+  { ...TILE_OPTS, attribution: "Tiles &copy; Esri" });
+let base = osm, tilesLoading = false, loadingSince = 0, stalls = 0;
+const loadingEl = document.getElementById("loading");
+function useBase(layer) {
+  if (base === layer) return;
+  map.removeLayer(base); base = layer; tilesLoading = false; stalls = 0; watch(layer); layer.addTo(map);
+}
+function watch(layer) {
+  layer.on("loading", () => { tilesLoading = true; loadingSince = performance.now(); loadingEl.style.display = "block"; });
+  layer.on("load", () => { tilesLoading = false; stalls = 0; loadingEl.style.display = "none"; });
+  layer.on("tileerror", () => { if (base === osm) useBase(esri); });
+}
+watch(osm);
+osm.addTo(map);
+
+// Warm the browser cache with the tiles the camera will want at the NEXT stop, while we sit at this one.
+const prefetched = new Set();
+function prefetch(target) {
+  if (!target) return;
+  const z = target.zoom, N = 2 ** z, sz = map.getSize();
+  const c = map.project(target.center, z);
+  const x0 = Math.floor((c.x - sz.x / 2) / 256), x1 = Math.floor((c.x + sz.x / 2) / 256);
+  const y0 = Math.floor((c.y - sz.y / 2) / 256), y1 = Math.floor((c.y + sz.y / 2) / 256);
+  if ((x1 - x0 + 1) * (y1 - y0 + 1) > 40) return;          // too wide (zoomed far out): leave it to the map
+  for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) {
+    if (y < 0 || y >= N) continue;
+    const wx = ((x % N) + N) % N, key = `${z}/${wx}/${y}`;
+    if (prefetched.has(key)) continue;
+    prefetched.add(key);
+    const img = new Image();
+    img.referrerPolicy = "origin";
+    img.src = base.getTileUrl({ x: wx, y, z });
+  }
+}
+
+const pins = stops.map(s => L.marker([s.lat, s.dlng], {
+  icon: L.divIcon({ className: "", html: '<div class="pin"></div>', iconSize: [14, 14], iconAnchor: [7, 7] })
+}).bindTooltip(`${s.name}${s.local && s.local !== s.name ? "<br>" + s.local : ""}<br>${s.from}`));
+
+// ---- trail + walker are drawn on ONE canvas, reprojected every frame from the map's live view,
+// so they can never lag behind the tiles while the camera flies.
+const cv = document.createElement("canvas");
+Object.assign(cv.style, { position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none", zIndex: 450 });
+map.getContainer().appendChild(cv);
+const ctx = cv.getContext("2d");
+function fitCanvas() {
+  const r = devicePixelRatio || 1, sz = map.getSize();
+  cv.width = sz.x * r; cv.height = sz.y * r;
+  ctx.setTransform(r, 0, 0, r, 0, 0);
+}
+map.on("resize", () => { fitCanvas(); camKey = ""; });
+fitCanvas();
+
+const view = { label: null, t12: [], t3: [], t1: [], done: [], partial: [], p: [stops[0].lat, stops[0].dlng] };
+function stroke(pts) {
+  if (pts.length < 2) return;
+  ctx.beginPath();
+  pts.forEach((q, k) => {
+    const c = map.latLngToContainerPoint(q);
+    k ? ctx.lineTo(c.x, c.y) : ctx.moveTo(c.x, c.y);
+  });
+  ctx.stroke();
+}
+function draw() {
+  const sz = map.getSize();
+  ctx.clearRect(0, 0, sz.x, sz.y);
+  ctx.lineJoin = ctx.lineCap = "round";
+  // route age tiers, oldest first: >12 months very pale/thin, 3-12 months 35%, 1-3 months 60%; <=1 month solid (below)
+  ctx.strokeStyle = "rgba(123,44,191,.16)"; ctx.lineWidth = 2; stroke(view.t12);
+  ctx.strokeStyle = "rgba(123,44,191,.35)"; ctx.lineWidth = 3; stroke(view.t3);
+  ctx.strokeStyle = "rgba(123,44,191,.6)"; ctx.lineWidth = 3; stroke(view.t1);
+  ctx.strokeStyle = "rgba(255,255,255,.85)"; ctx.lineWidth = 7; stroke(view.done); stroke(view.partial);  // halo
+  ctx.strokeStyle = "#7b2cbf"; ctx.lineWidth = 4; stroke(view.done); stroke(view.partial);
+  const c = map.latLngToContainerPoint(view.p);
+  ctx.save();
+  ctx.shadowColor = "#ffd166"; ctx.shadowBlur = 16;
+  ctx.fillStyle = "#ffd166"; ctx.strokeStyle = "#fff"; ctx.lineWidth = 3;
+  ctx.beginPath(); ctx.arc(c.x, c.y, 10, 0, 7); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  if (view.label) drawLabel(c, view.label);
+}
+// two-line tag above the stop dot: English city, then the local-language city
+// Label text: line 1 = English "City, ST" (US/Canada two-letter code) or "City, Province" elsewhere;
+// line 2 = the same place in the official language and its address order (no country), only when it differs.
+const LOCAL_COUNTRY_PREFIX = ["대한민국", "中国", "中國", "臺灣", "日本"];
+function dedupe(parts) { return parts.filter((p, k) => p && p !== parts[k - 1]); }
+function labelLines(s) {
+  const parts = s.name.split(",").map(x => x.trim());
+  const [city, region, country] = parts;
+  const code = regionCode(s);
+  const en = code ? `${city}, ${code}` : dedupe([city, region]).join(", ");
+  let loc = s.local || "";
+  const pre = LOCAL_COUNTRY_PREFIX.find(p => loc.startsWith(p));
+  if (pre) loc = loc.slice(pre.length).trim();
+  else {
+    const sep = loc.includes("،") ? "،" : ",";
+    const lp = loc.split(sep).map(x => x.trim());
+    loc = dedupe(lp.slice(0, -1).length ? lp.slice(0, -1) : lp).join(sep === "،" ? "، " : ", ");   // drop the country
+  }
+  if (code && country === "Canada" && region === "Quebec") loc = `${dedupe(s.local.split(",").map(x => x.trim()).slice(0, 2)).join(", ")}`;   // Quebec: French line
+  else if (code) loc = "";                                                                                              // other US/Canada: English only
+  return loc && loc !== en ? [en, loc] : [en];
+}
+function drawLabel(c, lines) {
+  const fonts = ["600 15px -apple-system, system-ui, sans-serif", "13px -apple-system, system-ui, 'PingFang SC', 'Hiragino Sans', sans-serif"];
+  const padX = 10, padY = 6, lh = [18, 16];
+  let w = 0;
+  lines.forEach((t, k) => { ctx.font = fonts[k]; w = Math.max(w, ctx.measureText(t).width); });
+  w += padX * 2;
+  const hgt = padY * 2 + lines.reduce((a, _, k) => a + lh[k], 0);
+  const x = c.x - w / 2, y = c.y - 20 - hgt;
+  ctx.save();
+  ctx.fillStyle = "rgba(15,23,32,.92)"; ctx.strokeStyle = "#ffd166"; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.roundRect(x, y, w, hgt, 8); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(c.x - 6, y + hgt); ctx.lineTo(c.x, y + hgt + 7); ctx.lineTo(c.x + 6, y + hgt); ctx.fill();
+  ctx.textAlign = "center"; ctx.textBaseline = "top";
+  let ty = y + padY;
+  lines.forEach((t, k) => {
+    ctx.font = fonts[k]; ctx.fillStyle = k ? "#ffd166" : "#fff";
+    ctx.fillText(t, c.x, ty); ty += lh[k];
+  });
+  ctx.restore();
+}
+// redraw only when something changed (a new frame was rendered or the map moved)
+let dirty = true;
+map.on("move zoom viewreset resize", () => { dirty = true; });
+(function loop() { if (dirty) { dirty = false; draw(); } requestAnimationFrame(loop); })();
+
+// Timeline in ms. Every leg = STAY_MS settled + a flight of equal length (longer only for 3000+ mile crossings).
+// The clock ticks through the real months between the two stops while the leg plays.
+const monthsBetween = (a, b) => Math.max(0, (b.getFullYear() - a.getFullYear()) * 12 + b.getMonth() - a.getMonth());
+// Home = the top city of the visit ranking at that moment (same rule as the HOME tag); no label, no pause there.
+{
+  const cnt = new Map();
+  stops.forEach(s => {
+    const c = s.name.split(",")[0].trim();
+    cnt.set(c, (cnt.get(c) || 0) + 1);
+    let top = null, best = 0;
+    for (const [k, v] of cnt) if (v > best) { top = k; best = v; }   // ties keep the earliest-visited city
+    s.isHome = c === top;
+  });
+}
+let total = 0;
+stops.forEach((s, i) => {
+  const nx = stops[i + 1];
+  s.months = nx ? monthsBetween(s.date, nx.date) : 0;
+  s.start = total;
+  s.stay = s.photos ? Math.max(STAY_MS, PHOTO_MS * s.photos.length) : s.isHome && nx ? 0 : STAY_MS;
+  s.hop = nx ? (s.legMiles > 3000 ? LONG_HOP_MS : HOP_MS) : 0;
+  s.len = s.stay + s.hop;
+  total += s.len;
+});
+const scrub = document.getElementById("scrub");
+scrub.max = total;
+
+const ease = x => x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;
+const fmt = d => d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+
+const photoEl = document.getElementById("photo"), photoImg = document.getElementById("photo-img");
+let inPhoto = false, photoSrc = "", photoSince = 0;
+function showPhoto(p, s) {
+  if (!p) { photoEl.classList.remove("show"); return; }
+  if (photoSrc !== p.src) {
+    photoSrc = p.src; photoSince = performance.now(); photoImg.src = p.src;
+    document.getElementById("photo-cap").textContent = `${labelLines(s)[0]} · ${p.caption}`;
+  }
+  photoEl.classList.add("show");
+}
+const photoReady = () => photoImg.complete && photoImg.naturalWidth > 0;
+const preloaded = new Map();
+function preloadPhotos(i) {                                       // warm the cache for the next few photo stops
+  let k = 0;
+  for (let q = i; q < n && k < 3; q++) if (stops[q].photos) {
+    k++;
+    stops[q].photos.forEach(p => { if (!preloaded.has(p.src)) { const im = new Image(); im.src = p.src; preloaded.set(p.src, im); } });
+  }
+}
+let pos = 0, playing = false, last = 0, shown = -1, camKey = "", tiersFor = "";
+
+// Cities ranked by number of visits so far (each entry = one visit); the top one is HOME.
+const cityName = s => s.name.split(",")[0].trim();
+// two-letter state / province codes, appended for US and Canadian cities
+const ABBR = {
+  Alabama:"AL", Alaska:"AK", Arizona:"AZ", Arkansas:"AR", California:"CA", Colorado:"CO", Connecticut:"CT", Delaware:"DE",
+  "District of Columbia":"DC", Florida:"FL", Georgia:"GA", Hawaii:"HI", Idaho:"ID", Illinois:"IL", Indiana:"IN", Iowa:"IA",
+  Kansas:"KS", Kentucky:"KY", Louisiana:"LA", Maine:"ME", Maryland:"MD", Massachusetts:"MA", Michigan:"MI", Minnesota:"MN",
+  Mississippi:"MS", Missouri:"MO", Montana:"MT", Nebraska:"NE", Nevada:"NV", "New Hampshire":"NH", "New Jersey":"NJ",
+  "New Mexico":"NM", "New York":"NY", "North Carolina":"NC", "North Dakota":"ND", Ohio:"OH", Oklahoma:"OK", Oregon:"OR",
+  Pennsylvania:"PA", "Rhode Island":"RI", "South Carolina":"SC", "South Dakota":"SD", Tennessee:"TN", Texas:"TX", Utah:"UT",
+  Vermont:"VT", Virginia:"VA", Washington:"WA", "West Virginia":"WV", Wisconsin:"WI", Wyoming:"WY",
+  Alberta:"AB", "British Columbia":"BC", Manitoba:"MB", "New Brunswick":"NB", "Newfoundland and Labrador":"NL",
+  "Nova Scotia":"NS", Ontario:"ON", "Prince Edward Island":"PE", Quebec:"QC", Saskatchewan:"SK"
+};
+function regionCode(s) {
+  const p = s.name.split(",").map(x => x.trim());
+  return /^(United States|Canada)$/.test(p[p.length - 1]) ? ABBR[p[1]] : undefined;
+}
+// official-language country names (shown beside the English one when they differ)
+const COUNTRY_LOCAL = {
+  China:"中国", Taiwan:"臺灣", Japan:"日本", "South Korea":"대한민국", Russia:"Россия", Mongolia:"Монгол улс", Vietnam:"Việt Nam",
+  Cambodia:"កម្ពុជា", Singapore:"Singapura", Iceland:"Ísland", Mexico:"México", Denmark:"Danmark", Sweden:"Sverige", Norway:"Norge",
+  Germany:"Deutschland", Switzerland:"Schweiz", Spain:"España", Italy:"Italia", Netherlands:"Nederland", Belgium:"België",
+  Egypt:"مصر", Greece:"Ελλάδα", Türkiye:"Türkiye", Sudan:"السودان", Peru:"Perú", Panama:"Panamá", Philippines:"Pilipinas",
+  Ireland:"Éire", Morocco:"المغرب"
+};
+const countryName = s => s.name.split(",").pop().trim();
+const rowTpl = (name, local, k, home) =>
+  `<li><span class="nm">${name}${local && local !== name ? ` <span class="lc">${local}</span>` : ""}</span>${home ? '<span class="home">HOME</span>' : ""}<span class="ct">${k}×</span></li>`;
+
+// Cities and countries ranked by number of visits so far (each entry = one visit); the top city is HOME,
+// and the top country is HOME on its own count (not derived from the home city).
+function renderCities(upTo) {
+  const counts = new Map(), locals = new Map(), codes = new Map(), cityCountry = new Map(), cc = new Map();
+  for (let q = 0; q <= upTo; q++) {
+    const c = stops[q].name, k = countryName(stops[q]);   // keyed by the full name, so London UK and London ON stay separate
+    if (!locals.has(c)) { locals.set(c, stops[q].localCity); codes.set(c, regionCode(stops[q])); cityCountry.set(c, k); }
+    counts.set(c, (counts.get(c) || 0) + 1);   // Map keeps first-visit order, so ties rank by who came first
+    cc.set(k, (cc.get(k) || 0) + 1);
+  }
+  const ranked = [...counts].sort((a, b) => b[1] - a[1]);
+  document.getElementById("city-list").innerHTML = ranked.slice(0, 20).map(([c, k], r) =>
+    rowTpl(c.split(",")[0].trim() + (codes.get(c) ? ", " + codes.get(c) : ""),
+           locals.get(c) !== c.split(",")[0].trim() ? locals.get(c) : "", k, r === 0)).join("");
+  document.getElementById("country-list").innerHTML = [...cc].sort((a, b) => b[1] - a[1]).slice(0, 20).map(([k, v], r) =>
+    rowTpl(k, COUNTRY_LOCAL[k], v, r === 0)).join("");   // HOME country = the top country by count, independent of the home city
+}
+
+// camera framing for "at stop c" (or flying i -> i+1): the stops AHEAD around it, shrunk until the zoom stays >= MIN_ZOOM
+let prefetchedFor = -1;
+function camTarget(c, hopping, i, opts) {
+  if (!opts) {
+    const left = document.getElementById("left").getBoundingClientRect().right + 40;
+    const bottom = document.getElementById("controls").offsetHeight + 60;
+    opts = { paddingTopLeft: [left, 70], paddingBottomRight: [70 + (stops[c].photos ? PHOTO_W + 30 : 0), bottom], maxZoom: 9 };
+  }
+  let win, target;
+  for (let r = AHEAD; r >= 0; r--) {
+    // the stops plus the flight arcs between them, so a curved route can't poke out under the boxes
+    const lo = Math.max(0, Math.min(c - r, hopping ? i : c)), hi = Math.min(n - 1, Math.max(c + r, hopping ? i + 1 : c));
+    win = stops.slice(lo, hi + 1).flatMap((s, k, arr) =>
+      [[s.lat, s.dlng], ...(k < arr.length - 1 ? s.path.filter((_, q) => q % 4 === 2) : [])]);
+    target = map._getBoundsCenterZoom(L.latLngBounds(win), opts);
+    if (target.zoom >= MIN_ZOOM) break;
+  }
+  return { win, target };
+}
+
+function render() {
+  let i = n - 1;
+  while (i > 0 && pos < stops[i].start) i--;
+  const cur = stops[i], nxt = stops[i + 1];
+  const within = pos - cur.start;
+  const hopping = nxt && within > cur.stay;
+  const hopRaw = hopping ? Math.min(1, (within - cur.stay) / cur.hop) : 0;
+  const hopF = ease(hopRaw);
+
+  // the clock only ticks in whole months
+  const m = Math.round(cur.months * Math.min(1, within / cur.len));
+  const date = new Date(cur.date.getFullYear(), cur.date.getMonth() + m, 1);
+  markYear(date.getFullYear());
+  document.getElementById("date").textContent =
+    date.toLocaleDateString("en-GB", { month: "short", year: "numeric" });
+  const yrs = (date - BIRTH) / (365.25 * DAY);
+  document.getElementById("age").textContent = `Age ${Math.max(0, yrs).toFixed(1)}`;
+  const here = hopF > .5 ? nxt : cur;
+  document.getElementById("place").textContent = here.name;
+  document.getElementById("local").textContent = here.local && here.local !== here.name ? here.local : "";
+  document.getElementById("note").textContent = here.note || "";
+  const mi = cur.cum + (hopping ? cur.legMiles * hopF : 0);
+  document.getElementById("miles").textContent =
+    `${Math.round(mi).toLocaleString()} mi (${Math.round(mi * 1.609344).toLocaleString()} km)`;
+
+  const k = hopping ? Math.floor(hopF * LEG_PTS) : 0;
+  const p = hopping ? (hopF >= 1 ? [nxt.lat, nxt.dlng] : cur.path[k]) : [cur.lat, cur.dlng];
+  // completed legs are cached; only the in-progress leg changes per frame
+  // legs are in date order, so the ones older than each tier (relative to the clock) form nested prefixes
+  const mIdx = d => d.getFullYear() * 12 + d.getMonth();
+  const olderThan = months => { let k = 0; while (k < i && mIdx(date) - mIdx(stops[k + 1].date) > months) k++; return k; };
+  const n12 = olderThan(12), n3 = olderThan(3), n1 = olderThan(1);
+  const tierKey = `${i}-${n12}-${n3}-${n1}`;
+  if (tierKey !== tiersFor) {
+    const legs = (a, b) => stops.slice(a, b).flatMap(s => s.path);
+    view.t12 = legs(0, n12); view.t3 = legs(n12, n3); view.t1 = legs(n3, n1); view.done = legs(n1, i);
+    tiersFor = tierKey;
+  }
+  // photo card: shown while settled at a stop that has photos, one per PHOTO_MS
+  inPhoto = !hopping && !!cur.photos;
+  showPhoto(inPhoto ? cur.photos[Math.min(Math.floor(within / PHOTO_MS), cur.photos.length - 1)] : null, cur);
+  view.partial = hopping ? [...cur.path.slice(0, k + 1), p] : [];
+  view.p = p;
+  // home stops have no pause, so their label rides with the dot as it arrives / leaves instead
+  const lab = !hopping ? cur : nxt.isHome && hopRaw > .6 ? nxt : cur.isHome && hopRaw < .4 ? cur : null;
+  view.label = lab ? labelLines(lab) : null;
+  dirty = true;
+
+  const reached = hopping && hopF > .98 ? i + 1 : i;
+  if (reached !== shown) {
+    pins.forEach((mk, q) => {
+      if (q <= reached) {
+        if (!map.hasLayer(mk)) mk.addTo(map);
+        mk.getElement()?.firstChild.classList.toggle("old", q < reached);
+      } else if (map.hasLayer(mk)) map.removeLayer(mk);
+    });
+    shown = reached;
+    renderCities(reached);
+  }
+
+  // camera: frame AHEAD stops before / after the one we're at, but
+  //  - only MOVE when needed (stay while those stops are inside the safe area and not zoomed out by > 1 level), and
+  //  - never settle on a whole-earth view: if the window is too wide, shrink it toward the current stop/flight
+  //    until the zoom reaches MIN_ZOOM (only a flight that itself crosses an ocean may go lower).
+  const c = hopF > .5 ? i + 1 : i;
+  const camState = `${c}-${hopping}`;
+  if (i !== prefetchedFor) preloadPhotos(i);
+  if (i !== prefetchedFor) { prefetchedFor = i; if (stops[i + 1]) prefetch(camTarget(i + 1, false, i + 1).target); }
+  if (camState !== camKey) {
+    camKey = camState;
+    const left = document.getElementById("left").getBoundingClientRect().right + 40;   // clear of the left boxes
+    const bottom = document.getElementById("controls").offsetHeight + 60;              // and the control bar
+    const right = 70 + (stops[c].photos ? PHOTO_W + 30 : 0);                              // keep the photo card off the route
+    const opts = { paddingTopLeft: [left, 70], paddingBottomRight: [right, bottom], maxZoom: 9 };
+    const { win, target } = camTarget(c, hopping, i, opts);
+    const sz = map.getSize();
+    const visible = win.every(q => {
+      const pt = map.latLngToContainerPoint(q);
+      return pt.x >= left && pt.x <= sz.x - right && pt.y >= 70 && pt.y <= sz.y - bottom;
+    });
+    const z = map.getZoom();
+    const zoomOk = z >= target.zoom - 1 && z <= 9 && (z >= MIN_ZOOM || target.zoom < MIN_ZOOM);
+    if (!(visible && zoomOk)) {
+      if (target.zoom === z) map.panTo(target.center, { duration: .8 });   // same zoom: cheap pan, no tile reload
+      else map.flyTo(target.center, target.zoom, { duration: 1.1 });
+    }
+  }
+  scrub.value = pos;
+}
+
+function frame(t) {
+  if (!playing) return;
+  // don't burn a stop's stay time staring at blank tiles: wait for them (max 5s), and give up on a slow provider
+  if (tilesLoading && t - loadingSince < 5000) { last = t; requestAnimationFrame(frame); return; }
+  if (tilesLoading && t - loadingSince >= 5000 && ++stalls >= 2) useBase(esri);
+  // never start the 3s of a photo before it has loaded (max 6s wait)
+  if (inPhoto && !photoReady() && t - photoSince < 6000) { last = t; requestAnimationFrame(frame); return; }
+  // a photo's time is real time: don't speed it up with the 2x/4x setting
+  const speed = Number(document.getElementById("speed").value);
+  pos += (t - last) * (inPhoto ? Math.min(1, speed) : speed);
+  last = t;
+  if (pos >= total - 1) { pos = total - 1; setPlaying(false); }
+  render();
+  requestAnimationFrame(frame);
+}
+function setPlaying(v) {
+  playing = v;
+  document.getElementById("play").textContent = v ? "Pause" : (pos >= total - 1 ? "Replay" : "Play");
+  if (v) { if (pos >= total - 1) { pos = 0; shown = -1; } last = performance.now(); requestAnimationFrame(frame); }
+}
+document.getElementById("play").onclick = () => setPlaying(!playing);
+scrub.oninput = () => { pos = Number(scrub.value); shown = -1; camKey = ""; render(); };
+
+// ---- year strip: one button per year that has a stop; click jumps to the first stop of that year
+const yearsEl = document.getElementById("years");
+const yearStart = new Map();
+stops.forEach(s => { const y = s.date.getFullYear(); if (!yearStart.has(y)) yearStart.set(y, s.start); });
+yearsEl.innerHTML = [...yearStart.keys()].map(y => `<button data-y="${y}">${y}</button>`).join("");
+yearsEl.onclick = e => {
+  const y = e.target.dataset && e.target.dataset.y;
+  if (!y) return;
+  pos = yearStart.get(+y); shown = -1; camKey = ""; render();
+};
+let markedYear = 0;
+function markYear(y) {                                       // highlight the current year and keep it in view
+  if (y === markedYear) return;
+  markedYear = y;
+  yearsEl.querySelectorAll("button").forEach(b => b.classList.toggle("on", +b.dataset.y === y));
+  const b = yearsEl.querySelector(".on");
+  if (b) yearsEl.scrollTo({ left: b.offsetLeft - yearsEl.clientWidth / 2 + b.offsetWidth / 2, behavior: "smooth" });
+}
+
+render();
+</script>
+</body>
+</html>
