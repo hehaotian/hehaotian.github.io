@@ -124,11 +124,14 @@ function detailPage({ kind, title, meta, item }) {
     : n.stanzas ? n.stanzas.map(st => `<p class="stanza">${st.map(esc).join("<br>")}</p>`).join("")
     : n.prose ? n.prose.map(([a, b]) => `<div class="prose"><p>${esc(a)}</p><p class="en">${esc(b).replace(/\*(.+?)\*/g, "<em>$1</em>")}</p></div>`).join("")
     : (n.body || []).map(p => `<p>${esc(p)}</p>`).join("");
+  // book intro for Reader Response: book: { cover: "file.jpg" (in assets/photos/), title, author, lines: ["detail", ...] }
+  const bookHtml = b => !b ? "" : `<div class="book">${b.cover ? `<img class="bcover" src="assets/photos/${esc(b.cover)}" alt="">` : ""}
+    <div class="binfo"><p class="bt">${esc(b.title)}</p>${b.author ? `<p class="ba">${esc(b.author)}</p>` : ""}${(b.lines || []).map(l => `<p class="bl">${esc(l)}</p>`).join("")}</div></div>`;
   popups.notes = slug => {
     const n = list[ids.indexOf(slug)];
     return n && `${n.category ? `<p class="kind">${esc(n.category)}</p>` : ""}
       <h1>${esc(n.poem ? n.poem.heading : n.title)}</h1>
-      <p class="by">by Haotian He</p><p class="when">${longDate(n.date)}</p><hr>
+      <p class="by">by Haotian He</p><p class="when">${longDate(n.date)}</p>${bookHtml(n.book)}<hr>
       <div class="text">${body(n)}</div>
       ${n.place ? `<p class="place">${esc(n.place)}</p>` : ""}
       ${refsHtml(n)}

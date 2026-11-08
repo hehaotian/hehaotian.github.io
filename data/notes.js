@@ -8,8 +8,159 @@
 // body: paragraphs of plain text.  poem: { heading, pairs: [[original line, translation], ...] } for bilingual poems.
 window.NOTES = [
   {
+    "date": "2025-01-29",
+    "title": "Stillness",
+    "category": "Reader Response",
+    "book": {
+      "cover": "sokcho.jpeg",
+      "title": "Hiver à Sokcho",
+      "author": "Élisa Shua Dusapin",
+      "lines": [
+        "Novel · Éditions Zoé, 2016",
+        "A young woman, half French and half Korean, works at a guesthouse in the seaside town of Sokcho in winter, where a French comics artist comes to stay."
+      ]
+    },
+    "prose": [
+      [
+        "Nous désirons être compris, mais craignons d’être mis à nu. Nous cherchons un refuge, mais l’appartenance n’est qu’un souffle.",
+        "We long to be understood, yet we fear being laid bare. We look for a refuge, but belonging is only a breath."
+      ],
+      [
+        "Dans Hiver à Sokcho, ce double mouvement tient dans une pension au bord de la mer. La narratrice, moitié française, moitié coréenne, y travaille en hiver, près de la frontière avec la Corée du Nord. Elle n’appartient tout à fait à aucun des deux pays, et elle le sait.",
+        "In Hiver à Sokcho, this double movement fits inside a guesthouse by the sea. The narrator, half French and half Korean, works there in winter, near the border with North Korea. She belongs completely to neither country, and she knows it."
+      ],
+      [
+        "Quand arrive Yan Kerrand, un dessinateur français venu chercher l’inspiration pour sa prochaine bande dessinée, elle espère être enfin regardée. Elle lui prépare ses repas et le guide dans la ville. Mais un dessinateur ne regarde pas comme les autres : son regard laisse une trace. Être compris et être mis à nu deviennent alors la même chose.",
+        "When Yan Kerrand arrives, a French artist who has come looking for inspiration for his next graphic novel, she hopes to be seen at last. She cooks his meals and guides him around the town. But an artist does not look the way other people do: his gaze leaves a trace. To be understood and to be laid bare become the same thing."
+      ],
+      [
+        "Le corps de la narratrice est le lieu de cette tension. Son petit ami Jun-oh voudrait qu’elle change de visage, et elle se compare sans cesse à ceux des magazines. Elle désire que quelqu’un la comprenne, et elle craint ce qu’on verrait en elle.",
+        "The narrator’s body is where this tension plays out. Her boyfriend Jun-oh would like her to change her face, and she compares herself endlessly to the ones in magazines. She wants someone to understand her, and she fears what they would see."
+      ],
+      [
+        "Le froid fait le reste. L’hiver de Sokcho fige le monde tout en le dépouillant de ses artifices : la plage est vide, la pension l’est presque, et dans cette immobilité il n’y a plus rien derrière quoi se cacher.",
+        "The cold does the rest. The winter of Sokcho freezes the world while stripping it of its artifices: the beach is empty, the guesthouse nearly so, and in this stillness there is nothing left to hide behind."
+      ],
+      [
+        "Ce que j’en retiens, c’est que l’immobilité ne guérit pas la peur d’être vu ; elle la rend impossible à ignorer. Dans le silence de l’hiver, la narratrice se retrouve face à une question plus honnête sur qui elle est quand personne ne la regarde. C’est la seule vérité intérieure que le livre me laisse, et elle me suffit.",
+        "What I take from it is that stillness does not cure the fear of being seen; it makes it impossible to ignore. In the silence of winter, the narrator comes face to face with a more honest question about who she is when no one is looking at her. It is the only inner truth the book leaves me with, and it is enough."
+      ]
+    ]
+  },
+  {
+    "date": "2026-10-11",
+    "title": "Severance and the Name I Keep",
+    "slug": "severance",
+    "category": "Reader Response",
+    "book": {
+      "cover": "severance.jpeg",
+      "title": "Severance",
+      "author": "Ling Ma",
+      "lines": [
+        "Novel · Farrar, Straus and Giroux, 2018",
+        "A fever leaves its victims repeating the routines of their old lives. Candace Chen, a Bible production coordinator in New York, keeps going to work."
+      ]
+    },
+    "prose": [
+      [
+        "马凌的小说《断裂》里的“申氏发热”是一则末日寓言，它的讽刺在于：患者并没有变成扑向活人的怪物，而是一遍遍重复生前的日常：折叠衣物、维护陈列、按时打卡。女主角 Candace 在一家出版公司负责《宝石圣经》的生产协调。纽约渐渐空了，她仍然每天走进那栋空楼上班。这算不上什么崇高的坚守，更像是习惯接管了她：没有人再需要那些《圣经》，工作却还在继续。病的症状和上班的样子，在这里几乎分不出来。",
+        "The “Shen Fever” in Ling Ma’s novel *Severance* is an allegory of the end of the world, and its irony is this: the infected do not turn into monsters that hunt the living. They repeat, over and over, the routines of their former lives: folding clothes, tending displays, clocking in on time. The protagonist, Candace, coordinates the production of Gemstone Bibles at a publishing company. New York slowly empties, and she still walks into that empty building to work every day. It is hardly a noble stand. It looks more like habit taking her over: nobody needs those Bibles anymore, yet the work goes on. Here, the symptoms of the illness and the look of a working day are almost impossible to tell apart."
+      ],
+      [
+        "小说里有一句话，把这一点说得很直白：“生活在一座城市里，就是参与并传播它那些荒谬的体系。早上醒来。上班。这同时也意味着享受这些体系，否则，谁能年复一年地重复同样的日常？”",
+        "One line in the novel puts this plainly: “To live in a city is to take part in and to propagate its impossible systems. To wake up. To go to work in the morning. It is also to take pleasure in those systems because, otherwise, who could repeat the same routines, year in, year out?”"
+      ],
+      [
+        "当然，《断裂》写的不只是惯性。Candace 是移民的女儿，疏离、旁观，多少还有些共谋；小说同样写消费、迁徙和怀旧。我在这里只取它关于“被日常吞没”的一面，因为这一面让我想到了自己。",
+        "Of course, *Severance* is about more than inertia. Candace is an immigrant’s daughter, detached, an onlooker, and to some degree complicit; the novel is just as much about consumption, migration, and nostalgia. I take only one side of it here, the side about being swallowed by routine, because that side made me think of myself."
+      ],
+      [
+        "一年前，我主动从管理岗位转到不带人的岗位，大幅缩减了工作时间，还开始兼职开 Uber。我并不想证明什么，只是不愿意让“X公司”或任何一个头衔成为我唯一的名字。",
+        "A year ago, I moved from a management role to one with no reports, cut my working hours sharply, and began driving for Uber on the side. I did not set out to prove anything. I simply did not want “Company X,” or any title, to become my only name."
+      ],
+      [
+        "韩炳哲在《倦怠社会》中指出，今天的社会不再主要靠外部的禁令运转，而是靠“你可以”：个体被塑造成“自身的企业家”，自己给自己加码，自己剥削自己。他把这种社会称为功绩社会（Leistungsgesellschaft）。申氏发热的患者像是这种逻辑的极端版本：没有人命令他们，他们还在干活。",
+        "In *The Burnout Society*, Byung Chul Han argues that today’s society no longer runs mainly on outside prohibition but on “you can”: individuals are shaped into “entrepreneurs of themselves,” who raise their own quotas and exploit themselves. He calls this the achievement society (Leistungsgesellschaft). The Shen Fever victims look like an extreme version of that logic: no one orders them, and they keep working."
+      ],
+      [
+        "我并不是说开 Uber 让我挣脱了自我剥削。恰恰相反，它正是“自身的企业家”最标准的样子：自己排班，自己担风险，自己盯着评分和接单率。我只是换了自我剥削发生的地方。真正的差别有两点。第一，路况、车和身体的疲惫都是抽象不掉的东西。在大厂，我的工作停留在文档、会议和符号里，下班后常常觉得自己是飘着的；开车的时候，手在方向盘上，我知道自己在哪里。第二，这份活不是我的头衔。我能随时停下，是因为它只是兼职，别处还有收入撑着；对靠它吃饭的司机来说，这一点并不成立。",
+        "I am not saying that driving for Uber freed me from exploiting myself. On the contrary, it is exactly the standard form of the “entrepreneur of oneself”: I set my own schedule, carry my own risk, and watch my own ratings and acceptance rate. I have only moved where it happens. The real difference is twofold. First, traffic, the car, and a tired body cannot be abstracted away. At the big company, my work stayed in documents, meetings, and symbols, and after hours I often felt I was floating; when I drive, my hands are on the wheel and I know where I am. Second, this work is not my title. I can stop at any time because it is only a side job and other income holds me up; for drivers who live on it, that is not true."
+      ],
+      [
+        "所以我不觉得自己“打破”了什么。《断裂》只提醒了我一件小事：习惯会在不知不觉中替人做决定，最早的警告，是你已经说不出自己除了这份工作还是谁。我的做法只是其中一种，换别的方式也许同样有效。重要的是，还能自己说出那个名字。",
+        "So I do not feel I have “broken” anything. *Severance* reminded me of only one small thing: habit makes decisions for you without your noticing, and the earliest warning is that you can no longer say who you are besides this job. My way is only one way, and others may work just as well. What matters is that you can still say that name yourself."
+      ]
+    ]
+  },
+  {
+    "date": "2024-10-16",
+    "title": "東京夜想",
+    "slug": "tokyo-night",
+    "category": "Poem",
+    "stanzas": [
+      [
+        "夜の東京",
+        "灯りが踊る街",
+        "夢の中へ"
+      ]
+    ]
+  },
+  {
+    "date": "2026-02-28",
+    "title": "The One-Inch Gap",
+    "category": "Reader Response",
+    "book": {
+      "cover": "vuong.jpeg",
+      "title": "On Earth We’re Briefly Gorgeous",
+      "author": "Ocean Vuong",
+      "lines": [
+        "Novel · Penguin Press, 2019",
+        "A letter from a son, nicknamed Little Dog, to his mother, who cannot read it."
+      ]
+    },
+    "place": "Livermore, CA",
+    "prose": [
+      [
+        "在《大地上我们转瞬即逝的绚烂》中，王鸥行不断将越战的历史缩小至单个器官的尺寸，而眼睛则是他处理得最为锐利之处。这场战争过去常常是从远距离被审视的：从飞机上、在地图上、在伤亡数字中，以及后来在将难民归类为编号、受害者和待处理案卷的文件里。王鸥行避开了那种视角，转而投向那个进行凝视的肉身。在此，莫里斯·梅洛-庞蒂的理论大有裨益，因为他主张我们并非作为超然的旁观者去观察。我们是以身体的形式、从特定之处、带着局限去观察的。在王鸥行的手中，凝视不再是控制的工具，而成为了孤独与饥渴的象征。",
+        "In *On Earth We’re Briefly Gorgeous*, Ocean Vuong keeps shrinking the history of the Vietnam War down to the size of a single organ, and the eye is where he does it most sharply. The war was often seen from a distance: from aircraft, on maps, in casualty counts, and later in the paperwork that sorted refugees into numbers, victims, and cases to be managed. Vuong turns away from that view and toward the body that does the looking. Here Maurice Merleau-Ponty is useful, because he argued that we do not see as detached observers. We see as bodies, from one place, with limits. In Vuong’s hands the gaze stops being a tool of control and becomes a sign of loneliness and hunger."
+      ],
+      [
+        "这一转变发生在小狗对母亲说话、回忆起关于眼睛的一句评语时：",
+        "The turn comes when Little Dog, speaking to his mother, recalls a remark about the eye:"
+      ],
+      [
+        "“你有一次告诉我，人的眼睛是神最孤独的创造。世上有多少东西会穿过瞳孔，可它什么都留不下。一只眼睛孤零零地待在自己的眼眶里，完全不知道一英寸之外，还有完全相同的另一只，一样饥渴，一样空洞。”（王鸥行 14）",
+        "“You told me once that the human eye is the most lonely creation of God. How much of the world passes through the pupil and still it holds nothing? The eye, alone in its socket, doesn't even know there's another one just like it, an inch away, equally hungry, equally empty.” (Vuong 14)"
+      ],
+      [
+        "王鸥行拒绝奉承眼睛。它不是心灵的窗户，也不是笛卡尔式那种将图像传输给背后某个大脑的透镜景象。对梅洛-庞蒂而言，进行感知的是“身体主体”（le corps-sujet）：即整体的身体，其视觉受限于它所处的位置和所能触及的范围。王鸥行向我们展示了处于极度局限中的身体。眼睛“孤零零地待在自己的眼眶里”，汲取一切却一无留存（“可它什么都留不下”），甚至无法看见一英寸之外的同伴。这道间距虽微小却无法逾越。双眼处于同一个颅骨内，朝向同一个方向，却彼此浑然不知。",
+        "Vuong refuses to flatter the eye. It is not the window to the soul, and it is not the Cartesian picture of a lens that feeds images to a mind sitting somewhere behind it. For Merleau-Ponty, the one who perceives is the body-subject (le corps-sujet): the whole body, whose seeing is bound by where it stands and what it can reach. Vuong gives us that body at its most limited. The eye sits “alone in its socket,” takes in everything and keeps none of it (“still it holds nothing”), and cannot see its twin an inch away. The gap is tiny and cannot be crossed. Both eyes sit in the same skull, facing the same way, and neither knows the other is there."
+      ],
+      [
+        "那微小的间距象征着一道更大的鸿沟。小狗与母亲共处一室，但母亲读不懂英文，两人都无法将战争留下的创伤完整地递交给对方。双眼“一样饥渴，一样空洞”：彼此相似，处于相同的境遇，却无法向对方确认这一点。在这幅图景中，战争造成的流离失所不仅是地图上的距离，更是身体内部的断裂，以及同处一室的肉体之间的隔阂。",
+        "That small gap stands for a larger one. Little Dog and Rose share a home, but Rose cannot read English, and neither of them can fully hand the other what the war left behind. The eyes are “equally hungry, equally empty”: alike, in the same condition, and unable to confirm it to each other. In this picture, the displacement of war is not only distance on a map. It is also a break inside the body, and between bodies in the same room."
+      ],
+      [
+        "这段文字并未终结于绝望。就在孤独的瞳孔之后，小说提供了一个短暂的交汇时刻：",
+        "The passage does not end in despair. Right after the lonely pupil, the novel offers a brief moment of contact:"
+      ],
+      [
+        "“你打开前门，对着我人生中的第一场雪，耳语道：看。”（王鸥行 14）",
+        "“You opened the front door to my first snow, whispered: Look.” (Vuong 14)"
+      ],
+      [
+        "母亲那单单一个字的“看”，是一种关爱的行为。在这个她无法阅读其语言的国家里，她几乎毫无权力，但她依然能指引儿子看向世界，并邀他一同凝视。母子二人并非从外部面对景象的旁观者；他们每个人都能看到对方在凝视。她没有去解释这场雪，她只是打开门，让雪映入眼帘。雪，就像所有穿过瞳孔的事物一样，什么都不会留下；它终将融化。重要的不是留住它，而是在同一个瞬间，共同凝视它。",
+        "Rose’s one word, “Look,” is an act of care. She has little power in a country whose language she cannot read, but she can still point her son at the world and ask him to see it with her. Mother and son are not spectators facing a scene from outside; each can see the other seeing. She does not explain the snow. She opens the door and lets it come into view. Snow, like everything that passes through the pupil, leaves nothing behind; it will melt. What matters is not keeping it but seeing it together, at the same moment."
+      ],
+      [
+        "这就是王鸥行微观层面上的美学政治。遥远而官方的视力试图通过计数、记录和占有来掌控其所见之物；母亲的“看”则毫无此求。它提供的是陪伴。瞳孔依然空洞，但在这一刻，那道间距得到了回应。不是通过语言，而是通过两个人对同一事物共同的见证。一页书页固然承载不了整部小说，但它展示了一种值得贯穿全书的方法：当语言和历史失效时，共同的凝视依然能够宣告：我们在此，并且活着。",
+        "That is Vuong’s politics of beauty in small. The distant, official view tries to master what it sees by counting it, recording it, and holding on to it. Rose’s “Look” asks for none of that. It offers company. The pupils stay empty, but for a moment the gap is answered, not with words, but by two people witnessing the same thing. One page cannot carry a whole novel, but it shows a method worth following through the rest of the book: when language and history fail, shared seeing can still say that we are here and alive."
+      ]
+    ]
+  },
+  {
     "date": "2025-01-27",
-    "title": "Sokcho in Winter",
+    "title": "Between Two Summers",
     "place": "Sokcho, Gangwon, Korea",
     "category": "Journal",
     "prose": [
@@ -145,11 +296,13 @@ window.NOTES = [
         "就这么走了很久很久"
       ],
       [
-        "后来很多次 一个人在陌生的路上走",
-        "也不知道走了多久 也不知道走到了哪",
-        "但只要Sound Transit钻出Beacon Hill的地下道",
+        "后来很多次",
+        "一个人在陌生的路上走",
+        "也不知道走了多久 不知道走到了哪",
+        "但只要 Sound Transit 钻出 Beacon Hill 的地下道",
         "天际线那么一出现",
-        "我就知道 我又走回来了"
+        "我就知道",
+        "我又走回来了"
       ]
     ]
   },
@@ -266,7 +419,7 @@ window.NOTES = [
       "各々の人が持っている、人生の一部分、ちょっとした断片でも、彼らの生き方に大きな影響を与えるものがあるんだよ。",
       "シアトルはね、私の人生で一番大事な思い出が詰まってる場所で、永遠に私の心に残る、懐かしい旋律みたいな場所なんだ。そこではUWやシアトルのコミュニティから素晴らしい友達と深い絆を築いたんだ。雨に濡れた街並みの中で、私は粘り強さを学んで、「一生懸命働いて、一生懸命遊ぶ」という信念を抱いたんだ。それが今も私の心にグッときてるんだ。",
       "人生が進んで、サンフランシスコに落ち着いていく中で、大事な友達たちが日本へ旅立ち始めてるのに気付いたんだ。笑い声や大切な瞬間の余韻が残ってるんだ。",
-      "東京へ向かう途中、雲の上を飛びながら、昔の友達たちと再会したいなって思ってるんだ。一緒に団結の精神を取り戻したいんだ。ああ、昔の日々が恋しいな。Odegaard図書館での汗とコーヒーの匂い、古い広い家での抱擁とグラスの音、そして何よりも、若さの感じ――私たちを深く、永遠に形作った、忘れられない熱い瞬間を。"
+      "東京へ向かう途中、雲の上を飛びながら、昔の友達たちと再会したいなって思ってるんだ。一緒に団結の精神を取り戻したいんだ。ああ、昔の日々が恋しいな。Odegaard図書館での汗とコーヒーの匂い、古い広い家での抱擁とグラスの音、そして何よりも、若さの感じ。私たちを深く、永遠に形作った、忘れられない熱い瞬間を。"
     ]
   },
   {
@@ -278,19 +431,19 @@ window.NOTES = [
     "prose": [
       [
         "今年是曾经生活在托斯卡纳的卡尔维诺百年诞辰。他在《看不见的城市》中的这句名言“城市如同梦境，由欲望与恐惧构成”（Le città, come i sogni, sono costruite di desideri e di paure.）更加贴切地描述了佛罗伦萨这座时空交错的城市。美第奇家族，涉足金融业务而感到罪孽深重，施以慷慨资助各类艺术天才，催生了众多伟大的杰作，将佛罗伦萨打造成文艺复兴的巅峰。而美第奇之约，更是保障了这些珍贵的艺术珍品能够永远留在佛罗伦萨，让这座城市的文化遗产传承数百年。",
-        "This year is the centenary of Italo Calvino, who once lived in Tuscany. A line from *Invisible Cities*, “Cities, like dreams, are made of desires and fears” (Le città, come i sogni, sono costruite di desideri e di paure.), describes Florence, a city where times intersect, all the more aptly. The Medici, weighed down by guilt over their dealings in finance, generously sponsored artistic geniuses of every kind. That gave rise to countless masterpieces and built Florence into the summit of the Renaissance. And the Medici Pact (the Patto di Famiglia) guaranteed that these precious works of art would stay in Florence forever, passing the city’s cultural heritage down across the centuries."
+        "This year marks the centenary of Italo Calvino, who once lived in Tuscany. A famous line from *Invisible Cities*—“Cities, like dreams, are made of desires and fears” (*Le città, come i sogni, sono costruite di desideri e di paure.*)—captures the temporal crosscurrents of Florence all the more aptly. The Medici family, weighed down by guilt over their financial usury, sought redemption through generous patronage of artistic geniuses. That patronage birthed countless masterpieces and elevated Florence to the pinnacle of the Renaissance. The Medici Pact (*Patto di Famiglia*) further ensured that these treasures would remain in Florence forever, passing the city’s cultural legacy down through the centuries."
       ],
       [
         "佛罗伦萨，以及它所代表的文艺与社会革命，并不是美第奇家的赞助金钱堆出来的，更不是他们的审查与定式的产物；它来自不受审查的、人性最底层的各种欲望和梦想，来自那种不灭的创造力。他们从先贤的古典文化和哲学中汲取灵感，从长江黄河不会倒流的科学中重拾信心，只要人文主义思想的火种不灭，改变世界的时间的尺度就一直都在每个人自己的手里。",
-        "Florence, and everything it stands for in the artistic and social revolution, was not piled up out of the Medici’s sponsorship money, and still less was it a product of their censorship and formulas. It came from the most basic human desires and dreams, uncensored, and from the undying creativity they brought. They drew inspiration from the classical culture and philosophy of the sages before them, and regained confidence from a science that, like the Yangtze and the Yellow River, can never flow backward. As long as the spark of humanism does not go out, the measure of time that changes the world stays in everyone’s own hands."
+        "Yet Florence, and the artistic and social revolution it embodies, was not built merely on Medici money—still less was it the product of their censorship or prescribed formulas. It sprang from the most fundamental human desires and dreams, raw and uncensored, powered by indestructible creativity. Renaissance thinkers drew inspiration from classical philosophy and took courage from the immutable laws of nature—laws as irreversible as the forward flow of great rivers. So long as the spark of humanism remains unextinguished, the power to change the world stays in our own hands."
       ],
       [
         "如果我们去理解那个不同的角度，就像卡尔维诺在书里对忽必烈和马可波罗争辩的描写一样。马可波罗只关注于游历的各个城市不同的风格特点，而忽必烈汗作为大汗必然选择寻求定式来掌控全局，从而更关注于普遍性和规律性。虽然这两者是对城市本质和存在方式的不同理解，但是若将普遍性置于流动变化的世界本质之前，那就是本末倒置了。你写那么多思想著作，然后从小学到体制内统一思想去亲自指挥，说到底就是犯了忽必烈的“错误”。统一的思想从来只起一种放大作用：它既可能把一个个体身上的潜能和才能无限放大，也可能把一个个体的缺点疯狂放大。",
-        "If we try to understand a different angle, it is like Calvino’s account of the argument between Kublai Khan and Marco Polo. Marco Polo attends only to the distinct character of each city he has visited, while Kublai, as Great Khan, naturally seeks a fixed pattern to control the whole, and so cares more about universality and regularity. Though these are two different understandings of what a city is and how it exists, putting universality before the changing, flowing nature of the world gets things backward. You write so many works of thought, and then, from primary school through the system, you personally direct a uniform way of thinking. In the end that is just the Khan’s “mistake.” Uniform thought has only ever had one kind of effect, amplification: it can enlarge without limit the potential and talent in an individual, and it can just as wildly enlarge an individual’s flaws."
+        "To approach this from another angle, we might recall Calvino’s account of the dialogue between Kublai Khan and Marco Polo. While Polo attends strictly to the distinct texture and nuance of each city he visits, the Great Khan insists on discovering an underlying formula to govern the whole, prioritizing universality and order above all else. Yet to place rigid universality ahead of a flowing, ever-changing world is to invert cause and effect. To draft endless volumes of ideology and attempt to dictate a unified mindset from primary school through the state apparatus is, in the end, to repeat the Khan’s error. Uniform ideology serves only as an amplifier: it can magnify individual potential and talent without limit, but it can just as violently amplify an individual’s flaws."
       ],
       [
         "可是我觉得，我们还是要读北岛《回答》里的那句诗：纵使你脚下有一千名挑战者，那就把我算做第一千零一名。因为任何想要灭人欲的思想最终都是海底捞针。",
-        "And yet I think we should still read that line of poetry, from Bei Dao’s “The Answer”: “If a thousand challengers lie beneath your feet, count me as number one thousand and one.” Because any thought that tries to extinguish human desire is, in the end, a search for a needle at the bottom of the sea."
+        "Still, we ought to remember that line from Bei Dao’s *The Answer*: “If a thousand challengers lie beneath your feet, count me as number one thousand and one.” For any ideology that seeks to extinguish human desire is, in the end, an exercise in futility."
       ]
     ]
   },
@@ -345,7 +498,16 @@ window.NOTES = [
     "title": "The Color of Law",
     "slug": "the-color-of-law",
     "place": "Santa Clara, CA",
-    "category": "Book review",
+    "category": "Reader Response",
+    "book": {
+      "cover": "color_of_law.jpg",
+      "title": "The Color of Law",
+      "author": "Richard Rothstein",
+      "lines": [
+        "Nonfiction · Liveright, 2017",
+        "A forgotten history of how government policy at every level segregated American neighborhoods."
+      ]
+    },
     "blocks": [
       [
         "epi",
@@ -500,8 +662,8 @@ window.NOTES = [
     "blocks": [
       [
         "p",
-        "我至今依旧清楚地记得我小学一年级班主任的名字。二十四年过去了，我从未原谅过她，打心里希望她过得不好。",
-        "I can still clearly remember the name of my first-grade teacher. Twenty-four years have passed, and I have never forgiven her. Deep down, I hope her life has not gone well."
+        "我至今依旧清楚地记得我小学一年级班主任的名字。二十四年过去了，我从未原谅过她。",
+        "I can still clearly remember the name of my first-grade teacher. Twenty-four years have passed, and I have never forgiven her."
       ],
       [
         "h",
@@ -551,24 +713,24 @@ window.NOTES = [
       ],
       [
         "p",
-        "幸运的是，我父母看清了这个老师的偏执，并没有在家里对我进行二次惩罚。我也在这个本不该承担伤害的年纪，过早地看清了某种教育生态的本质。",
-        "Fortunately, my parents saw through the teacher’s obsessiveness and did not punish me a second time at home. And at an age when I should never have had to bear such harm, I saw the nature of a certain educational ecosystem too early."
+        "幸运的是，我父母看清了这个老师的偏执，并没有在家里对我进行二次惩罚。直到很久以后，我才明白，那是我第一次近距离看到某种教育生态的样子。",
+        "Fortunately, my parents saw through the teacher’s obsessiveness and did not punish me a second time at home. It was only much later that I understood this was my first close look at a certain kind of educational ecosystem."
       ],
       [
         "h",
-        "筑起心防：“戏台”背后的代价与觉醒",
-        "Building the Wall: The Cost and Awakening Behind the “Stage”",
+        "筑起心防",
+        "Building the Wall",
         "02"
       ],
       [
         "p",
-        "当所有人都在被灌输“老师是燃烧自己照亮别人的蜡烛”时，我却被迫在极早的年纪看透了权力的本质：老师只是一份职业。它可以崇高，但从事它的人可能只是个情绪不稳定、甚至在弱者面前有着极强掌控欲的普通人。",
-        "While everyone else was being taught that “a teacher is a candle that burns itself to light others,” I was forced, very early, to see through the nature of power: teaching is just a job. It can be noble, but the person doing it may be an ordinary person with unstable moods, even one with a strong need to control those weaker than themselves."
+        "当所有人都在被灌输“老师是燃烧自己照亮别人的蜡烛”时，我当时只是隐约觉得不对。多年以后我才想明白：老师只是一份职业。它可以崇高，但从事它的人可能只是个情绪不稳定、甚至在弱者面前有着极强掌控欲的普通人。",
+        "While everyone else was being taught that “a teacher is a candle that burns itself to light others,” I only dimly sensed that something was wrong. Years later I understood: teaching is just a job. It can be noble, but the person doing it may be an ordinary person with unstable moods, even one with a strong need to control those weaker than themselves."
       ],
       [
         "p",
-        "在那种环境下，系统最残忍的地方不在于惩罚本身，而在于它强行构建了一套“二元价值账本”——顺从即是美德，异见即是缺陷。当一个孩子试图进行微小的反抗或表达独立的审美时，迎来的往往是毫不留情的践踏。我至今记得六年级那次作文课，语文老师撕碎了我的作文本，当场撒在地上，并在黑板上用巨大的粉笔字写下五个大字：“什么玩意儿”，引得全班哄堂大笑。",
-        "In that environment, the cruelest thing about the system is not the punishment itself but the “binary ledger of worth” it forces on you: obedience is virtue, dissent is a defect. When a child tries a small act of resistance or shows an independent taste, what comes back is usually merciless trampling. I still remember one composition class in sixth grade, when my Chinese teacher tore up my notebook, scattered the pieces on the floor, and wrote in huge chalk characters on the blackboard: “什么玩意儿” (“What is this garbage?”). The whole class burst into laughter."
+        "在我待过的那种环境里，最残忍的地方不在于惩罚本身，而在于它强行构建了一套“二元价值账本”——顺从即是美德，异见即是缺陷。当一个孩子试图进行微小的反抗或表达独立的审美时，迎来的往往是毫不留情的践踏。我至今记得六年级那次作文课，语文老师撕碎了我的作文本，当场撒在地上，并在黑板上用巨大的粉笔字写下五个大字：“什么玩意儿”，引得全班哄堂大笑。",
+        "In the environment I knew, the cruelest thing was not the punishment itself but the “binary ledger of worth” it forced on you: obedience is virtue, dissent is a defect. When a child tried a small act of resistance or showed an independent taste, what came back was usually merciless trampling. I still remember one composition class in sixth grade, when my Chinese teacher tore up my notebook, scattered the pieces on the floor, and wrote in huge chalk characters on the blackboard: “什么玩意儿” (“What is this garbage?”). The whole class burst into laughter."
       ],
       [
         "p",
@@ -587,19 +749,19 @@ window.NOTES = [
       ],
       [
         "h",
-        "挣脱“内部监视器”：独立思考与真正的解脱",
-        "Breaking Free of the “Internal Monitor”: Independent Thought and Real Release",
+        "学着自己做主",
+        "Learning to Choose",
         "03"
       ],
       [
         "p",
-        "许多人认为，独立思考与批判性思维在应试环境里是异端。但我从高中到现在的观点都完全相反：真正的自主意识，不仅不会阻碍成绩，反而是解构应试焦虑的唯一武器。",
-        "Many people think independent thought and critical thinking are heresy in an exam-driven setting. My view, from high school until now, is the exact opposite: real autonomy does not hinder grades, and is in fact the only weapon for taking exam anxiety apart."
+        "许多人认为，在应试环境里，独立思考与批判性思维是一种奢侈。但我从高中到现在的经验恰恰相反：照自己的判断行事，并没有拖累我的成绩，反而缓解了应试带来的焦虑。",
+        "Many people assume that independent thought and critical thinking are a luxury in an exam-driven setting. My experience since high school points the other way: acting on my own judgment did not hold back my results, and it eased the anxiety that exams breed."
       ],
       [
         "p",
-        "传统教育最深层的规训，是植入一个“内部监视器”。它让你在离开学校多年后，依然在每一个需要做抉择的十字路口战战兢兢，生怕自己“不够合群”、“没有听话”。这种规训伴随着系统的煤气灯效应（Gaslighting）——它将管理者的无能与僵化包装成“为了你好”，将你因独立探索而受到的排挤归咎于你“不守规矩”，从而让你陷入深深的无端内疚中。",
-        "The deepest discipline of traditional education is the installation of an “internal monitor.” Years after leaving school, it still makes you tremble at every crossroads where a decision is needed, afraid of being “not one of the group” or “not obedient.” This discipline comes with the system’s gaslighting: it wraps the manager’s incompetence and rigidity in “it’s for your own good,” and blames your exclusion for exploring independently on your “not following the rules,” leaving you sunk in deep, unwarranted guilt."
+        "传统教育最深的影响，是在你心里留下一个声音。离开学校多年后，它依然让你在每一个需要做抉择的十字路口战战兢兢，生怕自己“不够合群”、“没有听话”。这个声音常常带着一套说辞：它把管理者的无能与僵化说成“为了你好”，又把你因独立探索而受到的排挤归咎于你“不守规矩”，让你陷入深深的无端内疚。",
+        "The deepest effect of traditional schooling is a voice it leaves inside you. Years after leaving school, it still makes you tremble at every crossroads where a decision is needed, afraid of being “not one of the group” or “not obedient.” That voice often comes with a script: it turns the manager’s incompetence and rigidity into “it’s for your own good,” and blames your exclusion for exploring independently on your “not following the rules,” leaving you sunk in deep, unwarranted guilt."
       ],
       [
         "p",
@@ -613,18 +775,18 @@ window.NOTES = [
       ],
       [
         "p",
-        "我离开中国的基础教育环境很多年了。但我始终坚信，一个成熟的教育生态，绝不该靠驯服个体的灵性来维持秩序。",
-        "I left China’s basic education system many years ago. But I remain convinced that a mature educational ecosystem should never keep order by taming the spirit of the individual."
+        "我离开中国的基础教育环境很多年了。我说的只是我遇到的那几位老师，我也只能讲我亲眼所见。但我依然相信，学校里的秩序，不该靠驯服个体的灵性来维持。",
+        "I left China’s basic education system many years ago. I am speaking only of the few teachers I met, and I can only tell what I saw myself. But I still believe that order in a school should not be kept by taming the spirit of the individual."
       ],
       [
         "p",
-        "我们不需要更多在冰冷权威下无处可逃、在一次否定后走向绝壁的悲剧；我们需要的是被尊重、被理解、拥有独立人格与坚韧灵魂的个体。当一个人终于能够不带愧疚地审视过去、拒绝内化他人的傲慢时，他才真正完成了对自己的救赎。",
-        "We do not need more tragedies of people with nowhere to run under cold authority, driven to the edge of a cliff by a single rejection. What we need are individuals who are respected and understood, with independent character and resilient souls. Only when a person can finally examine the past without guilt, and refuse to internalize other people’s arrogance, has that person truly saved themselves."
+        "我至今没有原谅一年级的那位班主任，大概以后也不会。但她已经不再重要了。我记得她的名字，就像记得一座离开已久的小镇的路名。我留下的，是那个口渴的孩子：他只是问了一句“为什么”，而他问得没有错。",
+        "I have not forgiven my first-grade teacher, and I probably never will. But she no longer matters. I remember her name the way one remembers a street name in a town one left long ago. What I keep is the thirsty child who asked, “Why?” He was right to ask."
       ]
     ]
   },
   {
-    date: "2026-11-06", title: "Polis and Civitas", category: "Reflection", place: "San Ramon, CA",
+    date: "2026-11-03", title: "Polis and Civitas", category: "Reflection", place: "San Ramon, CA",
     prose: [
       [
         "古典学课上讲了Polis与Civitas相反的社会观。",

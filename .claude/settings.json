@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git ls-remote *)",
+      "Bash(curl -sI https://hehaotian.github.io/)",
+      "Bash(gh run *)",
+      "Bash(sort -t: -k3)",
+      "Bash(awk -F'\"category\":' '{print $2}')",
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES[0];console.log\\(window.NOTES.length,n.title,n.body.length\\)')",
+      "Bash(cat)",
+      "Bash(node /tmp/rewrite.js)",
+      "Bash(node -e 'global.window={};require\\(\"/Users/local/git/hehaotian.com/data/notes.js\"\\);const n=window.NOTES[0];console.log\\(window.NOTES.length,n.title,n.date,n.body.length,n.body.join\\(\" \"\\).split\\(/\\\\s+/\\).length\\)')",
+      "Bash(node /tmp/rewrite3.js)",
+      "Bash(node -e 'global.window={};require\\(\"/Users/local/git/hehaotian.com/data/notes.js\"\\);const b=window.NOTES[0].body.join\\(\" \"\\);console.log\\(window.NOTES[0].body.length,/chiasm|prise|maximum grip/.test\\(b\\)\\)')",
+      "Bash(node /tmp/zh.js)",
+      "Bash(node -e 'global.window={};require\\(\"/Users/local/git/hehaotian.com/data/notes.js\"\\);const n=window.NOTES.find\\(n=>n.title==\"The One-Inch Gap\"\\);console.log\\(window.NOTES.length,n.date,Object.keys\\(n\\),n.prose.length,n.prose.flat\\(\\).join\\(\"\"\\).includes\\(\"132\"\\)\\)')",
+      "Bash(node -e 'global.window={};require\\(\"/Users/local/git/hehaotian.com/data/notes.js\"\\);console.log\\(window.NOTES.length,window.NOTES[0].title\\)')",
+      "Bash(node /tmp/df.js)",
+      "Bash(node -e 'global.window={};require\\(\"/Users/local/git/hehaotian.com/data/notes.js\"\\);const n=window.NOTES.find\\(n=>n.title==\"Desires and Fears\"\\);console.log\\(window.NOTES.length,n.prose.length,n.prose.map\\(p=>p[0].slice\\(0,6\\)+\" | \"+p[1].slice\\(0,30\\)\\)\\)')",
+      "Bash(node -e 'global.window={};require\\(\"/Users/local/git/hehaotian.com/data/notes.js\"\\);const n=window.NOTES.find\\(n=>n.title.startsWith\\(\"Before I Became\"\\)\\);console.log\\(JSON.stringify\\({d:n.date,c:n.category,p:n.place,keys:Object.keys\\(n\\)}\\)\\);const b=n.blocks||n.prose||n.body;for\\(const x of b\\){console.log\\(Array.isArray\\(x\\)?\\(x[0]==\"p\"||x[0]==\"h\"||x[0]==\"sub\"||x[0]==\"epi\"?x[0]+\": \"+x[2]:x[1]\\):x\\);console.log\\(\\)}console.log\\(JSON.stringify\\(n.refs\\)\\)')",
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES.find\\(n=>n.title.startsWith\\(\"Before I Became\"\\)\\);n.blocks.forEach\\(\\(b,i\\)=>console.log\\(i,b[0],\"|\",b[1]\\)\\)')",
+      "Bash(cp data/notes.js /tmp/notes.bak)",
+      "Bash(node /tmp/gs.js)",
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES.find\\(n=>n.title.startsWith\\(\"Before I Became\"\\)\\);console.log\\(window.NOTES.length,n.blocks.length,n.blocks[11],n.blocks[1][3]\\)')",
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);console.log\\(window.NOTES.length,window.NOTES[0].title,window.NOTES[0].body.length\\)')",
+      "Bash(node /tmp/sev.js)",
+      "Bash(node /tmp/sev2.js)",
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES[0];console.log\\(window.NOTES.length,n.title,n.slug,Object.keys\\(n\\),n.prose.length,/[（\\(][A-Za-z ]+[）\\)]/.test\\(n.prose.map\\(p=>p[0]\\).join\\(\"\"\\)\\)\\)')",
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES[0];for\\(const [z,e] of n.prose\\){for\\(const m of \\(z+\"\\\\n\"+e\\).matchAll\\(/.{0,25}[-—–‑].{0,25}/g\\)\\)console.log\\(m[0]\\)}')",
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES[0];console.log\\(window.NOTES.length,n.prose.flat\\(\\).join\\(\"\"\\).match\\(/[-—–]/g\\)\\)')",
+      "Bash(node /tmp/sev3.js)",
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES[0];console.log\\(window.NOTES.length,n.prose.length,n.prose[4][1].slice\\(0,40\\),n.prose.flat\\(\\).join\\(\"\"\\).match\\(/[-—–]/g\\)\\)')",
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES[0];console.log\\(window.NOTES.length,n.prose.length,n.prose[1][1].slice\\(0,30\\),n.prose.flat\\(\\).join\\(\"\"\\).match\\(/[-—–]/g\\)\\)')",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --user-data-dir=/tmp/chr-prof --disable-gpu --window-size=900,1100 --virtual-time-budget=4000 --screenshot=/tmp/shot.png 'http://localhost:8765/#notes/severance')",
+      "Bash(pkill -f \"http.server 8765\")",
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);console.log\\(window.NOTES.length,window.NOTES[0].title,window.NOTES.filter\\(n=>n.category==\"Reader Response\"\\).length\\)')",
+      "Bash(node /tmp/stl.js)",
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES[0];console.log\\(window.NOTES.length,n.title,n.prose.length,n.prose.flat\\(\\).join\\(\"\"\\).match\\(/[—–]/g\\)\\)')",
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES.find\\(n=>n.title==\"You Are Absolutely Right\"\\);console.log\\(JSON.stringify\\({d:n.date,c:n.category,p:n.place,k:Object.keys\\(n\\)}\\)\\);const b=n.prose||n.blocks;b.forEach\\(\\(x,i\\)=>{const e=x.length>3||x[0]==\"p\"||x[0]==\"h\"?x:x;console.log\\(i,x.slice\\(0,3\\).join\\(\"\\\\n  \"\\)\\);}\\)')"
+    ]
+  }
+}
