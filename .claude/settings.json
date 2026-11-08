@@ -43,7 +43,11 @@
       "Read(//Users/local/Downloads/**)",
       "Bash(cd ~/Downloads; ls | sed -n 100,352p | grep -iE \"^[a-z]+_?[0-9]{6}|_20\\(24|25\\)|jpe?g|heic\" | head -150; ls -d */ | head -40)",
       "Bash(awk '{print $6,$7,$8,$9,$10,$11}')",
-      "Bash(awk '{print $6,$7,$8,$9,$10,$11,$12}')"
+      "Bash(awk '{print $6,$7,$8,$9,$10,$11,$12}')",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(node -e 'global.window={};eval\\(require\\(\"fs\"\\).readFileSync\\(\"data/notes.js\",\"utf8\"\\)\\);console.log\\(window.NOTES.find\\(n=>n.slug==\"above-the-clouds\"\\).body.length\\)')"
     ]
   }
 }

@@ -46,6 +46,29 @@
     bottom: 20px; left: 410px; width: min(720px, calc(100vw - 434px));   /* starts right of the left boxes (they end at 386px) */
   }
   @media (max-width: 900px) { #controls { left: 12px; width: calc(100vw - 24px); } }
+  @media (max-width: 700px) {
+    html, body { overscroll-behavior: none; }
+    .panel { padding: 10px 12px; }
+    #left { top: 8px; left: 8px; right: 8px; width: auto; max-height: calc(100% - 140px); }
+    #info { cursor: pointer; position: relative; }
+    #info::after { content: "▾ lists"; position: absolute; right: 12px; top: 12px; font-size: 11px; opacity: .55; }
+    #left.open #info::after { content: "▴ hide"; }
+    #date { font-size: 20px; }
+    #place { font-size: 15px; }
+    #note { display: none; }
+    #cities, #countries { display: none; }
+    #left.open #cities, #left.open #countries { display: flex; }
+    #cities ol, #countries ol { max-height: 22vh; }
+    #controls { left: 8px; width: calc(100vw - 16px); bottom: calc(8px + env(safe-area-inset-bottom)); }
+    #years button { padding: 6px 9px; }
+    button, select { font-size: 16px; padding: 8px 14px; }    /* 16px stops iOS from zooming in on the select */
+    #photo { right: auto; left: 50%; top: auto; bottom: calc(var(--ctl-h, 110px) + 16px + env(safe-area-inset-bottom));
+             width: min(220px, 55vw); padding: 6px 6px 5px; transform: translateX(-50%) scale(.96); }
+    #photo.show { transform: translateX(-50%) scale(1); }
+    #photo img { max-height: 26vh; }
+    #photo-cap { font-size: 12px; padding-top: 5px; }
+    .leaflet-control-zoom { display: none; }
+  }
   #ctl-row { display: flex; align-items: center; gap: 12px; }
   #years { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; padding-top: 8px; margin-top: 8px; border-top: 1px solid rgba(255,255,255,.12); }
   #years::-webkit-scrollbar { display: none; }
@@ -411,13 +434,26 @@ function renderCities(upTo) {
     rowTpl(k, COUNTRY_LOCAL[k], v, r === 0)).join("");   // HOME country = the top country by count, independent of the home city
 }
 
+const isMobile = () => matchMedia("(max-width: 700px)").matches;
+// space the camera keeps clear of the overlay boxes (and the photo card) when framing stops
+function camPads(c) {
+  const ctl = document.getElementById("controls").offsetHeight;
+  const photo = !!stops[c].photos;
+  if (isMobile()) {
+    const top = document.getElementById("left").getBoundingClientRect().bottom + 20;
+    const photoH = photo ? document.getElementById("photo").offsetHeight + 16 : 0;
+    return { left: 30, top, right: 30, bottom: ctl + 30 + photoH };
+  }
+  return { left: document.getElementById("left").getBoundingClientRect().right + 40, top: 70,
+           right: 70 + (photo ? PHOTO_W + 30 : 0), bottom: ctl + 60 };
+}
+
 // camera framing for "at stop c" (or flying i -> i+1): the stops AHEAD around it, shrunk until the zoom stays >= MIN_ZOOM
 let prefetchedFor = -1;
 function camTarget(c, hopping, i, opts) {
   if (!opts) {
-    const left = document.getElementById("left").getBoundingClientRect().right + 40;
-    const bottom = document.getElementById("controls").offsetHeight + 60;
-    opts = { paddingTopLeft: [left, 70], paddingBottomRight: [70 + (stops[c].photos ? PHOTO_W + 30 : 0), bottom], maxZoom: 9 };
+    const p = camPads(c);
+    opts = { paddingTopLeft: [p.left, p.top], paddingBottomRight: [p.right, p.bottom], maxZoom: 9 };
   }
   let win, target;
   for (let r = AHEAD; r >= 0; r--) {
@@ -501,15 +537,13 @@ function render() {
   if (i !== prefetchedFor) { prefetchedFor = i; if (stops[i + 1]) prefetch(camTarget(i + 1, false, i + 1).target); }
   if (camState !== camKey) {
     camKey = camState;
-    const left = document.getElementById("left").getBoundingClientRect().right + 40;   // clear of the left boxes
-    const bottom = document.getElementById("controls").offsetHeight + 60;              // and the control bar
-    const right = 70 + (stops[c].photos ? PHOTO_W + 30 : 0);                              // keep the photo card off the route
-    const opts = { paddingTopLeft: [left, 70], paddingBottomRight: [right, bottom], maxZoom: 9 };
+    const { left, top, right, bottom } = camPads(c);   // clear of the boxes, control bar and photo card
+    const opts = { paddingTopLeft: [left, top], paddingBottomRight: [right, bottom], maxZoom: 9 };
     const { win, target } = camTarget(c, hopping, i, opts);
     const sz = map.getSize();
     const visible = win.every(q => {
       const pt = map.latLngToContainerPoint(q);
-      return pt.x >= left && pt.x <= sz.x - right && pt.y >= 70 && pt.y <= sz.y - bottom;
+      return pt.x >= left && pt.x <= sz.x - right && pt.y >= top && pt.y <= sz.y - bottom;
     });
     const z = map.getZoom();
     const zoomOk = z >= target.zoom - 1 && z <= 9 && (z >= MIN_ZOOM || target.zoom < MIN_ZOOM);
@@ -520,6 +554,15 @@ function render() {
   }
   scrub.value = pos;
 }
+
+// phones: lists are hidden until the info box is tapped; the photo card sits just above the control bar
+document.getElementById("info").addEventListener("click", () => {
+  if (!isMobile()) return;
+  document.getElementById("left").classList.toggle("open");
+  camKey = "";
+});
+const setCtlH = () => document.documentElement.style.setProperty("--ctl-h", document.getElementById("controls").offsetHeight + "px");
+setCtlH(); addEventListener("resize", setCtlH);
 
 function frame(t) {
   if (!playing) return;

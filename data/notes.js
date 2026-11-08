@@ -97,7 +97,7 @@ window.NOTES = [
     "date": "2024-10-16",
     "title": "東京夜想",
     "slug": "tokyo-night",
-    "category": "Poem",
+    "category": "Lines",
     "stanzas": [
       [
         "夜の東京",
@@ -377,7 +377,7 @@ window.NOTES = [
     "date": "2025-07-15",
     "title": "台灣拾遺",
     "slug": "taiwan",
-    "category": "Poem",
+    "category": "Lines",
     "place": "於台灣台北",
     "stanzas": [
       [
