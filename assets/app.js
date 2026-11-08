@@ -14,12 +14,21 @@ function show(name) {
   });
   // the heavy map page loads only the first time you open Steps
   if (name === "steps" && !frame.src) frame.src = frame.dataset.src;
+  document.body.dataset.tab = name;                                  // lets the CSS match the top bar to this page's column width
   document.title = name === "home" ? "Haotian" : `${name[0].toUpperCase() + name.slice(1)} · Haotian`;
   if (name !== currentTab) window.scrollTo(0, 0);   // opening a pop-up on the same tab keeps the page where it is
   currentTab = name;
 }
 window.addEventListener("hashchange", () => show(location.hash.slice(1)));
 show(location.hash.slice(1));
+
+// ---- menu button: opens the section links under the top bar; closes on a link, Escape, a click elsewhere, or a page change
+const topBar = document.getElementById("top"), menuBtn = document.getElementById("menu");
+function setMenu(open) { topBar.classList.toggle("open", open); menuBtn.setAttribute("aria-expanded", open); }
+menuBtn.addEventListener("click", () => setMenu(!topBar.classList.contains("open")));
+document.addEventListener("click", e => { if (!topBar.contains(e.target)) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+window.addEventListener("hashchange", () => setMenu(false));
 
 // ---- shared pop-up page: "#tab/slug" opens an entry from Notes, Plates, Goods or Gigs over the current tab
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));

@@ -1,22 +1,42 @@
-:root { --text: #111; --muted: #777; --line: #e4e4e4; --nav-h: 52px; }
+:root { --text: #111; --muted: #777; --line: #e4e4e4; --nav-h: 60px; }
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; background: #fff; color: var(--text);
   font: 17px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { text-decoration-color: var(--muted); }
 
-/* header: name on the left, three text links on the right */
-#top { position: fixed; inset: 0 0 auto 0; height: var(--nav-h); z-index: 10; display: flex; align-items: center;
-       justify-content: space-between; padding: 0 28px; background: #fff; border-bottom: 1px solid var(--line); }
-.brand { font-weight: 600; text-decoration: none; }
-#tabs { display: flex; gap: 28px; }
-#tabs a { text-decoration: none; color: var(--muted); }
-#tabs a:hover { color: var(--text); }
-#tabs a.active { color: var(--text); text-decoration: underline; }
+/* header: the name on the left and a three-line menu button on the right, both on the same left/right edges as the text column below,
+   so "Haotian" in the bar always sits right above "Haotian" on the home page. The section links open in a panel under the bar. */
+:root { --gutter: 24px; --frame: 600px; }   /* --frame: width of the text column; the bar follows it, so a wider page (Plates) widens both */
+body[data-tab="plates"] { --frame: 880px; }
+body[data-tab="steps"] { --frame: 100vw; }   /* the map is full width, so the bar spans it too */
+#top { position: fixed; inset: 0 0 auto 0; height: var(--nav-h); z-index: 10; display: flex; align-items: center; justify-content: space-between;
+       padding: 0 max(var(--gutter), calc((100% - var(--frame)) / 2 + var(--gutter)));
+       background: rgba(255,255,255,.82); -webkit-backdrop-filter: saturate(180%) blur(16px); backdrop-filter: saturate(180%) blur(16px);
+       border-bottom: 1px solid rgba(0,0,0,.07); transition: padding .25s ease; }
+.brand { font-weight: 600; font-size: 18px; letter-spacing: -.2px; text-decoration: none; }
+
+.menu-btn { position: relative; width: 40px; height: 40px; margin: 0 -9px 0 0; padding: 0; border: 0; background: none; cursor: pointer; color: var(--text); }
+.menu-btn span { position: absolute; left: 9px; width: 22px; height: 1.5px; background: currentColor; border-radius: 1px; transition: transform .25s ease, opacity .2s ease; }
+.menu-btn span:nth-child(1) { top: 14px; } .menu-btn span:nth-child(2) { top: 19px; } .menu-btn span:nth-child(3) { top: 24px; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+.menu-btn:focus-visible { outline: 1px solid var(--muted); outline-offset: 2px; border-radius: 4px; }
+
+#tabs { position: absolute; top: 100%; left: 0; right: 0; display: flex; flex-direction: column;
+        padding: 6px max(var(--gutter), calc((100% - var(--frame)) / 2 + var(--gutter))) 14px;
+        background: #fff;
+        border-bottom: 1px solid rgba(0,0,0,.07);
+        opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .2s ease, transform .2s ease, visibility 0s .2s; }
+#top.open #tabs { opacity: 1; visibility: visible; transform: none; transition: opacity .2s ease, transform .2s ease; }
+#tabs a { padding: 13px 0; font-size: 20px; letter-spacing: -.2px; text-decoration: none; color: var(--muted); border-bottom: 1px solid var(--line); }
+#tabs a:last-child { border-bottom: 0; }
+#tabs a:hover, #tabs a.active { color: var(--text); }
 
 main { padding-top: var(--nav-h); }
 .tab[hidden] { display: none; }
-.col { max-width: 600px; margin: 0 auto; padding: 96px 24px 120px; }
+.col { max-width: var(--frame); margin: 0 auto; padding: 96px 24px 120px; }
 
 h1 { font-size: 40px; font-weight: 600; letter-spacing: -.5px; line-height: 1.1; margin: 0 0 20px; }
 h2 { font-size: 28px; font-weight: 600; letter-spacing: -.3px; margin: 0 0 40px; }
@@ -45,7 +65,7 @@ h3 { font-size: 13px; font-weight: 400; color: var(--muted); margin: 48px 0 8px;
 /* Notes */
 
 @media (max-width: 640px) {
-  #top { padding: 0 18px; } #tabs { gap: 20px; }
+  :root { --gutter: 20px; } .brand { font-size: 17px; }
   .col { padding: 56px 20px 80px; } h1 { font-size: 34px; }
   .gig, .note { flex-direction: column; gap: 0; }
 }
@@ -93,7 +113,6 @@ body.reading { overflow: hidden; }
 @media (max-width: 640px) { #reader { padding: 0; } #reader .sheet { max-height: 100vh; height: 100%; border-radius: 0; } #reader article { padding: 0 32px 64px; } #reader .bar { padding: 20px 24px 0; } #reader h1 { font-size: 28px; } }
 
 /* Plates: collector's grid */
-#plates .col { max-width: 880px; }
 .plates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 @media (max-width: 700px) { .plates { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 440px) { .plates { grid-template-columns: 1fr; } }
