@@ -36,7 +36,7 @@ body[data-tab="steps"] { --frame: 100vw; }   /* the map is full width, so the ba
 
 main { padding-top: var(--nav-h); }
 .tab[hidden] { display: none; }
-.col { max-width: var(--frame); margin: 0 auto; padding: 96px 24px 120px; }
+.col { max-width: var(--frame); margin: 0 auto; padding: 72px 24px 120px; }
 
 h1 { font-size: 40px; font-weight: 600; letter-spacing: -.5px; line-height: 1.1; margin: 0 0 20px; }
 h2 { font-size: 28px; font-weight: 600; letter-spacing: -.3px; margin: 0 0 40px; }
@@ -66,7 +66,7 @@ h3 { font-size: 13px; font-weight: 400; color: var(--muted); margin: 48px 0 8px;
 
 @media (max-width: 640px) {
   :root { --gutter: 20px; } .brand { font-size: 17px; }
-  .col { padding: 56px 20px 80px; } h1 { font-size: 34px; }
+  .col { padding: 40px 20px 80px; } h1 { font-size: 34px; }
   .gig, .note { flex-direction: column; gap: 0; }
 }
 
@@ -90,9 +90,12 @@ body.reading { overflow: hidden; }
 #reader .sheet { width: min(700px, 100%); max-height: 90vh; overflow-y: auto; background: #fbf9f4; border-radius: 3px;
   box-shadow: 0 20px 60px rgba(0,0,0,.35); animation: read-rise .3s ease;
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif; }
-#reader .bar { position: sticky; top: 0; text-align: right; padding: 26px 34px 0; background: linear-gradient(#fbf9f4 70%, rgba(251,249,244,0)); }
-#reader .close { font: 14px/1 "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--muted); text-decoration: none; }
-#reader .close:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+#reader .bar { position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; padding: 26px 34px 0; background: linear-gradient(#fbf9f4 70%, rgba(251,249,244,0)); }
+#reader .close { font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--muted); text-decoration: none; }
+#reader .save { font: 18px/1 "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+#reader .save:hover { color: var(--text); }
+#reader .save:disabled { cursor: default; text-decoration: none; }
+#reader .close:hover { color: var(--text); }
 #reader article { padding: 0 84px 96px; }
 #reader .kind { text-align: center; margin: 22px 0 20px; font: 12px/1 "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); }
 #reader h1 { text-align: center; font-weight: 400; font-size: 34px; line-height: 1.2; letter-spacing: 0; margin: 0 0 14px; }

@@ -46,11 +46,66 @@ function syncReader() {
   const html = m && popups[m[1]] && popups[m[1]](decodeURIComponent(m[2]));
   if (!html) { reader.hidden = true; document.body.classList.remove("reading"); return; }
   openTab = m[1];
-  reader.innerHTML = `<div class="sheet"><div class="bar"><a class="close" href="#${openTab}">Close</a></div><article>${html}</article></div>`;
+  reader.innerHTML = `<div class="sheet"><div class="bar"><button type="button" class="save" title="Save as image" aria-label="Save as image">↓</button><a class="close" href="#${openTab}" title="Close" aria-label="Close">✕</a></div><article>${html}</article></div>`;
   reader.hidden = false; reader.scrollTop = 0;
   document.body.classList.add("reading");
 }
-reader.addEventListener("click", e => { if (e.target === reader) location.hash = "#" + openTab; });   // click outside the page to close
+reader.addEventListener("click", e => {
+  if (e.target === reader) location.hash = "#" + openTab;   // click outside the page to close
+  if (e.target.closest(".save")) saveImage(e.target.closest(".save"));
+});
+
+// "Save image": the whole open page (not just the part in view) as a PNG. Done without a library: the article is cloned with its
+// computed styles inlined, wrapped in an SVG <foreignObject>, and drawn onto a canvas.
+async function saveImage(btn) {
+  const art = reader.querySelector("article");
+  if (!art) return;
+  const label = btn.textContent;
+  btn.disabled = true; btn.textContent = "…";
+  try {
+    const w = art.offsetWidth, pad = 44;
+    const clone = art.cloneNode(true);
+    const src = [art, ...art.querySelectorAll("*")], dst = [clone, ...clone.querySelectorAll("*")];
+    src.forEach((el, i) => {
+      const cs = getComputedStyle(el);
+      dst[i].setAttribute("style", Array.from(cs).map(p => `${p}:${cs.getPropertyValue(p)}`).join(";"));
+    });
+    // images are embedded as data URLs, since an SVG drawn as an image cannot fetch anything
+    await Promise.all(src.filter(el => el.tagName === "IMG").map(async el => {
+      await el.decode().catch(() => {});
+      const c = document.createElement("canvas");
+      c.width = el.naturalWidth; c.height = el.naturalHeight;
+      c.getContext("2d").drawImage(el, 0, 0);
+      dst[src.indexOf(el)].setAttribute("src", c.toDataURL("image/png"));
+    }));
+    const wrap = document.createElement("div");
+    wrap.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
+    wrap.setAttribute("style", `width:${w}px;padding:${pad}px 0 0;background:#fbf9f4;color:#111;font-family:${getComputedStyle(art).fontFamily}`);
+    wrap.append(clone);
+    document.body.append(wrap);
+    const h = wrap.offsetHeight;
+    wrap.remove();
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"><foreignObject width="100%" height="100%">${new XMLSerializer().serializeToString(wrap)}</foreignObject></svg>`;
+    const img = new Image();
+    img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+    await img.decode();
+    const scale = 2, canvas = document.createElement("canvas");
+    canvas.width = w * scale; canvas.height = h * scale;
+    const ctx = canvas.getContext("2d");
+    ctx.scale(scale, scale); ctx.drawImage(img, 0, 0);
+    const blob = await new Promise((ok, no) => canvas.toBlob(b => b ? ok(b) : no(new Error("empty")), "image/png"));
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = (location.hash.split("/")[1] || "page") + ".png";
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  } catch (err) {
+    console.error(err);
+    alert("Sorry, this browser could not make the image.");
+  } finally {
+    btn.disabled = false; btn.textContent = label;
+  }
+}
 window.addEventListener("hashchange", syncReader);
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !reader.hidden) location.hash = "#" + openTab; });
 

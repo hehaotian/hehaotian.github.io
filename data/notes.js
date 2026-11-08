@@ -203,40 +203,119 @@ window.NOTES = [
   },
   {
     "date": "2024-09-05",
-    "title": "影子",
+    "title": "The Other End",
     "slug": "shadow",
-    "category": "Lines",
-    "place": "于葡萄牙里斯本",
-    "languages": ["Chinese"],
-    "stanzas": [
+    "category": "Journal",
+    "place": "于葡萄牙里斯本\nLisbon, Portugal",
+    "languages": ["Chinese", "English"],
+    "pairStanzas": [
       [
-        "最近旅行的时候 总会想起小时候和家乡",
-        "将不同时空的一个意象 按图索骥从记忆中找回",
-        "离开黄昏的巴黎 夕阳把我的影子拉得很长",
-        "另一端是 站在机场天桥上 的自己",
-        "恍惚间回到了小学 教室里读书声整齐划一",
-        "与我无关 被当作异类 罚站在走廊上的我",
-        "喜欢上观察地面上自己的影子",
-        "影子与时间一起拉长变细",
-        "让我意识到 孤独并不是一种惩罚",
-        "而是探索与创造自我的绝佳契机",
-        "大概从那时起 “孤独像睡眠一样喂养我”",
-        "独自面对 独自旅行 独自思考 走过了二十多年"
+        [
+          "最近旅行的时候 总会想起小时候和家乡",
+          "Lately, when I travel, I keep thinking of childhood and home"
+        ],
+        [
+          "离开黄昏的巴黎 夕阳把我的影子拉得很长",
+          "Leaving Paris at dusk, the sun stretched my shadow long"
+        ],
+        [
+          "另一端 是站在机场天桥上的自己",
+          "and at the other end of it, I was standing on the airport footbridge"
+        ],
+        [
+          "恍惚间 我回到了小学",
+          "For a moment I was back in elementary school"
+        ],
+        [
+          "教室里读书声整齐划一 与我无关",
+          "the class reading aloud in perfect unison, none of it mine"
+        ],
+        [
+          "被当作异类 罚站在走廊上的我",
+          "and me, the odd one out, sent to stand in the hallway"
+        ],
+        [
+          "喜欢上观察地面上自己的影子",
+          "I started watching my shadow on the ground"
+        ],
+        [
+          "影子与时间一起拉长变细",
+          "how it stretched and thinned as time passed"
+        ],
+        [
+          "让我意识到 孤独并不是一种惩罚",
+          "and I realized that being alone was not a punishment"
+        ],
+        [
+          "从那时起 独自面对 独自旅行 独自思考",
+          "Since then, I’ve faced things alone, traveled alone, thought alone"
+        ],
+        [
+          "走过了二十多年",
+          "for more than twenty years"
+        ]
       ],
       [
-        "追逐自己影子的我 登上了清晨的里斯本",
-        "葡萄牙航空的第100架飞机 我的第712次飞行",
-        "这些数字 都是每一次突破的生命边界",
-        "我们为什么要计数 要打卡",
-        "或许在于铭记生命中每一道短暂的光阴",
-        "或许在于纪念生命中每次跨越边界的意义",
-        "每一次旅行也并不在于数清脚步",
-        "而是在时间与空间的交汇中",
-        "捕捉那些稍纵即逝的自我",
-        "在不断丰富与扩展中 却未曾被社会同化的自我",
-        "我内心中 还是依旧荡漾着那个初夏的黄昏",
-        "教室走廊上独自站立凝望自己的影子的我",
-        "就是现在的这个一样的我 二十多年来都没变 真好"
+        [
+          "追逐自己影子的我 登上了清晨的里斯本",
+          "Chasing my own shadow, I landed in Lisbon at dawn"
+        ],
+        [
+          "机身上漆着 这是葡萄牙航空的第100架飞机",
+          "Painted on the plane: the 100th aircraft in TAP’s fleet"
+        ],
+        [
+          "也是我的第712次飞行",
+          "and my 712th flight"
+        ],
+        [
+          "这些数字里 藏着一次次跨过去的边界",
+          "Numbers like these mark the borders I’ve crossed"
+        ],
+        [
+          "我们为什么要计数 要打卡",
+          "So why do we count? Why keep ticking things off?"
+        ],
+        [
+          "也许是想记住那些短暂的光阴",
+          "Maybe to remember how brief the hours are,"
+        ],
+        [
+          "记住每一次跨过边界的意义",
+          "to remember what each crossing meant"
+        ],
+        [
+          "可旅行并不在于数清脚步",
+          "But travel isn’t about counting steps"
+        ],
+        [
+          "而在于途中偶尔捕捉到的",
+          "it’s about catching, now and then along the way,"
+        ],
+        [
+          "那个稍纵即逝的自己",
+          "a fleeting glimpse of myself"
+        ],
+        [
+          "走了这么远 仍没有被社会同化的自己",
+          "who has come this far and still hasn’t been shaped to fit in"
+        ],
+        [
+          "清晨的里斯本 影子又被拉得很长",
+          "Morning in Lisbon, my shadow long again"
+        ],
+        [
+          "这一次 它的另一端",
+          "and this time, at the other end of it"
+        ],
+        [
+          "是初夏黄昏 走廊上罚站的孩子",
+          "is the child sent to stand in the hallway one early-summer evening"
+        ],
+        [
+          "和现在的我 是同一个人",
+          "the same person as me now"
+        ]
       ]
     ]
   },
