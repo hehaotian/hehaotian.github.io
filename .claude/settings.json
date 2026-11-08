@@ -36,7 +36,14 @@
       "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);console.log\\(window.NOTES.length,window.NOTES[0].title,window.NOTES.filter\\(n=>n.category==\"Reader Response\"\\).length\\)')",
       "Bash(node /tmp/stl.js)",
       "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES[0];console.log\\(window.NOTES.length,n.title,n.prose.length,n.prose.flat\\(\\).join\\(\"\"\\).match\\(/[—–]/g\\)\\)')",
-      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES.find\\(n=>n.title==\"You Are Absolutely Right\"\\);console.log\\(JSON.stringify\\({d:n.date,c:n.category,p:n.place,k:Object.keys\\(n\\)}\\)\\);const b=n.prose||n.blocks;b.forEach\\(\\(x,i\\)=>{const e=x.length>3||x[0]==\"p\"||x[0]==\"h\"?x:x;console.log\\(i,x.slice\\(0,3\\).join\\(\"\\\\n  \"\\)\\);}\\)')"
+      "Bash(node -e 'global.window={};require\\(\"./data/notes.js\"\\);const n=window.NOTES.find\\(n=>n.title==\"You Are Absolutely Right\"\\);console.log\\(JSON.stringify\\({d:n.date,c:n.category,p:n.place,k:Object.keys\\(n\\)}\\)\\);const b=n.prose||n.blocks;b.forEach\\(\\(x,i\\)=>{const e=x.length>3||x[0]==\"p\"||x[0]==\"h\"?x:x;console.log\\(i,x.slice\\(0,3\\).join\\(\"\\\\n  \"\\)\\);}\\)')",
+      "Bash(python3 -I -)",
+      "Bash(node -e ' *)",
+      "Bash(cd ~/Downloads; ls | head -100; ls | wc -l; cat /Users/local/git/hehaotian.com/steps/make_photos.py; cd /Users/local/git/hehaotian.com/steps/img; file cairo_202408.jpeg; ls -la cairo_202408.jpeg; which sips magick)",
+      "Read(//Users/local/Downloads/**)",
+      "Bash(cd ~/Downloads; ls | sed -n 100,352p | grep -iE \"^[a-z]+_?[0-9]{6}|_20\\(24|25\\)|jpe?g|heic\" | head -150; ls -d */ | head -40)",
+      "Bash(awk '{print $6,$7,$8,$9,$10,$11}')",
+      "Bash(awk '{print $6,$7,$8,$9,$10,$11,$12}')"
     ]
   }
 }
