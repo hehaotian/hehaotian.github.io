@@ -3,6 +3,7 @@
 // blocks: [["p", zh, en] | ["h", zh, en, "01"] | ["sub", zh, en] | ["epi", zh, en]] for a long bilingual piece; refs: [{t, u}] for a reference list.
 // place: where it was written, shown at the end like a signature.
 // stanzas: [[line, line, ...], ...] for text that is neither poem nor prose.
+// pairStanzas: [[[original, translation], ...], ...] for the same, with each line translated; photo: { file, alt } adds a picture (in assets/photos/) under the text.
 // slug: optional short link name (needed when the title isn't plain English letters).
 // prose: [[original paragraph, translation], ...] for bilingual prose.
 // body: paragraphs of plain text.  poem: { heading, pairs: [[original line, translation], ...] } for bilingual poems.
@@ -255,6 +256,121 @@ window.NOTES = [
         "尼罗河是世界上最长的河，小小的尼罗三角洲住了7000万人，我看到了每个人接受宿命却又不断推动自己可塑性努力生活的样子。",
         "The Nile is the longest river in the world. In the small Nile Delta, 70 million people live, and in each of them I saw someone who accepts fate yet keeps pushing their own plasticity, living with effort."
       ]
+    ]
+  },
+  {
+    "date": "2025-07-25",
+    "title": "사랑하는 당신에게",
+    "slug": "dear-you",
+    "category": "Lines",
+    "place": "于美国萨克拉门托 · 미국 새크라멘토에서",
+    "photo": {
+      "file": "dear-you.jpeg",
+      "alt": "The handwritten manuscript, held up against the window of the California Zephyr"
+    },
+    "pairStanzas": [
+          [
+                [
+                      "致我深爱的。",
+                      "사랑하는 당신에게."
+                ]
+          ],
+          [
+                [
+                      "弥阿十字路口的灯火还在照亮夜色时，",
+                      "미아사거리의 불빛이 아직 밤을 밝히고 있을 시간,"
+                ],
+                [
+                      "你应该已经安静地沉睡在那座熟悉的城市里了吧。",
+                      "그 익숙한 도시에서 조용히 잠들어 있겠지."
+                ],
+                [
+                      "而我在地球的另一端，",
+                      "나는 지구의 반대편에 있다."
+                ],
+                [
+                      "加州和风号驶过了第八个车站，便正式驶离了加州。",
+                      "캘리포니아 제퍼가 여덟 번째 역을 지나 캘리포니아를 완전히 벗어났다."
+                ],
+                [
+                      "沿着萨克拉门托河，穿越太浩湖的森林，",
+                      "새크라멘토강을 따라, 타호호의 숲을 건너"
+                ],
+                [
+                      "缓慢却坚定地往内华达的深处驶去。",
+                      "느리게, 그러나 흔들림 없이 네바다의 안쪽으로 들어간다."
+                ]
+          ],
+          [
+                [
+                      "我们的婚姻，也刚好进入了第八个年头。",
+                      "우리의 결혼도 이제 여덟 해째에 접어든다."
+                ],
+                [
+                      "太浩湖松林的斑驳光影，洒落窗边，",
+                      "타호호 소나무 숲의 얼룩진 빛이 창가에 내려앉는다."
+                ],
+                [
+                      "有笑，有泪，有沉默的凝视，",
+                      "웃음이 있었고, 눈물이 있었고, 말없이 서로를 바라보던 시간이 있었다."
+                ],
+                [
+                      "点点回忆编织成或苍白或青绿的光影，",
+                      "낱낱의 기억이 창백하게, 또 푸르스름하게 짜여"
+                ],
+                [
+                      "簌簌地从我眼前划过，",
+                      "빛의 무늬가 되어 눈앞을 스친다. 사락사락."
+                ],
+                [
+                      "就像那年冬天，TGV 穿越罗讷河谷时，我依偎在",
+                      "그해 겨울, TGV가 론 계곡을 지날 때"
+                ],
+                [
+                      "你肩膀上沉沉睡去。",
+                      "어깨에 기대어 깊이 잠들었던 것처럼."
+                ]
+          ],
+          [
+                [
+                      "我终于明白，幸福其实是一件令人畏惧的东西，",
+                      "나는 이제야 안다. 행복이 실은 두려운 것이라는 걸."
+                ],
+                [
+                      "它不是喧哗的喜悦，",
+                      "그것은 소란스러운 기쁨이 아니라"
+                ],
+                [
+                      "而更像是一种宁静中随时可能破碎的沉默。",
+                      "고요 속에서 언제든 깨질 수 있는 침묵에 가깝다는 걸."
+                ],
+                [
+                      "杜拉斯说：爱是一场搏斗，一切不会停止的痛，",
+                      "뒤라스는 말했다. 사랑은 싸움이고, 멈추지 않는 모든 아픔이라고."
+                ],
+                [
+                      "可即便如此，唯有爱让我觉得自己活着，并且值得。",
+                      "그럼에도 사랑만이 내가 살아 있다고, 또 그만한 값이 있다고 느끼게 한다."
+                ]
+          ],
+          [
+                [
+                      "在铁轨的背脊上，我会将我们走过的那些痛苦，",
+                      "철로의 등줄기 위에서 우리가 지나온 그 아픔들을"
+                ],
+                [
+                      "一站一站地，抛进内华达山脉深处的每一个山谷，",
+                      "한 정거장, 또 한 정거장 네바다 산맥 깊은 골짜기마다 던져 넣고"
+                ],
+                [
+                      "留在科罗拉多峡谷中每一座不知名的小车站里。",
+                      "콜로라도 협곡의 이름 모를 작은 역마다 두고 가겠다."
+                ],
+                [
+                      "等我到了丹佛，等你回到旧金山，我要好好拥抱你。",
+                      "덴버에 도착하면, 당신이 샌프란시스코로 돌아오면, 그때 오래도록 꼭 안아 줄게."
+                ]
+          ]
     ]
   },
   {

@@ -22,6 +22,9 @@ h1 { font-size: 40px; font-weight: 600; letter-spacing: -.5px; line-height: 1.1;
 h2 { font-size: 28px; font-weight: 600; letter-spacing: -.3px; margin: 0 0 40px; }
 h3 { font-size: 13px; font-weight: 400; color: var(--muted); margin: 48px 0 8px; }
 .intro { margin: 0 0 12px; }
+.portrait { margin: 32px 0 0; }
+.portrait img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.portrait figcaption { color: var(--muted); font-size: 13px; margin-top: 8px; }
 .facts { color: var(--muted); margin: 0 0 56px; }
 
 .links { list-style: none; margin: 40px 0 0; padding: 0; border-top: 1px solid var(--line); }
@@ -81,6 +84,8 @@ body.reading { overflow: hidden; }
 #reader .pair { margin: 0 0 24px; }
 #reader .prose { margin: 0 0 40px; }
 #reader .stanza { margin: 0 0 36px; line-height: 1.95; }
+#reader .pstanza { margin: 0 0 40px; }
+#reader .text .pstanza .pair { margin: 0 0 14px; }
 #reader .place { text-align: right; font-style: italic; color: #6f6b62; font-size: 16px; margin: 44px 0 0; }
 #reader .prose .en { color: #6f6b62; font-size: 16px; line-height: 1.65; }
 #reader .pair em { display: block; color: #6f6b62; font-size: 16px; }

@@ -121,6 +121,7 @@ function detailPage({ kind, title, meta, item }) {
     `<p class="ref">${ital(r.t)}${r.u ? ` <a href="${esc(r.u)}" target="_blank" rel="noopener">${esc(r.u.replace(/^https?:\/\/(www\.)?/, ""))}</a>` : ""}</p>`).join("")}</section>` : "");
   const body = n => n.blocks ? blocks(n) : n.poem
     ? n.poem.pairs.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")
+    : n.pairStanzas ? n.pairStanzas.map(st => `<div class="pstanza">${st.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")}</div>`).join("")
     : n.stanzas ? n.stanzas.map(st => `<p class="stanza">${st.map(esc).join("<br>")}</p>`).join("")
     : n.prose ? n.prose.map(([a, b]) => `<div class="prose"><p>${esc(a)}</p><p class="en">${esc(b).replace(/\*(.+?)\*/g, "<em>$1</em>")}</p></div>`).join("")
     : (n.body || []).map(p => `<p>${esc(p)}</p>`).join("");
@@ -133,6 +134,7 @@ function detailPage({ kind, title, meta, item }) {
       <h1>${esc(n.poem ? n.poem.heading : n.title)}</h1>
       <p class="by">by Haotian He</p><p class="when">${longDate(n.date)}</p>${bookHtml(n.book)}<hr>
       <div class="text">${body(n)}</div>
+      ${n.photo ? `<img class="pimg" src="assets/photos/${esc(n.photo.file)}" alt="${esc(n.photo.alt)}" loading="lazy">` : ""}
       ${n.place ? `<p class="place">${esc(n.place)}</p>` : ""}
       ${refsHtml(n)}
       <p class="end">© ${n.date.slice(0, 4)} Haotian He. All rights reserved.</p>`;
