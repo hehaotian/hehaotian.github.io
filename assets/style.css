@@ -37,6 +37,7 @@ body[data-tab="steps"] { --frame: 100vw; }   /* the map is full width, so the ba
 main { padding-top: var(--nav-h); }
 .tab[hidden] { display: none; }
 .col { max-width: var(--frame); margin: 0 auto; padding: 72px 24px 120px; }
+#home .col { padding-top: 32px; }
 
 h1 { font-size: 40px; font-weight: 600; letter-spacing: -.5px; line-height: 1.1; margin: 0 0 20px; }
 h2 { font-size: 28px; font-weight: 600; letter-spacing: -.3px; margin: 0 0 40px; }
@@ -66,7 +67,7 @@ h3 { font-size: 13px; font-weight: 400; color: var(--muted); margin: 48px 0 8px;
 
 @media (max-width: 640px) {
   :root { --gutter: 20px; } .brand { font-size: 17px; }
-  .col { padding: 40px 20px 80px; } h1 { font-size: 34px; }
+  .col { padding: 40px 20px 80px; } #home .col { padding-top: 16px; } h1 { font-size: 34px; }
   .gig, .note { flex-direction: column; gap: 0; }
 }
 
