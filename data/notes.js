@@ -909,7 +909,7 @@ window.NOTES = [
   },
   {
     "date": "2020-04-07",
-    "title": "Before I Became a “Good Student”",
+    "title": "No Drinking in Class",
     "slug": "before-a-good-student",
     "category": "Reflection",
     "place": "于加州圣克拉拉\nSanta Clara, CA",
@@ -933,13 +933,13 @@ window.NOTES = [
       ],
       [
         "p",
-        "我原以为这是人生的好起点，却没想到，我三十年人生中最黑暗的一年就此开始。",
-        "I thought it was a good start in life. I had no idea that the darkest year of my thirty years was about to begin."
+        "我原以为这是人生的好起点，却没想到，我童年里最黑暗的一年就此开始。",
+        "I thought it was a good start in life. I had no idea that the darkest year of my childhood was about to begin."
       ],
       [
         "p",
-        "那时的班级是一个可怕的小社会：一群对人类社会和同理心毫无概念的七岁孩子，被强行组建成一个集体；而站在讲台上的班主任，掌握着绝对的、不容置疑的统管权利。在那个家长在教育环节普遍缺位、无人知晓何为“人格平等”的年代，老师的喜怒无常能够轻易摧毁一个孩子。",
-        "A class then was a frightening little society: a group of seven-year-olds with no notion of human society or empathy, forced together into a collective, and at the front of the room a teacher with absolute, unquestionable authority. In an age when parents were mostly absent from their children’s schooling and no one knew what “equality of persons” meant, a teacher’s moods could easily destroy a child."
+        "那时的班级是一个可怕的小社会：一群对人类社会和同理心毫无概念的七岁孩子，被强行组建成一个集体；而站在讲台上的班主任，掌握着绝对的、不容置疑的统管权利。在那个家长对学校几乎没有话语权、也很少有人谈及“人格平等”的年代，老师的喜怒无常能够轻易摧毁一个孩子。",
+        "A class then was a frightening little society: a group of seven-year-olds with no notion of human society or empathy, forced together into a collective, and at the front of the room a teacher with absolute, unquestionable authority. In an age when parents had almost no voice in their children’s schooling and few spoke of the “equality of persons,” a teacher’s moods could easily destroy a child."
       ],
       [
         "p",
@@ -953,18 +953,18 @@ window.NOTES = [
       ],
       [
         "p",
-        "也许在此前的教学生涯里，从未有学生敢质疑她的权威。她瞬间情绪失控，尖叫着强调上课就是不准喝水。自始至终，她没有给出任何合理解释。如果她当时耐心地告诉我，这是为了锻炼集体的纪律性，我或许还会真诚地检讨自己。但她没有。",
-        "Perhaps in her whole teaching career no student had dared question her authority. She lost control at once and screamed that there was simply no drinking in class. She never gave any reasonable explanation. Had she told me patiently that it was to build discipline in the group, I might have sincerely examined myself. But she didn’t."
+        "也许在此前的教学生涯里，从未有学生敢质疑她的权威。她瞬间情绪失控，尖叫着强调上课就是不准喝水。自始至终，她没有给出任何合理解释。如果她当时耐心地告诉我，这是为了锻炼集体的纪律性，我或许还会真诚地检讨自己。但她没有。当时的我说不清，现在才明白：一条不肯说明理由的规则，要的不是遵守，而是服从。",
+        "Perhaps in her whole teaching career no student had dared question her authority. She lost control at once and screamed that there was simply no drinking in class. She never gave any reasonable explanation. Had she told me patiently that it was to build discipline in the group, I might have sincerely examined myself. But she didn’t. I couldn’t have said it then, but a rule that will not give its reasons is not asking to be followed. It is asking to be obeyed."
       ],
       [
         "p",
-        "从那天起，我被贴上了“坏学生”的标签。班里开始有同学用异样的眼光嘲笑我“带家长”。在一个未经同理心教育的儿童群体里，基于老师二元对立的评价而滋生的恶意，是无理由却又无比残酷的。",
-        "From that day I was labeled a “bad student.” Classmates began to look at me strangely and mock me for having to “bring a parent.” Among children who had never been taught empathy, the malice that grew out of the teacher’s binary judgment was both baseless and utterly cruel."
+        "从那天起，我被贴上了“坏学生”的标签。班里开始有同学用异样的眼光嘲笑我“带家长”。在一个未经同理心教育的儿童群体里，基于老师二元对立的评价而滋生的恶意，是无理由却又无比残酷的。后来我才明白，“好学生”在那间教室里的意思，就是不问“为什么”的学生。",
+        "From that day I was labeled a “bad student.” Classmates began to look at me strangely and mock me for having to “bring a parent.” Among children who had never been taught empathy, the malice that grew out of the teacher’s binary judgment was both baseless and utterly cruel. Only later did I understand what “good student” meant in that room: a student who did not ask “Why?”"
       ],
       [
         "p",
-        "在随后的日子里，“带家长”成了常态。哪怕是一丁点小事，甚至毫无事实依据的误会，我都必须把父母叫来。更可怕的是对家长的羞辱——我父亲记忆犹新的一件事，是他被叫到学校后，在办公室被无视并晾了几小时。老师甚至不和他说话，最后随便敷衍了几句就把他打发走了。",
-        "In the days that followed, “bring a parent” became routine. For the slightest thing, even a misunderstanding with no basis in fact, I had to call my parents in. Worse was the humiliation of the parents themselves. My father still remembers being summoned to the school, ignored in the office and left waiting for hours. The teacher wouldn’t even speak to him, and in the end brushed him off with a few perfunctory words."
+        "在随后的日子里，“带家长”成了常态。哪怕是一丁点小事，甚至毫无事实依据的误会，我都必须把父母叫来。更可怕的是对家长的羞辱——我父亲记忆犹新的一件事，是他被叫到学校后，在办公室被无视并晾了几小时。老师甚至不和他说话，最后随便敷衍了几句就把他打发走了。多年以后我才意识到，那六千块和托来的关系，也许正是他们不敢多说一句的原因：求来的位置，是没法理直气壮地讲理的。",
+        "In the days that followed, “bring a parent” became routine. For the slightest thing, even a misunderstanding with no basis in fact, I had to call my parents in. Worse was the humiliation of the parents themselves. My father still remembers being summoned to the school, ignored in the office and left waiting for hours. The teacher wouldn’t even speak to him, and in the end brushed him off with a few perfunctory words. Only years later did I realize that the 6,000 yuan and the favors called in may be exactly why my parents did not say more: a place obtained by begging is hard to argue from with a straight back."
       ],
       [
         "p",
@@ -979,28 +979,28 @@ window.NOTES = [
       ],
       [
         "p",
-        "当所有人都在被灌输“老师是燃烧自己照亮别人的蜡烛”时，我当时只是隐约觉得不对。多年以后我才想明白：老师只是一份职业。它可以崇高，但从事它的人可能只是个情绪不稳定、甚至在弱者面前有着极强掌控欲的普通人。",
-        "While everyone else was being taught that “a teacher is a candle that burns itself to light others,” I only dimly sensed that something was wrong. Years later I understood: teaching is just a job. It can be noble, but the person doing it may be an ordinary person with unstable moods, even one with a strong need to control those weaker than themselves."
+        "那时大家都说，老师是燃烧自己、照亮别人的蜡烛。我只是隐约觉得不对：蜡烛不会因为有人问了一句“为什么”就尖叫。多年以后我才想明白，老师只是一份职业，从事它的人可能只是个情绪不稳定、在弱者面前格外爱掌控的普通人。她一个人要管着几十个孩子，没有人教过她怎么面对一个问“为什么”的孩子，而安静听话的班级，在当时就是好老师的标志。这解释得了她，却开脱不了她：理解一个人为什么这样，不等于原谅她。",
+        "Everyone then said a teacher was a candle that burns itself to light others. I only dimly sensed that something was wrong: a candle does not scream because someone asked “Why?” Years later I understood that teaching is just a job, and the person doing it may be an ordinary person with unstable moods, one who needs to be in control in front of those weaker than themselves. She had dozens of children to manage alone, no one had taught her what to do with a child who asked “Why?”, and a quiet, obedient class was then the mark of a good teacher. That explains her, but it does not excuse her: to understand why someone behaved a certain way is not to forgive it."
       ],
       [
         "p",
-        "在我待过的那种环境里，最残忍的地方不在于惩罚本身，而在于它强行构建了一套“二元价值账本”——顺从即是美德，异见即是缺陷。当一个孩子试图进行微小的反抗或表达独立的审美时，迎来的往往是毫不留情的践踏。我至今记得六年级那次作文课，语文老师撕碎了我的作文本，当场撒在地上，并在黑板上用巨大的粉笔字写下五个大字：“什么玩意儿”，引得全班哄堂大笑。",
-        "In the environment I knew, the cruelest thing was not the punishment itself but the “binary ledger of worth” it forced on you: obedience is virtue, dissent is a defect. When a child tried a small act of resistance or showed an independent taste, what came back was usually merciless trampling. I still remember one composition class in sixth grade, when my Chinese teacher tore up my notebook, scattered the pieces on the floor, and wrote in huge chalk characters on the blackboard: “什么玩意儿” (“What is this garbage?”). The whole class burst into laughter."
+        "在我待过的那种环境里，顺从是美德，异见是缺陷，孩子几乎没有第三种选择。我至今记得六年级那次作文课，语文老师撕碎了我的作文本，当场撒在地上，并在黑板上用巨大的粉笔字写下五个大字：“什么玩意儿”，引得全班哄堂大笑。",
+        "In the environment I knew, obedience was a virtue and dissent a defect, and a child had almost no third option. I still remember one composition class in sixth grade, when my Chinese teacher tore up my notebook, scattered the pieces on the floor, and wrote in huge chalk characters on the blackboard: “什么玩意儿” (“What is this garbage?”). The whole class burst into laughter."
       ],
       [
         "p",
-        "在那个批判性思维极度匮乏的环境里，老师无法接受异见、不愿意花时间理解孩子的独特性，是再正常不过的常态。他不是在批改作文，是在捍卫他那容不得沙子的权威。",
-        "In an environment so starved of critical thinking, a teacher who could not accept disagreement and would not spend time understanding a child’s uniqueness was entirely normal. He was not marking an essay. He was defending an authority that could not tolerate a single grain of sand."
+        "在那个很少有人鼓励孩子质疑的环境里，老师无法接受异见、不愿意花时间理解孩子的独特性，是再正常不过的常态。他不是在批改作文，是在捍卫他那容不得沙子的权威。",
+        "In an environment where children were rarely encouraged to question, a teacher who could not accept disagreement and would not spend time understanding a child’s uniqueness was entirely normal. He was not marking an essay. He was defending an authority that could not tolerate a single grain of sand."
       ],
       [
         "p",
-        "为了在这个小型专制社会中活下来，我被迫学会了自我保护的“盔甲化”：我把课堂当成戏台，把老师的训斥当成表演。如果必须写保证书，我就平静地配合；至于同学的排挤和嘲笑，我全不在意。",
-        "To survive in this small despotic society, I was forced to learn a kind of self-protective armoring. I treated the classroom as a stage and the teacher’s scolding as a performance. If I had to write a pledge, I calmly went along; as for my classmates’ exclusion and mockery, I paid no attention."
+        "为了在这里活下来，我学会了演戏：把课堂当成戏台，把老师的训斥当成台词。要写保证书，我就平静地写；同学的排挤和嘲笑，我装作没听见。",
+        "To survive, I learned to act. I treated the classroom as a stage and the teacher’s scolding as lines in a play. If I had to write a pledge, I wrote it calmly; if classmates shut me out or mocked me, I pretended not to hear."
       ],
       [
         "p",
-        "但这套“早期防御机制”并非没有代价。当你从七岁起就学会将情感剥离、用冷眼旁观来对抗荒谬的权威时，你也同时在心底筑起了一道高墙。这种过早的清醒带来了免疫力，却也让我花费了漫长的时间去学习如何重新信任结构、如何卸下无时不在的戒备与犬儒主义。",
-        "But this early defense mechanism had a price. When, from the age of seven, you learn to detach your feelings and face absurd authority with a cold eye, you also build a high wall inside. That premature clarity gave me immunity, but it also took me a long time to learn how to trust structures again, and how to put down the constant guardedness and cynicism."
+        "但这套办法并非没有代价。七岁起就学会把情绪收起来、冷眼看着荒谬的权威，心里也就多了一堵墙。它让我很早就不容易被唬住，却也让我花了很长时间，才学会重新信任一个机构，学会放下那份时刻戒备的犬儒。",
+        "But this had a price. When you learn at seven to put your feelings away and watch absurd authority with a cold eye, you build a wall inside. It made me hard to intimidate early on, but it also took me a long time to trust an institution again, and to put down that constant, wary cynicism."
       ],
       [
         "h",
@@ -1010,28 +1010,23 @@ window.NOTES = [
       ],
       [
         "p",
-        "许多人认为，在应试环境里，独立思考与批判性思维是一种奢侈。但我从高中到现在的经验恰恰相反：照自己的判断行事，并没有拖累我的成绩，反而缓解了应试带来的焦虑。",
-        "Many people assume that independent thought and critical thinking are a luxury in an exam-driven setting. My experience since high school points the other way: acting on my own judgment did not hold back my results, and it eased the anxiety that exams breed."
+        "传统教育最深的影响，是在你心里留下一个声音。离开学校多年后，它依然让你在每个需要做抉择的路口战战兢兢，生怕自己“不够合群”、“没有听话”。它还有一套说辞：把管理者的僵化说成“为了你好”，把你独立探索换来的排挤归咎于你“不守规矩”，让你无端内疚。",
+        "The deepest effect of traditional schooling is a voice it leaves inside you. Years after leaving school, it still makes you tremble at every crossroads, afraid of being “not one of the group” or “not obedient.” It comes with a script: it turns the rigidity of those in charge into “it’s for your own good,” and blames the exclusion you suffer for exploring independently on your “not following the rules,” leaving you with guilt you have not earned."
       ],
       [
         "p",
-        "传统教育最深的影响，是在你心里留下一个声音。离开学校多年后，它依然让你在每一个需要做抉择的十字路口战战兢兢，生怕自己“不够合群”、“没有听话”。这个声音常常带着一套说辞：它把管理者的无能与僵化说成“为了你好”，又把你因独立探索而受到的排挤归咎于你“不守规矩”，让你陷入深深的无端内疚。",
-        "The deepest effect of traditional schooling is a voice it leaves inside you. Years after leaving school, it still makes you tremble at every crossroads where a decision is needed, afraid of being “not one of the group” or “not obedient.” That voice often comes with a script: it turns the manager’s incompetence and rigidity into “it’s for your own good,” and blames your exclusion for exploring independently on your “not following the rules,” leaving you sunk in deep, unwarranted guilt."
+        "2007年寒假，适逢高二“小高考”前的统一补课，而我坚持要报名去北京新东方学英语。当时班主任极力阻挠，甚至动用集体舆论向家庭施压。最后是我父亲去学校签下了“小高考成绩自负”的免责说明，我才得以成行。班主任的阻挠，大概也不全是冲我来的：一个班的通过率，是要记在老师名下的。那次短暂的逃离让我明白：学习的节奏和人生的航向，本该掌握在自己手里，而不是出让给讲台上的任何人。",
+        "In the winter break of 2007, just before the “xiao gaokao,” the provincial proficiency exams taken in the second year of high school, the school held mandatory cram classes, and I insisted on signing up to study English at New Oriental in Beijing. My teacher tried hard to stop me, even using collective opinion to pressure my family. In the end my father went to the school and signed a waiver accepting responsibility for my results, and only then could I go. His resistance probably wasn’t only about me: a class’s pass rate reflects on its teacher. That brief escape taught me that the pace of learning and the course of a life should be in one’s own hands, not handed over to anyone at the lectern."
       ],
       [
         "p",
-        "2007年寒假，适逢高二“小高考”前的统一补课，而我坚持要报名去北京新东方学英语。当时班主任极力阻挠，甚至动用集体舆论向家庭施压。最后是我父亲去学校签下了“小高考成绩自负”的免责说明，我才得以成行。那次短暂的逃离让我明白：学习的节奏和人生的航向，本该掌握在自己手里，而不是出让给讲台上的任何人。",
-        "In the winter break of 2007, just before the “xiao gaokao,” the provincial proficiency exams taken in the second year of high school, the school held mandatory cram classes, and I insisted on signing up to study English at New Oriental in Beijing. My teacher tried hard to stop me, even using collective opinion to pressure my family. In the end my father went to the school and signed a waiver accepting responsibility for my results, and only then could I go. That brief escape taught me that the pace of learning and the course of a life should be in one’s own hands, not handed over to anyone at the lectern."
+        "但我清楚，这样的选择并不是人人负担得起。我有不会在家里再罚我一次的父母，有愿意去学校签字担责的父亲。没有这些，问一句“为什么”的代价会重得多。",
+        "But I know such choices are not available to everyone. I had parents who would not punish me a second time at home, and a father willing to go to the school and sign for the consequences. Without them, asking “Why?” would have cost far more."
       ],
       [
         "p",
-        "后来，我尝试将 GTD（Getting Things Done）和番茄工作法引入学习，用科学的时间管理取代盲目的机械苦熬。然而，这种不按套路出牌的自主性再次被视为“带坏风气”，我甚至因此被撤掉了班长职务。看着盲目加时却效率低下的同伴，我愈发看清：奴性往往伪装成勤奋，而真正的清醒则常常被视作异类。",
-        "Later I tried bringing GTD (Getting Things Done) and the Pomodoro technique into my studying, replacing blind, mechanical grinding with sound time management. But this unconventional autonomy was again seen as “setting a bad example,” and I was even removed as class monitor because of it. Watching classmates who put in blind overtime to little effect, I saw more clearly that servility often disguises itself as diligence, while real clear-headedness is often treated as being an outsider."
-      ],
-      [
-        "p",
-        "我离开中国的基础教育环境很多年了。我说的只是我遇到的那几位老师，我也只能讲我亲眼所见。但我依然相信，学校里的秩序，不该靠驯服个体的灵性来维持。",
-        "I left China’s basic education system many years ago. I am speaking only of the few teachers I met, and I can only tell what I saw myself. But I still believe that order in a school should not be kept by taming the spirit of the individual."
+        "我离开中国的基础教育环境很多年了。但我依然相信，学校里的秩序，不该靠驯服个体的灵性来维持。",
+        "I left China’s basic education system many years ago. But I still believe that order in a school should not be kept by taming the spirit of the individual."
       ],
       [
         "p",
