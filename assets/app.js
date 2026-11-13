@@ -53,6 +53,8 @@ function syncReader() {
 reader.addEventListener("click", e => {
   if (e.target === reader) location.hash = "#" + openTab;   // click outside the page to close
   if (e.target.closest(".save")) saveImage(e.target.closest(".save"));
+  const lb = e.target.closest(".langsw button");   // E / 中 switch on a Plates page
+  if (lb) { try { localStorage.setItem("plateLang", lb.dataset.lang); } catch (_) {} const y = reader.scrollTop; syncReader(); reader.scrollTop = y; }
 });
 
 // "Save image": the whole open page (not just the part in view) as a PNG. Done without a library: the article is cloned with its
@@ -119,14 +121,14 @@ function slugs(list, base) {
   });
 }
 // Body of a pop-up for Plates / Goods / Gigs. Entries may carry: body: ["paragraph", ...], photos: ["file.jpg", ...] (in assets/photos/), link.
-function detailPage({ kind, title, meta, item }) {
+function detailPage({ kind, title, meta, item, tools, lang }) {
   const photo = f => /^(https?:)?\/|\//.test(f) ? f : "assets/photos/" + f;
   const img = f => `<img class="pimg" src="${esc(photo(f))}" alt="">`;
   // body items are paragraphs, or { photo: "file.jpg" } to put a photo at that spot; `photos` are added after the text
   const text = (item.body || []).map(p => p.photo ? img(p.photo) : `<p>${esc(p)}</p>`).join("") || `<p class="soon">More to come.</p>`;
   const pics = (item.photos || []).map(img).join("");
-  return `${kind ? `<p class="kind">${kind}</p>` : ""}<h1>${esc(title)}</h1>${meta ? `<p class="when">${meta}</p>` : ""}<hr>
-    <div class="text">${text}${pics}</div>
+  return `${kind ? `<p class="kind">${kind}</p>` : ""}<h1>${esc(title)}</h1>${meta ? `<p class="when">${meta}</p>` : ""}${tools || ""}<hr>
+    <div class="text"${lang && lang !== "en" ? ` lang="${lang}"` : ""}>${text}${pics}</div>
     ${item.link ? `<p class="place"><a href="${esc(item.link)}" target="_blank" rel="noopener">Visit website</a></p>` : ""}`;
 }
 
@@ -200,16 +202,18 @@ function detailPage({ kind, title, meta, item }) {
   // book intro for Book: book: { cover: "file.jpg" (in assets/photos/), title, author, lines: ["detail", ...] }
   const bookHtml = b => !b ? "" : `<div class="book">${b.cover ? `<img class="bcover" src="assets/photos/${esc(b.cover)}" alt="">` : ""}
     <div class="binfo"><p class="bt">${esc(b.title)}</p>${b.author ? `<p class="ba">${esc(b.author)}</p>` : ""}${(b.lines || []).map(l => `<p class="bl">${esc(l)}</p>`).join("")}</div></div>`;
+  // font for Japanese / Korean writing: Japanese-only notes are set in the Japanese face, notes with Korean get the Korean face on the Korean lines
+  const nl = n => hasLang(n, "Korean") ? "ko" : hasLang(n, "Japanese") && !hasLang(n, "Chinese") ? "ja" : "";
   popups.notes = slug => {
     const n = list[ids.indexOf(slug)];
-    return n && `${n.category ? `<p class="kind">${esc(n.category)}</p>` : ""}
+    return n && `<div class="nl nl-${nl(n) || "x"}">${n.category ? `<p class="kind">${esc(n.category)}</p>` : ""}
       <h1>${esc(n.poem ? n.poem.heading : n.title)}</h1>
       <p class="by">by Haotian He</p><p class="when">${longDate(n.date)}</p>${bookHtml(n.book)}<hr>
       <div class="text">${body(n)}</div>
       ${n.photo ? `<img class="pimg" src="assets/photos/${esc(n.photo.file)}" alt="${esc(n.photo.alt)}" loading="lazy">` : ""}
       ${n.place ? `<p class="place">${esc(n.place).replace(/\n/g, "<br>")}</p>` : ""}
       ${refsHtml(n)}
-      <p class="end">© ${n.date.slice(0, 4)} Haotian He. All rights reserved.</p>`;
+      <p class="end">© ${n.date.slice(0, 4)} Haotian He. All rights reserved.</p></div>`;
   };
   // copyright line on the list page: the years the notes were written
   const ys = list.map(n => +n.date.slice(0, 4));
@@ -264,7 +268,14 @@ function detailPage({ kind, title, meta, item }) {
   renderPlates();
   popups.plates = slug => {
     const p = list[ids.indexOf(slug)];
-    return p && detailPage({ kind: p.stars || p.bib || p.recommended ? mark(p) : "", title: p.name, meta: esc([p.city, p.date && when(p.date, "long")].filter(Boolean).join(" · ")), item: p });
+    if (!p) return p;
+    // a review with other-language versions (body_zh, body_ja, body_ko) gets a switch: H (English), 何, か, 하; languages it lacks are not shown, and with none there is no switch
+    const has = c => c === "en" || !!(p["body_" + c] && p["body_" + c].length);
+    const opts = [["en", "H"], ["zh", "何"], ["ja", "か"], ["ko", "하"]].filter(([c]) => has(c));
+    let lang = "en"; try { lang = localStorage.getItem("plateLang") || "en"; } catch (_) {}
+    if (!has(lang)) lang = "en";
+    const tools = opts.length > 1 ? `<p class="langsw">${opts.map(([c, l]) => `<button type="button" data-lang="${c}" class="${c === lang ? "on" : ""}">${l}</button>`).join("")}</p>` : "";
+    return detailPage({ kind: p.stars || p.bib || p.recommended ? mark(p) : "", title: p.name, meta: esc([p.city, p.date && when(p.date, "long")].filter(Boolean).join(" · ")), item: lang === "en" ? p : { ...p, body: p["body_" + lang] }, tools, lang });
   };
 })();
 
