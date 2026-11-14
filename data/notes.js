@@ -10,6 +10,76 @@
 // body: paragraphs of plain text.  poem: { heading, pairs: [[original line, translation], ...] } for bilingual poems.
 window.NOTES = [
   {
+    "date": "2025-07-07",
+    "title": "Whose Paradise?",
+    "slug": "whose-paradise",
+    "category": "Book",
+    "place": "於台灣台北\nTaipei, Taiwan",
+    "book": {
+      "cover": "fang_si_chi.jpg",
+      "title": "房思琪的初戀樂園 (Fang Si-Chi’s First Love Paradise)",
+      "author": "林奕含 Lin Yi-han",
+      "lines": [
+        "Novel · 2017",
+        "A teenage girl in Taipei is abused by her cram-school Chinese teacher, who presents it to her as love."
+      ]
+    },
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "讀完林奕含的《房思琪的初戀樂園》，應該幾乎所有人都會自然問：為什麼是“樂園”？“樂園”本應象徵純真、自由與幸福，卻被用來命名一個充滿侵犯、壓迫與痛苦的故事。這當然是一種反諷，但我更想追問的是：為什麼一個充滿傷害的世界，仍然能夠以樂園的面貌存在？又是誰在維持這個樂園？",
+        "After finishing Lin Yi-han’s *Fang Si-Chi’s First Love Paradise*, almost every reader must ask the same thing: why “paradise”? A paradise should stand for innocence, freedom and happiness, yet here the word names a story full of violation, oppression and pain. It is irony, of course, but what I want to ask is something else: how can a world so full of harm go on existing in the guise of a paradise? And who is keeping that paradise going?"
+      ],
+      [
+        "小說中的李國華擁有教師的身份、文學的修養與知識的權威。他將侵犯包裝成愛情，將操控解釋為關懷，使暴力披上了文明與美的外衣。最令我不安的並非他如何利用語言欺騙房思琪，而是這些語言為什麼具有如此強大的說服力。",
+        "In the novel, Li Guo-hua has the standing of a teacher, the refinement of a man of letters, and the authority of knowledge. He packages violation as love and explains control as care, so that violence puts on the clothes of civilization and beauty. What unsettles me most is not how he uses language to deceive Fang Si-Chi, but why that language is so persuasive."
+      ],
+      [
+        "我們相信教育意味著啟蒙，文學意味著高尚，愛情意味著美好。這些信念本身並沒有錯，但當我們過於相信它們時，也可能因此失去質疑的能力。我們因為相信老師值得尊敬，便難以接受老師也可能是施害者；因為相信愛情是美好的，便可能忽略親密關係中的權力與剝削。有時，我們不是因為看見了善才相信它，而是因為預先相信善的存在，才拒絕看見其中的惡。",
+        "We believe that education means enlightenment, that literature means nobility, that love means something good. There is nothing wrong with those beliefs in themselves, but when we trust them too much we can lose the ability to question. Because we believe a teacher deserves respect, it is hard to accept that a teacher can also be an abuser; because we believe love is beautiful, we may overlook the power and exploitation inside an intimate relationship. Sometimes we do not believe in goodness because we have seen it; we refuse to see the evil inside it because we believed in goodness beforehand."
+      ],
+      [
+        "這讓我意識到，“樂園”或許不只是施害者製造的幻象，更是社會在長期習慣中共同維護的秩序。",
+        "This made me realize that the “paradise” may be more than an illusion manufactured by the abuser. It may be an order that society maintains together, through long habit."
+      ],
+      [
+        "現實生活中，我們同樣習慣於用美好的詞彙解釋令人不安的事情。控制可以被稱為關心，服從可以被讚美為懂事，忍耐可以被歌頌為成熟。當受害者沒有反抗，我們質疑她為什麼沉默；當施害者擁有地位與聲望，我們又試圖為他的行為尋找解釋。我們未必有意縱容暴力，卻可能在一次次看似合理的解釋中，讓傷害逐漸變得正常。",
+        "In real life we are just as used to explaining disturbing things in beautiful words. Control can be called concern, obedience can be praised as being sensible, endurance can be celebrated as maturity. When a victim does not resist, we question why she stayed silent; when an abuser has status and a reputation, we try to find an explanation for his behavior. We may not mean to condone violence, yet through one reasonable-sounding explanation after another, we can let harm slowly become normal."
+      ],
+      [
+        "而這種正常化，或許比刻意的掩蓋更加可怕。因為承認傷害的存在，有時意味著我們必須質疑自己一直信任的權威、價值與社會秩序。相比之下，將痛苦解釋為誤會、愛情或成長的代價，似乎更容易讓我們繼續安心生活。我們維護的未必是真相，而可能只是一個不需要我們重新認識的世界。",
+        "That normalization may be more frightening than deliberate concealment. Admitting that harm exists can mean having to question the authorities, values and social order we have always trusted. By comparison, explaining the pain away as a misunderstanding, as love, or as the price of growing up seems to make it easier to go on living in comfort. What we protect may not be the truth, but only a world we do not have to learn to see again."
+      ],
+      [
+        "這也迫使我反思自己作為讀者的位置。面對房思琪的遭遇，我能夠清楚地辨認其中的殘酷。但如果我身處故事之中，只看到一位受人尊敬的老師和一個沉默、矛盾的女孩，而無法知曉她的內心，我是否仍然能夠作出同樣的判斷？",
+        "It also forces me to reflect on my own position as a reader. Faced with what happens to Fang Si-Chi, I can recognize the cruelty clearly. But if I were inside the story, seeing only a respected teacher and a silent, conflicted girl whose inner life I could not know, would I still make the same judgment?"
+      ],
+      [
+        "我無法輕易給出肯定的回答。",
+        "I cannot easily answer yes."
+      ],
+      [
+        "或許，這正是這本書最深刻的警示。暴力並不總是以野蠻的面貌出現，它也可能隱藏在我們最熟悉、最珍視的文明秩序之中。文學、教育與愛情並非暴力的根源，但當它們被賦予不容質疑的神聖性時，也可能成為遮蔽傷害的工具。",
+        "Perhaps this is the book’s deepest warning. Violence does not always arrive looking savage; it can hide inside the civilized order we know best and prize most. Literature, education and love are not the roots of violence, but when they are given a sanctity that must not be questioned, they can become tools for covering harm."
+      ],
+      [
+        "因此，我不再認為“樂園”僅僅是對房思琪悲劇的反諷。它更像是一面鏡子，映照出我們如何透過語言、習慣與集體沉默，將某些人的痛苦轉化為另一些人眼中理所當然的秩序。",
+        "So I no longer think of the “paradise” as merely an irony about Fang Si-Chi’s tragedy. It is more like a mirror, showing how, through language, habit and collective silence, we turn some people’s pain into an order that others take for granted."
+      ],
+      [
+        "我們總以為樂園的反面是地獄。但也許真正可怕的，並不是地獄被偽裝成樂園，而是我們早已習慣了它的模樣，甚至真誠地相信它就是樂園。",
+        "We tend to assume the opposite of paradise is hell. But perhaps what is truly terrifying is not hell disguised as paradise; it is that we have long since grown used to how it looks, and sincerely believe it is paradise."
+      ],
+      [
+        "如果一個世界必須依靠受害者的沉默、旁觀者的麻木，以及對傷害的不斷粉飾才能維持其美好，那麼它究竟是誰的樂園？",
+        "If a world can keep its beauty only through the victim’s silence, the bystander’s numbness, and the constant glossing over of harm, then whose paradise is it, really?"
+      ]
+    ]
+  },
+  {
     "date": "2025-01-29",
     "title": "Stillness",
     "category": "Book",

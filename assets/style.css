@@ -183,3 +183,9 @@ a.gig:hover p:first-child { text-decoration: underline; text-underline-offset: 3
 #reader .langsw { margin: 14px 0 0; display: flex; justify-content: center; gap: 6px; }
 #reader .langsw button { font: inherit; font-size: 13px; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 1px 11px; cursor: pointer; }
 #reader .langsw button.on { color: inherit; border-color: currentColor; }
+
+/* Apple Caffè mark (rainbow logo) */
+.mapl { height: 18px; width: auto; vertical-align: -3px; }
+.total .mapl { height: 15px; vertical-align: -2px; }
+.tag .mapl { height: 15px; vertical-align: -2px; }
+#reader .kind .mapl { height: 20px; vertical-align: -4px; }

@@ -182,6 +182,7 @@ function detailPage({ kind, title, meta, item, tools, lang }) {
     if (b) { on[b.dataset.key] = b.dataset.v; renderList(); }
   });
   renderList();
+  const rich = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>");   // **bold** and *italic* in prose
   const ital = t => esc(t).replace(/\*(.+?)\*/g, "<em>$1</em>");
   // long bilingual pieces: blocks of paragraphs, numbered section headings, sub-headings, an epigraph, and a reference list
   const blocks = n => n.blocks.map(([type, zh, en, num]) => {
@@ -197,7 +198,7 @@ function detailPage({ kind, title, meta, item, tools, lang }) {
     ? n.poem.pairs.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")
     : n.pairStanzas ? n.pairStanzas.map(st => `<div class="pstanza">${st.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")}</div>`).join("")
     : n.stanzas ? n.stanzas.map(st => `<p class="stanza">${st.map(esc).join("<br>")}</p>`).join("")
-    : n.prose ? n.prose.map(([a, b]) => `<div class="prose"><p>${esc(a)}</p><p class="en">${esc(b).replace(/\*(.+?)\*/g, "<em>$1</em>")}</p></div>`).join("")
+    : n.prose ? n.prose.map(([a, b]) => `<div class="prose"><p>${rich(a)}</p><p class="en">${rich(b)}</p></div>`).join("")
     : (n.body || []).map(p => `<p>${esc(p)}</p>`).join("");
   // book intro for Book: book: { cover: "file.jpg" (in assets/photos/), title, author, lines: ["detail", ...] }
   const bookHtml = b => !b ? "" : `<div class="book">${b.cover ? `<img class="bcover" src="assets/photos/${esc(b.cover)}" alt="">` : ""}
@@ -226,7 +227,7 @@ function detailPage({ kind, title, meta, item, tools, lang }) {
 // ---- plates: a collector's grid, write-ups first, then bare entries; each part grouped by distinction (3 stars first), newest first inside each group
 (function plates() {
   const list = (window.PLATES || []).slice();
-  const rank = p => p.stars || (p.bib ? 0.5 : p.recommended ? 0.25 : 0);   // stars > Bib > recommended > none
+  const rank = p => p.stars || (p.bib ? 0.5 : p.recommended ? 0.25 : p.apple ? 0.2 : 0);   // stars > Bib > recommended > none
   const sortKey = p => (p.keepOrder ? "" : p.date) || "";   // keepOrder: show the date but keep the old place in the grid
   const hasText = p => (p.body && p.body.length ? 1 : 0);   // places with a write-up come first, bare ones sink to the bottom; each half keeps the star order
   list.sort((a, b) => hasText(b) - hasText(a) || rank(b) - rank(a) || (sortKey(a) < sortKey(b) ? 1 : -1));
@@ -235,24 +236,25 @@ function detailPage({ kind, title, meta, item, tools, lang }) {
   // if a file is missing the page falls back to a plain star / the word Bib.
   const starImg = '<img class="mstar" src="assets/michelin-star.webp" alt="star" onerror="this.replaceWith(\'★\')">';
   const bibImg = '<img class="mbib" src="assets/michelin-bib.svg" alt="Bib Gourmand" onerror="this.replaceWith(\'Bib\')">';
+  const aplImg = '<img class="mapl" src="assets/apple-logo.webp" alt="Apple Caffè" title="Apple Caffè" onerror="this.replaceWith(\'Apple\')">';
   const recImg = '<img class="mrec" src="assets/michelin-recommended.svg" alt="Michelin recommended" title="Michelin recommended" onerror="this.replaceWith(\'Rec.\')">';
   // date may be "YYYY-MM-DD", "YYYY-MM" or "YYYY"; show as much of it as is given
   const when = (d, mo) => { d = String(d); const [y, m, day] = d.split("-"); return !m ? y : new Date(`${y}-${m}-${day || "01"}T00:00:00`).toLocaleDateString("en-US", { year: "numeric", month: mo, ...(day && { day: "numeric" }) }); };
-  const mark = p => p.stars ? starImg.repeat(p.stars) : p.bib ? bibImg : p.recommended ? recImg : "";
+  const mark = p => p.stars ? starImg.repeat(p.stars) : p.bib ? bibImg : p.recommended ? recImg : p.apple ? aplImg : "";
   const card = (p, i) => `<a class="plate" href="#plates/${ids[i]}">${p.cover ? `<img class="cov" src="assets/photos/${esc(p.cover)}" alt="" loading="lazy">` : ""}<span class="st">${mark(p)}</span><span class="nm">${esc(p.name)}</span>
       <span class="ct">${esc(p.city)}</span>${p.date ? `<span class="yr">${esc(when(p.date, "short"))}</span>` : ""}</a>`;
   const count = k => list.filter(p => rank(p) === k).length;
-  const tally = [[3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], [0, "Other"]].filter(([k]) => count(k)).map(([k, s]) => `${s} ${count(k)}`).join("  ·  ");
-  document.getElementById("plates-tally").innerHTML = tally.replace(/★/g, starImg).replace(/Bib/g, bibImg).replace(/REC/g, recImg);
+  const tally = [[3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], [0.2, "APL"], [0, "Other"]].filter(([k]) => count(k)).map(([k, s]) => `${s} ${count(k)}`).join("  ·  ");
+  document.getElementById("plates-tally").innerHTML = tally.replace(/★/g, starImg).replace(/Bib/g, bibImg).replace(/REC/g, recImg).replace(/APL/g, aplImg);
   // filters: distinction (category) and country, combinable; country comes from the end of "City, ST" / "City, Country"
   const CA = ["AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT"];
   const US = "AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC PR".split(" ");   // so "London, UK" is not read as a state
   const countryOf = p => { const t = (p.city || "").split(",").pop().trim(); return CA.includes(t) ? "Canada" : US.includes(t) ? "United States" : t; };
-  const catOf = [[3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], [0, "Other"]].filter(([k]) => count(k));
+  const catOf = [[3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], [0.2, "APL"], [0, "Other"]].filter(([k]) => count(k));
   const countries = [...new Set(list.map(countryOf).filter(Boolean))].sort((a, b) => list.filter(p => countryOf(p) === b).length - list.filter(p => countryOf(p) === a).length || (a < b ? -1 : 1));
   const on = { cat: "", country: "" };
   const catsEl = document.getElementById("plates-cats"), countriesEl = document.getElementById("plates-countries"), listEl = document.getElementById("plates-list");
-  const label = s => s.replace(/★/g, starImg).replace(/^Bib$/, bibImg).replace(/^REC$/, recImg);
+  const label = s => s.replace(/★/g, starImg).replace(/^Bib$/, bibImg).replace(/^REC$/, recImg).replace(/^APL$/, aplImg);
   const row = (items, key) => items.length > 1 ? [["", "All"], ...items].map(([v, l]) =>
     `<button type="button" class="tag${String(v) === on[key] ? " on" : ""}" data-key="${key}" data-v="${esc(String(v))}"${key === "country" && FLAGS[l] ? ` title="${esc(l)}" aria-label="${esc(l)}"` : ""}>${key === "cat" ? label(l) : FLAGS[l] || esc(l)}</button>`).join("") : "";
   const renderPlates = () => {
@@ -275,7 +277,7 @@ function detailPage({ kind, title, meta, item, tools, lang }) {
     let lang = "en"; try { lang = localStorage.getItem("plateLang") || "en"; } catch (_) {}
     if (!has(lang)) lang = "en";
     const tools = opts.length > 1 ? `<p class="langsw">${opts.map(([c, l]) => `<button type="button" data-lang="${c}" class="${c === lang ? "on" : ""}">${l}</button>`).join("")}</p>` : "";
-    return detailPage({ kind: p.stars || p.bib || p.recommended ? mark(p) : "", title: p.name, meta: esc([p.city, p.date && when(p.date, "long")].filter(Boolean).join(" · ")), item: lang === "en" ? p : { ...p, body: p["body_" + lang] }, tools, lang });
+    return detailPage({ kind: p.stars || p.bib || p.recommended || p.apple ? mark(p) : "", title: p.name, meta: esc([p.city, p.date && when(p.date, "long")].filter(Boolean).join(" · ")), item: lang === "en" ? p : { ...p, body: p["body_" + lang] }, tools, lang });
   };
 })();
 
