@@ -80,6 +80,16 @@ async function saveImage(btn) {
       c.getContext("2d").drawImage(el, 0, 0);
       dst[src.indexOf(el)].setAttribute("src", c.toDataURL("image/png"));
     }));
+    // a video cannot be drawn into the picture, so it becomes its current frame
+    src.filter(el => el.tagName === "VIDEO" && el.videoWidth).forEach(el => {
+      const c = document.createElement("canvas");
+      c.width = el.videoWidth; c.height = el.videoHeight;
+      c.getContext("2d").drawImage(el, 0, 0);
+      const im = document.createElement("img");
+      im.setAttribute("src", c.toDataURL("image/jpeg", .9));
+      im.setAttribute("style", dst[src.indexOf(el)].getAttribute("style"));
+      dst[src.indexOf(el)].replaceWith(im);
+    });
     const wrap = document.createElement("div");
     wrap.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
     wrap.setAttribute("style", `width:${w}px;padding:${pad}px 0 0;background:#fbf9f4;color:#111;font-family:${getComputedStyle(art).fontFamily}`);
@@ -168,16 +178,25 @@ function detailPage({ kind, title, meta, item, tools, lang }) {
   const on = { cat: "", lang: "" };
   const row = (items, key) => items.length > 1 ? ["", ...items].map(v =>
     `<button type="button" class="tag${v === on[key] ? " on" : ""}" data-key="${key}" data-v="${esc(v)}"${key === "lang" && LANG_FLAGS[v] ? ` title="${esc(v)}" aria-label="${esc(v)}"` : ""}>${v ? (key === "lang" && LANG_FLAGS[v]) || esc(v) : "All"}</button>`).join("") : "";
+  // grouped by year, newest year open; older years fold away (a filter opens every year that has a match)
+  const years = [...new Set(list.map(n => n.date.slice(0, 4)))];
+  const openYears = new Set(years.slice(0, 1));
+  const shortDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
   const renderList = () => {
+    const filtered = !!(on.cat || on.lang);
     const shown = list.filter(n => (!on.cat || n.category === on.cat) && (!on.lang || hasLang(n, on.lang)));
-    listEl.innerHTML = shown.length ? shown.map(n => `
-    <a class="note" href="#notes/${ids[list.indexOf(n)]}"><span class="d">${fmtDate(n.date)}</span><span class="t">${esc(n.title)}</span>
-    ${n.category ? `<span class="cat">${esc(n.category)}</span>` : ""}</a>`).join("")
-      : `<p class="empty">Nothing yet.</p>`;
+    const byYear = years.map(y => [y, shown.filter(n => n.date.startsWith(y))]).filter(([, ns]) => ns.length);
+    listEl.innerHTML = byYear.length ? byYear.map(([y, ns]) => {
+      const open = filtered || openYears.has(y);
+      return `<section class="ny${open ? " open" : ""}"><button type="button" class="yh" data-year="${y}" aria-expanded="${open}"${filtered ? " tabindex=\"-1\"" : ""}><span class="yr">${y}</span><span class="yc">${ns.length}</span></button>
+      <div class="yl"${open ? "" : " hidden"}>${ns.map(n => `<a class="note" href="#notes/${ids[list.indexOf(n)]}"><span class="d">${shortDate(n.date)}</span><span class="t">${esc(n.title)}</span>${n.category ? `<span class="cat">${esc(n.category)}</span>` : ""}</a>`).join("")}</div></section>`;
+    }).join("") : `<p class="empty">Nothing yet.</p>`;
     tagsEl.innerHTML = row(cats, "cat");
     langsEl.innerHTML = row(langs, "lang");
   };
   document.getElementById("notes").addEventListener("click", e => {
+    const h = e.target.closest(".yh");   // opening a year folds the others
+    if (h) { if (!on.cat && !on.lang) { const y = h.dataset.year; const was = openYears.has(y); openYears.clear(); if (!was) openYears.add(y); renderList(); } return; }
     const b = e.target.closest("button[data-key]");
     if (b) { on[b.dataset.key] = b.dataset.v; renderList(); }
   });
@@ -211,16 +230,17 @@ function detailPage({ kind, title, meta, item, tools, lang }) {
       <h1>${esc(n.poem ? n.poem.heading : n.title)}</h1>
       <p class="by">by Haotian He</p><p class="when">${longDate(n.date)}</p>${bookHtml(n.book)}<hr>
       <div class="text">${body(n)}</div>
+      ${n.video ? `<video class="pimg pvid" src="assets/video/${esc(n.video.file)}"${n.video.poster ? ` poster="assets/video/${esc(n.video.poster)}"` : ""} autoplay muted loop playsinline preload="metadata" aria-label="${esc(n.video.alt || "")}"></video>` : ""}
       ${n.photo ? `<img class="pimg" src="assets/photos/${esc(n.photo.file)}" alt="${esc(n.photo.alt)}" loading="lazy">` : ""}
       ${n.place ? `<p class="place">${esc(n.place).replace(/\n/g, "<br>")}</p>` : ""}
       ${refsHtml(n)}
-      <p class="end">© ${n.date.slice(0, 4)} Haotian He. All rights reserved.</p></div>`;
+      <p class="end">© ${n.date.slice(0, 4)} Haotian He · hehaotian.com. All rights reserved.</p></div>`;
   };
   // copyright line on the list page: the years the notes were written
   const ys = list.map(n => +n.date.slice(0, 4));
   if (ys.length) {
     const lo = Math.min(...ys), hi = Math.max(...ys);
-    document.getElementById("notes-copy").textContent = `© ${lo === hi ? lo : lo + "–" + hi} Haotian He. All rights reserved.`;
+    document.getElementById("notes-copy").textContent = `© ${lo === hi ? lo : lo + "–" + hi} Haotian He · hehaotian.com. All rights reserved.`;
   }
 })();
 

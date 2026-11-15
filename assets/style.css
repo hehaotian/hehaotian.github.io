@@ -189,3 +189,34 @@ a.gig:hover p:first-child { text-decoration: underline; text-underline-offset: 3
 .total .mapl { height: 15px; vertical-align: -2px; }
 .tag .mapl { height: 15px; vertical-align: -2px; }
 #reader .kind .mapl { height: 20px; vertical-align: -4px; }
+
+/* short looping clip under a note */
+#reader video.pvid { display: block; width: 100%; height: auto; margin: 0 0 22px; background: #eee; }
+
+/* Notes: a quiet index. One filter line, years in the margin (newest open, older folded), no rules between rows */
+#notes .nfilters { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px 24px; margin: -8px 0 36px; }
+#notes .nfilters .tags, #notes .nfilters #notes-tags:not(:empty) { margin: 0; gap: 4px 20px; }
+#notes .nfilters #notes-langs { gap: 4px 12px; }
+#notes .nfilters .tag { border: 0; border-radius: 0; padding: 0 0 2px; font-size: 14px; letter-spacing: .2px; border-bottom: 1px solid transparent; }
+#notes .nfilters .tag.on { border-bottom-color: currentColor; }
+#notes .nfilters #notes-langs .tag { font-size: 15px; }
+.ny { display: grid; grid-template-columns: 110px 1fr; column-gap: 24px; padding: 22px 0 8px; border-top: 1px solid var(--line); }
+.ny .yh { grid-column: 1; align-self: start; justify-self: start; display: flex; align-items: baseline; gap: 8px; font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
+.ny .yr { font-size: 28px; font-weight: 300; letter-spacing: -.5px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.ny .yc { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.ny:not(.open) .yr { color: var(--muted); }
+.ny .yh:hover .yr { color: inherit; }
+.ny .yl { grid-column: 2; min-width: 0; }
+.ny .yl[hidden] { display: none; }
+.ny .note { border-top: 0; padding: 9px 0; gap: 20px; }
+.ny .note .d { width: 52px; font-size: 14px; padding-top: 1px; }
+.ny .note .cat { font-size: 12px; letter-spacing: .6px; text-transform: uppercase; padding-top: 2px; }
+@media (max-width: 640px) {
+  .ny { grid-template-columns: 1fr; padding-top: 18px; }
+  .ny .yl { grid-column: 1; margin-top: 6px; }
+  .ny .note { flex-direction: row; flex-wrap: wrap; gap: 4px 14px; }
+  .ny .note .d { width: auto; }
+  .ny .note .t { flex: 1 1 100%; order: 3; }
+  .ny .note .cat { margin-left: auto; }
+}
+.ny:not(.open) .yh::after { content: "+"; color: var(--muted); font-size: 16px; margin-left: 2px; }

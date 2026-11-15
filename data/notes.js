@@ -5,10 +5,514 @@
 // languages: languages used in the content, for the flag filter on the list page (e.g. ["Chinese", "English"]).
 // stanzas: [[line, line, ...], ...] for text that is neither poem nor prose.
 // pairStanzas: [[[original, translation], ...], ...] for the same, with each line translated; photo: { file, alt } adds a picture (in assets/photos/) under the text.
+// video: { file, poster, alt } adds a short silent looping clip (in assets/video/) under the text.
 // slug: optional short link name (needed when the title isn't plain English letters).
 // prose: [[original paragraph, translation], ...] for bilingual prose.
 // body: paragraphs of plain text.  poem: { heading, pairs: [[original line, translation], ...] } for bilingual poems.
 window.NOTES = [
+  {
+    "date": "2025-08-29",
+    "title": "When We Begin to Doubt Who We Are",
+    "slug": "where-i-was-from",
+    "category": "Book",
+    "book": {
+      "cover": "where_i_was_from.jpg",
+      "title": "Where I Was From",
+      "author": "Joan Didion",
+      "lines": [
+        "Nonfiction · Knopf, 2003",
+        "Didion’s memoir of California and her family, and of the pioneer myth she grew up inside."
+      ]
+    },
+    "place": "于加州伯克利\nBerkeley, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "photo": {
+      "file": "where_i_was_from_reading.jpg",
+      "alt": "Reading Where I Was From in front of a bookshelf"
+    },
+    "prose": [
+      [
+        "我们究竟是谁？是我们真实经历过的一切，还是我们选择相信的、关于自己的一段故事？",
+        "Who are we, really? Everything we have actually lived through, or a story about ourselves that we have chosen to believe?"
+      ],
+      [
+        "读 Joan Didion 的《Where I Was From》，我逐渐意识到，我们对于自身身份的理解，或许远没有想象中那么真实而稳定。",
+        "Reading Joan Didion’s *Where I Was From*, I gradually realized that our understanding of our own identity may be far less real and stable than we imagine."
+      ],
+      [
+        "Didion 从小生活在加利福尼亚的拓荒神话之中。勇敢的先驱者凭借坚韧、独立与个人奋斗建立新的生活。这不仅是一个关于加州历史的故事，也是她理解自身家族与身份的方式。然而，当她重新审视这段历史时，却发现所谓的自力更生，始终离不开政府支持、历史机遇与社会结构。那些被歌颂为个人奋斗的成就，并不完全属于个人。",
+        "Didion grew up inside California’s pioneer myth: brave settlers who built new lives through grit, independence and individual striving. It was not only a story about the history of California; it was how she understood her own family and identity. Yet when she looked at that history again, she found that so-called self-reliance had always depended on government support, historical opportunity and social structure. The achievements celebrated as individual struggle did not belong entirely to the individual."
+      ],
+      [
+        "这让我开始思考：我们究竟是在认识自己的过去，还是在不断选择一种能够让自己接受的过去？",
+        "This made me wonder: are we getting to know our past, or are we continually choosing a past we can accept?"
+      ],
+      [
+        "我们每个人都在为自己的人生编写故事。我们将成功归因于努力，将失败解释为成长，将某些经历视为命运的转折点，再将这些零散的记忆连接成一个连贯的自我。这样的叙事给予我们归属感，也让我们相信今天的自己有迹可循。",
+        "Each of us is writing a story for our own life. We attribute success to effort, explain failure as growth, treat certain experiences as turning points of fate, and then link these scattered memories into one coherent self. Such a narrative gives us a sense of belonging, and lets us believe that the person we are today can be traced."
+      ],
+      [
+        "但问题在于，我们往往只愿意保留那些能够支持自我认同的部分。我们记得自己的奋斗，却容易忽略时代的机遇；珍视家族的荣耀，却可能回避其中的特权；怀念故乡的美好，却不愿面对它所承载的伤害与不公。",
+        "But the problem is that we often keep only the parts that support our sense of who we are. We remember our own striving but easily overlook the opportunities of the age; we treasure the glory of our family but may avoid the privilege within it; we cherish the beauty of our hometown but are unwilling to face the harm and injustice it carries."
+      ],
+      [
+        "我们并非总是在欺骗自己，而是太需要相信自己的故事，以至于逐渐忘记它也只是一种解释。因此，当 Didion 开始质疑加州的神话时，她所面对的不只是历史认知的改变，更是一种身份上的动摇。如果自己曾经引以为傲的价值并不如想象中纯粹，那么建立在这些价值之上的自我，又该如何存在？",
+        "We are not always deceiving ourselves; we simply need to believe our stories so much that we gradually forget they are only an interpretation. So when Didion began to question the myth of California, what she faced was not just a change in her understanding of history but a shaking of her identity. If the values she once took pride in were not as pure as she imagined, how could the self built on those values go on existing?"
+      ],
+      [
+        "但我逐渐觉得，怀疑自己的故事，并不意味着否定自己的人生。我们无法改变过去，却可以重新理解过去。承认成功包含运气，并不会抹去努力；承认家族历史中的不公，也不意味着必须否定其中所有值得珍惜的记忆。真正需要放弃的，也许不是我们的身份，而是那个必须始终正确、完整而值得骄傲的自我形象。",
+        "But I have come to feel that doubting our own story does not mean denying our life. We cannot change the past, but we can understand it anew. Admitting that success includes luck does not erase effort; admitting the injustice in a family’s history does not mean we must reject every memory in it worth cherishing. What we may really need to give up is not our identity, but the self-image that must always be right, complete and worth being proud of."
+      ],
+      [
+        "然而，问题并没有到此结束。即使我们揭穿了旧有的神话，是否就能获得一个真正独立、完全属于自己的身份？恐怕也不能。",
+        "But the question does not end there. Even if we expose the old myth, can we gain an identity that is truly independent and wholly our own? I am afraid not."
+      ],
+      [
+        "我们用来质疑过去的语言、价值观与判断标准，本身也来自我们试图审视的社会。我们以为自己已经摆脱了家庭的期待，却可能只是接受了另一种文化的价值；我们以为自己终于能够独立思考，却未必意识到，所谓独立的思想，同样受到时代与环境的塑造。",
+        "The language, values and standards of judgment we use to question the past themselves come from the society we are trying to examine. We think we have escaped our family’s expectations, but we may only have accepted the values of another culture; we think we can finally think independently, without necessarily realizing that so-called independent thought is shaped by its time and surroundings too."
+      ],
+      [
+        "如果连我们用来反抗过去的思想，都无法完全摆脱过去的影响，那么自由究竟意味着什么？",
+        "If even the thoughts we use to resist the past cannot fully escape its influence, what does freedom mean?"
+      ],
+      [
+        "我开始觉得，自由或许从来不是彻底摆脱一切外部影响。那样的自由几乎不可能存在。我们无法选择自己的出生、家庭、语言与最初接受的价值观，也无法站在历史之外，重新创造一个完全纯粹的自我。",
+        "I have begun to feel that freedom may never be a complete escape from all outside influence. That kind of freedom can hardly exist. We cannot choose our birth, our family, our language or the values we first absorbed, and we cannot stand outside history to create a wholly pure self from scratch."
+      ],
+      [
+        "但这是否意味着，我们只能被动地成为环境的产物？我并不这样认为。或许，自由真正开始的地方，恰恰是我们意识到自己并非完全自由的那一刻。当我们开始追问自己的信念从何而来，为什么相信某些事情，又为什么排斥另一些事情时，我们便不再只是无意识地重复过去。",
+        "But does that mean we can only passively be products of our environment? I do not think so. Perhaps freedom truly begins at the very moment we realize we are not entirely free. When we start to ask where our beliefs come from, why we believe some things and reject others, we are no longer merely repeating the past without knowing it."
+      ],
+      [
+        "我们未必能够彻底摆脱这些影响，却可以重新审视它们，决定哪些值得继承，哪些需要拒绝，以及哪些仍然值得怀疑。这也让我重新理解了 Didion 对故乡的反思。她并没有因为发现加州神话的矛盾，就能够彻底摆脱自己与加州的联系。她依然来自那里，依然受到那段历史的塑造。但她不再需要通过美化故乡，来证明自身身份的价值。",
+        "We may not be able to shake off these influences entirely, but we can re-examine them, deciding which are worth inheriting, which to reject, and which still deserve doubt. This also changed how I understand Didion’s reflection on her home. Discovering the contradictions in the California myth did not free her entirely from her ties to California. She still came from there, and was still shaped by that history. But she no longer needed to beautify her home in order to prove the worth of her identity."
+      ],
+      [
+        "真正成熟的归属感，也许不是终于确信自己来自一个值得骄傲的地方，而是在看清它的复杂与不完美之后，仍然能够诚实地承认自己与它的联系。同样，真正的自我认识，也不是终于找到一个不受任何影响的纯粹自我，而是能够接受自己始终处于历史、社会与个人选择的交汇之中。我们无法选择自己最初如何被世界塑造，但至少可以选择，是否终其一生都不去质疑这种塑造。",
+        "A truly mature sense of belonging may not be finally being certain that we come from a place to be proud of, but being able, after seeing its complexity and imperfection, to honestly acknowledge our connection to it. Likewise, real self-knowledge is not finally finding a pure self untouched by any influence, but being able to accept that we always stand at the meeting point of history, society and personal choice. We cannot choose how the world first shaped us, but we can at least choose whether to go through life without ever questioning that shaping."
+      ],
+      [
+        "读完《Where I Was From》，我开始觉得，Didion 所寻找的并不只是她来自何方，而是当那些关于来处的神话逐渐瓦解之后，她还能如何理解自己。",
+        "After finishing *Where I Was From*, I have begun to feel that what Didion was looking for was not only where she came from, but how she could still understand herself once the myths about her origins had begun to fall apart."
+      ],
+      [
+        "或许，我们每个人都需要一个关于自己的故事，才能在复杂而偶然的人生中找到某种连续性。但真正的自由，并不意味着终于拥有了一个完整、正确且永不改变的故事，而是拥有不断重新审视、修正，甚至推翻它的勇气。",
+        "Perhaps each of us needs a story about ourselves in order to find some continuity in a complicated and accidental life. But real freedom does not mean finally having a story that is complete, correct and never changing; it means having the courage to keep re-examining it, revising it, even overturning it."
+      ],
+      [
+        "我们无法决定自己从哪里来，却不必让关于来处的故事，决定我们最终成为谁。而真正的自我认识，或许不是终于知道自己是谁，而是终于能够接受，自己并不完全是那个一直以来相信的自己。",
+        "We cannot decide where we come from, but we need not let the story about where we come from decide who we finally become. And real self-knowledge may not be finally knowing who we are, but finally being able to accept that we are not entirely the person we have always believed ourselves to be."
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-16",
+    "title": "When Rebellion Is No Longer Freedom",
+    "slug": "rebellion-and-freedom",
+    "category": "Book",
+    "book": {
+      "cover": "ginsberg.jpg",
+      "title": "The Essential Ginsberg",
+      "author": "Allen Ginsberg",
+      "lines": [
+        "Poetry · Edited by Michael Schumacher, 2015",
+        "A selection of Allen Ginsberg’s poems, including “Howl”."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "photo": {
+      "file": "ginsberg_reading.jpg",
+      "alt": "The Essential Ginsberg on a table in front of a bookshelf, with a Books Not Bombs card"
+    },
+    "prose": [
+      [
+        "读艾伦·金斯堡的诗歌，我始终在思考一个问题：反抗社会的规范，是否就意味着一个人已经获得了自由？在《嚎叫》中，金斯堡将那些被主流社会视为疯狂、堕落与失败的人置于诗歌的中心。他以近乎失控的语言，控诉一个崇尚秩序、效率与物质繁荣，却不断压抑个体精神的社会。在他的笔下，疯狂有时反而比所谓的正常更加清醒，反叛也因此成为对社会虚伪的一种揭露。",
+        "Reading Allen Ginsberg’s poems, I kept coming back to one question: does rebelling against the norms of society mean a person has become free? In *Howl*, Ginsberg puts at the center of the poem the people the mainstream considers mad, degraded and failed. In language that borders on losing control, he accuses a society that prizes order, efficiency and material prosperity while ceaselessly suppressing the individual spirit. In his hands, madness is sometimes clearer-sighted than so-called normality, and rebellion becomes a way of exposing society’s hypocrisy."
+      ],
+      [
+        "然而，我并不认为反抗本身就意味着自由。",
+        "Yet I do not believe that rebellion by itself means freedom."
+      ],
+      [
+        "我们习惯于将服从与反抗视为对立的两端：服从意味着失去自我，反抗则象征着独立。但仔细想来，两者或许都存在同一种依赖。服从者需要社会的认可，而反抗者则需要社会作为自己的对立面。一个通过遵循规则定义自己，另一个通过拒绝规则确认自己的存在。",
+        "We are used to treating obedience and rebellion as opposite ends: obedience means losing oneself, rebellion stands for independence. But on reflection, both may rest on the same dependence. The obedient need society’s approval, and the rebellious need society as their opposite. One defines himself by following the rules, the other confirms his existence by refusing them."
+      ],
+      [
+        "如果一个人必须不断证明自己与社会不同，才能感受到自由，那么他的自由是否仍然由社会决定？这让我开始重新理解真正的独立。",
+        "If a person must keep proving that he is different from society in order to feel free, is his freedom still decided by society? This made me begin to understand real independence in a new way."
+      ],
+      [
+        "自由或许并不意味着拒绝一切社会规范，而是拥有建立自身价值标准的能力。一个人可以选择遵循某些传统，也可以拒绝另一些期待，但这些选择不应仅仅来自对认可的渴望，或对权威的愤怒，而应来自对自己真正相信什么、愿意如何生活的清醒认识。",
+        "Freedom may not mean rejecting all social norms, but having the ability to set one’s own standards of value. A person can choose to follow some traditions and refuse other expectations, but those choices should not come only from a hunger for approval or anger at authority; they should come from a clear understanding of what one truly believes and how one is willing to live."
+      ],
+      [
+        "在这个意义上，真正的自由甚至可能表现为一种与社会的和解。",
+        "In this sense, real freedom may even take the form of a reconciliation with society."
+      ],
+      [
+        "这种和解并不是屈服，更不是对不公的沉默，而是不再需要通过社会的评价来证明自己。我们可以承认社会的存在，理解它的复杂与局限，却不必让它决定我们的全部价值。我们可以反抗值得反抗的事情，也可以坦然接受那些与自身原则并不冲突的规则。",
+        "This reconciliation is not surrender, still less silence in the face of injustice; it is no longer needing society’s judgment to prove ourselves. We can acknowledge that society exists and understand its complexity and its limits, without letting it decide our whole worth. We can rebel against what is worth rebelling against, and calmly accept the rules that do not conflict with our own principles."
+      ],
+      [
+        "我想，这或许就是一种更成熟的 *don't give a fuck*：不是对世界漠不关心，而是不再执着于世界如何看待自己。",
+        "I think this may be a more mature kind of *don’t give a fuck*: not indifference to the world, but no longer clinging to how the world sees us."
+      ],
+      [
+        "当然，这并不意味着金斯堡的反抗失去了意义。恰恰相反，他的诗歌提醒我们，有些社会规范本身就值得质疑，而自由也需要人们敢于打破那些压抑个体的界限。但反抗可以是通往自由的道路，却不应成为自由的全部定义。",
+        "Of course, this does not mean Ginsberg’s rebellion has lost its meaning. On the contrary, his poems remind us that some social norms are themselves worth questioning, and that freedom also needs people who dare to break the limits that repress the individual. But rebellion can be a road to freedom without being the whole definition of it."
+      ],
+      [
+        "读完这些诗歌，我越来越觉得，真正困难的并不是对世界说“不”，而是在不需要反抗的时刻，依然知道自己是谁。真正自由的人，既不害怕与社会相同，也不执着于与社会不同。因为自由的终点，或许不是终于战胜了社会，而是终于不再需要以社会为参照，来证明自己的存在。",
+        "After reading these poems, I increasingly feel that the truly hard thing is not saying “no” to the world, but still knowing who you are at the moments when no rebellion is needed. A truly free person is neither afraid of being the same as society nor attached to being different from it. Because the end of freedom may not be finally defeating society, but finally no longer needing society as a reference point to prove that we exist."
+      ]
+    ]
+  },
+  {
+    "date": "2023-01-31",
+    "title": "When Normal Becomes Violence",
+    "slug": "when-normal-becomes-violence",
+    "category": "Book",
+    "book": {
+      "cover": "vegetarian.jpg",
+      "title": "채식주의자 (The Vegetarian)",
+      "author": "한강 Han Kang",
+      "lines": [
+        "Novel · Changbi Publishers, 2007",
+        "After a dream, a woman named Yeong-hye stops eating meat, and her family turns against her."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "photo": {
+      "file": "vegetarian_reading.jpg",
+      "alt": "Reading 채식주의자 in Livermore"
+    },
+    "prose": [
+      [
+        "读完韩江的《素食者》，最令我不安的并不是英惠逐渐走向极端的行为，而是那些自认为正常的人，竟然能够如此自然地以关心、责任与爱的名义侵犯她的自由。",
+        "After finishing Han Kang’s *The Vegetarian*, what unsettled me most was not Yeong-hye’s gradual slide into extremes, but how naturally the people who consider themselves normal could violate her freedom in the name of concern, duty and love."
+      ],
+      [
+        "小说从英惠决定不再吃肉开始。一个看似微不足道的个人选择，却引发了丈夫的不满、父亲的愤怒与整个家庭的反对。对他们而言，问题似乎从来不是英惠为什么拒绝吃肉，而是她为什么不能像其他人一样正常生活。",
+        "The novel begins with Yeong-hye’s decision to stop eating meat. A seemingly trivial personal choice provokes her husband’s displeasure, her father’s anger, and the opposition of the whole family. For them, the question never seems to be why Yeong-hye refuses meat, but why she cannot live normally like everyone else."
+      ],
+      [
+        "这让我开始思考：究竟是谁定义了正常？而正常，又从什么时候开始成为一种必须服从的义务？",
+        "This set me thinking: who defines what is normal? And when did normal become an obligation we must obey?"
+      ],
+      [
+        "我们习惯于将不符合社会期待的人视为异常，却很少质疑那些期待本身是否合理。一个人选择不同的生活方式，我们往往首先想到的不是理解，而是纠正。更值得警惕的是，我们不仅习惯于干涉他人的选择，还习惯于将这种干涉理解为一种善意。",
+        "We are used to seeing people who fall short of social expectations as abnormal, yet we rarely ask whether those expectations are reasonable. When someone chooses a different way of life, our first thought is often not to understand but to correct. More worrying still, we are used not only to interfering in other people’s choices but to taking that interference as a kind of kindness."
+      ],
+      [
+        "英惠的丈夫认为她的行为破坏了正常的家庭生活，父亲则试图以暴力迫使她恢复原状。在他们眼中，自己的行为或许都有着合理的解释：维护家庭、履行责任，甚至是为了英惠好。然而，当关心不再以理解对方为前提，而是以改变对方为目的时，它与控制之间究竟还有多少区别？",
+        "Yeong-hye’s husband believes her behavior ruins normal family life, and her father tries to force her back to how she was by violence. In their own eyes, each act may have a reasonable explanation: protecting the family, fulfilling a duty, even doing it for Yeong-hye’s own good. Yet when concern no longer rests on understanding the other person but aims at changing her, how much difference is left between it and control?"
+      ],
+      [
+        "尤其令我印象深刻的是，小说中的暴力并不总是以恶意的形式出现。它也可能隐藏在习以为常的家庭秩序中，隐藏在长辈的权威、伴侣的期待，以及那些看似理所当然的社会规范之中。施加控制的人未必认为自己正在伤害别人，因为他们早已将自己的生活方式视为唯一正确的标准。",
+        "What impressed me especially is that the violence in the novel does not always take the form of malice. It can also hide in a family order taken for granted, in the authority of elders, in a partner’s expectations, and in social norms that seem natural. The people exercising control do not necessarily think they are hurting anyone, because they long ago took their own way of life as the only correct standard."
+      ],
+      [
+        "这让我想到现实生活中，我们也常常以类似的方式对待身边的人。父母以爱之名决定子女的人生，伴侣以关心之名限制彼此的自由，社会则以成熟、责任与体面为标准，要求每个人遵循相似的人生轨迹。我们或许并没有意识到，自己所谓的善意，有时不过是无法容忍他人与自己不同。",
+        "This made me think of how, in real life, we often treat the people around us in similar ways. Parents decide their children’s lives in the name of love, partners limit each other’s freedom in the name of care, and society, with maturity, responsibility and respectability as its standards, asks everyone to follow a similar path through life. We may not realize that what we call goodwill is sometimes nothing more than an inability to tolerate people being different from us."
+      ],
+      [
+        "最令人不安的，也许不是我们有意控制别人，而是我们真诚地相信，控制别人是在帮助他们。",
+        "What is most unsettling may not be that we deliberately control others, but that we sincerely believe that controlling them is helping them."
+      ],
+      [
+        "然而，韩江并没有将英惠的拒绝描绘成一场简单的自由胜利。她试图摆脱暴力，拒绝参与自己无法接受的生存方式，却最终将这种拒绝推向了自身生命的边缘。她的痛苦提醒我，反抗并不必然带来自由，而一个人有权拒绝社会期待，也不意味着她只能通过伤害自己来证明这种权利。",
+        "Yet Han Kang does not portray Yeong-hye’s refusal as a simple victory for freedom. She tries to break free of the violence and to refuse a way of living she cannot accept, but ends up pushing that refusal to the edge of her own life. Her suffering reminds me that resistance does not necessarily bring freedom, and that a person’s right to refuse social expectations does not mean she can prove that right only by harming herself."
+      ],
+      [
+        "姐姐仁惠的存在，使这种矛盾更加复杂。她既试图照顾英惠，也不得不面对英惠可能失去生命的现实。她的关心不能简单地等同于父亲的强迫，却同样让我们看到一个困难的问题：当尊重一个人的意愿与保护她的生命发生冲突时，我们究竟应当如何理解真正的关怀？",
+        "Her older sister In-hye makes the contradiction more complicated. She tries to look after Yeong-hye, and also has to face the reality that Yeong-hye may lose her life. Her care cannot simply be equated with her father’s coercion, yet it shows us a hard question too: when respecting a person’s wishes conflicts with protecting her life, how should we understand real care?"
+      ],
+      [
+        "或许，关怀与控制之间的界限，并不只取决于我们的动机是否善良，更取决于我们是否愿意承认对方是一个拥有独立意志的人，是否能够在必要的保护之外，仍然尊重她的尊严。",
+        "Perhaps the line between care and control depends not only on whether our motives are kind, but on whether we are willing to recognize the other as a person with an independent will, and whether, beyond the protection that may be necessary, we can still respect her dignity."
+      ],
+      [
+        "读完《素食者》，我开始怀疑，我们所说的正常，究竟是一种自然存在的秩序，还是多数人在长期服从中逐渐接受的规则？当一种生活方式被普遍认可，我们便容易忘记，它未必适合每一个人，更不应成为衡量他人价值的唯一标准。",
+        "After finishing *The Vegetarian*, I began to wonder whether what we call normal is an order that exists naturally, or rules that most people have gradually come to accept through long obedience. When a way of life is widely approved, we easily forget that it may not suit everyone, and that it should not be the only standard by which others are measured."
+      ],
+      [
+        "或许，真正值得恐惧的不是一个人逐渐偏离了正常，而是那些自认为正常的人，早已失去了理解不同的能力。",
+        "Perhaps what is truly to be feared is not that a person drifts away from the normal, but that the people who consider themselves normal have long since lost the ability to understand difference."
+      ],
+      [
+        "而一个真正尊重个体的社会，不应仅仅允许人们说“不”，更应当让他们在说“不”之后，依然能够有尊严地生活。",
+        "And a society that truly respects the individual should not merely allow people to say “no”; it should let them go on living with dignity after they have said it."
+      ]
+    ]
+  },
+  {
+    "date": "2022-11-27",
+    "title": "Blind Spot",
+    "slug": "blind-spot",
+    "category": "Reflection",
+    "place": "于加州山景城\nMountain View, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "这段时间，我一直在想身边的两位亲人。我试图借助汉娜·阿伦特所说的“平庸之恶”，理解一个始终困扰我的问题：为什么一些在日常生活中热情、善良，甚至愿意为他人付出的人，却能够对某些公共事件中的伤害表现出惊人的冷漠？",
+        "I have been thinking a lot lately about two relatives close to me. I am trying to use Hannah Arendt’s “banality of evil” to understand a question that has always troubled me: why can some people who are warm and kind in daily life, even willing to give of themselves for others, show such astonishing indifference to the harm done in certain public events?"
+      ],
+      [
+        "我的大伯便是这样一个人。",
+        "My eldest uncle on my father’s side is one of them."
+      ],
+      [
+        "他成长于一个具有革命经历的干部家庭，长期生活在某种政治身份所赋予的荣誉感之中。在我看来，这种荣誉感逐渐成为他理解世界的基础。他并非一个缺乏善意的人，相反，他热情、积极，也愿意承担社会责任。但在面对某些公共事件时，他似乎更习惯于从权威的立场寻找解释，而不是首先追问具体的人遭受了什么。",
+        "He grew up in a family of officials with a revolutionary history, and has long lived inside the sense of honor that a certain political identity gives. In my view, that sense of honor gradually became the foundation on which he understands the world. He is not a man without goodwill. On the contrary, he is warm, active, and willing to take on social responsibility. But when faced with certain public events, he seems more used to looking for explanations from the standpoint of authority, rather than first asking what a particular person has suffered."
+      ],
+      [
+        "我的姨妈则有着不同的经历。她出身农村，习惯于用明确的对错判断复杂的社会问题。疫情期间，她热衷于转发各种政治宣传视频，也常常以高度情绪化的语言理解国际关系与公共政策。让我感到不安的，不只是她所相信的某些观点，而是她似乎越来越难以容忍不同的解释。",
+        "My aunt has a different background. She comes from the countryside and is used to judging complex social questions by clear lines of right and wrong. During the pandemic she was keen on forwarding political propaganda videos, and often understood international relations and public policy in highly emotional language. What disturbs me is not only some of the views she holds, but that she seems less and less able to tolerate a different explanation."
+      ],
+      [
+        "两个人拥有不同的成长背景，却让我看到了某种相似之处：他们都真诚地相信自己站在正确的一边。",
+        "The two have different backgrounds, yet they showed me something in common: both sincerely believe they stand on the right side."
+      ],
+      [
+        "这让我想到阿伦特。她在耶路撒冷旁听艾希曼的审判之后，提出了“平庸之恶”这个概念。按我的理解，她最令人不安的洞见，并不是恶人可能拥有普通人的外表，也不是人只会服从命令，而是严重的道德错误有时并不需要强烈的个人仇恨作为动机，只需要一个人停止思考。",
+        "This brings me to Arendt. After attending Eichmann’s trial in Jerusalem, she proposed the idea of the “banality of evil.” As I understand it, her most unsettling insight is not that evil people may look like ordinary people, nor that people simply follow orders, but that serious moral failure sometimes needs no strong personal hatred as its motive. It only needs a person to stop thinking."
+      ],
+      [
+        "她所说的“不思考”，并不是智力上的欠缺，而是失去了与自己对话的能力。在她看来，思考就是一个人与自己的内心对话；而一个习惯于套话、口号和现成说法的人，也就不再需要这场对话。这些现成的说法像一层保护，让人不必直接面对现实，包括现实中某个具体的人所承受的一切。",
+        "By not thinking she does not mean a shortfall of intelligence, but the loss of the ability to hold a conversation with oneself. For her, thinking is a person’s inner dialogue with himself, and someone who lives by set phrases, slogans and ready-made explanations no longer needs that dialogue. Those ready-made phrases act as a kind of protection, letting a person avoid facing reality directly, including what some particular person is going through in it."
+      ],
+      [
+        "当然，我并不认为持有某种政治信念便意味着参与了恶，也不能将普通人的思想局限与历史上的严重罪行简单等同。但阿伦特提出的问题依然值得我们面对：如果一个人始终认为自己只是在履行责任、遵守规则、维护集体利益，那么他是否还会追问，这些行为究竟对他人造成了什么？",
+        "Of course, I do not think that holding a certain political belief means taking part in evil, nor can the intellectual limits of ordinary people be simply equated with the grave crimes of history. But the question Arendt raised is still worth facing: if a person always thinks he is only doing his duty, following the rules, and protecting the interests of the collective, will he still ask what those actions actually do to other people?"
+      ],
+      [
+        "更令我不安的是，这种放弃判断的过程，有时恰恰伴随着强烈的道德优越感。",
+        "What disturbs me more is that this giving up of judgment sometimes comes with a strong sense of moral superiority."
+      ],
+      [
+        "一个人可以真诚地相信自己在奉献，却忽略奉献的对象与代价；可以认为自己在维护正义，却拒绝倾听那些因这种正义而受到伤害的人；甚至可以把服从本身理解为一种美德，从而不再追问服从是否合理。",
+        "A person can sincerely believe he is giving of himself while ignoring who the gift is for and what it costs; he can think he is defending justice while refusing to listen to the people hurt by that justice; he can even understand obedience itself as a virtue, and so stop asking whether the obedience is reasonable."
+      ],
+      [
+        "于是，善意不再需要接受事实的检验，忠诚逐渐代替了判断，而个人的道德责任也被转移给了某种更高的权威。",
+        "And so good intentions no longer need to be tested against facts, loyalty gradually replaces judgment, and personal moral responsibility is handed over to some higher authority."
+      ],
+      [
+        "为什么他们看不见这一点？我想，一个原因是，对于身处其中的人来说，确信并不像一种“信念”，而更像一种“看见”。我的大伯不会觉得自己是在相信什么，他只是觉得自己看到了事情本来的样子；我的姨妈也是。确信的感觉，与看清事实的感觉，从内部是无法区分的。这也是盲点难以察觉的原因：它不是视野中某一块被遮住的地方，而是我们用来看的方式本身。",
+        "Why can’t they see this? One reason, I think, is that for the person inside it, certainty does not feel like a “belief”; it feels like “seeing.” My uncle does not feel he is believing something; he feels he is seeing things as they are. So does my aunt. From the inside, the feeling of being certain and the feeling of seeing the facts clearly cannot be told apart. That is why a blind spot is so hard to notice. It is not some covered-up patch of the field of view; it is the way we look in the first place."
+      ],
+      [
+        "但这种现象真的只存在于他们身上吗？",
+        "But does this phenomenon really exist only in them?"
+      ],
+      [
+        "写到这里，我不得不停下来。我一直在用“缺乏独立思考”来形容他们。可这个说法本身，就是一句现成的话，一个在我所处的圈子里被反复使用、不需要再解释的结论。我一用它，就不必再认真去听他们到底在说什么。我还用“干部家庭”“出身农村”来解释他们，仿佛知道了一个人的出身，就知道了他为什么会这样想。这正是我在前面所警惕的：用一个简单的解释，代替对一个具体的人的认识。",
+        "Writing this, I have to stop. I have been describing them as “lacking independent thought.” But that phrase is itself a ready-made one, a conclusion used over and over in the circles I move in and needing no further explanation. The moment I use it, I no longer have to listen carefully to what they are actually saying. I have also explained them by “a family of officials” and “from the countryside,” as if knowing where a person comes from told me why he thinks as he does. This is exactly what I warned against above: using a simple explanation to replace knowing a particular person."
+      ],
+      [
+        "我们往往能够清楚地辨认别人身上的问题，却很难察觉自己正在以不同的方式重复它们。我在他们身上看到的，是对权威的依赖，和对不同解释的不耐烦；而我自己，也许是对自己所属立场的依赖，和对“他们不懂”这个结论的不耐烦。内容不同，结构却可能相似。",
+        "We can often see clearly the problems in other people, yet find it hard to notice that we are repeating them ourselves in a different way. What I see in them is dependence on authority and impatience with a different explanation. In myself, it may be dependence on the position I belong to, and impatience that settles for the conclusion “they just don’t get it.” The content differs, but the structure may be similar."
+      ],
+      [
+        "如果一定要找一个不依赖立场的标准，我想是这一个：面对一件让人受伤的事，你是否首先追问，具体的人遭受了什么？这正是我对大伯感到不安的地方。可我也必须同样地问自己：对那些我不认同的人，对那些不站在我这一边的人，我是否同样会这样追问？我不敢轻易说“是”。",
+        "If I have to find a standard that does not depend on which side you are on, I think it is this: faced with something that hurts people, do you first ask what a particular person has suffered? This is exactly what unsettles me about my uncle. But I have to ask myself the same thing: for the people I disagree with, the ones who are not on my side, do I ask it just as readily? I dare not say “yes” too quickly."
+      ],
+      [
+        "这并不是说所有立场同样正确，也不是说既然人人都有盲点，责任便人人相等。哪些说法与事实相符，仍然有高下之分；一个人掌握的权力越大，他的判断给别人带来的代价越大，他所承担的责任也越重。我想说的只是，无论我们站在哪一边，确信自己正确的感觉，都不能替代检验。",
+        "This does not mean that all positions are equally correct, nor that, since everyone has blind spots, everyone bears equal responsibility. Some claims still fit the facts better than others; and the more power a person holds, and the greater the cost his judgment imposes on others, the heavier his responsibility. All I mean is that, whichever side we are on, the feeling of being sure we are right can never replace checking."
+      ],
+      [
+        "那么，能做什么？也许是少一点诊断，多一点询问。我可以问大伯和姨妈：什么样的事实，会让你改变看法？然后同样认真地回答自己。如果我给不出答案，那么我的确信，也许就已经不是信念，而只是一种归属。",
+        "So what can be done? Perhaps less diagnosing and more asking. I can ask my uncle and my aunt: what kind of fact would change your mind? And then answer it just as seriously myself. If I cannot give an answer, then my certainty may no longer be a belief at all, but only a form of belonging."
+      ],
+      [
+        "独立思考不应只是怀疑他人的权威，也应当包括怀疑自己的确信。否则，我们可能只是以一种不容置疑的正确，替代了另一种不容置疑的正确。",
+        "Independent thinking should not only be doubting other people’s authority; it should also include doubting our own certainty. Otherwise we may simply replace one unquestionable rightness with another."
+      ],
+      [
+        "我仍然相信思想解放对于一个社会的重要性。但我逐渐觉得，思想解放并不意味着每个人最终接受某种特定的观点，而是意味着每个人都有能力，也有勇气，对自己所相信的事物提出质疑。",
+        "I still believe in the importance of intellectual emancipation for a society. But I have come to feel that it does not mean everyone ends up accepting some particular view; it means everyone has the ability, and the courage, to question what they themselves believe."
+      ],
+      [
+        "真正的道德责任，或许始于我们不再把“我是好人”“我出于善意”或“我只是服从”当作免于反思的理由。",
+        "True moral responsibility may begin when we stop treating “I am a good person,” “I meant well,” or “I was only obeying” as reasons to be exempt from reflection."
+      ],
+      [
+        "因为善良并不自动保证判断正确，而确信自己正确，也从来不是拒绝思考的理由。",
+        "Because goodness does not automatically guarantee a correct judgment, and being sure we are right has never been a reason to refuse to think."
+      ]
+    ]
+  },
+  {
+    "date": "2022-11-24",
+    "title": "Will We Become the Adults We Hate?",
+    "slug": "lying-life-of-adults",
+    "category": "Book",
+    "book": {
+      "cover": "lying_life.jpg",
+      "title": "The Lying Life of Adults",
+      "author": "Elena Ferrante",
+      "lines": [
+        "Novel · Translated by Ann Goldstein, 2020",
+        "In Naples, a girl overhears her father compare her to his estranged sister, and begins to look for the truth behind the adults’ lies."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "photo": {
+      "file": "lying_life_reading.jpg",
+      "alt": "Reading The Lying Life of Adults in Livermore"
+    },
+    "prose": [
+      [
+        "读完 Elena Ferrante 的《那不勒斯四部曲》之后，我始终对她笔下的世界念念不忘。得知《The Lying Life of Adults》已经被 Netflix 改编成电视剧，我却选择花三个晚上读完原著。或许比起再次看到那不勒斯的街道，我更想重新进入 Ferrante 笔下那个充满欲望、矛盾与谎言的精神世界。",
+        "After finishing Elena Ferrante’s Neapolitan Novels, I could not let go of the world she had written. When I learned that *The Lying Life of Adults* had been adapted by Netflix into a series, I chose to spend three evenings reading the original instead. Perhaps more than seeing the streets of Naples again, I wanted to reenter the inner world Ferrante builds, full of desire, contradiction and lies."
+      ],
+      [
+        "小说从 Giovanna 无意间听见父亲对自己容貌的贬低开始。原本象征理性、教养与道德的父母，逐渐显露出虚伪与自私；而一直被描述为粗俗、丑陋的姑姑 Vittoria，却展现出另一种复杂的人性。Giovanna 开始怀疑自己从小接受的一切，试图在成年人的谎言之外寻找真实。",
+        "The novel begins when Giovanna accidentally overhears her father belittling her looks. Her parents, who had stood for reason, upbringing and morality, gradually reveal their hypocrisy and selfishness, while her aunt Vittoria, always described as vulgar and ugly, shows a different, more complicated humanity. Giovanna starts to doubt everything she was raised to believe, and tries to look for something real beyond the adults’ lies."
+      ],
+      [
+        "然而，最令我不安的并不是她如何逐渐揭穿这些谎言，而是她在这个过程中发生的变化。",
+        "Yet what unsettles me most is not how she gradually exposes those lies, but how she changes in the process."
+      ],
+      [
+        "Giovanna 并非通过揭穿谎言而逃离成人世界，而是在揭穿谎言的过程中，逐渐成为成人世界的一部分。",
+        "Giovanna does not escape the adult world by exposing its lies; in exposing them, she gradually becomes a part of it."
+      ],
+      [
+        "这让我想到中文社交媒体上经常出现的一句话：“我们最终成为了自己以前讨厌的样子。”",
+        "This reminds me of a line that often appears on Chinese social media: “In the end, we became what we used to hate.”"
+      ],
+      [
+        "小时候，我们总以为真实与虚伪、善良与自私之间有着清晰的界限。我们不理解成年人为什么言行不一，为什么为了利益妥协，为什么明明知道什么是对的，却依然选择错误。我们相信自己绝不会成为那样的人。",
+        "As children, we always assume there is a clear line between truth and hypocrisy, between kindness and selfishness. We do not understand why adults say one thing and do another, why they compromise for the sake of interest, why they choose wrong even when they know what is right. We believe we will never become people like that."
+      ],
+      [
+        "然而，成长似乎并不是一个不断接近理想自我的过程。随着我们逐渐进入成年人的世界，曾经无法理解的行为开始有了理由。沉默是为了避免冲突，隐瞒是为了保护关系，妥协是为了适应现实。我们并没有突然放弃原则，只是在一次次看似合理的选择中，逐渐模糊了自己曾经坚信的界限。",
+        "Yet growing up does not seem to be a process of steadily approaching an ideal self. As we gradually enter the adult world, behavior we once could not understand begins to have reasons. Silence is to avoid conflict, concealment is to protect a relationship, compromise is to fit in with reality. We do not suddenly give up our principles; through one reasonable-looking choice after another, we slowly blur the lines we once held firmly."
+      ],
+      [
+        "更令人不安的是，我们甚至可能没有意识到自己正在改变。",
+        "More unsettling still, we may not even realize that we are changing."
+      ],
+      [
+        "Giovanna 曾经如此厌恶成年人的虚伪，却逐渐学会了隐瞒、试探与自我辩解。她不是突然决定成为一个虚伪的人，而是在面对自己的欲望与矛盾时，发现那些曾经令她反感的行为，也可以被自己解释得合情合理。",
+        "Giovanna once loathed adult hypocrisy so much, yet she gradually learns to conceal, to probe, and to justify herself. She does not suddenly decide to become a hypocrite; faced with her own desires and contradictions, she finds that the very behavior that once repelled her can also be explained by herself as perfectly reasonable."
+      ],
+      [
+        "这让我重新思考《那不勒斯四部曲》中反复出现的问题：我们究竟能够在多大程度上摆脱自己的出身与成长环境？Elena 试图通过教育与写作离开原来的世界，却始终无法完全摆脱它的影响。而 Giovanna 同样试图通过识破父母的谎言获得独立，却发现自己早已深深受到那个世界的塑造。",
+        "This made me reconsider a question that recurs in the Neapolitan Novels: to what extent can we escape where we come from and how we were brought up? Elena tries to leave her old world through education and writing, yet never fully escapes its influence. Giovanna likewise tries to gain independence by seeing through her parents’ lies, only to find that she has long since been deeply shaped by that world."
+      ],
+      [
+        "也许，成长最残酷的地方，并不是我们发现成年人并不完美，而是我们终于开始理解他们为什么不完美，甚至开始为自己寻找同样的借口。",
+        "Perhaps the cruelest part of growing up is not discovering that adults are imperfect, but that we finally begin to understand why they are imperfect, and even begin to find the same excuses for ourselves."
+      ],
+      [
+        "但我并不认为 Ferrante 是在告诉我们，人注定会变得虚伪。相反，她让我意识到，理解人性的复杂，并不意味着必须接受所有妥协。我们无法永远保持童年时简单而坚定的道德判断，却仍然可以选择不让现实成为一切行为的借口。",
+        "But I do not think Ferrante is telling us that people are doomed to become hypocrites. On the contrary, she made me realize that understanding the complexity of human nature does not mean having to accept every compromise. We cannot hold forever the simple, firm moral judgments of childhood, but we can still choose not to let reality become the excuse for everything we do."
+      ],
+      [
+        "真正值得恐惧的，或许不是我们最终成为了自己讨厌的大人，而是当那一天到来时，我们已经不再觉得自己有什么值得讨厌。",
+        "What is truly worth fearing may not be that we end up as the adults we hate, but that when that day comes, we no longer find anything in ourselves worth hating."
+      ],
+      [
+        "也许，成熟并不是终于学会如何适应这个充满谎言的世界，而是在理解了谎言为何存在之后，依然保有质疑自己的能力。",
+        "Perhaps maturity is not finally learning how to adapt to a world full of lies, but, having understood why the lies exist, still keeping the ability to question ourselves."
+      ]
+    ]
+  },
+  {
+    "date": "2025-01-23",
+    "title": "Can We Ever Go Home?",
+    "slug": "can-we-go-home",
+    "category": "Book",
+    "book": {
+      "cover": "yeosu_love.jpg",
+      "title": "여수의 사랑 (Love of Yeosu)",
+      "author": "한강 Han Kang",
+      "lines": [
+        "Short story collection · 1995",
+        "Han Kang’s first collection. In the title story, two women, one abandoned as a baby and one the sole survivor of her family, hold opposite feelings about the same coastal city."
+      ]
+    },
+    "place": "于韩国首尔\nSeoul, South Korea",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "photo": {
+      "file": "yeosu_love_reading.jpg",
+      "alt": "Reading 여수의 사랑 in Seoul"
+    },
+    "prose": [
+      [
+        "故乡是什么？是我们出生的地方，是承载童年记忆的土地，还是一个无论走得多远，最终都能够接纳我们的归宿？读完韩江的《丽水之爱》，我开始怀疑，故乡或许从来不只是一个地理概念，而是我们对于归属、记忆与爱的某种想象。",
+        "What is a hometown? Is it the place where we were born, the land that holds our childhood memories, or a refuge that will take us back no matter how far we have gone? After reading Han Kang’s *Love of Yeosu*, I began to suspect that a hometown was never only a geographical idea, but a kind of imagining of belonging, memory and love."
+      ],
+      [
+        "几天前，我刚去过丽水。那是我旅居世界这几年里，离家乡盐城最近的一次，大概只有六百多公里。我在山上眺望家乡方向西边的那片海，远处几条船驶向天际线，越来越模糊，直到再也看不见，仿佛它们从未存在过。坦白说，站在那里，我并没有想起多少盐城的事。自从2008年去北京上大学，我就很少再回盐城了。这些年我不断搬去新的城市，真正生活、成长的地方一个接一个地变了，而盐城只是留在了原地，成了我“从哪里来”的一个答案，却不再是我生活的地方。对我来说，出生的地方并没有那么重要，它更像是表格上需要填写的一栏，而不是一个我会惦记、想回去的家。我真正看重的，是心里的那个故乡。",
+        "A few days ago I was in Yeosu. It was the closest I had come to my hometown, Yancheng, in the years I have spent living around the world, only about six hundred kilometers. From a hill I looked out at the sea to the west, in the direction of home. A few boats sailed toward the horizon and grew fainter and fainter until I could no longer see them, as if they had never existed. To be honest, standing there I did not think much about Yancheng. I have rarely gone back since I left for university in Beijing in 2008. Over the years I kept moving to new cities, and the places where I actually lived and grew up changed one after another, while Yancheng stayed where it was, an answer to “where are you from?” rather than a place I live. To me the place where I was born has never mattered that much. It is more like a box on a form than a home I think about or want to return to. What I truly care about is the hometown in my mind."
+      ],
+      [
+        "小说中，자흔（Ja-heun）与叙述者정선（Jeong-seon）对丽水有着截然相反的感情。出生后便被遗弃的자흔，因为被遗弃的列车从丽水出发，便固执地相信那里是自己的故乡。她从未真正拥有过丽水，却将它视为人生的方向。而정선真正出生于丽水，却在那里经历了母亲的死亡、父亲携子女投海自杀的悲剧，成为唯一的幸存者。从此，丽水成了一个必须逃离、甚至不愿回忆的地方。",
+        "In the story, Ja-heun (자흔) and the narrator Jeong-seon (정선) feel completely opposite things about Yeosu. Ja-heun, abandoned soon after she was born, stubbornly believes Yeosu is her hometown because the train she was abandoned on departed from there. She has never really possessed Yeosu, yet she treats it as the direction of her life. Jeong-seon, by contrast, was truly born in Yeosu, and it is where she lived through her mother’s death and her father’s suicide at sea with his children, of whom she was the only survivor. From then on, Yeosu became a place she had to flee, and did not even want to remember."
+      ],
+      [
+        "一个从未到过故乡，却终其一生渴望回去；一个真正拥有故乡，却用尽力气想要忘记它。这种矛盾让我意识到，我们对于故乡的感情，也许并不取决于那个地方本身，而取决于我们曾在那里得到什么，又失去了什么。",
+        "One has never been to her hometown yet longs all her life to return; the other truly has a hometown yet uses all her strength to forget it. This contradiction made me realize that our feelings about a hometown may depend not on the place itself, but on what we once received there, and what we lost."
+      ],
+      [
+        "자흔所向往的，或许并不是真实的丽水，而是一个想象中能够解释自己从何而来、为何被遗弃的地方。对于一个从出生便失去归属的人而言，哪怕只是一个模糊的地名，也足以成为生命的寄托。她渴望回到丽水，也许并不是因为那里真的有人等待她，而是因为她需要相信，世界上至少存在一个自己可以回去的地方。",
+        "What Ja-heun longs for may not be the real Yeosu at all, but an imagined place that could explain where she came from and why she was abandoned. For someone who lost any sense of belonging at birth, even a vague place name can be enough to hold a life. She longs to return to Yeosu, perhaps not because anyone is really waiting for her there, but because she needs to believe that somewhere in the world there is at least one place she can go back to."
+      ],
+      [
+        "而정선恰恰相反。丽水并非一个未知的希望，而是一段无法承受的记忆。정선试图通过离开故乡来摆脱过去，却发现地理上的距离并不能消除精神上的创伤。那些被压抑的恐惧与痛苦，最终仍然以洁癖、疏离和对亲密关系的矛盾态度，渗透进日常生活。",
+        "Jeong-seon is exactly the opposite. For her, Yeosu is not an unknown hope but a memory she cannot bear. She tries to shake off the past by leaving her hometown, only to find that geographical distance cannot erase psychological trauma. The fear and pain she has suppressed still seep into daily life, as an obsession with cleanliness, as distance, and as an ambivalent attitude toward intimacy."
+      ],
+      [
+        "于是我开始觉得，자흔与정선看似走向两个相反的方向，实际上却都被同一种缺失所困。一个试图通过回到故乡寻找从未得到的爱，另一个试图通过逃离故乡忘记曾经失去的爱。她们真正寻找或逃避的，也许从来不是丽水，而是那个始终无法得到安放的自己。",
+        "So I began to feel that Ja-heun and Jeong-seon, who seem to walk in opposite directions, are in fact trapped by the same lack. One tries to go back to her hometown to find a love she never had; the other tries to flee hers to forget a love she lost. What they are really looking for or running from may never have been Yeosu, but a self that has never been able to settle."
+      ],
+      [
+        "这也让我重新思考我们习以为常的“落叶归根”。我们总将故乡浪漫化为温暖的起点，仿佛无论经历多少漂泊，回去便意味着安宁与和解。但这种想象是否忽略了那些在故乡遭受伤害的人？如果一个人的故乡意味着遗弃、死亡与失去，我们又凭什么认为回归必然是一种救赎？",
+        "It also made me reconsider the saying we take for granted, that fallen leaves return to their roots. We always romanticize the hometown as a warm beginning, as if, however much we have drifted, going back must mean peace and reconciliation. But does that picture overlook the people who were hurt in their hometowns? If someone’s hometown means abandonment, death and loss, on what grounds do we assume that returning must be a redemption?"
+      ],
+      [
+        "我自己的经历也说明，故乡未必是出生的地方。在我网站的 Steps 里，我给自己定了一条规则：把我从出生到现在，所有能记起、有记录的足迹都放进数据库，每到一座城市、一个国家就为它计一次数，计数最高的城市和国家，分别被标记为我的 home city 和 home country。2008年去北京读书，不到一年，北京就成了我的 home city。2012年去西雅图读书，到2014年8月，西雅图接替了北京。2017年来湾区工作，湾区却一直等到2023年10月，才超过西雅图。至于 home country，美国早在2015年6月就取代了中国。这些数字只记录我去过哪里，并不能告诉我归属在哪里。在我心里，我的故乡仍然是西雅图：在那里的生活深刻塑造了我是谁，也是我真正觉得有归属感的地方。",
+        "My own experience suggests that a hometown is not necessarily where you were born. In Steps on this site I set myself a rule: every footprint I can remember or have a record of, from birth until now, goes into a database, and each city and country I reach gets one more count. The city and country with the highest counts are marked as my home city and home country. I went to university in Beijing in 2008, and in less than a year Beijing had become my home city. I went to school in Seattle in 2012, and by August 2014 Seattle had taken over from Beijing. After I came to work in the Bay Area in 2017, it did not overtake Seattle until October 2023. As for my home country, the United States had already replaced China in June 2015. These numbers only record where I have been, not where I belong. In my heart my hometown is still Seattle. My life there shaped who I am, and it is where I truly feel I belong."
+      ],
+      [
+        "小说的结尾，정선终于踏上了前往丽水的旅程，但韩江并没有告诉我们，她能否找到자흔，能否与过去和解，能否真正获得安宁。",
+        "At the end of the story, Jeong-seon finally sets out on the journey to Yeosu, but Han Kang does not tell us whether she will find Ja-heun, whether she will reconcile with the past, or whether she will truly find peace."
+      ],
+      [
+        "我反而觉得，这种没有答案的结局恰恰揭示了故乡最复杂的意义。故乡不能保证我们重新获得失去的爱，也无法替我们抹去曾经的伤害。回去并不必然意味着治愈，离开也不等于真正的遗忘。",
+        "If anything, I think an ending with no answer reveals the most complicated meaning of a hometown. A hometown cannot guarantee that we will win back the love we lost, nor can it erase the harm done to us. Going back does not necessarily mean healing, and leaving does not mean truly forgetting."
+      ],
+      [
+        "或许，故乡并不是一个我们终将回到的地方，而是一个我们终其一生都在试图理解的地方。而所谓的归乡，也许不是为了找回过去，而是为了有一天，我们能够不再被过去决定自己将去往何方。",
+        "Perhaps a hometown is not a place we will eventually return to, but a place we spend our whole lives trying to understand. And what we call homecoming may not be about retrieving the past, but about reaching a day when we are no longer decided by the past in where we are going."
+      ]
+    ]
+  },
   {
     "date": "2025-07-07",
     "title": "Whose Paradise?",
@@ -93,6 +597,10 @@ window.NOTES = [
         "Novel · Éditions Zoé, 2016",
         "A young woman, half French and half Korean, works at a guesthouse in the seaside town of Sokcho in winter, where a French comics artist comes to stay."
       ]
+    },
+    "photo": {
+      "file": "stillness_notes.jpg",
+      "alt": "A page of the book with handwritten notes in the margins"
     },
     "prose": [
       [
@@ -645,6 +1153,11 @@ window.NOTES = [
     "category": "Journal",
     "place": "于科罗拉多州丹佛\nDenver, CO",
     "languages": ["Chinese", "English"],
+    "video": {
+      "file": "denver.mp4",
+      "poster": "denver_poster.jpg",
+      "alt": "The view from the train: the plains of Denver with the skyline on the horizon"
+    },
     "prose": [
       [
         "记得凯鲁亚克在《在路上》里写丹佛：“突然间我们已下了山，可以俯瞰丹佛海一样博大的平原，热浪一下子向我们涌来。我们开始唱歌。现在我非常渴望去旧金山。”",
@@ -1151,6 +1664,10 @@ window.NOTES = [
       "Chinese",
       "English"
     ],
+    "photo": {
+      "file": "brugge.jpg",
+      "alt": "A canal in Bruges with a stone bridge, a tour boat and a brick spire"
+    },
     "pairStanzas": [
       [
         [
