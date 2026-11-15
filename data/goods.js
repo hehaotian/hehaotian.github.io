@@ -4,7 +4,7 @@
 window.GOOD_PLACES = {
   "University of Washington": "Seattle, WA",
   "University of California": "Davis, CA",
-  "Local Takaaya": "Khartoum, Sudan",
+  "Takaya Support": "El Obeid, North Kordofan, Sudan",
   "Tri Valley Haven": "Livermore, CA",
 };
 window.GOODS = [
@@ -16,10 +16,10 @@ window.GOODS = [
   { date: "2025-09", what: "Tri Valley Haven", cause: "Domestic violence", amount: 310 },
   { date: "2025-11", what: "University of California", cause: "Education", amount: 20000 },
   { date: "2025-12", what: "University of Washington", cause: "Education", amount: 24000 },
-  { date: "2025-12", what: "Local Takaaya", cause: "Disaster relief", amount: 500000 },
-  { date: "2026-04", what: "Local Takaaya", cause: "Hunger", amount: 750000 },
-  { date: "2026-10", what: "Local Takaaya", cause: "Hunger", amount: 300000 },
-  { date: "2026-10", what: "Local Takaaya", cause: "Disaster relief", amount: 200000 },
+  { date: "2025-12", what: "Takaya Support", cause: "Disaster relief", amount: 500000 },
+  { date: "2026-04", what: "Takaya Support", cause: "Hunger", amount: 750000 },
+  { date: "2026-10", what: "Takaya Support", cause: "Hunger", amount: 300000 },
+  { date: "2026-10", what: "Takaya Support", cause: "Disaster relief", amount: 200000 },
   { date: "2026-10", what: "Tri Valley Haven", cause: "Domestic violence", amount: 3000 },
   { date: "2026-11", what: "University of Washington", cause: "Education", amount: 20000 },
 ];
