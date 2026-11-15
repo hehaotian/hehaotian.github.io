@@ -678,16 +678,16 @@ window.NOTES = [
   },
   {
     "date": "2024-10-16",
-    "title": "東京夜想",
+    "title": "Tokyo Nocturne",
     "slug": "tokyo-night",
     "category": "Lines",
-    "place": "東京にて",
-    "languages": ["Japanese"],
-    "stanzas": [
+    "place": "東京にて\nTokyo, Japan",
+    "languages": ["Japanese", "English"],
+    "pairStanzas": [
       [
-        "夜の東京",
-        "灯りが踊る街",
-        "夢の中へ"
+        ["夜の東京", "Night in Tokyo"],
+        ["灯りが踊る街", "a city where the lights dance"],
+        ["夢の中へ", "into a dream"]
       ]
     ]
   },
@@ -768,15 +768,24 @@ window.NOTES = [
   },
   {
     "date": "2025-01-20",
-    "title": "丽水",
+    "title": "Yeosu",
     "slug": "yeosu",
-    "place": "于韩国丽水",
-    "languages": ["Chinese"],
+    "place": "于韩国丽水\nYeosu, South Korea",
+    "languages": ["Chinese", "English"],
     "category": "Journal",
-    "body": [
-      "2025年的第一次旅行，在微鼾中突然醒来，拉开大巴的红色窗帘，看到全罗南道的海岸线时就开始了。耳机里单曲循环着那首无比催眠和治愈的《여수밤바다》。在陌生小城里，用蹩脚的韩语，我准备展开为期一周的慢节奏生活。",
-      "丽水市是旅居世界几年来，我第一次离家乡盐城市地理位置最近的地方，也大概就600多公里。放下行李，来到山上眺望家乡方向西边的那片海。远处几条船驶向天际线，越发模糊，直到再也看不见，仿佛它们从未存在过。更靠近眼前的，是密密麻麻连成一片的海鸟。当游船靠近，它们忽然齐齐腾空而起，展现出瞬息万变却又秩序井然的美丽景象。",
-      "2024年的离别和变化，像海风一样频繁吹过我的生活，但在这无边的大海中，它们是如此自然，也是眼前这唯美风景的一部分。"
+    "prose": [
+      [
+        "2025年的第一次旅行，在邻座的微鼾里醒来，拉开大巴的红色窗帘，全罗南道的海岸线就这样出现了。耳机里单曲循环着那首催眠又治愈的《여수밤바다》。在陌生的小城里，我用蹩脚的韩语，准备过一周慢节奏的生活。",
+        "The first trip of 2025 began when I woke to a neighbor’s faint snoring, pulled back the bus’s red curtain, and found the coastline of South Jeolla rolling by. In my earphones, that soothing, sleepy song “여수밤바다” (Yeosu Night Sea) was on endless repeat. In an unfamiliar small town, with my clumsy Korean, I was getting ready for a week at a slow pace."
+      ],
+      [
+        "旅居世界这几年，丽水是离家乡盐城最近的一次，大概只有六百多公里。放下行李，我上山，朝家乡的方向，眺望西边那片海。几条船驶向天际线，越来越模糊，直到再也看不见，仿佛它们从未存在过。近处是密密麻麻连成一片的海鸟，游船一靠近，它们忽然齐齐腾空，翻飞变幻，却始终井然有序。",
+        "In all my years of living around the world, Yeosu was the closest I had come to my hometown, Yancheng, only about six hundred kilometers away. I put down my bags, climbed the hill, and looked toward home, across the sea to the west. A few boats sailed toward the horizon, growing fainter and fainter until they could no longer be seen, as if they had never existed. Nearer to me, sea birds crowded together in a dense mass, and when a tour boat drew close, they suddenly rose all at once, wheeling and shifting, yet never out of order."
+      ],
+      [
+        "2024年的离别和变化，像海风一样，频繁地吹过我的生活。如今，它们和海风一起，吹向这片望不到头的海。",
+        "The partings and changes of 2024 blew through my life as often as the sea wind. Now they blow out across this sea, as far as I can see."
+      ]
     ]
   },
   {
@@ -1037,27 +1046,31 @@ window.NOTES = [
   },
   {
     "date": "2025-07-15",
-    "title": "台灣拾遺",
+    "title": "Still Warm",
     "slug": "taiwan",
     "category": "Lines",
-    "place": "於台灣台北",
-    "languages": ["Chinese"],
-    "stanzas": [
+    "place": "於台灣台北\nTaipei, Taiwan",
+    "languages": ["Chinese", "English"],
+    "pairStanzas": [
       [
-        "台北的街頭總是熱鬧，",
-        "紅燈久一點，機車多一點，",
-        "但節奏不慌，一切都拿捏得剛剛好。"
+        ["台北的街頭熱鬧，", "Taipei’s streets are lively,"],
+        ["紅燈久一點，機車多一點，", "the red lights a little longer, the scooters a few more,"],
+        ["卻沒有人慌。", "and still no one is flustered."]
       ],
       [
-        "花東的火車總是很慢，",
-        "飯包熱著，窗外是稻田與山海。",
-        "風景很安靜，卻從不讓人覺得寂寞。"
+        ["花東的火車很慢，", "The train to Hualien and Taitung is slow,"],
+        ["飯包還熱著，", "the lunchbox still warm,"],
+        ["窗外是稻田，是山，是海，", "rice paddies outside the window, then mountains, then sea,"],
+        ["安靜，卻不寂寞。", "quiet, but not lonely."]
       ],
       [
-        "這裡的親切，不是因為來過很多次，",
-        "而是語言、光線、氣味、空氣的濕度，",
-        "都藏著一種奇妙的熟悉感，",
-        "像是，未曾擁有的故鄉。"
+        ["這座島的親切，", "The warmth of this island"],
+        ["不是因為來過很多次，", "is not from having come many times."],
+        ["是語言，是光線，是氣味，", "It is the language, the light, the smell,"],
+        ["是空氣裡的濕度，", "the dampness in the air,"],
+        ["都藏著一種說不出的熟悉，", "all holding a familiarity I cannot name,"],
+        ["像未曾擁有的，", "like something I never owned,"],
+        ["故鄉。", "a hometown."]
       ]
     ]
   },
@@ -1101,6 +1114,10 @@ window.NOTES = [
       [
         "人生的经历和想法也是这样被压缩的。具体哪年、在哪里、见过谁，都记不全了。这其实是在做一种有损压缩：细节被丢弃，特征被保留，无数离散的时刻最终降维成一种说不清却很准确的感觉。就像GPU完成海量计算后，模型留下的也只是编码在参数和向量里的结构。人也一样，我们以为自己忘记了，其实那些经历只是换了一种表示方式。",
         "The experiences and thoughts of a life are compressed in the same way. Which year, where, whom I met, I can no longer remember it all. This is really a kind of lossy compression: details are discarded, features are kept, and countless discrete moments are finally reduced in dimension to a feeling that is hard to put into words yet very accurate. It is like a model after a GPU finishes its enormous computation: what remains is only the structure encoded in parameters and vectors. People are the same. We think we have forgotten, but those experiences have only taken on another form of representation."
+      ],
+      [
+        "Gestalt 是德语，意思大致是“形”，或者说“整体”。格式塔心理学认为，我们看见的从来不是一堆零散的点，而是先感知到一个整体，而这个整体不等于各部分之和。留下来的那种“味道”正是如此：它不是任何一个具体的细节，却比任何一个细节都更真实；而且和压缩一样，它再也无法被还原成当初的那些细节。中文里的“印象”“感觉”都太轻，英文的 impression、flavor 也不够，只有这个词刚好。",
+        "Gestalt is German, roughly “form” or “whole.” Gestalt psychology holds that we never perceive a heap of scattered points; we perceive a whole first, and that whole is more than the sum of its parts. The “flavor” that remains is exactly this: it is not any single detail, yet it is truer than any detail, and, like compression, it can never be unfolded back into the details it came from. “印象” and “feeling” in Chinese are too light, and “impression” and “flavor” in English fall short; only this word fits."
       ],
       [
         "Gestalt. 就是这样吧！",
@@ -1241,17 +1258,44 @@ window.NOTES = [
   },
   {
     "date": "2024-02-20",
-    "title": "雲の上で",
+    "title": "Above the Clouds",
     "slug": "above-the-clouds",
     "category": "Journal",
-    "place": "東京にて",
-    "languages": ["Japanese"],
-    "body": [
-      "長距離のフライトは、なぜか言いたいことがどんどん浮かんでくる。",
-      "人生のほんの一部なのに、その後の生き方を大きく変えてしまう時間が、誰にでもあると思う。",
-      "シアトルは、私にとって一番大事な思い出が詰まった場所。ふとした時に聞こえてくる懐かしい旋律みたいに、ずっと心に残っている。UWやシアトルのコミュニティで、かけがえのない友達ができた。雨に濡れた街で粘り強さを学んで、「よく働き、よく遊べ」を信条にするようになった。その信念は、今でも心にグッとくる。",
-      "サンフランシスコで暮らすようになってから、大事な友達が一人、また一人と日本へ旅立っていったことに気づいた。笑い声や、あの大切な瞬間の余韻は、今も心のどこかに残っている。",
-      "東京へ向かう雲の上で、昔の友達にまた会いたいなと思っている。またみんなでわいわいしたい。ああ、昔の日々が恋しいな。Odegaard図書館での汗とコーヒーの匂い、古い広い家での抱擁とグラスの音、そして何より、あの頃の若さ。私たちを深く、永遠に形作った、忘れられない熱い瞬間たち。"
+    "place": "東京にて\nTokyo, Japan",
+    "languages": ["Japanese", "English"],
+    "photo": {
+      "file": "above_the_clouds.jpg",
+      "alt": "A ZIPAIR tray table with Japanese snacks: coconut ice cream, Bisco biscuits, a can of lemon chu-hi and a cup of the drink"
+    },
+    "prose": [
+      [
+        "長距離のフライトは、なぜか言いたいことがどんどん浮かんでくる。",
+        "On long flights, for some reason, all the things I want to say keep rising to the surface."
+      ],
+      [
+        "人生のほんの一部なのに、その後の生き方を大きく変えてしまう時間が、誰にでもあると思う。",
+        "I think everyone has a stretch of time that is only a small part of a life, yet changes how they live afterward."
+      ],
+      [
+        "私にとってのそれは、シアトルだった。ふとした時に聞こえてくる懐かしい旋律みたいに、今も心のどこかで鳴っている。UWで、シアトルのコミュニティで、かけがえのない友達ができた。雨に濡れた街で粘り強さを学び、「よく働き、よく遊べ」を信条にした。",
+        "For me, that was Seattle. Like a familiar melody that drifts in when you least expect it, it still plays somewhere in my heart. At UW and in the Seattle community I made friends I could never replace. In a city soaked with rain I learned perseverance, and took “work hard, play hard” as my creed."
+      ],
+      [
+        "サンフランシスコで暮らすようになって気づいた。大事な友達が一人、また一人と日本へ帰っていき、アメリカに残ったのは私だけになっていたことに。笑い声も、あの時間の余韻も、今は遠くにある。",
+        "It was after I started living in San Francisco that I noticed. My dear friends had gone back to Japan, one by one, until I was the only one left in America. Their laughter, and the afterglow of those times, are far away now."
+      ],
+      [
+        "そして今、私は東京へ向かう雲の上にいる。今度は私が、みんなに会いに行く。",
+        "And now I am above the clouds, on my way to Tokyo. This time, I am the one going to see everyone."
+      ],
+      [
+        "Odegaard図書館の、汗とコーヒーの匂い。古くて広い家での、抱擁とグラスの音。そして何より、あの頃の若さ。",
+        "The sweat and coffee smell of Odegaard Library. Hugs and the clink of glasses in an old, big house. And above all, the youth we had then."
+      ],
+      [
+        "またみんなで、わいわいやりたいな。",
+        "I want us all to make a racket together again."
+      ]
     ]
   },
   {
@@ -1630,8 +1674,20 @@ window.NOTES = [
         "The Greek πόλις clung to sameness. Anyone unlike the πολίτης, anyone whose speech sounded like “bar-bar-bar,” was lumped together as βάρβαρος. The Roman civitas, by contrast, was built from mobile civis bound by contract and law, an attempt to dissolve prejudice. Nothing is new under the sun: today we are only replaying the same underlying argument between Greece and Rome."
       ],
       [
-        "可有一点我倒是有点经验的：思维的静止滋生无知，无知的空白充斥偏见，偏见的藩篱固化仇恨。",
-        "One thing I do know from experience: a still mind breeds ignorance, the blank of ignorance fills with prejudice, and the fence of prejudice hardens into hatred."
+        "雅典把这种同质写进了法律。公元前451年，伯里克利推动立法，只有父母双方都是雅典人，孩子才算πολίτης。雅典人还乐于自称“土生土长”，仿佛从土里长出来的一般。在这样的城邦里，身份是血统，是出身，是无法靠后天争取的东西；外来者哪怕住了一辈子，也只是μέτοικος，永远是客人。亚里士多德说人天生是政治的动物，可他心里的“人”，其实只是城邦之内的那一部分人。",
+        "Athens wrote this sameness into law. In 451 BC, under Pericles, a child counted as a πολίτης only if both parents were Athenian. Athenians even liked to call themselves “born of the soil,” as if they had grown out of the ground itself. In such a city, identity was blood and birth, something no effort could earn; a foreigner who lived there all his life was still only a μέτοικος, a permanent guest. Aristotle said that man is by nature a political animal, but the “man” he had in mind was really only the part of humanity inside the city walls."
+      ],
+      [
+        "罗马的civitas则像一道可以打开的门。战败的邻邦可以被吸纳，被释放的奴隶可以成为公民，他们的儿子甚至可以做官。到了公元48年，克劳狄皇帝在元老院为接纳高卢贵族辩护，他提醒元老们：斯巴达与雅典军力何等强盛，却因为始终把被征服者当作外人而衰亡，而罗马的祖先把敌人变成了同胞。公元212年，卡拉卡拉更是把公民权授予帝国境内几乎所有自由人。这并不是温情，里面有税收和兵源的算计，可它做成了一件希腊人没做成的事：让“我们”这个词可以不断变大。",
+        "The Roman civitas was more like a door that could be opened. Defeated neighbors could be absorbed, freed slaves could become citizens, and their sons could even hold office. In AD 48 the emperor Claudius, arguing in the Senate for admitting Gallic nobles, reminded the senators that Sparta and Athens, for all their military strength, had withered because they always treated the conquered as outsiders, whereas Rome’s ancestors had turned enemies into countrymen. In AD 212 Caracalla extended citizenship to nearly all free inhabitants of the empire. This was not tenderness; taxes and recruits were part of the calculation. But it achieved what the Greeks never did: it let the word “we” keep growing."
+      ],
+      [
+        "说到底，两种城邦的分歧并不在城墙的高低，而在面对陌生时的第一个反应：是把听不懂的人叫作bar-bar-bar，转身关上门，还是走近一点，试着听懂他在说什么。前者省力，后者要付出代价，所以历史上选前者的人总是更多。",
+        "In the end, the two cities differed not in the height of their walls but in their first reaction to the unfamiliar: to call the person you cannot understand “bar-bar-bar” and turn to close the door, or to step closer and try to understand what he is saying. The first is effortless and the second costs something, which is why, throughout history, more people have chosen the first."
+      ],
+      [
+        "这一点我倒是有点经验：思维的静止滋生无知，无知的空白充斥偏见，偏见的藩篱固化仇恨。",
+        "This much I do know from experience: a still mind breeds ignorance, the blank of ignorance fills with prejudice, and the fence of prejudice hardens into hatred."
       ]
     ]
   },
