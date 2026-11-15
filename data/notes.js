@@ -12,7 +12,7 @@
 window.NOTES = [
   {
     "date": "2025-08-29",
-    "title": "When We Begin to Doubt Who We Are",
+    "title": "Doubt and Origin",
     "slug": "where-i-was-from",
     "category": "Book",
     "book": {
@@ -104,7 +104,7 @@ window.NOTES = [
   },
   {
     "date": "2026-08-16",
-    "title": "When Rebellion Is No Longer Freedom",
+    "title": "Rebellion and Freedom",
     "slug": "rebellion-and-freedom",
     "category": "Book",
     "book": {
@@ -157,8 +157,112 @@ window.NOTES = [
     ]
   },
   {
+    "date": "2024-11-08",
+    "title": "Who Remembers Us",
+    "slug": "when-those-who-remember-us-leave",
+    "category": "Book",
+    "book": {
+      "cover": "stay_true.jpg",
+      "title": "Stay True",
+      "author": "Hua Hsu",
+      "lines": [
+        "Memoir · Doubleday, 2022",
+        "Hsu’s memoir of his college friendship with Ken, who was killed in a carjacking, and of the music and zines of their Berkeley years."
+      ]
+    },
+    "place": "于加州旧金山\nSan Francisco, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "在《寻梦环游记》中，一个人真正的死亡，并不是生命的终结，而是当世界上最后一个记得他的人也将他遗忘。我们害怕被遗忘，因为那意味着自己曾经存在过的痕迹，终于从世界上彻底消失。但读完 Hua Hsu 的《Stay True》，我开始思考另一种恰好相反的失去：我们不仅害怕自己被别人遗忘，也害怕失去那些记得自己的人。前者是害怕从别人的世界里消失，后者是害怕自己的一部分随着别人一同消失。",
+        "In *Coco*, a person’s true death is not the end of life but the moment the last person in the world who remembers them forgets them too. We fear being forgotten because it would mean that the traces of our having existed finally vanish from the world altogether. But after finishing Hua Hsu’s *Stay True*, I began to think about a loss that runs the other way: we fear not only being forgotten by others, but also losing the people who remember us. The first is the fear of disappearing from other people’s worlds; the second is the fear that a part of ourselves disappears along with them."
+      ],
+      [
+        "我们习惯于认为记忆属于自己，仿佛过去只要曾经发生，就会永远成为生命中不可剥夺的一部分。但事实上，一个人的过去从来不完全由自己保存。父母记得我们尚未形成记忆时的模样，朋友记得我们早已忘记的言语，爱人记得那些连自己都不曾察觉的细节。那些记忆未必存在于我们的意识之中，却依然构成了我们是谁。",
+        "We tend to think of memory as our own, as if whatever has happened will forever remain an inalienable part of our lives. In truth, a person’s past has never been kept entirely by that person. Our parents remember what we looked like before we could form memories; our friends remember words we long ago forgot; our lovers remember details we never noticed ourselves. Those memories may not live in our own consciousness, yet they still make up who we are."
+      ],
+      [
+        "在《Stay True》中，Ken 的突然离世，不仅让 Hua 失去了一位朋友，也让他们共同经历的青春失去了一位见证者。那些一起听过的音乐、说过的玩笑、度过的夜晚，原本属于两个人的记忆，从此再也无法通过彼此的回忆得到补充与修正。更令人难过的是，Hua 仍然可以继续成长，重新理解过去，而 Ken 却再也无法参与这种理解。他无法告诉 Hua 哪些细节被记错了，哪些瞬间对自己同样重要，也无法再以自己的目光看见多年以后已经改变的 Hua。于是，失去一个人，也意味着失去了一种认识自己的方式。",
+        "In *Stay True*, Ken’s sudden death costs Hua not only a friend but also the witness to the youth they shared. The music they listened to together, the jokes they told, the nights they spent: memories that belonged to two people can no longer be supplemented or corrected through each other’s recollections. Sadder still, Hua can go on growing and re-understanding the past, while Ken can no longer take part in that understanding. He cannot tell Hua which details were misremembered or which moments mattered to him as well, nor can he see, through his own eyes, the Hua who has changed over the years. To lose a person, then, is also to lose a way of knowing oneself."
+      ],
+      [
+        "《寻梦环游记》中的遗忘，是活着的人逐渐抹去逝者的存在；《Stay True》中的死亡，却让逝者带走了活着的人一部分无法重建的过去。一个人可能仍然清晰地记得自己的朋友，却再也无法知道，自己在那位朋友的记忆中究竟是什么模样。这两种失去看似相反，却揭示了同一种脆弱：我们的存在，从来不完全属于自己。我们依赖他人的记忆，确认自己曾经存在；也依赖他人的目光，理解自己曾经是谁。",
+        "The forgetting in *Coco* is the living gradually erasing the existence of the dead; the death in *Stay True* is the dead carrying away a part of the living’s past that can never be rebuilt. A person may still remember a friend clearly and yet never again learn what they looked like in that friend’s memory. The two losses seem opposite, but they reveal the same fragility: our existence has never belonged entirely to ourselves. We depend on other people’s memories to confirm that we once existed, and on other people’s gaze to understand who we once were."
+      ],
+      [
+        "因此，Hua 对 Ken 的书写让我感到一种格外复杂的悲伤。他试图通过文字留下 Ken，却也在保存那个只有 Ken 曾经认识的年轻的自己。书写能够让一个人的故事继续被讲述，却无法让那个曾经与我们共同拥有故事的人，再次回应我们的记忆。《寻梦环游记》让我们相信，只要还有人记得，逝去的人便没有真正消失。而《Stay True》让我意识到，即使我们从未遗忘一个人，他的离开仍然可能带走一部分永远无法找回的自己。",
+        "That is why Hua’s writing about Ken filled me with a particularly complicated sadness. He tries to keep Ken through words, but in doing so he also preserves the young self that only Ken ever knew. Writing can keep a person’s story being told, but it cannot make the one who once shared that story with us answer our memories again. *Coco* lets us believe that as long as someone remembers, the dead have not truly disappeared. *Stay True* made me realize that even if we never forget a person, their leaving may still take away a part of ourselves that can never be found again."
+      ],
+      [
+        "我们总以为遗忘是对逝者的第二次死亡，却很少想到，当一个人离开时，活着的人也可能经历某种局部的消逝。如果一个人的存在需要他人的记忆来证明，那么当最后一个记得我们曾经模样的人离开，即使我们仍然活着，那个曾经的自己，是否也已经从世界上消失了？",
+        "We always think of forgetting as the second death of the dead, but seldom consider that when a person leaves, the living may also undergo a kind of partial vanishing. If a person’s existence needs other people’s memories to prove it, then when the last person who remembers what we once were is gone, even though we are still alive, has that former self also disappeared from the world?"
+      ]
+    ]
+  },
+  {
+    "date": "2024-06-16",
+    "title": "From the Empire of Cotton to the Empire of AI",
+    "slug": "from-cotton-to-ai",
+    "category": "Book",
+    "book": {
+      "cover": "empire_of_cotton.jpg",
+      "title": "棉花帝国 (Empire of Cotton)",
+      "author": "斯文·贝克特 Sven Beckert",
+      "lines": [
+        "Nonfiction · Knopf, 2014",
+        "Beckert’s global history of how cotton built modern capitalism, through slavery, colonial conquest and state power."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "一个社会可以在经济上越来越自由，却不意味着生活在其中的每个人都同样自由。",
+        "A society can grow ever freer economically without everyone living in it being equally free."
+      ],
+      [
+        "《棉花帝国》让我重新理解了资本主义的起源。贝克特揭示，现代资本主义并非单纯诞生于自由贸易、技术创新与市场竞争，而是深深依赖殖民扩张、土地掠夺、奴隶劳动与国家权力。自由市场的形成，恰恰曾以无数人的不自由为前提。",
+        "*Empire of Cotton* changed how I understand the origins of capitalism. Beckert shows that modern capitalism was not born simply of free trade, technological innovation and market competition; it depended deeply on colonial expansion, the seizure of land, enslaved labor and state power. The making of the free market was premised, precisely, on the unfreedom of countless people."
+      ],
+      [
+        "这让我想到，今天的人工智能革命，是否正在以一种截然不同的形式，延续资本主义历史中相似的矛盾？棉花帝国的关键，不只是纺织机器提高了生产效率，而是谁控制棉田、原料、工厂与贸易网络。机器创造了前所未有的生产力，但真正决定财富分配的，是围绕机器建立起来的所有权与权力关系。",
+        "This made me wonder whether today’s AI revolution is carrying forward, in a very different form, the same contradictions in the history of capitalism. What mattered in the empire of cotton was not only that textile machines raised productivity, but who controlled the cotton fields, the raw materials, the factories and the trade networks. Machines created productive power on an unprecedented scale, but what truly decided how wealth was divided were the relations of ownership and power built around them."
+      ],
+      [
+        "人工智能时代或许也是如此。我们惊叹于模型能够替代多少劳动，却很少追问谁拥有训练模型所需的数据、算力、基础设施与资本。正如工业革命的纺织机器离不开全球棉花供应链，今天看似无所不能的人工智能，同样依赖庞大的能源、矿产、数据与人类劳动体系。技术越是呈现出自动化的面貌，支撑它的社会关系反而越容易被忽略。",
+        "The age of AI may be no different. We marvel at how much labor models can replace, yet seldom ask who owns the data, computing power, infrastructure and capital needed to train them. Just as the textile machines of the Industrial Revolution could not do without the global cotton supply chain, today’s seemingly omnipotent AI likewise depends on a vast system of energy, minerals, data and human labor. The more a technology presents the face of automation, the more easily the social relations that sustain it are overlooked."
+      ],
+      [
+        "更值得思考的是，棉花帝国通过控制劳动者创造财富，而人工智能可能使资本在某些领域逐渐减少对劳动者的依赖。两者的机制不同，却指向同一个问题：生产力的增长，是否必然意味着创造或曾经创造这些财富的人能够分享增长的成果？",
+        "More worth thinking about is that the empire of cotton created wealth by controlling laborers, whereas AI may allow capital, in some fields, to depend less and less on laborers. The mechanisms differ, but they point to the same question: does growth in productivity necessarily mean that those who create, or once created, this wealth can share in its gains?"
+      ],
+      [
+        "当机器可以承担越来越多的工作，劳动本应从生存的负担逐渐转变为个人的选择。但如果收入、社会保障与生活尊严仍然高度依赖就业，那么劳动被替代也可能意味着一个人失去维持生活的能力。这或许是人工智能时代最深刻的悖论：社会越有能力摆脱劳动的必要，个人却未必越有能力摆脱对工作的依赖。",
+        "As machines take on more and more work, labor should gradually shift from a burden of survival to a matter of personal choice. But if income, social security and a life of dignity still depend heavily on employment, then having one’s labor replaced may mean losing the ability to sustain a life. This may be the deepest paradox of the age of AI: the more capable a society becomes of escaping the necessity of labor, the less capable individuals may be of escaping their dependence on work."
+      ],
+      [
+        "当然，历史并不注定重演。人工智能也可能使知识、创造与生产工具更加普及，让更多人获得过去只有少数人拥有的能力。但《棉花帝国》提醒我，技术本身不会决定这些可能最终属于谁。决定这一点的，仍然是所有权、制度与权力的分配。",
+        "Of course, history is not destined to repeat itself. AI may also make knowledge, creativity and the tools of production more widely available, giving more people abilities that once belonged to only a few. But *Empire of Cotton* reminds me that technology itself will not decide to whom these possibilities finally belong. That is still decided by the distribution of ownership, institutions and power."
+      ],
+      [
+        "从棉花到人工智能，资本主义不断改变生产财富的方式，却始终留下一个尚未解决的问题：当生产力越来越强大，我们究竟是在让更多人获得自由，还是在让拥有生产资料的人获得更大的自由？",
+        "From cotton to AI, capitalism keeps changing the way wealth is produced, yet it always leaves one problem unresolved: as productive power grows ever stronger, are we freeing more people, or giving greater freedom to those who own the means of production?"
+      ],
+      [
+        "或许，真正值得期待的人工智能革命，不是一个人类终于不再需要劳动的世界，而是一个人类终于不再必须通过出卖劳动，才能获得生存与自由的世界。",
+        "Perhaps the AI revolution truly worth hoping for is not a world in which humans finally no longer need to work, but one in which humans finally no longer have to sell their labor in order to gain survival and freedom."
+      ]
+    ]
+  },
+  {
     "date": "2023-01-31",
-    "title": "When Normal Becomes Violence",
+    "title": "Normal as Violence",
     "slug": "when-normal-becomes-violence",
     "category": "Book",
     "book": {
@@ -1455,7 +1559,7 @@ window.NOTES = [
   },
   {
     "date": "2020-04-20",
-    "title": "When Freedom Becomes a Privilege",
+    "title": "Freedom as Privilege",
     "slug": "freedom-as-privilege",
     "category": "Book",
     "book": {
@@ -1585,7 +1689,7 @@ window.NOTES = [
   },
   {
     "date": "2024-02-18",
-    "title": "When Knowledge No Longer Means Understanding",
+    "title": "Knowledge and Understanding",
     "slug": "knowledge-and-understanding",
     "category": "Book",
     "book": {
@@ -1710,7 +1814,7 @@ window.NOTES = [
   },
   {
     "date": "2026-11-11",
-    "title": "When History Becomes the Narrative of Power",
+    "title": "History and Power",
     "slug": "history-and-power",
     "category": "Reflection",
     "place": "于加州斯坦福\nStanford, CA",
@@ -1748,7 +1852,7 @@ window.NOTES = [
   },
   {
     "date": "2023-03-17",
-    "title": "When Love Cannot Reach",
+    "title": "Love Beyond Reach",
     "slug": "when-love-cannot-reach",
     "category": "Book",
     "book": {
