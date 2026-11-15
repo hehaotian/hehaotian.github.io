@@ -301,21 +301,84 @@ function detailPage({ kind, title, meta, item, tools, lang }) {
   };
 })();
 
-// ---- goods
+// ---- goods: a dashboard. KPI tiles, charts by year and by cause, then one expandable card per recipient.
 (function goods() {
   const list = (window.GOODS || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
-  const ids = slugs(list, g => g.what);
+  const $ = id => document.getElementById(id);
   const month = d => new Date(d + "-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "short" });
-  const row = (g, i) => `<a class="gig" href="#goods/${ids[i]}"><div class="when">${month(g.date)}</div><div>
-    <p>${esc(g.what)}${g.amount ? ` <span class="where">· $${Number(g.amount).toLocaleString()}</span>` : ""}</p>
-    ${g.story ? `<p class="where">${esc(g.story)}</p>` : ""}</div></a>`;
-  document.getElementById("goods-list").innerHTML = list.map(row).join("");
-  const sum = list.reduce((t, g) => t + (Number(g.amount) || 0), 0);
-  if (sum) document.getElementById("goods-total").textContent = `So far: $${sum.toLocaleString()} in ${list.length} ${list.length === 1 ? "gift" : "gifts"}.`;
-  popups.goods = slug => {
-    const g = list[ids.indexOf(slug)];
-    return g && detailPage({ title: g.what, meta: esc([month(g.date), g.amount && "$" + Number(g.amount).toLocaleString()].filter(Boolean).join(" · ")), item: { ...g, body: g.body || (g.story ? [g.story] : []) } });
-  };
+  const money = n => "$" + n.toLocaleString();
+  const pc = f => f > 0 && f < .005 ? "<1%" : Math.round(f * 100) + "%";   // never show a real gift as 0%
+  const gifts = n => `${n} ${n === 1 ? "gift" : "gifts"}`;
+  const amt = g => Number(g.amount) || 0;
+  const cz = g => g.cause || "Other";   // the cause belongs to each gift: one recipient can be given to for several causes
+  const places = window.GOOD_PLACES || {};
+  // a cause keeps its colour for good: slots go in order of first gift, never by rank; past five (and "Other") it is grey
+  const order = []; list.slice().reverse().forEach(g => { if (g.cause && !order.includes(g.cause)) order.push(g.cause); });
+  const slot = c => { const i = order.indexOf(c); return i > -1 && i < 5 ? i + 1 : 0; };
+  const paint = c => `var(--c${slot(c)})`;
+  const sum = list.reduce((t, g) => t + amt(g), 0);
+  if (!sum) return;
+
+  const byCause = {};
+  list.forEach(g => { const t = byCause[cz(g)] || (byCause[cz(g)] = { sum: 0, n: 0 }); t.sum += amt(g); t.n++; });
+  const causes = Object.entries(byCause).sort((x, y) => y[1].sum - x[1].sum);
+
+  // 1. KPI tiles
+  const yearOf = g => +g.date.slice(0, 4), first = Math.min(...list.map(yearOf)), last = Math.max(...list.map(yearOf));
+  const big = list.reduce((a, g) => (amt(g) > amt(a) ? g : a));
+  const kpis = [
+    { dark: 1, label: "Total given", value: money(sum), sub: `since ${first}` },
+    { label: "Gifts", value: list.length, sub: `over ${last - first + 1} ${last - first ? "years" : "year"}` },
+    { label: "Recipients", value: new Set(list.map(g => g.what)).size, sub: `${causes.length} ${causes.length === 1 ? "cause" : "causes"}` },
+    { label: "Largest gift", value: money(amt(big)), sub: `${esc(big.what)} · ${month(big.date)}` },
+  ];
+  $("goods-kpis").innerHTML = kpis.map(k => `<div class="kpi${k.dark ? " dark" : ""}"><p class="kl">${k.label}</p><p class="kv">${k.value}</p><p class="ks">${k.sub}</p></div>`).join("");
+
+  // 2. by cause: every track is the whole total, so every bar is the same width and its fill is the share
+  $("goods-causes").innerHTML = causes.map(([c, t]) => { const pct = pc(t.sum / sum);
+    return `<div class="cbar" tabindex="0" data-tip="${esc(c)} · ${money(t.sum)} · ${gifts(t.n)} · ${pct}">
+      <div class="chead"><span><i class="sw" style="background:${paint(c)}"></i>${esc(c)}</span><span class="where">${money(t.sum)} · ${pct}</span></div>
+      <div class="ctrack"><div class="cfill" style="width:${t.sum / sum * 100}%;background:${paint(c)}"></div></div></div>`; }).join("");
+
+  // 3. by year, 2020 to now: each column is that year's giving, 100% tall, split by cause (share, not dollars: the years differ by orders of magnitude)
+  const years = Array.from({ length: Math.max(new Date().getFullYear(), last) - 2019 }, (_, i) => String(2020 + i));
+  const bySlot = causes.map(([c]) => c).sort((x, y) => (slot(x) || 6) - (slot(y) || 6));   // slot 1 first = bottom of every column, grey last = top
+  const cols = years.map(y => {
+    const gs = list.filter(g => g.date.startsWith(y)), tot = gs.reduce((t, g) => t + amt(g), 0);
+    const parts = bySlot.map(c => [c, gs.filter(g => cz(g) === c).reduce((t, g) => t + amt(g), 0)]).filter(p => p[1] > 0).reverse();
+    const detail = parts.slice().reverse().map(([c, v]) => `${c} ${pc(v / tot)} (${money(v)})`).join(", ");
+    return `<div class="ycol" tabindex="0" data-tip="${esc(`${y} · ${tot ? `${money(tot)} · ${gifts(gs.length)} · ${detail}` : "no gifts"}`)}">
+      <div class="stack${tot ? "" : " none"}">${parts.map(([c, v]) => `<i class="s${slot(c)}" style="flex:${v};background:${paint(c)}">${v / tot >= .12 ? pc(v / tot) : ""}</i>`).join("")}</div></div>`;
+  }).join("");
+  $("goods-years").innerHTML = `<div class="legend">${bySlot.map(c => `<span><i class="sw" style="background:${paint(c)}"></i>${esc(c)}</span>`).join("")}</div>
+    <div class="cols pct">${cols}</div><div class="mlabels">${years.map(y => `<span>${y}</span>`).join("")}</div>`;
+
+  // 4. recipients: one card each, most recently given to first. Closed: name, place, total, causes and a bar split into its gifts; open: every gift.
+  const groups = [];
+  list.forEach(g => { let r = groups.find(x => x.what === g.what); if (!r) groups.push(r = { what: g.what, gifts: [], sum: 0 }); r.gifts.push(g); r.sum += amt(g); });
+  groups.forEach(r => { r.latest = r.gifts[0].date; });   // gifts are already newest first
+  groups.sort((x, y) => (x.latest < y.latest ? 1 : x.latest > y.latest ? -1 : y.sum - x.sum));   // most recent activity first; same month: larger total first
+  $("goods-list").innerHTML = groups.map(r => {
+    const top = Math.max(...r.gifts.map(amt)) || 1, cs = [...new Set(r.gifts.slice().reverse().map(cz))];
+    const yrs = r.gifts.map(yearOf), span = Math.min(...yrs) === Math.max(...yrs) ? yrs[0] : `${Math.min(...yrs)}–${Math.max(...yrs)}`;
+    const segs = r.gifts.slice().reverse().map(g => `<i style="flex:${amt(g) || 1};background:${paint(cz(g))}" title="${esc(cz(g))} · ${month(g.date)} · ${money(amt(g))}"></i>`).join("");
+    const rows = r.gifts.map(g => `<div class="rg"><span class="when">${month(g.date)}</span><span class="rc"><i class="sw" style="background:${paint(cz(g))}"></i>${esc(cz(g))}</span><span class="gamt">${money(amt(g))}</span>
+        <span class="rbar"><i style="width:${amt(g) / top * 100}%;background:${paint(cz(g))}"></i></span></div>`).join("");
+    return `<details class="rcp"><summary>
+        <div class="rtop"><span class="rname">${esc(r.what)}</span><span class="gamt">${money(r.sum)}</span></div>
+        ${places[r.what] ? `<div class="rplace">${esc(places[r.what])}</div>` : ""}
+        <div class="rmeta">${cs.map(c => `<i class="sw" style="background:${paint(c)}"></i>`).join("")}${cs.map(esc).join(" & ")} · ${gifts(r.gifts.length)} · ${span}<span class="chev" aria-hidden="true"></span></div>
+        <div class="seg">${segs}</div></summary><div class="rlist">${rows}</div></details>`;
+  }).join("");
+
+  // one shared tooltip for every mark
+  const tip = document.body.appendChild(Object.assign(document.createElement("div"), { id: "gtip", hidden: true }));
+  const show = (t, x, y) => { tip.textContent = t.dataset.tip; tip.hidden = false; tip.style.left = Math.max(8, Math.min(x + 12, innerWidth - tip.offsetWidth - 8)) + "px"; tip.style.top = y + 16 + "px"; };
+  const dash = $("goods");
+  dash.addEventListener("mousemove", e => { const t = e.target.closest("[data-tip]"); t ? show(t, e.clientX, e.clientY) : (tip.hidden = true); });
+  dash.addEventListener("mouseleave", () => { tip.hidden = true; });
+  dash.addEventListener("focusin", e => { const t = e.target.closest("[data-tip]"); if (t) { const r = t.getBoundingClientRect(); show(t, r.left, r.top - 40); } });
+  dash.addEventListener("focusout", () => { tip.hidden = true; });
 })();
 
 syncReader();                            // open a pop-up straight from a shared link

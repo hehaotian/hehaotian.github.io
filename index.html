@@ -56,8 +56,13 @@
   <section id="goods" class="tab" hidden>
     <div class="col">
       <h2>Goods</h2>
-      <p class="total" id="goods-total"></p>
-      <div id="goods-list"></div>
+      <div id="goods-kpis" class="kpis"></div>
+      <div class="dash">
+        <section class="card wide"><h3>By year</h3><div id="goods-years"></div><p class="cnote">Each column is 100% of that year’s giving, split by cause.</p></section>
+        <section class="card"><h3>By cause</h3><div id="goods-causes"></div><p class="cnote">Each bar shows its share of everything given.</p></section>
+      </div>
+      <h3 class="dh">Recipients <span>· tap a card for every gift</span></h3>
+      <div id="goods-list" class="rgrid"></div>
     </div>
   </section>
 
