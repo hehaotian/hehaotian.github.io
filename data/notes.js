@@ -19,16 +19,10 @@ window.NOTES = [
       "cover": "where_i_was_from.jpg",
       "title": "Where I Was From",
       "author": "Joan Didion",
-      "lines": [
-        "Nonfiction · Knopf, 2003",
-        "Didion’s memoir of California and her family, and of the pioneer myth she grew up inside."
-      ]
+      "lines": ["Nonfiction · Knopf, 2003", "Didion’s memoir of California and her family, and of the pioneer myth she grew up inside."]
     },
     "place": "于加州伯克利\nBerkeley, CA",
-    "languages": [
-      "Chinese",
-      "English"
-    ],
+    "languages": ["Chinese", "English"],
     "photo": {
       "file": "where_i_was_from_reading.jpg",
       "alt": "Reading Where I Was From in front of a bookshelf"
@@ -117,29 +111,20 @@ window.NOTES = [
       "cover": "ginsberg.jpg",
       "title": "The Essential Ginsberg",
       "author": "Allen Ginsberg",
-      "lines": [
-        "Poetry · Edited by Michael Schumacher, 2015",
-        "A selection of Allen Ginsberg’s poems, including “Howl”."
-      ]
+      "lines": ["Poetry · Edited by Michael Schumacher, 2015", "A selection of Allen Ginsberg’s poems, including “Howl”."]
     },
     "place": "于加州利弗莫尔\nLivermore, CA",
-    "languages": [
-      "Chinese",
-      "English"
-    ],
+    "languages": ["Chinese", "English"],
     "photo": {
       "file": "ginsberg_reading.jpg",
       "alt": "The Essential Ginsberg on a table in front of a bookshelf, with a Books Not Bombs card"
     },
     "prose": [
       [
-        "读艾伦·金斯堡的诗歌，我始终在思考一个问题：反抗社会的规范，是否就意味着一个人已经获得了自由？在《嚎叫》中，金斯堡将那些被主流社会视为疯狂、堕落与失败的人置于诗歌的中心。他以近乎失控的语言，控诉一个崇尚秩序、效率与物质繁荣，却不断压抑个体精神的社会。在他的笔下，疯狂有时反而比所谓的正常更加清醒，反叛也因此成为对社会虚伪的一种揭露。",
-        "Reading Allen Ginsberg’s poems, I kept coming back to one question: does rebelling against the norms of society mean a person has become free? In *Howl*, Ginsberg puts at the center of the poem the people the mainstream considers mad, degraded and failed. In language that borders on losing control, he accuses a society that prizes order, efficiency and material prosperity while ceaselessly suppressing the individual spirit. In his hands, madness is sometimes clearer-sighted than so-called normality, and rebellion becomes a way of exposing society’s hypocrisy."
+        "读艾伦·金斯堡的诗歌，我始终在思考一个问题：反抗社会的规范，是否就意味着一个人已经获得了自由？在《嚎叫》中，金斯堡将那些被主流社会视为疯狂、堕落与失败的人置于诗歌的中心。诗的开头便是：“我见过我们这代人的翘楚在癫狂中毁灭，在歇斯底里的赤裸中挨饿。”他以近乎失控的语言，控诉一个崇尚秩序、效率与物质繁荣，却不断压抑个体精神的社会。在他的笔下，疯狂有时反而比所谓的正常更加清醒，反叛也因此成为对社会虚伪的一种揭露。",
+        "Reading Allen Ginsberg’s poems, I kept coming back to one question: does rebelling against the norms of society mean a person has become free? In *Howl*, Ginsberg puts at the center of the poem the people the mainstream considers mad, degraded and failed. It opens: “I saw the best minds of my generation destroyed by madness, starving hysterical naked.” In language that borders on losing control, he accuses a society that prizes order, efficiency and material prosperity while ceaselessly suppressing the individual spirit. In his hands, madness is sometimes clearer-sighted than so-called normality, and rebellion becomes a way of exposing society’s hypocrisy."
       ],
-      [
-        "然而，我并不认为反抗本身就意味着自由。",
-        "Yet I do not believe that rebellion by itself means freedom."
-      ],
+      ["然而，我并不认为反抗本身就意味着自由。", "Yet I do not believe that rebellion by itself means freedom."],
       [
         "我们习惯于将服从与反抗视为对立的两端：服从意味着失去自我，反抗则象征着独立。但仔细想来，两者或许都存在同一种依赖。服从者需要社会的认可，而反抗者则需要社会作为自己的对立面。一个通过遵循规则定义自己，另一个通过拒绝规则确认自己的存在。",
         "We are used to treating obedience and rebellion as opposite ends: obedience means losing oneself, rebellion stands for independence. But on reflection, both may rest on the same dependence. The obedient need society’s approval, and the rebellious need society as their opposite. One defines himself by following the rules, the other confirms his existence by refusing them."
@@ -152,10 +137,7 @@ window.NOTES = [
         "自由或许并不意味着拒绝一切社会规范，而是拥有建立自身价值标准的能力。一个人可以选择遵循某些传统，也可以拒绝另一些期待，但这些选择不应仅仅来自对认可的渴望，或对权威的愤怒，而应来自对自己真正相信什么、愿意如何生活的清醒认识。",
         "Freedom may not mean rejecting all social norms, but having the ability to set one’s own standards of value. A person can choose to follow some traditions and refuse other expectations, but those choices should not come only from a hunger for approval or anger at authority; they should come from a clear understanding of what one truly believes and how one is willing to live."
       ],
-      [
-        "在这个意义上，真正的自由甚至可能表现为一种与社会的和解。",
-        "In this sense, real freedom may even take the form of a reconciliation with society."
-      ],
+      ["在这个意义上，真正的自由甚至可能表现为一种与社会的和解。", "In this sense, real freedom may even take the form of a reconciliation with society."],
       [
         "这种和解并不是屈服，更不是对不公的沉默，而是不再需要通过社会的评价来证明自己。我们可以承认社会的存在，理解它的复杂与局限，却不必让它决定我们的全部价值。我们可以反抗值得反抗的事情，也可以坦然接受那些与自身原则并不冲突的规则。",
         "This reconciliation is not surrender, still less silence in the face of injustice; it is no longer needing society’s judgment to prove ourselves. We can acknowledge that society exists and understand its complexity and its limits, without letting it decide our whole worth. We can rebel against what is worth rebelling against, and calmly accept the rules that do not conflict with our own principles."
@@ -169,8 +151,8 @@ window.NOTES = [
         "Of course, this does not mean Ginsberg’s rebellion has lost its meaning. On the contrary, his poems remind us that some social norms are themselves worth questioning, and that freedom also needs people who dare to break the limits that repress the individual. But rebellion can be a road to freedom without being the whole definition of it."
       ],
       [
-        "读完这些诗歌，我越来越觉得，真正困难的并不是对世界说“不”，而是在不需要反抗的时刻，依然知道自己是谁。真正自由的人，既不害怕与社会相同，也不执着于与社会不同。因为自由的终点，或许不是终于战胜了社会，而是终于不再需要以社会为参照，来证明自己的存在。",
-        "After reading these poems, I increasingly feel that the truly hard thing is not saying “no” to the world, but still knowing who you are at the moments when no rebellion is needed. A truly free person is neither afraid of being the same as society nor attached to being different from it. Because the end of freedom may not be finally defeating society, but finally no longer needing society as a reference point to prove that we exist."
+        "读完这些诗歌，我越来越觉得，真正困难的并不是对世界说“不”，而是在不需要反抗的时刻，依然知道自己是谁。真正自由的人，既不害怕与社会相同，也不执着于与社会不同。",
+        "After reading these poems, I increasingly feel that the truly hard thing is not saying “no” to the world, but still knowing who you are at the moments when no rebellion is needed. A truly free person is neither afraid of being the same as society nor attached to being different from it."
       ]
     ]
   },
@@ -189,10 +171,7 @@ window.NOTES = [
       ]
     },
     "place": "于加州利弗莫尔\nLivermore, CA",
-    "languages": [
-      "Chinese",
-      "English"
-    ],
+    "languages": ["Chinese", "English"],
     "photo": {
       "file": "vegetarian_reading.jpg",
       "alt": "Reading 채식주의자 in Livermore"
@@ -262,19 +241,13 @@ window.NOTES = [
     "slug": "blind-spot",
     "category": "Reflection",
     "place": "于加州山景城\nMountain View, CA",
-    "languages": [
-      "Chinese",
-      "English"
-    ],
+    "languages": ["Chinese", "English"],
     "prose": [
       [
         "这段时间，我一直在想身边的两位亲人。我试图借助汉娜·阿伦特所说的“平庸之恶”，理解一个始终困扰我的问题：为什么一些在日常生活中热情、善良，甚至愿意为他人付出的人，却能够对某些公共事件中的伤害表现出惊人的冷漠？",
         "I have been thinking a lot lately about two relatives close to me. I am trying to use Hannah Arendt’s “banality of evil” to understand a question that has always troubled me: why can some people who are warm and kind in daily life, even willing to give of themselves for others, show such astonishing indifference to the harm done in certain public events?"
       ],
-      [
-        "我的大伯便是这样一个人。",
-        "My eldest uncle on my father’s side is one of them."
-      ],
+      ["我的大伯便是这样一个人。", "My eldest uncle on my father’s side is one of them."],
       [
         "他成长于一个具有革命经历的干部家庭，长期生活在某种政治身份所赋予的荣誉感之中。在我看来，这种荣誉感逐渐成为他理解世界的基础。他并非一个缺乏善意的人，相反，他热情、积极，也愿意承担社会责任。但在面对某些公共事件时，他似乎更习惯于从权威的立场寻找解释，而不是首先追问具体的人遭受了什么。",
         "He grew up in a family of officials with a revolutionary history, and has long lived inside the sense of honor that a certain political identity gives. In my view, that sense of honor gradually became the foundation on which he understands the world. He is not a man without goodwill. On the contrary, he is warm, active, and willing to take on social responsibility. But when faced with certain public events, he seems more used to looking for explanations from the standpoint of authority, rather than first asking what a particular person has suffered."
@@ -315,10 +288,7 @@ window.NOTES = [
         "为什么他们看不见这一点？我想，一个原因是，对于身处其中的人来说，确信并不像一种“信念”，而更像一种“看见”。我的大伯不会觉得自己是在相信什么，他只是觉得自己看到了事情本来的样子；我的姨妈也是。确信的感觉，与看清事实的感觉，从内部是无法区分的。这也是盲点难以察觉的原因：它不是视野中某一块被遮住的地方，而是我们用来看的方式本身。",
         "Why can’t they see this? One reason, I think, is that for the person inside it, certainty does not feel like a “belief”; it feels like “seeing.” My uncle does not feel he is believing something; he feels he is seeing things as they are. So does my aunt. From the inside, the feeling of being certain and the feeling of seeing the facts clearly cannot be told apart. That is why a blind spot is so hard to notice. It is not some covered-up patch of the field of view; it is the way we look in the first place."
       ],
-      [
-        "但这种现象真的只存在于他们身上吗？",
-        "But does this phenomenon really exist only in them?"
-      ],
+      ["但这种现象真的只存在于他们身上吗？", "But does this phenomenon really exist only in them?"],
       [
         "写到这里，我不得不停下来。我一直在用“缺乏独立思考”来形容他们。可这个说法本身，就是一句现成的话，一个在我所处的圈子里被反复使用、不需要再解释的结论。我一用它，就不必再认真去听他们到底在说什么。我还用“干部家庭”“出身农村”来解释他们，仿佛知道了一个人的出身，就知道了他为什么会这样想。这正是我在前面所警惕的：用一个简单的解释，代替对一个具体的人的认识。",
         "Writing this, I have to stop. I have been describing them as “lacking independent thought.” But that phrase is itself a ready-made one, a conclusion used over and over in the circles I move in and needing no further explanation. The moment I use it, I no longer have to listen carefully to what they are actually saying. I have also explained them by “a family of officials” and “from the countryside,” as if knowing where a person comes from told me why he thinks as he does. This is exactly what I warned against above: using a simple explanation to replace knowing a particular person."
@@ -372,10 +342,7 @@ window.NOTES = [
       ]
     },
     "place": "于加州利弗莫尔\nLivermore, CA",
-    "languages": [
-      "Chinese",
-      "English"
-    ],
+    "languages": ["Chinese", "English"],
     "photo": {
       "file": "lying_life_reading.jpg",
       "alt": "Reading The Lying Life of Adults in Livermore"
@@ -409,10 +376,7 @@ window.NOTES = [
         "然而，成长似乎并不是一个不断接近理想自我的过程。随着我们逐渐进入成年人的世界，曾经无法理解的行为开始有了理由。沉默是为了避免冲突，隐瞒是为了保护关系，妥协是为了适应现实。我们并没有突然放弃原则，只是在一次次看似合理的选择中，逐渐模糊了自己曾经坚信的界限。",
         "Yet growing up does not seem to be a process of steadily approaching an ideal self. As we gradually enter the adult world, behavior we once could not understand begins to have reasons. Silence is to avoid conflict, concealment is to protect a relationship, compromise is to fit in with reality. We do not suddenly give up our principles; through one reasonable-looking choice after another, we slowly blur the lines we once held firmly."
       ],
-      [
-        "更令人不安的是，我们甚至可能没有意识到自己正在改变。",
-        "More unsettling still, we may not even realize that we are changing."
-      ],
+      ["更令人不安的是，我们甚至可能没有意识到自己正在改变。", "More unsettling still, we may not even realize that we are changing."],
       [
         "Giovanna 曾经如此厌恶成年人的虚伪，却逐渐学会了隐瞒、试探与自我辩解。她不是突然决定成为一个虚伪的人，而是在面对自己的欲望与矛盾时，发现那些曾经令她反感的行为，也可以被自己解释得合情合理。",
         "Giovanna once loathed adult hypocrisy so much, yet she gradually learns to conceal, to probe, and to justify herself. She does not suddenly decide to become a hypocrite; faced with her own desires and contradictions, she finds that the very behavior that once repelled her can also be explained by herself as perfectly reasonable."
@@ -454,10 +418,7 @@ window.NOTES = [
       ]
     },
     "place": "于韩国首尔\nSeoul, South Korea",
-    "languages": [
-      "Chinese",
-      "English"
-    ],
+    "languages": ["Chinese", "English"],
     "photo": {
       "file": "yeosu_love_reading.jpg",
       "alt": "Reading 여수의 사랑 in Seoul"
@@ -468,8 +429,8 @@ window.NOTES = [
         "What is a hometown? Is it the place where we were born, the land that holds our childhood memories, or a refuge that will take us back no matter how far we have gone? After reading Han Kang’s *Love of Yeosu*, I began to suspect that a hometown was never only a geographical idea, but a kind of imagining of belonging, memory and love."
       ],
       [
-        "几天前，我刚去过丽水。那是我旅居世界这几年里，离家乡盐城最近的一次，大概只有六百多公里。我在山上眺望家乡方向西边的那片海，远处几条船驶向天际线，越来越模糊，直到再也看不见，仿佛它们从未存在过。坦白说，站在那里，我并没有想起多少盐城的事。自从2008年去北京上大学，我就很少再回盐城了。这些年我不断搬去新的城市，真正生活、成长的地方一个接一个地变了，而盐城只是留在了原地，成了我“从哪里来”的一个答案，却不再是我生活的地方。对我来说，出生的地方并没有那么重要，它更像是表格上需要填写的一栏，而不是一个我会惦记、想回去的家。我真正看重的，是心里的那个故乡。",
-        "A few days ago I was in Yeosu. It was the closest I had come to my hometown, Yancheng, in the years I have spent living around the world, only about six hundred kilometers. From a hill I looked out at the sea to the west, in the direction of home. A few boats sailed toward the horizon and grew fainter and fainter until I could no longer see them, as if they had never existed. To be honest, standing there I did not think much about Yancheng. I have rarely gone back since I left for university in Beijing in 2008. Over the years I kept moving to new cities, and the places where I actually lived and grew up changed one after another, while Yancheng stayed where it was, an answer to “where are you from?” rather than a place I live. To me the place where I was born has never mattered that much. It is more like a box on a form than a home I think about or want to return to. What I truly care about is the hometown in my mind."
+        "几天前，我刚去过丽水。那是我旅居世界这几年里，离家乡盐城最近的一次，大概只有六百多公里。我在山上眺望家乡方向西边的那片海，坦白说，站在那里，我并没有想起多少盐城的事。自从2008年去北京上大学，我就很少再回盐城了。这些年我不断搬去新的城市，真正生活、成长的地方一个接一个地变了，而盐城只是留在了原地，成了我“从哪里来”的一个答案，却不再是我生活的地方。对我来说，出生的地方并没有那么重要，它更像是表格上需要填写的一栏，而不是一个我会惦记、想回去的家。我真正看重的，是心里的那个故乡。",
+        "A few days ago I was in Yeosu. It was the closest I had come to my hometown, Yancheng, in the years I have spent living around the world, only about six hundred kilometers. From a hill I looked out at the sea to the west, in the direction of home. To be honest, standing there I did not think much about Yancheng. I have rarely gone back since I left for university in Beijing in 2008. Over the years I kept moving to new cities, and the places where I actually lived and grew up changed one after another, while Yancheng stayed where it was, an answer to “where are you from?” rather than a place I live. To me the place where I was born has never mattered that much. It is more like a box on a form than a home I think about or want to return to. What I truly care about is the hometown in my mind."
       ],
       [
         "小说中，자흔（Ja-heun）与叙述者정선（Jeong-seon）对丽水有着截然相反的感情。出生后便被遗弃的자흔，因为被遗弃的列车从丽水出发，便固执地相信那里是自己的故乡。她从未真正拥有过丽水，却将它视为人生的方向。而정선真正出生于丽水，却在那里经历了母亲的死亡、父亲携子女投海自杀的悲剧，成为唯一的幸存者。从此，丽水成了一个必须逃离、甚至不愿回忆的地方。",
@@ -523,15 +484,9 @@ window.NOTES = [
       "cover": "fang_si_chi.jpg",
       "title": "房思琪的初戀樂園 (Fang Si-Chi’s First Love Paradise)",
       "author": "林奕含 Lin Yi-han",
-      "lines": [
-        "Novel · 2017",
-        "A teenage girl in Taipei is abused by her cram-school Chinese teacher, who presents it to her as love."
-      ]
+      "lines": ["Novel · 2017", "A teenage girl in Taipei is abused by her cram-school Chinese teacher, who presents it to her as love."]
     },
-    "languages": [
-      "Chinese",
-      "English"
-    ],
+    "languages": ["Chinese", "English"],
     "prose": [
       [
         "讀完林奕含的《房思琪的初戀樂園》，應該幾乎所有人都會自然問：為什麼是“樂園”？“樂園”本應象徵純真、自由與幸福，卻被用來命名一個充滿侵犯、壓迫與痛苦的故事。這當然是一種反諷，但我更想追問的是：為什麼一個充滿傷害的世界，仍然能夠以樂園的面貌存在？又是誰在維持這個樂園？",
@@ -561,10 +516,7 @@ window.NOTES = [
         "這也迫使我反思自己作為讀者的位置。面對房思琪的遭遇，我能夠清楚地辨認其中的殘酷。但如果我身處故事之中，只看到一位受人尊敬的老師和一個沉默、矛盾的女孩，而無法知曉她的內心，我是否仍然能夠作出同樣的判斷？",
         "It also forces me to reflect on my own position as a reader. Faced with what happens to Fang Si-Chi, I can recognize the cruelty clearly. But if I were inside the story, seeing only a respected teacher and a silent, conflicted girl whose inner life I could not know, would I still make the same judgment?"
       ],
-      [
-        "我無法輕易給出肯定的回答。",
-        "I cannot easily answer yes."
-      ],
+      ["我無法輕易給出肯定的回答。", "I cannot easily answer yes."],
       [
         "或許，這正是這本書最深刻的警示。暴力並不總是以野蠻的面貌出現，它也可能隱藏在我們最熟悉、最珍視的文明秩序之中。文學、教育與愛情並非暴力的根源，但當它們被賦予不容質疑的神聖性時，也可能成為遮蔽傷害的工具。",
         "Perhaps this is the book’s deepest warning. Violence does not always arrive looking savage; it can hide inside the civilized order we know best and prize most. Literature, education and love are not the roots of violence, but when they are given a sanctity that must not be questioned, they can become tools for covering harm."
@@ -699,10 +651,7 @@ window.NOTES = [
       "cover": "vuong.jpeg",
       "title": "On Earth We’re Briefly Gorgeous",
       "author": "Ocean Vuong",
-      "lines": [
-        "Novel · Penguin Press, 2019",
-        "A letter from a son, nicknamed Little Dog, to his mother, who cannot read it."
-      ]
+      "lines": ["Novel · Penguin Press, 2019", "A letter from a son, nicknamed Little Dog, to his mother, who cannot read it."]
     },
     "place": "于加州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
@@ -711,10 +660,7 @@ window.NOTES = [
         "在《大地上我们转瞬即逝的绚烂》中，王鸥行不断将越战的历史缩小至单个器官的尺寸，而眼睛则是他处理得最为锐利之处。这场战争过去常常是从远距离被审视的：从飞机上、在地图上、在伤亡数字中，以及后来在将难民归类为编号、受害者和待处理案卷的文件里。王鸥行避开了那种视角，转而投向那个进行凝视的肉身。在此，莫里斯·梅洛-庞蒂的理论大有裨益，因为他主张我们并非作为超然的旁观者去观察。我们是以身体的形式、从特定之处、带着局限去观察的。在王鸥行的手中，凝视不再是控制的工具，而成为了孤独与饥渴的象征。",
         "In *On Earth We’re Briefly Gorgeous*, Ocean Vuong keeps shrinking the history of the Vietnam War down to the size of a single organ, and the eye is where he does it most sharply. The war was often seen from a distance: from aircraft, on maps, in casualty counts, and later in the paperwork that sorted refugees into numbers, victims, and cases to be managed. Vuong turns away from that view and toward the body that does the looking. Here Maurice Merleau-Ponty is useful, because he argued that we do not see as detached observers. We see as bodies, from one place, with limits. In Vuong’s hands the gaze stops being a tool of control and becomes a sign of loneliness and hunger."
       ],
-      [
-        "这一转变发生在小狗对母亲说话、回忆起关于眼睛的一句评语时：",
-        "The turn comes when Little Dog, speaking to his mother, recalls a remark about the eye:"
-      ],
+      ["这一转变发生在小狗对母亲说话、回忆起关于眼睛的一句评语时：", "The turn comes when Little Dog, speaking to his mother, recalls a remark about the eye:"],
       [
         "“你有一次告诉我，人的眼睛是神最孤独的创造。世上有多少东西会穿过瞳孔，可它什么都留不下。一只眼睛孤零零地待在自己的眼眶里，完全不知道一英寸之外，还有完全相同的另一只，一样饥渴，一样空洞。”（王鸥行 14）",
         "“You told me once that the human eye is the most lonely creation of God. How much of the world passes through the pupil and still it holds nothing? The eye, alone in its socket, doesn't even know there's another one just like it, an inch away, equally hungry, equally empty.” (Vuong 14)"
@@ -731,10 +677,7 @@ window.NOTES = [
         "这段文字并未终结于绝望。就在孤独的瞳孔之后，小说提供了一个短暂的交汇时刻：",
         "The passage does not end in despair. Right after the lonely pupil, the novel offers a brief moment of contact:"
       ],
-      [
-        "“你打开前门，对着我人生中的第一场雪，耳语道：看。”（王鸥行 14）",
-        "“You opened the front door to my first snow, whispered: Look.” (Vuong 14)"
-      ],
+      ["“你打开前门，对着我人生中的第一场雪，耳语道：看。”（王鸥行 14）", "“You opened the front door to my first snow, whispered: Look.” (Vuong 14)"],
       [
         "母亲那单单一个字的“看”，是一种关爱的行为。在这个她无法阅读其语言的国家里，她几乎毫无权力，但她依然能指引儿子看向世界，并邀他一同凝视。母子二人并非从外部面对景象的旁观者；他们每个人都能看到对方在凝视。她没有去解释这场雪，她只是打开门，让雪映入眼帘。雪，就像所有穿过瞳孔的事物一样，什么都不会留下；它终将融化。重要的不是留住它，而是在同一个瞬间，共同凝视它。",
         "Rose’s one word, “Look,” is an act of care. She has little power in a country whose language she cannot read, but she can still point her son at the world and ask him to see it with her. Mother and son are not spectators facing a scene from outside; each can see the other seeing. She does not explain the snow. She opens the door and lets it come into view. Snow, like everything that passes through the pupil, leaves nothing behind; it will melt. What matters is not keeping it but seeing it together, at the same moment."
@@ -758,7 +701,7 @@ window.NOTES = [
       ],
       [
         "抵达后便直奔海边。眼前的这片海，在韩国被称为东海，其实也叫日本海。站在海边，想到正东方向对应的位置，不就是还没有发生地震之前的石川县能登半岛。那是一个同样闷热的夏天午后，在悬崖峭壁下的温泉池里，我凝视过同一片海。",
-        "Upon arrival in Sokcho, I headed straight for the sea. The waters before me were known as the East Sea in Korea, yet they were also called the Sea of Japan. Standing on the shore, gazing eastward, I wondered, somewhere beyond this horizon, wasn’t it there? That Noto Peninsula in Ishikawa I know, before the earthquake. Another summer, just as oppressive. Immersed in the warm waters of an onsen beneath a steep cliff, I had once stared at this very sea."
+        "On arriving I went straight to the sea. In Korea it is called the East Sea, though it is also called the Sea of Japan. Standing on the shore, I thought of what lies due east across it: the Noto Peninsula in Ishikawa, as it was before the earthquake. On an equally sultry summer afternoon, in an onsen pool beneath a sheer cliff, I had gazed at this same sea."
       ],
       [
         "时间在颠簸的路途间交织，一边是过去的夏日，一边是眼前的冬日。零碎散落的记忆也被一一拾起，被重新加注新的意义。",
@@ -797,112 +740,33 @@ window.NOTES = [
     "languages": ["Chinese", "English"],
     "pairStanzas": [
       [
-        [
-          "最近旅行的时候 总会想起小时候和家乡",
-          "Lately, when I travel, I keep thinking of childhood and home"
-        ],
-        [
-          "离开黄昏的巴黎 夕阳把我的影子拉得很长",
-          "Leaving Paris at dusk, the sun stretched my shadow long"
-        ],
-        [
-          "另一端 是站在机场天桥上的自己",
-          "and at the other end of it, I was standing on the airport footbridge"
-        ],
-        [
-          "恍惚间 我回到了小学",
-          "For a moment I was back in elementary school"
-        ],
-        [
-          "教室里读书声整齐划一 与我无关",
-          "the class reading aloud in perfect unison, none of it mine"
-        ],
-        [
-          "被当作异类 罚站在走廊上的我",
-          "and me, the odd one out, sent to stand in the hallway"
-        ],
-        [
-          "喜欢上观察地面上自己的影子",
-          "I started watching my shadow on the ground"
-        ],
-        [
-          "影子与时间一起拉长变细",
-          "how it stretched and thinned as time passed"
-        ],
-        [
-          "让我意识到 孤独并不是一种惩罚",
-          "and I realized that being alone was not a punishment"
-        ],
-        [
-          "从那时起 独自面对 独自旅行 独自思考",
-          "Since then, I’ve faced things alone, traveled alone, thought alone"
-        ],
-        [
-          "走过了二十多年",
-          "for more than twenty years"
-        ]
+        ["最近旅行的时候 总会想起小时候和家乡", "Lately, when I travel, I keep thinking of childhood and home"],
+        ["离开黄昏的巴黎 夕阳把我的影子拉得很长", "Leaving Paris at dusk, the sun stretched my shadow long"],
+        ["另一端 是站在机场天桥上的自己", "and at the other end of it, I was standing on the airport footbridge"],
+        ["恍惚间 我回到了小学", "For a moment I was back in elementary school"],
+        ["教室里读书声整齐划一 与我无关", "the class reading aloud in perfect unison, none of it mine"],
+        ["被当作异类 罚站在走廊上的我", "and me, the odd one out, sent to stand in the hallway"],
+        ["喜欢上观察地面上自己的影子", "I started watching my shadow on the ground"],
+        ["影子与时间一起拉长变细", "how it stretched and thinned as time passed"],
+        ["让我意识到 孤独并不是一种惩罚", "and I realized that being alone was not a punishment"],
+        ["从那时起 独自面对 独自旅行 独自思考", "Since then, I’ve faced things alone, traveled alone, thought alone"],
+        ["走过了二十多年", "for more than twenty years"]
       ],
       [
-        [
-          "追逐自己影子的我 登上了清晨的里斯本",
-          "Chasing my own shadow, I landed in Lisbon at dawn"
-        ],
-        [
-          "机身上漆着 这是葡萄牙航空的第100架飞机",
-          "Painted on the plane: the 100th aircraft in TAP’s fleet"
-        ],
-        [
-          "也是我的第712次飞行",
-          "and my 712th flight"
-        ],
-        [
-          "这些数字里 藏着一次次跨过去的边界",
-          "Numbers like these mark the borders I’ve crossed"
-        ],
-        [
-          "我们为什么要计数 要打卡",
-          "So why do we count? Why keep ticking things off?"
-        ],
-        [
-          "也许是想记住那些短暂的光阴",
-          "Maybe to remember how brief the hours are,"
-        ],
-        [
-          "记住每一次跨过边界的意义",
-          "to remember what each crossing meant"
-        ],
-        [
-          "可旅行并不在于数清脚步",
-          "But travel isn’t about counting steps"
-        ],
-        [
-          "而在于途中偶尔捕捉到的",
-          "it’s about catching, now and then along the way,"
-        ],
-        [
-          "那个稍纵即逝的自己",
-          "a fleeting glimpse of myself"
-        ],
-        [
-          "走了这么远 仍没有被社会同化的自己",
-          "who has come this far and still hasn’t been shaped to fit in"
-        ],
-        [
-          "清晨的里斯本 影子又被拉得很长",
-          "Morning in Lisbon, my shadow long again"
-        ],
-        [
-          "这一次 它的另一端",
-          "and this time, at the other end of it"
-        ],
-        [
-          "是初夏黄昏 走廊上罚站的孩子",
-          "is the child sent to stand in the hallway one early-summer evening"
-        ],
-        [
-          "和现在的我 是同一个人",
-          "the same person as me now"
-        ]
+        ["追逐自己影子的我 登上了清晨的里斯本", "Chasing my own shadow, I landed in Lisbon at dawn"],
+        ["机身上漆着 这是葡萄牙航空的第100架飞机", "Painted on the plane: the 100th aircraft in TAP’s fleet"],
+        ["也是我的第712次飞行", "and my 712th flight"],
+        ["这些数字里 藏着一次次跨过去的边界", "Numbers like these mark the borders I’ve crossed"],
+        ["我们为什么要计数 要打卡", "So why do we count? Why keep ticking things off?"],
+        ["也许是想记住那些短暂的光阴", "Maybe to remember how brief the hours are,"],
+        ["记住每一次跨过边界的意义", "to remember what each crossing meant"],
+        ["可旅行并不在于数清脚步", "But travel isn’t about counting steps"],
+        ["而在于途中偶尔捕捉到的", "it’s about catching, now and then along the way,"],
+        ["那个稍纵即逝的自己", "a fleeting glimpse of myself"],
+        ["清晨的里斯本 影子又被拉得很长", "Morning in Lisbon, my shadow long again"],
+        ["这一次 它的另一端", "and this time, at the other end of it"],
+        ["是初夏黄昏 走廊上罚站的孩子", "is the child sent to stand in the hallway one early-summer evening"],
+        ["和现在的我 是同一个人", "the same person as me now"]
       ]
     ]
   },
@@ -940,7 +804,7 @@ window.NOTES = [
     "date": "2025-07-25",
     "title": "사랑하는 당신에게",
     "slug": "dear-you",
-    "category": "Lines",
+    "category": "Poem",
     "place": "于美国萨克拉门托\n미국 새크라멘토에서",
     "languages": ["Chinese", "Korean"],
     "photo": {
@@ -949,98 +813,35 @@ window.NOTES = [
     },
     "pairStanzas": [
       [
-        [
-          "致我深爱的。",
-          "사랑하는 당신에게."
-        ]
+        ["致我深爱的。", "사랑하는 당신에게."]
       ],
       [
-        [
-          "弥阿十字路口的灯火还在照亮夜色时，",
-          "미아사거리의 불빛이 아직 밤을 밝히고 있을 시간,"
-        ],
-        [
-          "你应该已经安静地沉睡在那座熟悉的城市里了吧。",
-          "그 익숙한 도시에서 조용히 잠들어 있겠지."
-        ],
-        [
-          "而我在地球的另一端，",
-          "나는 지구의 반대편에 있다."
-        ],
-        [
-          "加州和风号驶过了第八个车站，便正式驶离了加州。",
-          "캘리포니아 제퍼가 여덟 번째 역을 지나 캘리포니아를 완전히 벗어났다."
-        ],
-        [
-          "穿越太浩湖的森林，",
-          "타호호의 숲을 건너"
-        ],
-        [
-          "缓慢却坚定地往内华达的深处驶去。",
-          "느리게, 그러나 흔들림 없이 네바다의 안쪽으로 들어간다."
-        ]
+        ["弥阿十字路口的灯火还在照亮夜色时，", "미아사거리의 불빛이 아직 밤을 밝히고 있을 시간,"],
+        ["你应该已经安静地沉睡在那座熟悉的城市里了吧。", "그 익숙한 도시에서 조용히 잠들어 있겠지."],
+        ["而我在地球的另一端，", "나는 지구의 반대편에 있다."],
+        ["加州和风号驶过了第八个车站，便正式驶离了加州。", "캘리포니아 제퍼가 여덟 번째 역을 지나 캘리포니아를 완전히 벗어났다."],
+        ["穿越太浩湖的森林，", "타호호의 숲을 건너"],
+        ["缓慢却坚定地往内华达的深处驶去。", "느리게, 그러나 흔들림 없이 네바다의 안쪽으로 들어간다."]
       ],
       [
-        [
-          "我们的婚姻，也刚好进入了第八个年头。",
-          "우리의 결혼도 이제 여덟 해째에 접어든다."
-        ],
-        [
-          "太浩湖松林的斑驳光影，洒落窗边，",
-          "타호호 소나무 숲의 얼룩진 빛이 창가에 내려앉는다."
-        ],
-        [
-          "一格一格地从我眼前划过，",
-          "한 컷씩 눈앞을 스쳐 간다."
-        ],
-        [
-          "像那年冬天，TGV 穿越罗讷河谷时，",
-          "그해 겨울, TGV가 론 계곡을 지날 때"
-        ],
-        [
-          "我依偎在你肩膀上沉沉睡去。",
-          "어깨에 기대어 깊이 잠들었던 것처럼."
-        ]
+        ["我们的婚姻，也刚好进入了第八个年头。", "우리의 결혼도 이제 여덟 해째에 접어든다."],
+        ["太浩湖松林的斑驳光影，洒落窗边，", "타호호 소나무 숲의 얼룩진 빛이 창가에 내려앉는다."],
+        ["一格一格地从我眼前划过，", "한 컷씩 눈앞을 스쳐 간다."],
+        ["像那年冬天，TGV 穿越罗讷河谷时，", "그해 겨울, TGV가 론 계곡을 지날 때"],
+        ["我依偎在你肩膀上沉沉睡去。", "어깨에 기대어 깊이 잠들었던 것처럼."]
       ],
       [
-        [
-          "我终于明白，幸福其实是一件令人畏惧的东西，",
-          "나는 이제야 안다. 행복이 실은 두려운 것이라는 걸."
-        ],
-        [
-          "它不是喧哗的喜悦，",
-          "그것은 소란스러운 기쁨이 아니라"
-        ],
-        [
-          "而更像是一种宁静中随时可能破碎的沉默。",
-          "고요 속에서 언제든 깨질 수 있는 침묵에 가깝다는 걸."
-        ],
-        [
-          "杜拉斯说：爱是一场搏斗。",
-          "뒤라스는 말했다. 사랑은 싸움이라고."
-        ],
-        [
-          "可即便如此，唯有爱让我觉得自己活着，并且值得。",
-          "그럼에도 사랑만이 내가 살아 있다고, 또 그만한 값이 있다고 느끼게 한다."
-        ]
+        ["我终于明白，幸福其实是一件令人畏惧的东西，", "나는 이제야 안다. 행복이 실은 두려운 것이라는 걸."],
+        ["它不是喧哗的喜悦，", "그것은 소란스러운 기쁨이 아니라"],
+        ["而更像是一种宁静中随时可能破碎的沉默。", "고요 속에서 언제든 깨질 수 있는 침묵에 가깝다는 걸."],
+        ["杜拉斯说：爱是一场搏斗。", "뒤라스는 말했다. 사랑은 싸움이라고."],
+        ["可即便如此，唯有爱让我觉得自己活着，并且值得。", "그럼에도 사랑만이 내가 살아 있다고, 또 그만한 값이 있다고 느끼게 한다."]
       ],
       [
-        [
-          "在铁轨的背脊上，我会将我们走过的那些痛苦，",
-          "철로의 등줄기 위에서 우리가 지나온 그 아픔들을"
-        ],
-        [
-          "一站一站地，抛进山脉深处的每一个山谷，",
-          "한 정거장, 또 한 정거장 산맥 깊은 골짜기마다 던져 넣고"
-        ],
-        [
-          "留在科罗拉多峡谷中每一座不知名的小车站里。",
-          "콜로라도 협곡의 이름 모를 작은 역마다 두고 가겠다."
-        ],
-        [
-          "等我到了丹佛，等你回到旧金山，我要好好拥抱你。",
-          "덴버에 도착하면, 당신이 샌프란시스코로 돌아오면, 그때 오래도록 꼭 안아 줄게."
-        ]
+        ["在铁轨的背脊上，我会将我们走过的那些痛苦，", "철로의 등줄기 위에서 우리가 지나온 그 아픔들을"],
+        ["一站一站地，抛进山脉深处的每一个山谷，", "한 정거장, 또 한 정거장 산맥 깊은 골짜기마다 던져 넣고"],
+        ["留在科罗拉多峡谷中每一座不知名的小车站里。", "콜로라도 협곡의 이름 모를 작은 역마다 두고 가겠다."],
+        ["等我到了丹佛，等你回到旧金山，我要好好拥抱你。", "덴버에 도착하면, 당신이 샌프란시스코로 돌아오면, 그때 오래도록 꼭 안아 줄게."]
       ]
     ]
   },
@@ -1091,11 +892,11 @@ window.NOTES = [
       [
         ["后来很多次", "Many times since then"],
         ["一个人在陌生的路上走", "alone on some unfamiliar road"],
-        ["也不知道走了多久 不知道走到了哪", "not knowing how long I\u2019d walked or where I\u2019d ended up"],
+        ["也不知道走了多久 不知道走到了哪", "not knowing how long I’d walked or where I’d ended up"],
         ["但只要 Sound Transit 钻出 Beacon Hill 的地下道", "but the moment the Sound Transit train climbs out of the Beacon Hill tunnel"],
         ["天际线那么一出现", "and the skyline appears"],
         ["我就知道", "I know"],
-        ["我又走回来了", "I\u2019m back"]
+        ["我又走回来了", "I’m back"]
       ]
     ]
   },
@@ -1119,10 +920,7 @@ window.NOTES = [
         "Gestalt 是德语，意思大致是“形”，或者说“整体”。格式塔心理学认为，我们看见的从来不是一堆零散的点，而是先感知到一个整体，而这个整体不等于各部分之和。留下来的那种“味道”正是如此：它不是任何一个具体的细节，却比任何一个细节都更真实；而且和压缩一样，它再也无法被还原成当初的那些细节。中文里的“印象”“感觉”都太轻，英文的 impression、flavor 也不够，只有这个词刚好。",
         "Gestalt is German, roughly “form” or “whole.” Gestalt psychology holds that we never perceive a heap of scattered points; we perceive a whole first, and that whole is more than the sum of its parts. The “flavor” that remains is exactly this: it is not any single detail, yet it is truer than any detail, and, like compression, it can never be unfolded back into the details it came from. “印象” and “feeling” in Chinese are too light, and “impression” and “flavor” in English fall short; only this word fits."
       ],
-      [
-        "Gestalt. 就是这样吧！",
-        "Gestalt. That’s it, isn’t it!"
-      ]
+      ["Gestalt. 就是这样吧！", "Gestalt. That’s it, isn’t it!"]
     ]
   },
   {
@@ -1178,7 +976,7 @@ window.NOTES = [
     "prose": [
       [
         "记得凯鲁亚克在《在路上》里写丹佛：“突然间我们已下了山，可以俯瞰丹佛海一样博大的平原，热浪一下子向我们涌来。我们开始唱歌。现在我非常渴望去旧金山。”",
-        "I remember how Kerouac writes about Denver in *On the Road* (here in my own translation from the Chinese edition): “Suddenly we had come down the mountain and could look out over the plains of Denver, vast as a sea, and the heat surged toward us all at once. We began to sing. Now I was desperate to get to San Francisco.”"
+        "I remember how Kerouac writes about Denver in *On the Road* (my translation back from the Chinese edition): “Suddenly we had come down the mountain and could look out over the plains of Denver, vast as a sea, and the heat surged toward us all at once. We began to sing. Now I was desperate to get to San Francisco.”"
       ],
       [
         "而我真的坐上了Amtrak列车，沿着落基山脉的边缘缓缓下山，看到了丹佛这片辽阔的平原，也感受到了热浪的扑面而来。我还看到了Studio Gang新设计的Populus宾馆，看到了蓝色大熊贴着玻璃墙凝视会展中心，吃到了一只意外好吃的Nutella可颂，也被丹佛机场那片巨大的人工秩序震撼到了。然后就是现在，我已经坐上飞往旧金山的航班，回去好好凉快一下吧！",
@@ -1195,64 +993,22 @@ window.NOTES = [
     "languages": ["Chinese", "English"],
     "pairStanzas": [
       [
-        [
-          "跌跌撞撞的青春 从未认真想过",
-          "Those stumbling years of youth, I never really thought"
-        ],
-        [
-          "什么该握紧 什么该放手",
-          "about what to hold and what to let go"
-        ],
-        [
-          "你突然消失",
-          "You vanished"
-        ],
-        [
-          "我握着被挂断的异地电话",
-          "I held the phone, a long-distance call hung up on me"
-        ],
-        [
-          "听了很久 那冰冷的嘟嘟声",
-          "and listened a long time to the cold beeping"
-        ],
-        [
-          "绝对不会松手的握法 敌不过",
-          "A grip that swore never to let go was no match for"
-        ],
-        [
-          "幼稚的自负",
-          "youthful pride"
-        ]
+        ["跌跌撞撞的青春 从未认真想过", "Those stumbling years of youth, I never really thought"],
+        ["什么该握紧 什么该放手", "about what to hold and what to let go"],
+        ["你突然消失", "You vanished"],
+        ["我握着被挂断的异地电话", "I held the phone, a long-distance call hung up on me"],
+        ["听了很久 那冰冷的嘟嘟声", "and listened a long time to the cold beeping"],
+        ["绝对不会松手的握法", "A grip that swore never to let go"],
+        ["敌不过幼稚的自负", "was no match for youthful pride"]
       ],
       [
-        [
-          "又过了十年",
-          "Ten years more"
-        ],
-        [
-          "遗憾过成了生活的一部分",
-          "Regret lived itself into a part of life"
-        ],
-        [
-          "起风的夜里 你的手也许还有些慌乱",
-          "On a windy night your hands, perhaps still a little shaky"
-        ],
-        [
-          "却温柔坚定地 托着新生儿缓缓入睡",
-          "and yet gentle, sure, cradle the newborn into slow sleep"
-        ],
-        [
-          "有时候 你也会这样想起我吧",
-          "Sometimes you think of me too, I suppose"
-        ],
-        [
-          "在另一个我疲惫不堪埋头",
-          "on another night, when another me, worn out, face down"
-        ],
-        [
-          "酣睡的夜里",
-          "asleep"
-        ]
+        ["又过了十年", "Ten years more"],
+        ["遗憾过成了生活的一部分", "Regret lived itself into a part of life"],
+        ["起风的夜里 你的手也许还有些慌乱", "On a windy night your hands, perhaps still a little shaky"],
+        ["却温柔坚定地 托着新生儿缓缓入睡", "and yet gentle, sure, cradle the newborn into slow sleep"],
+        ["有时候 你也会这样想起我吧", "Sometimes you think of me too, I suppose"],
+        ["在另一个我疲惫不堪", "on another night, when another me, worn out,"],
+        ["埋头酣睡的夜里", "sleeps face down"]
       ]
     ]
   },
@@ -1268,10 +1024,7 @@ window.NOTES = [
       "alt": "A ZIPAIR tray table with Japanese snacks: coconut ice cream, Bisco biscuits, a can of lemon chu-hi and a cup of the drink"
     },
     "prose": [
-      [
-        "長距離のフライトは、なぜか言いたいことがどんどん浮かんでくる。",
-        "On long flights, for some reason, all the things I want to say keep rising to the surface."
-      ],
+      ["長距離のフライトは、なぜか言いたいことがどんどん浮かんでくる。", "On long flights, for some reason, all the things I want to say keep rising to the surface."],
       [
         "人生のほんの一部なのに、その後の生き方を大きく変えてしまう時間が、誰にでもあると思う。",
         "I think everyone has a stretch of time that is only a small part of a life, yet changes how they live afterward."
@@ -1292,10 +1045,7 @@ window.NOTES = [
         "Odegaard図書館の、汗とコーヒーの匂い。古くて広い家での、抱擁とグラスの音。そして何より、あの頃の若さ。",
         "The sweat and coffee smell of Odegaard Library. Hugs and the clink of glasses in an old, big house. And above all, the youth we had then."
       ],
-      [
-        "またみんなで、わいわいやりたいな。",
-        "I want us all to make a racket together again."
-      ]
+      ["またみんなで、わいわいやりたいな。", "I want us all to make a racket together again."]
     ]
   },
   {
@@ -1319,7 +1069,7 @@ window.NOTES = [
         "To approach this from another angle, we might recall Calvino’s account of the dialogue between Kublai Khan and Marco Polo. While Polo attends strictly to the distinct texture and nuance of each city he visits, the Great Khan insists on discovering an underlying formula to govern the whole, prioritizing universality and order above all else. Yet to place rigid universality ahead of a flowing, ever-changing world is to invert cause and effect. To draft endless volumes of ideology and attempt to dictate a unified mindset from primary school through the state apparatus is, in the end, to repeat the Khan’s error. Uniform ideology serves only as an amplifier: it can magnify individual potential and talent without limit, but it can just as violently amplify an individual’s flaws."
       ],
       [
-        "可是我觉得，我们还是要读北岛《回答》里的那句诗：纵使你脚下有一千名挑战者，那就把我算做第一千零一名。因为任何想要灭人欲的思想最终都是海底捞针。",
+        "可是我觉得，我们还是要读北岛《回答》里的那句诗：纵使你脚下有一千名挑战者，那就把我算做第一千零一名。因为任何想要灭人欲的思想最终都是徒劳。",
         "Still, we ought to remember that line from Bei Dao’s *The Answer*: “If a thousand challengers lie beneath your feet, count me as number one thousand and one.” For any ideology that seeks to extinguish human desire is, in the end, an exercise in futility."
       ]
     ]
@@ -1333,12 +1083,12 @@ window.NOTES = [
     "languages": ["Chinese", "English"],
     "prose": [
       [
-        "最近在沉下心来搞语音技术研究，回顾这些年来的发展，我们从单纯对ASR生成的人造的音素特征这样离散变量的依赖，而转移到了更多甚至完全对通过HuBERT或wav2vec生成的连续变量来进行下一阶段大语言模型的工作了（当然，HuBERT本身就以离散的聚类单元作为训练目标，不少语音大模型也直接使用这类离散单元，连续与离散从来都是并存的）。近年来语言技术的突飞猛进，正是由我们越来越深刻地对事物本质的连续性和离散性的共同作用的理解所产生的。",
-        "Lately I have been settling down to research in speech technology. Looking back at how it has developed over these years, we have moved from relying on discrete variables, such as the artificial phonetic features generated by ASR (automatic speech recognition), to working more, and even entirely, with continuous variables produced by HuBERT or wav2vec (self-supervised speech models) for the next stage of large language models. (Of course, HuBERT itself is trained on discrete cluster units, and quite a few speech language models use such discrete units directly. Continuous and discrete have always coexisted.) The rapid progress of language technology in recent years comes precisely from our ever deeper understanding of how the continuous and the discrete nature of things work together."
-      ],
-      [
         "这个周末，主要是因为无聊，我居然把两度放弃的三岛由纪夫的《春雪》又重新拿起来读了一遍。在第十章，读到了这样的句子：「往往是那一瞬的犹豫，从此改变了我们以后的人生轨迹」（我自己瞎翻的）。我觉得“一瞬の躊躇/一瞬的犹豫”这个词是绝好的，我以前并没认识恰当。",
         "This weekend, mostly out of boredom, I picked up Yukio Mishima’s *Spring Snow* again, a book I had given up on twice, and read it through. In Chapter 10 I came upon this sentence: “Often it is a single moment’s hesitation that changes the course of our lives from then on” (my own rough translation). I think the phrase “一瞬の躊躇 / 一瞬的犹豫” (isshun no chūcho, a moment’s hesitation) is perfect, and I had never understood it properly before."
+      ],
+      [
+        "最近在沉下心来搞语音技术研究，回顾这些年来的发展，我们从单纯对ASR生成的人造的音素特征这样离散变量的依赖，而转移到了更多甚至完全对通过HuBERT或wav2vec生成的连续变量来进行下一阶段大语言模型的工作了（当然，HuBERT本身就以离散的聚类单元作为训练目标，不少语音大模型也直接使用这类离散单元，连续与离散从来都是并存的）。近年来语言技术的突飞猛进，正是由我们越来越深刻地对事物本质的连续性和离散性的共同作用的理解所产生的。",
+        "Lately I have been settling down to research in speech technology. Looking back at how it has developed over these years, we have moved from relying on discrete variables, such as the artificial phonetic features generated by ASR (automatic speech recognition), to working more, and even entirely, with continuous variables produced by HuBERT or wav2vec (self-supervised speech models) for the next stage of large language models. (Of course, HuBERT itself is trained on discrete cluster units, and quite a few speech language models use such discrete units directly. Continuous and discrete have always coexisted.) The rapid progress of language technology in recent years comes precisely from our ever deeper understanding of how the continuous and the discrete nature of things work together."
       ],
       [
         "现在我去理解，从平时人工智能的建模，到对自己人生的建模，我会觉得对于人生这个变量来说，它既具有带着一瞬这个时间概念的连续性，同时又有在单位连续中那个决定我们命运的离散性，且一个变量中的两性并无从属关系。所以从非科学而哲学的角度来说，影响我们一生的变量，绝非毫无方向和力量的布朗运动，也不是在克尔凯郭尔“非此即彼”的几个阶段之间简单地切换。",
@@ -1383,10 +1133,7 @@ window.NOTES = [
       "cover": "color_of_law.jpg",
       "title": "The Color of Law",
       "author": "Richard Rothstein",
-      "lines": [
-        "Nonfiction · Liveright, 2017",
-        "A forgotten history of how government policy at every level segregated American neighborhoods."
-      ]
+      "lines": ["Nonfiction · Liveright, 2017", "A forgotten history of how government policy at every level segregated American neighborhoods."]
     },
     "blocks": [
       [
@@ -1396,36 +1143,26 @@ window.NOTES = [
       ],
       [
         "p",
-        "因为今年平时工作的压力日益加大，我把原来每周一本书的读书计划改成了每月争取3本书（估计只能读两本），但不管怎么样，一年下来我还是能读上二三十本书的，并且我会每个月选其中的一本书来写读书笔记。那么，这个5月我终于有机会看完并且推荐的就是这本几年前就名声大噪的纪实报告文学《法律的颜色》。",
-        "Because the pressure of my day job keeps growing this year, I have changed my old plan of one book a week to three books a month (realistically I will finish two). Even so, I can still read twenty or thirty books a year, and each month I pick one of them to write a reading note on. This May, the book I finally had the chance to finish, and the one I recommend, is the nonfiction report *The Color of Law*, which made a splash a few years ago."
+        "这个5月我读完并想推荐的，是几年前就名声大噪的纪实报告文学《法律的颜色》。",
+        "This May, the book I finished and want to recommend is *The Color of Law*, the nonfiction report that made a splash a few years ago."
       ],
+      ["h", "为什么想到看这本书", "Why I picked up this book", "01"],
       [
-        "h",
-        "为什么想到看这本书",
-        "Why I picked up this book",
-        "01"
+        "p",
+        "从2012年我刚来美国直到现在，每个去过的城市，西雅图、芝加哥、巴尔的摩和底特律，事实上的居住隔离到处都是，甚至在过去经济复苏的黄金十年里愈演愈烈。2012年我刚来西雅图时的一些非裔社区在短短几年时间里已经全被新建的房地产取代，而生活成本的攀升使得非裔社区似乎一夜之间消失在了我们的生活中。(Beason, 2016)",
+        "Ever since I came to the US in 2012, in every city I have been to, Seattle, Chicago, Baltimore and Detroit, de facto residential segregation is everywhere, and it grew worse even during the past golden decade of economic recovery. When I first came to Seattle in 2012, some Black neighborhoods were, within just a few years, entirely replaced by new development, and as the cost of living climbed, Black neighborhoods seemed to vanish from our lives overnight. (Beason, 2016)"
       ],
       [
         "p",
-        "今年年初在准备加州房产销售牌照申请的时候，在community college里上了Real Estate Principles/Practices这两门课。在课堂中我们被强调过，作为房产经纪和销售在买卖房屋的过程中，需要遵循的各种各样的种族平等伦理。不同实操情形下的案例能出100道迷惑人的选择题。",
-        "Earlier this year, while preparing my application for a California real estate salesperson license, I took two courses at a community college, Real Estate Principles and Real Estate Practices. In class we were told again and again about the ethics of racial equality that agents must follow when buying and selling homes. The case studies from different real-world situations could fill a hundred confusing multiple-choice questions."
-      ],
-      [
-        "p",
-        "另一方面，从2012年我刚来美国直到现在，每个去过的城市，西雅图、芝加哥、巴尔的摩和底特律，事实上的居住隔离到处都是，甚至在过去经济复苏的黄金十年里愈演愈烈。2012年我刚来西雅图时的一些非裔社区在短短几年时间里已经全被新建的房地产取代，而生活成本的攀升使得非裔社区似乎一夜之间消失在了我们的生活中。(Beason, 2016)",
-        "On the other hand, ever since I came to the US in 2012, in every city I have been to, Seattle, Chicago, Baltimore and Detroit, de facto residential segregation is everywhere, and it grew worse even during the past golden decade of economic recovery. When I first came to Seattle in 2012, some Black neighborhoods were, within just a few years, entirely replaced by new development, and as the cost of living climbed, Black neighborhoods seemed to vanish from our lives overnight. (Beason, 2016)"
+        "此外，今年年初在准备加州房产销售牌照申请的时候，在community college里上了Real Estate Principles/Practices这两门课。在课堂中我们被强调过，作为房产经纪和销售在买卖房屋的过程中，需要遵循的各种各样的种族平等伦理。不同实操情形下的案例能出100道迷惑人的选择题。",
+        "Besides, earlier this year, while preparing my application for a California real estate salesperson license, I took two courses at a community college, Real Estate Principles and Real Estate Practices. In class we were told again and again about the ethics of racial equality that agents must follow when buying and selling homes. The case studies from different real-world situations could fill a hundred confusing multiple-choice questions."
       ],
       [
         "p",
         "而这本书吸引我的也正是，它从传统20世纪60年代对于宏观非裔民权运动的叙事，跨越到了美国内战前后至今，并以对美国政府住房政策的审视为切入点，深入探究了民间、政府、企业和法院各个行为个体在美国居住种族隔离中所扮演的角色以及其作为或不作为而产生的后果。",
         "What drew me to this book is that it moves beyond the traditional 1960s narrative of the broad Black civil rights movement and spans the time from around the Civil War to the present. Using a review of American government housing policy as its entry point, it digs into the roles that private citizens, government, business and the courts played in American residential segregation, and into the consequences of what they did and failed to do."
       ],
-      [
-        "h",
-        "“非裔的原罪”",
-        "“The Original Sin of Black America”",
-        "02"
-      ],
+      ["h", "“非裔的原罪”", "“The Original Sin of Black America”", "02"],
       [
         "p",
         "我们往往会想起1968年小马丁路德金的遇刺以及后来包含了《公平住房法案》的扩大版1968年民权法案的通过来作为讨论有色人种民权的分水岭。似乎《公平住房法案》至少在法律上保障了有色人种自由房屋买卖的权利，非裔的住房权利就有了法律的保障。这样的想法现在看来就和1865年废除奴隶制后以为非裔民权就来到一样不负责任地过于乐观了。而这正是作者Richard Rothstein想要呈现给读者的一个更大的视角，即事实上光检视法律本身而忽视历史、政府以及社会的影响，我们是无法正确认识非裔居住种族隔离的实际状况的。",
@@ -1436,11 +1173,7 @@ window.NOTES = [
         "在本书的前几章，作者详细地列举了从20世纪20年代到70年代大量的事实来佐证其核心论点，即种族隔离是由政府、法院到民间有意识地长期践行于社会生活方方面面的一项非成文的公共行为，而这一行为大大阻碍了非裔社群实现真正地财富增值融入中产阶级的权利。而随着社会贫富分化的日益加大，大部分的非裔社群已经彻底被剥夺了实现阶层跨越的可能性，社群内由经济主导的自发居住种族隔离而由此形成。这可不就是“非裔的原罪”吗？",
         "In the first chapters, the author lists a great many facts from the 1920s to the 1970s in support of his central argument: that segregation was an unwritten public practice, carried out consciously and over the long term, in every part of social life by government, courts and private citizens alike, and that it greatly obstructed the Black community’s right to build real wealth and enter the middle class. As the gap between rich and poor has widened, most of the Black community has been stripped entirely of any chance of crossing class lines, and an economically driven, spontaneous residential segregation has formed within the community itself. Isn’t that exactly the “original sin” of Black America?"
       ],
-      [
-        "sub",
-        "",
-        "If San Francisco, Then Everywhere?"
-      ],
+      ["sub", "", "If San Francisco, Then Everywhere?"],
       [
         "p",
         "要知道加州一直以来是美国自由和民主主义的急先锋，所以如果旧金山都成了这样了，但美国其他的地方呢？",
@@ -1461,12 +1194,7 @@ window.NOTES = [
         "民间、银行以及政府的多层联动最终在仅仅6年的时间里，把曾经完全是白人社区的East Palo Alto变为了82%非裔居民的名副其实的非裔社会。直到60年后的2010年，East Palo Alto的有色人种依然占据了高达93.8%。",
         "Through this layered coordination among private citizens, banks and government, in only six years East Palo Alto, once an entirely white neighborhood, became a Black community in every sense, with 82% Black residents. Sixty years later, in 2010, people of color still made up as much as 93.8% of East Palo Alto."
       ],
-      [
-        "h",
-        "我们不能脱离经济来谈空洞的“公平”",
-        "We can’t talk about empty “fairness” without talking about economics",
-        "03"
-      ],
+      ["h", "我们不能脱离经济来谈空洞的“公平”", "We can’t talk about empty “fairness” without talking about economics", "03"],
       [
         "p",
         "你可能会惊异于上文中所提到的，在20世纪50年代，同样在工厂里工作的非裔工人阶级和白人工人阶级薪资并无差别。然而短短70年的时间，如果算上1968年《公平住房法案》的颁布，也就是短短20-30年的时间，怎么就使得黑人与白人的阶层差异扩大到如此的地步呢？",
@@ -1492,12 +1220,7 @@ window.NOTES = [
         "如果我们以1967/68年白人和非裔中产阶级的收入中位数为起点，从皮尤研究中心的数据可以看出，初期非裔中产阶级的低起点所带来的长期世代传递的收入差距的影响是如此深远的，以至于到2016年非裔人均年收入中位数还不及1970年白人换算通货膨胀后的年收入中位数。",
         "If we take the median income of white and Black middle-class families in 1967/68 as the starting point, Pew Research Center data show how deeply the long-term, generation-to-generation effect of the Black middle class’s low starting point reaches: by 2016, the median annual income of Black households was still below the median annual income of white households in 1970, once adjusted for inflation."
       ],
-      [
-        "h",
-        "我们亚裔从来不会置身事外",
-        "We Asian Americans have never stood outside",
-        "04"
-      ],
+      ["h", "我们亚裔从来不会置身事外", "We Asian Americans have never stood outside", "04"],
       [
         "p",
         "作为亚裔，我们从来也永远不会置身于民权斗争之外。我想要特别提出的是，上文中提到的这些歧视性政策并不只针对非裔，华裔、日裔以及拉美裔等其他有色人种同样身在其中；直到80年代更多的亚裔新移民到来，美国才开始对亚裔进行种族细分。",
@@ -1547,12 +1270,7 @@ window.NOTES = [
         "我至今依旧清楚地记得我小学一年级班主任的名字。二十四年过去了，我从未原谅过她。",
         "I can still clearly remember the name of my first-grade teacher. Twenty-four years have passed, and I have never forgiven her."
       ],
-      [
-        "h",
-        "发生在二十四年前的小型“专制”",
-        "A Small Tyranny, Twenty-Four Years Ago",
-        "01"
-      ],
+      ["h", "发生在二十四年前的小型“专制”", "A Small Tyranny, Twenty-Four Years Ago", "01"],
       [
         "p",
         "我成长在苏北一座小城。1996年的华东小镇，教育资源匮乏。为了让我能进全市最好的小学，家里费尽心思，找关系交了六千块在当时堪称天价的“择校费”。",
@@ -1573,11 +1291,7 @@ window.NOTES = [
         "开学第一天，我带了一个漂亮的小水壶去学校。妈妈在里面灌满热水，嘱咐我要多喝水。课堂上我口渴了，拿起水壶刚准备喝，班主任突然厉声呵斥，不仅禁止我喝水，还当场要求我“带家长”。",
         "On the first day of school, I brought a pretty little water bottle. My mother had filled it with hot water and told me to drink plenty. In class I got thirsty, and as I picked up the bottle to drink, the teacher suddenly snapped at me. Not only was I forbidden to drink, I was told on the spot to “bring a parent.”"
       ],
-      [
-        "p",
-        "我不理解为什么不能喝水，便开口问了句：“为什么？”",
-        "I didn’t understand why I couldn’t drink, so I asked: “Why?”"
-      ],
+      ["p", "我不理解为什么不能喝水，便开口问了句：“为什么？”", "I didn’t understand why I couldn’t drink, so I asked: “Why?”"],
       [
         "p",
         "也许在此前的教学生涯里，从未有学生敢质疑她的权威。她瞬间情绪失控，尖叫着强调上课就是不准喝水。自始至终，她没有给出任何合理解释。如果她当时耐心地告诉我，这是为了锻炼集体的纪律性，我或许还会真诚地检讨自己。但她没有。当时的我说不清，现在才明白：一条不肯说明理由的规则，要的不是遵守，而是服从。",
@@ -1598,12 +1312,7 @@ window.NOTES = [
         "幸运的是，我父母看清了这个老师的偏执，并没有在家里对我进行二次惩罚。直到很久以后，我才明白，那是我第一次近距离看到某种教育生态的样子。",
         "Fortunately, my parents saw through the teacher’s obsessiveness and did not punish me a second time at home. It was only much later that I understood this was my first close look at a certain kind of educational ecosystem."
       ],
-      [
-        "h",
-        "筑起心防",
-        "Building the Wall",
-        "02"
-      ],
+      ["h", "筑起心防", "Building the Wall", "02"],
       [
         "p",
         "那时大家都说，老师是燃烧自己、照亮别人的蜡烛。我只是隐约觉得不对：蜡烛不会因为有人问了一句“为什么”就尖叫。多年以后我才想明白，老师只是一份职业，从事它的人可能只是个情绪不稳定、在弱者面前格外爱掌控的普通人。她一个人要管着几十个孩子，没有人教过她怎么面对一个问“为什么”的孩子，而安静听话的班级，在当时就是好老师的标志。这解释得了她，却开脱不了她：理解一个人为什么这样，不等于原谅她。",
@@ -1629,12 +1338,7 @@ window.NOTES = [
         "但这套办法并非没有代价。七岁起就学会把情绪收起来、冷眼看着荒谬的权威，心里也就多了一堵墙。它让我很早就不容易被唬住，却也让我花了很长时间，才学会重新信任一个机构，学会放下那份时刻戒备的犬儒。",
         "But this had a price. When you learn at seven to put your feelings away and watch absurd authority with a cold eye, you build a wall inside. It made me hard to intimidate early on, but it also took me a long time to trust an institution again, and to put down that constant, wary cynicism."
       ],
-      [
-        "h",
-        "学着自己做主",
-        "Learning to Choose",
-        "03"
-      ],
+      ["h", "学着自己做主", "Learning to Choose", "03"],
       [
         "p",
         "传统教育最深的影响，是在你心里留下一个声音。离开学校多年后，它依然让你在每个需要做抉择的路口战战兢兢，生怕自己“不够合群”、“没有听话”。它还有一套说辞：把管理者的僵化说成“为了你好”，把你独立探索换来的排挤归咎于你“不守规矩”，让你无端内疚。",
@@ -1663,12 +1367,13 @@ window.NOTES = [
     ]
   },
   {
-    date: "2026-11-03", title: "Polis and Civitas", category: "Reflection", place: "于加州圣拉蒙\nSan Ramon, CA", languages: ["Chinese", "English"],
-    prose: [
-      [
-        "古典学课上讲了Polis与Civitas相反的社会观。",
-        "In Classics class we covered two opposing visions of society: the polis and the civitas."
-      ],
+    "date": "2026-11-03",
+    "title": "Polis and Civitas",
+    "category": "Reflection",
+    "place": "于加州圣拉蒙\nSan Ramon, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["古典学课上讲了Polis与Civitas相反的社会观。", "In Classics class we covered two opposing visions of society: the polis and the civitas."],
       [
         "希腊人的πόλις固守同质，把所有区别于πολίτης听不懂bar-bar-bar语言的异己统称为βάρβαρος，而罗马人的civitas 则是由流动的civis通过契约和法律组成的，试图消解偏见。太阳底下无新事的现在，只不过重复着希腊罗马的底层逻辑争辩。",
         "The Greek πόλις clung to sameness. Anyone unlike the πολίτης, anyone whose speech sounded like “bar-bar-bar,” was lumped together as βάρβαρος. The Roman civitas, by contrast, was built from mobile civis bound by contract and law, an attempt to dissolve prejudice. Nothing is new under the sun: today we are only replaying the same underlying argument between Greece and Rome."
@@ -1692,10 +1397,14 @@ window.NOTES = [
     ]
   },
   {
-    date: "2026-09-27", title: "Delivery", category: "Poem", place: "于加州弗里蒙特\nFremont, CA", languages: ["Chinese", "English"],
-    poem: {
-      heading: "Delivery",
-      pairs: [
+    "date": "2026-09-27",
+    "title": "Delivery",
+    "category": "Poem",
+    "place": "于加州弗里蒙特\nFremont, CA",
+    "languages": ["Chinese", "English"],
+    "poem": {
+      "heading": "Delivery",
+      "pairs": [
         ["半英里", "Half a mile"],
         ["对我，不过是电台里一首歌的时间", "To me, that’s a song on the radio."],
         ["对她，七十多岁，住在门锁坏掉的汽车旅馆里", "To her, seventy-something, in a motel room with a bad lock,"],
@@ -1703,10 +1412,10 @@ window.NOTES = [
         ["所以我替她走过去", "So I cross it for her"],
         ["麦片，酸奶，一袋洋葱", "Oatmeal, yogurt, and a bag of onions."],
         ["一整张人生的地图，由便宜和耐吃写成", "The whole map of a life, made of what is cheap and what will stretch."],
-        ["楼上，一位单亲妈妈拿车费和孩子的饥饿算账", "Upstairs, a single mom counts bus fare against her child’s hunger."],
-        ["她不管这叫贫穷，她管这叫星期二", "She doesn’t call it poverty. She calls it Tuesday."],
         ["我曾以为送菜上门，是给什么都不缺的人", "I thought delivery was for the people who had everything."],
-        ["原来是给那些，什么都扛着的人", "It turns out it’s for the people, who are carrying everything."]
+        ["原来是给那些，什么都扛着的人", "It turns out it’s for the people who are carrying everything."],
+        ["楼上，一位单亲妈妈拿车费和孩子的饥饿算账", "Upstairs, a single mom counts bus fare against her child’s hunger."],
+        ["她不管这叫贫穷，她管这叫星期二", "She doesn’t call it poverty. She calls it Tuesday."]
       ]
     }
   },
@@ -1716,55 +1425,403 @@ window.NOTES = [
     "slug": "brugge",
     "category": "Poem",
     "place": "于比利时布鲁日\nBruges, Belgium",
-    "languages": [
-      "Chinese",
-      "English"
-    ],
+    "languages": ["Chinese", "English"],
     "photo": {
       "file": "brugge.jpg",
       "alt": "A canal in Bruges with a stone bridge, a tour boat and a brick spire"
     },
     "pairStanzas": [
       [
-        [
-          "布鲁日最早的名字 据说只是停船的地方",
-          "The oldest name of Bruges, they say, meant only a place to moor a boat"
-        ],
-        [
-          "一个人到了这里 不用跟谁解释为什么停下",
-          "Come here alone, and you need not explain to anyone why you stopped"
-        ]
+        ["布鲁日最早的名字 据说只是停船的地方", "The oldest name of Bruges, they say, meant only a place to moor a boat"],
+        ["一个人到了这里 不用跟谁解释为什么停下", "Come here alone, and you need not explain to anyone why you stopped"]
       ],
       [
-        [
-          "后来桥越来越多 桥不像街道",
-          "Later there were more and more bridges, and a bridge is not like a street"
-        ],
-        [
-          "没有门牌 也留不住谁",
-          "no house numbers, nothing to hold anyone"
-        ],
-        [
-          "你可以住在左岸 住在右岸",
-          "You can live on the left bank, or the right"
-        ],
-        [
-          "却没有人真正住过 桥中间那一截悬空",
-          "but no one has ever really lived in the middle of a bridge, that stretch hanging in the air"
-        ]
+        ["后来桥越来越多 桥不像街道", "Later there were more and more bridges, and a bridge is not like a street"],
+        ["没有门牌 也留不住谁", "no house numbers, nothing to hold anyone"],
+        ["你可以住在左岸 住在右岸", "You can live on the left bank, or the right"],
+        ["却没有人真正住过 桥中间那一截悬空", "but no one has ever really lived in the middle of a bridge, that stretch hanging in the air"]
       ],
       [
         ["1837年 雨果在桥上站了很久", "In 1837 Hugo stood on the bridge for a long time"],
-        ["朱丽叶叫过他 他没有回头", "Juliette called to him; he did not turn around"],
+        ["朱丽叶·德鲁埃叫过他 他没有回头", "Juliette Drouet called to him; he did not turn around"],
         ["后来我觉得 那一夜他站着的 不是桥 也不是岸", "Later I came to think that what he stood on that night was neither bridge nor bank"],
         ["水一直把灯影打散 又慢慢拼回去", "The water kept scattering the lamplight, then slowly piecing it back together"],
         ["像一页写坏了的稿纸 改了一遍 又一遍", "like a spoiled sheet of manuscript, revised once, and again, and again"]
       ],
       [
-        [
-          "而人站在桥上 总有那么一会儿 谁也够不着",
-          "And a person standing on a bridge is, for a while, beyond everyone’s reach"
-        ]
+        ["而人站在桥上 总有那么一会儿 谁也够不着", "And a person standing on a bridge is, for a while, beyond everyone’s reach"]
+      ]
+    ]
+  },
+  {
+    "date": "2020-04-20",
+    "title": "When Freedom Becomes a Privilege",
+    "slug": "freedom-as-privilege",
+    "category": "Book",
+    "book": {
+      "cover": "chungking_mansions.jpg",
+      "title": "世界中心的貧民窟：香港重慶大廈 (Ghetto at the Center of the World: Chungking Mansions)",
+      "author": "Gordon Mathews",
+      "lines": [
+        "Nonfiction · Traditional Chinese edition, 3rd ed.",
+        "An ethnography of Chungking Mansions in Hong Kong and the traders, migrants and asylum seekers who make a living there."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "photo": {
+      "file": "chungking_mansions_reading.jpg",
+      "alt": "The traditional Chinese edition of Chungking Mansions resting on an open illustrated book"
+    },
+    "prose": [
+      [
+        "我们往往将自己的自由归功于独立的思想，却忘记了，能够自由选择如何生活，本身就可能是一种特权。",
+        "We tend to credit our freedom to independent thinking, forgetting that being free to choose how to live may itself be a privilege."
+      ],
+      [
+        "读Gordon Mathews的《重庆大厦》，最令我思考的并不是全球化如何将世界各地的人汇聚在香港的一栋建筑里，而是那些看似拥有无限流动可能的人，实际上拥有多少选择自己人生的自由。",
+        "Reading Gordon Mathews’s *Chungking Mansions*, what made me think most was not how globalization draws people from all over the world into a single building in Hong Kong, but how much freedom to choose their own lives people who seem to have limitless mobility actually have."
+      ],
+      [
+        "Mathews将重庆大厦中的跨境贸易称为“低端全球化”。来自南亚、非洲等地的小商人、移民与寻求庇护者，在有限的资本、复杂的法律制度与不稳定的身份之间寻找生存机会。这里的全球化并非跨国企业的扩张，而是普通人在全球经济的缝隙中谋生。然而，流动并不必然意味着自由。对某些人而言，跨越国界是一种选择；对另一些人而言，却是维持生计的必要条件。一个人可以离开故乡，并不意味着他同样拥有留下的自由。",
+        "Mathews calls the cross-border trade in Chungking Mansions “low-end globalization.” Small traders, migrants and asylum seekers from South Asia, Africa and elsewhere look for a way to survive amid scarce capital, a tangle of legal rules and unstable status. The globalization here is not the expansion of multinational corporations but ordinary people making a living in the cracks of the global economy. Yet mobility does not necessarily mean freedom. For some, crossing a border is a choice; for others, it is a necessary condition of getting by. That a person can leave home does not mean they are equally free to stay."
+      ],
+      [
+        "当一个人无法承担拒绝的代价时，我们还能在多大程度上称他的选择为自由？书中那些游走于法律灰色地带的交易，以及身份与经历难以核实的寻求庇护者，让这个问题更加复杂。我们习惯于用诚实、守法与个人责任判断他人，却容易忽略，不同的人并不总是拥有相同的条件去实践这些原则。",
+        "When a person cannot afford the cost of refusing, to what extent can we still call their choice free? The deals in the book that run through legal gray areas, and the asylum seekers whose identities and histories are hard to verify, make the question more complicated. We are used to judging others by honesty, lawfulness and personal responsibility, and we easily overlook that different people do not always have the same conditions in which to practice these principles."
+      ],
+      [
+        "但理解处境，并不意味着取消责任。贫困不能自动使欺骗正当化，生存压力也不能成为伤害他人的充分理由。然而，如果我们只强调个人责任，却忽略一个人所面对的现实限制，那么所谓的道德判断，也可能只是将自己的生活条件当作普遍标准。",
+        "But understanding someone’s situation does not mean canceling their responsibility. Poverty cannot automatically justify deception, and the pressure to survive is not sufficient reason to harm others. Yet if we stress only personal responsibility and ignore the real constraints a person faces, then so-called moral judgment may be nothing more than taking the conditions of our own lives as a universal standard."
+      ],
+      [
+        "我们不应该因为一个人的处境而取消他的道德责任，但也不应该因为自己拥有选择的自由，就假定别人拥有同样的自由。这让我重新审视自己曾经对于自由的理解。我曾认为，真正的自由不是服从社会，也不是刻意反抗社会，而是拥有独立的价值标准，按照自己认可的原则生活。但这种理解似乎忽略了一个前提：一个人必须拥有一定的现实条件，才能承担不服从的后果。",
+        "We should not cancel a person’s moral responsibility because of their circumstances, but neither should we assume, because we have the freedom to choose, that others have the same freedom. This made me re-examine my own understanding of freedom. I used to think that true freedom was neither obeying society nor deliberately defying it, but having independent values and living by principles one endorses. Yet this understanding seems to overlook a precondition: one must have certain real conditions before one can bear the consequences of not complying."
+      ],
+      [
+        "我们赞美那些敢于辞职、远行、追求理想的人，却很少追问他们是否拥有承担失败的经济条件。我们鼓励人们忠于自我，却容易忽略，对于某些人而言，生存本身已经耗尽了选择的余地。我们以为自己比别人更加独立，或许只是因为我们拥有更多不必妥协的条件。",
+        "We applaud those who dare to quit their jobs, travel far and chase their ideals, yet we seldom ask whether they have the financial means to bear failure. We encourage people to be true to themselves, and easily overlook that, for some, survival itself has already used up all room for choice. We think we are more independent than others, perhaps only because we have more conditions under which we do not have to compromise."
+      ],
+      [
+        "当然，重庆大厦中的人们并非只是被动承受命运。他们在制度的限制中寻找机会，在不确定性中建立跨国贸易网络，展现了令人惊讶的能动性。但这种能动性越是突出，我们越不应将他们面对的困难浪漫化为奋斗精神的胜利。",
+        "Of course, the people in Chungking Mansions are not merely passive victims of fate. Within the limits of institutions they look for openings, and amid uncertainty they build transnational trading networks, showing a surprising agency. But the more striking this agency is, the less we should romanticize the hardships they face into a triumph of the fighting spirit."
+      ],
+      [
+        "或许，真正的自由始终包含两个维度：既有独立判断如何生活的能力，也有将这种判断付诸实践的现实可能。缺少前者，我们可能成为社会期待的附庸；缺少后者，即使知道自己想要什么，也未必能够选择。",
+        "Perhaps true freedom always has two dimensions: the ability to judge independently how to live, and the real possibility of putting that judgment into practice. Without the former, we may become appendages of social expectation; without the latter, even knowing what we want, we may not be able to choose it."
+      ],
+      [
+        "读完《重庆大厦》，我开始觉得，我们不应仅仅追问一个人为什么没有选择另一种生活，更应该追问，他是否真正拥有过那种选择。",
+        "After finishing *Chungking Mansions*, I began to feel that we should not only ask why a person did not choose another life, but whether they ever truly had that choice."
+      ],
+      [
+        "因为自由最深刻的不平等，或许不在于有些人能够作出更好的选择，而在于有些人甚至拥有选择错误、承担失败，然后重新开始的余地。而一个真正自由的社会，不应只赞美那些勇于选择的人，更应该让尽可能多的人拥有选择的可能。",
+        "For the deepest inequality of freedom may lie not in some people making better choices, but in some people having room even to choose wrongly, bear failure, and begin again. A truly free society should not merely praise those who are brave enough to choose; it should give as many people as possible the possibility of choosing."
+      ]
+    ]
+  },
+  {
+    "date": "2020-05-04",
+    "title": "The Ignorance of the Successful",
+    "slug": "ignorance-of-the-successful",
+    "category": "Book",
+    "book": {
+      "cover": "poor_economics.jpg",
+      "title": "Poor Economics",
+      "author": "Abhijit Banerjee and Esther Duflo",
+      "lines": [
+        "Nonfiction · PublicAffairs, 2011",
+        "Two economists on how the poor actually live and decide, drawn from field experiments around the world."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "photo": {
+      "file": "poor_economics_reading.jpg",
+      "alt": "Poor Economics lying on a wooden table, on top of a Japanese sushi magazine"
+    },
+    "prose": [
+      [
+        "如果一个人的选择受到环境塑造，那么我们所谓的个人成就，究竟有多少真正属于自己？",
+        "If a person’s choices are shaped by their environment, how much of what we call personal achievement truly belongs to us?"
+      ],
+      [
+        "读《Poor Economics》，最令我思考的并不是贫穷的人为什么难以摆脱贫困，而是那些从未真正经历过贫困的人，为什么如此轻易地相信成功完全来自自己的努力。",
+        "Reading *Poor Economics*, what made me think most was not why poor people find it so hard to escape poverty, but why those who have never truly experienced poverty so easily believe that success comes entirely from their own effort."
+      ],
+      [
+        "我们习惯于赞美勤奋、自律、远见与理性，并将它们视为成功者的个人品质。然而，我们很少追问，这些品质得以发挥作用的前提是什么。良好的教育、稳定的家庭、充足的资本、可以依赖的社会关系，甚至失败后重新开始的机会，往往早已为某些人的人生铺好了道路。",
+        "We are used to praising diligence, self-discipline, foresight and rationality, and to treating them as the personal qualities of the successful. Yet we seldom ask what has to be in place for these qualities to work. A good education, a stable family, ample capital, social connections one can rely on, even the chance to start over after failing: for some people, these have often paved the road of life long in advance."
+      ],
+      [
+        "《Poor Economics》通过对贫困者日常决策的研究，让我们看到，那些看似缺乏理性的选择，往往受到信息、资源与风险的深刻限制。贫困并不意味着缺乏判断力，而是意味着即使作出正确的判断，也未必拥有实现它的条件。",
+        "By studying the everyday decisions of the poor, *Poor Economics* lets us see that choices that seem to lack rationality are often deeply constrained by information, resources and risk. Poverty does not mean a lack of judgment; it means that even when one judges correctly, one may not have the conditions to act on that judgment."
+      ],
+      [
+        "但真正令我不安的，是这种不平等如何被成功者逐渐遗忘。当一个人从未需要为某些资源付出代价，他便容易将这些资源视为世界本来的样子；当一个人从未真正承担失败的后果，他便容易将别人的失败理解为能力的不足。",
+        "But what truly unsettles me is how the successful gradually forget this inequality. When a person has never had to pay a price for certain resources, they easily take those resources to be how the world simply is; when a person has never truly borne the consequences of failure, they easily read other people’s failure as a shortfall of ability."
+      ],
+      [
+        "于是，幸运被解释为努力，优势被理解为才能，而成功则成为证明自身优越的依据。更令人讽刺的是，拥有最多选择的人，往往最容易相信每个人都拥有同样的选择。",
+        "And so luck is explained as effort, advantage is understood as talent, and success becomes the proof of one’s own superiority. More ironic still, those with the most choices are often the readiest to believe that everyone has the same choices."
+      ],
+      [
+        "当然，承认环境对成功的影响，并不意味着否定个人努力。一个人的勤奋与能力可以是真实的，他所享有的优势也同样真实。问题不在于成功是否值得肯定，而在于我们是否有资格将自己的成功经验奉为普遍规律。",
+        "Of course, acknowledging the influence of environment on success does not mean denying individual effort. A person’s diligence and ability can be real, and so can the advantages they enjoy. The question is not whether success deserves recognition, but whether we are entitled to elevate our own experience of success into a universal law."
+      ],
+      [
+        "我逐渐意识到，特权最隐蔽的形式，或许不是拥有别人没有的资源，而是拥有这些资源，却从未意识到它们的存在。当我们把成功完全归功于自己，便很容易把失败完全归咎于他人。个人奋斗的叙事由此不再只是自我肯定，也可能成为对社会不平等的合理化。",
+        "I have gradually come to realize that the most hidden form of privilege may not be having resources that others lack, but having them without ever being aware that they exist. When we credit our success entirely to ourselves, it becomes easy to blame others entirely for their failures. The narrative of individual striving then ceases to be merely self-affirmation and may become a rationalization of social inequality."
+      ],
+      [
+        "读完这本书，我想，真正值得警惕的不是成功者的骄傲，而是成功者的无知：他们或许真诚地相信自己的一切都来自努力，却从未意识到，连能够相信努力必有回报，本身都可能是一种幸运。",
+        "Having finished the book, I think what deserves real vigilance is not the pride of the successful but their ignorance: they may sincerely believe that everything they have comes from effort, without ever realizing that even being able to believe that effort will surely be rewarded may itself be a stroke of luck."
+      ],
+      [
+        "一个人真正的清醒，或许不是认识到自己有多么努力，而是终于能够分辨，自己究竟创造了什么，又继承了什么。",
+        "A person’s true clarity may lie not in recognizing how hard they have worked, but in finally being able to tell what they created and what they inherited."
+      ]
+    ]
+  },
+  {
+    "date": "2024-02-18",
+    "title": "When Knowledge No Longer Means Understanding",
+    "slug": "knowledge-and-understanding",
+    "category": "Book",
+    "book": {
+      "cover": "when_we_cease.jpg",
+      "title": "When We Cease to Understand the World",
+      "author": "Benjamín Labatut",
+      "lines": [
+        "Novel · Pushkin Press",
+        "A fictionalized account of scientists and mathematicians, from Fritz Haber to Werner Heisenberg, at the edge of what can be understood."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": ["Chinese", "English"],
+    "photo": {
+      "file": "when_we_cease_reading.jpg",
+      "alt": "When We Cease to Understand the World standing on a wooden table beside a succulent, a cup of coffee, an apple and a baked cheese roll"
+    },
+    "prose": [
+      [
+        "我们习惯于相信，知识的增长意味着人类对世界的理解不断加深。科学发现越多，未知便越少；技术越先进，人类便越接近真理。",
+        "We are used to believing that the growth of knowledge means a deepening human understanding of the world. The more science discovers, the less remains unknown; the more advanced technology becomes, the closer humanity comes to the truth."
+      ],
+      [
+        "但读完《When We Cease to Understand the World》，我开始怀疑：当我们越来越有能力改变世界时，是否反而越来越难以理解自己所创造的现实？",
+        "But after finishing *When We Cease to Understand the World*, I began to wonder: as we become ever more capable of changing the world, do we find it ever harder to understand the reality we ourselves have created?"
+      ],
+      [
+        "人类已经能够探索宇宙的起源、预测遥远的未来，甚至通过数学公式揭示肉眼无法观察的自然规律。量子力学支撑着现代科技的诸多成就，却也不断挑战我们关于现实、因果与确定性的直觉。我们可以精确地运用某种理论，却未必能够以熟悉的方式理解它所描述的世界。",
+        "Humans can now explore the origin of the universe, predict the distant future, and even use mathematical formulas to reveal laws of nature that the naked eye cannot observe. Quantum mechanics underpins many achievements of modern technology, yet it keeps challenging our intuitions about reality, causality and certainty. We can apply a theory with precision without necessarily being able to understand, in any familiar way, the world it describes."
+      ],
+      [
+        "我们掌握了操纵世界的工具，却未必拥有与这种力量相称的理解。",
+        "We have mastered the tools to manipulate the world, but not necessarily an understanding that matches that power."
+      ],
+      [
+        "而真正令我不安的，并不是科学存在无法解释的现象，而是这种理解与能力之间不断扩大的距离。数学不再只是描述现实的语言，它所支撑的技术与制度也在重塑现实本身。我们创造出越来越复杂的系统，却逐渐难以预见它们将如何改变社会，甚至改变我们对于人之所以为人的理解。",
+        "And what truly unsettles me is not that science contains phenomena it cannot explain, but the ever-widening distance between understanding and capability. Mathematics is no longer only a language for describing reality; the technologies and institutions it supports are reshaping reality itself. We build ever more complex systems, yet find it increasingly hard to foresee how they will change society, or even our understanding of what makes a human being human."
+      ],
+      [
+        "这让我想到书中那些不断逼近知识边界的科学家。他们越是深入探索宇宙的秩序，越可能遭遇某种无法言说的虚无。曾经给予人类确定感的理性，最终也可能迫使我们直面自身认知的局限。",
+        "This brings to mind the scientists in the book who keep pressing against the edge of knowledge. The deeper they probe the order of the universe, the more likely they are to meet a kind of inexpressible void. The rationality that once gave humanity a sense of certainty may in the end force us to face the limits of our own cognition."
+      ],
+      [
+        "或许，最深刻的恐惧并非来自未知，而是来自这样一种矛盾：我们明明知道得越来越多，却越来越无法确定这些知识将把我们带向何处。",
+        "Perhaps the deepest fear comes not from the unknown but from this contradiction: we clearly know more and more, yet we are less and less able to be sure where this knowledge will take us."
+      ],
+      [
+        "当一个人无法想象或面对自己的未来时，焦虑便不再只是对某个具体危险的恐惧，而可能成为对自身存在的怀疑。对于整个人类而言，是否也存在类似的困境？当科学与技术的发展超越了我们理解和预见其后果的能力，我们是否正在集体失去面对未来的确定感？",
+        "When a person cannot imagine or face their own future, anxiety is no longer fear of some specific danger and may become doubt about one’s own existence. Does humanity as a whole face a similar predicament? When the development of science and technology outruns our ability to understand and foresee its consequences, are we collectively losing our certainty in facing the future?"
+      ],
+      [
+        "但我并不认为这意味着理性的失败。科学的伟大，恰恰在于它不断揭示人类认知的边界，并迫使我们修正曾经深信不疑的真理。真正危险的不是承认无知，而是将能够计算误认为能够理解，将能够创造误认为能够控制。",
+        "But I do not think this means the failure of reason. The greatness of science lies precisely in its constant revealing of the boundaries of human cognition, and in forcing us to revise truths we once held unquestioningly. What is truly dangerous is not admitting ignorance, but mistaking the ability to calculate for the ability to understand, and the ability to create for the ability to control."
+      ],
+      [
+        "读完这本书，我开始觉得，知识的终极价值或许不在于让人类征服世界，而在于使我们更加清醒地认识自己与世界的关系。",
+        "Having finished the book, I have begun to feel that the ultimate value of knowledge may lie not in letting humanity conquer the world, but in helping us see more clearly how we stand in relation to it."
+      ],
+      [
+        "当我们终于拥有改变一切的力量，却无法确定自己究竟想成为怎样的人时，真正需要被重新理解的，或许已经不再是世界，而是人类自身。",
+        "When we finally hold the power to change everything yet cannot be sure what kind of people we want to be, what truly needs to be understood anew may no longer be the world, but humanity itself."
+      ]
+    ]
+  },
+  {
+    "date": "2026-11-14",
+    "title": "Zest > Attention > Time > Money",
+    "slug": "zest-attention-time-money",
+    "category": "Reflection",
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "我一直是一个“三分钟热度”的人。过去，别人这样评价我时，我总会有些介意，仿佛兴趣不够持久，就意味着缺乏恒心，甚至不够成熟。",
+        "I have always been someone with “three-minute enthusiasm.” In the past, when others described me this way, I always minded a little, as if interests that do not last meant a lack of perseverance, or even a lack of maturity."
+      ],
+      ["但现在，我反而觉得，或许我才是那个真正认真在生活的人。", "But now I feel, if anything, that perhaps I am the one who is truly taking life seriously."],
+      ["我逐渐意识到，人生中真正稀缺的资源是：", "I have gradually realized that the truly scarce resources in life are:"],
+      ["兴致 > 注意力 > 时间 > 金钱。", "Zest > attention > time > money."],
+      [
+        "金钱可以积累，时间可以安排，注意力可以分配，唯独兴致无法强求。",
+        "Money can be accumulated, time can be arranged, attention can be allocated; only zest cannot be forced."
+      ],
+      [
+        "最近，我突然开始做 Uber Delivery。以我目前的经济状况而言，收入并不重要，考虑到税率与机会成本，甚至算不上一个理性的经济选择。",
+        "Recently, I suddenly started doing Uber deliveries. Given my current financial situation, the income does not matter, and once taxes and opportunity cost are counted, it is hardly even a rational economic choice."
+      ],
+      ["但我就是喜欢。", "But I simply like it."],
+      [
+        "如果凡事都要计算投入产出比，我究竟是在过自己的人生，还是在用社会的标准衡量自己的生活？",
+        "If everything has to be weighed by return on investment, am I living my own life, or measuring my life by society’s standards?"
+      ],
+      [
+        "也许下个星期，我又想每天去高级餐厅，享受美食，毫不在意花费。",
+        "Perhaps next week I will want to eat at fine restaurants every day, enjoying good food without caring about the cost."
+      ],
+      [
+        "这两种生活看似矛盾，但为什么人生必须符合某种一致的身份与逻辑？",
+        "These two lives seem contradictory, but why must a life conform to one consistent identity and logic?"
+      ],
+      [
+        "我可以享受赚取一笔微不足道的收入，也可以享受花掉远超过它的钱。重要的从来不是金钱的增减，而是那一刻我真心想做什么。",
+        "I can enjoy earning a trivial sum of money, and I can just as well enjoy spending far more than that. What matters has never been the rise and fall of money, but what I truly want to do in that moment."
+      ],
+      [
+        "我们太习惯于用结果衡量过程，用坚持证明热爱，却忘了并非所有经历都需要有目的，也并非所有兴趣都必须有结果。",
+        "We are too used to measuring the process by its results, and proving love by persistence, and we forget that not every experience needs a purpose, nor must every interest lead to a result."
+      ],
+      [
+        "坚持当然有价值，但短暂的热情同样真实。人生不只是不断积累成就，也是不断被世界吸引、产生好奇、投入其中的过程。",
+        "Persistence certainly has value, but a brief passion is just as real. Life is not only the steady accumulation of achievements; it is also the process of being drawn in by the world, growing curious, and throwing oneself into things."
+      ],
+      [
+        "真正的自由，或许不是拥有足够的金钱与时间，而是不再需要用别人的标准，为自己的快乐寻找理由。",
+        "True freedom may not be having enough money and time, but no longer needing other people’s standards to find reasons for one’s own happiness."
+      ],
+      [
+        "我们总是害怕自己只有三分钟热度，却很少害怕自己有一天再也没有任何热度。",
+        "We are always afraid that our enthusiasm lasts only three minutes, yet we seldom fear that one day we will have none at all."
+      ]
+    ]
+  },
+  {
+    "date": "2026-11-11",
+    "title": "When History Becomes the Narrative of Power",
+    "slug": "history-and-power",
+    "category": "Reflection",
+    "place": "于加州斯坦福\nStanford, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "我们习惯于认为，历史是对过去的记录，而历史学家的责任，是尽可能还原曾经发生的事实。",
+        "We are used to thinking that history is a record of the past, and that the historian’s duty is to restore, as far as possible, the facts of what happened."
+      ],
+      [
+        "但读完Christopher B. Krebs的《Borealism: Caesar, Seneca, Tacitus, and the Roman Discourse about the Germanic North》，我开始怀疑：我们所理解的历史，究竟有多少来自真实发生的事情，又有多少来自掌握叙事权的人希望我们相信的事情？",
+        "But after reading Christopher B. Krebs’s “Borealism: Caesar, Seneca, Tacitus, and the Roman Discourse about the Germanic North,” I began to wonder: how much of the history we understand comes from what actually happened, and how much from what those who held the power of narrative wanted us to believe?"
+      ],
+      [
+        "凯撒笔下的日耳曼人，是纪律严明、骁勇善战的民族。他将高卢描绘成可以被征服和管理的世界，却将日耳曼地区置于罗马秩序之外。这种区分不仅是地理与民族的描述，也服务于他的军事与政治利益。而到了塔西佗笔下，同一个民族却逐渐变成了冲动、易怒、缺乏自律的群体。他借鉴塞涅卡对愤怒的分析，重新解释日耳曼人的性格，并暗示罗马可以利用他们的弱点。",
+        "In Caesar’s writing, the Germans are a disciplined and valiant people. He portrays Gaul as a world that can be conquered and administered, while placing the Germanic lands outside the Roman order. This distinction is not only a description of geography and peoples; it also serves his military and political interests. By the time of Tacitus, the same people have gradually become an impulsive, irascible and undisciplined crowd. Drawing on Seneca’s analysis of anger, he reinterprets the Germans’ character and hints that Rome can exploit their weaknesses."
+      ],
+      [
+        "同一个民族，在不同作者笔下呈现出不同的面貌；改变的未必是这个民族本身，而是描述它的人所需要的叙事。这让我意识到，权力不仅体现在征服土地、制定法律或控制资源，更体现在定义他人的能力。谁是文明的，谁是野蛮的；谁值得被尊重，谁需要被教化；谁构成威胁，谁可以被征服——这些看似客观的分类，往往早已包含了叙述者的立场。",
+        "The same people appear in different guises under different authors; what changes is not necessarily the people themselves but the narrative their describer needs. This made me realize that power is shown not only in conquering land, making laws or controlling resources, but even more in the ability to define others. Who is civilized and who is barbarian; who deserves respect and who needs to be taught; who poses a threat and who can be conquered—these seemingly objective classifications often already contain the narrator’s standpoint."
+      ],
+      [
+        "更令人不安的是，被描述的人未必拥有同等的机会为自己辩护。久而久之，外部强加的形象可能取代他们自身的历史，甚至成为后世理解他们的主要依据。但这并不意味着事实不再重要。正因为历史无法脱离叙述者的视角，我们才更需要追问事实是如何被选择、组织与解释的。",
+        "More unsettling still, those who are described do not necessarily have an equal chance to defend themselves. Over time, an image imposed from outside may replace their own history and even become the main basis on which later generations understand them. But this does not mean that facts no longer matter. Precisely because history cannot be separated from the narrator’s perspective, we need all the more to ask how facts are selected, organized and interpreted."
+      ],
+      [
+        "历史最隐蔽的偏见，或许不在于它告诉了我们什么，而在于它让我们从未想过，还有什么没有被讲述。读完这篇文章，我开始觉得，真正的历史意识，不只是知道过去发生了什么，更是意识到我们为什么会以今天这样的方式理解过去。",
+        "The most hidden bias of history may lie not in what it tells us, but in how it keeps us from ever thinking about what has not been told. Having read this article, I have begun to feel that true historical awareness is not only knowing what happened in the past, but realizing why we understand the past the way we do today."
+      ],
+      [
+        "当一个人拥有定义另一个人的权力时，我们究竟是在认识他者，还是在借他者的形象，证明我们自己？",
+        "When one person holds the power to define another, are we really coming to know the other, or using the other’s image to prove ourselves?"
+      ]
+    ]
+  },
+  {
+    "date": "2023-03-17",
+    "title": "When Love Cannot Reach",
+    "slug": "when-love-cannot-reach",
+    "category": "Book",
+    "book": {
+      "cover": "a_little_life.jpg",
+      "title": "A Little Life",
+      "author": "Hanya Yanagihara",
+      "lines": [
+        "Novel · Doubleday, 2015",
+        "Four friends in New York over several decades, and at the center of the book, the life of one of them, Jude."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": ["Chinese", "English"],
+    "photo": {
+      "file": "a_little_life_reading.jpg",
+      "alt": "A Little Life standing on a bookshelf among other novels"
+    },
+    "prose": [
+      [
+        "在《A Little Life》中，Hanya Yanagihara最令人难过的书写，并不是 Jude 经历了多少痛苦，而是当痛苦已经过去、危险已经消失、爱也终于到来时，他依然无法相信自己值得被爱。",
+        "In *A Little Life*, the saddest thing Hanya Yanagihara writes is not how much pain Jude has been through, but that even after the pain has passed, the danger has gone and love has finally arrived, he still cannot believe he deserves to be loved."
+      ],
+      [
+        "“我知道你爱我”与“我能够感受到自己值得被爱”之间，可能隔着一个人全部的生命经验。",
+        "Between “I know you love me” and “I can feel that I am worthy of being loved” there may lie a person’s entire life experience."
+      ],
+      [
+        "这两句话看似相近，却指向截然不同的世界。前者是一种对他人情感的认识，后者却关乎一个人如何理解自身的价值。我们可以相信别人的真诚，却依然无法相信自己配得上这份真诚。甚至越是被温柔地对待，越可能感到不安，因为这份爱与自己长久以来对自身的认识如此矛盾。",
+        "These two sentences seem similar, yet they point to utterly different worlds. The first is an awareness of another person’s feelings; the second concerns how a person understands their own worth. We can believe in someone else’s sincerity and still be unable to believe we deserve it. The more gently we are treated, the more uneasy we may feel, because this love contradicts so sharply the understanding we have long held of ourselves."
+      ],
+      [
+        "小说中，Jude的身体从来不只是承载创伤的容器。它更像一种不受意志支配的记忆：即使理性已经知道眼前的人不会伤害自己，身体仍可能本能地退缩。触碰既可能意味着亲密，也可能唤起恐惧；温柔有时反而触及他最无法承受的部分。",
+        "In the novel, Jude’s body is never merely a vessel that carries trauma. It is more like a memory beyond the control of the will: even when reason already knows that the person in front of him will not hurt him, the body may still recoil by instinct. Touch can mean intimacy, but it can also summon fear; tenderness sometimes reaches the very part of him he cannot bear."
+      ],
+      [
+        "创伤不仅改变了一个人记得什么，也可能改变他相信什么是自己应得的。当痛苦成为一个人理解世界的方式，幸福便不再只是难以获得的东西，甚至可能成为难以相信的东西。",
+        "Trauma changes not only what a person remembers but also what they believe they deserve. When pain becomes the way a person understands the world, happiness is no longer only something hard to obtain; it may even become something hard to believe in."
+      ],
+      [
+        "这也解释了小说中最令人心碎的矛盾：Jude 并非没有得到爱。Willem、Harold 和 Andy 都以不同的方式关心他，试图让他相信自己不必再独自承受一切。但这些爱越是真实，便越凸显出他内心那道难以逾越的距离。",
+        "This also explains the novel’s most heartbreaking contradiction: Jude is not without love. Willem, Harold and Andy all care for him in their different ways, trying to make him believe he no longer has to bear everything alone. But the more real this love is, the more it highlights the distance within him that he cannot cross."
+      ],
+      [
+        "他能够知道别人眼中的自己，却无法真正通过别人的眼睛重新认识自己。那些爱他的人所看见的温柔、聪慧与值得珍惜，在他自己的目光中，始终无法取代过去留下的羞耻与自我否定。",
+        "He can know how others see him, yet cannot truly come to know himself through their eyes. The tenderness, intelligence and worth that those who love him see in him can never, in his own gaze, replace the shame and self-negation the past has left behind."
+      ],
+      [
+        "我们常常相信，只要给予足够的耐心、陪伴与善意，另一个人终究会得到治愈。这种期待看似温柔，却也隐藏着一种要求：既然有人如此爱你，你为什么仍然无法快乐？",
+        "We often believe that, given enough patience, companionship and kindness, another person will in the end be healed. This expectation seems gentle, but it hides a demand: since someone loves you this much, why can you still not be happy?"
+      ],
+      [
+        "但爱可以改变一个人所处的现实，却未必能够改变他理解自身的方式。痛苦并不总是因为缺少爱而存在，也不会因为爱终于出现便自动消失。",
+        "But love can change the reality in which a person lives, though it cannot necessarily change how they understand themselves. Pain does not always exist for lack of love, and it does not disappear automatically once love finally appears."
+      ],
+      [
+        "这并不是说爱毫无意义。恰恰相反，小说中那些细小的关怀之所以动人，正是因为它们无法保证任何结果。陪伴不一定意味着拯救，温柔也不一定能够战胜记忆，但它们仍然是真实的。",
+        "This is not to say that love is meaningless. Quite the opposite: the small acts of care in the novel are moving precisely because they guarantee no outcome. Companionship does not necessarily mean rescue, and tenderness does not necessarily defeat memory, but they are real all the same."
+      ],
+      [
+        "或许，爱最困难的地方，不是愿意为另一个人付出多少，而是承认即使付出了全部，我们依然无法替他感受自己的价值，也无法替他决定如何理解自己。",
+        "Perhaps the hardest part of love is not how much one is willing to give another person, but admitting that even after giving everything, we still cannot feel their worth on their behalf, nor decide for them how to understand themselves."
+      ],
+      [
+        "我们总希望爱能够成为痛苦的答案，却很少愿意承认：有时候，爱只是爱，而不是答案。",
+        "We always hope love can be the answer to pain, yet we rarely admit that sometimes love is only love, not an answer."
+      ],
+      [
+        "《A Little Life》最终让我思考的，不只是一个人为什么无法接受爱，而是我们是否过于习惯用自己的善意，期待另一个人的改变。",
+        "What *A Little Life* ultimately makes me think about is not only why a person cannot accept love, but whether we are too used to using our own kindness to expect change in another person."
+      ],
+      [
+        "当一个人无法相信自己值得被爱时，我们能否继续爱他，而不把他的痊愈当作这份爱的证明？",
+        "When a person cannot believe they deserve to be loved, can we keep loving them without treating their recovery as proof of that love?"
       ]
     ]
   }
