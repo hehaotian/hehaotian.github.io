@@ -12,9 +12,10 @@
   <button id="menu" class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="tabs"><span></span><span></span><span></span></button>
   <nav id="tabs" aria-label="Sections">
     <a href="#notes" data-tab="notes">Notes</a>
+    <a href="#reads" data-tab="reads">Reads</a>
     <a href="#plates" data-tab="plates">Plates</a>
-    <a href="#steps" data-tab="steps">Steps</a>
     <a href="#goods" data-tab="goods">Goods</a>
+    <a href="#steps" data-tab="steps">Steps</a>
     <a href="#gigs" data-tab="gigs">Gigs</a>
   </nav>
 </header>
@@ -30,9 +31,10 @@
       </figure>
       <ul class="links">
         <li><a href="#notes">Notes</a><span>No bots, just soul.</span></li>
+        <li><a href="#reads">Reads</a><span>What books left me with.</span></li>
         <li><a href="#plates">Plates</a><span>Eating my way around.</span></li>
-        <li><a href="#steps">Steps</a><span>Every place since 1989.</span></li>
         <li><a href="#goods">Goods</a><span>Small things, shared.</span></li>
+        <li><a href="#steps">Steps</a><span>Every place since 1989.</span></li>
         <li><a href="#gigs">Gigs</a><span>Hands busy, mind open.</span></li>
       </ul>
     </div>
@@ -88,12 +90,22 @@
       <p class="copy" id="notes-copy"></p>
     </div>
   </section>
+
+  <section id="reads" class="tab" hidden>
+    <div class="col">
+      <h2>Reads</h2>
+      <div class="nfilters"><div id="reads-langs" class="tags"></div></div>
+      <div class="reads" id="reads-list"></div>
+      <p class="copy" id="reads-copy"></p>
+    </div>
+  </section>
 </main>
 
 <script src="data/gigs.js"></script>
 <script src="data/plates.js"></script>
 <script src="data/goods.js"></script>
 <script src="data/notes.js"></script>
+<script src="data/reads.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/cursor.js"></script>
 </body>

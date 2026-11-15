@@ -1,5 +1,5 @@
-// ---- tab routing: #home #notes #plates #steps #goods #gigs (the old #travels link still works)
-const TABS = ["home", "notes", "plates", "steps", "goods", "gigs"];
+// ---- tab routing: #home #notes #reads #plates #goods #steps #gigs (the old #travels link still works)
+const TABS = ["home", "notes", "reads", "plates", "goods", "steps", "gigs"];
 const frame = document.getElementById("steps-frame");
 let currentTab = "";
 
@@ -164,15 +164,52 @@ function detailPage({ kind, title, meta, item, tools, lang }) {
   };
 })();
 
+const LANG_FLAGS = { Chinese: "🇨🇳", English: "🇺🇸", Japanese: "🇯🇵", Korean: "🇰🇷", French: "🇫🇷" };   // a flag stands for the language; unknown languages fall back to their name
+
+// ---- one page layout for a note or a read: the text, the book card, photo, place and copyright
+const hasLang = (n, l) => (n.languages || []).includes(l);
+const notePage = (() => {
+  const longDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+  const rich = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>");   // **bold** and *italic* in prose
+  const ital = t => esc(t).replace(/\*(.+?)\*/g, "<em>$1</em>");
+  // long bilingual pieces: blocks of paragraphs, numbered section headings, sub-headings, an epigraph, and a reference list
+  const blocks = n => n.blocks.map(([type, zh, en, num]) => {
+    const pair = (cls) => `${zh ? `<p>${esc(zh)}</p>` : ""}<p class="en">${ital(en)}</p>`;
+    if (type === "epi") return `<blockquote class="epi">${pair()}</blockquote>`;
+    if (type === "h") return `<h2 class="sec"><span class="n">${esc(num || "")}</span>${esc(zh)}<span class="en">${ital(en)}</span></h2>`;
+    if (type === "sub") return `<h3 class="subhead">${zh ? esc(zh) + " " : ""}<span class="en">${ital(en)}</span></h3>`;
+    return `<div class="prose">${pair()}</div>`;
+  }).join("");
+  const refsHtml = n => (n.refs ? `<section class="refs"><h2 class="refs-h">References</h2>${n.refs.map(r =>
+    `<p class="ref">${ital(r.t)}${r.u ? ` <a href="${esc(r.u)}" target="_blank" rel="noopener">${esc(r.u.replace(/^https?:\/\/(www\.)?/, ""))}</a>` : ""}</p>`).join("")}</section>` : "");
+  const body = n => n.blocks ? blocks(n) : n.poem
+    ? n.poem.pairs.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")
+    : n.pairStanzas ? n.pairStanzas.map(st => `<div class="pstanza">${st.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")}</div>`).join("")
+    : n.stanzas ? n.stanzas.map(st => `<p class="stanza">${st.map(esc).join("<br>")}</p>`).join("")
+    : n.prose ? n.prose.map(([a, b]) => `<div class="prose"><p>${rich(a)}</p><p class="en">${rich(b)}</p></div>`).join("")
+    : (n.body || []).map(p => `<p>${esc(p)}</p>`).join("");
+  // book intro for Book: book: { cover: "file.jpg" (in assets/photos/), title, author, lines: ["detail", ...] }
+  const bookHtml = b => !b ? "" : `<div class="book">${b.cover ? `<img class="bcover" src="assets/photos/${esc(b.cover)}" alt="">` : ""}
+    <div class="binfo"><p class="bt">${esc(b.title)}</p>${b.author ? `<p class="ba">${esc(b.author)}</p>` : ""}${(b.lines || []).map(l => `<p class="bl">${esc(l)}</p>`).join("")}</div></div>`;
+  // font for Japanese / Korean writing: Japanese-only notes are set in the Japanese face, notes with Korean get the Korean face on the Korean lines
+  const nl = n => hasLang(n, "Korean") ? "ko" : hasLang(n, "Japanese") && !hasLang(n, "Chinese") ? "ja" : "";
+  return n => `<div class="nl nl-${nl(n) || "x"}">${n.category ? `<p class="kind">${esc(n.category)}</p>` : ""}
+      <h1>${esc(n.poem ? n.poem.heading : n.title)}</h1>
+      <p class="by">by Haotian He</p><p class="when">${longDate(n.date)}</p>${bookHtml(n.book)}<hr>
+      <div class="text">${body(n)}</div>
+      ${n.video ? `<video class="pimg pvid" src="assets/video/${esc(n.video.file)}"${n.video.poster ? ` poster="assets/video/${esc(n.video.poster)}"` : ""} autoplay muted loop playsinline preload="metadata" aria-label="${esc(n.video.alt || "")}"></video>` : ""}
+      ${n.photo ? `<img class="pimg" src="assets/photos/${esc(n.photo.file)}" alt="${esc(n.photo.alt)}" loading="lazy">` : ""}
+      ${n.place ? `<p class="place">${esc(n.place).replace(/\n/g, "<br>")}</p>` : ""}
+      ${refsHtml(n)}
+      <p class="end">© ${n.date.slice(0, 4)} Haotian He · hehaotian.com. All rights reserved.</p></div>`;
+})();
+
 // ---- notes: a quiet list; each note opens as a page over the list (#notes/the-title)
 (function notes() {
   const list = (window.NOTES || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
   const ids = slugs(list, n => n.title);
-  const longDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
   const listEl = document.getElementById("notes-list"), tagsEl = document.getElementById("notes-tags");
   const cats = [...new Set(list.map(n => n.category).filter(Boolean))];
-  const LANG_FLAGS = { Chinese: "🇨🇳", English: "🇺🇸", Japanese: "🇯🇵", Korean: "🇰🇷", French: "🇫🇷" };   // a flag stands for the language; unknown languages fall back to their name
-  const hasLang = (n, l) => (n.languages || []).includes(l);
   const langs = [...new Set(list.flatMap(n => n.languages || []))].sort((a, b) => list.filter(n => hasLang(n, b)).length - list.filter(n => hasLang(n, a)).length || (a < b ? -1 : 1));
   const langsEl = document.getElementById("notes-langs");
   const on = { cat: "", lang: "" };
@@ -201,41 +238,7 @@ function detailPage({ kind, title, meta, item, tools, lang }) {
     if (b) { on[b.dataset.key] = b.dataset.v; renderList(); }
   });
   renderList();
-  const rich = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>");   // **bold** and *italic* in prose
-  const ital = t => esc(t).replace(/\*(.+?)\*/g, "<em>$1</em>");
-  // long bilingual pieces: blocks of paragraphs, numbered section headings, sub-headings, an epigraph, and a reference list
-  const blocks = n => n.blocks.map(([type, zh, en, num]) => {
-    const pair = (cls) => `${zh ? `<p>${esc(zh)}</p>` : ""}<p class="en">${ital(en)}</p>`;
-    if (type === "epi") return `<blockquote class="epi">${pair()}</blockquote>`;
-    if (type === "h") return `<h2 class="sec"><span class="n">${esc(num || "")}</span>${esc(zh)}<span class="en">${ital(en)}</span></h2>`;
-    if (type === "sub") return `<h3 class="subhead">${zh ? esc(zh) + " " : ""}<span class="en">${ital(en)}</span></h3>`;
-    return `<div class="prose">${pair()}</div>`;
-  }).join("");
-  const refsHtml = n => (n.refs ? `<section class="refs"><h2 class="refs-h">References</h2>${n.refs.map(r =>
-    `<p class="ref">${ital(r.t)}${r.u ? ` <a href="${esc(r.u)}" target="_blank" rel="noopener">${esc(r.u.replace(/^https?:\/\/(www\.)?/, ""))}</a>` : ""}</p>`).join("")}</section>` : "");
-  const body = n => n.blocks ? blocks(n) : n.poem
-    ? n.poem.pairs.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")
-    : n.pairStanzas ? n.pairStanzas.map(st => `<div class="pstanza">${st.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")}</div>`).join("")
-    : n.stanzas ? n.stanzas.map(st => `<p class="stanza">${st.map(esc).join("<br>")}</p>`).join("")
-    : n.prose ? n.prose.map(([a, b]) => `<div class="prose"><p>${rich(a)}</p><p class="en">${rich(b)}</p></div>`).join("")
-    : (n.body || []).map(p => `<p>${esc(p)}</p>`).join("");
-  // book intro for Book: book: { cover: "file.jpg" (in assets/photos/), title, author, lines: ["detail", ...] }
-  const bookHtml = b => !b ? "" : `<div class="book">${b.cover ? `<img class="bcover" src="assets/photos/${esc(b.cover)}" alt="">` : ""}
-    <div class="binfo"><p class="bt">${esc(b.title)}</p>${b.author ? `<p class="ba">${esc(b.author)}</p>` : ""}${(b.lines || []).map(l => `<p class="bl">${esc(l)}</p>`).join("")}</div></div>`;
-  // font for Japanese / Korean writing: Japanese-only notes are set in the Japanese face, notes with Korean get the Korean face on the Korean lines
-  const nl = n => hasLang(n, "Korean") ? "ko" : hasLang(n, "Japanese") && !hasLang(n, "Chinese") ? "ja" : "";
-  popups.notes = slug => {
-    const n = list[ids.indexOf(slug)];
-    return n && `<div class="nl nl-${nl(n) || "x"}">${n.category ? `<p class="kind">${esc(n.category)}</p>` : ""}
-      <h1>${esc(n.poem ? n.poem.heading : n.title)}</h1>
-      <p class="by">by Haotian He</p><p class="when">${longDate(n.date)}</p>${bookHtml(n.book)}<hr>
-      <div class="text">${body(n)}</div>
-      ${n.video ? `<video class="pimg pvid" src="assets/video/${esc(n.video.file)}"${n.video.poster ? ` poster="assets/video/${esc(n.video.poster)}"` : ""} autoplay muted loop playsinline preload="metadata" aria-label="${esc(n.video.alt || "")}"></video>` : ""}
-      ${n.photo ? `<img class="pimg" src="assets/photos/${esc(n.photo.file)}" alt="${esc(n.photo.alt)}" loading="lazy">` : ""}
-      ${n.place ? `<p class="place">${esc(n.place).replace(/\n/g, "<br>")}</p>` : ""}
-      ${refsHtml(n)}
-      <p class="end">© ${n.date.slice(0, 4)} Haotian He · hehaotian.com. All rights reserved.</p></div>`;
-  };
+  popups.notes = slug => { const n = list[ids.indexOf(slug)]; return n && notePage(n); };
   // copyright line on the list page: the years the notes were written
   const ys = list.map(n => +n.date.slice(0, 4));
   if (ys.length) {
@@ -243,6 +246,42 @@ function detailPage({ kind, title, meta, item, tools, lang }) {
     document.getElementById("notes-copy").textContent = `© ${lo === hi ? lo : lo + "–" + hi} Haotian He · hehaotian.com. All rights reserved.`;
   }
 })();
+
+// ---- reads: a wall of book covers; each opens the reader response as a page over the wall (#reads/the-title)
+(function reads() {
+  const list = (window.READS || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
+  const ids = slugs(list, n => n.title);
+  // on the wall a book goes by its own name: "棉花帝国 (Empire of Cotton)" shows as 棉花帝国, "林奕含 Lin Yi-han" as 林奕含 (the page keeps both)
+  const nonLatin = t => /[^\u0000-\u024f\u2000-\u206f]/.test(t);
+  const ownTitle = t => { const m = String(t).match(/^(.*?)\s*\([^)]*\)\s*$/); return m && nonLatin(m[1]) ? m[1] : t; };
+  const ownAuthor = a => { const m = String(a).match(/^(.*?)\s+[A-Za-z][A-Za-z\s.'’-]*$/); return m && nonLatin(m[1]) ? m[1] : a; };
+  const card = (n, i) => { const b = n.book || {};
+    return `<a class="read" href="#reads/${ids[i]}">${b.cover ? `<img class="rcov" src="assets/photos/${esc(b.cover)}" alt="" loading="lazy">` : `<span class="rcov none"></span>`}
+      <span class="rt">${esc(ownTitle(b.title || n.title))}</span>${b.author ? `<span class="ra">${esc(ownAuthor(b.author))}</span>` : ""}</a>`; };
+  // filter by the language the book was read in (book.language), most-read language first; no filter row when there is only one
+  const bookLang = n => (n.book || {}).language;
+  const langs = [...new Set(list.map(bookLang).filter(Boolean))].sort((a, b) => list.filter(n => bookLang(n) === b).length - list.filter(n => bookLang(n) === a).length || (a < b ? -1 : 1));
+  const langsEl = document.getElementById("reads-langs"), listEl = document.getElementById("reads-list");
+  let lang = "";
+  const render = () => {
+    const shown = list.map((n, i) => [n, i]).filter(([n]) => !lang || bookLang(n) === lang);
+    listEl.innerHTML = shown.length ? shown.map(([n, i]) => card(n, i)).join("") : `<p class="empty">Nothing yet.</p>`;
+    langsEl.innerHTML = langs.length > 1 ? ["", ...langs].map(v => `<button type="button" class="tag${v === lang ? " on" : ""}" data-v="${esc(v)}"${v && LANG_FLAGS[v] ? ` title="${esc(v)}" aria-label="${esc(v)}"` : ""}>${v ? LANG_FLAGS[v] || esc(v) : "All"}</button>`).join("") : "";
+  };
+  langsEl.addEventListener("click", e => { const b = e.target.closest("button[data-v]"); if (b) { lang = b.dataset.v; render(); } });
+  render();
+  popups.reads = slug => { const n = list[ids.indexOf(slug)]; return n && notePage(n); };
+  const ys = list.map(n => +n.date.slice(0, 4));
+  if (ys.length) { const lo = Math.min(...ys), hi = Math.max(...ys); document.getElementById("reads-copy").textContent = `© ${lo === hi ? lo : lo + "–" + hi} Haotian He · hehaotian.com. All rights reserved.`; }
+})();
+
+// old links: book notes used to live under #notes/, so a link there that names a read goes to Reads
+function legacyReads() {
+  const m = location.hash.match(/^#notes\/(.+)$/), slug = m && decodeURIComponent(m[1]);
+  if (slug && !popups.notes(slug) && popups.reads(slug)) { history.replaceState(null, "", "#reads/" + m[1]); show("reads"); syncReader(); }
+}
+window.addEventListener("hashchange", legacyReads);
+legacyReads();
 
 // ---- plates: a collector's grid, write-ups first, then bare entries; each part grouped by distinction (3 stars first), newest first inside each group
 (function plates() {

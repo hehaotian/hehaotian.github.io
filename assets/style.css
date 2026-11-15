@@ -10,6 +10,7 @@ a:hover { text-decoration-color: var(--muted); }
    so "Haotian" in the bar always sits right above "Haotian" on the home page. The section links open in a panel under the bar. */
 :root { --gutter: 24px; --frame: 600px; }   /* --frame: width of the text column; the bar follows it, so a wider page (Plates) widens both */
 body[data-tab="plates"] { --frame: 880px; }
+body[data-tab="reads"] { --frame: 880px; }
 body[data-tab="notes"] { --frame: 800px; }   /* wide enough that the longest note title (44 characters) sits on one line beside its date and category */
 body[data-tab="steps"] { --frame: 100vw; }   /* the map is full width, so the bar spans it too */
 #top { position: fixed; inset: 0 0 auto 0; height: var(--nav-h); z-index: 10; display: flex; align-items: center; justify-content: space-between;
@@ -63,6 +64,16 @@ h3 { font-size: 13px; font-weight: 400; color: var(--muted); margin: 48px 0 8px;
 .gig p { margin: 0; }
 .gig .where { color: var(--muted); }
 .empty { color: var(--muted); margin: 0; }
+
+/* Reads: a wall of covers */
+.reads { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px 20px; }
+@media (max-width: 700px) { .reads { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 440px) { .reads { grid-template-columns: repeat(2, 1fr); } }
+.read { display: flex; flex-direction: column; color: var(--text); text-decoration: none; }
+.read .rcov { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border: 1px solid var(--line); background: #f1eee7; }
+.read:hover .rcov { border-color: #aaa; }
+.read .rt { font-weight: 600; font-size: 15px; line-height: 1.3; margin-top: 10px; }
+.read .ra { color: var(--muted); font-size: 14px; }
 
 /* Notes */
 
@@ -271,11 +282,14 @@ a.plate:hover { border-color: #aaa; }
 
 /* Notes: a quiet index. One filter line, years in the margin (newest open, older folded), no rules between rows */
 #notes .nfilters { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px 24px; margin: -8px 0 36px; }
-#notes .nfilters .tags, #notes .nfilters #notes-tags:not(:empty) { margin: 0; gap: 4px 20px; }
+#notes .nfilters .tags, #notes .nfilters #notes-tags:not(:empty), #reads .nfilters .tags { margin: 0; gap: 4px 20px; }
 #notes .nfilters #notes-langs { gap: 4px 12px; }
-#notes .nfilters .tag { border: 0; border-radius: 0; padding: 0 0 2px; font-size: 14px; letter-spacing: .2px; border-bottom: 1px solid transparent; }
-#notes .nfilters .tag.on { border-bottom-color: currentColor; }
-#notes .nfilters #notes-langs .tag { font-size: 15px; }
+#notes .nfilters .tag, #reads .nfilters .tag { border: 0; border-radius: 0; padding: 0 0 2px; font-size: 14px; letter-spacing: .2px; border-bottom: 1px solid transparent; }
+#notes .nfilters .tag.on, #reads .nfilters .tag.on { border-bottom-color: currentColor; }
+#notes .nfilters #notes-langs .tag, #reads .nfilters .tag { font-size: 15px; }
+#reads .nfilters { margin: -8px 0 28px; }
+#reads .nfilters .tags { gap: 4px 12px; }
+#reads .nfilters:has(.tags:empty) { display: none; }
 .ny { display: grid; grid-template-columns: 110px 1fr; column-gap: 24px; padding: 22px 0 8px; border-top: 1px solid var(--line); }
 .ny .yh { grid-column: 1; align-self: start; justify-self: start; display: flex; align-items: baseline; gap: 8px; font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
 .ny .yr { font-size: 28px; font-weight: 300; letter-spacing: -.5px; line-height: 1.1; font-variant-numeric: tabular-nums; }
