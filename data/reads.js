@@ -415,7 +415,7 @@ window.READS = [
         "This reconciliation is not surrender, still less silence in the face of injustice; it means no longer needing society’s judgment to prove ourselves. We can acknowledge that society exists and understand its complexity and its limits, without letting it decide our whole worth. We can rebel against what is worth rebelling against, and calmly accept the rules that do not conflict with our own principles."
       ],
       [
-        "我想，这或许就是一种更成熟的 *don't give a fuck*：不是对世界漠不关心，而是不再执着于世界如何看待自己。",
+        "我想，这或许就是一种更成熟的 *don’t give a fuck*：不是对世界漠不关心，而是不再执着于世界如何看待自己。",
         "I think this may be a more mature kind of *don’t give a fuck*: not indifference to the world, but no longer clinging to how the world sees us."
       ],
       [
@@ -919,8 +919,8 @@ window.READS = [
         "We long to be understood, yet we fear being laid bare. We look for a refuge, but belonging is only a breath."
       ],
       [
-        "Dans Hiver à Sokcho, ce double mouvement tient dans une pension au bord de la mer. La narratrice, moitié française, moitié coréenne, y travaille en hiver, près de la frontière avec la Corée du Nord. Elle n’appartient tout à fait à aucun des deux pays, et elle le sait.",
-        "In Hiver à Sokcho, this double movement fits inside a guesthouse by the sea. The narrator, half French and half Korean, works there in winter, near the border with North Korea. She belongs completely to neither country, and she knows it."
+        "Dans *Hiver à Sokcho*, ce double mouvement tient dans une pension au bord de la mer. La narratrice, moitié française, moitié coréenne, y travaille en hiver, près de la frontière avec la Corée du Nord. Elle n’appartient tout à fait à aucun des deux pays, et elle le sait.",
+        "In *Hiver à Sokcho*, this double movement fits inside a guesthouse by the sea. The narrator, half French and half Korean, works there in winter, near the border with North Korea. She belongs completely to neither country, and she knows it."
       ],
       [
         "Quand arrive Yan Kerrand, un dessinateur français venu chercher l’inspiration pour sa prochaine bande dessinée, elle espère être enfin regardée. Elle lui prépare ses repas et le guide dans la ville. Mais un dessinateur ne regarde pas comme les autres : son regard laisse une trace. Être compris et être mis à nu deviennent alors la même chose.",
@@ -976,7 +976,7 @@ window.READS = [
       ],
       [
         "韩炳哲在《倦怠社会》中指出，今天的社会不再主要靠外部的禁令运转，而是靠“你可以”：个体被塑造成“自身的企业家”，自己给自己加码，自己剥削自己。他把这种社会称为功绩社会（Leistungsgesellschaft）。申氏发热的患者像是这种逻辑的极端版本：没有人命令他们，他们还在干活。",
-        "In *The Burnout Society*, Byung Chul Han argues that today’s society no longer runs mainly on outside prohibition but on “you can”: individuals are shaped into “entrepreneurs of themselves,” who raise their own quotas and exploit themselves. He calls this the achievement society (Leistungsgesellschaft). The Shen Fever victims look like an extreme version of that logic: no one orders them, and they keep working."
+        "In *The Burnout Society*, Byung-Chul Han argues that today’s society no longer runs mainly on outside prohibition but on “you can”: individuals are shaped into “entrepreneurs of themselves,” who raise their own quotas and exploit themselves. He calls this the achievement society (Leistungsgesellschaft). The Shen Fever victims look like an extreme version of that logic: no one orders them, and they keep working."
       ],
       [
         "我并不是说开 Uber 让我挣脱了自我剥削。恰恰相反，它正是“自身的企业家”最标准的样子：自己排班，自己担风险，自己盯着评分和接单率。我只是换了自我剥削发生的地方。真正的差别有两点。第一，路况、车和身体的疲惫都是抽象不掉的东西。在大厂，我的工作停留在文档、会议和符号里，下班后常常觉得自己是飘着的；开车的时候，手在方向盘上，我知道自己在哪里。第二，这份活不是我的头衔。我能随时停下，是因为它只是兼职，别处还有收入撑着；对靠它吃饭的司机来说，这一点并不成立。",
@@ -1009,7 +1009,7 @@ window.READS = [
       ["这一转变发生在小狗对母亲说话、回忆起关于眼睛的一句评语时：", "The turn comes when Little Dog, speaking to his mother, recalls a remark about the eye:"],
       [
         "“你有一次告诉我，人的眼睛是神最孤独的创造。世上有多少东西会穿过瞳孔，可它什么都留不下。一只眼睛孤零零地待在自己的眼眶里，完全不知道一英寸之外，还有完全相同的另一只，一样饥渴，一样空洞。”（王鸥行 14）",
-        "“You told me once that the human eye is the most lonely creation of God. How much of the world passes through the pupil and still it holds nothing? The eye, alone in its socket, doesn't even know there's another one just like it, an inch away, equally hungry, equally empty.” (Vuong 14)"
+        "“You told me once that the human eye is the most lonely creation of God. How much of the world passes through the pupil and still it holds nothing? The eye, alone in its socket, doesn’t even know there’s another one just like it, an inch away, equally hungry, equally empty.” (Vuong 14)"
       ],
       [
         "王鸥行拒绝奉承眼睛。它不是心灵的窗户，也不是笛卡尔式那种将图像传输给背后某个大脑的透镜景象。对梅洛-庞蒂而言，进行感知的是“身体主体”（le corps-sujet）：即整体的身体，其视觉受限于它所处的位置和所能触及的范围。王鸥行向我们展示了处于极度局限中的身体。眼睛“孤零零地待在自己的眼眶里”，汲取一切却一无留存（“可它什么都留不下”），甚至无法看见一英寸之外的同伴。这道间距虽微小却无法逾越。双眼处于同一个颅骨内，朝向同一个方向，却彼此浑然不知。",
@@ -1051,7 +1051,7 @@ window.READS = [
     "blocks": [
       [
         "epi",
-        "“种族隔离渗透到个体生活的方方面面，没有一个人可以置身身外，从起床到睡觉，从出生到死亡，甚至是早在你出生之前就早已决定的宿命。”",
+        "“种族隔离渗透到个体生活的方方面面，没有一个人可以置身事外，从起床到睡觉，从出生到死亡，甚至是早在你出生之前就早已决定的宿命。”",
         "“Segregation seeped into every part of an individual’s life. No one could stand outside it: from waking to sleeping, from birth to death, even a fate settled before you were born.”"
       ],
       [
@@ -1083,7 +1083,7 @@ window.READS = [
       ],
       [
         "p",
-        "在本书的前几章，作者详细地列举了从20世纪20年代到70年代大量的事实来佐证其核心论点，即种族隔离是由政府、法院到民间有意识地长期践行于社会生活方方面面的一项非成文的公共行为，而这一行为大大阻碍了非裔社群实现真正地财富增值融入中产阶级的权利。而随着社会贫富分化的日益加大，大部分的非裔社群已经彻底被剥夺了实现阶层跨越的可能性，社群内由经济主导的自发居住种族隔离而由此形成。这可不就是“非裔的原罪”吗？",
+        "在本书的前几章，作者详细地列举了从20世纪20年代到70年代大量的事实来佐证其核心论点，即种族隔离是由政府、法院到民间有意识地长期践行于社会生活方方面面的一项非成文的公共行为，而这一行为大大阻碍了非裔社群实现真正的财富增值融入中产阶级的权利。而随着社会贫富分化的日益加大，大部分的非裔社群已经彻底被剥夺了实现阶层跨越的可能性，社群内由经济主导的自发居住种族隔离而由此形成。这可不就是“非裔的原罪”吗？",
         "In the first chapters, the author lists a great many facts from the 1920s to the 1970s in support of his central argument: that segregation was an unwritten public practice, carried out consciously and over the long term, in every part of social life by government, courts and private citizens alike, and that it greatly obstructed the Black community’s right to build real wealth and enter the middle class. As the gap between rich and poor has widened, most of the Black community has been stripped entirely of any chance of crossing class lines, and an economically driven, spontaneous residential segregation has formed within the community itself. Isn’t that exactly the “original sin” of Black America?"
       ],
       ["sub", "", "If San Francisco, Then Everywhere?"],
@@ -1104,7 +1104,7 @@ window.READS = [
       ],
       [
         "p",
-        "民间、银行以及政府的多层联动最终在仅仅6年的时间里，把曾经完全是白人社区的East Palo Alto变为了82%非裔居民的名副其实的非裔社会。直到60年后的2010年，East Palo Alto的有色人种依然占据了高达93.8%。",
+        "民间、银行以及政府的多层联动最终在仅仅6年的时间里，把曾经完全是白人社区的East Palo Alto变为了82%非裔居民的名副其实的非裔社区。直到60年后的2010年，East Palo Alto的有色人种依然占据了高达93.8%。",
         "Through this layered coordination among private citizens, banks and government, in only six years East Palo Alto, once an entirely white neighborhood, became a Black community in every sense, with 82% Black residents. Sixty years later, in 2010, people of color still made up as much as 93.8% of East Palo Alto."
       ],
       ["h", "我们不能脱离经济来谈空洞的“公平”", "We can’t talk about empty “fairness” without talking about economics", "03"],
