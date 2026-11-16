@@ -33,32 +33,24 @@ window.READS = [
         "In *Run River*, an old landowning family of the Sacramento Valley treats land, bloodline and family memory as proof of its own superiority. They long for a vanishing California, yet rarely realize that the so-called beautiful past was simply an era in which their privilege had not yet been challenged. What Didion portrays is not only the decline of one family but how a class mistakes its own history for the history of the whole society."
       ],
       [
-        "六十多年后，在同一片加州土地上，新的精英早已取代旧的地主。土地与血统让位于算法、资本和技术创新，家族荣耀变成了创业传奇，而曾经关于西部开拓与无限机会的美国梦，如今则被重新包装为人工智能革命。",
-        "More than sixty years later, on the same California land, a new elite has long since replaced the old landowners. Land and bloodline have given way to algorithms, capital and technological innovation, family glory has become the startup legend, and the American dream of western settlement and limitless opportunity is now repackaged as the AI revolution."
+        "让我在意的是“继承”这个词。这个家族继承的不只是土地，还有一套解释：为什么这些东西属于自己，为什么这是应得的。Didion 写的不仅是一个家族的衰败，更是一个阶级如何将自身的历史误认为整个社会的历史。",
+        "What stays with me is the word “inheritance”. What this family inherits is not only land but an explanation: why these things belong to them, why they are deserved. What Didion writes is not only the decline of one family but how a class mistakes its own history for the history of the whole society."
       ],
       [
-        "两者看似截然不同，却共享着相似的精神结构：都相信自己站在历史进步的中心，都习惯将自身的成功解释为能力与远见的证明，也都倾向于将少数人的利益与想象，叙述为整个社会的共同未来。",
-        "The two seem entirely different, yet they share a similar spiritual structure: both believe they stand at the center of historical progress, both are used to explaining their success as proof of ability and foresight, and both tend to narrate the interests and imaginings of a few as the common future of the whole society."
+        "六十多年后，在同一片土地上，被继承的东西变了。训练最前沿的 AI 模型所需的资金与算力，只有极少数公司和个人负担得起；而这种集中，常被讲述为远见与才能的结果。",
+        "More than sixty years later, on the same land, what is inherited has changed. The funding and computing power needed to train frontier AI models can be afforded by only a handful of companies and individuals; and that concentration is often told as the result of foresight and talent."
       ],
       [
-        "作为今天硅谷技术浪潮的参与者，我越来越难以忽视这种相似性。我亲眼见证技术的真实进步，也参与创造这些进步，但与此同时，我也看到一个行业如何不断生产关于自身重要性的叙事。我们拥有惊人的薪酬、资本与技术资源，热衷于讨论如何重新定义人类未来，却未必同样认真地追问：我们究竟为普通人的生活创造了多少可以感知的价值？",
-        "As a participant in today’s Silicon Valley technology wave, I find it harder and harder to ignore this similarity. I have witnessed real technical progress with my own eyes, and I have helped create it, but at the same time I also see how an industry keeps producing narratives about its own importance. We have astonishing pay, capital and technical resources, and we love to discuss how to redefine humanity’s future, but we do not necessarily ask with the same seriousness: how much perceptible value have we actually created for ordinary people’s lives?"
+        "土地换成了算力，被继承的仍然是同一种叙述：成功来自自身的能力，而不是起点、资本与时机。",
+        "Land has become compute, but what is inherited is still the same narrative: success comes from one’s own ability, not from starting point, capital and timing."
       ],
       [
-        "这并不是对技术进步本身的否定，而是对技术进步被神话化的怀疑。人工智能当然具有改变社会的潜力，但潜力不等于贡献，市场估值不等于社会价值，技术上的突破也不必然意味着人类生活的改善。我们似乎越来越擅长衡量模型的能力，却越来越不愿衡量这些能力究竟服务于谁。",
-        "This is not a denial of technological progress itself, but a suspicion of technological progress being made into myth. AI of course has the potential to change society, but potential is not contribution, market valuation is not social value, and a technical breakthrough does not necessarily mean an improvement in human life. We seem to be getting better and better at measuring what models can do, and less and less willing to measure whom those abilities serve."
+        "更令我不安的是，我并非站在这个世界之外的批评者。我是它的受益者和参与者，享受这个行业给予的物质回报，也曾相信那些关于创造与改变世界的叙事。对硅谷的怀疑，最终也成为对自身的审视。",
+        "What troubles me more is that I am not a critic standing outside this world. I am its beneficiary and participant; I enjoy the material rewards this industry gives, and I too once believed in the narratives of creating and changing the world. My doubt about Silicon Valley ends up becoming an examination of myself."
       ],
       [
-        "更令我不安的是，我并非站在这个世界之外的批评者。我也是它的受益者、参与者，甚至是它所制造的幻觉的共同生产者。我同样享受这个行业给予的物质回报，也曾相信那些关于创造力、创新和改变世界的宏大叙事。因此，对硅谷的怀疑，最终也成为对自身的审视。",
-        "What troubles me more is that I am not a critic standing outside this world. I am also its beneficiary and participant, even a co-producer of the illusions it makes. I too enjoy the material rewards this industry gives, and I too once believed in those grand narratives of creativity, innovation and changing the world. So my doubt about Silicon Valley ends up becoming an examination of myself."
-      ],
-      [
-        "这或许正是重读 Didion 最有意义的地方。她笔下的加州精英始终在讲述关于自己的故事，却很少意识到，故事之外还有一个更加复杂、更加不平等的现实。",
-        "This may be exactly where rereading Didion is most meaningful. The California elites in her writing are always telling stories about themselves, yet rarely realize that beyond the story lies a more complicated, more unequal reality."
-      ],
-      [
-        "从萨克拉门托河谷的土地贵族，到好莱坞的文化精英，再到今天硅谷的人工智能工程师，加州不断更换着梦想的语言，却始终重复着关于财富、优越性与历史使命的自我神话。",
-        "From the land aristocrats of the Sacramento Valley, to the cultural elite of Hollywood, to today’s AI engineers of Silicon Valley, California keeps changing the language of its dream, yet keeps repeating the same self-mythology of wealth, superiority and historical mission."
+        "这或许正是重读 Didion 最有意义的地方：她笔下的精英始终在讲述关于自己的故事，却很少意识到，故事之外还有一个更复杂、更不平等的现实。",
+        "This may be exactly where rereading Didion is most meaningful: the elites in her writing are always telling stories about themselves, yet rarely realize that beyond the story lies a more complicated, more unequal reality."
       ],
       [
         "而这一次，我也身在其中。",
@@ -103,28 +95,20 @@ window.READS = [
         "What is especially notable is that the counterculture in her writing does not naturally stand for genuine social liberation. Many who called themselves rebels against the system remained absorbed in personal identity, spiritual experience and self-expression, with no real answer to deeper class structures, racial inequality and social responsibility. Rebellion gradually became a lifestyle, even a cultural pose available for consumption."
       ],
       [
-        "半个多世纪后，这种精神困境在当代美国，尤其是硅谷，呈现出惊人的相似性。",
-        "More than half a century later, this spiritual predicament shows a startling resemblance in contemporary America, and especially in Silicon Valley."
-      ],
-      [
-        "如果说 Didion 时代的好莱坞不断生产关于自由、创造力和个人成功的幻觉，那么今天的硅谷则将同样的神话包装成技术创新与人工智能革命。人人都在谈论改变世界、重新定义人类未来，却很少认真追问这些技术究竟改善了谁的生活，又为社会创造了多少真实价值。巨额资本、惊人的薪酬与持续膨胀的自我评价，构成了一套几乎自我封闭的价值体系。在这里，创造力往往由市场估值衡量，社会意义则被产品发布会、技术指标和宏大愿景所取代。",
-        "If the Hollywood of Didion’s day kept producing illusions of freedom, creativity and individual success, then today’s Silicon Valley packages the same myth as technological innovation and the AI revolution. Everyone talks about changing the world and redefining humanity’s future, but few seriously ask whose lives these technologies actually improve, and how much real value they create for society. Vast capital, astonishing pay and a steadily swelling self-regard make up an almost self-enclosed system of values. Here, creativity is often measured by market valuation, and social meaning is replaced by product launches, technical metrics and grand visions."
-      ],
-      [
-        "更讽刺的是，这些自称颠覆传统秩序的精英，往往与他们声称要改变的社会现实保持着惊人的距离。正如昔日好莱坞将个人情感包装成普遍的人类经验，今天的科技产业也倾向于将少数人的技术想象包装成全人类的共同未来。技术进步是真实的，但围绕它建立的文化神话，却未必经得起同样严格的审视。",
-        "More ironic still, these elites who claim to overturn the traditional order often keep a startling distance from the social realities they say they will change. Just as the Hollywood of old packaged personal feeling as universal human experience, today’s tech industry also tends to package the technological imagination of a few as the common future of all humanity. Technological progress is real, but the cultural myths built around it may not withstand the same rigorous scrutiny."
+        "读到“反叛成为一种可供消费的文化姿态”，我想到的是今天科技行业最常用的几个词：颠覆、改变世界、民主化。这些词原本带着反抗的意味，如今却出现在融资演示与产品发布里。反叛变成了一种品牌语言，一个越来越难以反对的词汇。",
+        "Reading that rebellion became a cultural pose available for consumption, I think of the words the tech industry uses most: disruption, changing the world, democratizing. These words once carried the sense of resistance; now they turn up in pitch decks and product launches. Rebellion has become a brand language, a vocabulary that is harder and harder to oppose."
       ],
       [
         "当然，Didion 的冷峻本身也值得质疑。她能够以如此疏离的姿态观察社会崩塌，某种程度上也源于她所处的文化与阶级位置。她看穿了反文化运动的虚伪，却未必真正走近那些被美国社会结构性排斥的人。她的怀疑主义揭示了叙事的局限，却不一定提供走出困境的可能。",
         "Of course, Didion’s coolness itself deserves questioning. That she could watch a society collapse from such a detached stance also stems, to some degree, from the cultural and class position she occupied. She saw through the hypocrisy of the counterculture, yet did not necessarily come close to the people structurally excluded by American society. Her skepticism reveals the limits of narrative, but does not necessarily offer a way out of the predicament."
       ],
       [
-        "或许这正是《The White Album》留给今天最重要的问题：当一个社会越来越擅长讲述自己如何改变世界，却越来越难以证明自己真正改善了世界，我们究竟是在创造未来，还是在不断消费关于未来的幻觉？",
-        "Perhaps this is exactly the most important question *The White Album* leaves us today: when a society grows ever better at telling how it changes the world and ever less able to prove that it has truly improved the world, are we creating the future, or just consuming illusions about the future?"
+        "或许这正是《The White Album》留给今天的问题：当“改变世界”成为一个行业最熟练的说法，我们究竟是在创造未来，还是在消费关于未来的故事？",
+        "Perhaps this is exactly the question *The White Album* leaves us today: when “changing the world” becomes the phrase an industry has mastered best, are we creating the future, or consuming stories about the future?"
       ],
       [
-        "Didion 写下的是1960年代美国神话的破裂，而今天的美国，似乎仍在用新的语言，讲述同一个故事。",
-        "What Didion wrote down was the breaking of the American myth of the 1960s, and today’s America seems still to be telling the same story in a new language."
+        "Didion 写下的是1960年代美国神话的破裂；而讲故事的方式，似乎从未真正停下。",
+        "What Didion wrote down was the breaking of the American myth of the 1960s; the telling of stories, it seems, has never really stopped."
       ]
     ]
   },
@@ -149,116 +133,40 @@ window.READS = [
     ],
     "prose": [
       [
-        "读琼·狄迪恩的《Play It as It Lays》时，我不断想到今天的硅谷。",
-        "Reading Joan Didion’s *Play It as It Lays*, I kept thinking of today’s Silicon Valley."
-      ],
-      [
-        "小说描写的是好莱坞，一个充满金钱、名望与创造力的世界。这里的人们拍摄电影、参加聚会、讨论新的项目，似乎每个人都在创造某种重要的东西。然而，在这些令人羡慕的生活背后，狄迪恩呈现的却是一种令人不安的空虚：人们不断制造故事，却越来越无法理解自己的生活。",
-        "The novel is set in Hollywood, a world full of money, fame and creativity. People there make films, go to parties and talk about new projects, and everyone seems to be creating something important. Behind these enviable lives, though, Didion shows an unsettling emptiness: people keep making stories while understanding their own lives less and less."
-      ],
-      [
-        "半个世纪之后，我觉得，人工智能热潮中的硅谷正在呈现某种相似的景象。",
-        "Half a century later, I think, Silicon Valley in the middle of the AI boom is showing something similar."
-      ],
-      [
-        "今天的科技行业同样聚集了惊人的财富与人才。人们谈论颠覆、创新、改变世界，仿佛每一项技术突破都意味着人类社会即将进入一个全新的时代。薪酬、估值与资本投入不断刷新纪录，而身处其中的人，也越来越习惯于将自己的工作理解为推动文明进步的一部分。",
-        "Today’s tech industry likewise gathers astonishing wealth and talent. People talk about disruption, innovation and changing the world, as if every technical breakthrough meant human society were about to enter a new era. Salaries, valuations and capital investment keep setting records, and the people inside grow more and more used to seeing their work as part of the advance of civilization."
-      ],
-      [
-        "但我时常怀疑，这些关于进步的叙述，究竟有多少真正来自社会的需要，又有多少只是行业内部不断重复的自我肯定？",
-        "But I often wonder how much of these narratives of progress truly comes from society’s needs, and how much is just self-affirmation that the industry keeps repeating to itself."
-      ],
-      [
-        "在狄迪恩笔下，好莱坞最令人不安的地方，并不是那里的人缺乏才华，而是他们逐渐生活在一个由自己制造的意义体系之中。电影可以被拍摄，形象可以被塑造，成功可以被衡量，但这些东西未必能够回答一个更简单的问题：它们究竟让人的生活变得更好了吗？",
-        "What is most unsettling about Hollywood in Didion’s pages is not that its people lack talent, but that they gradually come to live inside a system of meaning they have made themselves. Films can be shot, images can be shaped, success can be measured, but none of that necessarily answers a simpler question: did it actually make people’s lives better?"
-      ],
-      [
-        "今天的硅谷似乎也面临同样的矛盾。",
-        "Today’s Silicon Valley seems to face the same contradiction."
-      ],
-      [
-        "我们拥有越来越精密的模型、越来越庞大的计算资源，以及越来越令人惊叹的技术演示。行业内部能够清楚地衡量性能提升、产品增长与市场价值，却未必同样清楚地衡量，这些成就究竟改善了多少普通人的实际生活。",
-        "We have ever more sophisticated models, ever larger computing resources, and ever more astonishing technical demos. Inside the industry, gains in performance, product growth and market value can be measured clearly, but it is not necessarily as clear how much these achievements have improved the actual lives of ordinary people."
-      ],
-      [
-        "我并不否认人工智能的价值，也不认为科技工作者缺乏创造力。恰恰相反，真正令我困惑的是：当如此多聪明的人投入如此巨大的努力时，为什么他们所创造的价值，有时仍然与社会最迫切的问题保持着如此遥远的距离？",
-        "I do not deny the value of AI, nor do I think tech workers lack creativity. Quite the opposite: what really puzzles me is this. When so many smart people put in such enormous effort, why does the value they create sometimes remain so far from society’s most urgent problems?"
-      ],
-      [
-        "我们可以花费大量资源，让机器更加擅长模仿人的表达，却仍然无法轻易解决住房、教育、医疗与社会不平等的问题。技术能力的增长是真实的，但它并不会自动转化为公共福祉。",
-        "We can spend vast resources making machines better at imitating human expression, and still not easily solve housing, education, healthcare and social inequality. The growth in technical capability is real, but it does not automatically turn into public welfare."
-      ],
-      [
-        "这让我想到小说中的玛丽亚·怀思。",
-        "This brings me to Maria Wyeth in the novel."
+        "读琼·狄迪恩的《Play It as It Lays》，我最难忘的不是情节，而是玛丽亚开车的画面。",
+        "Reading Joan Didion’s *Play It as It Lays*, what I remember most is not the plot but the image of Maria driving."
       ],
       [
         "她不断驾驶汽车穿越洛杉矶的高速公路，专注于车速、车道与出口。她始终在移动，却没有明确的目的地。驾驶让她暂时不必面对那些无法回答的问题，也让她在不断行动之中获得某种秩序。",
         "She keeps driving across the freeways of Los Angeles, absorbed in speed, lanes and exits. She is always moving, yet has no clear destination. Driving lets her avoid, for a while, the questions she cannot answer, and gives her a kind of order in constant motion."
       ],
       [
-        "我觉得，这个画面几乎可以成为今天硅谷的隐喻。",
-        "I think this image could almost be a metaphor for today’s Silicon Valley."
+        "小说的背景是好莱坞，一个充满金钱、名望与创造力的世界：人们拍电影、参加聚会、讨论新的项目，似乎每个人都在创造重要的东西。但狄迪恩写下的，是这些活动背后令人不安的空虚。",
+        "The novel is set in Hollywood, a world full of money, fame and creativity: people make films, go to parties and talk about new projects, and everyone seems to be creating something important. But what Didion writes down is the unsettling emptiness behind all that activity."
       ],
       [
-        "我们不断训练更大的模型，追逐更高的指标，发布更新的产品。每一步都有清楚的技术目标，每一次进步都可以得到证明。但当所有人都专注于如何开得更快时，似乎很少有人停下来追问，我们究竟要去哪里。",
-        "We keep training bigger models, chasing higher benchmarks, releasing newer products. Every step has a clear technical goal, and every advance can be demonstrated. But when everyone is focused on how to drive faster, few seem to stop and ask where we are actually going."
+        "封面上印着书里的一句话：“I know what ‘nothing’ means, and keep on playing.”",
+        "The cover prints a line from the book: “I know what ‘nothing’ means, and keep on playing.”"
       ],
       [
-        "玛丽亚的问题不是她不会驾驶，而是驾驶本身逐渐取代了目的地。",
-        "Maria’s problem is not that she cannot drive, but that the driving itself has gradually replaced the destination."
+        "今天的 AI 行业，让我想到的正是这种状态：速度。我们不断训练更大的模型，追逐更高的指标，发布更新的产品。每一步都有清楚的目标，每一次进步都可以被证明。但当所有人都专注于怎样开得更快时，很少有人停下来追问，我们究竟要去哪里。",
+        "Today’s AI industry reminds me of exactly this condition: speed. We keep training bigger models, chasing higher benchmarks, releasing newer products. Every step has a clear goal, and every advance can be demonstrated. But when everyone is focused on how to drive faster, few stop to ask where we are actually going."
       ],
       [
-        "而硅谷的危险，或许也不是缺乏创新，而是创新本身逐渐取代了创新原本应该服务的目标。",
-        "And the danger for Silicon Valley may likewise not be a lack of innovation, but that innovation itself has gradually replaced the goal it was supposed to serve."
+        "玛丽亚的问题不是她不会驾驶，而是驾驶本身逐渐取代了目的地。行业的危险也许同样如此：创新本身取代了创新原本应该服务的目标。",
+        "Maria’s problem is not that she cannot drive, but that the driving itself has gradually replaced the destination. The danger for the industry may be much the same: innovation itself replacing the goal innovation was meant to serve."
       ],
       [
-        "当然，技术行业与好莱坞并不完全相同。人工智能确实可能带来广泛的生产力提升，也可能改善医疗、科研与教育。但可能性并不等于已经实现的社会价值。一个行业对未来的承诺，也不能自动成为它在当下获得财富、地位与资源的正当理由。",
-        "Of course, the tech industry is not quite the same as Hollywood. AI may indeed bring broad gains in productivity, and may improve healthcare, research and education. But possibility is not the same as social value already realized. An industry’s promises about the future cannot automatically justify the wealth, status and resources it takes in the present."
+        "我们擅长衡量的，是模型的能力、产品的增长与公司的估值；不那么擅长衡量的，是这些能力究竟服务于谁。估值不等于社会价值，潜力也不等于已经实现的贡献。",
+        "What we are good at measuring is what models can do, how products grow and what companies are worth; what we are less good at measuring is whom those abilities serve. Valuation is not social value, and potential is not contribution already made."
       ],
       [
-        "尤其令我不安的是，当一个行业拥有极高的薪酬与社会声望时，身处其中的人很容易将这些外部奖励理解为自身贡献的证明。",
-        "What troubles me especially is that when an industry enjoys very high pay and social prestige, the people inside it can easily take these external rewards as proof of their own contribution."
+        "小说结尾，玛丽亚没有得到一个能够解释自己人生的答案，她仍然必须面对生活本身。",
+        "At the end of the novel, Maria does not get an answer that explains her life; she still has to face life itself."
       ],
       [
-        "然而，市场愿意支付多少，与一个人真正为社会创造多少价值，从来不是同一个问题。",
-        "Yet how much the market is willing to pay and how much value a person actually creates for society have never been the same question."
-      ],
-      [
-        "好莱坞通过票房、明星与影像制造成功的象征；硅谷则通过估值、算力与技术指标制造进步的象征。两者的成就未必虚假，但它们都可能让行业内部的评价体系，逐渐取代对外部世界的真实关切。",
-        "Hollywood makes its symbols of success from box office, stars and images; Silicon Valley makes its symbols of progress from valuations, compute and technical benchmarks. The achievements of both are not necessarily false, but both can let the industry’s internal system of evaluation gradually replace real concern for the world outside."
-      ],
-      [
-        "这也是为什么我觉得，狄迪恩的小说并没有因为时代变化而失去锋芒。",
-        "This is also why I think Didion’s novel has not lost its edge as times have changed."
-      ],
-      [
-        "她所描写的，不只是好莱坞的空虚，而是一种更普遍的现代处境：当人们拥有越来越多创造、选择与行动的能力时，却未必因此更加清楚这些能力应该用于什么。",
-        "What she describes is not only Hollywood’s emptiness but a more general modern condition: as people gain more and more capacity to create, choose and act, they do not necessarily become any clearer about what that capacity is for."
-      ],
-      [
-        "小说结尾，玛丽亚没有获得一个能够解释自己人生的答案。她仍然必须面对生活本身，而不是生活应该呈现出的样子。",
-        "At the end of the novel, Maria does not get an answer that explains her life. She still has to face life itself, not the way life is supposed to look."
-      ],
-      [
-        "我想，今天的硅谷或许也需要这样的时刻。",
-        "I think today’s Silicon Valley may need such a moment too."
-      ],
-      [
-        "不是再一次宣布我们将如何改变世界，而是暂时放下那些关于未来的宏大叙事，认真看看已经被我们改变的世界，以及那些始终没有被触及的人。",
-        "Not another announcement of how we will change the world, but a pause in the grand narratives about the future, and a serious look at the world we have already changed, and at the people who have never been reached."
-      ],
-      [
-        "读完小说，我最难忘的仍然是玛丽亚独自驾驶的画面。洛杉矶的高速公路不断向前延伸，她熟练地变换车道，汽车始终保持着速度。",
-        "After finishing the novel, what I remember most is still the image of Maria driving alone. The freeways of Los Angeles stretch on and on, she changes lanes with practiced ease, and the car never loses speed."
-      ],
-      [
-        "但道路不会因为我们开得足够快，就自动通向一个值得抵达的地方。",
-        "But a road does not automatically lead somewhere worth reaching just because we drive fast enough."
-      ],
-      [
-        "或许，我们这个时代最需要警惕的，并不是技术停止进步，而是当所有人都沉醉于进步的速度时，已经没有人认真追问，进步究竟是为了谁。",
-        "Perhaps what our age most needs to guard against is not technology ceasing to advance, but that, while everyone is intoxicated by the speed of progress, no one is seriously asking who the progress is for."
+        "读完之后，我最难忘的仍然是那条不断向前延伸的高速公路。道路不会因为我们开得足够快，就自动通向一个值得抵达的地方。",
+        "After finishing, what I remember most is still that freeway stretching on and on. A road does not automatically lead somewhere worth reaching just because we drive fast enough."
       ]
     ]
   },
@@ -1833,7 +1741,6 @@ window.READS = [
     "place": "于韩国首尔\nSeoul, South Korea",
     "languages": ["Chinese", "English"],
     "blocks": [
-      ["sub", "——读张康明《한국이 싫어서》（因为讨厌韩国）", "—Reading Jang Gang-myeong’s *한국이 싫어서* (“Because I Hate Korea”)"],
       ["p", "我们常常赞美那些勇敢离开故乡、重新开始生活的人，仿佛只要有足够的勇气，每个人都能选择自己想要的人生。但读张康明的《한국이 싫어서》，我渐渐意识到，离开从来不只是勇气的问题。当一个人必须离开自己的国家，才能过上自己想要的生活，这究竟是个人自由的体现，还是一个社会无法容纳不同生活方式的结果？而那些没有能力离开的人，又是否拥有同样的选择权利？", "We often praise those who bravely leave their homeland and start life anew, as if anyone with enough courage could choose the life they want. But reading Jang Gang-myeong’s *한국이 싫어서*, I gradually realized that leaving has never been only a matter of courage. When a person has to leave their country in order to live the life they want, is that an expression of individual freedom, or the result of a society that cannot accommodate different ways of living? And do those who have no means to leave have the same right to choose?"],
       ["p", "小说中的桂娜并不是传统意义上的失败者。她受过教育，在韩国的金融公司拥有一份相对稳定的工作，也有可以预见的人生道路。然而，她依然决定辞职，前往澳大利亚。我觉得，理解桂娜的关键，并不在于她有多么讨厌韩国，而在于她最初甚至很难向别人解释，为什么一种看似正常的生活会让自己如此疲惫。", "Gyena, the novel’s protagonist, is not a failure in the conventional sense. She is educated, holds a fairly stable job at a financial company in Korea, and has a foreseeable path ahead of her. Yet she still decides to quit and go to Australia. I think the key to understanding Gyena is not how much she hates Korea, but that at first she can hardly explain to others why a seemingly normal life leaves her so exhausted."],
       ["p", "在韩国，桂娜的困境并不是缺少一条可以继续走下去的道路，而是那条道路似乎早已替她决定了终点。每天拥挤的通勤、重复的办公室工作、对收入与未来的焦虑，让她逐渐意识到，自己或许能够成为一个符合社会期待的人，却未必能够接受这种生活。她并不是没有能力参与竞争，而是开始怀疑，为什么人生必须以竞争的结果来衡量。", "In Korea, Gyena’s predicament is not that she lacks a road to keep walking, but that the road seems to have decided her destination in advance. The crowded daily commute, the repetitive office work and the anxiety about income and the future make her gradually realize that she may be able to become a person who meets society’s expectations, yet cannot accept that kind of life. It is not that she is unable to compete; she begins to wonder why life has to be measured by the results of competition."],
