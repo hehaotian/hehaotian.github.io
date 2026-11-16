@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Bib Gourmand">
+  <!-- a simple smiling face in Michelin red: stand-in for the official Bib Gourmand mark; replace this file with the real artwork if you have it -->
+  <g fill="none" stroke="#ba0b2f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M50 8c-9 0-14 6-19 6-8 0-14 6-14 14 0 4 1 7 3 9-4 4-6 9-6 15 0 19 15 40 36 40s36-21 36-40c0-6-2-11-6-15 2-2 3-5 3-9 0-8-6-14-14-14-5 0-10-6-19-6z"/>
+    <path d="M30 56c5 14 15 20 20 20s15-6 20-20z" fill="#ba0b2f"/>
+  </g>
+  <g fill="#ba0b2f"><ellipse cx="37" cy="44" rx="4.5" ry="6"/><ellipse cx="63" cy="44" rx="4.5" ry="6"/></g>
+  <path d="M42 70c3-4 13-4 16 0-3 6-13 6-16 0z" fill="#fff"/>
+</svg>

@@ -4,6 +4,16 @@
 <meta charset="utf-8">
 <title>Haotian</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Haotian He: notes, reads, plates, goods and steps.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Haotian">
+<meta property="og:title" content="Haotian">
+<meta property="og:description" content="Notes, reads, plates, goods and steps. Have a nice day.">
+<meta property="og:url" content="https://hehaotian.com/">
+<meta property="og:image" content="https://hehaotian.com/assets/photos/home.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111'/%3E%3Cpath d='M10 8v16M22 8v16M10 16h12' stroke='%23fff' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -22,21 +32,25 @@
 
 <main>
   <section id="home" class="tab" hidden>
-    <div class="col">
-      <h1>Haotian</h1>
-      <p class="intro">Have a nice day.</p>
+    <div class="col home">
+      <div class="hhead">
+        <h1>Haotian</h1>
+        <p class="intro">Have a nice day.</p>
+      </div>
       <figure class="portrait">
         <img src="assets/photos/home.jpeg" alt="Haotian looking at the Seven Sisters chalk cliffs from Seaford Head" width="1200" height="1200">
         <figcaption>July 26, 2026, Seaford, East Sussex, United Kingdom</figcaption>
       </figure>
-      <ul class="links">
-        <li><a href="#notes">Notes</a><span>No bots, just soul.</span></li>
-        <li><a href="#reads">Reads</a><span>What books left me with.</span></li>
-        <li><a href="#plates">Plates</a><span>Eating my way around.</span></li>
-        <li><a href="#goods">Goods</a><span>Small things, shared.</span></li>
-        <li><a href="#steps">Steps</a><span>Every place since 1989.</span></li>
-        <li><a href="#gigs">Gigs</a><span>Hands busy, mind open.</span></li>
-      </ul>
+      <div class="pages">
+        <ul class="links">
+          <li><a href="#notes">Notes</a><span>No bots, just soul.</span><a class="lat" data-latest="note" hidden></a></li>
+          <li><a href="#reads">Reads</a><span>What books left me with.</span><a class="lat" data-latest="read" hidden></a></li>
+          <li><a href="#plates">Plates</a><span>Eating my way around.</span><a class="lat" data-latest="plate" hidden></a></li>
+          <li><a href="#goods">Goods</a><span>Small things, shared.</span><a class="lat" data-latest="gift" hidden></a></li>
+          <li><a href="#steps">Steps</a><span>Every place since 1989.</span><a class="lat" data-latest="step" hidden></a></li>
+          <li><a href="#gigs">Gigs</a><span>Hands busy, mind open.</span><a class="lat" data-latest="gig" hidden></a></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -60,6 +74,7 @@
     <div class="col">
       <h2>Goods</h2>
       <div id="goods-kpis" class="kpis"></div>
+      <section id="goods-verdict" class="verdict" hidden aria-label="AI assessment of my giving"></section>
       <div class="dash">
         <section class="card wide"><h3>By year</h3><div id="goods-years"></div><p class="cnote">Each column is 100% of that year’s giving, split by cause.</p></section>
         <section class="card"><h3>By cause</h3><div id="goods-causes"></div><p class="cnote">Each bar shows its share of everything given.</p></section>

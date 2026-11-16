@@ -1,11 +1,12 @@
 // A plain H that follows the pointer. Over links it grows and tilts; on click it squashes and the crossbar spins.
 // Desktop only: touch devices keep their normal behaviour. Loaded by the site pages only; the Steps map keeps the default cursor.
 (() => {
-  if (!matchMedia("(pointer: fine)").matches) return;
+  if (!matchMedia("(pointer: fine)").matches || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   const style = document.createElement("style");
   style.textContent = `
     html.h-on, html.h-on * { cursor: none !important; }
+    html.h-on #reader .text, html.h-on #reader .text * { cursor: text !important; }   /* reading: the normal text cursor */
     #h-cursor { position: fixed; left: 0; top: 0; z-index: 2147483647; pointer-events: none; opacity: 0; transition: opacity .15s; }
     #h-cursor svg { width: 32px; height: 32px; margin: -16px 0 0 -16px; display: block; overflow: visible;
       stroke: #111; stroke-width: 3.2; stroke-linecap: round; fill: none;
@@ -28,7 +29,7 @@
   const LINK = "a, button, summary, select, [role=button], .leaflet-interactive";
   document.addEventListener("pointermove", e => {
     el.style.transform = `translate(${e.clientX}px,${e.clientY}px)`;
-    el.style.opacity = e.target.tagName === "IFRAME" ? 0 : 1;      // over the Steps frame, show the normal cursor
+    el.style.opacity = e.target.tagName === "IFRAME" || e.target.closest("#reader .text") ? 0 : 1;      // over the Steps frame, show the normal cursor
     el.classList.toggle("link", !!e.target.closest(LINK));
   });
   document.addEventListener("pointerdown", () => el.classList.add("down"));

@@ -1,10 +1,11 @@
 :root { --c0: #8a867c; --c1: #3a6ea5; --c2: #d4602f; --c3: #2e9a6e; --c4: #d19a14; --c5: #a8568f;   /* Goods chart colours (validated for colour-blind separation; c0 = grey for "Other"). They live on :root so every Goods component can use them. */
-  --text: #111; --muted: #777; --line: #e4e4e4; --nav-h: 60px; }
+  --text: #111; --muted: #6b6b6b; --line: #e4e4e4; --nav-h: 60px; }
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; background: #fff; color: var(--text);
   font: 17px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { text-decoration-color: var(--muted); }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; border-radius: 2px; }
 
 /* header: the name on the left and a three-line menu button on the right, both on the same left/right edges as the text column below,
    so "Haotian" in the bar always sits right above "Haotian" on the home page. The section links open in a panel under the bar. */
@@ -37,8 +38,17 @@ body[data-tab="steps"] { --frame: 100vw; }   /* the map is full width, so the ba
 #tabs a:last-child { border-bottom: 0; }
 #tabs a:hover, #tabs a.active { color: var(--text); }
 
+/* wide screens: the section links sit in the bar itself; the three-line button is for narrow screens only */
+@media (min-width: 761px) {
+  .menu-btn { display: none; }
+  #tabs { position: static; flex-direction: row; gap: 26px; padding: 0; background: none; border: 0; opacity: 1; visibility: visible; transform: none; transition: none; }
+  #tabs a { padding: 4px 0; font-size: 15px; letter-spacing: 0; border: 0; border-bottom: 1px solid transparent; }
+  #tabs a.active { border-bottom-color: currentColor; }
+}
+
 main { padding-top: var(--nav-h); }
 .tab[hidden] { display: none; }
+.tab { scroll-margin-top: var(--nav-h); }   /* a link to #plates etc. must not tuck the top of the page under the fixed bar */
 .col { max-width: var(--frame); margin: 0 auto; padding: 32px 24px 120px; }
 
 h1 { font-size: 40px; font-weight: 600; letter-spacing: -.5px; line-height: 1.1; margin: 0 0 20px; }
@@ -59,10 +69,20 @@ h3 { font-size: 13px; font-weight: 400; color: var(--muted); margin: 48px 0 8px;
 .tab-full iframe { width: 100%; height: 100%; border: 0; display: block; }
 
 /* Gigs */
-.gig { display: flex; gap: 24px; padding: 14px 0; border-top: 1px solid var(--line); }
-.gig .when { width: 110px; flex: none; color: var(--muted); font-variant-numeric: tabular-nums; }
-.gig p { margin: 0; }
-.gig .where { color: var(--muted); }
+/* Gigs: project cards (cover, title, summary, tags, place and date) */
+body[data-tab="gigs"] { --frame: 880px; }
+.gigs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px 24px; }
+.gcard { display: flex; flex-direction: column; min-width: 0; color: var(--text); text-decoration: none; }
+.gcov, .gph { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); transition: border-color .15s ease; }
+.gph { display: flex; align-items: center; justify-content: center; background: #f6f4ef; color: #a39f93; font: italic 15px/1 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+.gcard:hover .gcov, .gcard:hover .gph { border-color: #aaa; }
+.gm { margin-top: 14px; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.gt { margin-top: 4px; font-size: 19px; font-weight: 600; line-height: 1.3; letter-spacing: -.2px; }
+.gcard:hover .gt { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.gs { margin-top: 6px; color: var(--muted); font-size: 15px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.gtags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.gtags span { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 1px 10px; }
+@media (max-width: 600px) { .gigs { grid-template-columns: 1fr; } }
 .empty { color: var(--muted); margin: 0; }
 
 /* Reads: a wall of covers */
@@ -80,7 +100,7 @@ h3 { font-size: 13px; font-weight: 400; color: var(--muted); margin: 48px 0 8px;
 @media (max-width: 640px) {
   :root { --gutter: 20px; } .brand { font-size: 17px; }
   .col { padding: 16px 20px 80px; } h1, h2 { font-size: 34px; }
-  .gig, .note { flex-direction: column; gap: 0; }
+  .note { flex-direction: column; gap: 0; }
 }
 
 .copy { margin: 64px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
@@ -111,6 +131,18 @@ body[data-tab="goods"] { --frame: 1000px; }
 .kpi .ks { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .kpi.dark { background: var(--text); border-color: var(--text); color: #fff; }
 .kpi.dark .kl, .kpi.dark .ks { color: rgba(255,255,255,.6); }
+/* AI assessment: a full-width hairline card between the KPI tiles and the charts */
+.verdict { margin: 0 0 16px; padding: 24px 28px 20px; border: 1px solid var(--line); border-radius: 8px; }
+.verdict .vk { margin: 0 0 10px; color: var(--muted); font-size: 12px; letter-spacing: .8px; text-transform: uppercase; }
+.verdict .vk span { margin-right: 4px; }
+.verdict .vh { margin: 0 0 18px; font-size: 22px; font-weight: 600; line-height: 1.3; letter-spacing: -.3px; color: var(--text); white-space: normal; }
+.verdict .vp { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px 32px; }
+.verdict .vp p { margin: 0; font-size: 15px; line-height: 1.55; color: #3d3d3d; }
+.verdict .vp strong, .verdict .vv strong { display: block; margin-bottom: 2px; font-weight: 600; color: var(--text); }
+.verdict .vv { margin: 22px 0 0; padding-top: 16px; border-top: 1px solid var(--line); font-size: 15px; line-height: 1.55; }
+.verdict .vv strong { display: inline; margin: 0; }
+.verdict .vf { margin: 14px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+@media (max-width: 760px) { .verdict { padding: 20px 20px 16px; } .verdict .vp { grid-template-columns: 1fr; } .verdict .vh { font-size: 20px; } }
 .dash { display: grid; grid-template-columns: 7fr 5fr; gap: 16px; align-items: stretch; }   /* both cards always the same height */
 .card { display: flex; flex-direction: column; padding: 22px 24px; border: 1px solid var(--line); border-radius: 8px; min-width: 0; }
 .card > div { flex: 1; }
@@ -310,3 +342,45 @@ a.plate:hover { border-color: #aaa; }
   .ny .note .cat { margin-left: auto; }
 }
 .ny:not(.open) .yh::after { content: "+"; color: var(--muted); font-size: 16px; margin-left: 2px; }
+
+/* Home: on wide screens the photo sits left and the text right (name, Latest, Pages); on phones everything stacks in that order */
+body[data-tab="home"] { --frame: 1040px; }
+.home { display: grid; grid-template-columns: 5fr 6fr; grid-template-areas: "head pages" "photo pages"; grid-template-rows: auto 1fr; column-gap: 56px; align-items: start; }
+.home .hhead { grid-area: head; }
+.home .hhead { margin-bottom: 28px; }
+.home .hhead h1 { margin-bottom: 14px; }
+.home .hhead .intro { margin: 0; font-size: 19px; }
+.home .portrait { grid-area: photo; margin: 0; }
+.home .pages { grid-area: pages; align-self: end; }
+/* both columns end on the same line: the photo (square at least) stretches to fill the left column, caption included, down to the last line of the list */
+@media (min-width: 861px) {
+  .home .portrait { align-self: stretch; display: flex; flex-direction: column; min-height: 0; }
+  .home .portrait img { flex: 1 1 auto; min-height: 0; width: 100%; height: auto; }
+}
+.home .links { margin: 0; border-top: 0; }
+.links li { align-items: baseline; }
+.links a { text-decoration: none; }
+.links > li > a:first-child:hover { text-decoration: underline; text-underline-offset: 3px; }
+.links span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: right; }
+.links li { flex-wrap: wrap; }
+.links .lat { flex: 1 1 100%; display: flex; gap: 10px; align-items: baseline; min-width: 0; margin-top: -4px; font-size: 14px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.links .lat .lt { flex: 1; min-width: 0; text-align: left; overflow: hidden; text-overflow: ellipsis; }
+.links .lat .ld { flex: none; margin-left: auto; padding-left: 12px; text-align: right; font-variant-numeric: tabular-nums; }
+.links .lat small { flex: none; font-size: 11px; letter-spacing: .8px; text-transform: uppercase; opacity: .8; }
+.links .lat:hover { color: var(--text); text-decoration: none; }   /* no underline on the Latest lines, only a darker colour */
+.links li > a:first-child { flex: none; }
+.links li > span { flex: 1; }
+@media (max-width: 860px) {
+  .home { display: block; }
+  .home .portrait { position: static; margin-top: 32px; }
+  .home .pages { margin-top: 40px; }
+}
+
+/* reader: older / newer */
+#reader .pn { display: flex; justify-content: space-between; gap: 24px; margin: 0 84px; padding: 22px 0 56px; border-top: 1px solid #cfc9bb; font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+#reader .pn a { max-width: 48%; color: var(--muted); text-decoration: none; }
+#reader .pn a:hover { color: var(--text); }
+#reader .pn a.older { margin-left: auto; text-align: right; }
+#reader .pn small { display: block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; opacity: .8; margin-bottom: 2px; }
+#reader .sheet:focus { outline: none; }
+@media (max-width: 640px) { #reader .pn { margin: 0 32px; } }

@@ -41,7 +41,7 @@ window.NOTES = [
       ],
       [
         "她所说的“不思考”，并不是智力上的欠缺，而是失去了与自己对话的能力。在她看来，思考就是一个人与自己的内心对话；而一个习惯于套话、口号和现成说法的人，也就不再需要这场对话。这些现成的说法像一层保护，让人不必直接面对现实，包括现实中某个具体的人所承受的一切。",
-        "By not thinking she does not mean a shortfall of intelligence, but the loss of the ability to hold a conversation with oneself. For her, thinking is a person’s inner dialogue with himself, and someone who lives by set phrases, slogans and ready-made explanations no longer needs that dialogue. Those ready-made phrases act as a kind of protection, letting a person avoid facing reality directly, including what some particular person is going through in it."
+        "By “not thinking” she does not mean a shortfall of intelligence, but the loss of the ability to hold a conversation with oneself. For her, thinking is a person’s inner dialogue with himself, and someone who lives by set phrases, slogans and ready-made explanations no longer needs that dialogue. Those ready-made phrases act as a kind of protection, letting a person avoid facing reality directly, including what some particular person is going through in it."
       ],
       [
         "当然，我并不认为持有某种政治信念便意味着参与了恶，也不能将普通人的思想局限与历史上的严重罪行简单等同。但阿伦特提出的问题依然值得我们面对：如果一个人始终认为自己只是在履行责任、遵守规则、维护集体利益，那么他是否还会追问，这些行为究竟对他人造成了什么？",
@@ -280,7 +280,7 @@ window.NOTES = [
     "slug": "taiwan",
     "category": "Lines",
     "place": "於台灣台北\nTaipei, Taiwan",
-    "languages": ["Chinese", "English"],
+    "languages": ["Traditional Chinese", "English"],
     "pairStanzas": [
       [
         ["台北的街頭熱鬧，", "Taipei’s streets are lively,"],
@@ -757,7 +757,7 @@ window.NOTES = [
     "prose": [
       [
         "我一直是一个“三分钟热度”的人。过去，别人这样评价我时，我总会有些介意，仿佛兴趣不够持久，就意味着缺乏恒心，甚至不够成熟。",
-        "I have always been someone with “three-minute enthusiasm.” In the past, when others described me this way, I always minded a little, as if interests that do not last meant a lack of perseverance, or even a lack of maturity."
+        "I have always been someone whose enthusiasm “lasts only three minutes.” In the past, when others described me this way, I always minded a little, as if interests that do not last meant a lack of perseverance, or even a lack of maturity."
       ],
       ["但现在，我反而觉得，或许我才是那个真正认真在生活的人。", "But now I feel, if anything, that perhaps I am the one who is truly taking life seriously."],
       ["我逐渐意识到，人生中真正稀缺的资源是：", "I have gradually realized that the truly scarce resources in life are:"],
@@ -819,7 +819,7 @@ window.NOTES = [
       ],
       [
         "但读完Christopher B. Krebs的《Borealism: Caesar, Seneca, Tacitus, and the Roman Discourse about the Germanic North》，我开始怀疑：我们所理解的历史，究竟有多少来自真实发生的事情，又有多少来自掌握叙事权的人希望我们相信的事情？",
-        "But after reading Christopher B. Krebs’s “Borealism: Caesar, Seneca, Tacitus, and the Roman Discourse about the Germanic North,” I began to wonder: how much of the history we understand comes from what actually happened, and how much from what those who held the power of narrative wanted us to believe?"
+        "But after reading Christopher B. Krebs’s *Borealism: Caesar, Seneca, Tacitus, and the Roman Discourse about the Germanic North*, I began to wonder: how much of the history we understand comes from what actually happened, and how much from what those who held the power of narrative wanted us to believe?"
       ],
       [
         "凯撒笔下的日耳曼人，是纪律严明、骁勇善战的民族。他将高卢描绘成可以被征服和管理的世界，却将日耳曼地区置于罗马秩序之外。这种区分不仅是地理与民族的描述，也服务于他的军事与政治利益。而到了塔西佗笔下，同一个民族却逐渐变成了冲动、易怒、缺乏自律的群体。他借鉴塞涅卡对愤怒的分析，重新解释日耳曼人的性格，并暗示罗马可以利用他们的弱点。",

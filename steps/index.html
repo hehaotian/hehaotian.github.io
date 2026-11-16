@@ -606,6 +606,16 @@ function markYear(y) {                                       // highlight the cu
   if (b) yearsEl.scrollTo({ left: b.offsetLeft - yearsEl.clientWidth / 2 + b.offsetWidth / 2, behavior: "smooth" });
 }
 
+// ---- deep link: steps/#YYYY-MM-DD (a stop's "from" date) opens the map paused at that stop instead of at 1989. The home page uses it for "Latest".
+function jumpToHash() {
+  const stop = stops.find(x => x.from === location.hash.slice(1));
+  if (!stop) return;
+  setPlaying(false);
+  pos = stop.start; shown = -1; camKey = ""; render();
+}
+window.addEventListener("hashchange", jumpToHash);
+jumpToHash();
+
 render();
 </script>
 </body>

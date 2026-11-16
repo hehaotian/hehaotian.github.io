@@ -4,6 +4,7 @@ const frame = document.getElementById("steps-frame");
 let currentTab = "";
 
 function show(name) {
+  const sub = name.split("/")[1];                                    // "#steps/2026-11-06" opens the map at that stop
   name = name.split("/")[0];                                         // "#notes/delivery" is the Notes tab with a note open
   if (name === "travels") name = "steps";
   if (!TABS.includes(name)) name = "home";
@@ -13,7 +14,7 @@ function show(name) {
     if (link) link.classList.toggle("active", t === name);
   });
   // the heavy map page loads only the first time you open Steps
-  if (name === "steps" && !frame.src) frame.src = frame.dataset.src;
+  if (name === "steps" && (sub || !frame.src)) frame.src = frame.dataset.src + (sub ? "#" + encodeURIComponent(sub) : "");
   document.body.dataset.tab = name;                                  // lets the CSS match the top bar to this page's column width
   document.title = name === "home" ? "Haotian" : `${name[0].toUpperCase() + name.slice(1)} · Haotian`;
   if (name !== currentTab) window.scrollTo(0, 0);   // opening a pop-up on the same tab keeps the page where it is
@@ -35,20 +36,42 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "
 const fmtDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 // country flags for the filter buttons (Notes and Plates); unknown countries fall back to their name
 const FLAGS = { "Peru": "🇵🇪", "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽", "Egypt": "🇪🇬" };
+const fullDate = d => { d = String(d || ""); return d.length === 4 ? d + "-01-01" : d.length === 7 ? d + "-01" : d; };   // "2026" / "2026-10" / "2026-10-10" compare correctly
+const thumb = f => `src="assets/thumbs/${esc(f)}" onerror="this.onerror=null;this.src='assets/photos/${esc(f)}'"`;   // small copy for the grids (tools/make_thumbs.sh); falls back to the full photo
+const orders = {};                       // tab -> [{slug, title}] newest first: the older / newer links at the foot of a page
+const latest = [];                       // newest entry of each kind, for the line on Home
 const slugify = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const reader = document.createElement("div");
 reader.id = "reader"; reader.hidden = true;
 document.body.append(reader);
 const popups = {};                       // tab -> slug -> html of the page body
 let openTab = "";
+let lastFocus = null, savedY = 0;   // savedY: where the page behind was scrolled when a pop-up opened
+reader.setAttribute("role", "dialog"); reader.setAttribute("aria-modal", "true");
+function pageNav(tab, slug) {
+  const o = orders[tab], i = o ? o.findIndex(x => x.slug === slug) : -1;
+  if (i < 0) return "";
+  const link = (x, cls, label) => x ? `<a class="${cls}" href="#${tab}/${x.slug}"><small>${label}</small>${esc(x.title)}</a>` : "";
+  const html = link(o[i - 1], "newer", "← Newer") + link(o[i + 1], "older", "Older →");
+  return html ? `<nav class="pn" aria-label="More">${html}</nav>` : "";
+}
 function syncReader() {
-  const m = location.hash.match(/^#(\w+)\/(.+)$/);
+  const m = location.hash.match(/^#(\w+)\/(.+)$/), was = !reader.hidden;
   const html = m && popups[m[1]] && popups[m[1]](decodeURIComponent(m[2]));
-  if (!html) { reader.hidden = true; document.body.classList.remove("reading"); return; }
+  const lock = on => { document.querySelector("main").inert = on; topBar.inert = on; };   // the page behind a pop-up can't be tabbed into
+  if (!html) {
+    reader.hidden = true; document.body.classList.remove("reading"); lock(false);
+    if (was && lastFocus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true });
+    if (was) { lastFocus = null; window.scrollTo(0, savedY); }   // closing returns to the same spot (the browser would jump to the top of the tab)
+    return;
+  }
   openTab = m[1];
-  reader.innerHTML = `<div class="sheet"><div class="bar"><button type="button" class="save" title="Save as image" aria-label="Save as image">↓</button><a class="close" href="#${openTab}" title="Close" aria-label="Close">✕</a></div><article>${html}</article></div>`;
+  if (!was) { lastFocus = document.activeElement; savedY = window.scrollY; }
+  reader.innerHTML = `<div class="sheet" tabindex="-1"><div class="bar"><button type="button" class="save" title="Save as image" aria-label="Save as image">↓</button><a class="close" href="#${openTab}" title="Close" aria-label="Close">✕</a></div><article>${html}</article>${pageNav(openTab, m[2])}</div>`;
+  reader.setAttribute("aria-label", (reader.querySelector("h1") || {}).textContent || "Page");
   reader.hidden = false; reader.scrollTop = 0;
-  document.body.classList.add("reading");
+  document.body.classList.add("reading"); lock(true);
+  reader.querySelector(".sheet").focus({ preventScroll: true });
 }
 reader.addEventListener("click", e => {
   if (e.target === reader) location.hash = "#" + openTab;   // click outside the page to close
@@ -120,6 +143,12 @@ async function saveImage(btn) {
 }
 window.addEventListener("hashchange", syncReader);
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !reader.hidden) location.hash = "#" + openTab; });
+// left / right arrows go to the newer / older page
+document.addEventListener("keydown", e => {
+  if (reader.hidden || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || (e.key !== "ArrowLeft" && e.key !== "ArrowRight")) return;
+  const a = reader.querySelector(e.key === "ArrowLeft" ? ".pn .newer" : ".pn .older");
+  if (a) { e.preventDefault(); location.hash = a.getAttribute("href"); }
+});
 
 // Unique, readable link names for a list of entries
 function slugs(list, base) {
@@ -147,30 +176,35 @@ function detailPage({ kind, title, meta, item, tools, lang }) {
   const today = new Date().toISOString().slice(0, 10);
   const all = (window.GIGS || []).slice().sort((a, b) => (a.date < b.date ? -1 : 1));
   const ids = slugs(all, g => g.title);
-  const row = (g) => `<a class="gig" href="#gigs/${ids[all.indexOf(g)]}"><div class="when">${fmtDate(g.date)}</div><div>
-    <p>${esc(g.title)}</p>
-    <p class="where">${esc([g.venue, g.location].filter(Boolean).join(", "))}${g.note ? " · " + esc(g.note) : ""}</p></div></a>`;
+  const mon = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" });
+  // a project card: cover (or a quiet placeholder until there is one), place and date, title, summary, tags
+  const row = (g) => `<a class="gcard" href="#gigs/${ids[all.indexOf(g)]}">${g.cover ? `<img class="gcov" ${thumb(g.cover)} alt="" loading="lazy" decoding="async">` : `<span class="gph">More to come</span>`}
+    <span class="gm">${esc([g.venue, g.location, mon(g.date)].filter(Boolean).join(" · "))}</span><span class="gt">${esc(g.title)}</span>
+    ${g.summary || g.note ? `<span class="gs">${esc(g.summary || g.note)}</span>` : ""}${(g.tags || []).length ? `<span class="gtags">${g.tags.map(t => `<span>${esc(t)}</span>`).join("")}</span>` : ""}</a>`;
+  const up = all.filter(g => g.date >= today), past = all.filter(g => g.date < today).reverse();
   // an empty section shows nothing at all, not even its heading
   const fill = (id, list) => {
     const el = document.getElementById(id);
-    el.innerHTML = list.map(row).join("");
-    el.previousElementSibling.hidden = !list.length;
+    el.innerHTML = list.length ? `<div class="gigs">${list.map(row).join("")}</div>` : "";
+    el.previousElementSibling.hidden = !list.length || !(up.length && past.length);   // the Upcoming / Past labels only matter when there are both
   };
-  fill("gigs-upcoming", all.filter(g => g.date >= today));
-  fill("gigs-past", all.filter(g => g.date < today).reverse());
+  const last = all.filter(g => g.date < today).pop() || all.find(g => g.date >= today);   // for Home: the newest past gig (the list is oldest first), else the nearest upcoming one
+  if (last) latest.push({ date: last.date, kind: "gig", title: last.title + (last.location ? " in " + last.location.split(",")[0] : ""), href: "#gigs/" + ids[all.indexOf(last)] });
+  fill("gigs-upcoming", up);
+  fill("gigs-past", past);
   popups.gigs = slug => {
     const g = all[ids.indexOf(slug)];
-    return g && detailPage({ title: g.title, meta: esc([fmtDate(g.date), g.venue, g.location].filter(Boolean).join(" · ")), item: g });
+    return g && detailPage({ title: g.title, meta: esc([mon(g.date), g.venue, g.location].filter(Boolean).join(" · ")), item: g });
   };
 })();
 
-const LANG_FLAGS = { Chinese: "🇨🇳", English: "🇺🇸", Japanese: "🇯🇵", Korean: "🇰🇷", French: "🇫🇷" };   // a flag stands for the language; unknown languages fall back to their name
+const LANG_FLAGS = { Chinese: "🇨🇳", English: "🇺🇸", Japanese: "🇯🇵", Korean: "🇰🇷", French: "🇫🇷", "Traditional Chinese": "🇹🇼" };   // a flag stands for the language; unknown languages fall back to their name
 
 // ---- one page layout for a note or a read: the text, the book card, photo, place and copyright
 const hasLang = (n, l) => (n.languages || []).includes(l);
 const notePage = (() => {
   const longDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-  const rich = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>");   // **bold** and *italic* in prose
+  const rich = t => esc(t).replace(/\*\*(.+?)\*\*/g, "$1").replace(/\*(.+?)\*/g, "<em>$1</em>");   // *italic* in prose; text is never bold, so **x** just shows x
   const ital = t => esc(t).replace(/\*(.+?)\*/g, "<em>$1</em>");
   // long bilingual pieces: blocks of paragraphs, numbered section headings, sub-headings, an epigraph, and a reference list
   const blocks = n => n.blocks.map(([type, zh, en, num]) => {
@@ -186,13 +220,13 @@ const notePage = (() => {
     ? n.poem.pairs.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")
     : n.pairStanzas ? n.pairStanzas.map(st => `<div class="pstanza">${st.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")}</div>`).join("")
     : n.stanzas ? n.stanzas.map(st => `<p class="stanza">${st.map(esc).join("<br>")}</p>`).join("")
-    : n.prose ? n.prose.map(([a, b]) => `<div class="prose"><p>${rich(a)}</p><p class="en">${rich(b)}</p></div>`).join("")
+    : n.prose ? n.prose.map(([a, b]) => `<div class="prose"><p>${rich(a)}</p>${b ? `<p class="en">${rich(b)}</p>` : ""}</div>`).join("")
     : (n.body || []).map(p => `<p>${esc(p)}</p>`).join("");
   // book intro for Book: book: { cover: "file.jpg" (in assets/photos/), title, author, lines: ["detail", ...] }
   const bookHtml = b => !b ? "" : `<div class="book">${b.cover ? `<img class="bcover" src="assets/photos/${esc(b.cover)}" alt="">` : ""}
     <div class="binfo"><p class="bt">${esc(b.title)}</p>${b.author ? `<p class="ba">${esc(b.author)}</p>` : ""}${(b.lines || []).map(l => `<p class="bl">${esc(l)}</p>`).join("")}</div></div>`;
   // font for Japanese / Korean writing: Japanese-only notes are set in the Japanese face, notes with Korean get the Korean face on the Korean lines
-  const nl = n => hasLang(n, "Korean") ? "ko" : hasLang(n, "Japanese") && !hasLang(n, "Chinese") ? "ja" : "";
+  const nl = n => hasLang(n, "Korean") ? "ko" : hasLang(n, "Japanese") && !hasLang(n, "Chinese") && !hasLang(n, "Traditional Chinese") ? "ja" : "";
   return n => `<div class="nl nl-${nl(n) || "x"}">${n.category ? `<p class="kind">${esc(n.category)}</p>` : ""}
       <h1>${esc(n.poem ? n.poem.heading : n.title)}</h1>
       <p class="by">by Haotian He</p><p class="when">${longDate(n.date)}</p>${bookHtml(n.book)}<hr>
@@ -212,6 +246,8 @@ const notePage = (() => {
   const cats = [...new Set(list.map(n => n.category).filter(Boolean))];
   const langs = [...new Set(list.flatMap(n => n.languages || []))].sort((a, b) => list.filter(n => hasLang(n, b)).length - list.filter(n => hasLang(n, a)).length || (a < b ? -1 : 1));
   const langsEl = document.getElementById("notes-langs");
+  orders.notes = list.map((n, i) => ({ slug: ids[i], title: n.title }));
+  if (list[0]) latest.push({ date: list[0].date, kind: "note", title: list[0].title, href: "#notes/" + ids[0] });
   const on = { cat: "", lang: "" };
   const row = (items, key) => items.length > 1 ? ["", ...items].map(v =>
     `<button type="button" class="tag${v === on[key] ? " on" : ""}" data-key="${key}" data-v="${esc(v)}"${key === "lang" && LANG_FLAGS[v] ? ` title="${esc(v)}" aria-label="${esc(v)}"` : ""}>${v ? (key === "lang" && LANG_FLAGS[v]) || esc(v) : "All"}</button>`).join("") : "";
@@ -249,14 +285,17 @@ const notePage = (() => {
 
 // ---- reads: a wall of book covers; each opens the reader response as a page over the wall (#reads/the-title)
 (function reads() {
-  const list = (window.READS || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
+  const raw = window.READS || [];
+  const list = raw.map(n => n.sameAs ? { ...raw.find(x => x.slug === n.sameAs), ...n } : n).sort((a, b) => (a.date < b.date ? 1 : -1));   // sameAs: the text of another read
   const ids = slugs(list, n => n.title);
   // on the wall a book goes by its own name: "棉花帝国 (Empire of Cotton)" shows as 棉花帝国, "林奕含 Lin Yi-han" as 林奕含 (the page keeps both)
   const nonLatin = t => /[^\u0000-\u024f\u2000-\u206f]/.test(t);
   const ownTitle = t => { const m = String(t).match(/^(.*?)\s*\([^)]*\)\s*$/); return m && nonLatin(m[1]) ? m[1] : t; };
   const ownAuthor = a => { const m = String(a).match(/^(.*?)\s+[A-Za-z][A-Za-z\s.'’-]*$/); return m && nonLatin(m[1]) ? m[1] : a; };
+  orders.reads = list.map((n, i) => ({ slug: ids[i], title: ownTitle((n.book || {}).title || n.title) }));
+  if (list[0]) latest.push({ date: list[0].date, kind: "read", title: orders.reads[0].title, href: "#reads/" + ids[0] });
   const card = (n, i) => { const b = n.book || {};
-    return `<a class="read" href="#reads/${ids[i]}">${b.cover ? `<img class="rcov" src="assets/photos/${esc(b.cover)}" alt="" loading="lazy">` : `<span class="rcov none"></span>`}
+    return `<a class="read" href="#reads/${ids[i]}">${b.cover ? `<img class="rcov" ${thumb(b.cover)} alt="" loading="lazy" decoding="async">` : `<span class="rcov none"></span>`}
       <span class="rt">${esc(ownTitle(b.title || n.title))}</span>${b.author ? `<span class="ra">${esc(ownAuthor(b.author))}</span>` : ""}</a>`; };
   // filter by the language the book was read in (book.language), most-read language first; no filter row when there is only one
   const bookLang = n => (n.book || {}).language;
@@ -301,7 +340,7 @@ legacyReads();
   // date may be "YYYY-MM-DD", "YYYY-MM" or "YYYY"; show as much of it as is given
   const when = (d, mo) => { d = String(d); const [y, m, day] = d.split("-"); return !m ? y : new Date(`${y}-${m}-${day || "01"}T00:00:00`).toLocaleDateString("en-US", { year: "numeric", month: mo, ...(day && { day: "numeric" }) }); };
   const mark = p => p.stars ? starImg.repeat(p.stars) : p.bib ? bibImg : p.recommended ? recImg : p.apple ? aplImg : hrImg;
-  const card = (p, i) => `<a class="plate" href="#plates/${ids[i]}">${p.cover ? `<img class="cov" src="assets/photos/${esc(p.cover)}" alt="" loading="lazy">` : ""}<span class="st">${mark(p)}</span><span class="nm">${esc(p.name)}</span>
+  const card = (p, i) => `<a class="plate" href="#plates/${ids[i]}">${p.cover ? `<img class="cov" ${thumb(p.cover)} alt="" loading="lazy" decoding="async">` : ""}<span class="st">${mark(p)}</span><span class="nm">${esc(p.name)}</span>
       <span class="ct">${esc(p.city)}</span>${p.date ? `<span class="yr">${esc(when(p.date, "short"))}</span>` : ""}</a>`;
   const count = k => list.filter(p => rank(p) === k).length;
   const tally = [[3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], [0.22, "HAO"], [0.2, "APL"]].filter(([k]) => count(k)).map(([k, s]) => `${s} ${count(k)}`).join("  ·  ");
@@ -313,6 +352,8 @@ legacyReads();
   const catOf = [[3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], [0.22, "HAO"], [0.2, "APL"]].filter(([k]) => count(k));
   const countries = [...new Set(list.map(countryOf).filter(Boolean))].sort((a, b) => list.filter(p => countryOf(p) === b).length - list.filter(p => countryOf(p) === a).length || (a < b ? -1 : 1));
   const on = { cat: "", country: "" };
+  const newest = list.filter(p => p.date).sort((a, b) => (fullDate(a.date) < fullDate(b.date) ? 1 : -1))[0];
+  if (newest) latest.push({ date: fullDate(newest.date), kind: "plate", title: newest.name, href: "#plates/" + ids[list.indexOf(newest)] });
   const catsEl = document.getElementById("plates-cats"), countriesEl = document.getElementById("plates-countries"), listEl = document.getElementById("plates-list");
   const label = s => s.replace(/★/g, starImg).replace(/^Bib$/, bibImg).replace(/^REC$/, recImg).replace(/^APL$/, aplImg).replace(/^HAO$/, hrImg);
   const row = (items, key) => items.length > 1 ? [["", "All"], ...items].map(([v, l]) =>
@@ -360,6 +401,7 @@ legacyReads();
   const slot = c => { const i = order.indexOf(c); return i > -1 && i < 5 ? i + 1 : 0; };
   const paint = c => `var(--c${slot(c)})`;
   const sum = list.reduce((t, g) => t + amt(g), 0);
+  if (list[0]) latest.push({ date: list[0].date, kind: "gift", title: list[0].what, href: "#goods" });   // newest first, so [0]
   if (!sum) return;
 
   const byCause = {};
@@ -376,6 +418,19 @@ legacyReads();
     { label: "Largest gift", value: money(amt(big)), sub: `${esc(big.what)} · ${month(big.date)}` },
   ];
   $("goods-kpis").innerHTML = kpis.map(k => `<div class="kpi${k.dark ? " dark" : ""}"><p class="kl">${k.label}</p><p class="kv">${k.value}</p><p class="ks">${k.sub}</p></div>`).join("");
+
+  // the AI assessment (text lives in data/goods.js); says so when gifts have been added since it was written
+  const V = window.GOOD_VERDICT;
+  if (V && V.headline) {
+    const since = list.length - (V.gifts || list.length);
+    const asOf = V.asOf ? new Date(V.asOf + "-01T00:00:00").toLocaleDateString("en-US", { month: "long", year: "numeric" }) : "";
+    $("goods-verdict").innerHTML = `<p class="vk"><span aria-hidden="true">✦</span> AI assessment</p>
+      <h3 class="vh">${esc(V.headline)}</h3>
+      <div class="vp">${(V.points || []).map(([lead, text]) => `<p><strong>${esc(lead)}</strong> ${esc(text)}</p>`).join("")}</div>
+      ${V.verdict ? `<p class="vv"><strong>Verdict.</strong> ${esc(V.verdict)}</p>` : ""}
+      <p class="vf">Written by ${esc(V.by || "AI")} from ${V.gifts || list.length} gifts${asOf ? ` through ${asOf}` : ""}. An opinion from the numbers, not financial or tax advice.${since > 0 ? ` <em>${since} ${since === 1 ? "gift has" : "gifts have"} been added since, so this may be out of date.</em>` : ""}</p>`;
+    $("goods-verdict").hidden = false;
+  }
 
   // 2. by cause: every track is the whole total, so every bar is the same width and its fill is the share
   $("goods-causes").innerHTML = causes.map(([c, t]) => { const pct = pc(t.sum / sum);
@@ -422,6 +477,42 @@ legacyReads();
   dash.addEventListener("mouseleave", () => { tip.hidden = true; });
   dash.addEventListener("focusin", e => { const t = e.target.closest("[data-tip]"); if (t) { const r = t.getBoundingClientRect(); show(t, r.left, r.top - 40); } });
   dash.addEventListener("focusout", () => { tip.hidden = true; });
+})();
+
+// Home: under its name and tagline, each page row shows its newest entry (Gigs has none)
+function fillLatest() {
+  document.querySelectorAll("[data-latest]").forEach(el => {
+    const x = latest.find(l => l.kind === el.dataset.latest);
+    if (!x) return;
+    const when = new Date(fullDate(x.date) + "T00:00:00").toLocaleDateString("en-US", { month: "long", year: "numeric" });   // "November 2026"
+    el.href = x.href; el.innerHTML = `<small>Latest</small><span class="lt">${esc(x.title)}</span><span class="ld">${when}</span>`; el.hidden = false;
+  });
+}
+fillLatest();
+
+// Steps: the last place visited away from home ("Los Angeles, CA"). The place list is big, so it loads quietly after the page is up; later stops (planned trips) are ignored.
+(function () {
+  const ST = { Alabama: "AL", Alaska: "AK", Arizona: "AZ", Arkansas: "AR", California: "CA", Colorado: "CO", Connecticut: "CT", Delaware: "DE", Florida: "FL", Georgia: "GA", Hawaii: "HI", Idaho: "ID", Illinois: "IL", Indiana: "IN", Iowa: "IA", Kansas: "KS", Kentucky: "KY", Louisiana: "LA", Maine: "ME", Maryland: "MD", Massachusetts: "MA", Michigan: "MI", Minnesota: "MN", Mississippi: "MS", Missouri: "MO", Montana: "MT", Nebraska: "NE", Nevada: "NV", "New Hampshire": "NH", "New Jersey": "NJ", "New Mexico": "NM", "New York": "NY", "North Carolina": "NC", "North Dakota": "ND", Ohio: "OH", Oklahoma: "OK", Oregon: "OR", Pennsylvania: "PA", "Rhode Island": "RI", "South Carolina": "SC", "South Dakota": "SD", Tennessee: "TN", Texas: "TX", Utah: "UT", Vermont: "VT", Virginia: "VA", Washington: "WA", "West Virginia": "WV", Wisconsin: "WI", Wyoming: "WY", "District of Columbia": "DC" };
+  // home (the San Francisco Bay Area: anywhere within 75 km of San Francisco) does not count as a step: "latest" is the last place away from home
+  const HOME = { lat: 37.7749, lng: -122.4194, km: 75 };
+  const km = (a, b, c, d) => { const r = Math.PI / 180, h = Math.sin((c - a) * r / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin((d - b) * r / 2) ** 2; return 12742 * Math.asin(Math.sqrt(h)); };
+  const atHome = p => km(HOME.lat, HOME.lng, p.lat, p.lng) <= HOME.km;
+  const go = () => {
+    const sc = document.createElement("script");
+    sc.src = "steps/places.js";
+    sc.onload = () => {
+      // the stop list holds real dates, planned trips included: "latest" is the last stop away from home that has begun by today's date on the real calendar (local time), recomputed every time the page loads
+      const today = new Date().toLocaleDateString("en-CA");   // YYYY-MM-DD
+      const here = (window.PLACES || []).filter(p => p.from <= today && !atHome(p)).sort((a, b) => (a.from < b.from ? -1 : 1)).pop();
+      if (!here) return;
+      const [city, region, country] = here.name.split(",").map(t => t.trim());
+      const where = country === "United States" && ST[region] ? `${city}, ${ST[region]}` : `${city}, ${country || region}`;
+      latest.push({ date: here.from, kind: "step", title: where, href: "#steps/" + here.from });
+      fillLatest();
+    };
+    document.head.append(sc);
+  };
+  (window.requestIdleCallback || (f => setTimeout(f, 300)))(go);
 })();
 
 syncReader();                            // open a pop-up straight from a shared link

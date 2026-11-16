@@ -1,19 +1,388 @@
 // EDIT ME: your reads, newest first (the page sorts by date anyway). Book reviews and reader responses; your own stories and words go in notes.js.
-// Same fields as a note: date, title, slug, category, place, languages, prose: [[original paragraph, translation], ...] (or blocks / poem / stanzas / body), photo, video.
+// Same fields as a note: date, title, slug, category (the genre of the book, shown above the title in the pop-up: Novel, Memoir, History, Poetry...), place, languages, prose: [[original paragraph, translation], ...] (or blocks / poem / stanzas / body), photo, video.
 // book: { cover: "file.jpg" (in assets/photos/), title, author, lines: ["detail", ...] } is the book the response is about; the cover is what the Reads page shows.
+// sameAs: "other-slug" makes a read share another read's title and text (one response to two books); give it its own date, slug, book and place.
 // slug: optional short link name (needed when the title isn't plain English letters).
 window.READS = [
+  {
+    "date": "2025-09-11",
+    "title": "Heirs to the California Dream",
+    "category": "Novel",
+    "book": {
+      "cover": "run_river.jpg",
+      "title": "Run River",
+      "author": "Joan Didion",
+      "language": "English",
+      "lines": [
+        "Novel · English edition",
+        "Didion’s novel of an old landowning family in the Sacramento Valley, and of a California that is passing away."
+      ]
+    },
+    "place": "于加州伯克利\nBerkeley, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "Didion 的加州从来不只是一个地理空间，而是一部不断更新的美国精英自我神话史。",
+        "Didion’s California was never only a geographic space, but a constantly updated history of the self-mythology of America’s elite."
+      ],
+      [
+        "在《Run River》中，萨克拉门托河谷的旧式地主家族将土地、血统与家族记忆视为自身优越性的证明。他们怀念一个逐渐消失的加州，却很少意识到，所谓美好的过去，不过是自身特权尚未受到挑战的时代。Didion 所描绘的，不仅是一个家族的衰败，更是一个阶级如何将自身的历史误认为整个社会的历史。",
+        "In *Run River*, an old landowning family of the Sacramento Valley treats land, bloodline and family memory as proof of its own superiority. They long for a vanishing California, yet rarely realize that the so-called beautiful past was simply an era in which their privilege had not yet been challenged. What Didion portrays is not only the decline of one family but how a class mistakes its own history for the history of the whole society."
+      ],
+      [
+        "六十多年后，在同一片加州土地上，新的精英早已取代旧的地主。土地与血统让位于算法、资本和技术创新，家族荣耀变成了创业传奇，而曾经关于西部开拓与无限机会的美国梦，如今则被重新包装为人工智能革命。",
+        "More than sixty years later, on the same California land, a new elite has long since replaced the old landowners. Land and bloodline have given way to algorithms, capital and technological innovation, family glory has become the startup legend, and the American dream of western settlement and limitless opportunity is now repackaged as the AI revolution."
+      ],
+      [
+        "两者看似截然不同，却共享着相似的精神结构：都相信自己站在历史进步的中心，都习惯将自身的成功解释为能力与远见的证明，也都倾向于将少数人的利益与想象，叙述为整个社会的共同未来。",
+        "The two seem entirely different, yet they share a similar spiritual structure: both believe they stand at the center of historical progress, both are used to explaining their success as proof of ability and foresight, and both tend to narrate the interests and imaginings of a few as the common future of the whole society."
+      ],
+      [
+        "作为今天硅谷技术浪潮的参与者，我越来越难以忽视这种相似性。我亲眼见证技术的真实进步，也参与创造这些进步，但与此同时，我也看到一个行业如何不断生产关于自身重要性的叙事。我们拥有惊人的薪酬、资本与技术资源，热衷于讨论如何重新定义人类未来，却未必同样认真地追问：我们究竟为普通人的生活创造了多少可以感知的价值？",
+        "As a participant in today’s Silicon Valley technology wave, I find it harder and harder to ignore this similarity. I have witnessed real technical progress with my own eyes, and I have helped create it, but at the same time I also see how an industry keeps producing narratives about its own importance. We have astonishing pay, capital and technical resources, and we love to discuss how to redefine humanity’s future, but we do not necessarily ask with the same seriousness: how much perceptible value have we actually created for ordinary people’s lives?"
+      ],
+      [
+        "这并不是对技术进步本身的否定，而是对技术进步被神话化的怀疑。人工智能当然具有改变社会的潜力，但潜力不等于贡献，市场估值不等于社会价值，技术上的突破也不必然意味着人类生活的改善。我们似乎越来越擅长衡量模型的能力，却越来越不愿衡量这些能力究竟服务于谁。",
+        "This is not a denial of technological progress itself, but a suspicion of technological progress being made into myth. AI of course has the potential to change society, but potential is not contribution, market valuation is not social value, and a technical breakthrough does not necessarily mean an improvement in human life. We seem to be getting better and better at measuring what models can do, and less and less willing to measure whom those abilities serve."
+      ],
+      [
+        "更令我不安的是，我并非站在这个世界之外的批评者。我也是它的受益者、参与者，甚至是它所制造的幻觉的共同生产者。我同样享受这个行业给予的物质回报，也曾相信那些关于创造力、创新和改变世界的宏大叙事。因此，对硅谷的怀疑，最终也成为对自身的审视。",
+        "What troubles me more is that I am not a critic standing outside this world. I am also its beneficiary and participant, even a co-producer of the illusions it makes. I too enjoy the material rewards this industry gives, and I too once believed in those grand narratives of creativity, innovation and changing the world. So my doubt about Silicon Valley ends up becoming an examination of myself."
+      ],
+      [
+        "这或许正是重读 Didion 最有意义的地方。她笔下的加州精英始终在讲述关于自己的故事，却很少意识到，故事之外还有一个更加复杂、更加不平等的现实。",
+        "This may be exactly where rereading Didion is most meaningful. The California elites in her writing are always telling stories about themselves, yet rarely realize that beyond the story lies a more complicated, more unequal reality."
+      ],
+      [
+        "从萨克拉门托河谷的土地贵族，到好莱坞的文化精英，再到今天硅谷的人工智能工程师，加州不断更换着梦想的语言，却始终重复着关于财富、优越性与历史使命的自我神话。",
+        "From the land aristocrats of the Sacramento Valley, to the cultural elite of Hollywood, to today’s AI engineers of Silicon Valley, California keeps changing the language of its dream, yet keeps repeating the same self-mythology of wealth, superiority and historical mission."
+      ],
+      [
+        "而这一次，我也身在其中。",
+        "And this time, I am in it too."
+      ]
+    ]
+  },
+  {
+    "date": "2025-12-10",
+    "title": "When America Is No Longer a Story That Can Be Told",
+    "category": "Essays",
+    "book": {
+      "cover": "the_white_album.jpg",
+      "title": "The White Album",
+      "author": "Joan Didion",
+      "language": "English",
+      "lines": [
+        "Essays · FSG Classics edition",
+        "Didion’s essays on California and America at the end of the 1960s, where hippie freedom, Hollywood, political radicalism and conflicts of race and class run together."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "“We tell ourselves stories in order to live.”",
+        ""
+      ],
+      [
+        "Joan Didion 以这句话开篇，却在整本书中不断质疑它。1960年代末的加州，嬉皮士的自由理想、好莱坞的繁华、政治激进主义、种族与阶级冲突交织在一起。每个人都试图赋予时代某种意义，但这些宏大的叙事往往只是混乱现实之上的自我安慰。",
+        "Joan Didion opens with this sentence, yet throughout the book keeps questioning it. In California in the late 1960s, the hippies’ ideal of freedom, Hollywood’s glitter, political radicalism, and conflicts of race and class were all tangled together. Everyone was trying to give the era some meaning, but these grand narratives were often only self-consolation laid over a chaotic reality."
+      ],
+      [
+        "Didion 的敏锐，在于她既不相信美国社会制造的神话，也不完全相信自己作为观察者的判断。她以冷静、疏离而碎片化的笔触，记录一个正在失去共同现实的社会。那些彼此断裂的人物、事件与场景，并非等待被重新组织的故事，而恰恰揭示了故事本身的失效。她所描绘的美国，已经无法用进步、自由或反叛这样简单的概念加以解释。",
+        "Didion’s sharpness lies in the fact that she believes neither the myths American society manufactures nor, entirely, her own judgment as an observer. In a cool, detached, fragmentary style, she records a society that is losing its shared reality. The characters, events and scenes, broken off from one another, are not stories waiting to be reorganized; they reveal precisely the failure of story itself. The America she portrays can no longer be explained by simple concepts such as progress, freedom or rebellion."
+      ],
+      [
+        "尤其值得注意的是，她笔下的反文化运动并不天然代表真正的社会解放。许多自称反抗体制的人，依然沉迷于个人身份、精神体验与自我表达，却对更深层的阶级结构、种族不平等和社会责任缺乏真正的回应。反叛逐渐成为一种生活方式，甚至一种可供消费的文化姿态。",
+        "What is especially notable is that the counterculture in her writing does not naturally stand for genuine social liberation. Many who called themselves rebels against the system remained absorbed in personal identity, spiritual experience and self-expression, with no real answer to deeper class structures, racial inequality and social responsibility. Rebellion gradually became a lifestyle, even a cultural pose available for consumption."
+      ],
+      [
+        "半个多世纪后，这种精神困境在当代美国，尤其是硅谷，呈现出惊人的相似性。",
+        "More than half a century later, this spiritual predicament shows a startling resemblance in contemporary America, and especially in Silicon Valley."
+      ],
+      [
+        "如果说 Didion 时代的好莱坞不断生产关于自由、创造力和个人成功的幻觉，那么今天的硅谷则将同样的神话包装成技术创新与人工智能革命。人人都在谈论改变世界、重新定义人类未来，却很少认真追问这些技术究竟改善了谁的生活，又为社会创造了多少真实价值。巨额资本、惊人的薪酬与持续膨胀的自我评价，构成了一套几乎自我封闭的价值体系。在这里，创造力往往由市场估值衡量，社会意义则被产品发布会、技术指标和宏大愿景所取代。",
+        "If the Hollywood of Didion’s day kept producing illusions of freedom, creativity and individual success, then today’s Silicon Valley packages the same myth as technological innovation and the AI revolution. Everyone talks about changing the world and redefining humanity’s future, but few seriously ask whose lives these technologies actually improve, and how much real value they create for society. Vast capital, astonishing pay and a steadily swelling self-regard make up an almost self-enclosed system of values. Here, creativity is often measured by market valuation, and social meaning is replaced by product launches, technical metrics and grand visions."
+      ],
+      [
+        "更讽刺的是，这些自称颠覆传统秩序的精英，往往与他们声称要改变的社会现实保持着惊人的距离。正如昔日好莱坞将个人情感包装成普遍的人类经验，今天的科技产业也倾向于将少数人的技术想象包装成全人类的共同未来。技术进步是真实的，但围绕它建立的文化神话，却未必经得起同样严格的审视。",
+        "More ironic still, these elites who claim to overturn the traditional order often keep a startling distance from the social realities they say they will change. Just as the Hollywood of old packaged personal feeling as universal human experience, today’s tech industry also tends to package the technological imagination of a few as the common future of all humanity. Technological progress is real, but the cultural myths built around it may not withstand the same rigorous scrutiny."
+      ],
+      [
+        "当然，Didion 的冷峻本身也值得质疑。她能够以如此疏离的姿态观察社会崩塌，某种程度上也源于她所处的文化与阶级位置。她看穿了反文化运动的虚伪，却未必真正走近那些被美国社会结构性排斥的人。她的怀疑主义揭示了叙事的局限，却不一定提供走出困境的可能。",
+        "Of course, Didion’s coolness itself deserves questioning. That she could watch a society collapse from such a detached stance also stems, to some degree, from the cultural and class position she occupied. She saw through the hypocrisy of the counterculture, yet did not necessarily come close to the people structurally excluded by American society. Her skepticism reveals the limits of narrative, but does not necessarily offer a way out of the predicament."
+      ],
+      [
+        "或许这正是《The White Album》留给今天最重要的问题：当一个社会越来越擅长讲述自己如何改变世界，却越来越难以证明自己真正改善了世界，我们究竟是在创造未来，还是在不断消费关于未来的幻觉？",
+        "Perhaps this is exactly the most important question *The White Album* leaves us today: when a society grows ever better at telling how it changes the world and ever less able to prove that it has truly improved the world, are we creating the future, or just consuming illusions about the future?"
+      ],
+      [
+        "Didion 写下的是1960年代美国神话的破裂，而今天的美国，似乎仍在用新的语言，讲述同一个故事。",
+        "What Didion wrote down was the breaking of the American myth of the 1960s, and today’s America seems still to be telling the same story in a new language."
+      ]
+    ]
+  },
+  {
+    "date": "2026-11-06",
+    "title": "When Everyone Thinks They Are Changing the World",
+    "category": "Novel",
+    "book": {
+      "cover": "play_it_as_it_lays.jpg",
+      "title": "Play It as It Lays",
+      "author": "Joan Didion",
+      "language": "English",
+      "lines": [
+        "Novel · English edition",
+        "Didion’s novel of Hollywood and Los Angeles, and of Maria Wyeth, who keeps driving the freeways with no destination."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "读琼·狄迪恩的《Play It as It Lays》时，我不断想到今天的硅谷。",
+        "Reading Joan Didion’s *Play It as It Lays*, I kept thinking of today’s Silicon Valley."
+      ],
+      [
+        "小说描写的是好莱坞，一个充满金钱、名望与创造力的世界。这里的人们拍摄电影、参加聚会、讨论新的项目，似乎每个人都在创造某种重要的东西。然而，在这些令人羡慕的生活背后，狄迪恩呈现的却是一种令人不安的空虚：人们不断制造故事，却越来越无法理解自己的生活。",
+        "The novel is set in Hollywood, a world full of money, fame and creativity. People there make films, go to parties and talk about new projects, and everyone seems to be creating something important. Behind these enviable lives, though, Didion shows an unsettling emptiness: people keep making stories while understanding their own lives less and less."
+      ],
+      [
+        "半个世纪之后，我觉得，人工智能热潮中的硅谷正在呈现某种相似的景象。",
+        "Half a century later, I think, Silicon Valley in the middle of the AI boom is showing something similar."
+      ],
+      [
+        "今天的科技行业同样聚集了惊人的财富与人才。人们谈论颠覆、创新、改变世界，仿佛每一项技术突破都意味着人类社会即将进入一个全新的时代。薪酬、估值与资本投入不断刷新纪录，而身处其中的人，也越来越习惯于将自己的工作理解为推动文明进步的一部分。",
+        "Today’s tech industry likewise gathers astonishing wealth and talent. People talk about disruption, innovation and changing the world, as if every technical breakthrough meant human society were about to enter a new era. Salaries, valuations and capital investment keep setting records, and the people inside grow more and more used to seeing their work as part of the advance of civilization."
+      ],
+      [
+        "但我时常怀疑，这些关于进步的叙述，究竟有多少真正来自社会的需要，又有多少只是行业内部不断重复的自我肯定？",
+        "But I often wonder how much of these narratives of progress truly comes from society’s needs, and how much is just self-affirmation that the industry keeps repeating to itself."
+      ],
+      [
+        "在狄迪恩笔下，好莱坞最令人不安的地方，并不是那里的人缺乏才华，而是他们逐渐生活在一个由自己制造的意义体系之中。电影可以被拍摄，形象可以被塑造，成功可以被衡量，但这些东西未必能够回答一个更简单的问题：它们究竟让人的生活变得更好了吗？",
+        "What is most unsettling about Hollywood in Didion’s pages is not that its people lack talent, but that they gradually come to live inside a system of meaning they have made themselves. Films can be shot, images can be shaped, success can be measured, but none of that necessarily answers a simpler question: did it actually make people’s lives better?"
+      ],
+      [
+        "今天的硅谷似乎也面临同样的矛盾。",
+        "Today’s Silicon Valley seems to face the same contradiction."
+      ],
+      [
+        "我们拥有越来越精密的模型、越来越庞大的计算资源，以及越来越令人惊叹的技术演示。行业内部能够清楚地衡量性能提升、产品增长与市场价值，却未必同样清楚地衡量，这些成就究竟改善了多少普通人的实际生活。",
+        "We have ever more sophisticated models, ever larger computing resources, and ever more astonishing technical demos. Inside the industry, gains in performance, product growth and market value can be measured clearly, but it is not necessarily as clear how much these achievements have improved the actual lives of ordinary people."
+      ],
+      [
+        "我并不否认人工智能的价值，也不认为科技工作者缺乏创造力。恰恰相反，真正令我困惑的是：当如此多聪明的人投入如此巨大的努力时，为什么他们所创造的价值，有时仍然与社会最迫切的问题保持着如此遥远的距离？",
+        "I do not deny the value of AI, nor do I think tech workers lack creativity. Quite the opposite: what really puzzles me is this. When so many smart people put in such enormous effort, why does the value they create sometimes remain so far from society’s most urgent problems?"
+      ],
+      [
+        "我们可以花费大量资源，让机器更加擅长模仿人的表达，却仍然无法轻易解决住房、教育、医疗与社会不平等的问题。技术能力的增长是真实的，但它并不会自动转化为公共福祉。",
+        "We can spend vast resources making machines better at imitating human expression, and still not easily solve housing, education, healthcare and social inequality. The growth in technical capability is real, but it does not automatically turn into public welfare."
+      ],
+      [
+        "这让我想到小说中的玛丽亚·怀思。",
+        "This brings me to Maria Wyeth in the novel."
+      ],
+      [
+        "她不断驾驶汽车穿越洛杉矶的高速公路，专注于车速、车道与出口。她始终在移动，却没有明确的目的地。驾驶让她暂时不必面对那些无法回答的问题，也让她在不断行动之中获得某种秩序。",
+        "She keeps driving across the freeways of Los Angeles, absorbed in speed, lanes and exits. She is always moving, yet has no clear destination. Driving lets her avoid, for a while, the questions she cannot answer, and gives her a kind of order in constant motion."
+      ],
+      [
+        "我觉得，这个画面几乎可以成为今天硅谷的隐喻。",
+        "I think this image could almost be a metaphor for today’s Silicon Valley."
+      ],
+      [
+        "我们不断训练更大的模型，追逐更高的指标，发布更新的产品。每一步都有清楚的技术目标，每一次进步都可以得到证明。但当所有人都专注于如何开得更快时，似乎很少有人停下来追问，我们究竟要去哪里。",
+        "We keep training bigger models, chasing higher benchmarks, releasing newer products. Every step has a clear technical goal, and every advance can be demonstrated. But when everyone is focused on how to drive faster, few seem to stop and ask where we are actually going."
+      ],
+      [
+        "玛丽亚的问题不是她不会驾驶，而是驾驶本身逐渐取代了目的地。",
+        "Maria’s problem is not that she cannot drive, but that the driving itself has gradually replaced the destination."
+      ],
+      [
+        "而硅谷的危险，或许也不是缺乏创新，而是创新本身逐渐取代了创新原本应该服务的目标。",
+        "And the danger for Silicon Valley may likewise not be a lack of innovation, but that innovation itself has gradually replaced the goal it was supposed to serve."
+      ],
+      [
+        "当然，技术行业与好莱坞并不完全相同。人工智能确实可能带来广泛的生产力提升，也可能改善医疗、科研与教育。但可能性并不等于已经实现的社会价值。一个行业对未来的承诺，也不能自动成为它在当下获得财富、地位与资源的正当理由。",
+        "Of course, the tech industry is not quite the same as Hollywood. AI may indeed bring broad gains in productivity, and may improve healthcare, research and education. But possibility is not the same as social value already realized. An industry’s promises about the future cannot automatically justify the wealth, status and resources it takes in the present."
+      ],
+      [
+        "尤其令我不安的是，当一个行业拥有极高的薪酬与社会声望时，身处其中的人很容易将这些外部奖励理解为自身贡献的证明。",
+        "What troubles me especially is that when an industry enjoys very high pay and social prestige, the people inside it can easily take these external rewards as proof of their own contribution."
+      ],
+      [
+        "然而，市场愿意支付多少，与一个人真正为社会创造多少价值，从来不是同一个问题。",
+        "Yet how much the market is willing to pay and how much value a person actually creates for society have never been the same question."
+      ],
+      [
+        "好莱坞通过票房、明星与影像制造成功的象征；硅谷则通过估值、算力与技术指标制造进步的象征。两者的成就未必虚假，但它们都可能让行业内部的评价体系，逐渐取代对外部世界的真实关切。",
+        "Hollywood makes its symbols of success from box office, stars and images; Silicon Valley makes its symbols of progress from valuations, compute and technical benchmarks. The achievements of both are not necessarily false, but both can let the industry’s internal system of evaluation gradually replace real concern for the world outside."
+      ],
+      [
+        "这也是为什么我觉得，狄迪恩的小说并没有因为时代变化而失去锋芒。",
+        "This is also why I think Didion’s novel has not lost its edge as times have changed."
+      ],
+      [
+        "她所描写的，不只是好莱坞的空虚，而是一种更普遍的现代处境：当人们拥有越来越多创造、选择与行动的能力时，却未必因此更加清楚这些能力应该用于什么。",
+        "What she describes is not only Hollywood’s emptiness but a more general modern condition: as people gain more and more capacity to create, choose and act, they do not necessarily become any clearer about what that capacity is for."
+      ],
+      [
+        "小说结尾，玛丽亚没有获得一个能够解释自己人生的答案。她仍然必须面对生活本身，而不是生活应该呈现出的样子。",
+        "At the end of the novel, Maria does not get an answer that explains her life. She still has to face life itself, not the way life is supposed to look."
+      ],
+      [
+        "我想，今天的硅谷或许也需要这样的时刻。",
+        "I think today’s Silicon Valley may need such a moment too."
+      ],
+      [
+        "不是再一次宣布我们将如何改变世界，而是暂时放下那些关于未来的宏大叙事，认真看看已经被我们改变的世界，以及那些始终没有被触及的人。",
+        "Not another announcement of how we will change the world, but a pause in the grand narratives about the future, and a serious look at the world we have already changed, and at the people who have never been reached."
+      ],
+      [
+        "读完小说，我最难忘的仍然是玛丽亚独自驾驶的画面。洛杉矶的高速公路不断向前延伸，她熟练地变换车道，汽车始终保持着速度。",
+        "After finishing the novel, what I remember most is still the image of Maria driving alone. The freeways of Los Angeles stretch on and on, she changes lanes with practiced ease, and the car never loses speed."
+      ],
+      [
+        "但道路不会因为我们开得足够快，就自动通向一个值得抵达的地方。",
+        "But a road does not automatically lead somewhere worth reaching just because we drive fast enough."
+      ],
+      [
+        "或许，我们这个时代最需要警惕的，并不是技术停止进步，而是当所有人都沉醉于进步的速度时，已经没有人认真追问，进步究竟是为了谁。",
+        "Perhaps what our age most needs to guard against is not technology ceasing to advance, but that, while everyone is intoxicated by the speed of progress, no one is seriously asking who the progress is for."
+      ]
+    ]
+  },
+  {
+    "date": "2026-10-26",
+    "title": "When the Observer Becomes the Observed",
+    "category": "Exhibition catalogue",
+    "book": {
+      "cover": "didion_what_she_means.jpg",
+      "title": "Joan Didion: What She Means",
+      "author": "Joan Didion · ed. Hilton Als",
+      "language": "English",
+      "lines": [
+        "Exhibition catalogue · English edition",
+        "The catalogue of the exhibition of the same name, curated by Hilton Als, that places Didion’s writing among photographs, artworks and archival material."
+      ]
+    },
+    "place": "于加州奥克兰\nOakland, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "琼·狄迪恩一生都在观察美国。她观察加利福尼亚的繁荣神话、政治语言背后的权力，以及人们如何通过讲述故事，让充满矛盾的现实显得合理。但面对《Joan Didion: What She Means》，我最感兴趣的却是一个反过来的问题：当一个终生拆解社会神话的作家，自己也成为被观看、被解释的对象时，我们是否也应该用她的方法，重新审视她留给我们的形象？",
+        "Joan Didion spent her life observing America. She observed California’s myth of prosperity, the power behind political language, and the way people tell stories to make a contradictory reality seem reasonable. But reading *Joan Didion: What She Means*, what interests me most is a question that runs the other way: when a writer who spent her life taking social myths apart herself becomes the one who is looked at and interpreted, shouldn’t we use her method to re-examine the image she has left us?"
+      ],
+      [
+        "这本由希尔顿·阿尔斯策划的同名展览衍生出的图录，通过摄影、艺术作品与档案材料，将狄迪恩的写作放回她所经历的美国文化之中。但我觉得，这种形式最有意思的地方，恰恰在于它改变了狄迪恩的位置。过去，她是观察者，决定如何描写别人；如今，她成为被观察的人，由别人决定哪些照片、文字与经历能够代表她。",
+        "This catalogue, which grew out of the exhibition of the same name curated by Hilton Als, uses photographs, artworks and archival material to set Didion’s writing back into the American culture she lived through. But what I find most interesting about the form is precisely that it changes Didion’s position. In the past she was the observer, deciding how to describe other people; now she is the one being observed, and others decide which photographs, words and experiences can stand for her."
+      ],
+      [
+        "这种转变让我想到《我从哪里来》。",
+        "This shift reminded me of *Where I Was From*."
+      ],
+      [
+        "在那本书中，狄迪恩重新审视自己成长于其中的加利福尼亚。她曾经继承关于西部开拓、个人独立与家族奋斗的故事，却逐渐发现，这些看似自然的价值观，掩盖了土地、资本、政府政策与历史机遇之间复杂的关系。",
+        "In that book, Didion re-examines the California she grew up in. She had inherited stories of western settlement, individual independence and family struggle, only to find gradually that these seemingly natural values concealed a complicated web of land, capital, government policy and historical opportunity."
+      ],
+      [
+        "尤其值得注意的是，她并没有将自己的家族排除在批判之外。她意识到，自己关于故乡的记忆，也曾受到那些神话的塑造。所谓独立与自力更生，并不完全是个人品格的结果；许多被讲述为个人奋斗的成就，同样依赖公共资源与制度安排。",
+        "What is especially notable is that she does not exempt her own family from the critique. She realized that her memories of home had also been shaped by those myths. Independence and self-reliance were not entirely the result of individual character; many achievements told as personal striving also depended on public resources and institutional arrangements."
+      ],
+      [
+        "我觉得，狄迪恩真正重要的，并不只是揭露美国神话的不完整，而是承认自己也曾经相信它。她并非站在历史之外揭穿别人的幻觉，而是在重新审视自己赖以理解世界的故事。",
+        "What matters most about Didion, I think, is not only that she exposes how incomplete America’s myths are, but that she admits she once believed them herself. She does not stand outside history and puncture other people’s illusions; she re-examines the stories she had relied on to understand the world."
+      ],
+      [
+        "那么，当我们今天观看狄迪恩时，是否也正在重复类似的过程？",
+        "So when we look at Didion today, are we not repeating a similar process?"
+      ],
+      [
+        "在公众记忆中，她已经拥有一套几乎固定的形象：瘦削的身体、深色墨镜、冷静的目光，以及仿佛能够洞察美国一切混乱的文字。那些肖像极具魅力，也让她逐渐成为某种独立、清醒与知识分子气质的象征。",
+        "In public memory she already has an almost fixed image: the slight frame, the dark sunglasses, the cool gaze, and prose that seems able to see through all of America’s chaos. Those portraits are enormously charming, and they have gradually made her a symbol of independence, clarity and the intellectual temperament."
+      ],
+      [
+        "但这是否也是一种神话？",
+        "But is this, too, a kind of myth?"
+      ],
+      [
+        "加利福尼亚曾经将复杂的历史压缩成开拓者的勇气与独立；而我们是否也正在将狄迪恩复杂的一生，压缩成一个永远冷静、永远清醒的观察者？",
+        "California once compressed a complicated history into pioneer courage and independence; are we, in the same way, compressing Didion’s complicated life into an observer who is forever cool and forever clear-eyed?"
+      ],
+      [
+        "这两种叙事的相似之处，不在于它们都是虚假的，而在于它们都选择性地保留某些事实，让一个复杂的对象变得容易理解、容易欣赏，也容易被纪念。",
+        "What these two narratives have in common is not that they are false, but that both selectively keep certain facts, making a complicated subject easy to understand, easy to admire, and easy to commemorate."
+      ],
+      [
+        "在《白色专辑》中，狄迪恩曾经写到自己无法再依靠熟悉的故事理解正在发生的事情。她笔下的美国并不是一个等待聪明观察者揭示真相的世界，而是一个连观察者自身都难以把握的现实。",
+        "In *The White Album*, Didion wrote that she could no longer rely on familiar stories to understand what was happening. The America in her writing is not a world waiting for a clever observer to reveal the truth, but a reality that even the observer herself can hardly grasp."
+      ],
+      [
+        "这让我觉得，狄迪恩写作中最珍贵的，或许不是她的确定，而是她的不确定。她能够敏锐地发现社会叙事中的裂缝，却并不因此拥有一个可以解释一切的答案。",
+        "This makes me feel that what is most precious in Didion’s writing may not be her certainty but her uncertainty. She could sharply find the cracks in social narratives without therefore having an answer that explains everything."
+      ],
+      [
+        "然而，当她成为文化偶像时，这种不确定性反而最容易消失。她的怀疑被简化为洞察力，她的疏离被理解为风格，她在历史与个人经验之间的挣扎，也可能被整理成一种令人羡慕的精神姿态。",
+        "Yet when she becomes a cultural icon, that uncertainty is the first thing to disappear. Her doubt is simplified into insight, her detachment is read as style, and her struggle between history and personal experience may be tidied into an enviable spiritual pose."
+      ],
+      [
+        "于是，一个不断质疑故事如何被制造的作家，最终也成为了一个被故事制造出来的人物。",
+        "And so a writer who kept questioning how stories are made has herself become a figure made by stories."
+      ],
+      [
+        "我并不认为这意味着我们应该拒绝纪念狄迪恩。相反，图录将她与其他艺术家的作品并置，恰恰提供了一种重新观看她的可能。它提醒我们，狄迪恩并不是独自站在美国历史之外的观察者。她的写作同样产生于特定的阶级、地域、文化与时代之中。",
+        "I do not think this means we should refuse to commemorate Didion. On the contrary, by placing her alongside the work of other artists, the catalogue offers just the chance to look at her again. It reminds us that Didion was not an observer standing alone outside American history. Her writing, too, came out of a particular class, region, culture and era."
+      ],
+      [
+        "但如果我们真正希望理解她，就不能只寻找那些能够证明她伟大的材料。我们也应该追问：哪些经历被反复展示，哪些矛盾被淡化？为什么某些照片逐渐成为她的象征，而她对自身局限的承认，却没有获得同样广泛的记忆？",
+        "But if we truly want to understand her, we cannot look only for the material that proves her greatness. We should also ask: which experiences are shown again and again, and which contradictions are played down? Why have certain photographs gradually become her symbol, while her admission of her own limits has not been remembered as widely?"
+      ],
+      [
+        "这也使书名中的 *What She Means* 显得格外耐人寻味。",
+        "This also makes the *What She Means* in the title especially intriguing."
+      ],
+      [
+        "它既可以指狄迪恩究竟想表达什么，也可以指她对后来的读者意味着什么。但两者之间始终存在距离。一个作家的思想，并不等于后人赋予她的文化意义；正如加利福尼亚真实的历史，也不等于人们愿意相信的加利福尼亚。",
+        "It can mean what Didion actually meant to say, and it can mean what she means to later readers. But there is always a distance between the two. A writer’s thought is not the same as the cultural meaning posterity gives her, just as California’s real history is not the same as the California people are willing to believe in."
+      ],
+      [
+        "读完这本图录所提出的观看方式，我越来越觉得，对狄迪恩最好的纪念，或许不是将她塑造成一个永远正确的观察者，而是将她曾经用来审视美国的怀疑，重新用于审视她本人。",
+        "Having read the way of looking that this catalogue proposes, I increasingly feel that the best way to commemorate Didion may not be to shape her into an observer who is always right, but to turn the doubt she once used to examine America back on herself."
+      ],
+      [
+        "如果她能够重新追问自己的家族如何参与了加利福尼亚神话的形成，那么我们也应该追问，自己如何参与了狄迪恩神话的形成。",
+        "If she could ask again how her own family took part in making the California myth, then we should also ask how we ourselves take part in making the Didion myth."
+      ],
+      [
+        "毕竟，一个终生提醒我们警惕故事如何掩盖现实的作家，或许最值得我们尊重的方式，就是不让关于她的故事，最终掩盖了她自己。",
+        "After all, for a writer who spent her life warning us how stories cover up reality, perhaps the most respectful thing we can do is not let the stories about her end up covering up her."
+      ]
+    ]
+  },
   {
     "date": "2025-08-29",
     "title": "Doubt and Origin",
     "slug": "where-i-was-from",
-    "category": "Book",
+    "category": "Memoir",
     "book": {
       "cover": "where_i_was_from.jpg",
       "title": "Where I Was From",
       "author": "Joan Didion",
       "language": "English",
-      "lines": ["Nonfiction · Knopf, 2003", "Didion’s memoir of California and her family, and of the pioneer myth she grew up inside."]
+      "lines": ["Memoir · Knopf, 2003", "Didion’s memoir of California and her family, and of the pioneer myth she grew up inside."]
     },
     "place": "于加州伯克利\nBerkeley, CA",
     "languages": ["Chinese", "English"],
@@ -40,7 +409,7 @@ window.READS = [
       ],
       [
         "我们每个人都在为自己的人生编写故事。我们将成功归因于努力，将失败解释为成长，将某些经历视为命运的转折点，再将这些零散的记忆连接成一个连贯的自我。这样的叙事给予我们归属感，也让我们相信今天的自己有迹可循。",
-        "Each of us is writing a story for our own life. We attribute success to effort, explain failure as growth, treat certain experiences as turning points of fate, and then link these scattered memories into one coherent self. Such a narrative gives us a sense of belonging, and lets us believe that the person we are today can be traced."
+        "Each of us is writing a story for our own life. We attribute success to effort, explain failure as growth, treat certain experiences as turning points of fate, and then link these scattered memories into one coherent self. Such a narrative gives us a sense of belonging, and lets us believe that the person we are today has traceable roots."
       ],
       [
         "但问题在于，我们往往只愿意保留那些能够支持自我认同的部分。我们记得自己的奋斗，却容易忽略时代的机遇；珍视家族的荣耀，却可能回避其中的特权；怀念故乡的美好，却不愿面对它所承载的伤害与不公。",
@@ -60,7 +429,7 @@ window.READS = [
       ],
       [
         "我们用来质疑过去的语言、价值观与判断标准，本身也来自我们试图审视的社会。我们以为自己已经摆脱了家庭的期待，却可能只是接受了另一种文化的价值；我们以为自己终于能够独立思考，却未必意识到，所谓独立的思想，同样受到时代与环境的塑造。",
-        "The language, values and standards of judgment we use to question the past themselves come from the society we are trying to examine. We think we have escaped our family’s expectations, but we may only have accepted the values of another culture; we think we can finally think independently, without necessarily realizing that so-called independent thought is shaped by its time and surroundings too."
+        "The language, values and standards of judgment we use to question the past themselves come from the society we are trying to examine. We think we have escaped our family’s expectations, but we may only have accepted the values of another culture; we think we can finally think independently, but we do not necessarily realize that so-called independent thought is shaped by its time and surroundings too."
       ],
       [
         "如果连我们用来反抗过去的思想，都无法完全摆脱过去的影响，那么自由究竟意味着什么？",
@@ -80,7 +449,7 @@ window.READS = [
       ],
       [
         "真正成熟的归属感，也许不是终于确信自己来自一个值得骄傲的地方，而是在看清它的复杂与不完美之后，仍然能够诚实地承认自己与它的联系。同样，真正的自我认识，也不是终于找到一个不受任何影响的纯粹自我，而是能够接受自己始终处于历史、社会与个人选择的交汇之中。我们无法选择自己最初如何被世界塑造，但至少可以选择，是否终其一生都不去质疑这种塑造。",
-        "A truly mature sense of belonging may not be finally being certain that we come from a place to be proud of, but being able, after seeing its complexity and imperfection, to honestly acknowledge our connection to it. Likewise, real self-knowledge is not finally finding a pure self untouched by any influence, but being able to accept that we always stand at the meeting point of history, society and personal choice. We cannot choose how the world first shaped us, but we can at least choose whether to go through life without ever questioning that shaping."
+        "A truly mature sense of belonging may not come from finally being certain that we come from a place to be proud of, but from being able, after seeing its complexity and imperfection, to honestly acknowledge our connection to it. Likewise, real self-knowledge is not finally finding a pure self untouched by any influence, but being able to accept that we always stand at the meeting point of history, society and personal choice. We cannot choose how the world first shaped us, but we can at least choose whether to go through life without ever questioning that shaping."
       ],
       [
         "读完《Where I Was From》，我开始觉得，Didion 所寻找的并不只是她来自何方，而是当那些关于来处的神话逐渐瓦解之后，她还能如何理解自己。",
@@ -100,7 +469,7 @@ window.READS = [
     "date": "2026-08-16",
     "title": "Rebellion and Freedom",
     "slug": "rebellion-and-freedom",
-    "category": "Book",
+    "category": "Poetry",
     "book": {
       "cover": "ginsberg.jpg",
       "title": "The Essential Ginsberg",
@@ -117,7 +486,7 @@ window.READS = [
     "prose": [
       [
         "读艾伦·金斯堡的诗歌，我始终在思考一个问题：反抗社会的规范，是否就意味着一个人已经获得了自由？在《嚎叫》中，金斯堡将那些被主流社会视为疯狂、堕落与失败的人置于诗歌的中心。诗的开头便是：“我见过我们这代人的翘楚在癫狂中毁灭，在歇斯底里的赤裸中挨饿。”他以近乎失控的语言，控诉一个崇尚秩序、效率与物质繁荣，却不断压抑个体精神的社会。在他的笔下，疯狂有时反而比所谓的正常更加清醒，反叛也因此成为对社会虚伪的一种揭露。",
-        "Reading Allen Ginsberg’s poems, I kept coming back to one question: does rebelling against the norms of society mean a person has become free? In *Howl*, Ginsberg puts at the center of the poem the people the mainstream considers mad, degraded and failed. It opens: “I saw the best minds of my generation destroyed by madness, starving hysterical naked.” In language that borders on losing control, he accuses a society that prizes order, efficiency and material prosperity while ceaselessly suppressing the individual spirit. In his hands, madness is sometimes clearer-sighted than so-called normality, and rebellion becomes a way of exposing society’s hypocrisy."
+        "Reading Allen Ginsberg’s poems, I kept coming back to one question: does rebelling against the norms of society mean a person has become free? In “Howl,” Ginsberg puts at the center of the poem the people the mainstream considers mad, degraded and failed. It opens: “I saw the best minds of my generation destroyed by madness, starving hysterical naked.” In language that borders on losing control, he accuses a society that prizes order, efficiency and material prosperity while ceaselessly suppressing the individual spirit. In his hands, madness is sometimes clearer-sighted than so-called normality, and rebellion becomes a way of exposing society’s hypocrisy."
       ],
       ["然而，我并不认为反抗本身就意味着自由。", "Yet I do not believe that rebellion by itself means freedom."],
       [
@@ -135,7 +504,7 @@ window.READS = [
       ["在这个意义上，真正的自由甚至可能表现为一种与社会的和解。", "In this sense, real freedom may even take the form of a reconciliation with society."],
       [
         "这种和解并不是屈服，更不是对不公的沉默，而是不再需要通过社会的评价来证明自己。我们可以承认社会的存在，理解它的复杂与局限，却不必让它决定我们的全部价值。我们可以反抗值得反抗的事情，也可以坦然接受那些与自身原则并不冲突的规则。",
-        "This reconciliation is not surrender, still less silence in the face of injustice; it is no longer needing society’s judgment to prove ourselves. We can acknowledge that society exists and understand its complexity and its limits, without letting it decide our whole worth. We can rebel against what is worth rebelling against, and calmly accept the rules that do not conflict with our own principles."
+        "This reconciliation is not surrender, still less silence in the face of injustice; it means no longer needing society’s judgment to prove ourselves. We can acknowledge that society exists and understand its complexity and its limits, without letting it decide our whole worth. We can rebel against what is worth rebelling against, and calmly accept the rules that do not conflict with our own principles."
       ],
       [
         "我想，这或许就是一种更成熟的 *don't give a fuck*：不是对世界漠不关心，而是不再执着于世界如何看待自己。",
@@ -155,7 +524,7 @@ window.READS = [
     "date": "2024-11-08",
     "title": "Who Remembers Us",
     "slug": "when-those-who-remember-us-leave",
-    "category": "Book",
+    "category": "Memoir",
     "book": {
       "cover": "stay_true.jpg",
       "title": "Stay True",
@@ -202,14 +571,14 @@ window.READS = [
     "date": "2024-06-16",
     "title": "From the Empire of Cotton to the Empire of AI",
     "slug": "from-cotton-to-ai",
-    "category": "Book",
+    "category": "History",
     "book": {
       "cover": "empire_of_cotton.jpg",
       "title": "棉花帝国 (Empire of Cotton)",
       "author": "斯文·贝克特 Sven Beckert",
       "language": "Chinese",
       "lines": [
-        "Nonfiction · Knopf, 2014",
+        "History · Knopf, 2014",
         "Beckert’s global history of how cotton built modern capitalism, through slavery, colonial conquest and state power."
       ]
     },
@@ -237,11 +606,11 @@ window.READS = [
       ],
       [
         "更值得思考的是，棉花帝国通过控制劳动者创造财富，而人工智能可能使资本在某些领域逐渐减少对劳动者的依赖。两者的机制不同，却指向同一个问题：生产力的增长，是否必然意味着创造或曾经创造这些财富的人能够分享增长的成果？",
-        "More worth thinking about is that the empire of cotton created wealth by controlling laborers, whereas AI may allow capital, in some fields, to depend less and less on laborers. The mechanisms differ, but they point to the same question: does growth in productivity necessarily mean that those who create, or once created, this wealth can share in its gains?"
+        "What is more worth thinking about is that the empire of cotton created wealth by controlling laborers, whereas AI may allow capital, in some fields, to depend less and less on laborers. The mechanisms differ, but they point to the same question: does growth in productivity necessarily mean that those who create, or once created, this wealth can share in its gains?"
       ],
       [
         "当机器可以承担越来越多的工作，劳动本应从生存的负担逐渐转变为个人的选择。但如果收入、社会保障与生活尊严仍然高度依赖就业，那么劳动被替代也可能意味着一个人失去维持生活的能力。这或许是人工智能时代最深刻的悖论：社会越有能力摆脱劳动的必要，个人却未必越有能力摆脱对工作的依赖。",
-        "As machines take on more and more work, labor should gradually shift from a burden of survival to a matter of personal choice. But if income, social security and a life of dignity still depend heavily on employment, then having one’s labor replaced may mean losing the ability to sustain a life. This may be the deepest paradox of the age of AI: the more capable a society becomes of escaping the necessity of labor, the less capable individuals may be of escaping their dependence on work."
+        "As machines take on more and more work, labor should gradually shift from a burden of survival to a matter of personal choice. But if income, social security and a life of dignity still depend heavily on employment, then having one’s labor replaced may mean losing the ability to sustain a life. This may be the deepest paradox of the age of AI: the more capable a society becomes of escaping the necessity of labor, individuals may be no more capable of escaping their dependence on work."
       ],
       [
         "当然，历史并不注定重演。人工智能也可能使知识、创造与生产工具更加普及，让更多人获得过去只有少数人拥有的能力。但《棉花帝国》提醒我，技术本身不会决定这些可能最终属于谁。决定这一点的，仍然是所有权、制度与权力的分配。",
@@ -261,7 +630,7 @@ window.READS = [
     "date": "2023-01-31",
     "title": "Normal as Violence",
     "slug": "when-normal-becomes-violence",
-    "category": "Book",
+    "category": "Novel",
     "book": {
       "cover": "vegetarian.jpg",
       "title": "채식주의자 (The Vegetarian)",
@@ -297,7 +666,7 @@ window.READS = [
       ],
       [
         "英惠的丈夫认为她的行为破坏了正常的家庭生活，父亲则试图以暴力迫使她恢复原状。在他们眼中，自己的行为或许都有着合理的解释：维护家庭、履行责任，甚至是为了英惠好。然而，当关心不再以理解对方为前提，而是以改变对方为目的时，它与控制之间究竟还有多少区别？",
-        "Yeong-hye’s husband believes her behavior ruins normal family life, and her father tries to force her back to how she was by violence. In their own eyes, each act may have a reasonable explanation: protecting the family, fulfilling a duty, even doing it for Yeong-hye’s own good. Yet when concern no longer rests on understanding the other person but aims at changing her, how much difference is left between it and control?"
+        "Yeong-hye’s husband believes her behavior ruins normal family life, and her father tries to force her back to how she was with violence. In their own eyes, each act may have a reasonable explanation: protecting the family, fulfilling a duty, even doing it for Yeong-hye’s own good. Yet when concern no longer rests on understanding the other person but aims at changing her, how much difference is left between it and control?"
       ],
       [
         "尤其令我印象深刻的是，小说中的暴力并不总是以恶意的形式出现。它也可能隐藏在习以为常的家庭秩序中，隐藏在长辈的权威、伴侣的期待，以及那些看似理所当然的社会规范之中。施加控制的人未必认为自己正在伤害别人，因为他们早已将自己的生活方式视为唯一正确的标准。",
@@ -341,7 +710,7 @@ window.READS = [
     "date": "2022-11-24",
     "title": "History Never Really Left",
     "slug": "soulstealers",
-    "category": "Book",
+    "category": "History",
     "book": {
       "cover": "soulstealers.jpg",
       "title": "Soulstealers: The Chinese Sorcery Scare of 1768",
@@ -365,7 +734,7 @@ window.READS = [
       ],
       [
         "在1768年的中国，关于妖术的传言最初只是民间的不安与猜疑。但当乾隆皇帝将其视为对统治秩序的潜在威胁，地方官员便不得不在皇权的压力下追查嫌犯。原本可以通过调查逐渐平息的谣言，反而在层层上报、严刑逼供与政治猜忌中不断获得新的生命。越是缺乏确凿证据，越容易被解释为阴谋隐藏得足够深；越是有人试图淡化事态，越可能被怀疑是在掩盖问题。",
-        "In China in 1768, rumors of sorcery began as nothing more than popular unease and suspicion. But once the Qianlong emperor saw them as a potential threat to the ruling order, local officials had no choice but to hunt for suspects under the pressure of imperial power. Rumors that investigation might have gradually put to rest instead found new life in reports passed up the chain, torture-extracted confessions and political suspicion. The less hard evidence there was, the easier it was to read the conspiracy as hidden deeply enough; the more someone tried to play the matter down, the more likely they were to be suspected of covering something up."
+        "In China in 1768, rumors of sorcery began as nothing more than popular unease and suspicion. But once the Qianlong emperor saw them as a potential threat to the ruling order, local officials had no choice but to hunt for suspects under the pressure of imperial power. Rumors that investigation might have gradually put to rest instead found new life in reports passed up the chain, torture-extracted confessions and political suspicion. The less hard evidence there was, the easier it was to conclude that the conspiracy was hidden deeply enough; the more someone tried to play the matter down, the more likely they were to be suspected of covering something up."
       ],
       [
         "最可怕的地方在于，这套机制并不需要每个人都真正相信妖术的存在。皇帝担心权威受到挑战，官员担心被指责失职，百姓则可能借助政治恐慌宣泄私怨。每个人都在自己的处境中作出看似合理的选择，最终却共同制造了一场荒诞的灾难。当说真话的代价高于附和，当提出质疑的风险大于参与指控，个体出于自保的理性选择，反而可能汇聚成整个社会的非理性。",
@@ -409,7 +778,7 @@ window.READS = [
     "date": "2022-11-24",
     "title": "Will We Become the Adults We Hate?",
     "slug": "lying-life-of-adults",
-    "category": "Book",
+    "category": "Novel",
     "book": {
       "cover": "lying_life.jpg",
       "title": "The Lying Life of Adults",
@@ -449,16 +818,16 @@ window.READS = [
       ],
       [
         "小时候，我们总以为真实与虚伪、善良与自私之间有着清晰的界限。我们不理解成年人为什么言行不一，为什么为了利益妥协，为什么明明知道什么是对的，却依然选择错误。我们相信自己绝不会成为那样的人。",
-        "As children, we always assume there is a clear line between truth and hypocrisy, between kindness and selfishness. We do not understand why adults say one thing and do another, why they compromise for the sake of interest, why they choose wrong even when they know what is right. We believe we will never become people like that."
+        "As children, we always assume there is a clear line between truth and hypocrisy, between kindness and selfishness. We do not understand why adults say one thing and do another, why they compromise for the sake of self-interest, why they choose wrong even when they know what is right. We believe we will never become people like that."
       ],
       [
         "然而，成长似乎并不是一个不断接近理想自我的过程。随着我们逐渐进入成年人的世界，曾经无法理解的行为开始有了理由。沉默是为了避免冲突，隐瞒是为了保护关系，妥协是为了适应现实。我们并没有突然放弃原则，只是在一次次看似合理的选择中，逐渐模糊了自己曾经坚信的界限。",
-        "Yet growing up does not seem to be a process of steadily approaching an ideal self. As we gradually enter the adult world, behavior we once could not understand begins to have reasons. Silence is to avoid conflict, concealment is to protect a relationship, compromise is to fit in with reality. We do not suddenly give up our principles; through one reasonable-looking choice after another, we slowly blur the lines we once held firmly."
+        "Yet growing up does not seem to be a process of steadily approaching an ideal self. As we gradually enter the adult world, behavior we once could not understand begins to have reasons. Silence is meant to avoid conflict, concealment to protect a relationship, compromise to fit in with reality. We do not suddenly give up our principles; through one reasonable-looking choice after another, we slowly blur the lines we once held firmly."
       ],
       ["更令人不安的是，我们甚至可能没有意识到自己正在改变。", "More unsettling still, we may not even realize that we are changing."],
       [
         "Giovanna 曾经如此厌恶成年人的虚伪，却逐渐学会了隐瞒、试探与自我辩解。她不是突然决定成为一个虚伪的人，而是在面对自己的欲望与矛盾时，发现那些曾经令她反感的行为，也可以被自己解释得合情合理。",
-        "Giovanna once loathed adult hypocrisy so much, yet she gradually learns to conceal, to probe, and to justify herself. She does not suddenly decide to become a hypocrite; faced with her own desires and contradictions, she finds that the very behavior that once repelled her can also be explained by herself as perfectly reasonable."
+        "Giovanna once loathed adult hypocrisy so much, yet she gradually learns to conceal, to probe, and to justify herself. She does not suddenly decide to become a hypocrite; faced with her own desires and contradictions, she finds that the very behavior that once repelled her can be made to seem perfectly reasonable by her own explanations."
       ],
       [
         "这让我重新思考《那不勒斯四部曲》中反复出现的问题：我们究竟能够在多大程度上摆脱自己的出身与成长环境？Elena 试图通过教育与写作离开原来的世界，却始终无法完全摆脱它的影响。而 Giovanna 同样试图通过识破父母的谎言获得独立，却发现自己早已深深受到那个世界的塑造。",
@@ -486,7 +855,7 @@ window.READS = [
     "date": "2025-01-23",
     "title": "Can We Ever Go Home?",
     "slug": "can-we-go-home",
-    "category": "Book",
+    "category": "Short stories",
     "book": {
       "cover": "yeosu_love.jpg",
       "title": "여수의 사랑 (Love of Yeosu)",
@@ -550,7 +919,7 @@ window.READS = [
       ],
       [
         "或许，故乡并不是一个我们终将回到的地方，而是一个我们终其一生都在试图理解的地方。而所谓的归乡，也许不是为了找回过去，而是为了有一天，我们能够不再被过去决定自己将去往何方。",
-        "Perhaps a hometown is not a place we will eventually return to, but a place we spend our whole lives trying to understand. And what we call homecoming may not be about retrieving the past, but about reaching a day when we are no longer decided by the past in where we are going."
+        "Perhaps a hometown is not a place we will eventually return to, but a place we spend our whole lives trying to understand. And what we call homecoming may not be about retrieving the past, but about reaching a day when the past no longer decides where we are going."
       ]
     ]
   },
@@ -558,20 +927,20 @@ window.READS = [
     "date": "2025-07-07",
     "title": "Whose Paradise?",
     "slug": "whose-paradise",
-    "category": "Book",
+    "category": "Novel",
     "place": "於台灣台北\nTaipei, Taiwan",
     "book": {
       "cover": "fang_si_chi.jpg",
       "title": "房思琪的初戀樂園 (Fang Si-Chi’s First Love Paradise)",
       "author": "林奕含 Lin Yi-han",
-      "language": "Chinese",
+      "language": "Traditional Chinese",
       "lines": ["Novel · 2017", "A teenage girl in Taipei is abused by her cram-school Chinese teacher, who presents it to her as love."]
     },
-    "languages": ["Chinese", "English"],
+    "languages": ["Traditional Chinese", "English"],
     "prose": [
       [
         "讀完林奕含的《房思琪的初戀樂園》，應該幾乎所有人都會自然問：為什麼是“樂園”？“樂園”本應象徵純真、自由與幸福，卻被用來命名一個充滿侵犯、壓迫與痛苦的故事。這當然是一種反諷，但我更想追問的是：為什麼一個充滿傷害的世界，仍然能夠以樂園的面貌存在？又是誰在維持這個樂園？",
-        "After finishing Lin Yi-han’s *Fang Si-Chi’s First Love Paradise*, almost every reader must ask the same thing: why “paradise”? A paradise should stand for innocence, freedom and happiness, yet here the word names a story full of violation, oppression and pain. It is irony, of course, but what I want to ask is something else: how can a world so full of harm go on existing in the guise of a paradise? And who is keeping that paradise going?"
+        "After finishing Lin Yi-han’s *Fang Si-Chi’s First Love Paradise*, almost every reader will naturally ask the same thing: why “paradise”? A paradise should stand for innocence, freedom and happiness, yet here the word names a story full of violation, oppression and pain. It is irony, of course, but what I want to ask is something else: how can a world so full of harm go on existing in the guise of a paradise? And who is keeping that paradise going?"
       ],
       [
         "小說中的李國華擁有教師的身份、文學的修養與知識的權威。他將侵犯包裝成愛情，將操控解釋為關懷，使暴力披上了文明與美的外衣。最令我不安的並非他如何利用語言欺騙房思琪，而是這些語言為什麼具有如此強大的說服力。",
@@ -579,7 +948,7 @@ window.READS = [
       ],
       [
         "我們相信教育意味著啟蒙，文學意味著高尚，愛情意味著美好。這些信念本身並沒有錯，但當我們過於相信它們時，也可能因此失去質疑的能力。我們因為相信老師值得尊敬，便難以接受老師也可能是施害者；因為相信愛情是美好的，便可能忽略親密關係中的權力與剝削。有時，我們不是因為看見了善才相信它，而是因為預先相信善的存在，才拒絕看見其中的惡。",
-        "We believe that education means enlightenment, that literature means nobility, that love means something good. There is nothing wrong with those beliefs in themselves, but when we trust them too much we can lose the ability to question. Because we believe a teacher deserves respect, it is hard to accept that a teacher can also be an abuser; because we believe love is beautiful, we may overlook the power and exploitation inside an intimate relationship. Sometimes we do not believe in goodness because we have seen it; we refuse to see the evil inside it because we believed in goodness beforehand."
+        "We believe that education means enlightenment, that literature means nobility, that love means something good. There is nothing wrong with those beliefs in themselves, but when we trust them too much we can lose the ability to question. Because we believe a teacher deserves respect, it is hard to accept that a teacher can also be an abuser; because we believe love is beautiful, we may overlook the power and exploitation inside an intimate relationship. Sometimes we do not believe in goodness because we have seen it; we refuse to see the evil inside it because we believe in goodness beforehand."
       ],
       [
         "這讓我意識到，“樂園”或許不只是施害者製造的幻象，更是社會在長期習慣中共同維護的秩序。",
@@ -619,7 +988,7 @@ window.READS = [
   {
     "date": "2025-01-29",
     "title": "Stillness",
-    "category": "Book",
+    "category": "Novel",
     "place": "Sokcho, Gangwon, Corée du Sud\nSokcho, Gangwon, South Korea",
     "languages": ["French", "English"],
     "book": {
@@ -664,10 +1033,10 @@ window.READS = [
     ]
   },
   {
-    "date": "2026-10-11",
+    "date": "2026-08-25",
     "title": "Severance and the Name I Keep",
     "slug": "severance",
-    "category": "Book",
+    "category": "Novel",
     "book": {
       "cover": "severance.jpeg",
       "title": "Severance",
@@ -678,7 +1047,7 @@ window.READS = [
         "A fever leaves its victims repeating the routines of their old lives. Candace Chen, a Bible production coordinator in New York, keeps going to work."
       ]
     },
-    "place": "于加州旧金山\nSan Francisco, CA",
+    "place": "于麻省波士顿\nBoston, MA",
     "languages": ["Chinese", "English"],
     "prose": [
       [
@@ -714,7 +1083,7 @@ window.READS = [
   {
     "date": "2026-02-28",
     "title": "The One-Inch Gap",
-    "category": "Book",
+    "category": "Novel",
     "book": {
       "cover": "vuong.jpeg",
       "title": "大地上我们转瞬即逝的绚烂 (On Earth We’re Briefly Gorgeous)",
@@ -763,13 +1132,13 @@ window.READS = [
     "slug": "the-color-of-law",
     "place": "于加州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
-    "category": "Book",
+    "category": "History",
     "book": {
       "cover": "color_of_law.jpg",
       "title": "The Color of Law",
       "author": "Richard Rothstein",
       "language": "English",
-      "lines": ["Nonfiction · Liveright, 2017", "A forgotten history of how government policy at every level segregated American neighborhoods."]
+      "lines": ["History · Liveright, 2017", "A forgotten history of how government policy at every level segregated American neighborhoods."]
     },
     "blocks": [
       [
@@ -897,14 +1266,14 @@ window.READS = [
     "date": "2020-04-20",
     "title": "Freedom as Privilege",
     "slug": "freedom-as-privilege",
-    "category": "Book",
+    "category": "Ethnography",
     "book": {
       "cover": "chungking_mansions.jpg",
       "title": "世界中心的貧民窟：香港重慶大廈 (Ghetto at the Center of the World: Chungking Mansions)",
       "author": "Gordon Mathews",
-      "language": "Chinese",
+      "language": "Traditional Chinese",
       "lines": [
-        "Nonfiction · Traditional Chinese edition, 3rd ed.",
+        "Ethnography · Traditional Chinese edition, 3rd ed.",
         "An ethnography of Chungking Mansions in Hong Kong and the traders, migrants and asylum seekers who make a living there."
       ]
     },
@@ -921,7 +1290,7 @@ window.READS = [
       ],
       [
         "读Gordon Mathews的《重庆大厦》，最令我思考的并不是全球化如何将世界各地的人汇聚在香港的一栋建筑里，而是那些看似拥有无限流动可能的人，实际上拥有多少选择自己人生的自由。",
-        "Reading Gordon Mathews’s *Chungking Mansions*, what made me think most was not how globalization draws people from all over the world into a single building in Hong Kong, but how much freedom to choose their own lives people who seem to have limitless mobility actually have."
+        "Reading Gordon Mathews’s *Chungking Mansions*, what made me think most was not how globalization draws people from all over the world into a single building in Hong Kong, but how much freedom people who seem to have limitless mobility actually have to choose their own lives."
       ],
       [
         "Mathews将重庆大厦中的跨境贸易称为“低端全球化”。来自南亚、非洲等地的小商人、移民与寻求庇护者，在有限的资本、复杂的法律制度与不稳定的身份之间寻找生存机会。这里的全球化并非跨国企业的扩张，而是普通人在全球经济的缝隙中谋生。然而，流动并不必然意味着自由。对某些人而言，跨越国界是一种选择；对另一些人而言，却是维持生计的必要条件。一个人可以离开故乡，并不意味着他同样拥有留下的自由。",
@@ -945,7 +1314,7 @@ window.READS = [
       ],
       [
         "当然，重庆大厦中的人们并非只是被动承受命运。他们在制度的限制中寻找机会，在不确定性中建立跨国贸易网络，展现了令人惊讶的能动性。但这种能动性越是突出，我们越不应将他们面对的困难浪漫化为奋斗精神的胜利。",
-        "Of course, the people in Chungking Mansions are not merely passive victims of fate. Within the limits of institutions they look for openings, and amid uncertainty they build transnational trading networks, showing a surprising agency. But the more striking this agency is, the less we should romanticize the hardships they face into a triumph of the fighting spirit."
+        "Of course, the people in Chungking Mansions are not merely passive victims of fate. Within the limits of institutions they look for openings, and amid uncertainty they build transnational trading networks, showing surprising agency. But the more striking this agency is, the less we should romanticize the hardships they face as a triumph of striving."
       ],
       [
         "或许，真正的自由始终包含两个维度：既有独立判断如何生活的能力，也有将这种判断付诸实践的现实可能。缺少前者，我们可能成为社会期待的附庸；缺少后者，即使知道自己想要什么，也未必能够选择。",
@@ -965,14 +1334,14 @@ window.READS = [
     "date": "2020-05-04",
     "title": "The Ignorance of the Successful",
     "slug": "ignorance-of-the-successful",
-    "category": "Book",
+    "category": "Economics",
     "book": {
       "cover": "poor_economics.jpg",
       "title": "Poor Economics",
       "author": "Abhijit Banerjee and Esther Duflo",
       "language": "English",
       "lines": [
-        "Nonfiction · PublicAffairs, 2011",
+        "Economics · PublicAffairs, 2011",
         "Two economists on how the poor actually live and decide, drawn from field experiments around the world."
       ]
     },
@@ -1029,14 +1398,14 @@ window.READS = [
     "date": "2024-02-18",
     "title": "Knowledge and Understanding",
     "slug": "knowledge-and-understanding",
-    "category": "Book",
+    "category": "Novel",
     "book": {
       "cover": "when_we_cease.jpg",
       "title": "When We Cease to Understand the World",
       "author": "Benjamín Labatut",
       "language": "English",
       "lines": [
-        "Novel · Pushkin Press",
+        "Novel · Pushkin Press, 2020",
         "A fictionalized account of scientists and mathematicians, from Fritz Haber to Werner Heisenberg, at the edge of what can be understood."
       ]
     },
@@ -1077,7 +1446,7 @@ window.READS = [
       ],
       [
         "当一个人无法想象或面对自己的未来时，焦虑便不再只是对某个具体危险的恐惧，而可能成为对自身存在的怀疑。对于整个人类而言，是否也存在类似的困境？当科学与技术的发展超越了我们理解和预见其后果的能力，我们是否正在集体失去面对未来的确定感？",
-        "When a person cannot imagine or face their own future, anxiety is no longer fear of some specific danger and may become doubt about one’s own existence. Does humanity as a whole face a similar predicament? When the development of science and technology outruns our ability to understand and foresee its consequences, are we collectively losing our certainty in facing the future?"
+        "When a person cannot imagine or face their own future, anxiety is no longer fear of some specific danger and may become doubt about one’s own existence. Does humanity as a whole face a similar predicament? When the development of science and technology outruns our ability to understand and foresee its consequences, are we collectively losing our sense of certainty in facing the future?"
       ],
       [
         "但我并不认为这意味着理性的失败。科学的伟大，恰恰在于它不断揭示人类认知的边界，并迫使我们修正曾经深信不疑的真理。真正危险的不是承认无知，而是将能够计算误认为能够理解，将能够创造误认为能够控制。",
@@ -1097,7 +1466,7 @@ window.READS = [
     "date": "2023-03-17",
     "title": "Love Beyond Reach",
     "slug": "when-love-cannot-reach",
-    "category": "Book",
+    "category": "Novel",
     "book": {
       "cover": "a_little_life.jpg",
       "title": "A Little Life",
@@ -1171,6 +1540,373 @@ window.READS = [
         "当一个人无法相信自己值得被爱时，我们能否继续爱他，而不把他的痊愈当作这份爱的证明？",
         "When a person cannot believe they deserve to be loved, can we keep loving them without treating their recovery as proof of that love?"
       ]
+    ]
+  },
+  {
+    "date": "2026-09-24",
+    "title": "Luck Is Not Fate",
+    "slug": "the-histories",
+    "category": "History",
+    "book": {
+      "cover": "histories.jpg",
+      "title": "The Histories",
+      "author": "Herodotus",
+      "language": "English",
+      "lines": [
+        "History · c. 430 BCE",
+        "Herodotus’s inquiry into the Greco-Persian Wars and the peoples around them. In its opening book, the Lydian king Croesus asks the Athenian Solon who is the happiest man in the world."
+      ]
+    },
+    "place": "于加州斯坦福\nStanford, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "希罗多德《历史》中最让我印象深刻的，并不是波澜壮阔的希波战争，而是开篇吕底亚国王克洛伊索斯与雅典人梭伦的一段对话。拥有巨大财富与权力的克洛伊索斯，向梭伦展示自己的富足，期待被称为世上最幸福的人。梭伦却认为，在一个人的生命结束之前，我们无法真正判断他是否幸福。后来克洛伊索斯失去王国，才终于理解这句话的分量。",
+        "What stayed with me most in Herodotus’s *Histories* was not the sweeping drama of the Greco-Persian Wars but a conversation near the start, between Croesus, king of Lydia, and the Athenian Solon. Croesus, possessed of vast wealth and power, shows Solon his riches and expects to be called the happiest man in the world. Solon holds instead that until a man’s life has ended, we cannot truly judge whether he was happy. Only after Croesus loses his kingdom does he finally understand the weight of those words."
+      ],
+      [
+        "初读时，这似乎只是一个关于人生无常的古老寓言。但仔细想来，克洛伊索斯真正的错误，或许并不是高估了自己的财富，而是将幸运误认为命运。幸运是某个时刻恰好降临于我们的有利境遇，而命运则是我们试图赋予整段人生的连续性与必然性。幸运意味着事情原本可能以另一种方式发生；当我们把幸运理解为命运，便是在相信，自己今天所拥有的一切，不仅是过去努力的结果，也是未来理应延续的秩序。",
+        "At first it seems like no more than an ancient fable about life’s uncertainty. But on reflection, Croesus’s real mistake may not have been overestimating his wealth but mistaking luck for fate. Luck is a favorable circumstance that happens to arrive at some moment; fate is the continuity and inevitability we try to impose on a whole life. Luck means things could have gone another way. When we take luck for fate, we come to believe that everything we have today is not only the result of past effort but also an order that ought to continue into the future."
+      ],
+      [
+        "我们当然可以通过努力改变生活，但努力与结果之间，从来不存在完全确定的对应关系。一个人的成功，既可能来自能力与勤奋，也离不开出生的时代、家庭、社会环境，以及无数未曾意识到的偶然。然而，当成功持续得足够久，我们便容易逐渐忘记其中的偶然，把已经发生的事情理解为本来就应该发生的事情。幸运最隐蔽的地方，或许正是它会在时间的积累中，逐渐呈现出命运的模样。",
+        "Of course we can change our lives through effort, but there has never been a fully determined link between effort and outcome. A person’s success may come from ability and diligence, but it also depends on the era they were born into, their family, their social environment, and countless accidents they never noticed. Yet when success lasts long enough, we easily forget the accidents in it and come to see what has happened as what was always meant to happen. The most hidden thing about luck, perhaps, is that over time it gradually takes on the look of fate."
+      ],
+      [
+        "克洛伊索斯拥有财富、军队与王国，因此相信自己已经掌握了幸福。但梭伦的回答提醒他，拥有某种境遇与能够永久保有这种境遇，是两件完全不同的事。财富能够扩大我们应对不确定性的能力，却无法消除不确定性本身。我们可以规划未来，却无法保证未来按照规划发生。命运之所以令人敬畏，恰恰因为它不会因我们曾经的成功而承诺任何事情。",
+        "Croesus had wealth, an army and a kingdom, and so believed he had mastered happiness. But Solon’s answer reminds him that having a certain circumstance and being able to keep it forever are two entirely different things. Wealth can widen our capacity to cope with uncertainty, but it cannot remove uncertainty itself. We can plan for the future, but we cannot guarantee that it will follow the plan. Fate is awe-inspiring precisely because it promises us nothing on account of our past success."
+      ],
+      [
+        "这也让我重新思考财富与自由的关系。我们总以为，只要积累足够多的财富，终有一天便能够不再为生活担忧。但如果我们把安全感建立在财富必须不断增长、已有的一切必须永远保有的期待之上，那么财富越多，害怕失去的东西也可能越多。原本为了获得自由而进行的积累，反而可能让我们越来越难以接受生活中不可控制的部分。",
+        "This also made me rethink the relationship between wealth and freedom. We tend to assume that once we have accumulated enough, we will one day be free of worry about our lives. But if we build our sense of security on the expectation that wealth must keep growing and that everything we have must be kept forever, then the more we have, the more we may fear losing. Accumulation that began as a way to gain freedom may make it harder and harder to accept the parts of life we cannot control."
+      ],
+      [
+        "或许，梭伦真正提醒我们的，并不是幸福只能在死亡之后才能被判断，而是一个人不能因为眼下的幸运，就提前宣告自己已经战胜了命运。我们可以为自己的努力感到骄傲，也可以珍惜已经获得的财富与成就，却不必因此相信，自己比那些遭遇不幸的人更加值得拥有幸福。",
+        "Perhaps what Solon really reminds us of is not that happiness can only be judged after death, but that no one should, because of present luck, declare in advance that they have defeated fate. We can be proud of our effort and cherish the wealth and achievements we have gained, without believing that we deserve happiness more than those who met misfortune."
+      ],
+      [
+        "读到这里，我不禁觉得，成熟或许并不是终于拥有足够的能力掌控人生，而是在拥有越来越多的同时，依然能够承认其中有多少并非理所当然。",
+        "Reading this, I cannot help feeling that maturity may not be finally having the power to control one’s life, but being able, even as one has more and more, to admit how much of it was never a given."
+      ],
+      [
+        "我们花费大半生试图将幸运变成一种可以永久保有的命运，却可能忘记，真正的自由并不是确保自己永远不会失去，而是在知道一切都可能失去之后，仍然能够珍惜此刻的拥有。",
+        "We spend most of our lives trying to turn luck into a fate we can keep forever, and may forget that real freedom is not making sure we will never lose, but being able to cherish what we have now, knowing that everything can be lost."
+      ],
+      [
+        "如果我们今天所拥有的幸福，既来自自己的努力，也来自无数无法复制的偶然，那么我们究竟应该如何在为成功感到自豪的同时，不把自己的幸运误认为理所当然的命运？",
+        "If the happiness we have today comes both from our own effort and from countless accidents that cannot be repeated, how should we take pride in our success without mistaking our luck for a fate we are owed?"
+      ]
+    ]
+  },
+  {
+    "date": "2020-10-06",
+    "title": "Who Pays for Prudence?",
+    "slug": "the-great-debate",
+    "category": "Political thought",
+    "book": {
+      "cover": "great_debate.jpg",
+      "title": "The Great Debate: Edmund Burke, Thomas Paine, and the Birth of Right and Left",
+      "author": "Yuval Levin",
+      "language": "English",
+      "lines": [
+        "Political thought · Basic Books, 2013",
+        "Levin retells the 1790s quarrel between Burke and Paine over the French Revolution, and argues that it set the terms of left and right in modern politics."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "当我们赞美一个社会的稳定时，是否想过，究竟是谁在享受稳定，又是谁在为稳定付出代价？读 Yuval Levin 的《The Great Debate》，最让我感兴趣的，并不是伯克与潘恩如何影响现代左右政治思想的形成，而是他们对政治正当性截然不同的理解：一个社会的制度，究竟应该从历史的延续中获得正当性，还是必须不断接受自由、平等与个人权利的检验？",
+        "When we praise a society for its stability, have we asked who actually enjoys that stability, and who pays for it? In reading Yuval Levin’s *The Great Debate*, what interested me most was not how Burke and Paine shaped modern left and right political thought, but how differently they understood political legitimacy: should a society’s institutions draw their legitimacy from the continuity of history, or must they be tested again and again against liberty, equality and individual rights?"
+      ],
+      [
+        "在伯克看来，社会并不是某一代人凭借理性就能够重新设计的产物，而是无数世代在漫长历史中逐渐形成的复杂秩序。传统、习俗与制度不仅承载着集体经验，也维系着个人之间的责任与信任。政治社会不仅属于活着的人，也连接着过去与未来的世代。因此，改革并非不应该发生，而是必须考虑那些超越个人理解能力的社会关系。潘恩则认为，任何制度都不能仅仅因为存在已久便获得正当性。过去的世代无权永久支配今天的人，每一代人都应当拥有依据自身权利重新决定政治秩序的自由。",
+        "For Burke, society is not something one generation can redesign by reason alone, but a complex order formed gradually by countless generations over a long history. Tradition, custom and institutions carry collective experience, and they also sustain the responsibility and trust between individuals. A political society belongs not only to the living but also links the generations of the past and the future. Reform, then, is not something that should never happen; it must take into account social relationships that lie beyond any individual’s understanding. Paine held that no institution earns legitimacy merely by having existed for a long time. Past generations have no right to govern the living forever, and every generation should be free to decide its political order anew according to its own rights."
+      ],
+      [
+        "我能够理解伯克对人类理性局限的警惕。他所捍卫的并不只是既有权力，更是一种对社会复杂性的谦逊。制度的价值未必能够完全通过抽象原则衡量，而那些看似陈旧的传统，也可能保护着个人免受任意权力的侵害。伯克并非一概反对变革，他对美国殖民地诉求的同情，以及对法国大革命的批评，恰恰体现了他对不同历史处境的判断：改革应当保存社会中值得延续的自由，而不是为了实现理想中的秩序，将已有的一切推倒重来。",
+        "I can understand Burke’s wariness about the limits of human reason. What he defended was not only existing power but also a humility before the complexity of society. The value of an institution cannot always be fully measured by abstract principles, and traditions that look outdated may protect individuals from arbitrary power. Burke did not oppose change across the board. His sympathy for the claims of the American colonies and his criticism of the French Revolution show his judgment of different historical situations: reform should preserve the liberties worth continuing, rather than tear down everything that exists in order to realize an ideal order."
+      ],
+      [
+        "但相比之下，我仍然更认同潘恩对政治正当性的追问：如果一种制度本身就是不公的，那么它究竟需要延续多少年，才能让这种不公被称为传统？伯克提醒我们，理性无法完全理解历史；潘恩则提醒我们，历史也无法自动证明自身的正当性。前者担心改革者低估改变的风险，后者担心人们高估现存秩序的合理性。",
+        "Even so, I am still more persuaded by Paine’s question about political legitimacy: if an institution is unjust in itself, how many years must it last before that injustice can be called tradition? Burke reminds us that reason cannot fully understand history; Paine reminds us that history cannot automatically prove its own legitimacy. The former worries that reformers underestimate the risks of change, the latter that people overestimate the soundness of the existing order."
+      ],
+      [
+        "美国女性选举权运动便让我想到这一矛盾。一个以自由与人民主权为建国理想的国家，却长期将女性排除在充分的政治参与之外。直到1920年，第十九修正案才在宪法层面禁止以性别为由剥夺选举权，而许多女性，尤其是非裔女性，仍须继续面对其他制度性障碍。回望这段历史，我们很容易将女性获得选举权理解为理所当然的进步，但当时关于家庭、社会秩序与政治参与的传统观念，同样曾被用来反对改革。不过，这并不能简单证明伯克式的渐进主义必然维护不公，因为选举权的扩展本身也可以通过既有宪政制度实现。它真正提出的问题是：当一种制度需要改变时，我们如何既不忽视改革的风险，也不让对风险的担忧成为无限期推迟正义的理由？",
+        "The American women’s suffrage movement brings this tension to mind. A country founded on liberty and popular sovereignty long excluded women from full political participation. Only in 1920 did the Nineteenth Amendment write into the Constitution a ban on denying the vote on grounds of sex, and many women, Black women especially, still faced other institutional barriers. Looking back, it is easy to treat women’s suffrage as progress that was bound to come, but traditional ideas about family, social order and political participation were used at the time to oppose reform too. This does not simply prove that Burkean gradualism necessarily protects injustice, since the expansion of the vote could itself be achieved through existing constitutional institutions. The question it really raises is this: when an institution needs to change, how do we avoid both ignoring the risks of reform and letting worry about those risks become a reason to postpone justice indefinitely?"
+      ],
+      [
+        "更令我在意的是，传统从来不是由所有人平等创造和继承的。那些有能力将自身利益写入法律、习俗与社会规范的人，往往也更有机会将这些利益解释为值得尊重的历史经验。但反过来说，传统也并非只属于既得利益者。长期形成的法律保障、地方自治与社会组织，同样可能成为弱势群体抵抗权力的资源。历史既可能保存压迫，也可能保存自由；因此，问题并不在于传统是否值得尊重，而在于我们如何辨别其中哪些经验值得继承，哪些不公必须改变。",
+        "What concerns me more is that tradition has never been created and inherited equally by everyone. Those able to write their own interests into law, custom and social norms are often also better placed to present those interests as historical experience worthy of respect. Yet tradition does not belong only to the beneficiaries. Long-established legal protections, local self-government and social organizations can also become resources with which the weak resist power. History can preserve oppression, and it can preserve freedom. So the question is not whether tradition deserves respect, but how we tell which of its experiences are worth inheriting and which injustices must be changed."
+      ],
+      [
+        "这也让我重新理解伯克与潘恩之间真正难以调和的分歧。伯克认为，政治首先需要对既有社会承担责任，不能轻易牺牲现实中的制度与关系去追求抽象的完美；潘恩则坚持，政治制度必须能够向每一个受其约束的人证明自身的正当性，不能让历史成为限制当代人自由的最终理由。两人所警惕的危险都是真实的：没有历史意识的改革可能摧毁自由，而没有权利原则约束的传统也可能延续不公。",
+        "This also changed how I understand the divide between Burke and Paine that is truly hard to reconcile. Burke held that politics must first take responsibility for the society that exists, and must not lightly sacrifice real institutions and relationships in pursuit of abstract perfection. Paine insisted that political institutions must be able to justify themselves to every person they bind, and that history cannot be the final reason for limiting the freedom of people today. The dangers each of them feared are real: reform without a sense of history can destroy freedom, and tradition unconstrained by principles of rights can perpetuate injustice."
+      ],
+      [
+        "或许我更倾向于潘恩，并不是因为我相信人类理性能够设计出完美的社会，而是因为我认为，任何制度都不应该仅凭自身的延续获得道德上的优先权。但伯克也让我意识到，认识到改变的必要，并不意味着我们已经知道如何改变。改革者有责任解释新制度如何运作，维护现状的人也有责任说明既有制度为何值得保留。两者都不应免于质疑。",
+        "Perhaps I lean toward Paine not because I believe human reason can design a perfect society, but because I think no institution should gain moral priority merely by continuing to exist. But Burke also made me see that recognizing the need for change does not mean we already know how to change. Reformers have a duty to explain how the new institution would work, and defenders of the status quo have a duty to explain why the existing one deserves to be kept. Neither should be exempt from questioning."
+      ],
+      [
+        "《The Great Debate》最终让我重新思考开篇那个关于稳定的问题。稳定当然值得珍惜，但它并不是一种不需要付出代价的状态。改变可能破坏已有的自由，不改变也可能让另一些人始终无法获得自由。真正的政治智慧，或许不在于永远选择改革或保守，而在于不让任何一方的代价因为另一方的安全而变得不可见。",
+        "In the end, *The Great Debate* made me think again about the opening question of stability. Stability is certainly worth cherishing, but it is not a condition that costs nothing. Change may destroy the freedom we already have, and no change may leave others forever without it. Real political wisdom may lie not in always choosing reform or always choosing conservatism, but in not letting the cost borne by one side become invisible because of the safety of the other."
+      ],
+      [
+        "我仍然相信历史值得尊重，但尊重历史不应意味着服从历史。伯克教会我们怀疑自己改变世界的能力，潘恩则提醒我们怀疑现存世界的正当性。两种怀疑都不可或缺，但当我们以审慎之名要求一些人继续等待时，至少应该诚实地承认：我们所保护的稳定，未必是所有人共同享有的稳定。",
+        "I still believe history deserves respect, but respecting history should not mean obeying it. Burke teaches us to doubt our ability to change the world; Paine reminds us to doubt the legitimacy of the world as it is. Both doubts are indispensable, but when we ask some people to keep waiting in the name of prudence, we should at least honestly admit that the stability we are protecting is not necessarily a stability everyone shares."
+      ],
+      [
+        "如果一种秩序的延续，必须以另一些人持续承受不公为代价，那么我们究竟是在审慎地保护社会，还是在让那些已经拥有自由的人，决定尚未拥有自由的人还需要等待多久？",
+        "If an order can continue only at the price of others continuing to bear injustice, are we prudently protecting society, or letting those who already have freedom decide how much longer those who do not yet have it must wait?"
+      ]
+    ]
+  },
+  {
+    "date": "2022-11-02",
+    "title": "An Era’s Progress, and a Lifetime",
+    "slug": "social-classes-in-china",
+    "category": "Social analysis",
+    "book": {
+      "cover": "social_classes.jpg",
+      "title": "中国社会各阶层分析 (An Analysis of the Social Strata in China)",
+      "author": "梁晓声 Liang Xiaosheng",
+      "language": "Chinese",
+      "lines": [
+        "Social analysis · Shenzhen Publishing House",
+        "Liang Xiaosheng’s analysis of how China’s social classes fared through reform and opening up, and who gained and who lost."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "我们习惯于从历史的终点回望一个时代，用经济增长、社会流动与生活水平的提高证明它的进步。但对于真正生活在其中的人，历史并不是一条已知终点的道路。一个国家可以用几十年完成转型，而对于普通人，那几十年就是他们无法重新度过的一生。读梁晓声的《人世间》，我时常想起他在1990年代写下的《中国社会各阶层分析》：当我们说一个时代变得更好时，究竟是谁的生活变得更好了？",
+        "We are used to looking back at an era from history’s endpoint, and to proving its progress with economic growth, social mobility and rising living standards. But for the people who actually lived in it, history was not a road whose end was known. A country can complete a transformation in a few decades, and for ordinary people those decades are the one life they cannot live over. Reading Liang Xiaosheng’s *Ren Shi Jian* (人世间, “In the World of Men”), I kept thinking of his *Analysis of the Social Strata in China*, written in the 1990s: when we say an era has become better, whose lives have actually become better?"
+      ],
+      [
+        "《中国社会各阶层分析》试图解释社会如何塑造人，《人世间》则让我们看见，被社会塑造的人如何度过自己的一生。前者观察改革开放过程中不同阶层的利益分化与命运变迁，后者则将这些抽象的社会关系写进周家几代人的生活。周秉义、周蓉与周秉昆出身于同一个工人家庭，却分别走向干部、知识分子与普通劳动者的人生。相同的家庭起点并没有带来相同的命运，而个人努力之外的教育机会、社会资源与历史机遇，也不断改变着他们能够抵达的地方。",
+        "*Analysis of the Social Strata in China* tries to explain how society shapes people; *Ren Shi Jian* lets us see how people so shaped live out their lives. The former observes how interests diverged and fortunes changed among different classes during reform and opening up; the latter writes those abstract social relations into the lives of several generations of the Zhou family. Zhou Bingyi, Zhou Rong and Zhou Bingkun come from the same working-class family, yet go on to live as an official, an intellectual and an ordinary laborer. The same starting point in the family did not bring the same fate, and educational opportunity, social resources and historical chance, all beyond personal effort, kept changing where each of them could get to."
+      ],
+      [
+        "我尤其记得周秉昆与郑娟的生活。郑娟独自照顾年迈的母亲和年幼的孩子，周秉昆则在明知这段关系会带来家庭压力的情况下，逐渐承担起照顾她们的责任。后来周家遭遇变故，郑娟又长期照料失去自理能力的周母。这些付出没有带来显著的社会地位，也很难被收入或职业成就衡量，却实实在在地维系着一个家庭的生活。相比之下，周秉义通过仕途参与城市治理，周蓉通过知识获得更广阔的选择空间。三兄妹的差异让我想到：我们以社会流动衡量进步，却很少追问，为什么一个人必须离开原来的阶层，才能被认为拥有了更好的人生？",
+        "I especially remember the life of Zhou Bingkun and Zheng Juan. Zheng Juan cares alone for her aging mother and her young child, and Zhou Bingkun, knowing the relationship will bring pressure at home, gradually takes on the responsibility of looking after them. Later, when misfortune strikes the Zhou family, Zheng Juan also looks after Mrs. Zhou for years after she loses the ability to care for herself. These sacrifices bring no notable social standing and can hardly be measured in income or career achievement, yet they truly hold a family’s life together. By contrast, Zhou Bingyi takes part in running the city through an official career, and Zhou Rong gains a wider range of choices through knowledge. The differences among the three siblings make me think: we measure progress by social mobility, but seldom ask why a person must leave their original class before they can be said to have a better life."
+      ],
+      [
+        "光字片的变迁则呈现了另一层矛盾。周秉昆与国庆、赶超等朋友曾经共享相似的工人生活，但随着市场化改革深入，原有的工作与生活保障逐渐发生变化，失业与谋生压力也改变了他们的人生。对一些人而言，改革意味着新的机会；对另一些人而言，却意味着熟悉的生活秩序不再可靠。《中国社会各阶层分析》讨论城市平民的处境，《人世间》则让我们看见，所谓社会结构调整，最终可能表现为一个家庭失去收入、一个人失去工作，以及曾经稳定的身份突然变得脆弱。",
+        "The changes in the Guangzi district show another layer of contradiction. Zhou Bingkun and friends like Guoqing and Ganchao once shared a similar working life, but as market reform deepened, the job and living guarantees they had gradually changed, and unemployment and the pressure to make a living changed their lives. For some, reform meant new opportunity; for others, it meant that the familiar order of life could no longer be relied on. *Analysis of the Social Strata in China* discusses the situation of ordinary urban people, while *Ren Shi Jian* lets us see that what is called structural adjustment may in the end show up as a family losing its income, a person losing their job, and a once-stable identity suddenly becoming fragile."
+      ],
+      [
+        "但我也不愿意将这些普通人的艰辛浪漫化。周秉昆的善良、郑娟的坚韧，以及朋友之间的相互扶持令人动容，却不意味着贫困与不平等因此变得合理。我们赞美他们在困境中保持尊严，不应该成为社会不必改善其处境的理由。一个人能够忍受多少苦难，与他是否本来就应该承受这些苦难，是两回事。文学让我们看见苦难中的人性，而社会分析则提醒我们，有些苦难并非命运使然，而是可以通过制度与资源分配加以改变的。",
+        "But I do not want to romanticize the hardships of these ordinary people either. Zhou Bingkun’s kindness, Zheng Juan’s resilience and the way friends support one another are deeply moving, but that does not make poverty and inequality reasonable. Our praise for how they keep their dignity in hardship should not become a reason for society not to improve their situation. How much suffering a person can endure and whether they should have had to bear it in the first place are two different matters. Literature lets us see humanity within suffering, while social analysis reminds us that some suffering is not decreed by fate but can be changed through institutions and the distribution of resources."
+      ],
+      [
+        "这也让我意识到，两部作品之间存在一种深刻的互补。《中国社会各阶层分析》将人放进社会结构，揭示个人选择背后的不平等；《人世间》则让人从阶层标签中重新走出来，拥有无法被统计概括的情感、责任与尊严。周秉义不只是干部，周蓉不只是知识分子，周秉昆也不只是普通劳动者。社会结构能够解释他们拥有怎样的机会，却无法完整解释他们如何对待身边的人。人既不是完全自由地创造自己的命运，也不是只能被动接受时代的安排。",
+        "This also made me see a deep complementarity between the two works. *Analysis of the Social Strata in China* puts people into the social structure and exposes the inequality behind individual choices; *Ren Shi Jian* lets people step out of their class labels again, with feelings, responsibilities and a dignity that statistics cannot sum up. Zhou Bingyi is not only an official, Zhou Rong not only an intellectual, and Zhou Bingkun not only an ordinary laborer. Social structure can explain what opportunities they had, but cannot fully explain how they treated the people around them. People neither create their fates in complete freedom nor merely accept the arrangements of their time."
+      ],
+      [
+        "更值得思考的是，社会进步与个人幸福并不必然同步。周秉义推动光字片改造，体现了公共治理改善普通人居住条件的可能；但即使破旧的街区最终得以更新，那些在旧日生活中失去的亲人、错过的机会与无法挽回的遗憾，也不会因此重新归来。历史可以在下一代实现更充分的繁荣，却无法补偿每一个人已经度过的岁月。宏观意义上的成功，无法自动抵消微观意义上的遗憾。",
+        "Even more worth thinking about is that social progress and personal happiness do not necessarily move together. Zhou Bingyi’s push to rebuild the Guangzi district shows how public governance can improve ordinary people’s housing; but even if the run-down neighborhood is finally renewed, the relatives lost in the old life, the chances missed and the regrets that cannot be undone will not come back because of it. History can bring fuller prosperity to the next generation, but it cannot make up for the years each person has already lived. Success at the macro level cannot automatically cancel regret at the micro level."
+      ],
+      [
+        "因此，我越来越觉得，一个社会的进步不应该仅仅用多少人实现了阶层跃升来衡量，更应该看那些没有跃升的人能否生活得更好。真正值得追求的，或许不是让每个人都成为周秉义或周蓉，而是让那些像周秉昆一样留在普通生活中的人，不必通过不断向上攀升来证明自身的价值。",
+        "So I increasingly feel that a society’s progress should be measured not only by how many people have moved up a class, but by whether those who have not moved up can live better. What is really worth pursuing may not be to let everyone become a Zhou Bingyi or a Zhou Rong, but to let people who, like Zhou Bingkun, remain in ordinary life not have to keep climbing to prove their worth."
+      ],
+      [
+        "《中国社会各阶层分析》让我们看见时代如何改变社会，《人世间》则让我们追问，这些改变究竟如何落在每一个人身上。我们当然可以赞美一个时代创造了多少机会，但也应该记得，机会的增加并不意味着每个人都能重新选择自己的人生。",
+        "*Analysis of the Social Strata in China* shows us how an era changes society; *Ren Shi Jian* makes us ask how those changes actually land on each person. We can certainly praise an era for how many opportunities it created, but we should also remember that more opportunity does not mean everyone can choose their life over again."
+      ],
+      [
+        "或许，衡量一个时代最深刻的尺度，不是它让多少人走出了原来的阶层，而是那些没有走出去的人，是否也不再需要为自己的平凡付出代价。",
+        "Perhaps the deepest measure of an era is not how many people it let leave their original class, but whether those who did not leave no longer have to pay a price for being ordinary."
+      ],
+      [
+        "毕竟，时代可以继续向前，而人的一生只有一次。",
+        "After all, an era can keep moving forward, but a life comes only once."
+      ]
+    ]
+  },
+  {
+    "date": "2022-11-10",
+    "slug": "ren-shi-jian",
+    "sameAs": "social-classes-in-china",
+    "category": "Novel",
+    "book": {
+      "cover": "renshijian.jpg",
+      "title": "人世间 (Ren Shi Jian)",
+      "author": "梁晓声 Liang Xiaosheng",
+      "language": "Chinese",
+      "lines": [
+        "Novel · China Youth Press edition",
+        "Liang Xiaosheng’s Mao Dun Prize-winning novel, following the three children of a working-class family in northeast China through decades of change."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA"
+  },
+  {
+    "date": "2025-07-04",
+    "title": "A Lifetime of Making Peace With the Past",
+    "slug": "pinball-1973",
+    "category": "Novel",
+    "book": {
+      "cover": "pinball.jpg",
+      "title": "1973年的彈珠玩具 (Pinball, 1973)",
+      "author": "村上春樹 Haruki Murakami",
+      "language": "Traditional Chinese",
+      "lines": [
+        "Novel · Kodansha, 1980 · Traditional Chinese edition",
+        "A man searches for a pinball machine he once loved, while his friend the Rat tries to leave the town and the life he cannot settle into."
+      ]
+    },
+    "place": "於台灣花蓮\nHualien, Taiwan",
+    "languages": ["Traditional Chinese", "English"],
+    "prose": [
+      [
+        "有人說，童年的陰影需要一生來治癒。但我漸漸覺得，真正難以擺脫的，未必是童年發生過什麼，而是那些早年的經歷如何在我們尚未察覺時，塑造了後來的人生。我們以為自己早已告別過去，卻可能仍然按照過去留下的情感習慣生活。讀村上春樹的《1973年的彈珠玩具》，我一直在想：如果今天的我們，是由無數已經消失的昨天塑造而成，那麼所謂成長，究竟是不斷成為新的自己，還是不斷尋找那個已經失去的自己？",
+        "Some say the shadows of childhood take a lifetime to heal. But I have come to feel that what is truly hard to shake is not necessarily what happened in childhood, but how those early experiences shaped our later lives before we noticed. We think we have said goodbye to the past long ago, yet we may still be living by the emotional habits it left behind. Reading Haruki Murakami’s *Pinball, 1973*, I kept wondering: if the people we are today are shaped by countless yesterdays that no longer exist, is growing up a matter of becoming a new self again and again, or of searching again and again for the self we have lost?"
+      ],
+      [
+        "小說中的「我」執著於尋找一台曾經玩過的彈珠遊戲機。那不過是一件普通的舊物，既沒有特別的價值，也無法改變他現在的生活。然而，當他終於在堆滿廢棄機器的倉庫裡與它重逢時，這場尋找似乎獲得了某種超越物品本身的意義。他真正想找回的，或許不是那台機器，而是曾經站在機器面前的自己，以及那個尚未經歷後來種種失去的年代。",
+        "The narrator of the novel is fixated on finding a pinball machine he once played. It is just an ordinary old thing, of no special value, and it cannot change his life now. Yet when he finally meets it again in a warehouse full of discarded machines, the search seems to take on a meaning beyond the object itself. What he really wants to recover may not be the machine but the self who once stood in front of it, and the time before the losses that came later."
+      ],
+      [
+        "與此同時，「鼠」卻走在另一條方向相反的道路上。「我」試圖透過尋找一件舊物，重新建立自己與過去的聯繫；「鼠」則試圖離開熟悉的城市、酒吧與人際關係，擺脫一種始終無法融入的生活。他擁有相對優裕的物質條件，卻無法因此獲得內心的安定。對「我」而言，過去似乎藏著某種值得找回的東西；對「鼠」而言，過去卻像是一種必須離開的束縛。一個向過去靠近，一個努力與過去拉開距離，但他們都無法真正回答，自己究竟在尋找什麼。",
+        "Meanwhile the Rat walks a road in the opposite direction. The narrator tries to rebuild his connection to the past by searching for an old object; the Rat tries to leave the familiar city, the bar and his relationships, to escape a life he has never been able to fit into. He is comparatively well off materially, but that gives him no inner peace. For the narrator, the past seems to hold something worth recovering; for the Rat, the past is a constraint he must break free of. One moves toward the past and the other works to put distance between himself and it, yet neither can truly answer what he is looking for."
+      ],
+      [
+        "我覺得這種對照尤其耐人尋味。「我」至少能將自己的失落寄託在一台具體的機器上，於是他的懷念有了方向，也有了可以抵達的終點。「鼠」的不安卻沒有如此明確的對象。他與周圍世界的疏離，並不能透過找回某件東西得到解決，甚至連自己想要離開的究竟是什麼，也未必能夠說清。或許有些人比較幸運，能夠為自己的失落找到一個名字；另一些人卻只能感受到生活中始終存在某種缺失，卻不知道那個缺失從何而來。",
+        "I find this contrast especially intriguing. The narrator can at least attach his sense of loss to a concrete machine, so his longing has a direction and an end he can reach. The Rat’s unease has no such clear object. His estrangement from the world around him cannot be resolved by recovering something, and he may not even be able to say what exactly he wants to leave. Perhaps some people are luckier and can find a name for their loss, while others can only feel that something has always been missing from their lives without knowing where the lack comes from."
+      ],
+      [
+        "這讓我想到，我們對過去的懷念，常常並不是因為過去真的比現在美好，而是因為那時的自己還不知道未來會失去什麼。年輕時擁有的某些關係、期待與安全感，在當時或許平凡得不值得記住，直到它們消失以後，我們才意識到那些看似微不足道的瞬間，原來構成了自己的一部分。我們懷念的也許不是某個地方、某件舊物，而是那個仍然能夠毫無保留地相信某些事情的自己。",
+        "This makes me think that our nostalgia for the past is often not because the past was truly better than the present, but because the self of that time did not yet know what the future would take away. Some relationships, expectations and feelings of security we had when young may have been too ordinary to be worth remembering then, and only after they vanished did we realize that those seemingly trivial moments had become a part of us. What we miss may not be a place or an old object but the self who could still believe in certain things without reservation."
+      ],
+      [
+        "我偶爾也會想像，如果有一天重新走進童年熟悉的街道，看到那些曾經每天經過的建築，究竟會是什麼感受。或許街道依然在那裡，房屋也沒有太大變化，但我已經無法像當年那樣理解它們。小時候覺得漫長的道路，如今可能不過幾分鐘就能走完；曾經以為永遠不會改變的生活，也早已消失在記憶之中。最令我感傷的，不是那些地方變了，而是即使它們完全沒有改變，我也無法重新擁有當時看待世界的目光。原來時間帶走的不只是我們擁有過的東西，也包括我們曾經感受世界的方式。",
+        "I sometimes imagine what it would feel like to walk again down the streets of my childhood and see the buildings I once passed every day. The streets might still be there and the houses little changed, but I could no longer understand them as I once did. A road that felt long as a child might now take only a few minutes to walk, and a life I once thought would never change has long since vanished into memory. What saddens me most is not that those places have changed, but that even if they had not changed at all, I could not get back the way I saw the world then. Time takes away not only what we once had but also the way we once felt the world."
+      ],
+      [
+        "但「鼠」又讓我意識到，並不是每個人都渴望回到過去。有時候，我們想要逃離的，恰恰是那個曾經的自己，以及過去賦予我們的身份與期待。「鼠」對自己所處環境的疏離，使我想到一種更難以言說的困境：當一個人已經擁有別人眼中值得羨慕的生活，卻仍然感到不快樂時，他甚至很難為自己的不快樂找到正當的理由。於是，離開似乎成為唯一可以想像的改變，儘管他並不知道離開之後會抵達哪裡。",
+        "But the Rat also made me realize that not everyone longs to return to the past. Sometimes what we want to flee is exactly the person we used to be, and the identity and expectations the past gave us. The Rat’s estrangement from his surroundings reminds me of a harder predicament to put into words: when someone already has a life others envy and still feels unhappy, he can hardly find a legitimate reason for his unhappiness. Leaving then seems the only change he can imagine, though he does not know where it will take him."
+      ],
+      [
+        "從這個角度看，「我」與「鼠」其實代表了兩種面對自我認同的方式。「我」試圖透過記憶確認自己曾經是誰，「鼠」則試圖透過離開，擺脫別人認為他應該成為的樣子。前者害怕失去與過去的聯繫，後者害怕永遠無法脫離過去的限制。但兩人共同面對的問題是：如果我們始終需要透過過去來理解自己，那麼我們究竟還有多少自由，去成為一個不同的人？",
+        "Seen this way, the narrator and the Rat represent two ways of facing one’s identity. The narrator tries to confirm through memory who he used to be; the Rat tries, by leaving, to shed what others think he should become. The first fears losing his tie to the past, the second fears never escaping its limits. But the question they share is this: if we always need the past in order to understand ourselves, how much freedom do we really have to become a different person?"
+      ],
+      [
+        "小說中那台終於被找到的彈珠遊戲機，在我看來更像是一場遲來的告別。機器依然存在，曾經的時間卻無法恢復。「我」可以重新見到它，卻無法重新成為當年站在它面前的人；而「鼠」即使離開熟悉的地方，也未必能將自己的不安留在身後。一個人的尋找終於有了結果，另一個人的離開才剛剛開始，但兩者都沒有真正解決時間留下的問題。原來找回與離開，有時只是我們試圖改變自己與過去關係的兩種方式。",
+        "The pinball machine that is finally found in the novel seems to me more like a belated farewell. The machine is still there, but the time that once surrounded it cannot be restored. The narrator can see it again but cannot become again the person who stood in front of it; and the Rat, even after leaving the familiar place, may not leave his unease behind. One man’s search has at last borne fruit, another’s departure has only just begun, but neither has truly settled what time has left behind. It seems that recovering and leaving are sometimes just two ways of trying to change our relationship with the past."
+      ],
+      [
+        "《1973年的彈珠玩具》最打動我的，恰恰是它沒有為這兩種人生提供明確的答案。村上春樹沒有告訴我們，懷念比逃離更值得肯定，也沒有讓人物因為一次重逢或一次離開便突然獲得完整的自我。他們只是繼續生活，帶著那些無法解釋的缺失，慢慢走向未知的明天。",
+        "What moves me most about *Pinball, 1973* is precisely that it offers no clear answer for either life. Murakami does not tell us that nostalgia is worth more than escape, nor does he let his characters suddenly gain a whole self through one reunion or one departure. They simply go on living, carrying losses they cannot explain, and slowly walk toward an unknown tomorrow."
+      ],
+      [
+        "或許，我們用一生與過去和解，並不是為了最終成為那個未曾受傷的自己，而是逐漸理解：過去可以解釋我們為什麼成為今天的樣子，卻不必決定我們以後只能成為怎樣的人。",
+        "Perhaps we spend a lifetime making peace with the past not to become, in the end, the self that was never hurt, but to come gradually to understand that the past can explain why we became who we are today without having to decide who we can be from now on."
+      ],
+      [
+        "「我」讓我明白，有些東西即使找回來，也無法讓時間倒流；「鼠」則讓我明白，有些東西即使拋在身後，也不會因此消失。",
+        "The narrator taught me that some things, even when recovered, cannot turn time back; the Rat taught me that some things, even when left behind, do not disappear."
+      ],
+      [
+        "我們終究既無法真正回到過去，也無法徹底逃離過去。或許成長最困難的地方，就在於不再需要透過找回什麼，或離開什麼，才能允許自己繼續生活。",
+        "In the end we can neither truly return to the past nor fully escape it. Perhaps the hardest part of growing up is no longer needing to recover something, or to leave something, before we allow ourselves to go on living."
+      ]
+    ]
+  },
+  {
+    "date": "2022-12-21",
+    "title": "The Freedom to Leave, the Price of Staying",
+    "slug": "because-i-hate-korea",
+    "category": "Novel",
+    "book": {
+      "cover": "hate_korea.jpg",
+      "title": "한국이 싫어서 (Because I Hate Korea)",
+      "author": "장강명 Jang Gang-myeong",
+      "language": "Korean",
+      "lines": [
+        "Novel · Minumsa, 2015 · Original Korean edition",
+        "A young woman leaves a stable job at a Korean financial company for a new life in Australia, and tries to explain why."
+      ]
+    },
+    "place": "于韩国首尔\nSeoul, South Korea",
+    "languages": ["Chinese", "English"],
+    "blocks": [
+      ["sub", "——读张康明《한국이 싫어서》（因为讨厌韩国）", "—Reading Jang Gang-myeong’s *한국이 싫어서* (“Because I Hate Korea”)"],
+      ["p", "我们常常赞美那些勇敢离开故乡、重新开始生活的人，仿佛只要有足够的勇气，每个人都能选择自己想要的人生。但读张康明的《한국이 싫어서》，我渐渐意识到，离开从来不只是勇气的问题。当一个人必须离开自己的国家，才能过上自己想要的生活，这究竟是个人自由的体现，还是一个社会无法容纳不同生活方式的结果？而那些没有能力离开的人，又是否拥有同样的选择权利？", "We often praise those who bravely leave their homeland and start life anew, as if anyone with enough courage could choose the life they want. But reading Jang Gang-myeong’s *한국이 싫어서*, I gradually realized that leaving has never been only a matter of courage. When a person has to leave their country in order to live the life they want, is that an expression of individual freedom, or the result of a society that cannot accommodate different ways of living? And do those who have no means to leave have the same right to choose?"],
+      ["p", "小说中的桂娜并不是传统意义上的失败者。她受过教育，在韩国的金融公司拥有一份相对稳定的工作，也有可以预见的人生道路。然而，她依然决定辞职，前往澳大利亚。我觉得，理解桂娜的关键，并不在于她有多么讨厌韩国，而在于她最初甚至很难向别人解释，为什么一种看似正常的生活会让自己如此疲惫。", "Gyena, the novel’s protagonist, is not a failure in the conventional sense. She is educated, holds a fairly stable job at a financial company in Korea, and has a foreseeable path ahead of her. Yet she still decides to quit and go to Australia. I think the key to understanding Gyena is not how much she hates Korea, but that at first she can hardly explain to others why a seemingly normal life leaves her so exhausted."],
+      ["p", "在韩国，桂娜的困境并不是缺少一条可以继续走下去的道路，而是那条道路似乎早已替她决定了终点。每天拥挤的通勤、重复的办公室工作、对收入与未来的焦虑，让她逐渐意识到，自己或许能够成为一个符合社会期待的人，却未必能够接受这种生活。她并不是没有能力参与竞争，而是开始怀疑，为什么人生必须以竞争的结果来衡量。", "In Korea, Gyena’s predicament is not that she lacks a road to keep walking, but that the road seems to have decided her destination in advance. The crowded daily commute, the repetitive office work and the anxiety about income and the future make her gradually realize that she may be able to become a person who meets society’s expectations, yet cannot accept that kind of life. It is not that she is unable to compete; she begins to wonder why life has to be measured by the results of competition."],
+      ["p", "我觉得这正是小说最细腻的地方。一个人最深刻的困境，有时不是不知道自己应该做什么，而是明明知道社会希望自己做什么，却无法相信那就是自己应该过的一生。桂娜的痛苦不仅来自生活本身，也来自她无法让别人相信，这种痛苦是正当的。", "I think this is the most delicate part of the novel. A person’s deepest predicament is sometimes not that they do not know what they should do, but that they know perfectly well what society wants of them and cannot believe it is the life they ought to live. Gyena’s pain comes not only from her life itself but also from being unable to make others believe that her pain is legitimate."],
+      ["p", "桂娜最终辞职，决定前往澳大利亚。她在仁川机场与男友智明告别，也意味着她必须放弃一部分原本熟悉的生活。智明并不是一个简单的反面人物，他所代表的稳定关系与未来生活，确实具有吸引力。因此，桂娜的离开并不是在毫无牵挂的情况下作出的轻松决定。她需要承认，自己可能失去一些真正珍贵的东西，却仍然无法因此说服自己留下。", "Gyena finally quits and decides to go to Australia. Saying goodbye to her boyfriend Jimyeong at Incheon Airport also means giving up part of the life she knows. Jimyeong is not a simple villain; the stable relationship and future life he represents are genuinely attractive. So Gyena’s departure is not an easy decision made without any attachments. She has to admit that she may lose something truly precious, and still cannot persuade herself to stay."],
+      ["p", "不过，我不认为此时的桂娜已经完全理解了自己想要的人生。第一次离开韩国时，她更多是在否定一种无法忍受的生活，而不是已经找到另一种明确的方向。她知道自己不想继续，却未必知道重新开始意味着什么。她的勇气之中，仍然包含着迷茫。", "Still, I do not think Gyena fully understands the life she wants at this point. When she leaves Korea the first time, she is more rejecting a life she cannot bear than having found another clear direction. She knows she does not want to go on, but not necessarily what starting over means. Her courage still contains confusion."],
+      ["p", "到了澳大利亚，这种迷茫并没有立即消失。她一边学习语言，一边在餐馆洗碗，从韩国金融公司的办公室进入一个更加陌生、经济上也更加不稳定的环境。如果按照传统的职业标准衡量，她似乎经历了一次向下流动。但我觉得，正是这种反差，让桂娜第一次有机会重新审视自己曾经相信的成功标准。", "In Australia the confusion does not vanish at once. She studies the language while washing dishes in a restaurant, moving from the office of a Korean financial company into a more unfamiliar and financially less stable environment. By conventional career standards, she seems to have moved downward. But I think it is precisely this contrast that gives Gyena, for the first time, a chance to re-examine the standard of success she once believed in."],
+      ["p", "在韩国，她拥有一份体面的工作，却感到生活正在失去方向；在澳大利亚，她从事辛苦的兼职，却开始为自己选择的未来付出努力。两种生活都不轻松，但辛苦的意义已经发生变化。过去，她的努力主要是为了维持一种被社会认可的生活；现在，她必须亲自承担选择的后果，也因此逐渐获得了对生活的掌控感。", "In Korea she had a respectable job but felt her life losing direction; in Australia she does hard part-time work but begins to put effort into a future she chose herself. Neither life is easy, but the meaning of the hardship has changed. Before, her effort mainly went into maintaining a life that society approved of; now she has to bear the consequences of her choices herself, and in doing so gradually gains a sense of control over her life."],
+      ["p", "然而，这种对照还有另一层值得注意的意义。桂娜在韩国拥有的学历、工作经验与社会关系，到了澳大利亚并不能自动转化为同等的职业地位。她必须从语言学习和基础劳动重新开始。这说明社会地位并不完全取决于一个人的能力，也取决于这些能力在特定社会中能否获得承认。所谓成功，从来不只是个人努力的结果，还与一个人所处的制度和环境密切相关。", "Yet this contrast has another meaning worth noting. The education, work experience and social connections Gyena had in Korea do not automatically turn into equal professional standing in Australia. She has to start over with language study and basic labor. This shows that social position does not depend wholly on a person’s abilities, but also on whether those abilities are recognized in a particular society. What we call success has never been only the result of individual effort; it is closely tied to the system and environment a person is in."],
+      ["p", "这种变化并不意味着桂娜突然变得乐观或坚强，而是她开始理解，自由与不确定性往往同时出现。离开韩国并没有让她摆脱经济压力，也没有让她免于面对孤独、语言障碍和身份问题。她必须接受，自己选择的生活未必更加舒适，甚至可能比过去更加艰难。但与此前不同的是，她不再仅仅因为生活艰难，就认为自己一定走错了道路。", "This change does not mean Gyena suddenly becomes optimistic or strong; it means she begins to understand that freedom and uncertainty often arrive together. Leaving Korea does not free her from financial pressure, nor from loneliness, language barriers and questions of identity. She must accept that the life she chose may not be more comfortable, and may even be harder than before. But unlike before, she no longer assumes she must have taken the wrong road merely because life is hard."],
+      ["p", "我想，这是一种更深刻的成长：一个人开始有能力区分，哪些痛苦来自被迫接受的生活，哪些痛苦则是自己愿意为某种可能性承担的代价。", "I think this is a deeper kind of growth: a person becomes able to tell which pain comes from a life they were forced to accept, and which pain is a price they are willing to pay for a possibility."],
+      ["p", "桂娜后来继续学习，进入会计研究生项目，逐渐为自己建立新的生活基础。这里最重要的，并不是她终于重新走上了一条能够获得社会认可的职业道路，而是她与这条道路的关系已经不同。工作与学历逐渐成为实现生活目标的工具，而不再是决定自身价值的唯一标准。", "Gyena goes on to study, entering a graduate accounting program and gradually building a new foundation for her life. What matters most here is not that she has finally returned to a career path society recognizes, but that her relationship to that path is now different. Work and degrees gradually become tools for reaching her life goals, no longer the only standard that determines her worth."],
+      ["p", "然而，我认为桂娜真正重要的变化，发生在她短暂返回韩国之后。", "Yet I think the truly important change in Gyena comes after her brief return to Korea."],
+      ["p", "她重新与智明相处，看见他已经拥有相对稳定而优渥的生活，也再次面对两人共同生活的可能。如果她最初只是因为工作不顺利、收入不足或对未来缺乏安全感而离开，那么智明所能提供的稳定生活，似乎已经足以成为留下的理由。", "She spends time with Jimyeong again, sees that he now has a relatively stable and comfortable life, and faces once more the possibility of a life together. If she had originally left only because work was going badly, income was insufficient or she felt insecure about the future, the stable life Jimyeong can offer would seem reason enough to stay."],
+      ["p", "但桂娜最终还是选择返回澳大利亚。", "But Gyena finally chooses to go back to Australia."],
+      ["p", "我觉得，这个决定比她第一次离开韩国更加重要。第一次离开时，她需要通过距离来摆脱自己不喜欢的生活；第二次离开时，她已经能够在重新面对那种生活之后，确认它依然不是自己想要的。前者更接近对现实的不满，后者则是一种逐渐清晰的自我认识。", "I think this decision matters more than her first leaving of Korea. The first time, she needed distance to get away from a life she disliked; the second time, having faced that life again, she can confirm that it is still not what she wants. The former is closer to dissatisfaction with reality, the latter to a self-knowledge that is gradually becoming clear."],
+      ["p", "她不再需要证明韩国有多么糟糕，才能为自己的离开寻找理由。她也不必否认智明的感情、稳定工作的价值，或者故乡值得留恋的部分。她只是终于明白，一种生活可以很好，却不一定适合自己；一个人可以真诚地爱着另一个人，却仍然不愿意接受对方所期待的未来。", "She no longer needs to prove how bad Korea is in order to justify leaving. Nor does she have to deny Jimyeong’s love, the value of a stable job, or the parts of home worth missing. She simply comes to understand at last that a life can be good without being right for her, and that one can love another person sincerely and still be unwilling to accept the future that person expects."],
+      ["p", "这种变化让我尤其感动。年轻时，我们常常需要通过否定某些东西，才能确信自己的选择是正确的。我们会努力证明离开的地方不值得留恋，放弃的机会并没有那么好，失去的关系本来就不适合自己。仿佛只有这样，才能减轻选择所带来的不安。但桂娜的第二次离开，让我看到另一种可能：我们可以承认没有选择的那条道路同样具有价值，却依然不后悔自己的决定。", "This change moves me especially. When we are young, we often need to negate something in order to be sure our choice was right. We work to prove that the place we left was not worth missing, that the opportunity we gave up was not so good, that the relationship we lost was not right for us anyway, as if only that could ease the unease that choosing brings. But Gyena’s second leaving shows me another possibility: we can admit that the road not taken is just as valuable and still not regret our decision."],
+      ["p", "不过，当我试着从桂娜的个人成长重新回望她最初的处境时，也开始意识到小说中存在着一种更深的矛盾。桂娜之所以能够逐渐摆脱韩国社会对成功的定义，并不只是因为她改变了自己的想法，还因为她真的能够离开那个环境。如果她始终留在原来的金融公司，每天乘坐同样拥挤的地铁，面对同样的工作压力，那么仅仅改变对幸福的理解，是否就足以改变她的生活？", "Yet when I try to look back at her original situation from the vantage of her personal growth, I begin to notice a deeper contradiction in the novel. Gyena is able to gradually shake off Korean society’s definition of success not only because she changed her mind, but because she was actually able to leave that environment. If she had stayed at the same financial company, riding the same crowded subway every day under the same work pressure, would merely changing her understanding of happiness have been enough to change her life?"],
+      ["p", "这让我想到，个人的自由并不完全存在于内心。我们当然可以拒绝以收入和职位衡量自己的价值，但房租不会因此降低，工作时间不会因此缩短，家庭责任也不会因为我们不再认同某种社会标准而自动消失。一个人可以在思想上拒绝竞争，却未必能够在现实中承担退出竞争的后果。", "This makes me think that personal freedom does not exist wholly within the mind. We can of course refuse to measure our worth by income and position, but the rent will not drop because of it, working hours will not shorten, and family responsibilities will not disappear just because we no longer accept a social standard. A person can reject competition in thought without being able to bear the consequences of withdrawing from it in reality."],
+      ["p", "桂娜的选择之所以能够实现，除了她自己的勇气与努力，也因为她拥有一定的教育背景、语言学习能力，以及承担重新开始风险的可能。即使这些条件远不足以保证移民成功，也已经意味着她拥有某些人难以取得的选择空间。对于那些必须照顾家人、缺乏积蓄，或者根本无法跨越国境的人而言，离开或许从来不是一个真正存在的选项。", "Gyena’s choice could be realized not only because of her own courage and effort but also because she has some educational background, the ability to learn a language, and the capacity to bear the risk of starting over. Even if these conditions fall far short of guaranteeing a successful emigration, they already mean she has room to choose that some people cannot obtain. For those who must care for family, lack savings, or cannot cross a border at all, leaving may never have been a real option."],
+      ["p", "于是，小说最初那个关于个人幸福的问题，逐渐变成了一个关于社会结构的问题。如果一个人必须通过离开，才能摆脱某种令自己疲惫的生活，那么问题就不只是他有没有勇气作出选择，还包括为什么原有的社会无法为他提供其他可能。桂娜通过移民改变了自己与社会规则的关系，但那些仍然生活在原有规则之中的人，并不会因为她的离开而获得同样的自由。", "So the novel’s opening question about personal happiness gradually becomes a question about social structure. If a person must leave in order to escape a life that exhausts them, the issue is not only whether they have the courage to choose, but also why the society they came from could not offer them other possibilities. Through emigration Gyena changes her relationship to society’s rules, but those who still live within the old rules do not gain the same freedom because she left."],
+      ["p", "当然，我并不认为桂娜有义务留下来改变韩国。个人没有责任为了社会进步而牺牲自己的一生。离开不必然是逃避，留下也不必然是勇敢。尤其当一个人已经清楚意识到原有的生活无法继续时，要求她为了家庭、故乡或集体期待而留下，或许只是另一种对个人自由的限制。", "Of course, I do not think Gyena has any duty to stay and change Korea. No individual is obliged to sacrifice their whole life for social progress. Leaving is not necessarily escape, and staying is not necessarily brave. Especially when someone has clearly realized that her old life cannot continue, demanding that she stay for family, homeland or collective expectation may be just another restriction on personal freedom."],
+      ["p", "但同样重要的是，我们不能因为有人成功离开，就将留下者的困境归结为缺乏勇气或能力。当改变生活的建议总是换工作、换城市，甚至换国家时，原本属于社会结构的问题，便被悄悄转化成了个人选择的问题。仿佛只要足够努力，每个人都能够逃离；而那些没有离开的人，就应该为自己的处境负责。", "But it matters just as much that we not attribute the plight of those who stay to a lack of courage or ability merely because some have left successfully. When the advice for changing one’s life is always to change jobs, change cities, even change countries, problems that belong to the social structure are quietly turned into problems of personal choice. As if anyone could escape with enough effort, and those who did not leave should be held responsible for their own situation."],
+      ["p", "因此，我认为《한국이 싫어서》最值得思考的，并不是韩国与澳大利亚哪一个国家更好，而是桂娜的经历同时揭示了个人选择的力量与局限。她从韩国金融公司的办公室走向澳大利亚的餐馆，从对原有生活的厌倦走向对自身选择的承担，最终能够在重新面对故乡时，确认自己愿意过怎样的人生。但她的成长并不能消除一个事实：并不是所有人都拥有重新选择生活环境的条件。", "So I think what is most worth pondering in *한국이 싫어서* is not which is better, Korea or Australia, but that Gyena’s experience reveals both the power and the limits of personal choice. She moves from the office of a Korean financial company to a restaurant in Australia, from weariness with her old life to bearing responsibility for her own choices, and is finally able, on facing her homeland again, to confirm what kind of life she wants to live. But her growth cannot erase a fact: not everyone has the means to choose their living environment anew."],
+      ["p", "小说结束之后，我仍然会想到桂娜曾经挤过的地铁，以及那间她最终离开的金融公司。第二天清晨，地铁依然会挤满赶着上班的人，办公室里的工作也不会因为她的离开而停止。或许其中有人和她一样，早已厌倦了这样的生活，却因为房贷、父母、孩子，或仅仅因为没有足够的积蓄，而无法买下一张前往澳大利亚的机票。", "After the novel ends, I still think of the subway Gyena used to ride, and of the financial company she finally left. The next morning the subway will still be packed with people hurrying to work, and the work in the office will not stop because she is gone. Perhaps some among them are as weary of this life as she was, yet cannot buy a plane ticket to Australia because of a mortgage, parents, children, or simply too little savings."],
+      ["p", "我当然为桂娜终于能够选择自己的人生感到欣慰。但我不愿意把她的离开当作所有人的答案。她可以辞职、出国、重新学习，最终决定自己愿意在哪里生活；而那些留下来的人，或许连失去一份工作的风险都承担不起。我们赞美前者的勇气，却不能因此把后者的困境解释为缺乏勇气。", "I am of course glad that Gyena can finally choose her own life. But I do not want to treat her leaving as the answer for everyone. She can quit, go abroad, study again, and in the end decide where she wants to live; those who stay may not even be able to afford the risk of losing a job. We praise the courage of the former, but cannot therefore explain the latter’s plight as a lack of courage."],
+      ["p", "如果一个人必须离开自己的国家，才能摆脱一种令他窒息的生活，那么值得追问的，不只是他为什么选择离开，还有为什么原来的社会无法让他留下。", "If a person must leave their country in order to escape a life that suffocates them, what deserves asking is not only why they chose to leave, but also why the society they came from could not let them stay."],
+      ["p", "桂娜最终离开了韩国，但那趟拥挤的早班地铁依然在那里。", "Gyena finally left Korea, but that crowded morning subway is still there."],
+      ["p", "我想，一个社会真正值得骄傲的，不是它培养出了多少有能力走向世界的人，而是那些没有离开的人，是否也能在每天清晨走进地铁时，相信自己正在奔赴的，不只是一份不得不维持的生计，还有一个值得期待的人生。", "I think what a society can truly be proud of is not how many people it has raised who are able to go out into the world, but whether those who did not leave can also, stepping into the subway each morning, believe that what they are hurrying toward is not only a livelihood they have no choice but to keep, but also a life worth looking forward to."]
+    ]
+  },
+  {
+    "date": "2012-08-01",
+    "title": "What Memory Makes of Love",
+    "slug": "the-lover",
+    "category": "Novel",
+    "book": {
+      "cover": "lamant.jpg",
+      "title": "L’Amant",
+      "author": "Marguerite Duras",
+      "language": "French",
+      "lines": [
+        "Novel · Éditions de Minuit, 1984",
+        "An old woman remembers the affair she had at fifteen and a half with a wealthy Chinese man in French Indochina."
+      ]
+    },
+    "place": "于越南胡志明市\nHo Chi Minh City, Vietnam",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["《情人》最令我着迷的，并不是那个十五岁半的法国少女与中国情人之间的爱情，而是杜拉斯始终没有让我们确定：我们读到的究竟是少女当年真实的感受，还是一个年老的女人在漫长岁月之后，为那段经历找到的解释。", "What fascinates me most about *L’Amant* is not the love between the fifteen-and-a-half-year-old French girl and her Chinese lover, but the fact that Duras never lets us be sure whether what we are reading is the girl’s real feeling at the time, or an explanation that an old woman, after long years, has found for that experience."],
+      ["小说开头，杜拉斯没有从少女时代写起，而是先让我们看见一个衰老的女人，随后才突然回到湄公河上的渡船，回到那个戴着男式毡帽、穿着旧丝裙、脚踩金色高跟鞋的少女。", "The novel does not begin in the girl’s youth. Duras first shows us an aged woman, and only then does it turn abruptly back to the ferry on the Mekong, to the girl in a man’s felt hat, a worn silk dress and gold high-heeled shoes."],
+      ["尤其令我难忘的是，杜拉斯反复描写这一形象，仿佛它是一张决定了她一生的照片。然而，那张照片其实从未被拍摄。", "What I find most unforgettable is that Duras describes this image again and again, as if it were a photograph that decided her whole life. Yet that photograph was never taken."],
+      ["我觉得，这个细节揭示了整部小说最深刻的矛盾：记忆并不只是保存过去，也在不断重新创造过去。少女当年或许只是穿着自己能够找到的衣服，但多年之后，那顶帽子、那双高跟鞋，已经成为贫困、欲望与早熟的象征。我们无法确定，这些意义究竟属于当年的少女，还是后来不断回望她的女人。", "I think this detail reveals the deepest contradiction of the whole novel: memory does not merely preserve the past, it keeps re-creating it. The girl may simply have worn whatever clothes she could find, but years later the hat and the high heels have become symbols of poverty, desire and precocity. We cannot be sure whether these meanings belong to the girl of that time or to the woman who keeps looking back at her."],
+      ["而这一切发生在法属印度支那。", "And all of this takes place in French Indochina."],
+      ["少女来自贫穷的法国殖民者家庭，中国情人却出身富裕的华人家庭。他拥有金钱与汽车，她则拥有殖民社会赋予白人的身份优势。经济上，他比她富有；种族等级上，她却处于更有利的位置。", "The girl comes from a poor family of French colonists, while her Chinese lover comes from a wealthy Chinese family. He has money and a car; she has the advantage of status that colonial society grants to whites. Economically he is richer than she is; in the racial hierarchy she stands in the more favorable position."],
+      ["这种交错的权力，使他们的关系无法被简单理解为富有男人对贫穷少女的占有，也无法被浪漫化为超越阶级与种族的爱情。", "This crisscrossing of power means their relationship cannot be understood simply as a rich man’s possession of a poor girl, nor romanticized as a love that transcends class and race."],
+      ["在渡船上，男人走近她，显得紧张而拘谨，少女却表现出与年龄不相称的镇定。但我始终怀疑，我们是否应该完全相信这种镇定。一个十五岁半的少女，真的能够如此清楚地理解自己的欲望吗？还是说，年老的叙述者已经知道后来发生了什么，因此将某种清醒与主动，重新赋予了当年的自己？", "On the ferry the man approaches her, nervous and constrained, while the girl shows a composure out of keeping with her age. But I have always wondered whether we should believe that composure entirely. Could a girl of fifteen and a half really understand her own desire so clearly? Or does the old narrator, who knows what happened afterward, give her younger self a clarity and agency she did not then have?"],
+      ["这种疑问在堤岸街的房间里变得更加复杂。少女与中国情人的亲密，始终伴随着金钱、家庭贫困与身份差异。她的家人接受男人带来的物质好处，却仍然轻视他的中国人身份；而男人虽然富有，也无法摆脱父亲对婚姻的安排。", "The question becomes more complicated in the room in Cholon. The girl’s intimacy with her Chinese lover is always accompanied by money, family poverty and differences of status. Her family accepts the material benefits the man brings yet still looks down on him for being Chinese; and the man, though wealthy, cannot escape his father’s arrangements for his marriage."],
+      ["我觉得，杜拉斯真正写出的，不是爱情如何战胜这些限制，而是欲望如何在不平等之中发生。少女的主动并不能消除贫困对选择的影响，男人的财富也无法让他摆脱殖民社会与家庭秩序的束缚。", "What Duras really writes, I think, is not how love triumphs over these constraints but how desire arises within inequality. The girl’s initiative cannot remove the effect of poverty on her choices, and the man’s wealth cannot free him from the bonds of colonial society and the family order."],
+      ["小说不断变化的叙述人称，又让这一切更加难以确定。有时，叙述者说“我”，仿佛仍然能够触及少女当年的身体；有时，她又把年轻的自己称作“她”，像是在观察一个陌生人。", "The novel’s constantly shifting grammatical person makes all this harder still to pin down. Sometimes the narrator says “I,” as if she could still touch the girl’s body of that time; sometimes she calls her younger self “she,” as if observing a stranger."],
+      ["那个少女确实是她，却也已经不再是她。", "That girl is indeed her, and also no longer her."],
+      ["这种距离，在少女离开印度支那的轮船场景中尤其动人。她终于离开中国情人，乘船前往法国。在航行途中，她听见音乐，突然哭了。", "This distance is especially moving in the scene on the ship that carries the girl away from Indochina. She has finally left her Chinese lover and is sailing for France. During the voyage she hears music and suddenly weeps."],
+      ["此前，她似乎始终保持着某种镇定。但直到真正离开，她才仿佛第一次意识到自己失去了什么。", "Until then she seems always to have kept a certain composure. Only on truly leaving does she seem to realize for the first time what she has lost."],
+      ["然而，我仍然不确定，那场哭泣是否意味着她终于明白自己爱着那个男人。或许当年的她只是感到无法解释的悲伤，而多年后的叙述者，才逐渐将这种悲伤理解为爱情。", "Yet I am still not sure whether that weeping means she finally understands that she loved the man. Perhaps at the time she felt only an inexplicable sadness, and it was the narrator, years later, who gradually came to understand that sadness as love."],
+      ["小说结尾，多年后的中国情人在电话里告诉她，自己始终爱着她。", "At the end of the novel, years later, the Chinese lover tells her over the telephone that he has always loved her."],
+      ["在通常的爱情小说里，这样的告白或许能够证明年轻时的一切都是真正的爱情。但在杜拉斯这里，它反而让我更加犹豫。因为这句话只能从多年之后返回过去，为那些早已结束的时刻赋予新的意义，却无法证明少女当时究竟理解了多少。", "In an ordinary love story, such a confession might prove that everything in youth was true love. But in Duras it makes me hesitate more. This sentence can only travel back from years later, giving new meaning to moments long over, and cannot prove how much the girl understood at the time."],
+      ["而且，即使爱情确实存在，也无法抹去金钱、种族与阶级曾经塑造他们关系的事实。爱情可以是真实的，却未必因此就是平等的。", "And even if love did exist, it cannot erase the fact that money, race and class shaped their relationship. Love can be real without therefore being equal."],
+      ["读完小说，我最难忘的仍然是那张从未拍摄过的照片。", "After finishing the novel, what I remember most is still the photograph that was never taken."],
+      ["十五岁半的少女站在湄公河的渡船上，还不知道自己即将遇见谁，也不知道那段经历将如何留在她的生命之中。", "A girl of fifteen and a half stands on the ferry across the Mekong, not yet knowing whom she is about to meet, nor how that experience will stay in her life."],
+      ["多年以后，一个已经衰老的女人不断回到那个瞬间，试图从少女的姿态与目光中，辨认出后来那个自己的起点。", "Years later an aged woman keeps returning to that moment, trying to recognize in the girl’s bearing and gaze the starting point of the self she became."],
+      ["但她可以重新描写那个少女，却再也无法像她一样，对未来一无所知。", "But she can describe that girl anew, and can never again be like her, knowing nothing of the future."],
+      ["或许，回忆最令人悲伤的地方，并不是我们无法回到过去，而是当我们终于能够理解过去时，那个真正经历过去的自己，早已不在那里了。", "Perhaps the saddest thing about memory is not that we cannot return to the past, but that when we are finally able to understand it, the self who actually lived it is long since gone."]
     ]
   }
 ];
