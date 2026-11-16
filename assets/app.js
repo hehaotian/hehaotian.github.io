@@ -35,7 +35,7 @@ window.addEventListener("hashchange", () => setMenu(false));
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const fmtDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 // country flags for the filter buttons (Notes and Plates); unknown countries fall back to their name
-const FLAGS = { "Peru": "🇵🇪", "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽", "Egypt": "🇪🇬" };
+const FLAGS = { "Peru": "🇵🇪", "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽", "Egypt": "🇪🇬", "Chile": "🇨🇱", "Greece": "🇬🇷", "India": "🇮🇳" };
 const fullDate = d => { d = String(d || ""); return d.length === 4 ? d + "-01-01" : d.length === 7 ? d + "-01" : d; };   // "2026" / "2026-10" / "2026-10-10" compare correctly
 const thumb = f => `src="assets/thumbs/${esc(f)}" onerror="this.onerror=null;this.src='assets/photos/${esc(f)}'"`;   // small copy for the grids (tools/make_thumbs.sh); falls back to the full photo
 const orders = {};                       // tab -> [{slug, title}] newest first: the older / newer links at the foot of a page
@@ -220,7 +220,7 @@ const notePage = (() => {
     ? n.poem.pairs.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")
     : n.pairStanzas ? n.pairStanzas.map(st => `<div class="pstanza">${st.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")}</div>`).join("")
     : n.stanzas ? n.stanzas.map(st => `<p class="stanza">${st.map(esc).join("<br>")}</p>`).join("")
-    : n.prose ? n.prose.map(([a, b]) => `<div class="prose"><p>${rich(a)}</p>${b ? `<p class="en">${rich(b)}</p>` : ""}</div>`).join("")
+    : n.prose ? n.prose.map(([a, b, kind]) => `<div class="prose${kind === "h" ? " phead" : ""}"><p>${rich(a)}</p>${b ? `<p class="en">${rich(b)}</p>` : ""}</div>`).join("")
     : (n.body || []).map(p => `<p>${esc(p)}</p>`).join("");
   // book intro for Book: book: { cover: "file.jpg" (in assets/photos/), title, author, lines: ["detail", ...] }
   const bookHtml = b => !b ? "" : `<div class="book">${b.cover ? `<img class="bcover" src="assets/photos/${esc(b.cover)}" alt="">` : ""}
@@ -297,17 +297,17 @@ const notePage = (() => {
   const card = (n, i) => { const b = n.book || {};
     return `<a class="read" href="#reads/${ids[i]}">${b.cover ? `<img class="rcov" ${thumb(b.cover)} alt="" loading="lazy" decoding="async">` : `<span class="rcov none"></span>`}
       <span class="rt">${esc(ownTitle(b.title || n.title))}</span>${b.author ? `<span class="ra">${esc(ownAuthor(b.author))}</span>` : ""}</a>`; };
-  // filter by the language the book was read in (book.language), most-read language first; no filter row when there is only one
-  const bookLang = n => (n.book || {}).language;
-  const langs = [...new Set(list.map(bookLang).filter(Boolean))].sort((a, b) => list.filter(n => bookLang(n) === b).length - list.filter(n => bookLang(n) === a).length || (a < b ? -1 : 1));
-  const langsEl = document.getElementById("reads-langs"), listEl = document.getElementById("reads-list");
-  let lang = "";
+  // filter by the country the book was first published in (book.country, a string or a list) as a flag, most common first; no filter row when there is only one
+  const countriesOf = n => [].concat((n.book || {}).country || []);
+  const countries = [...new Set(list.flatMap(countriesOf))].sort((a, b) => list.filter(n => countriesOf(n).includes(b)).length - list.filter(n => countriesOf(n).includes(a)).length || (a < b ? -1 : 1));
+  const countriesEl = document.getElementById("reads-countries"), listEl = document.getElementById("reads-list");
+  let country = "";
   const render = () => {
-    const shown = list.map((n, i) => [n, i]).filter(([n]) => !lang || bookLang(n) === lang);
+    const shown = list.map((n, i) => [n, i]).filter(([n]) => !country || countriesOf(n).includes(country));
     listEl.innerHTML = shown.length ? shown.map(([n, i]) => card(n, i)).join("") : `<p class="empty">Nothing yet.</p>`;
-    langsEl.innerHTML = langs.length > 1 ? ["", ...langs].map(v => `<button type="button" class="tag${v === lang ? " on" : ""}" data-v="${esc(v)}"${v && LANG_FLAGS[v] ? ` title="${esc(v)}" aria-label="${esc(v)}"` : ""}>${v ? LANG_FLAGS[v] || esc(v) : "All"}</button>`).join("") : "";
+    countriesEl.innerHTML = countries.length > 1 ? ["", ...countries].map(v => `<button type="button" class="tag${v === country ? " on" : ""}" data-v="${esc(v)}"${v ? ` title="${esc(v)}" aria-label="${esc(v)}"` : ""}>${v ? FLAGS[v] || esc(v) : "All"}</button>`).join("") : "";
   };
-  langsEl.addEventListener("click", e => { const b = e.target.closest("button[data-v]"); if (b) { lang = b.dataset.v; render(); } });
+  countriesEl.addEventListener("click", e => { const b = e.target.closest("button[data-v]"); if (b) { country = b.dataset.v; render(); } });
   render();
   popups.reads = slug => { const n = list[ids.indexOf(slug)]; return n && notePage(n); };
   const ys = list.map(n => +n.date.slice(0, 4));

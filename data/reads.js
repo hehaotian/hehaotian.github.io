@@ -1,9 +1,510 @@
 // EDIT ME: your reads, newest first (the page sorts by date anyway). Book reviews and reader responses; your own stories and words go in notes.js.
-// Same fields as a note: date, title, slug, category (the genre of the book, shown above the title in the pop-up: Novel, Memoir, History, Poetry...), place, languages, prose: [[original paragraph, translation], ...] (or blocks / poem / stanzas / body), photo, video.
-// book: { cover: "file.jpg" (in assets/photos/), title, author, lines: ["detail", ...] } is the book the response is about; the cover is what the Reads page shows.
+// Same fields as a note: date, title, slug, category (the genre of the book, shown above the title in the pop-up: Novel, Memoir, History, Poetry...), place, languages, prose: [[original paragraph, translation], ...] (add a third item "h" to make a pair a bold heading with a rule above it) (or blocks / poem / stanzas / body), photo, video.
+// book: { cover: "file.jpg" (in assets/photos/), title, author, language (the edition read), country (where the book was first published, or a list), original (the language it was written in), lines: ["detail", ...] } is the book the response is about; the cover is what the Reads page shows. The Reads filter uses country (as a flag); original is kept for reference.
 // sameAs: "other-slug" makes a read share another read's title and text (one response to two books); give it its own date, slug, book and place.
 // slug: optional short link name (needed when the title isn't plain English letters).
 window.READS = [
+  {
+    "date": "2019-11-24",
+    "title": "Choosing Not to Repeat the Harm",
+    "slug": "choosing-not-to-repeat-the-harm",
+    "category": "Novel",
+    "book": {
+      "cover": "wuthering_heights.jpg",
+      "title": "Wuthering Heights",
+      "author": "Emily Brontë",
+      "language": "English",
+      "country": "United Kingdom",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1847",
+        "On the Yorkshire moors, an orphan from Liverpool and the Earnshaw daughter he loves, and the harm that passes to the next generation."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["我一直觉得，《呼啸山庄》最令人不安的地方，是 Emily Brontë 从来没有试图让爱情变得美好。约克郡荒原上的狂风、潮湿的石墙、荒凉的山丘，以及两座彼此对望的庄园，构成了一个几乎与外部世界隔绝的空间。但这片看似远离文明的土地，实际上从未脱离英国社会的阶级秩序，甚至与大英帝国的殖民历史存在隐秘的联系。",
+       "I have always felt that the most unsettling thing about *Wuthering Heights* is that Emily Brontë never tries to make love beautiful. The wind over the Yorkshire moors, the damp stone walls, the bleak hills, and two houses facing each other make up a space almost cut off from the outside world. But this land, which seems far from civilization, never escapes the class order of English society, and is even secretly tied to the colonial history of the British Empire."],
+      ["小说主要发生在18世纪末至19世纪初，正值英国的商业扩张、工业化与大西洋奴隶贸易交织的时代。呼啸山庄与画眉田庄不仅是两处住所，更代表着土地、继承权与社会身份所构成的权力结构。在这里，一个人的价值往往不是由品格决定，而是由姓氏、出身、财产，以及是否被承认为家庭成员所决定。",
+       "The novel takes place mainly between the end of the eighteenth century and the beginning of the nineteenth, an age in which Britain’s commercial expansion, industrialization and the Atlantic slave trade were intertwined. Wuthering Heights and Thrushcross Grange are not just two dwellings but a power structure built from land, inheritance and social standing. Here a person’s worth is often decided not by character but by surname, origin, property, and whether one is recognized as a member of the family."],
+      ["希斯克利夫的身世尤其值得玩味。他并非出生于约克郡，而是被老恩肖从利物浦的街头带回。18世纪的利物浦是英国跨大西洋奴隶贸易的重要港口，来自非洲、加勒比地区、爱尔兰及其他地方的人群与帝国贸易在这里交汇。小说反复强调希斯克利夫深色的外貌、陌生的语言和无法确认的血统，却始终没有揭示他的真实来历。",
+       "Heathcliff’s origins are especially worth pondering. He was not born in Yorkshire but brought back by old Mr. Earnshaw from the streets of Liverpool. In the eighteenth century Liverpool was a major port of Britain’s transatlantic slave trade, where people from Africa, the Caribbean, Ireland and elsewhere met imperial commerce. The novel repeatedly stresses Heathcliff’s dark appearance, his strange speech and his unverifiable blood, yet never reveals where he really came from."],
+      ["我觉得这种身份上的空白并非无关紧要。希斯克利夫不仅是一个贫穷的弃儿，更是一个无法被英国乡村社会轻易归类的外来者。他可能与殖民贸易或其他移民历史有关，但小说拒绝给出确定答案。他被带进一个家庭，却从未真正获得平等的归属；被赋予名字，却没有能够证明自身来历的家族历史。",
+       "I think this blank in his identity is not insignificant. Heathcliff is not only a poor foundling but an outsider that English rural society cannot easily classify. He may be connected to the colonial trade or to other histories of migration, but the novel refuses to give a definite answer. He is brought into a family but never truly gains equal belonging; he is given a name but no family history that can prove where he is from."],
+      ["这种排斥不仅来自贫穷，也来自人们对陌生血统和社会身份的恐惧。老恩肖的庇护可以暂时保护他，但无法改变家庭内部的等级。老恩肖死后，辛德雷迅速将他降为仆役，剥夺教育，让他从一个可能成为家庭成员的孩子，变成依附于土地所有者的劳动力。",
+       "The exclusion comes not only from poverty but from people’s fear of unfamiliar blood and social identity. Old Mr. Earnshaw’s protection can shield him for a time, but cannot change the hierarchy inside the family. After Mr. Earnshaw dies, Hindley quickly reduces him to a servant and deprives him of education, turning a child who might have become part of the family into labor dependent on the landowner."],
+      ["而凯瑟琳与希斯克利夫的爱情，恰恰发生在这种不平等之中。两个人曾在荒原上奔跑，似乎可以暂时忘记姓氏、财产与社会身份。但当凯瑟琳进入画眉田庄，接触到林敦家的礼仪、服饰和生活方式之后，她逐渐意识到，爱情并不能替代阶级地位。",
+       "And the love between Catherine and Heathcliff takes place precisely within this inequality. The two once ran across the moors and could seem, for a while, to forget surnames, property and social standing. But once Catherine enters Thrushcross Grange and encounters the manners, clothes and way of life of the Lintons, she gradually realizes that love cannot replace class position."],
+      ["凯瑟琳的悲剧，不是她不够爱希斯克利夫，而是她无法想象一种既能保有这份爱、又不必放弃社会地位的生活。她认为嫁给希斯克利夫会降低自己的身份，却又觉得两人在本质上无法分离。阶级秩序已经深入到她理解爱情与自我的方式之中。",
+       "Catherine’s tragedy is not that she does not love Heathcliff enough, but that she cannot imagine a life in which she keeps that love without giving up her social position. She thinks marrying Heathcliff would degrade her, yet feels the two are in essence inseparable. The class order has sunk into the very way she understands love and herself."],
+      ["但希斯克利夫同样不是一个值得浪漫化的受害者。他后来通过来历不明的财富、债务和财产控制，逐步夺取两座庄园，并将自己曾经承受的羞辱施加到下一代身上。",
+       "But Heathcliff is likewise not a victim to be romanticized. Later, through wealth of unknown origin, debts and control of property, he gradually takes both estates and inflicts the humiliation he once suffered on the next generation."],
+      ["这里最令我不安的是，他没有推翻那个排斥自己的社会秩序，而是学会使用同样的规则，成为新的支配者。如果从殖民与阶级压迫的角度阅读，他的复仇甚至呈现出一种权力关系的倒转：曾经被视为外来者、被剥夺身份的人，最终通过占有财产和控制他人的生活，获得了原本拒绝接纳他的社会所认可的权力。",
+       "What unsettles me most here is that he does not overthrow the social order that excluded him but learns to use the same rules and becomes the new master. Read through colonialism and class oppression, his revenge even looks like an inversion of power: the one once seen as an outsider and stripped of identity ends up, by owning property and controlling other people’s lives, with the kind of power recognized by the very society that refused to accept him."],
+      ["这让我想到，压迫最顽固的地方，未必是它始终由同一群人掌握，而是即使受害者获得了权力，也可能继续相信支配与占有才是尊严的证明。",
+       "This makes me think that the most stubborn thing about oppression is not necessarily that it is always held by the same group, but that even when victims gain power they may go on believing that domination and possession are the proof of dignity."],
+      ["然而，这部小说最精妙的地方，还在于我们从来没有真正直接接触过这些人物的故事。",
+       "Yet what is most ingenious about the novel is that we never actually come into direct contact with these characters’ stories."],
+      ["整个故事由洛克伍德记录，而最重要的叙述者却是女管家耐莉。她熟悉两个家族的秘密，却并不是置身事外的观察者。她拥有自己的道德判断、阶级偏见和情感立场，有时甚至直接影响悲剧的发展。",
+       "The whole story is recorded by Lockwood, but the most important narrator is the housekeeper Nelly. She knows the secrets of both families, yet is not a detached observer. She has her own moral judgments, class prejudices and emotional loyalties, and sometimes directly influences the course of the tragedy."],
+      ["当凯瑟琳向耐莉解释自己为何选择嫁给埃德加时，希斯克利夫只听见了她认为嫁给自己有失身份的部分，便愤然离开。耐莉知道他曾在场，却没有及时阻止这场误解。",
+       "When Catherine explains to Nelly why she has chosen to marry Edgar, Heathcliff hears only the part where she says that marrying him would degrade her, and leaves in anger. Nelly knows he was there, yet does not stop the misunderstanding in time."],
+      ["耐莉究竟是在讲述一场她亲眼见证的悲剧，还是在将一场自己也参与促成的悲剧，整理成一个关于他人性格缺陷的故事？",
+       "Is Nelly telling a tragedy she witnessed, or arranging a tragedy she helped bring about into a story about other people’s character flaws?"],
+      ["我尤其在意耐莉所处的阶级位置。她是仆人，却长期生活在地主家庭内部；她没有主人的财产权力，却拥有解释主人行为的叙事权力。她赞赏体面、秩序与自我约束，对凯瑟琳的任性和希斯克利夫的激烈情感则经常流露出不满。",
+       "I pay particular attention to Nelly’s class position. She is a servant who has lived long inside a landowning family; she has none of her masters’ property power, but she has the narrative power to interpret their behavior. She admires decency, order and self-restraint, and often shows displeasure at Catherine’s willfulness and Heathcliff’s intense emotions."],
+      ["这种立场使她既能看见上层家庭的虚伪，也可能不自觉地维护它们的价值观。她对希斯克利夫的描述，是否也延续了英国社会将陌生外来者视为粗野、危险和难以理解之人的习惯？",
+       "This position lets her see the hypocrisy of the upper-class families and may also lead her to defend their values unconsciously. Does her description of Heathcliff also continue English society’s habit of seeing unfamiliar outsiders as crude, dangerous and hard to understand?"],
+      ["不可靠的叙述者最值得警惕的地方，往往不是故意隐瞒事实，而是真诚地相信自己的判断就是事实。而洛克伍德这个不断误读荒原生活的外来者，又为耐莉的故事增加了一层过滤。",
+       "What is most worth guarding against in an unreliable narrator is often not deliberate concealment but sincerely believing that her judgment is the fact. And Lockwood, an outsider who keeps misreading life on the moors, adds another layer of filtering to Nelly’s story."],
+      ["我们所认识的希斯克利夫，始终是通过别人的语言被塑造出来的。一个身世不明、无法为自己提供完整历史的人，最终连自己的故事都主要由那些曾经接纳、排斥或畏惧他的人讲述。",
+       "The Heathcliff we know is always shaped through other people’s language. A person of unknown origin who cannot supply a full history of himself ends up with even his own story told mainly by those who once took him in, shut him out or feared him."],
+      ["这也使《呼啸山庄》的殖民隐喻更加耐人寻味：被视为异类的人不仅难以决定自己的社会身份，甚至可能失去解释自身经历的权力。",
+       "This makes the colonial metaphor in *Wuthering Heights* more intriguing: a person seen as other not only struggles to decide his own social identity but may lose the power to interpret his own experience."],
+      ["但真正让我觉得《呼啸山庄》超越了一部爱情悲剧的，是第二代人的故事。",
+       "But what really makes me feel *Wuthering Heights* goes beyond a love tragedy is the story of the second generation."],
+      ["年轻的凯瑟琳与哈里顿几乎继承了上一代所有的伤害。哈里顿本应是呼啸山庄的继承人，却被希斯克利夫故意剥夺教育，养成粗鲁、羞怯而识字能力有限的青年；年轻的凯瑟琳虽然受过良好教育，却被迫困在呼啸山庄，失去自由与财产。",
+       "Young Catherine and Hareton inherit almost all the harm of the previous generation. Hareton should have been the heir to Wuthering Heights, but Heathcliff deliberately deprives him of education, raising him as a rough, shy young man who can barely read; young Catherine, though well educated, is forced to stay trapped at Wuthering Heights, losing her freedom and her property."],
+      ["起初，年轻的凯瑟琳嘲笑哈里顿的无知，就像当年辛德雷羞辱希斯克利夫一样。阶级偏见甚至不需要恶意就能延续，一个曾经受到伤害的人，也可能不经意地使用同样的方式伤害别人。",
+       "At first young Catherine mocks Hareton’s ignorance, just as Hindley once humiliated Heathcliff. Class prejudice can continue without even needing malice; a person who has been hurt may carelessly use the same means to hurt someone else."],
+      ["但这一次，故事没有重演。",
+       "But this time, the story does not repeat itself."],
+      ["年轻的凯瑟琳开始教哈里顿读书，两个人从误解与敌意中逐渐建立起尊重。这个看似平凡的细节，在我看来比第一代所有激烈的爱情宣言都更加重要。希斯克利夫通过剥夺教育维持权力，而凯瑟琳恰恰通过分享知识，开始修复这种伤害。",
+       "Young Catherine begins to teach Hareton to read, and from misunderstanding and hostility the two gradually build respect. This seemingly ordinary detail seems to me more important than all the fierce declarations of love of the first generation. Heathcliff maintains power by withholding education, and Catherine begins to repair that harm precisely by sharing knowledge."],
+      ["第一代试图通过占有对方来证明爱情，第二代却通过帮助对方成长来建立爱情。前者在既有的阶级秩序中相互伤害，后者则尝试放下身份上的优越感，重新认识彼此。",
+       "The first generation tries to prove love by possessing the other; the second builds love by helping the other grow. The former hurt each other within the existing class order; the latter try to put down their sense of superior status and get to know each other anew."],
+      ["当然，这种和解也有其局限。年轻的凯瑟琳与哈里顿最终能够建立新的生活，部分原因仍然是他们拥有继承财产的资格。小说并没有真正消除阶级制度，也没有为所有像希斯克利夫一样的外来者提供出路。第二代的幸福，依然发生在英国乡村地主阶层的内部。",
+       "Of course, this reconciliation has its limits. Young Catherine and Hareton are able to build a new life partly because they are still entitled to inherit property. The novel does not truly abolish the class system, nor does it offer a way out for all outsiders like Heathcliff. The second generation’s happiness still takes place inside England’s rural landowning class."],
+      ["而耐莉对这种结局明显抱有好感，也让我们不得不怀疑：她所赞美的和解，是否同样因为它恢复了她一直推崇的家庭秩序？",
+       "And Nelly’s evident approval of this ending makes us wonder: is the reconciliation she praises also praised because it restores the family order she has always upheld?"],
+      ["不过，这并不抹去第二代关系中真实发生的改变。我尤其喜欢 Brontë 把这种转折写得如此不浪漫：不是狂风中的誓言，不是生死相随的执念，而是一个人耐心地教另一个人认字，另一个人愿意放下自尊，重新学习。",
+       "Still, this does not erase the change that really happens in the second generation’s relationship. I especially like how unromantically Brontë writes this turn: not vows in a gale, not an obsession of following each other through life and death, but one person patiently teaching another to read, and the other willing to put down his pride and learn again."],
+      ["《呼啸山庄》最深刻的地方，或许是它让阶级、种族化的排斥与爱情中的占有欲呈现出相似的逻辑：人们试图通过定义、控制和支配他人，来确认自己的身份与价值。",
+       "The deepest thing about *Wuthering Heights* may be that it makes class, racialized exclusion and possessiveness in love show a similar logic: people try to confirm their own identity and worth by defining, controlling and dominating others."],
+      ["希斯克利夫的悲剧不仅在于他遭受了排斥，更在于他最终无法想象一种不依靠支配他人来证明自身尊严的生活。而第二代的转折，则提供了一种有限却珍贵的可能：不再把过去承受的羞辱，作为继续伤害别人的理由。",
+       "Heathcliff’s tragedy lies not only in being excluded but in finally being unable to imagine a life that does not prove one’s dignity by dominating others. The second generation’s turn offers a limited but precious possibility: no longer treating past humiliation as a reason to keep hurting others."],
+      ["真正的反抗，不是夺回权力后将曾经受到的伤害施加给别人，而是在自己拥有伤害他人的能力时，选择不再重复。",
+       "Real resistance is not regaining power and then inflicting on others the harm one once suffered, but choosing not to repeat it when one has the ability to hurt others."],
+      ["有些悲剧无法挽回，但它们未必需要被下一代继承。只是当我们合上小说时，仍然需要记得：这个关于仇恨终结的故事，最终也是由一个并不完全可靠的人讲述给我们的。",
+       "Some tragedies cannot be undone, but they need not be inherited by the next generation. Only, when we close the novel, we should still remember that this story of hatred coming to an end was also told to us by someone not entirely reliable."]
+    ]
+  },
+  {
+    "date": "2023-10-23",
+    "title": "A Gift Without a Way Out",
+    "slug": "a-gift-without-a-way-out",
+    "category": "Novel",
+    "book": {
+      "cover": "my_brilliant_friend.jpg",
+      "title": "My Brilliant Friend",
+      "author": "Elena Ferrante",
+      "language": "English",
+      "country": "Italy",
+      "original": "Italian",
+      "lines": [
+        "Novel · Translated by Ann Goldstein, 2012",
+        "Book one of the Neapolitan Novels: two girls grow up in a poor neighborhood of postwar Naples, and school sends them in different directions."
+      ]
+    },
+    "place": "于加州库比蒂诺\nCupertino, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "我喜欢 Ferrante 从战后那不勒斯一个贫穷街区写起。鞋匠、杂货商、放高利贷的人、楼梯间的争吵、父亲对孩子的殴打，构成了莉拉和莱农最早认识的世界。她们甚至住在那不勒斯，却从未真正见过大海。城市就在眼前，生活的边界却窄得令人窒息。",
+        "I like that Ferrante begins in a poor neighborhood of postwar Naples. The shoemaker, the grocer, the moneylender, the quarrels on the stairwell, fathers beating their children: these make up the world Lila and Lenù first come to know. They live in Naples yet have never really seen the sea. The city is right before them, but the boundaries of their lives are suffocatingly narrow."
+      ],
+      [
+        "理解这本书，需要理解意大利统一以来长期存在的“南方问题”（Questione Meridionale）。19世纪的国家统一，并没有消除南北之间的经济差距。到了二战之后，北方逐渐成为工业化的中心，南方许多家庭仍然依靠小手工业、零售、临时劳动和地方人情网络维持生活。所谓现代意大利，对不同阶级的人来说，从来不是同一个国家。",
+        "To understand this book, one needs to understand the “Southern Question” (Questione Meridionale) that has lingered since Italian unification. Unification in the nineteenth century did not erase the economic gap between north and south. After the Second World War, the north gradually became the center of industry, while many southern families still lived on small crafts, retail, casual labor and local networks of obligation. So-called modern Italy was never the same country for people of different classes."
+      ],
+      [
+        "这也解释了为什么两个女孩能否继续上学，会成为如此重大的命运分岔。莉拉拥有惊人的天赋，却必须回到父亲的鞋店；莱农虽然未必比她聪明，却因为家庭的妥协和老师的支持，得以继续接受教育。她们之间的差距，不是由智力决定的，而是由家庭能否承担教育成本、是否愿意让女儿继续读书决定的。",
+        "This also explains why whether the two girls can keep going to school becomes such a fork in their fates. Lila has astonishing talent, yet must return to her father’s shoe shop; Lenù, though not necessarily cleverer, is able to continue her education thanks to her family’s compromise and her teacher’s support. The gap between them is not decided by intelligence but by whether a family can bear the cost of schooling and is willing to let a daughter keep reading."
+      ],
+      [
+        "我尤其在意书中语言与阶级的关系。那不勒斯方言是她们争吵、恐惧、表达愤怒的语言，而学校教授的标准意大利语、拉丁语和古典文学，则是进入另一个社会阶层的通行证。莱农学会的不仅是知识，还有如何说话、如何克制自己的身体，以及如何让别人听不出自己的出身。",
+        "What I notice most is the relationship between language and class in the book. The Neapolitan dialect is the language in which they quarrel, fear and vent anger, while the standard Italian, Latin and classical literature taught at school are passes into another social class. What Lenù learns is not only knowledge but how to speak, how to restrain her body, and how to keep others from hearing where she comes from."
+      ],
+      [
+        "《我的天才女友》最残酷的地方，是它让我们看到，天赋并不天然属于能够实现它的人。莉拉被迫离开学校，莱农却终其一生都在追赶她。她们的友谊因此始终混杂着爱、嫉妒、羞耻与竞争。",
+        "The cruelest thing about *My Brilliant Friend* is that it shows us talent does not naturally belong to the person who gets to realize it. Lila is forced to leave school, while Lenù spends her whole life chasing her. Their friendship is therefore always a mixture of love, envy, shame and rivalry."
+      ],
+      [
+        "更令我难过的是，莱农后来越是成功，就越需要与童年的自己保持距离。教育让她有机会逃离贫穷，却也教会她把自己的口音、家庭和过去视为需要纠正的缺陷。",
+        "What saddens me more is that the more successful Lenù becomes, the more she needs to keep her distance from her childhood self. Education gives her a chance to escape poverty, yet also teaches her to see her accent, her family and her past as flaws to be corrected."
+      ],
+      [
+        "一个人向上流动的过程，有时也是她逐渐学会轻视自己来处的过程。而那个没有机会离开的天才，恰恰成了她一生无法摆脱的另一种可能。",
+        "A person’s upward mobility is sometimes also the process of slowly learning to look down on where she came from. And the genius who never had the chance to leave becomes the other possibility Lenù can never shake off."
+      ]
+    ]
+  },
+  {
+    "date": "2023-10-31",
+    "title": "The Price of a New Name",
+    "slug": "the-price-of-a-new-name",
+    "category": "Novel",
+    "book": {
+      "cover": "story_of_a_new_name.jpg",
+      "title": "The Story of a New Name",
+      "author": "Elena Ferrante",
+      "language": "English",
+      "country": "Italy",
+      "original": "Italian",
+      "lines": [
+        "Novel · Translated by Ann Goldstein, 2013",
+        "Book two of the Neapolitan Novels: Lila marries into money, Lenù goes to university in Pisa, and each takes on a new social identity."
+      ]
+    },
+    "place": "于葡萄牙里斯本\nLisbon, Portugal",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "到了第二部，意大利正在经历战后的经济奇迹。汽车、电视、家用电器和新的消费方式，逐渐改变人们对体面生活的想象。在那不勒斯的街区里，这种变化表现为鞋店的生意、崭新的汽车、昂贵的衣服，以及通过婚姻和商业关系积累财富的机会。",
+        "In the second book, Italy is going through its postwar economic miracle. Cars, television, household appliances and new ways of consuming gradually change people’s idea of a respectable life. In the Naples neighborhood this shows up as the shoe business, brand-new cars, expensive clothes, and chances to accumulate wealth through marriage and commercial ties."
+      ],
+      [
+        "莉拉嫁给斯特凡诺，似乎终于摆脱了鞋匠女儿的身份。然而婚礼上的背叛、丈夫的暴力，以及她亲手设计的鞋子被当成商品和家族生意的资本，让她很快发现，物质上的富裕并不意味着个人的自由。",
+        "Lila marries Stefano and seems at last to shed her identity as a shoemaker’s daughter. But the betrayal at the wedding, her husband’s violence, and the way the shoes she designed herself are treated as merchandise and capital for the family business quickly show her that material wealth does not mean personal freedom."
+      ],
+      [
+        "我觉得这里有一个非常尖锐的历史讽刺：意大利正在迅速现代化，但家庭内部的权力关系却远远没有跟上。一个女人可以穿上时髦的衣服、住进装修漂亮的公寓，却仍然被视为丈夫的附属品。消费社会为女性提供了新的形象，却未必赋予她们新的权利。",
+        "I find a very sharp historical irony here: Italy is modernizing fast, but power relations inside the family are far from keeping up. A woman can wear fashionable clothes and live in a handsomely furnished apartment and still be treated as her husband’s appendage. The consumer society offers women new images, but not necessarily new rights."
+      ],
+      [
+        "与此同时，莱农进入比萨的高等师范学校（Scuola Normale Superiore）。比萨在这里不仅是一座大学城，更代表着意大利中北部的精英教育体系。莱农第一次真正进入了一个由书籍、学术讨论、政治思想和文化修养构成的世界。",
+        "Meanwhile, Lenù enters the Scuola Normale Superiore in Pisa. Pisa here is not only a university town but stands for the elite educational system of central and northern Italy. For the first time Lenù truly enters a world made of books, academic discussion, political ideas and cultural refinement."
+      ],
+      [
+        "但她很快发现，读懂拉丁文和古典文学，并不意味着能够自然地融入知识阶层。她的南方口音、过分书面化的意大利语，以及面对富裕家庭时的拘谨，都不断提醒她：教育可以传授知识，却无法立即给予一个人从小在优越环境中养成的从容。",
+        "But she soon finds that being able to read Latin and classical literature does not mean fitting naturally into the intellectual class. Her southern accent, her overly bookish Italian, and her stiffness in front of wealthy families keep reminding her: education can teach knowledge, but cannot instantly give the ease a person develops growing up in privileged surroundings."
+      ],
+      [
+        "这让我想到，阶级差异最顽固的部分，往往不是财富，而是那些不需要被明确教授的生活习惯。有人从小就在餐桌上讨论文学与政治，有人则需要花费多年时间，才能学会在同样的场合不感到羞耻。",
+        "This makes me think that the most stubborn part of class difference is often not wealth but the habits of life that never need to be explicitly taught. Some people discuss literature and politics at the dinner table from childhood; others need years to learn not to feel ashamed in the same setting."
+      ],
+      [
+        "“新名字”因此具有双重讽刺。莉拉通过婚姻获得丈夫的姓氏，莱农则通过教育与写作逐渐建立自己的名字。一个进入商业家庭，一个进入文化精英阶层，但两个人都在努力使用新的社会身份，掩盖自己无法彻底摆脱的过去。",
+        "The “new name” is therefore doubly ironic. Lila acquires her husband’s surname through marriage, while Lenù gradually builds a name of her own through education and writing. One enters a business family, the other the cultural elite, but both use their new social identities to cover a past they cannot fully shake off."
+      ],
+      [
+        "我觉得 Ferrante 真正质疑的，不是社会流动是否可能，而是为什么一个人必须先改变自己的语言、举止甚至记忆，才能被另一个阶层承认。",
+        "What I think Ferrante really questions is not whether social mobility is possible, but why a person must first change her language, manners and even memories before being accepted by another class."
+      ]
+    ]
+  },
+  {
+    "date": "2023-11-04",
+    "title": "Leaving Is Not Liberation",
+    "slug": "leaving-is-not-liberation",
+    "category": "Novel",
+    "book": {
+      "cover": "those_who_leave.jpg",
+      "title": "Those Who Leave and Those Who Stay",
+      "author": "Elena Ferrante",
+      "language": "English",
+      "country": "Italy",
+      "original": "Italian",
+      "lines": [
+        "Novel · Translated by Ann Goldstein, 2014",
+        "Book three of the Neapolitan Novels: through the upheavals of the late 1960s and 1970s, Lenù writes and raises children while Lila works in a sausage factory."
+      ]
+    },
+    "place": "于意大利比萨\nPisa, Italy",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "到了第三部，Ferrante 将两个女人的命运放进了1960年代末至1970年代意大利激烈的社会变革之中。大学里的学生讨论马克思主义、资本主义和革命，工厂里的工人组织罢工，女性开始公开质疑婚姻、家庭和生育制度。整个国家似乎都在重新讨论什么是自由、平等与解放。",
+        "In the third book, Ferrante places the two women’s fates inside the intense social change of Italy from the late 1960s through the 1970s. Students at universities discuss Marxism, capitalism and revolution, workers in factories organize strikes, and women begin to question marriage, family and motherhood in public. The whole country seems to be rediscussing what freedom, equality and liberation mean."
+      ],
+      [
+        "但我最喜欢 Ferrante 的地方，是她始终让宏大的政治理想与琐碎的日常生活发生碰撞。",
+        "But what I like most about Ferrante is that she keeps making grand political ideals collide with trivial everyday life."
+      ],
+      [
+        "莱农已经进入知识阶层，嫁给了出身优越的彼得罗，能够在大学、出版社和知识分子的聚会中讨论社会革命。然而回到家，她仍然要照顾孩子、处理家务，并在丈夫的学术事业之外争取自己的写作时间。那些在公共场合谈论解放的男人，并不一定愿意在私人生活中放弃自己的特权。",
+        "Lenù has entered the intellectual class and married Pietro, who comes from a privileged family, and she can discuss social revolution at universities, publishing houses and gatherings of intellectuals. Yet back home she still has to look after the children, handle the housework, and fight for time to write beside her husband’s academic career. The men who talk about liberation in public are not necessarily willing to give up their privileges in private life."
+      ],
+      [
+        "与此同时，莉拉在肉类加工厂工作。工厂里的恶劣环境、对女性身体的羞辱、低廉的工资与管理者的权力，让她直接经历了知识分子在书本中讨论的阶级剥削。",
+        "Meanwhile, Lila works in a meat-processing factory. The terrible conditions, the humiliation of women’s bodies, the low wages and the power of the managers let her experience firsthand the class exploitation that intellectuals discuss in books."
+      ],
+      [
+        "这形成了一种令人不安的对照：莱农能够解释压迫，却未必能够摆脱它；莉拉每天承受压迫，却不需要通过理论才能认识它。",
+        "This makes an unsettling contrast: Lenù can explain oppression but cannot necessarily escape it; Lila endures oppression every day and needs no theory to recognize it."
+      ],
+      [
+        "这一时期的意大利尤其值得注意。1968年的学生运动和1969年的“火热之秋”让工人、学生与激进左翼力量走上街头，但阶级革命与女性解放并不天然一致。一个男人可以反对资本家剥削工人，却仍然认为妻子应该负责做饭、育儿和维持家庭。",
+        "Italy in this period is especially worth noting. The student movement of 1968 and the “Hot Autumn” of 1969 brought workers, students and radical left forces into the streets, but class revolution and women’s liberation are not naturally aligned. A man can oppose capitalists exploiting workers and still believe his wife should be responsible for cooking, child-rearing and keeping the household going."
+      ],
+      [
+        "我觉得 Ferrante 在这里提出了比阶级流动更尖锐的问题：当革命只改变公共领域的权力关系，却不触及家庭内部的劳动分配，它究竟解放了谁？",
+        "I think Ferrante raises a sharper question here than class mobility: when a revolution changes only power relations in the public sphere and leaves the division of labor inside the home untouched, whom has it actually liberated?"
+      ],
+      [
+        "而莱农与莉拉的分歧，也因此变得更加复杂。莱农通过教育离开了那不勒斯，却逐渐发现知识阶层同样存在虚荣、排斥和性别等级；莉拉留在街区，却比许多自称进步的人更清楚权力如何在日常生活中运作。",
+        "The divergence between Lenù and Lila becomes more complicated as a result. Lenù left Naples through education but gradually finds that the intellectual class has its own vanity, exclusion and gender hierarchy; Lila stayed in the neighborhood yet understands how power works in daily life better than many who call themselves progressive."
+      ],
+      [
+        "《离开的，留下的》最深刻的讽刺，是地理上的离开并不等于阶级上的解放，思想上的激进也不等于生活中的平等。",
+        "The deepest irony of *Those Who Leave and Those Who Stay* is that leaving a place geographically is not liberation from class, and being radical in thought is not equality in life."
+      ],
+      [
+        "我们往往以为，接受教育、拥有职业、进入更高的社会阶层，就意味着获得了自由。但 Ferrante 让人看到，真正难以摆脱的，往往是那些已经被我们内化的价值判断：对成功的渴望、对贫穷的羞耻、对男性认可的依赖，以及对失败的恐惧。",
+        "We often assume that getting an education, having a career and entering a higher social class means gaining freedom. But Ferrante shows that what is truly hard to shake off are the value judgments we have already internalized: the craving for success, the shame of poverty, the dependence on men’s approval, and the fear of failure."
+      ],
+      [
+        "离开那不勒斯的莱农，始终需要莉拉来确认自己是谁；留在那不勒斯的莉拉，却不断揭穿莱农试图相信的那个更文明、更自由的世界。",
+        "Lenù, who left Naples, always needs Lila to confirm who she is; Lila, who stayed in Naples, keeps exposing the more civilized, freer world Lenù tries to believe in."
+      ]
+    ]
+  },
+  {
+    "date": "2023-11-17",
+    "title": "Who Gets to Tell the Story",
+    "slug": "who-gets-to-tell-the-story",
+    "category": "Novel",
+    "book": {
+      "cover": "story_of_the_lost_child.jpg",
+      "title": "The Story of the Lost Child",
+      "author": "Elena Ferrante",
+      "language": "English",
+      "country": "Italy",
+      "original": "Italian",
+      "lines": [
+        "Novel · Translated by Ann Goldstein, 2015",
+        "Book four and the last of the Neapolitan Novels: Lenù returns to Naples, the 1980 earthquake strikes, and a child disappears."
+      ]
+    },
+    "place": "于意大利科莫\nComo, Italy",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "第四部里，莱农重新回到那不勒斯。她已经成为作家，见识过比萨、佛罗伦萨和意大利知识阶层的生活，却最终再次走进童年熟悉的街区。这里依然有索拉拉家族的权力、街坊之间的流言、商业利益与暴力。几十年过去，城市的外貌发生了变化，但许多支配人们生活的关系并没有真正消失。",
+        "In the fourth book, Lenù returns to Naples. She has become a writer and has seen life in Pisa, Florence and among Italy’s intellectuals, yet she ends up walking once more into the neighborhood of her childhood. The power of the Solara family, gossip among neighbors, commercial interests and violence are all still here. Decades have passed and the face of the city has changed, but many of the relationships that govern people’s lives have not really gone away."
+      ],
+      [
+        "1980年的大地震是我认为整部四部曲最重要的历史隐喻之一。房屋摇晃、墙壁开裂、熟悉的街道突然失去稳定，莉拉一直以来感受到的“边界消失”，在这一刻获得了近乎物质性的呈现。",
+        "The 1980 earthquake is, I think, one of the most important historical metaphors in the whole tetralogy. Houses sway, walls crack, familiar streets suddenly lose their stability, and the “dissolving of boundaries” that Lila has always felt is given an almost physical form."
+      ],
+      [
+        "这场灾难让我想到那不勒斯自身的历史：一座拥有辉煌古典遗产、丰富文化与漫长城市历史的地方，却长期承受着经济不平等、脆弱的公共治理与地方犯罪网络的影响。现代化并没有彻底消除旧有的权力结构，有时反而让它们以新的商业和政治形式延续。",
+        "The disaster makes me think of Naples’s own history: a place with a splendid classical heritage, a rich culture and a long urban history, yet long burdened by economic inequality, fragile public governance and local criminal networks. Modernization did not wholly dissolve the old structures of power; sometimes it let them continue in new commercial and political forms."
+      ],
+      [
+        "我尤其喜欢 Ferrante 没有把那不勒斯写成单纯落后的南方城市。它充满活力、语言、创造力和亲密的人际关系，同时也充满控制、暴力与无法逃脱的社会义务。人们依靠街区生存，也可能被街区吞没。",
+        "I especially like that Ferrante does not write Naples as a merely backward southern city. It is full of vitality, language, creativity and intimate human ties, and also full of control, violence and social obligations one cannot escape. People survive by relying on the neighborhood, and may also be swallowed by it."
+      ],
+      [
+        "蒂娜的失踪，将这种不安全感推向了最残酷的极端。一个孩子在熟悉的街区里突然消失，没有确定的解释，也没有能够真正结束的悲伤。莉拉曾经凭借聪明才智反抗家庭、婚姻和阶级的限制，却最终面对一种连她的智力都无法理解和控制的失去。",
+        "Tina’s disappearance pushes this insecurity to its cruelest extreme. A child vanishes suddenly in a familiar neighborhood, with no definite explanation and no grief that can truly end. Lila once used her intelligence to resist the limits of family, marriage and class, but finally faces a loss that even her intellect cannot understand or control."
+      ],
+      [
+        "我觉得“失踪的孩子”不仅指蒂娜，也指战后意大利曾经许诺却没有完全实现的未来。那个相信教育能够改变命运、经济增长能够消除贫困、政治运动能够创造平等社会的时代，最终留下了许多无法兑现的承诺。",
+        "I think the “lost child” refers not only to Tina but also to the future postwar Italy once promised and did not fully deliver. That era, which believed education could change fate, economic growth could eliminate poverty and political movements could create an equal society, left behind many promises that could not be kept."
+      ],
+      [
+        "而莱农的写作，使这种失去又多了一层复杂性。她通过讲述那不勒斯、莉拉和自己的生活获得文学上的成功，但莉拉始终抗拒被别人记录和定义。莱农能够离开街区，正是因为她学会了将自己的经历转化为文字；莉拉却越来越怀疑，文字究竟能否真正容纳一个人的生活。",
+        "Lenù’s writing adds another layer of complexity to this loss. She achieves literary success by telling the story of Naples, Lila and her own life, but Lila always resists being recorded and defined by someone else. Lenù was able to leave the neighborhood precisely because she learned to turn her experience into words; Lila increasingly doubts whether words can truly hold a person’s life."
+      ],
+      [
+        "小说最后，童年玩偶的重新出现，让我重新审视整部四部曲：我们读到的一切，始终只是莱农讲述的莉拉。那个被称为天才的女人，是否从来没有真正获得过属于自己的声音？",
+        "At the end of the novel, the reappearance of the childhood dolls made me look again at the whole tetralogy: everything we read has always been Lila as told by Lenù. Has the woman called a genius never truly had a voice of her own?"
+      ],
+      [
+        "莉拉最后的消失，或许不是失败，而是她对莱农、对读者，甚至对文学本身最后一次拒绝：你可以讲述我的故事，但你永远不能完全拥有我。",
+        "Lila’s final disappearance may not be a failure but her last refusal, of Lenù, of the reader, even of literature itself: you may tell my story, but you can never fully own me."
+      ],
+      [
+        "而这也让我觉得，Ferrante 写的不只是两个女人的友谊，更是历史如何被保存的问题。能够离开、接受教育、掌握语言的人，最终获得了讲述过去的权力；那些留在原地的人，即使拥有同样丰富的生命，也可能只能作为别人的故事被记住。",
+        "This also makes me feel that Ferrante is writing not only about the friendship of two women but about how history gets preserved. Those who could leave, get educated and master language end up with the power to tell the past; those who stayed, even with equally rich lives, may only be remembered as someone else’s story."
+      ],
+      [
+        "最令人不安的不是一个人最终消失，而是当她消失以后，我们才发现，自己对她一生的理解，始终来自另一个人的叙述。",
+        "What is most unsettling is not that a person finally disappears, but that after she is gone we realize our understanding of her whole life has always come from another person’s narration."
+      ],
+      [
+        "四部曲总评：一个国家的现代化，与两个女人无法完成的逃离",
+        "On the whole tetralogy: a nation’s modernization, and the escape two women could not complete",
+        "h"
+      ],
+      [
+        "读完 Elena Ferrante 的“那不勒斯四部曲”，我越来越觉得，这并不只是一个关于女性友谊的故事，而是一部借由两个女人的生命，写下的战后意大利社会史。",
+        "Having finished Elena Ferrante’s Neapolitan Novels, I increasingly feel this is not only a story about female friendship but a social history of postwar Italy written through the lives of two women."
+      ],
+      [
+        "四本书几乎对应了意大利现代化的四个阶段：《我的天才女友》是战后贫困与阶级分化，《新名字的故事》是经济奇迹与消费社会，《离开的，留下的》是政治激进化与女性解放，《失踪的孩子》则是现代化承诺逐渐破裂之后的失落。",
+        "The four books almost correspond to four stages of Italy’s modernization: *My Brilliant Friend* is postwar poverty and class division, *The Story of a New Name* is the economic miracle and consumer society, *Those Who Leave and Those Who Stay* is political radicalization and women’s liberation, and *The Story of the Lost Child* is the loss that follows once the promises of modernization gradually break."
+      ],
+      [
+        "那不勒斯与比萨之间的距离，不仅是南方与中北部之间的地理距离，也是两种社会经验之间的距离。莱农通过教育进入精英阶层，学会标准意大利语、古典文学与知识分子的生活方式；莉拉留在那不勒斯，依靠自己的聪明、劳动和判断力，在地方社会的权力关系中艰难生存。",
+        "The distance between Naples and Pisa is not only the geographic distance between south and center-north but the distance between two kinds of social experience. Lenù enters the elite through education and learns standard Italian, classical literature and the intellectual way of life; Lila stays in Naples and, relying on her intelligence, labor and judgment, survives with difficulty within the power relations of local society."
+      ],
+      [
+        "但我最欣赏 Ferrante 的，是她拒绝把这两种人生写成成功与失败的对照。",
+        "But what I admire most in Ferrante is that she refuses to write these two lives as a contrast between success and failure."
+      ],
+      [
+        "莱农获得了社会认可，却不断怀疑自己的才华；莉拉没有得到同样的教育机会，却始终拥有令莱农不安的洞察力。一个通过写作获得了讲述世界的权力，另一个则始终拒绝被世界轻易解释。",
+        "Lenù gains social recognition yet keeps doubting her talent; Lila never gets the same educational opportunity yet always has an insight that unsettles Lenù. One gains through writing the power to tell the world, the other always refuses to be easily explained by it."
+      ],
+      [
+        "如果说意大利的现代化承诺每个人都可以通过教育、劳动与个人努力改变命运，那么 Ferrante 恰恰写出了这个承诺背后最难面对的事实：社会流动可以改变一个人的位置，却未必能改变决定谁有资格流动的规则。",
+        "If Italy’s modernization promised that everyone could change their fate through education, labor and personal effort, Ferrante writes the hardest fact behind that promise: social mobility can change a person’s position, but not necessarily the rules that decide who is allowed to move."
+      ],
+      [
+        "更让我着迷的是，她们的友谊从来不是纯粹的支持与陪伴，而是一种持续半生的相互比较。莱农需要莉拉，因为莉拉代表着她未曾实现的另一种自己；莉拉也需要莱农，因为莱农活出了她曾经被剥夺的某种可能。",
+        "What fascinates me more is that their friendship is never pure support and companionship but a mutual comparison lasting half a lifetime. Lenù needs Lila because Lila represents the other self she never realized; Lila needs Lenù because Lenù lives out a possibility she was once denied."
+      ],
+      [
+        "她们既彼此成就，也彼此伤害。既无法真正生活在一起，也无法彻底从对方的人生中离开。",
+        "They make each other and hurt each other. They cannot truly live together, nor can they ever fully leave each other’s lives."
+      ],
+      [
+        "四部曲最深刻的地方，或许是让我们意识到：一个人的命运从来不只是个人的故事。我们以为自己是在选择人生，实际上也在不断回应家庭、阶级、语言、性别与时代早已替我们划定的边界。",
+        "The deepest thing about the tetralogy may be that it makes us realize one person’s fate is never only a personal story. We think we are choosing our lives, but we are also constantly responding to boundaries that family, class, language, gender and era have already drawn for us."
+      ],
+      [
+        "而所谓“天才女友”，也许正是那个始终提醒我们：在成为今天的自己之前，我们原本还可能成为谁的人。",
+        "And the so-called “brilliant friend” may be the one who keeps reminding us who else we might have become before we became who we are today."
+      ]
+    ]
+  },
+  {
+    "date": "2024-11-18",
+    "title": "Where to Stay, When to Leave",
+    "slug": "where-to-stay-when-to-leave",
+    "category": "Memoir",
+    "book": {
+      "cover": "real_estate.jpg",
+      "title": "自己的房子 (Real Estate)",
+      "author": "Deborah Levy",
+      "language": "Chinese",
+      "country": "United Kingdom",
+      "original": "English",
+      "lines": [
+        "Memoir · Chinese translation",
+        "Levy travels between London, Paris and Berlin, studying other people’s houses and imagining one of her own."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "到了《自己的房子》，Deborah Levy 已经不再只是那个骑着电动自行车、在朋友花园小屋里写作的离婚女人。她开始在伦敦、巴黎、柏林之间旅行，住进不同的房间，观察别人的房子，也不断想象一栋属于自己的房子。",
+        "By *Real Estate*, Deborah Levy is no longer only the divorced woman who rides an electric bike and writes in a friend’s garden shed. She begins to travel between London, Paris and Berlin, staying in different rooms, observing other people’s houses, and constantly imagining a house of her own."
+      ],
+      [
+        "我尤其喜欢她对房屋细节的执着：桌子、窗户、光线、可以安静写作的房间，以及不必随时回应别人需求的日常。这些看似普通的东西，对一个长期围绕家庭和孩子安排生活的女人来说，却曾经是难得的奢侈。",
+        "I especially like her devotion to the details of a house: the table, the windows, the light, a room where she can write in quiet, and days in which she need not answer other people’s needs at every moment. These seemingly ordinary things were once a rare luxury for a woman who had long arranged her life around family and children."
+      ],
+      [
+        "这让我想到 Virginia Woolf 的《一间自己的房间》。但 Levy 想要的似乎更进一步：不仅是一间可以关上门写作的房间，而是一整个由自己决定如何生活的空间。",
+        "This reminds me of Virginia Woolf’s *A Room of One’s Own*. But Levy seems to want to go a step further: not only a room with a door she can close to write, but an entire space in which she decides how to live."
+      ],
+      [
+        "“自己的房子”最耐人寻味的地方，在于她真正寻找的并不完全是一栋房产。她已经拥有了比年轻时更多的自由，却依然会想象另一种生活、另一处住所、另一个自己。房子既是具体的物质愿望，也是她始终无法彻底安顿下来的内心。",
+        "The most intriguing thing about “a house of one’s own” is that what she is looking for is not entirely a piece of property. She already has more freedom than when she was young, yet she still imagines another life, another dwelling, another self. The house is both a concrete material wish and the inner self that can never quite settle."
+      ],
+      [
+        "我喜欢她没有把中年之后的独立写成故事的终点。即使摆脱了婚姻的束缚，拥有了写作事业和自己的生活，一个人仍然可能渴望别处。",
+        "I like that she does not write independence after middle age as the end of the story. Even after escaping the constraints of marriage and having a writing career and a life of her own, a person may still long for somewhere else."
+      ],
+      [
+        "或许拥有自己的房子，并不意味着终于找到归宿，而是终于可以决定，哪里值得停留，什么时候应该离开。",
+        "Perhaps having a house of one’s own does not mean finally finding a home, but finally being able to decide where is worth staying and when it is time to leave."
+      ],
+      [
+        "这三本书连起来读，形成了一条很有意思的线索：《我不想知道的事》是承认，《生活的代价》是离开，《自己的房子》则是重新想象自己究竟想过怎样的生活。从不愿面对的真相，到为自由付出的代价，再到对归属的重新定义，Levy 写的始终不是如何成为一个独立的女人，而是一个女人如何在半生之后，慢慢把自己的人生重新交还给自己。",
+        "Read together, these three books form an interesting thread: *Things I Don’t Want to Know* is admitting, *The Cost of Living* is leaving, and *Real Estate* is reimagining what kind of life one actually wants to live. From the truth one refuses to face, to the price paid for freedom, to a new definition of belonging, what Levy writes about is never how to become an independent woman, but how a woman, half a lifetime later, slowly hands her life back to herself."
+      ]
+    ]
+  },
+  {
+    "date": "2024-11-09",
+    "title": "Paying for the Life You Choose",
+    "slug": "paying-for-the-life-you-choose",
+    "category": "Memoir",
+    "book": {
+      "cover": "cost_of_living.jpg",
+      "title": "生活的代价 (The Cost of Living)",
+      "author": "Deborah Levy",
+      "language": "Chinese",
+      "country": "United Kingdom",
+      "original": "English",
+      "lines": [
+        "Memoir · Chinese translation",
+        "After her marriage ends, Levy moves into a rented London flat with her two daughters and learns to live on her own."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "婚姻结束后，Deborah Levy 带着两个女儿搬进伦敦一间租来的公寓。她骑着电动自行车穿过城市，在朋友的花园小屋里写作，一边处理账单、家务和孩子的生活，一边重新学习如何独自生活。",
+        "After her marriage ends, Deborah Levy moves with her two daughters into a rented flat in London. She rides an electric bike across the city and writes in a friend’s garden shed, dealing with bills, housework and her children’s lives while learning again how to live alone."
+      ],
+      [
+        "我喜欢她写离婚时没有太多控诉，也没有把自由描绘成一种轻盈的解脱。离开一段婚姻，意味着失去熟悉的房子、经济上的安全感，以及那个曾经有人共同承担日常琐事的生活。自由并不是推开门就能获得的东西，它需要付房租、养育孩子，需要在疲惫中继续工作。",
+        "I like that when she writes about divorce there is little accusation, and freedom is not painted as a light-footed release. Leaving a marriage means losing a familiar house, financial security, and a life in which someone once shared the daily chores. Freedom is not something you get by pushing open a door; it requires paying rent, raising children, and going on working through exhaustion."
+      ],
+      [
+        "书名《生活的代价》最有意思的地方，是自由有价格，安稳同样有价格。留在婚姻里，她付出的是自己的时间、欲望与写作空间；离开婚姻后，她必须承担经济压力、孤独和不确定性。无论选择哪一种生活，都不可能毫无损失。",
+        "The most interesting thing about the title *The Cost of Living* is that freedom has a price, and so does security. Staying in the marriage, she paid with her time, her desire and her space to write; after leaving, she had to bear financial pressure, loneliness and uncertainty. Whichever life one chooses, it cannot come without loss."
+      ],
+      [
+        "她并没有证明离开一定比留下更幸福，而是终于愿意为自己选择的生活付账。",
+        "She does not prove that leaving is necessarily happier than staying; she is finally willing to pay for the life she has chosen."
+      ],
+      [
+        "真正昂贵的或许不是重新开始，而是多年以后才发现，自己一直在为一种并不想要的生活付出代价。",
+        "What is truly expensive may not be starting over, but discovering, years later, that you have been paying all along for a life you never wanted."
+      ]
+    ]
+  },
+  {
+    "date": "2024-11-02",
+    "title": "Pretending Not to Know",
+    "slug": "pretending-not-to-know",
+    "category": "Memoir",
+    "book": {
+      "cover": "what_i_dont_want_to_know.jpg",
+      "title": "我不想知道的事 (Things I Don’t Want to Know)",
+      "author": "Deborah Levy",
+      "language": "Chinese",
+      "country": "United Kingdom",
+      "original": "English",
+      "lines": [
+        "Memoir · Chinese translation",
+        "Levy begins with a breakdown on a Mallorcan hillside and works back through a South African childhood, a father jailed for opposing apartheid, and the weariness of marriage and motherhood."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "Deborah Levy 从马略卡岛的一次崩溃写起。一个中年女人独自旅行，在异乡的山坡上骑车，突然无法控制地哭泣。她没有急着解释眼泪，而是让记忆慢慢浮现：南非的童年、因反种族隔离而入狱的父亲、迁往英国后的生活，以及婚姻和母职带来的疲惫。",
+        "Deborah Levy begins with a breakdown on Mallorca. A middle-aged woman travels alone, cycling on a hillside in a foreign place, and suddenly cannot stop crying. She does not rush to explain the tears; instead she lets memory surface slowly: a childhood in South Africa, a father jailed for opposing apartheid, life after the move to England, and the exhaustion that comes with marriage and motherhood."
+      ],
+      [
+        "她借奥威尔关于写作动机的文章，重新思考一个女人为什么要写作。奥威尔可以坦然谈论野心、政治与文学，而 Levy 必须先面对更琐碎的现实：孩子、家务、婚姻，以及一个女人想拥有自己的时间时，随之而来的愧疚。",
+        "Drawing on Orwell’s essay on why he writes, she rethinks why a woman writes at all. Orwell can talk openly about ambition, politics and literature, while Levy must first face more mundane realities: children, housework, marriage, and the guilt that follows when a woman wants time of her own."
+      ],
+      [
+        "“我不想知道的事”，最微妙的地方在于，她并非真的不知道，而是不愿承认自己早已知道。她知道婚姻中的妥协并不总是出于爱，知道照顾他人有时意味着不断推迟自己的生活，也知道那些看似自愿的牺牲，早已成为别人对她的理所当然。承认这些，便意味着必须重新审视自己花费半生建立起来的生活。",
+        "The subtlest thing about “things I don’t want to know” is that she doesn’t truly not know; she is unwilling to admit that she has known all along. She knows the compromises in a marriage are not always made out of love, that caring for others sometimes means endlessly postponing one’s own life, and that sacrifices that seem voluntary have long since become what others take for granted from her. To admit this is to re-examine a life she spent half her years building."
+      ],
+      [
+        "我喜欢她没有把这种醒悟写成一场痛快的反抗。人往往不是因为看不清现实而继续生活，而是因为看得太清楚，才需要暂时装作不知道。",
+        "I like that she does not write this awakening as a cathartic rebellion. People often go on living not because they cannot see reality, but because they see it too clearly and need, for a while, to pretend they don’t."
+      ],
+      [
+        "有些真相之所以令人抗拒，不是因为它们难以理解，而是因为一旦承认，就再也无法心安理得地回到从前。",
+        "Some truths are resisted not because they are hard to understand, but because once admitted, we can never go back to how things were with an easy conscience."
+      ]
+    ]
+  },
   {
     "date": "2025-09-11",
     "title": "Heirs to the California Dream",
@@ -13,6 +514,8 @@ window.READS = [
       "title": "Run River",
       "author": "Joan Didion",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": [
         "Novel · English edition",
         "Didion’s novel of an old landowning family in the Sacramento Valley, and of a California that is passing away."
@@ -67,6 +570,8 @@ window.READS = [
       "title": "The White Album",
       "author": "Joan Didion",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": [
         "Essays · FSG Classics edition",
         "Didion’s essays on California and America at the end of the 1960s, where hippie freedom, Hollywood, political radicalism and conflicts of race and class run together."
@@ -113,7 +618,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2026-11-06",
+    "date": "2025-12-30",
     "title": "When Everyone Thinks They Are Changing the World",
     "category": "Novel",
     "book": {
@@ -121,12 +626,14 @@ window.READS = [
       "title": "Play It as It Lays",
       "author": "Joan Didion",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": [
         "Novel · English edition",
         "Didion’s novel of Hollywood and Los Angeles, and of Maria Wyeth, who keeps driving the freeways with no destination."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加州库比蒂诺\nCupertino, CA",
     "languages": [
       "Chinese",
       "English"
@@ -179,6 +686,8 @@ window.READS = [
       "title": "Joan Didion: What She Means",
       "author": "Joan Didion · ed. Hilton Als",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": [
         "Exhibition catalogue · English edition",
         "The catalogue of the exhibition of the same name, curated by Hilton Als, that places Didion’s writing among photographs, artworks and archival material."
@@ -290,6 +799,8 @@ window.READS = [
       "title": "Where I Was From",
       "author": "Joan Didion",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": ["Memoir · Knopf, 2003", "Didion’s memoir of California and her family, and of the pioneer myth she grew up inside."]
     },
     "place": "于加州伯克利\nBerkeley, CA",
@@ -383,6 +894,8 @@ window.READS = [
       "title": "The Essential Ginsberg",
       "author": "Allen Ginsberg",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": ["Poetry · Edited by Michael Schumacher, 2015", "A selection of Allen Ginsberg’s poems, including “Howl”."]
     },
     "place": "于加州利弗莫尔\nLivermore, CA",
@@ -438,6 +951,8 @@ window.READS = [
       "title": "Stay True",
       "author": "Hua Hsu",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": [
         "Memoir · Doubleday, 2022",
         "Hsu’s memoir of his college friendship with Ken, who was killed in a carjacking, and of the music and zines of their Berkeley years."
@@ -485,6 +1000,8 @@ window.READS = [
       "title": "棉花帝国 (Empire of Cotton)",
       "author": "斯文·贝克特 Sven Beckert",
       "language": "Chinese",
+      "country": "United States",
+      "original": "English",
       "lines": [
         "History · Knopf, 2014",
         "Beckert’s global history of how cotton built modern capitalism, through slavery, colonial conquest and state power."
@@ -544,6 +1061,8 @@ window.READS = [
       "title": "채식주의자 (The Vegetarian)",
       "author": "한강 Han Kang",
       "language": "Korean",
+      "country": "South Korea",
+      "original": "Korean",
       "lines": [
         "Novel · Changbi Publishers, 2007",
         "After a dream, a woman named Yeong-hye stops eating meat, and her family turns against her."
@@ -624,6 +1143,8 @@ window.READS = [
       "title": "Soulstealers: The Chinese Sorcery Scare of 1768",
       "author": "Philip A. Kuhn",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": [
         "History · 1990",
         "In 1768, rumors that sorcerers were stealing souls by clipping queues swept the Qing empire, and the Qianlong emperor turned a village panic into a nationwide hunt for conspirators."
@@ -692,6 +1213,8 @@ window.READS = [
       "title": "The Lying Life of Adults",
       "author": "Elena Ferrante",
       "language": "English",
+      "country": "Italy",
+      "original": "Italian",
       "lines": [
         "Novel · Translated by Ann Goldstein, 2020",
         "In Naples, a girl overhears her father compare her to his estranged sister, and begins to look for the truth behind the adults’ lies."
@@ -769,6 +1292,8 @@ window.READS = [
       "title": "여수의 사랑 (Love of Yeosu)",
       "author": "한강 Han Kang",
       "language": "Korean",
+      "country": "South Korea",
+      "original": "Korean",
       "lines": [
         "Short story collection · 1995",
         "Han Kang’s first collection. In the title story, two women, one abandoned as a baby and one the sole survivor of her family, hold opposite feelings about the same coastal city."
@@ -842,6 +1367,8 @@ window.READS = [
       "title": "房思琪的初戀樂園 (Fang Si-Chi’s First Love Paradise)",
       "author": "林奕含 Lin Yi-han",
       "language": "Traditional Chinese",
+      "country": "Taiwan",
+      "original": "Chinese",
       "lines": ["Novel · 2017", "A teenage girl in Taipei is abused by her cram-school Chinese teacher, who presents it to her as love."]
     },
     "languages": ["Traditional Chinese", "English"],
@@ -904,6 +1431,8 @@ window.READS = [
       "title": "Hiver à Sokcho",
       "author": "Élisa Shua Dusapin",
       "language": "French",
+      "country": "Switzerland",
+      "original": "French",
       "lines": [
         "Novel · Éditions Zoé, 2016",
         "A young woman, half French and half Korean, works at a guesthouse in the seaside town of Sokcho in winter, where a French comics artist comes to stay."
@@ -950,6 +1479,8 @@ window.READS = [
       "title": "Severance",
       "author": "Ling Ma",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": [
         "Novel · Farrar, Straus and Giroux, 2018",
         "A fever leaves its victims repeating the routines of their old lives. Candace Chen, a Bible production coordinator in New York, keeps going to work."
@@ -997,6 +1528,8 @@ window.READS = [
       "title": "大地上我们转瞬即逝的绚烂 (On Earth We’re Briefly Gorgeous)",
       "author": "王鸥行 Ocean Vuong",
       "language": "Chinese",
+      "country": "United States",
+      "original": "English",
       "lines": ["Novel · Simplified Chinese edition", "A letter from a son, nicknamed Little Dog, to his mother, who cannot read it."]
     },
     "place": "于加州利弗莫尔\nLivermore, CA",
@@ -1046,6 +1579,8 @@ window.READS = [
       "title": "The Color of Law",
       "author": "Richard Rothstein",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": ["History · Liveright, 2017", "A forgotten history of how government policy at every level segregated American neighborhoods."]
     },
     "blocks": [
@@ -1180,6 +1715,8 @@ window.READS = [
       "title": "世界中心的貧民窟：香港重慶大廈 (Ghetto at the Center of the World: Chungking Mansions)",
       "author": "Gordon Mathews",
       "language": "Traditional Chinese",
+      "country": "Hong Kong",
+      "original": "English",
       "lines": [
         "Ethnography · Traditional Chinese edition, 3rd ed.",
         "An ethnography of Chungking Mansions in Hong Kong and the traders, migrants and asylum seekers who make a living there."
@@ -1248,6 +1785,8 @@ window.READS = [
       "title": "Poor Economics",
       "author": "Abhijit Banerjee and Esther Duflo",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": [
         "Economics · PublicAffairs, 2011",
         "Two economists on how the poor actually live and decide, drawn from field experiments around the world."
@@ -1312,6 +1851,8 @@ window.READS = [
       "title": "When We Cease to Understand the World",
       "author": "Benjamín Labatut",
       "language": "English",
+      "country": "Spain",
+      "original": "Spanish",
       "lines": [
         "Novel · Pushkin Press, 2020",
         "A fictionalized account of scientists and mathematicians, from Fritz Haber to Werner Heisenberg, at the edge of what can be understood."
@@ -1380,6 +1921,8 @@ window.READS = [
       "title": "A Little Life",
       "author": "Hanya Yanagihara",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": [
         "Novel · Doubleday, 2015",
         "Four friends in New York over several decades, and at the center of the book, the life of one of them, Jude."
@@ -1460,6 +2003,8 @@ window.READS = [
       "title": "The Histories",
       "author": "Herodotus",
       "language": "English",
+      "country": "Greece",
+      "original": "Greek",
       "lines": [
         "History · c. 430 BCE",
         "Herodotus’s inquiry into the Greco-Persian Wars and the peoples around them. In its opening book, the Lydian king Croesus asks the Athenian Solon who is the happiest man in the world."
@@ -1516,6 +2061,8 @@ window.READS = [
       "title": "The Great Debate: Edmund Burke, Thomas Paine, and the Birth of Right and Left",
       "author": "Yuval Levin",
       "language": "English",
+      "country": "United States",
+      "original": "English",
       "lines": [
         "Political thought · Basic Books, 2013",
         "Levin retells the 1790s quarrel between Burke and Paine over the French Revolution, and argues that it set the terms of left and right in modern politics."
@@ -1580,6 +2127,8 @@ window.READS = [
       "title": "中国社会各阶层分析 (An Analysis of the Social Strata in China)",
       "author": "梁晓声 Liang Xiaosheng",
       "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
       "lines": [
         "Social analysis · Shenzhen Publishing House",
         "Liang Xiaosheng’s analysis of how China’s social classes fared through reform and opening up, and who gained and who lost."
@@ -1644,6 +2193,8 @@ window.READS = [
       "title": "人世间 (Ren Shi Jian)",
       "author": "梁晓声 Liang Xiaosheng",
       "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
       "lines": [
         "Novel · China Youth Press edition",
         "Liang Xiaosheng’s Mao Dun Prize-winning novel, following the three children of a working-class family in northeast China through decades of change."
@@ -1661,6 +2212,8 @@ window.READS = [
       "title": "1973年的彈珠玩具 (Pinball, 1973)",
       "author": "村上春樹 Haruki Murakami",
       "language": "Traditional Chinese",
+      "country": "Japan",
+      "original": "Japanese",
       "lines": [
         "Novel · Kodansha, 1980 · Traditional Chinese edition",
         "A man searches for a pinball machine he once loved, while his friend the Rat tries to leave the town and the life he cannot settle into."
@@ -1733,6 +2286,8 @@ window.READS = [
       "title": "한국이 싫어서 (Because I Hate Korea)",
       "author": "장강명 Jang Gang-myeong",
       "language": "Korean",
+      "country": "South Korea",
+      "original": "Korean",
       "lines": [
         "Novel · Minumsa, 2015 · Original Korean edition",
         "A young woman leaves a stable job at a Korean financial company for a new life in Australia, and tries to explain why."
@@ -1783,6 +2338,8 @@ window.READS = [
       "title": "L’Amant",
       "author": "Marguerite Duras",
       "language": "French",
+      "country": "France",
+      "original": "French",
       "lines": [
         "Novel · Éditions de Minuit, 1984",
         "An old woman remembers the affair she had at fifteen and a half with a wealthy Chinese man in French Indochina."

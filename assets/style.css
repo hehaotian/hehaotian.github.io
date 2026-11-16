@@ -226,6 +226,8 @@ body.reading { overflow: hidden; }
 #reader .pstanza { margin: 0 0 40px; }
 #reader .text .pstanza .pair { margin: 0 0 14px; }
 #reader .place { text-align: right; font-style: italic; color: #6f6b62; font-size: 16px; margin: 44px 0 0; }
+#reader .phead { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line); }
+#reader .phead p { font-weight: 600; }
 #reader .prose .en { color: #6f6b62; font-size: 16px; line-height: 1.65; }
 #reader .pair em { display: block; color: #6f6b62; font-size: 16px; }
 #reader .end { text-align: center; margin: 72px 0 0; font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--muted); }
