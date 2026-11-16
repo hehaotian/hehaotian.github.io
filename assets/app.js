@@ -325,7 +325,12 @@ legacyReads();
 // ---- plates: a collector's grid, write-ups first, then bare entries; each part grouped by distinction (3 stars first), newest first inside each group
 (function plates() {
   const list = (window.PLATES || []).slice();
-  const rank = p => p.stars || (p.bib ? 0.5 : p.recommended ? 0.25 : p.apple ? 0.2 : 0.22);   // stars > Bib > Michelin recommended > Haotian Recommend (everything else) > Apple
+  // A place can carry a Michelin / Apple mark AND Blue Ribbons (blueRibbon: 1-3, Korea's own restaurant survey), so the two are kept apart:
+  //   ribbons(p) = its Blue Ribbon level; mRank(p) = its Michelin-side category (null for a place that only has ribbons)
+  const ribbons = p => Math.max(0, Math.min(3, +p.blueRibbon || 0));
+  const mRank = p => p.stars || (p.bib ? 0.5 : p.recommended ? 0.25 : p.apple ? 0.2 : ribbons(p) || p.world50 ? null : 0.22);
+  // grid order: stars > Bib > Michelin recommended > Blue Ribbon only (3, 2, 1) > Haotian Recommend (everything else) > Apple; ribbons break ties inside a group
+  const rank = p => (mRank(p) ?? 0.24) + ribbons(p) * 0.001 + (p.world50 ? 0.005 : 0);   // "world50: true" = on The World's 50 Best Restaurants list, a tie-breaker inside a group
   const sortKey = p => (p.keepOrder ? "" : p.date) || "";   // keepOrder: show the date but keep the old place in the grid
   const hasText = p => (p.body && p.body.length ? 1 : 0);   // places with a write-up come first, bare ones sink to the bottom; each half keeps the star order
   list.sort((a, b) => hasText(b) - hasText(a) || rank(b) - rank(a) || (sortKey(a) < sortKey(b) ? 1 : -1));
@@ -333,33 +338,45 @@ legacyReads();
   // The real Michelin icons: assets/michelin-star.webp (and assets/michelin-bib.svg when you have it);
   // if a file is missing the page falls back to a plain star / the word Bib.
   const starImg = '<img class="mstar" src="assets/michelin-star.webp" alt="star" onerror="this.replaceWith(\'★\')">';
+  // Blue Ribbon Survey (Korea's own restaurant guide): one ribbon per level on a card (blueRibbon: 1-3), a single ribbon in the tally and the filter
+  const ribbon = '<img class="mbr" src="assets/blue-ribbon.png" alt="Blue Ribbon" title="Blue Ribbon Survey" onerror="this.replaceWith(\'Blue Ribbon\')">';
   const bibImg = '<img class="mbib" src="assets/michelin-bib.svg" alt="Bib Gourmand" onerror="this.replaceWith(\'Bib\')">';
+  // The World's 50 Best Restaurants (world50: true): its own category, shown after the Michelin mark and before any ribbons
+  const w50Img = '<img class="mw50" src="assets/world-50-best.png" alt="The World’s 50 Best Restaurants" title="The World’s 50 Best Restaurants" onerror="this.replaceWith(\'50 Best\')">';
+  // world50 can be true, its place on the list (48), or the name of another 50 Best list ("Vineyards"): the logo's hover text and screen-reader text say which; nothing is printed beside it
+  const w50Of = p => { const t = `The World’s 50 Best ${typeof p.world50 === "string" ? p.world50 : "Restaurants"}${+p.world50 > 1 ? ", No. " + (+p.world50) : ""}`; return w50Img.replace(/(alt|title)="The World’s 50 Best Restaurants"/g, `$1="${t}"`); };
   const aplImg = '<img class="mapl" src="assets/apple-logo.webp" alt="Apple Caffè" title="Apple Caffè" onerror="this.replaceWith(\'Apple\')">';
   const recImg = '<img class="mrec" src="assets/michelin-recommended.svg" alt="Michelin recommended" title="Michelin recommended" onerror="this.replaceWith(\'Rec.\')">';
   const hrImg = '<img class="mhr" src="assets/haotian-recommend.svg" alt="Haotian Recommend" title="Haotian Recommend" onerror="this.replaceWith(\'H\')">';   // every place without a Michelin or Apple mark
   // date may be "YYYY-MM-DD", "YYYY-MM" or "YYYY"; show as much of it as is given
   const when = (d, mo) => { d = String(d); const [y, m, day] = d.split("-"); return !m ? y : new Date(`${y}-${m}-${day || "01"}T00:00:00`).toLocaleDateString("en-US", { year: "numeric", month: mo, ...(day && { day: "numeric" }) }); };
-  const mark = p => p.stars ? starImg.repeat(p.stars) : p.bib ? bibImg : p.recommended ? recImg : p.apple ? aplImg : hrImg;
+  // the Michelin / Apple mark (or Haotian Recommend when there is nothing else), then the ribbons after a thin divider
+  const mark = p => {
+    const m = p.stars ? starImg.repeat(p.stars) : p.bib ? bibImg : p.recommended ? recImg : p.apple ? aplImg : ribbons(p) || p.world50 ? "" : hrImg;
+    return [m, p.world50 ? w50Of(p) : "", ribbons(p) ? ribbon.repeat(ribbons(p)) : ""].filter(Boolean).join('<span class="msep"></span>');
+  };
   const card = (p, i) => `<a class="plate" href="#plates/${ids[i]}">${p.cover ? `<img class="cov" ${thumb(p.cover)} alt="" loading="lazy" decoding="async">` : ""}<span class="st">${mark(p)}</span><span class="nm">${esc(p.name)}</span>
       <span class="ct">${esc(p.city)}</span>${p.date ? `<span class="yr">${esc(when(p.date, "short"))}</span>` : ""}</a>`;
-  const count = k => list.filter(p => rank(p) === k).length;
-  const tally = [[3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], [0.22, "HAO"], [0.2, "APL"]].filter(([k]) => count(k)).map(([k, s]) => `${s} ${count(k)}`).join("  ·  ");
-  document.getElementById("plates-tally").innerHTML = tally.replace(/★/g, starImg).replace(/Bib/g, bibImg).replace(/REC/g, recImg).replace(/APL/g, aplImg).replace(/HAO/g, hrImg);
+  // categories: a place counts in its Michelin-side category AND in its ribbon level, so one with both (a star and 2 ribbons) is found under each
+  const CATS = [["w50", "W50"], [3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], ["br3", "BR3"], ["br2", "BR2"], ["br1", "BR1"], [0.22, "HAO"], [0.2, "APL"]];
+  const inCat = (p, k) => k === "w50" ? !!p.world50 : typeof k === "string" ? ribbons(p) === +k.slice(2) : mRank(p) === k;
+  const count = k => list.filter(p => inCat(p, k)).length;
+  const label = s => s.replace(/★/g, starImg).replace(/^W50$/, w50Img).replace(/^Bib$/, bibImg).replace(/^BR([123])$/, (m, n) => ribbon.repeat(+n)).replace(/^REC$/, recImg).replace(/^APL$/, aplImg).replace(/^HAO$/, hrImg);
+  document.getElementById("plates-tally").innerHTML = CATS.filter(([k]) => count(k)).map(([k, s]) => `${label(s)} ${count(k)}`).join("  ·  ");
   // filters: distinction (category) and country, combinable; country comes from the end of "City, ST" / "City, Country"
   const CA = ["AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT"];
   const US = "AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC PR".split(" ");   // so "London, UK" is not read as a state
   const countryOf = p => { const t = (p.city || "").split(",").pop().trim(); return CA.includes(t) ? "Canada" : US.includes(t) ? "United States" : t; };
-  const catOf = [[3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], [0.22, "HAO"], [0.2, "APL"]].filter(([k]) => count(k));
+  const catOf = CATS.filter(([k]) => count(k));
   const countries = [...new Set(list.map(countryOf).filter(Boolean))].sort((a, b) => list.filter(p => countryOf(p) === b).length - list.filter(p => countryOf(p) === a).length || (a < b ? -1 : 1));
   const on = { cat: "", country: "" };
   const newest = list.filter(p => p.date).sort((a, b) => (fullDate(a.date) < fullDate(b.date) ? 1 : -1))[0];
   if (newest) latest.push({ date: fullDate(newest.date), kind: "plate", title: newest.name, href: "#plates/" + ids[list.indexOf(newest)] });
   const catsEl = document.getElementById("plates-cats"), countriesEl = document.getElementById("plates-countries"), listEl = document.getElementById("plates-list");
-  const label = s => s.replace(/★/g, starImg).replace(/^Bib$/, bibImg).replace(/^REC$/, recImg).replace(/^APL$/, aplImg).replace(/^HAO$/, hrImg);
   const row = (items, key) => items.length > 1 ? [["", "All"], ...items].map(([v, l]) =>
     `<button type="button" class="tag${String(v) === on[key] ? " on" : ""}" data-key="${key}" data-v="${esc(String(v))}"${key === "country" && FLAGS[l] ? ` title="${esc(l)}" aria-label="${esc(l)}"` : ""}>${key === "cat" ? label(l) : FLAGS[l] || esc(l)}</button>`).join("") : "";
   const renderPlates = () => {
-    const shown = list.map((p, i) => [p, i]).filter(([p]) => (on.cat === "" || rank(p) === +on.cat) && (!on.country || countryOf(p) === on.country));
+    const shown = list.map((p, i) => [p, i]).filter(([p]) => (on.cat === "" || inCat(p, isNaN(+on.cat) ? on.cat : +on.cat)) && (!on.country || countryOf(p) === on.country));
     listEl.innerHTML = shown.length ? shown.map(([p, i]) => card(p, i)).join("") : `<p class="empty">${list.length ? "No plates match." : "Nothing yet."}</p>`;
     catsEl.innerHTML = row(catOf, "cat");
     countriesEl.innerHTML = row(countries.map(c => [c, c]), "country");

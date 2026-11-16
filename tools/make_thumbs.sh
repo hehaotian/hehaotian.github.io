@@ -14,5 +14,7 @@ console.log(out.map(([f, w]) => f + " " + w).join("\n"));
   src="assets/photos/$f"; dst="assets/thumbs/$f"
   [ -f "$src" ] || { echo "missing: $src"; continue; }
   [ "$dst" -nt "$src" ] && continue
-  sips -Z "$w" -s formatOptions 78 "$src" --out "$dst" >/dev/null && echo "thumb: $f"
+  have=$(sips -g pixelWidth "$src" | awk '/pixelWidth/{print $2}')
+  if [ "$have" -le "$w" ]; then cp "$src" "$dst" && echo "thumb (kept as is, already small): $f"   # never enlarge a small photo
+  else sips -Z "$w" -s formatOptions 78 "$src" --out "$dst" >/dev/null && echo "thumb: $f"; fi
 done

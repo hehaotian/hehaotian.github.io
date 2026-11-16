@@ -19,17 +19,17 @@ window.NOTES = [
     "languages": ["Chinese", "English"],
     "prose": [
       [
-        "这段时间，我一直在想身边的两位亲人。我试图借助汉娜·阿伦特所说的“平庸之恶”，理解一个始终困扰我的问题：为什么一些在日常生活中热情、善良，甚至愿意为他人付出的人，却能够对某些公共事件中的伤害表现出惊人的冷漠？",
-        "I have been thinking a lot lately about two relatives close to me. I am trying to use Hannah Arendt’s “banality of evil” to understand a question that has always troubled me: why can some people who are warm and kind in daily life, even willing to give of themselves for others, show such astonishing indifference to the harm done in certain public events?"
+        "这段时间，我一直在想身边的两位长辈。我试图借助汉娜·阿伦特所说的“平庸之恶”，理解一个始终困扰我的问题：为什么一些在日常生活中热情、善良，甚至愿意为他人付出的人，却能够对某些公共事件中的伤害表现出惊人的冷漠？",
+        "I have been thinking a lot lately about two elders close to me. I am trying to use Hannah Arendt’s “banality of evil” to understand a question that has always troubled me: why can some people who are warm and kind in daily life, even willing to give of themselves for others, show such astonishing indifference to the harm done in certain public events?"
       ],
-      ["我的大伯便是这样一个人。", "My eldest uncle on my father’s side is one of them."],
+      ["其中一位便是这样一个人。", "One of them is such a person."],
       [
-        "他成长于一个具有革命经历的干部家庭，长期生活在某种政治身份所赋予的荣誉感之中。在我看来，这种荣誉感逐渐成为他理解世界的基础。他并非一个缺乏善意的人，相反，他热情、积极，也愿意承担社会责任。但在面对某些公共事件时，他似乎更习惯于从权威的立场寻找解释，而不是首先追问具体的人遭受了什么。",
-        "He grew up in a family of officials with a revolutionary history, and has long lived inside the sense of honor that a certain political identity gives. In my view, that sense of honor gradually became the foundation on which he understands the world. He is not a man without goodwill. On the contrary, he is warm, active, and willing to take on social responsibility. But when faced with certain public events, he seems more used to looking for explanations from the standpoint of authority, rather than first asking what a particular person has suffered."
+        "他成长的环境，让他长期生活在某种身份所赋予的荣誉感之中。在我看来，这种荣誉感逐渐成为他理解世界的基础。他并非一个缺乏善意的人，相反，他热情、积极，也愿意承担社会责任。但在面对某些公共事件时，他似乎更习惯于从权威的立场寻找解释，而不是首先追问具体的人遭受了什么。",
+        "The environment he grew up in has kept him living for a long time inside the sense of honor that a certain identity gives. In my view, that sense of honor gradually became the foundation on which he understands the world. He is not a man without goodwill. On the contrary, he is warm, active, and willing to take on social responsibility. But when faced with certain public events, he seems more used to looking for explanations from the standpoint of authority, rather than first asking what a particular person has suffered."
       ],
       [
-        "我的姨妈则有着不同的经历。她出身农村，习惯于用明确的对错判断复杂的社会问题。疫情期间，她热衷于转发各种政治宣传视频，也常常以高度情绪化的语言理解国际关系与公共政策。让我感到不安的，不只是她所相信的某些观点，而是她似乎越来越难以容忍不同的解释。",
-        "My aunt has a different background. She comes from the countryside and is used to judging complex social questions by clear lines of right and wrong. During the pandemic she was keen on forwarding political propaganda videos, and often understood international relations and public policy in highly emotional language. What disturbs me is not only some of the views she holds, but that she seems less and less able to tolerate a different explanation."
+        "另一位则有着不同的经历。她成长于朴素的环境，习惯于用明确的对错判断复杂的社会问题。她热衷于转发各种立场鲜明的内容，也常常以高度情绪化的语言理解国际关系与公共政策。让我感到不安的，不只是她所相信的某些观点，而是她似乎越来越难以容忍不同的解释。",
+        "The other has a different background. She grew up in a plain, modest environment and is used to judging complex social questions by clear lines of right and wrong. She is keen on forwarding content with a sharply defined stance, and often understands international relations and public policy in highly emotional language. What disturbs me is not only some of the views she holds, but that she seems less and less able to tolerate a different explanation."
       ],
       [
         "两个人拥有不同的成长背景，却让我看到了某种相似之处：他们都真诚地相信自己站在正确的一边。",
@@ -60,29 +60,29 @@ window.NOTES = [
         "And so good intentions no longer need to be tested against facts, loyalty gradually replaces judgment, and personal moral responsibility is handed over to some higher authority."
       ],
       [
-        "为什么他们看不见这一点？我想，一个原因是，对于身处其中的人来说，确信并不像一种“信念”，而更像一种“看见”。我的大伯不会觉得自己是在相信什么，他只是觉得自己看到了事情本来的样子；我的姨妈也是。确信的感觉，与看清事实的感觉，从内部是无法区分的。这也是盲点难以察觉的原因：它不是视野中某一块被遮住的地方，而是我们用来看的方式本身。",
-        "Why can’t they see this? One reason, I think, is that for the person inside it, certainty does not feel like a “belief”; it feels like “seeing.” My uncle does not feel he is believing something; he feels he is seeing things as they are. So does my aunt. From the inside, the feeling of being certain and the feeling of seeing the facts clearly cannot be told apart. That is why a blind spot is so hard to notice. It is not some covered-up patch of the field of view; it is the way we look in the first place."
+        "为什么他们看不见这一点？我想，一个原因是，对于身处其中的人来说，确信并不像一种“信念”，而更像一种“看见”。其中一位不会觉得自己是在相信什么，他只是觉得自己看到了事情本来的样子；另一位也是。确信的感觉，与看清事实的感觉，从内部是无法区分的。这也是盲点难以察觉的原因：它不是视野中某一块被遮住的地方，而是我们用来看的方式本身。",
+        "Why can’t they see this? One reason, I think, is that for the person inside it, certainty does not feel like a “belief”; it feels like “seeing.” One of them does not feel he is believing something; he feels he is seeing things as they are. So does the other. From the inside, the feeling of being certain and the feeling of seeing the facts clearly cannot be told apart. That is why a blind spot is so hard to notice. It is not some covered-up patch of the field of view; it is the way we look in the first place."
       ],
       ["但这种现象真的只存在于他们身上吗？", "But does this phenomenon really exist only in them?"],
       [
-        "写到这里，我不得不停下来。我一直在用“缺乏独立思考”来形容他们。可这个说法本身，就是一句现成的话，一个在我所处的圈子里被反复使用、不需要再解释的结论。我一用它，就不必再认真去听他们到底在说什么。我还用“干部家庭”“出身农村”来解释他们，仿佛知道了一个人的出身，就知道了他为什么会这样想。这正是我在前面所警惕的：用一个简单的解释，代替对一个具体的人的认识。",
-        "Writing this, I have to stop. I have been describing them as “lacking independent thought.” But that phrase is itself a ready-made one, a conclusion used over and over in the circles I move in and needing no further explanation. The moment I use it, I no longer have to listen carefully to what they are actually saying. I have also explained them by “a family of officials” and “from the countryside,” as if knowing where a person comes from told me why he thinks as he does. This is exactly what I warned against above: using a simple explanation to replace knowing a particular person."
+        "写到这里，我不得不停下来。我一直在用“缺乏独立思考”来形容他们。可这个说法本身，就是一句现成的话，一个在我所处的圈子里被反复使用、不需要再解释的结论。我一用它，就不必再认真去听他们到底在说什么。我还用“成长环境”“出身”来解释他们，仿佛知道了一个人的出身，就知道了他为什么会这样想。这正是我在前面所警惕的：用一个简单的解释，代替对一个具体的人的认识。",
+        "Writing this, I have to stop. I have been describing them as “lacking independent thought.” But that phrase is itself a ready-made one, a conclusion used over and over in the circles I move in and needing no further explanation. The moment I use it, I no longer have to listen carefully to what they are actually saying. I have also explained them by “the environment they grew up in” and “where they come from,” as if knowing where a person comes from told me why he thinks as he does. This is exactly what I warned against above: using a simple explanation to replace knowing a particular person."
       ],
       [
         "我们往往能够清楚地辨认别人身上的问题，却很难察觉自己正在以不同的方式重复它们。我在他们身上看到的，是对权威的依赖，和对不同解释的不耐烦；而我自己，也许是对自己所属立场的依赖，和对“他们不懂”这个结论的不耐烦。内容不同，结构却可能相似。",
         "We can often see clearly the problems in other people, yet find it hard to notice that we are repeating them ourselves in a different way. What I see in them is dependence on authority and impatience with a different explanation. In myself, it may be dependence on the position I belong to, and impatience that settles for the conclusion “they just don’t get it.” The content differs, but the structure may be similar."
       ],
       [
-        "如果一定要找一个不依赖立场的标准，我想是这一个：面对一件让人受伤的事，你是否首先追问，具体的人遭受了什么？这正是我对大伯感到不安的地方。可我也必须同样地问自己：对那些我不认同的人，对那些不站在我这一边的人，我是否同样会这样追问？我不敢轻易说“是”。",
-        "If I have to find a standard that does not depend on which side you are on, I think it is this: faced with something that hurts people, do you first ask what a particular person has suffered? This is exactly what unsettles me about my uncle. But I have to ask myself the same thing: for the people I disagree with, the ones who are not on my side, do I ask it just as readily? I dare not say “yes” too quickly."
+        "如果一定要找一个不依赖立场的标准，我想是这一个：面对一件让人受伤的事，你是否首先追问，具体的人遭受了什么？这正是我对其中一位感到不安的地方。可我也必须同样地问自己：对那些我不认同的人，对那些不站在我这一边的人，我是否同样会这样追问？我不敢轻易说“是”。",
+        "If I have to find a standard that does not depend on which side you are on, I think it is this: faced with something that hurts people, do you first ask what a particular person has suffered? This is exactly what unsettles me about one of them. But I have to ask myself the same thing: for the people I disagree with, the ones who are not on my side, do I ask it just as readily? I dare not say “yes” too quickly."
       ],
       [
         "这并不是说所有立场同样正确，也不是说既然人人都有盲点，责任便人人相等。哪些说法与事实相符，仍然有高下之分；一个人掌握的权力越大，他的判断给别人带来的代价越大，他所承担的责任也越重。我想说的只是，无论我们站在哪一边，确信自己正确的感觉，都不能替代检验。",
         "This does not mean that all positions are equally correct, nor that, since everyone has blind spots, everyone bears equal responsibility. Some claims still fit the facts better than others; and the more power a person holds, and the greater the cost his judgment imposes on others, the heavier his responsibility. All I mean is that, whichever side we are on, the feeling of being sure we are right can never replace checking."
       ],
       [
-        "那么，能做什么？也许是少一点诊断，多一点询问。我可以问大伯和姨妈：什么样的事实，会让你改变看法？然后同样认真地回答自己。如果我给不出答案，那么我的确信，也许就已经不是信念，而只是一种归属。",
-        "So what can be done? Perhaps less diagnosing and more asking. I can ask my uncle and my aunt: what kind of fact would change your mind? And then answer it just as seriously myself. If I cannot give an answer, then my certainty may no longer be a belief at all, but only a form of belonging."
+        "那么，能做什么？也许是少一点诊断，多一点询问。我可以问他们两位：什么样的事实，会让你改变看法？然后同样认真地回答自己。如果我给不出答案，那么我的确信，也许就已经不是信念，而只是一种归属。",
+        "So what can be done? Perhaps less diagnosing and more asking. I can ask the two of them: what kind of fact would change your mind? And then answer it just as seriously myself. If I cannot give an answer, then my certainty may no longer be a belief at all, but only a form of belonging."
       ],
       [
         "独立思考不应只是怀疑他人的权威，也应当包括怀疑自己的确信。否则，我们可能只是以一种不容置疑的正确，替代了另一种不容置疑的正确。",
@@ -840,6 +840,410 @@ window.NOTES = [
       [
         "当一个人拥有定义另一个人的权力时，我们究竟是在认识他者，还是在借他者的形象，证明我们自己？",
         "When one person holds the power to define another, are we really coming to know the other, or using the other’s image to prove ourselves?"
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-10",
+    "title": "Polymetis",
+    "slug": "polymetis",
+    "category": "Reflection",
+    "place": "于加州都柏林\nDublin, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "刚看完诺兰的《奥德赛》。先说结论：Xenia只是诺兰这次的希腊化外壳，christianization也只是他必不可少的艺术化手段，真正一以贯之的，还是他对多智者原罪的执念。",
+        "I have just watched Christopher Nolan’s Odyssey. The conclusion first: xenia is only the Hellenic shell Nolan wears this time, and christianization is only an artistic device he cannot do without. What runs through all of his work is still his fixation on the clever man’s original sin."
+      ],
+      [
+        "Xenia是希腊人的待客之道，是荷马世界里最重的礼法之一。可在这部电影里，它更像一层外衣：衣服换了，里面还是那个人。",
+        "Xenia is the Greek law of hospitality, one of the weightiest customs in Homer’s world. In this film, though, it reads more like a garment: the clothes have changed, and the man inside is the same."
+      ],
+      [
+        "Polymetis，“足智多谋”，在荷马史诗里本是个纯粹的褒义词，是称赞奥德修斯的头衔。到了诺兰手里，这份聪明有了代价，变成了他自己的奥德赛。",
+        "Polymetis, “of many counsels,” is in Homer a purely admiring word, an epithet of praise for Odysseus. In Nolan’s hands that cleverness acquires a price, and becomes an Odyssey of his own."
+      ],
+      [
+        "奥德赛里的木马，就是奥本海默里的原子弹，就是致命魔术里的克隆术，就是盗梦空间里的植梦术。每一件都是多智者的杰作，赢下了眼前的战争、舞台与交易；每一件也都是他的罪证，赢来的东西，日后都收不回去。",
+        "The horse in the Odyssey is the atomic bomb in Oppenheimer, the cloning machine in The Prestige, the planted idea in Inception. Each one is the masterpiece of a clever man, and wins him the war, the stage or the deal in front of him. Each is also the evidence against him, because what it wins can never be taken back."
+      ],
+      [
+        "其实我最喜欢的，反而是诺兰自己夹带的私货。",
+        "What I actually like best, though, is the contraband Nolan smuggles in himself."
+      ],
+      [
+        "阿伽门农那身黑金盔甲华丽到不发一击，说白了就是个空壳。海伦的非常规选角，以及非要花5秒钟展示的脸上那道刀疤，也在消解被神圣化的战争。你们杀了十年人，压根不是为了那张脸。",
+        "Agamemnon’s black-and-gold armor is so magnificent that it never strikes a single blow; put plainly, it is an empty shell. Helen’s unconventional casting, and the scar on her face that the film insists on showing for a full five seconds, also dissolve the sanctified war. You spent ten years killing, and it was never for that face."
+      ],
+      [
+        "要说不喜欢的，还是那个老问题：救赎，仍只有国王配拥有。",
+        "As for what I did not like, it is the same old problem: redemption, still, is something only a king deserves."
+      ]
+    ]
+  },
+  {
+    "date": "2026-08-02",
+    "title": "The Weight of Type",
+    "slug": "the-weight-of-type",
+    "category": "Journal",
+    "place": "于比利时安特卫普\nAntwerp, Belgium",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "赶在普朗坦博物馆闭馆之前，我真的摸到了16世纪铅字的重量。",
+        "Before the Plantin-Moretus Museum closed its doors, I actually felt the weight of sixteenth-century type in my hands."
+      ],
+      [
+        "亲手触碰Claude Garamond和Robert Granjon留下的拉丁语与叙利亚语的冲压钢模（punches）和铜字模（matrices），那种震颤，从指尖一直传到心里。",
+        "Touching with my own hands the punches and matrices that Claude Garamond and Robert Granjon left behind, for Latin and for Syriac, sent a tremor from my fingertips to my heart."
+      ],
+      [
+        "更难忘的是后面：我一步步走完整条印刷生产线，最后把普朗坦的十四行诗，在复刻的16世纪木质印刷机上压印成型。纸离开铅字的那一刻，幸福感简直能直接管饱整个2027财年。",
+        "More unforgettable was what came after. I walked through the whole printing line step by step, and finally pressed one of Plantin’s sonnets into shape on a reconstructed sixteenth-century wooden press. At the moment the paper lifted from the type, the happiness felt like it could keep me full for the entire 2027 fiscal year."
+      ],
+      [
+        "我们现在在屏幕上习以为常的每一个Typeface矢量，在几百年前真的都是手艺人一刀刀凿出来的金属雕塑。",
+        "Every typeface vector we take for granted on a screen was, a few hundred years ago, really a metal sculpture, cut stroke by stroke by a craftsman’s hand."
+      ]
+    ]
+  },
+  {
+    "date": "2026-02-09",
+    "title": "The Remaining 27%",
+    "slug": "the-remaining-27-percent",
+    "category": "Reflection",
+    "place": "于加州库比蒂诺\nCupertino, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "以客观时间为尺度去计算生命，其实很大程度上忽略了作为生命承载者本身的主观体验。",
+        "Measuring a life on the scale of objective time largely ignores the subjective experience of the one who carries that life."
+      ],
+      [
+        "4岁左右，我们逐渐形成时间的前后概念（Jean Piaget, 1952）。那时会觉得一年无比漫长，是因为一年占据了此前全部生命经验的1/4。",
+        "Around the age of four, we gradually form the idea of before and after in time (Jean Piaget, 1952). A year then feels endlessly long because it makes up a quarter of all the experience we have had so far."
+      ],
+      [
+        "如果我以美国同收入阶层男性寿命的88岁作为参照（Chetty et al., 2016），那么我并非客观地度过了人生的40%，而是在一种离散对数式的主观时间意识中，已经经历了 1/4 + 1/5 + … + 1/36 ≈ 73%。",
+        "If I take 88, the life expectancy of American men in my income bracket, as the reference (Chetty et al., 2016), then I have not objectively lived 40% of my life. In a discrete, logarithmic sense of subjective time, I have already lived 1/4 + 1/5 + … + 1/36 ≈ 73%."
+      ],
+      [
+        "换句话说，用主观生命的尺度计算，我的人生或许只剩下大约27%了。",
+        "In other words, measured on the scale of subjective life, only about 27% of my life may be left."
+      ],
+      [
+        "但我并不想只是接受这个数字，我想对抗它。如果一年的长度取决于它在全部经验里占多大比重，那么延长生命的办法，就不是让时钟变慢，而是不让每一年成为上一年的重复。",
+        "But I do not want merely to accept this number; I want to push back against it. If the length of a year depends on how large a share it takes of all my experience, then the way to lengthen a life is not to slow the clock, but to stop each year from repeating the one before."
+      ],
+      [
+        "所以我想把生命变厚：尝试不同的角色、不同的工作、不同的生活。不只是旅行，旅行终究是路过，我想真正住进去，活在里面。",
+        "So I want to thicken my life: to try different roles, different jobs, different ways of living. Not only by traveling, because traveling is in the end passing through, but by actually moving in and living inside them."
+      ],
+      [
+        "这基本就是我后来去送Uber外卖，又投资开一家餐车生意的原因。",
+        "This is, more or less, why I later started doing Uber deliveries, and then invested in opening a food truck business."
+      ]
+    ]
+  },
+  {
+    "date": "2025-10-19",
+    "title": "Folding Back",
+    "slug": "folding-back",
+    "category": "Lines",
+    "place": "于日本东京\nTokyo, Japan",
+    "languages": ["Chinese", "English"],
+    "pairStanzas": [
+      [
+        ["高野山归来，", "Back from Koyasan,"],
+        ["就在机场书店里遇见了一本特别应景的书，", "I came across a book in the airport bookshop that suited the moment perfectly,"],
+        ["《お金と時間の秘密》。", "お金と時間の秘密, The Secret of Money and Time."]
+      ],
+      [
+        ["第一次坐一家全新的航司Air Japan，", "My first time on Air Japan, a brand-new airline,"],
+        ["短短两小时的航程，竟然用上了787。", "and for a flight of barely two hours, they used a 787."],
+        ["忽然想起上一次飞短途大飞机，", "It suddenly reminded me of the last time I flew a big plane on a short route,"],
+        ["是十几年前海南航空长沙到北京的A330，", "an A330 on Hainan Airlines from Changsha to Beijing, more than ten years ago,"],
+        ["全机只有我一个乘客和七八个空姐。", "with me as the only passenger, and seven or eight flight attendants."]
+      ],
+      [
+        ["那天中午我一个人吃了三份飞机餐。", "That noon I ate three in-flight meals all by myself."]
+      ],
+      [
+        ["时间飞过十几年，", "More than a decade has flown by,"],
+        ["又在舷窗外慢慢折返。", "and now slowly turns back outside the window."]
+      ],
+      [
+        ["从和歌山回东京的一晚，", "The night I came back to Tokyo from Wakayama,"],
+        ["下着和山里一模一样的雨。", "the rain was exactly the same as the rain in the mountains."],
+        ["在阿美横丁和东京站停留，感受了", "I lingered at Ameyoko and Tokyo Station, and felt again"],
+        ["一周未见的烟火气与灯光。", "the street-level warmth, the smoke and lights, unseen for a week."]
+      ]
+    ]
+  },
+  {
+    "date": "2025-10-23",
+    "title": "See You, Seoul",
+    "slug": "see-you-seoul",
+    "category": "Lines",
+    "place": "于韩国首尔\nSeoul, Korea",
+    "languages": ["Korean", "Chinese", "English"],
+    "pairStanzas": [
+      [
+        ["또 보자, 서울。", "See you again, Seoul."]
+      ],
+      [
+        ["梨泰院的夜太热闹，", "Itaewon nights are too loud with life,"],
+        ["醉里买了好多比特币。", "and drunk, I bought a lot of Bitcoin."],
+        ["外大图书馆装学生喝咖啡续命，", "In the foreign-language university library I posed as a student, coffee keeping me alive,"],
+        ["青春的幻觉真甜。", "and the illusion of youth was so sweet."]
+      ],
+      [
+        ["狎鸥亭的餐桌太精致，", "The tables in Apgujeong are too exquisite,"],
+        ["只有门口的镜子看得见时间的影子。", "and only the mirror at the door can see the shadow of time."]
+      ],
+      [
+        ["有些城市让人想年轻，", "Some cities make you want to be young,"],
+        ["有些让人学会告别。", "and some teach you how to say goodbye."]
+      ]
+    ]
+  },
+  {
+    "date": "2025-07-26",
+    "title": "Thirty-Three Hours East",
+    "slug": "california-zephyr",
+    "category": "Journal",
+    "place": "于美国科罗拉多州德贝克\nDe Beque, CO",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "一泊二日的加州和风号（California Zephyr）之旅，给我上了一堂最生动的地理课。",
+        "A two-day, one-night trip on the California Zephyr gave me the most vivid geography lesson I have ever had."
+      ],
+      [
+        "从旧金山湾区出发，穿过海湾、城市和森林，33小时一路向东横跨美国西部。沿途依次是内华达的松林、犹他的沙漠和红岩、科罗拉多的峡谷和雪山。",
+        "Starting from the San Francisco Bay Area, we crossed the bay, the cities and the forests, and for 33 hours rolled east across the American West. Along the way: the pines of Nevada, the deserts and red rock of Utah, the canyons and snowy peaks of Colorado."
+      ],
+      [
+        "第一次亲眼见到Basin and Range地形，干涸盐湖和断层山脉交错延展，风化侵蚀形成的红岩怪石林立。进入落基山脉，列车沿着科罗拉多河前行，两侧峡谷是被河流与冰川切割出的痕迹。",
+        "For the first time I saw the Basin and Range terrain with my own eyes: dry salt lakes and fault-block mountains stretching out in alternation, and strange red rocks standing everywhere, shaped by weathering and erosion. Entering the Rockies, the train followed the Colorado River, and the canyons on both sides bore the marks of rivers and glaciers cutting through the rock."
+      ],
+      [
+        "课本上的地貌类型，就这样一一出现在窗外，比想象中更震撼。",
+        "The landforms in the textbooks appeared one by one outside the window, more striking than I had imagined."
+      ]
+    ]
+  },
+  {
+    "date": "2025-07-19",
+    "title": "Steinbeck Country",
+    "slug": "steinbeck-country",
+    "category": "Journal",
+    "place": "于加州萨利纳斯\nSalinas, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "24/25学年读创意写作，上了一整年一系列的虚构文学课，最大的收获就是读了大量美国本土虚构文学，发现旧金山湾区在20世纪文坛真是百花齐放，影响深远。",
+        "In the 2024–25 school year I studied creative writing and took a whole year of fiction courses. My biggest gain was reading a great deal of American fiction, and discovering that the San Francisco Bay Area in the twentieth century was a place where literature bloomed in every direction and left a far-reaching influence."
+      ],
+      [
+        "所以，我决定用所剩的暑假时间，开启一场【北加州文学巡礼】：从斯坦贝克到杰克·伦敦、尤金·奥尼尔，再到金斯伯格、迪迪安、勒古恩。",
+        "So I have decided to spend what is left of the summer on a Northern California literary pilgrimage: from Steinbeck to Jack London and Eugene O’Neill, then on to Ginsberg, Didion and Le Guin."
+      ],
+      [
+        "那么第一站，献给我个人排行榜第一位的John Steinbeck。来到他故乡Salinas，广袤的甜菜田边，Spreckels制糖厂的白色筒仓依然醒目，仿佛走进《人鼠之间》的开篇。",
+        "The first stop, then, goes to John Steinbeck, my personal number one. In his hometown of Salinas, beside the vast sugar beet fields, the white silos of the Spreckels sugar factory still stand out, as if I had walked into the opening of Of Mice and Men."
+      ],
+      [
+        "去年在埃及开罗旅行，遭遇各种shock，我站在扎巴林城（Zabbaleen）的垃圾堆上时，突然顿悟了Steinbeck那句：“People don’t take trips, trips take people.”",
+        "Last year, traveling in Cairo, Egypt, I met one shock after another. Standing on the heaps of garbage in Zabbaleen, I suddenly understood Steinbeck’s line: “People don’t take trips, trips take people.”"
+      ],
+      [
+        "而此刻，脚踏这片源源不断地激发Steinbeck创作的土地，我脑子里回荡的却是他的另一句：“Show me the man who isn’t interested in discussing himself.” 巡礼或许和各位作家都没关系，是我在寻找自己的答案吧。",
+        "And now, standing on the land that kept inspiring Steinbeck’s writing, what echoes in my head is another of his lines: “Show me the man who isn’t interested in discussing himself.” Perhaps the pilgrimage has little to do with any of these writers; perhaps I am just looking for my own answer."
+      ]
+    ]
+  },
+  {
+    "date": "2025-07-12",
+    "title": "Unwinding Light",
+    "slug": "unwinding-light",
+    "category": "Lines",
+    "place": "東京にて\nTokyo, Japan",
+    "languages": ["Japanese", "English"],
+    "pairStanzas": [
+      [
+        ["ひかりを　ほどく朝", "A morning that unwinds the light"],
+        ["ことばの　眠る路地", "an alley where words lie sleeping"],
+        ["時間は　歩くたびに　薄くなる", "time grows thinner with every step"]
+      ],
+      [
+        ["まだ　ここにいる", "Still here"],
+        ["記憶の　余白で", "in the margin of memory"]
+      ]
+    ]
+  },
+  {
+    "date": "2024-10-12",
+    "title": "Mountain, Sea, Sun",
+    "slug": "shizuoka",
+    "category": "Journal",
+    "place": "于日本静冈\nShizuoka, Japan",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "静冈的新干线站台上，一群大妈在等车，随着日本传统民谣跳起了舞。我站在她们身旁，看她们玩得开心。她们显然是年纪相仿的老朋友，正结伴出来旅行。",
+        "On the Shinkansen platform in Shizuoka, a group of aunties were waiting for their train, dancing to traditional Japanese folk music. I stood beside them and watched them enjoy themselves. They were obviously old friends of about the same age, out on a trip together."
+      ],
+      [
+        "我是在35岁生日旅行第三周的周末，第六站，撞见这一幕的。那天恰逢日本长周末，来这里旅游的本国游客真的好多，外国人却特别少。",
+        "I came across this on the weekend of the third week of my 35th-birthday trip, the sixth stop. It was a Japanese long weekend, and there were really many domestic tourists, and very few foreigners."
+      ],
+      [
+        "这一天，是从一杯アイスコーヒー（冰咖啡）开始的。走下新干线后的第一杯，是在一家叫「Caffe 山と海と太陽」的咖啡店喝的，结果真的能感受到，静冈处处都是山、海和太阳。登上日本平，可以俯瞰骏河湾内的清水港，不远处就是巨大的富士山。夏秋之际，山顶已经没有了白雪，天公作美，用白云来充数。",
+        "The day began with an アイスコーヒー (iced coffee). My first cup after stepping off the Shinkansen was at a café called “Caffe 山と海と太陽” (Mountain, Sea and Sun), and sure enough, you can feel that Shizuoka is full of mountains, sea and sun. From Nihondaira you look down over Shimizu Port inside Suruga Bay, with the enormous Mt. Fuji not far off. Between summer and autumn its summit has no snow, and the weather was kind enough to stand in with white clouds."
+      ],
+      [
+        "作为樱桃小丸子的家乡，静冈还是粉红色的。海边150号国道旁，都是采摘草莓的农庄，现采的草莓可以带走，真的好新鲜，各种草莓甜品也特别好吃。",
+        "As the hometown of Chibi Maruko-chan, Shizuoka is pink as well. Along National Route 150 by the sea there are farms where you can pick your own strawberries; the ones picked on the spot can be taken away, and they are wonderfully fresh. The strawberry desserts of every kind are delicious too."
+      ],
+      [
+        "可最后留在我脑子里的，不是富士山，也不是草莓，而是站台上跳舞的大妈们，和车站前小舞台上，连石头剪刀布都能玩得特别开心的人们。",
+        "But what stayed in my head in the end was neither Fuji nor the strawberries. It was the aunties dancing on the platform, and the people on the little stage in front of the station, having a wonderful time even with a game of rock-paper-scissors."
+      ],
+      [
+        "山、海、太阳，谁来都能看见。可是和老朋友一起，把等车的几分钟过成一支舞，是这里的人自己的本事。该说不说，静冈人民的生活状态，我打满分。",
+        "Anyone who comes can see the mountain, the sea and the sun. But turning a few minutes of waiting for a train into a dance with old friends is the people’s own talent. Honestly, I give the way people live in Shizuoka full marks."
+      ]
+    ]
+  },
+  {
+    "date": "2024-09-02",
+    "title": "Balcony in Nice",
+    "slug": "nice-balcony",
+    "category": "Lines",
+    "place": "于法国尼斯\nNice, France",
+    "languages": ["Chinese", "English"],
+    "blocks": [
+      [
+        "p",
+        "和一百年前住在同一宾馆的乔伊斯看着同样的日落，吹着同样的海风，我也认真地下笔，模仿乔伊斯意识流的写作技法了。",
+        "Watching the same sunset and feeling the same sea breeze as Joyce, who stayed in the same hotel a hundred years ago, I too set pen to paper in earnest, imitating Joyce’s stream-of-consciousness technique."
+      ],
+      [
+        "p",
+        "",
+        "He stood at the balcony, the Mediterranean breeze warm, her touch, her glow, still there, still lingering."
+      ],
+      [
+        "p",
+        "",
+        "Fierce, consuming love, ecstasy, agony, all of it. Even now, in loss, he knew: it was the intensity with which he loved, the inevitable hurt she gave, the swift vanishing they experienced, that gave life all its meaning."
+      ],
+      [
+        "p",
+        "",
+        "Love, impermanent yet proof of his existence, like a fleeting summer, a gift to be cherished, even as it fades into the past."
+      ]
+    ]
+  },
+  {
+    "date": "2024-08-17",
+    "title": "Zabbaleen",
+    "slug": "zabbaleen",
+    "category": "Reflection",
+    "place": "于埃及开罗\nCairo, Egypt",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "站在开罗伊斯兰老城城堡的最高处，我俯瞰到了两种截然不同的世界。一边是庄严的爱资哈尔大清真寺，象征着信仰的高贵与权威；另一边是杂乱的垃圾城，充斥着人们不愿直视的底层现实。城堡似乎成为了天堂与地狱之间的分界线，提醒着人们信仰与现实的微妙关系。",
+        "Standing at the highest point of the Citadel in Islamic Cairo, I looked down on two utterly different worlds. On one side was the solemn Al-Azhar Mosque, a symbol of the nobility and authority of faith. On the other was the chaotic Garbage City, filled with a harsh reality at the bottom of society that people do not want to look at. The Citadel seemed to become the border between heaven and hell, a reminder of the delicate relationship between faith and reality."
+      ],
+      [
+        "我学过一些MSA（现代标准阿拉伯语），却发现完全无法理解埃及方言。直到离开埃及后，我才了解到“扎巴林”这个词在埃及方言中就是“垃圾”，是充满贬义的蔑称。在这座垃圾城里，数万扎巴林人每天以处理开罗几千万人口的垃圾为生，生活在社会的边缘，被迫在城市的垃圾中寻找自己的生存方式。",
+        "I had studied some MSA (Modern Standard Arabic), yet found I could not understand Egyptian dialect at all. Only after leaving Egypt did I learn that the word “Zabbaleen” in Egyptian Arabic simply means “garbage,” a contemptuous slur. In this Garbage City, tens of thousands of Zabbaleen live by handling the waste of Cairo’s tens of millions of people every day, on the margins of society, forced to find their own way of surviving in the city’s trash."
+      ],
+      [
+        "1975年，一场大火烧毁了这里原本的教堂，于是扎巴林人在山脚的一个洞穴中重新建起了现在的洞穴教堂，继续在艰难中寻找生存的精神支柱。在洞穴教堂的短短半小时内，我亲眼目睹了一场从救护车到棺椁和葬礼的完整过程。这里的扎巴林人似乎已经习惯了死亡的频繁降临，面对死亡的处理速度和情绪跌宕之快，令人震惊。也许，是他们的生活环境不允许过多拖得太长的悲伤，或者他们已经学会了在苦难中与死亡达成和解。",
+        "In 1975 a fire destroyed the original church here, so the Zabbaleen rebuilt it in a cave at the foot of the hill, the Cave Church of today, and went on looking for a spiritual pillar to live by amid hardship. In the short half hour I spent in the Cave Church, I watched with my own eyes a whole sequence unfold, from an ambulance to a coffin to a funeral. The Zabbaleen here seem to have grown used to the frequent arrival of death, and the speed with which they handle it, and the swiftness of the swings of emotion, were astonishing. Perhaps their living conditions do not allow too much grief that drags on too long; or perhaps they have learned to make peace with death within suffering."
+      ],
+      [
+        "洞穴教堂正侧面的岩壁上，刻着巨大的《以赛亚书》53:5的经文：“哪知他为我们的过犯受害，为我们的罪孽压伤。因他受的刑罚，我们得平安；因他受的鞭伤，我们得医治。”这句话似乎为扎巴林人百年来无法打破的命运轮回赋予了某种神圣的意义，使得他们在绝望中依然能够坚持信仰。但这种将苦难神圣化的信仰，也使得扎巴林人将自己被边缘化的处境视为上帝的安排。当苦难成为了一种必须承受的宿命，现实似乎也就没有了被改变的理由。",
+        "On the rock face at the side of the Cave Church is carved, in enormous letters, Isaiah 53:5: “But he was wounded for our transgressions; he was crushed for our iniquities; upon him was the chastisement that brought us peace, and with his stripes we are healed.” These words seem to give a kind of sacred meaning to the cycle of fate the Zabbaleen have been unable to break for a century, letting them hold to their faith even in despair. But a faith that sanctifies suffering also leads the Zabbaleen to see their marginalization as God’s arrangement. When suffering becomes a fate that must be borne, there seems no point in changing reality."
+      ],
+      [
+        "苦难就是苦难，苦难绝不应被轻易歌颂，古今中外，概莫能外。",
+        "Suffering is suffering. It must never be glorified lightly, in any age, in any place, without exception."
+      ]
+    ]
+  },
+  {
+    "date": "2024-02-26",
+    "title": "Taipei Station",
+    "slug": "taipei-station",
+    "category": "Lines",
+    "place": "于台湾台北\nTaipei, Taiwan",
+    "languages": ["Chinese", "English"],
+    "pairStanzas": [
+      [
+        ["台北车站整点钟摆里", "In the clock’s swing at the top of the hour"],
+        ["小火车开一个来回", "a little train makes its round trip"],
+        ["我知道今晚我就要离开台北了", "I know that tonight I will be leaving Taipei"]
+      ],
+      [
+        ["像个当地人一样", "Like a local,"],
+        ["盘坐在微笑的大理石地面上", "I sit cross-legged on the smiling marble floor"],
+        ["感受时间在穿梭的人流中流淌", "and feel time flowing through the crowd rushing past"]
+      ],
+      [
+        ["我知道 遗憾是我们每个人都会经历的", "I know that regret is something each of us will go through"],
+        ["因为只有遗憾 我们才知道什么是值得的", "because only through regret do we learn what is worth it"]
+      ],
+      [
+        ["我也知道 离别是生命中必然的一部分", "I also know that parting is a necessary part of life"],
+        ["因为只有离别 我们才更加懂得", "because only through parting do we come to understand more deeply"],
+        ["每一次相遇的意义", "the meaning of every meeting"]
+      ]
+    ]
+  },
+  {
+    "date": "2024-02-03",
+    "title": "The Back of the Queue",
+    "slug": "back-of-the-queue",
+    "category": "Journal",
+    "place": "于丹麦哥本哈根\nCopenhagen, Denmark",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "Hvordan jeg tilbragte en Hygge-lørdag i København!（我是如何在哥本哈根度过一个Hygge的周六！）生病的时候，我专程来到丹麦，想看看哥本哈根人是怎么把Hygge这种快乐，过成日子的。",
+        "Hvordan jeg tilbragte en Hygge-lørdag i København! (How I spent a hygge Saturday in Copenhagen!) I was ill, and I came to Denmark on purpose, to see how Copenhageners turn the happiness of hygge into everyday life."
+      ],
+      [
+        "早上8点起床，租了一辆自行车，开始了一个周六。先去了Andersen，尝了四种口味的Danish，边吃边和barista小妹聊起各种生活和美食的小贴士。不去任何网红打卡地，随心所欲、漫无目的地，闲逛这座刚刚苏醒的城市。",
+        "I got up at 8, rented a bicycle, and began a Saturday. I went first to Andersen and tried four flavors of Danish, chatting with the young barista about tips on food and everyday life as I ate. I went to no influencer hot spots, and wandered at will and without aim through the city just waking up."
+      ],
+      [
+        "在陌生的城市，我向来习惯先问Google：看评分，翻评论，再决定去哪里。可这一次，我决定不再全盘相信评分，干脆什么计划都没有。",
+        "In a foreign city I have always made a habit of asking Google first: checking the ratings, reading the reviews, then deciding where to go. This time I decided to stop trusting the ratings so completely, and to have no plan at all."
+      ],
+      [
+        "所以，当我看到有人在排队，在一个我以往一定会绕开的地方，我自觉地走到了队尾，慢慢等着。我甚至不想提前知道在排什么，要等队伍把我送到门口，才揭晓答案。",
+        "So when I saw people queuing, at a place I would always have avoided before, I went to the back of the line of my own accord and waited slowly. I did not even want to know in advance what I was queuing for; I wanted the line to carry me to the door before the answer was revealed."
+      ],
+      [
+        "答案是一家咖啡店。我和前一秒还不认识的人聊了起来：寒冷的冬天，一天要从一杯热咖啡开始才算开始，最好还得边读Stine Pilgaard的书。那杯热咖啡，让我这一天亮了起来，也让生病的我，在快乐里恢复了不少。",
+        "The answer was a coffee shop. I chatted with someone I had not known a second earlier: in the cold of winter, a day only begins with a cup of hot coffee, and ideally with a Stine Pilgaard book. That cup of hot coffee lit up my day, and let me, ill as I was, recover a good deal in happiness."
+      ],
+      [
+        "排队是效率的反面，不知道在排什么，更是计划的反面。可Hygge偏偏就长在这里：愿意把时间交给一杯咖啡和一个陌生人，把答案交给未知。",
+        "A queue is the opposite of efficiency, and not knowing what you are queuing for is the opposite of a plan. Yet this is exactly where hygge grows: being willing to give your time to a cup of coffee and a stranger, and your answers to the unknown."
+      ],
+      [
+        "中午，我把自行车停在Nyhavn，跑完整个老城区，再回到La Glace，奖励自己一块Sportskage和一块Mazarin。",
+        "At noon I parked the bicycle at Nyhavn, ran through the whole old town, and went back to La Glace to reward myself with a slice of Sportskage and a slice of Mazarin."
+      ],
+      [
+        "如果以后我哪天工作不想做了，生活压力大了，估计还会立刻订一张飞哥本哈根的机票，再来洗礼一两天吧。",
+        "If one day I no longer feel like working, or the pressure of life grows too heavy, I will probably book a ticket to Copenhagen at once, and come back for a day or two of baptism."
       ]
     ]
   }

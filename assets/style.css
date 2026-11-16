@@ -124,6 +124,7 @@ body[data-tab="gigs"] { --frame: 880px; }
 /* Goods dashboard: a wider page, hairline cards, one black KPI tile; every bar on a card spans the same width */
 body[data-tab="goods"] { --frame: 1000px; }
 .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 8px 0 16px; }
+.rnote { margin: 0 0 16px; color: var(--muted); font-size: 12px; }
 .kpi { padding: 20px 22px; border: 1px solid var(--line); border-radius: 8px; min-width: 0; }
 .kpi p { margin: 0; }
 .kpi .kl { color: var(--muted); font-size: 13px; }
@@ -245,6 +246,20 @@ a.plate:hover { border-color: #aaa; }
 .mbib { height: 18px; width: auto; vertical-align: -3px; }
 .total .mstar { height: 14px; margin-right: 2px; vertical-align: -2px; }
 .total .mbib { height: 16px; vertical-align: -3px; }
+
+/* Blue Ribbon Survey mark (a transparent PNG) */
+.mbr { height: 18px; width: auto; margin-right: 3px; vertical-align: -3px; }
+/* The World's 50 Best Restaurants mark (a transparent PNG, navy lettering) */
+.mw50 { height: 20px; width: auto; vertical-align: -4px; }
+.total .mw50 { height: 16px; vertical-align: -3px; }
+.tag .mw50 { height: 17px; vertical-align: -4px; }
+#reader .kind .mw50 { height: 24px; vertical-align: -6px; }
+.msep { display: inline-block; width: 1px; height: 16px; margin: 0 10px 0 7px; background: #cfcfcf; vertical-align: -3px; }
+#reader .kind .msep { height: 18px; margin: 0 8px 0 6px; vertical-align: -4px; }
+.total .msep, .tag .msep { display: none; }
+.total .mbr { height: 14px; margin-right: 1px; vertical-align: -2px; }
+.tag .mbr { height: 15px; margin: 0; vertical-align: -3px; }
+#reader .kind .mbr { height: 22px; margin: 0 2px; vertical-align: -5px; }
 
 /* entries that open a pop-up */
 #reader .soon { color: #8a867c; font-style: italic; text-align: center; margin: 12px 0 0; }
