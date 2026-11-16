@@ -938,10 +938,6 @@ window.NOTES = [
       [
         "所以我想把生命变厚：尝试不同的角色、不同的工作、不同的生活。不只是旅行，旅行终究是路过，我想真正住进去，活在里面。",
         "So I want to thicken my life: to try different roles, different jobs, different ways of living. Not only by traveling, because traveling is in the end passing through, but by actually moving in and living inside them."
-      ],
-      [
-        "这基本就是我后来去送Uber外卖，又投资开一家餐车生意的原因。",
-        "This is, more or less, why I later started doing Uber deliveries, and then invested in opening a food truck business."
       ]
     ]
   },
