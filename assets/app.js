@@ -291,7 +291,7 @@ const notePage = (() => {
   // on the wall a book goes by its own name: "棉花帝国 (Empire of Cotton)" shows as 棉花帝国, "林奕含 Lin Yi-han" as 林奕含 (the page keeps both)
   const nonLatin = t => /[^\u0000-\u024f\u2000-\u206f]/.test(t);
   const ownTitle = t => { const m = String(t).match(/^(.*?)\s*\([^)]*\)\s*$/); return m && nonLatin(m[1]) ? m[1] : t; };
-  const ownAuthor = a => { const m = String(a).match(/^(.*?)\s+[A-Za-z][A-Za-z\s.'’-]*$/); return m && nonLatin(m[1]) ? m[1] : a; };
+  const ownAuthor = a => { const m = String(a).match(/^(.*?)\s+[\p{Script=Latin}][\p{Script=Latin}\s.'’-]*$/u); return m && nonLatin(m[1]) ? m[1] : a; };
   orders.reads = list.map((n, i) => ({ slug: ids[i], title: ownTitle((n.book || {}).title || n.title) }));
   if (list[0]) latest.push({ date: list[0].date, kind: "read", title: orders.reads[0].title, href: "#reads/" + ids[0] });
   const card = (n, i) => { const b = n.book || {};
@@ -330,7 +330,9 @@ legacyReads();
   const ribbons = p => Math.max(0, Math.min(3, +p.blueRibbon || 0));
   const mRank = p => p.stars || (p.bib ? 0.5 : p.recommended ? 0.25 : p.apple ? 0.2 : ribbons(p) || p.world50 ? null : 0.22);
   // grid order: stars > Bib > Michelin recommended > Blue Ribbon only (3, 2, 1) > Haotian Recommend (everything else) > Apple; ribbons break ties inside a group
-  const rank = p => (mRank(p) ?? 0.24) + ribbons(p) * 0.001 + (p.world50 ? 0.005 : 0);   // "world50: true" = on The World's 50 Best Restaurants list, a tie-breaker inside a group
+  const apples = p => (p.apple ? Math.max(1, Math.min(3, +p.apple || 1)) : 0);
+  const haos = p => (mRank(p) === 0.22 ? Math.max(1, Math.min(3, +p.haotian || 1)) : 0);
+  const rank = p => (mRank(p) ?? 0.24) + ribbons(p) * 0.001 + (p.world50 ? 0.005 : 0) + apples(p) * 0.001 + haos(p) * 0.001;   // "world50: true" = on The World's 50 Best Restaurants list, a tie-breaker inside a group
   const sortKey = p => (p.keepOrder ? "" : p.date) || "";   // keepOrder: show the date but keep the old place in the grid
   const hasText = p => (p.body && p.body.length ? 1 : 0);   // places with a write-up come first, bare ones sink to the bottom; each half keeps the star order
   list.sort((a, b) => hasText(b) - hasText(a) || rank(b) - rank(a) || (sortKey(a) < sortKey(b) ? 1 : -1));
@@ -352,38 +354,53 @@ legacyReads();
   const when = (d, mo) => { d = String(d); const [y, m, day] = d.split("-"); return !m ? y : new Date(`${y}-${m}-${day || "01"}T00:00:00`).toLocaleDateString("en-US", { year: "numeric", month: mo, ...(day && { day: "numeric" }) }); };
   // the Michelin / Apple mark (or Haotian Recommend when there is nothing else), then the ribbons after a thin divider
   const mark = p => {
-    const m = p.stars ? starImg.repeat(p.stars) : p.bib ? bibImg : p.recommended ? recImg : p.apple ? aplImg : ribbons(p) || p.world50 ? "" : hrImg;
+    const m = p.stars ? starImg.repeat(p.stars) : p.bib ? bibImg : p.recommended ? recImg : p.apple ? aplImg.repeat(apples(p)) : ribbons(p) || p.world50 ? "" : hrImg.repeat(haos(p));
     return [m, p.world50 ? w50Of(p) : "", ribbons(p) ? ribbon.repeat(ribbons(p)) : ""].filter(Boolean).join('<span class="msep"></span>');
   };
   const card = (p, i) => `<a class="plate" href="#plates/${ids[i]}">${p.cover ? `<img class="cov" ${thumb(p.cover)} alt="" loading="lazy" decoding="async">` : ""}<span class="st">${mark(p)}</span><span class="nm">${esc(p.name)}</span>
       <span class="ct">${esc(p.city)}</span>${p.date ? `<span class="yr">${esc(when(p.date, "short"))}</span>` : ""}</a>`;
   // categories: a place counts in its Michelin-side category AND in its ribbon level, so one with both (a star and 2 ribbons) is found under each
-  const CATS = [["w50", "W50"], [3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], ["br3", "BR3"], ["br2", "BR2"], ["br1", "BR1"], [0.22, "HAO"], [0.2, "APL"]];
-  const inCat = (p, k) => k === "w50" ? !!p.world50 : typeof k === "string" ? ribbons(p) === +k.slice(2) : mRank(p) === k;
+  const CATS = [["w50", "W50"], [3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], ["br3", "BR3"], ["br2", "BR2"], ["br1", "BR1"], ["hao3", "HAO3"], ["hao2", "HAO2"], ["hao1", "HAO1"], ["apl3", "APL3"], ["apl2", "APL2"], ["apl1", "APL1"]];
+  const inCat = (p, k) => k === "w50" ? !!p.world50 : typeof k === "string" ? (k.startsWith("apl") ? apples(p) === +k.slice(3) : k.startsWith("hao") ? haos(p) === +k.slice(3) : ribbons(p) === +k.slice(2)) : mRank(p) === k;
   const count = k => list.filter(p => inCat(p, k)).length;
-  const label = s => s.replace(/★/g, starImg).replace(/^W50$/, w50Img).replace(/^Bib$/, bibImg).replace(/^BR([123])$/, (m, n) => ribbon.repeat(+n)).replace(/^REC$/, recImg).replace(/^APL$/, aplImg).replace(/^HAO$/, hrImg);
-  document.getElementById("plates-tally").innerHTML = CATS.filter(([k]) => count(k)).map(([k, s]) => `<span class="ts"><span class="tl">${label(s)}</span><b>${count(k)}</b></span>`).join("");
+  const label = s => s.replace(/★/g, starImg).replace(/^W50$/, w50Img).replace(/^Bib$/, bibImg).replace(/^BR([123])$/, (m, n) => ribbon.repeat(+n)).replace(/^REC$/, recImg).replace(/^APL([123])$/, (m, n) => aplImg.repeat(+n)).replace(/^HAO([123])$/, (m, n) => hrImg.repeat(+n));
+  // five collection cards (World's 50 Best, Michelin, Blue Ribbon, Haotian Recommends, Apple Caffè Macs); a card filters the grid, and Michelin / Blue Ribbon list their levels
+  const GROUPS = [
+    { key: "w50", name: "The 50 Best", logo: w50Img, cats: ["w50"] },
+    { key: "mich", name: "Michelin", logo: starImg, cats: [3, 2, 1, 0.5, 0.25], lines: [[3], [2], [1, 0.5, 0.25]] },
+    { key: "br", name: "Blue Ribbon", logo: ribbon, cats: ["br3", "br2", "br1"] },
+    { key: "hao", name: "Haotian Haochi", logo: hrImg, cats: ["hao3", "hao2", "hao1"] },
+    { key: "apl", name: "Caffè Macs", logo: aplImg, cats: ["apl3", "apl2", "apl1"] }
+  ];
+  const inGroup = (p, g) => g.cats.some(k => inCat(p, k));
+  const groupCount = g => list.filter(p => inGroup(p, g)).length;
+  const catLabel = Object.fromEntries(CATS);
   // filters: distinction (category) and country, combinable; country comes from the end of "City, ST" / "City, Country"
   const CA = ["AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT"];
   const US = "AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC PR".split(" ");   // so "London, UK" is not read as a state
   const countryOf = p => { const t = (p.city || "").split(",").pop().trim(); return CA.includes(t) ? "Canada" : US.includes(t) ? "United States" : t; };
-  const catOf = CATS.filter(([k]) => count(k));
-  const countries = [...new Set(list.map(countryOf).filter(Boolean))].sort((a, b) => list.filter(p => countryOf(p) === b).length - list.filter(p => countryOf(p) === a).length || (a < b ? -1 : 1));
-  const on = { cat: "", country: "" };
+    const countries = [...new Set(list.map(countryOf).filter(Boolean))].sort((a, b) => list.filter(p => countryOf(p) === b).length - list.filter(p => countryOf(p) === a).length || (a < b ? -1 : 1));
+  const on = { group: "", cat: "", country: "" };
   const newest = list.filter(p => p.date).sort((a, b) => (fullDate(a.date) < fullDate(b.date) ? 1 : -1))[0];
   if (newest) latest.push({ date: fullDate(newest.date), kind: "plate", title: newest.name, href: "#plates/" + ids[list.indexOf(newest)] });
-  const catsEl = document.getElementById("plates-cats"), countriesEl = document.getElementById("plates-countries"), listEl = document.getElementById("plates-list");
+  const tallyEl = document.getElementById("plates-tally"), catsEl = document.getElementById("plates-cats"), countriesEl = document.getElementById("plates-countries"), listEl = document.getElementById("plates-list");
   const row = (items, key) => items.length > 1 ? [["", "All"], ...items].map(([v, l]) =>
     `<button type="button" class="tag${String(v) === on[key] ? " on" : ""}" data-key="${key}" data-v="${esc(String(v))}"${key === "country" && FLAGS[l] ? ` title="${esc(l)}" aria-label="${esc(l)}"` : ""}>${key === "cat" ? label(l) : FLAGS[l] || esc(l)}</button>`).join("") : "";
   const renderPlates = () => {
-    const shown = list.map((p, i) => [p, i]).filter(([p]) => (on.cat === "" || inCat(p, isNaN(+on.cat) ? on.cat : +on.cat)) && (!on.country || countryOf(p) === on.country));
+    const g = GROUPS.find(x => x.key === on.group);
+    const shown = list.map((p, i) => [p, i]).filter(([p]) => (!g || inGroup(p, g)) && (on.cat === "" || inCat(p, isNaN(+on.cat) ? on.cat : +on.cat)) && (!on.country || countryOf(p) === on.country));
     listEl.innerHTML = shown.length ? shown.map(([p, i]) => card(p, i)).join("") : `<p class="empty">${list.length ? "No plates match." : "Nothing yet."}</p>`;
-    catsEl.innerHTML = row(catOf, "cat");
+    tallyEl.innerHTML = GROUPS.filter(x => groupCount(x)).map(x => {
+      const sub = k => `<span class="ps">${label(catLabel[k])}<b>${count(k)}</b></span>`;   // x.lines puts several levels on one line (Michelin: 1 star, Bib and Recommended together)
+      const subs = x.cats.length > 1 ? (x.lines || x.cats.map(k => [k])).map(ks => ks.filter(k => count(k)).map(sub).join("")).filter(Boolean).map(h => `<span class="pline">${h}</span>`).join("") : "";
+      return `<button type="button" class="pcard${x.key === on.group ? " on" : ""}" data-key="group" data-v="${x.key === on.group ? "" : x.key}" aria-pressed="${x.key === on.group}"><span class="pl">${x.logo}</span><span class="pn">${x.name}</span><b class="pc">${groupCount(x)}</b>${subs ? `<span class="psub">${subs}</span>` : ""}</button>`;
+    }).join("");
+    catsEl.innerHTML = g && g.cats.length > 1 ? row(g.cats.filter(k => count(k)).map(k => [k, catLabel[k]]), "cat") : "";
     countriesEl.innerHTML = row(countries.map(c => [c, c]), "country");
   };
   document.getElementById("plates").addEventListener("click", e => {
     const b = e.target.closest("button[data-key]");
-    if (b) { on[b.dataset.key] = b.dataset.v; renderPlates(); }
+    if (b) { on[b.dataset.key] = b.dataset.v; if (b.dataset.key === "group") on.cat = ""; renderPlates(); }
   });
   // copyright line on the list page: the years of the reviews
   const pys = list.map(p => +String(p.date || "").slice(0, 4)).filter(Boolean);
