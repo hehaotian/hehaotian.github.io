@@ -35,7 +35,7 @@ window.addEventListener("hashchange", () => setMenu(false));
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const fmtDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 // country flags for the filter buttons (Notes and Plates); unknown countries fall back to their name
-const FLAGS = { "Peru": "🇵🇪", "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽", "Egypt": "🇪🇬", "Chile": "🇨🇱", "Greece": "🇬🇷", "India": "🇮🇳" };
+const FLAGS = { "Peru": "🇵🇪", "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽", "Egypt": "🇪🇬", "Chile": "🇨🇱", "Greece": "🇬🇷", "India": "🇮🇳", "Argentina": "🇦🇷", "Russia": "🇷🇺" };
 const fullDate = d => { d = String(d || ""); return d.length === 4 ? d + "-01-01" : d.length === 7 ? d + "-01" : d; };   // "2026" / "2026-10" / "2026-10-10" compare correctly
 const thumb = f => `src="assets/thumbs/${esc(f)}" onerror="this.onerror=null;this.src='assets/photos/${esc(f)}'"`;   // small copy for the grids (tools/make_thumbs.sh); falls back to the full photo
 const orders = {};                       // tab -> [{slug, title}] newest first: the older / newer links at the foot of a page
@@ -362,7 +362,7 @@ legacyReads();
   const inCat = (p, k) => k === "w50" ? !!p.world50 : typeof k === "string" ? ribbons(p) === +k.slice(2) : mRank(p) === k;
   const count = k => list.filter(p => inCat(p, k)).length;
   const label = s => s.replace(/★/g, starImg).replace(/^W50$/, w50Img).replace(/^Bib$/, bibImg).replace(/^BR([123])$/, (m, n) => ribbon.repeat(+n)).replace(/^REC$/, recImg).replace(/^APL$/, aplImg).replace(/^HAO$/, hrImg);
-  document.getElementById("plates-tally").innerHTML = CATS.filter(([k]) => count(k)).map(([k, s]) => `${label(s)} ${count(k)}`).join("  ·  ");
+  document.getElementById("plates-tally").innerHTML = CATS.filter(([k]) => count(k)).map(([k, s]) => `<span class="ts"><span class="tl">${label(s)}</span><b>${count(k)}</b></span>`).join("");
   // filters: distinction (category) and country, combinable; country comes from the end of "City, ST" / "City, Country"
   const CA = ["AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT"];
   const US = "AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC PR".split(" ");   // so "London, UK" is not read as a state
@@ -397,8 +397,10 @@ legacyReads();
     const opts = [["en", "H"], ["zh", "何"], ["ja", "か"], ["ko", "하"]].filter(([c]) => has(c));
     let lang = "en"; try { lang = localStorage.getItem("plateLang") || "en"; } catch (_) {}
     if (!has(lang)) lang = "en";
-    const tools = opts.length > 1 ? `<p class="langsw">${opts.map(([c, l]) => `<button type="button" data-lang="${c}" class="${c === lang ? "on" : ""}">${l}</button>`).join("")}</p>` : "";
-    return detailPage({ kind: mark(p), title: p.name, meta: esc([p.city, p.date && when(p.date, "long")].filter(Boolean).join(" · ")), item: lang === "en" ? p : { ...p, body: p["body_" + lang] }, tools, lang }) + `<p class="end">© ${esc(String(p.date || new Date().getFullYear()).slice(0, 4))} Haotian He · hehaotian.com. All rights reserved.</p>`;
+    // the Chinese, Japanese and Korean versions are AI translations: they carry a ✦ tag under the switch and a disclaimer above the copyright line
+    const AI = { zh: ["AI 翻译", "本页中文由 AI 翻译自英文原文，可能存在不准确之处，请以英文原文为准。"], ja: ["AI翻訳", "このページの日本語は英語の原文から AI が翻訳したもので、不正確な部分が含まれる可能性があります。英語の原文を正としてください。"], ko: ["AI 번역", "이 페이지의 한국어는 영어 원문을 AI가 번역한 것으로, 부정확한 부분이 있을 수 있습니다. 영어 원문을 기준으로 해 주세요."] }[lang];
+    const tools = opts.length > 1 ? `<p class="langsw">${opts.map(([c, l]) => `<button type="button" data-lang="${c}" class="${c === lang ? "on" : ""}">${l}</button>`).join("")}</p>` + (AI ? `<p class="aitag" lang="${lang}"><span aria-hidden="true">✦</span> ${AI[0]}</p>` : "") : "";
+    return detailPage({ kind: mark(p), title: p.name, meta: esc([p.city, p.date && when(p.date, "long")].filter(Boolean).join(" · ")), item: lang === "en" ? p : { ...p, body: p["body_" + lang] }, tools, lang }) + (AI ? `<p class="aidisc" lang="${lang}">${AI[1]}</p>` : "") + `<p class="end">© ${esc(String(p.date || new Date().getFullYear()).slice(0, 4))} Haotian He · hehaotian.com. All rights reserved.</p>`;
   };
 })();
 

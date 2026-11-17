@@ -379,7 +379,7 @@ window.READS = [
     "book": {
       "cover": "real_estate.jpg",
       "title": "自己的房子 (Real Estate)",
-      "author": "Deborah Levy",
+      "author": "德博拉·利维 Deborah Levy",
       "language": "Chinese",
       "country": "United Kingdom",
       "original": "English",
@@ -392,7 +392,7 @@ window.READS = [
     "languages": ["Chinese", "English"],
     "prose": [
       [
-        "到了《自己的房子》，Deborah Levy 已经不再只是那个骑着电动自行车、在朋友花园小屋里写作的离婚女人。她开始在伦敦、巴黎、柏林之间旅行，住进不同的房间，观察别人的房子，也不断想象一栋属于自己的房子。",
+        "到了《自己的房子》，德博拉·利维已经不再只是那个骑着电动自行车、在朋友花园小屋里写作的离婚女人。她开始在伦敦、巴黎、柏林之间旅行，住进不同的房间，观察别人的房子，也不断想象一栋属于自己的房子。",
         "By *Real Estate*, Deborah Levy is no longer only the divorced woman who rides an electric bike and writes in a friend’s garden shed. She begins to travel between London, Paris and Berlin, staying in different rooms, observing other people’s houses, and constantly imagining a house of her own."
       ],
       [
@@ -429,7 +429,7 @@ window.READS = [
     "book": {
       "cover": "cost_of_living.jpg",
       "title": "生活的代价 (The Cost of Living)",
-      "author": "Deborah Levy",
+      "author": "德博拉·利维 Deborah Levy",
       "language": "Chinese",
       "country": "United Kingdom",
       "original": "English",
@@ -442,7 +442,7 @@ window.READS = [
     "languages": ["Chinese", "English"],
     "prose": [
       [
-        "婚姻结束后，Deborah Levy 带着两个女儿搬进伦敦一间租来的公寓。她骑着电动自行车穿过城市，在朋友的花园小屋里写作，一边处理账单、家务和孩子的生活，一边重新学习如何独自生活。",
+        "婚姻结束后，德博拉·利维带着两个女儿搬进伦敦一间租来的公寓。她骑着电动自行车穿过城市，在朋友的花园小屋里写作，一边处理账单、家务和孩子的生活，一边重新学习如何独自生活。",
         "After her marriage ends, Deborah Levy moves with her two daughters into a rented flat in London. She rides an electric bike across the city and writes in a friend’s garden shed, dealing with bills, housework and her children’s lives while learning again how to live alone."
       ],
       [
@@ -471,7 +471,7 @@ window.READS = [
     "book": {
       "cover": "what_i_dont_want_to_know.jpg",
       "title": "我不想知道的事 (Things I Don’t Want to Know)",
-      "author": "Deborah Levy",
+      "author": "德博拉·利维 Deborah Levy",
       "language": "Chinese",
       "country": "United Kingdom",
       "original": "English",
@@ -484,7 +484,7 @@ window.READS = [
     "languages": ["Chinese", "English"],
     "prose": [
       [
-        "Deborah Levy 从马略卡岛的一次崩溃写起。一个中年女人独自旅行，在异乡的山坡上骑车，突然无法控制地哭泣。她没有急着解释眼泪，而是让记忆慢慢浮现：南非的童年、因反种族隔离而入狱的父亲、迁往英国后的生活，以及婚姻和母职带来的疲惫。",
+        "德博拉·利维从马略卡岛的一次崩溃写起。一个中年女人独自旅行，在异乡的山坡上骑车，突然无法控制地哭泣。她没有急着解释眼泪，而是让记忆慢慢浮现：南非的童年、因反种族隔离而入狱的父亲、迁往英国后的生活，以及婚姻和母职带来的疲惫。",
         "Deborah Levy begins with a breakdown on Mallorca. A middle-aged woman travels alone, cycling on a hillside in a foreign place, and suddenly cannot stop crying. She does not rush to explain the tears; instead she lets memory surface slowly: a childhood in South Africa, a father jailed for opposing apartheid, life after the move to England, and the exhaustion that comes with marriage and motherhood."
       ],
       [
@@ -2371,6 +2371,682 @@ window.READS = [
       ["多年以后，一个已经衰老的女人不断回到那个瞬间，试图从少女的姿态与目光中，辨认出后来那个自己的起点。", "Years later an aged woman keeps returning to that moment, trying to recognize in the girl’s bearing and gaze the starting point of the self she became."],
       ["但她可以重新描写那个少女，却再也无法像她一样，对未来一无所知。", "But she can describe that girl anew, and can never again be like her, knowing nothing of the future."],
       ["或许，回忆最令人悲伤的地方，并不是我们无法回到过去，而是当我们终于能够理解过去时，那个真正经历过去的自己，早已不在那里了。", "Perhaps the saddest thing about memory is not that we cannot return to the past, but that when we are finally able to understand it, the self who actually lived it is long since gone."]
+    ]
+  },
+  {
+    "date": "2017-05-03",
+    "title": "The Self-Deception of the Lucid",
+    "slug": "the-self-deception-of-the-lucid",
+    "category": "Philosophy",
+    "book": {
+      "cover": "either_or.jpg",
+      "title": "Either/Or",
+      "author": "Søren Kierkegaard",
+      "language": "English",
+      "country": "Denmark",
+      "original": "Danish",
+      "lines": [
+        "Philosophy · Danish original, first published 1843",
+        "Part I gathers the papers of an aesthetic young man, from the “Rotation of Crops” to “The Seducer’s Diary,” and shows a life lived at a distance from choice."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["读《非此即彼》第一卷，最令我不安的，并不是克尔凯郭尔对享乐主义的批判，而是他笔下审美者那种以清醒逃避生活的能力。在《轮作法》中，审美者通过不断改变体验与观看世界的方式抵御无聊；在《诱惑者日记》中，约翰内斯甚至将爱情变成一场精心设计的审美实验。他们并非缺乏洞察力，恰恰相反，他们太擅长观察、分析和解释生活，以至于现实本身也成为可以保持距离的审美对象。他们拥有理解生活的自由，却缺乏真正选择生活的勇气。",
+       "What unsettled me most in the first volume of *Either/Or* was not Kierkegaard’s critique of hedonism but the way his aesthetes use lucidity to escape life. In “Rotation of Crops,” the aesthete fends off boredom by constantly changing how he experiences and looks at the world; in “The Seducer’s Diary,” Johannes even turns love into a carefully designed aesthetic experiment. They do not lack insight. On the contrary, they are so good at observing, analyzing and explaining life that reality itself becomes an object of contemplation to be kept at a distance. They have the freedom to understand life, but not the courage to actually choose it."],
+      ["这种矛盾让我想到自己身处的硅谷，以及当下近乎狂热的人工智能浪潮。我时常质疑那些关于创新、颠覆与改变世界的宏大叙事：高昂的薪酬、精致的职业身份、不断膨胀的技术想象，是否真的对应着同等程度的社会价值？我们热衷于展示创造力，强调自己工作的革命性，却未必认真追问这些成果究竟改善了谁的生活。有时我甚至觉得，硅谷与琼·狄迪恩笔下的好莱坞并无太大区别：人们沉迷于自己创造的神话，仿佛只要叙事足够动人，现实就不再重要。",
+       "This contradiction makes me think of Silicon Valley, where I live, and of the almost feverish wave of artificial intelligence today. I often doubt the grand narratives of innovation, disruption and changing the world: do the high salaries, polished professional identities and ever-expanding technological imaginations really correspond to an equal measure of social value? We love to show off our creativity and stress how revolutionary our work is, yet we do not necessarily ask in earnest whose lives these results actually improve. Sometimes I even feel that Silicon Valley is not so different from Joan Didion’s Hollywood: people are absorbed in the myths they have made, as if reality no longer mattered once the story is moving enough."],
+      ["然而，真正令我不安的，是我自己也深深参与其中。我一边批判这个体系的虚荣，一边享受它所赋予的财富、身份与机会；一边怀疑职业成功的意义，一边认真规划晋升、投资回报与财务自由。我可以在思想上否定这些价值标准，却依然在生活中依赖它们。更难以承认的是，我并不只是被迫接受这些规则，我也真诚地渴望成功所带来的认可与安全感。我所批判的，恰恰也是我所追求的；我所鄙视的虚荣，也早已成为自我认同的一部分。",
+       "Yet what truly disturbs me is that I am deeply part of it myself. I criticize the vanity of this system while enjoying the wealth, status and opportunities it gives me; I doubt the meaning of professional success while earnestly planning promotions, investment returns and financial freedom. I can reject these standards in thought and still depend on them in life. Harder still to admit, I am not merely forced to accept these rules; I sincerely long for the recognition and security that success brings. What I criticize is exactly what I pursue, and the vanity I despise has long since become part of my sense of who I am."],
+      ["我曾经认为，财务自由能够让我最终摆脱这种矛盾。只要积累足够的财富，就可以不再依赖职业身份，不再被薪酬和绩效定义，转而追求阅读、写作、旅行，以及那些真正值得投入时间的事情。但克尔凯郭尔让我开始怀疑，这是否只是另一种更精致的逃避？我不断计算距离自由还有多少年，却很少追问，为什么那些被我视为真正重要的事情，必须等到未来才能开始。或许我并不是在准备另一种生活，而是在用对未来生活的想象，缓解自己对当下生活的不满。",
+       "I used to think financial freedom would finally free me from this contradiction. Once I had accumulated enough wealth, I could stop relying on a professional identity, stop being defined by pay and performance, and turn to reading, writing, travel and the things truly worth my time. But Kierkegaard made me suspect that this may be just another, more refined kind of escape. I keep counting how many years remain until freedom, yet rarely ask why the things I consider truly important must wait for the future to begin. Perhaps I am not preparing for another life at all, but using the image of a future life to soothe my dissatisfaction with the present one."],
+      ["这正是《非此即彼》中审美者的困境：他总是保留可能性，却迟迟不愿将可能性变成现实。因为真正的选择意味着放弃，意味着接受平凡、重复与不可逆转的后果。而我对财务自由的向往，是否也隐含着类似的欲望——希望拥有足够多的选择，却不必立即承担任何一种选择的代价？我希望既获得世俗意义上的成功，又保有超越世俗的精神独立；既享受体系的回报，又不愿承认自己对体系的依附。我想同时成为参与者与旁观者，却不愿接受两者之间无法消除的冲突。",
+       "This is exactly the aesthete’s predicament in *Either/Or*: he always keeps possibilities open and is slow to turn them into reality. A real choice means giving something up, and accepting the ordinary, the repetitive and the irreversible consequences. Does my longing for financial freedom hide a similar desire, to have plenty of options without having to pay the price of any one of them right now? I want worldly success and a spiritual independence that rises above the world; I want the rewards of the system and I am unwilling to admit my dependence on it. I want to be participant and spectator at once, and I refuse to accept the conflict between the two that cannot be removed."],
+      ["更讽刺的是，我甚至可能因为意识到这种矛盾，而产生另一层自我满足。我能够看穿硅谷的幻象，能够批判自己的功利，甚至能够把这种自我批判写成一篇看似深刻的哲学随笔。但这是否恰恰重复了审美者的行为？约翰内斯将爱情转化为艺术，而我则可能将自己的虚伪转化为思想。原本应该促使我改变的不安，最终成为一种值得欣赏的智识体验。承认矛盾并不需要我放弃任何东西，反而让我获得一种比盲目追逐成功更加优雅的自我形象。",
+       "More ironic still, I may even take a further layer of self-satisfaction in recognizing this contradiction. I can see through the illusions of Silicon Valley, criticize my own utilitarianism, and even write that self-criticism up as a seemingly profound philosophical essay. But isn’t that precisely what the aesthete does? Johannes turns love into art, and I may be turning my own hypocrisy into thought. The unease that should have pushed me to change becomes, in the end, an intellectual experience to be admired. Admitting the contradiction costs me nothing; it gives me a more elegant self-image than blindly chasing success."],
+      ["最精致的自我欺骗，也许不是相信一个虚假的世界，而是相信自己已经看穿了这个世界，因此不再需要改变自己。我可以在思想上反抗整个世界，却在行动上完全服从它；可以不断质疑成功的意义，却依然害怕失去成功；可以清醒地描述生活的荒谬，却继续过着与昨天毫无区别的生活。我的清醒不仅没有使我摆脱幻象，反而可能成为让我心安理得地留在其中的理由。",
+       "The most refined self-deception may not be believing in a false world, but believing that I have already seen through the world and therefore no longer need to change myself. I can rebel against the whole world in thought and obey it completely in action; I can keep questioning the meaning of success and still fear losing it; I can lucidly describe the absurdity of life and go on living exactly as I did yesterday. My lucidity has not freed me from illusion. It may be the very reason I can stay inside it with a clear conscience."],
+      ["在我看来，《非此即彼》第一卷最出色的地方，是克尔凯郭尔并没有站在道德高处简单地谴责享乐主义，而是让审美者以自己的声音暴露自身的困境。从《轮作法》的机智与冷漠，到《诱惑者日记》的精密与残酷，审美者的才华与空虚始终相互交织。克尔凯郭尔最深刻的洞察在于：一个人并不需要愚昧或放纵才能陷入绝望，恰恰是过度的聪明、敏感与自我意识，也可能成为逃避存在的工具。这使《非此即彼》超越了普通的道德说教，成为一部关于现代人精神困境的心理剖析。",
+       "To my mind, the finest thing about the first volume of *Either/Or* is that Kierkegaard does not simply condemn hedonism from a moral height, but lets the aesthete expose his own predicament in his own voice. From the wit and coldness of “Rotation of Crops” to the precision and cruelty of “The Seducer’s Diary,” the aesthete’s talent and emptiness are always intertwined. Kierkegaard’s deepest insight is that one does not need ignorance or indulgence to fall into despair; excessive cleverness, sensitivity and self-consciousness can be just as much a tool for evading existence. This lifts *Either/Or* above ordinary moral preaching and makes it a psychological dissection of the spiritual predicament of modern people."],
+      ["但我也认为，这本书对审美生活的呈现存在某种刻意的极端化。审美、反思与保持距离，并不必然意味着逃避责任；对既有价值的怀疑，也可能是通向真正自主选择的必要过程。尤其在一个将职业成功、生产效率与社会认可奉为圭臬的时代，拒绝轻易作出承诺，有时反而是一种值得珍惜的独立。克尔凯郭尔的力量不在于证明审美生活注定失败，而在于迫使读者辨认：自己的怀疑究竟源于思想上的诚实，还是出于不愿承担选择后果的怯懦？这也是我认为《非此即彼》至今仍值得阅读的原因。它没有让我轻易找到生活的答案，却使我再也无法毫无疑问地相信自己的清醒。",
+       "But I also think the book presents the aesthetic life with a certain deliberate exaggeration. Aesthetic sensibility, reflection and distance do not necessarily mean evading responsibility, and doubting inherited values may be a necessary step toward truly autonomous choice. In an age that treats professional success, productivity and social approval as gospel, refusing to commit too readily can be an independence worth treasuring. Kierkegaard’s strength lies not in proving that the aesthetic life is doomed, but in forcing the reader to work out whether their doubt springs from intellectual honesty or from a cowardly unwillingness to bear the consequences of choosing. That is why I think *Either/Or* is still worth reading. It did not hand me an easy answer about how to live, but it left me unable ever again to trust my own lucidity without question."],
+      ["当然，克尔凯郭尔并不是要求我们放弃美、财富或世俗生活。第一卷真正揭示的，是当反思与审美成为逃避选择的方式时，一个人即使拥有再丰富的精神世界，也可能始终无法真正成为自己。对我而言，问题并不在于是否应该离开硅谷，或者放弃现有的职业与财富，而在于我是否愿意承认自己的选择，并为自己声称相信的价值承担实际代价。继续留下可以是一种选择，离开也可以是一种选择；真正的逃避，是永远站在两者之间，用批判维持精神上的距离，却让惯性替自己决定人生。",
+       "Of course, Kierkegaard is not asking us to give up beauty, wealth or worldly life. What the first volume really reveals is that when reflection and aesthetics become ways of avoiding choice, a person, however rich an inner world they have, may never truly become themselves. For me the question is not whether I should leave Silicon Valley or give up my career and wealth, but whether I am willing to acknowledge my choices and bear the actual cost of the values I claim to believe in. Staying can be a choice, and so can leaving; the real evasion is to stand forever between the two, keeping a spiritual distance through criticism while letting inertia decide my life for me."],
+      ["或许《非此即彼》留给我最深刻的启示是，清醒并不天然意味着自由，自我批判也不必然通向真实。一个人最难面对的，未必是世界如何欺骗了自己，而是自己如何利用对世界的洞察，继续维持一种不愿改变的生活。当我如此清楚自己不愿成为怎样的人，却依然按照那个人的方式生活时，我究竟是在反抗幻象，还是在为自己的妥协寻找一种更高明的解释？",
+       "Perhaps the deepest lesson *Either/Or* leaves me is that lucidity does not naturally mean freedom, and self-criticism does not necessarily lead to authenticity. What a person finds hardest to face may not be how the world has deceived them, but how they use their insight into the world to keep living a life they are unwilling to change. When I know so clearly what kind of person I do not want to be, and yet go on living the way that person lives, am I resisting the illusion, or merely finding a cleverer explanation for my compromise?"]
+    ]
+  },
+  {
+    "date": "2017-10-10",
+    "title": "From Aesthetic Escape to the Duty of Love",
+    "slug": "from-aesthetic-escape-to-the-duty-of-love",
+    "category": "Philosophy",
+    "book": {
+      "cover": "works_of_love.jpg",
+      "title": "Works of Love",
+      "author": "Søren Kierkegaard",
+      "language": "English",
+      "country": "Denmark",
+      "original": "Danish",
+      "lines": [
+        "Philosophy · Danish original, first published 1847",
+        "A series of Christian deliberations on loving one’s neighbor, in which love is measured by deeds and duty rather than by feeling."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["我越来越怀疑，一个人对世界的理解能力，与他真正关怀他人的能力之间，或许并没有必然联系。我们可以对社会不公侃侃而谈，对技术进步背后的虚荣保持清醒，甚至真诚地相信自己关心人类的未来，却未必愿意为身边某个具体的人付出时间、耐心或利益。思想上的同情如此容易，现实中的责任却如此沉重。更令人不安的是，我们有时甚至会因为自己拥有这些高尚的关怀，而产生某种道德上的满足。",
+       "I increasingly suspect that there may be no necessary connection between a person’s ability to understand the world and their ability to truly care for others. We can speak eloquently about social injustice, stay clear-eyed about the vanity behind technological progress, and even sincerely believe we care about humanity’s future, yet not necessarily be willing to give time, patience or advantage to one specific person beside us. Sympathy in thought is so easy, and responsibility in reality so heavy. More unsettling still, we sometimes take a kind of moral satisfaction in the very fact that we hold such noble concerns."],
+      ["克尔凯郭尔在《爱的作为》中触及的，正是这种思想与行动之间的裂隙。他不满足于将爱理解为一种情感、吸引或精神体验，而是将其置于具体的伦理责任之中。与《非此即彼》中那个不断将生活转化为审美对象的个体不同，《爱的作为》要求人走出自我，承认他人并非自己情感与思想的附属品。爱不再取决于我如何感受自己，而在于我如何对待另一个人。这种转变也让我不得不重新审视自己所追求的成功、自由与人生意义。",
+       "What Kierkegaard touches on in *Works of Love* is precisely this rift between thought and action. He is not content to understand love as a feeling, an attraction or a spiritual experience; he places it within concrete ethical responsibility. Unlike the individual in *Either/Or* who keeps turning life into an aesthetic object, *Works of Love* asks a person to step out of the self and recognize that others are not appendages of one’s own feelings and thoughts. Love no longer depends on how I feel about myself, but on how I treat another person. This shift forced me to re-examine the success, freedom and meaning in life that I pursue."],
+      ["这种思想也让我重新审视自己对硅谷文化的批判。我经常质疑人工智能行业对创新、效率与社会价值的夸大，认为许多人沉迷于改变世界的宏大叙事，却忽略了真实世界中的人。然而，克尔凯郭尔让我意识到，能够指出这种矛盾，并不意味着我自己已经超越了它。我同样享受高薪、职业认可与财富积累，也同样容易把成功视为个人价值的证明。我可以准确地分析社会的问题，却未必愿意牺牲自己的时间与利益，去改善一个具体的人的处境。",
+       "It also made me re-examine my own critique of Silicon Valley culture. I often question the AI industry’s exaggeration of innovation, efficiency and social value, thinking that many people are absorbed in grand narratives of changing the world while neglecting real people. But Kierkegaard made me see that being able to point out this contradiction does not mean I have moved beyond it. I too enjoy a high salary, professional recognition and growing wealth, and I too easily treat success as proof of my worth. I can analyze society’s problems accurately, yet may not be willing to sacrifice my own time and interests to improve the situation of one particular person."],
+      ["更难以面对的是，我所追求的财务自由，是否也带有某种以自我为中心的想象？我希望未来能够摆脱工作的约束，拥有阅读、旅行与自由支配时间的权利。这些愿望本身并没有错，但如果自由最终只是意味着我不再需要回应他人的要求，那么这种自由究竟通向了什么？我努力积累财富，是为了拥有更多爱与承担责任的能力，还是为了让自己有一天可以不再被任何人打扰？",
+       "Harder to face is whether the financial freedom I seek also carries a self-centered fantasy. I hope that in the future I can be free of the constraints of work and have the right to read, travel and spend my time as I please. There is nothing wrong with these wishes in themselves, but if freedom finally means only that I no longer have to answer anyone’s demands, where does such freedom lead? Am I accumulating wealth to gain a greater capacity to love and bear responsibility, or so that one day I will not be disturbed by anyone?"],
+      ["《爱的作为》最令我敬佩的，是它拒绝将爱简化为一种高尚的自我感觉。克尔凯郭尔强调爱邻人，意味着爱的对象不能仅限于那些令我愉悦、与我相似，或者能够回报我的人。爱不是选择值得欣赏的人，而是承认每个人都具有不应被个人偏好抹去的价值。尤其重要的是，爱不能只停留在思想与语言之中，它必须通过实际的行为得到体现。",
+       "What I admire most in *Works of Love* is that it refuses to reduce love to a noble feeling about oneself. Kierkegaard’s emphasis on loving the neighbor means that the objects of love cannot be limited to those who please me, resemble me or can repay me. Love is not choosing people worthy of admiration, but recognizing that everyone has a value that personal preference should not erase. Above all, love cannot remain in thought and words; it must be embodied in actual deeds."],
+      ["不过，我也认为这本书存在值得商榷的地方。克尔凯郭尔将基督教的爱之诫命置于如此核心的位置，虽然赋予了爱超越个人情感的普遍性，却也留下了一个困难：当爱成为义务，它是否仍然保有亲密关系中的自发性、激情与独特性？对所有人的平等关怀固然重要，但我们对伴侣、家人和朋友承担的特殊责任，是否真的能够完全纳入普遍的爱邻人原则？克尔凯郭尔试图调和两者，但这种张力并没有因此消失。",
+       "Still, I think the book has points open to question. By putting the Christian commandment of love at its very center, Kierkegaard gives love a universality that goes beyond personal feeling, but he also leaves a difficulty: once love becomes a duty, does it still keep the spontaneity, passion and uniqueness of intimate relationships? Equal care for everyone matters, but can the special responsibilities we bear toward partners, family and friends really be folded entirely into the universal principle of neighbor-love? Kierkegaard tries to reconcile the two, but the tension does not disappear."],
+      ["在我看来，《爱的作为》的伟大，并不在于它提供了一套可以轻易实践的道德准则，而在于它彻底改变了衡量人生的尺度。一个人可以拥有深刻的思想、敏锐的批判能力和令人羡慕的成就，却依然可能在最基本的人际责任面前显得贫乏。与《非此即彼》相比，这本书不再只是追问我是否真正选择了自己的生活，而是进一步追问：我的生活是否真正为他人留下了位置？",
+       "To my mind, the greatness of *Works of Love* lies not in offering a set of moral rules that are easy to practice, but in thoroughly changing the measure by which a life is judged. A person can have profound thoughts, a sharp critical mind and enviable achievements, and still look impoverished before the most basic interpersonal responsibilities. Compared with *Either/Or*, this book no longer only asks whether I have truly chosen my own life; it goes further and asks whether my life truly leaves room for others."],
+      ["或许最值得警惕的，不是我们缺乏爱的能力，而是我们太擅长谈论爱、理解爱，甚至欣赏自己富有同情心的形象，却始终不愿承担爱所要求的具体代价。我可以在思想上关怀整个世界，却在行动上忽略身边的人。而克尔凯郭尔让我意识到，真正检验一个人的，也许不是他能够提出多么深刻的社会批判，而是当另一个人需要他时，他究竟愿意付出什么。",
+       "Perhaps what we most need to guard against is not a lack of the capacity to love, but that we are too good at talking about love, understanding love, even admiring our own image as compassionate people, while never willing to bear the concrete cost that love demands. I can care for the whole world in thought and neglect the people beside me in action. And Kierkegaard made me realize that the real test of a person may not be how profound a social critique they can offer, but what they are actually willing to give when another person needs them."]
+    ]
+  },
+  {
+    "date": "2019-11-27",
+    "title": "When the Self Becomes Its Own Prisoner",
+    "slug": "when-the-self-becomes-its-own-prisoner",
+    "category": "Philosophy",
+    "book": {
+      "cover": "sickness_unto_death.jpg",
+      "title": "The Sickness Unto Death",
+      "author": "Søren Kierkegaard",
+      "language": "English",
+      "country": "Denmark",
+      "original": "Danish",
+      "lines": [
+        "Philosophy · Danish original, first published 1849",
+        "A close analysis of despair as the self’s failure to rightly become itself, and of faith as the way out."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["我一直以为，认识自己是一种值得追求的能力。一个人越能理解自己的欲望、矛盾与局限，就越有可能摆脱外界的定义，获得真正的自由。然而，自我认识并不必然带来自我接纳，甚至可能使人陷入更深的困境。我们可以清楚地知道自己为何焦虑、为何追逐成功、为何始终无法满足，却依然无法停止这一切。最令人不安的，或许不是我们不了解自己，而是即使充分了解自己，也未必能够与自己和解。",
+       "I always assumed that knowing oneself was an ability worth pursuing. The better a person understands their desires, contradictions and limits, the more likely they are to escape external definitions and gain real freedom. But self-knowledge does not necessarily bring self-acceptance, and may even plunge a person into a deeper predicament. We can know clearly why we are anxious, why we chase success, why we are never satisfied, and still be unable to stop any of it. What is most unsettling may not be that we do not understand ourselves, but that even fully understanding ourselves, we may not be able to be reconciled with ourselves."],
+      ["克尔凯郭尔在《致死的疾病》中，将这种困境推进到了存在的根本。他所说的绝望，并不只是通常意义上的痛苦或悲伤，而是自我无法正确地成为自身的状态。人既可能因为不愿成为自己而绝望，也可能因为执意依靠自身力量定义自己而绝望。尤其令我震撼的是，一个人即使生活顺遂、事业成功、对自身处境感到满意，也可能处于绝望之中，因为绝望并不必然表现为可以察觉的痛苦。它甚至可能隐藏在一种看似完整、稳定而令人羡慕的生活之下。",
+       "In *The Sickness Unto Death*, Kierkegaard pushes this predicament to the root of existence. The despair he speaks of is not merely pain or sadness in the ordinary sense, but the state in which the self fails to become itself rightly. A person may despair because they are unwilling to be themselves, or because they insist on defining themselves by their own strength. What struck me most is that someone whose life goes smoothly, whose career succeeds and who is content with their situation may still be in despair, because despair does not necessarily show itself as perceptible suffering. It may even hide beneath a life that looks whole, stable and enviable."],
+      ["这种理解让我重新审视自己的职业经历。从大学毕业到进入新的工作环境，我曾将许多重要的成就视为人生阶段性的答案。获得一份理想的工作、承担更大的责任、得到他人的认可，似乎都意味着自己正在逐渐接近那个希望成为的人。然而，每当一个目标实现，满足感往往很快被新的要求取代。我开始思考下一次晋升、下一项成果，以及如何证明自己仍然值得这些机会。原本应该带来肯定的成就，反而可能成为继续要求自己的理由。我并非不知道这种循环，却很难彻底摆脱它。",
+       "This understanding made me re-examine my own career. From graduating from university to entering new working environments, I treated many important achievements as provisional answers to my life. Landing an ideal job, taking on greater responsibility and winning others’ recognition all seemed to mean that I was getting closer to the person I hoped to become. Yet each time a goal was reached, the satisfaction was quickly replaced by new demands. I began thinking about the next promotion, the next result, and how to prove I still deserved these opportunities. Achievements that should have brought affirmation became reasons to keep demanding more of myself. It is not that I am unaware of this cycle; I just find it hard to break out of it completely."],
+      ["更微妙的矛盾是，我并不愿意成为一个完全由职业身份定义的人。我重视阅读、哲学与独立思考，也希望自己能够保持对社会成功标准的怀疑。但我有时又会用同样的成就逻辑衡量自己的精神生活：读过多少书，理解了多少思想，是否比过去更加成熟，是否拥有更独立的判断。甚至自我反思，也可能被纳入一种持续进步的叙事之中。我试图通过不断完善自己来获得自由，却逐渐发现，那个必须不断变得更好的自己，恰恰可能是我无法获得安宁的原因。",
+       "A subtler contradiction is that I do not want to be someone defined entirely by a professional identity. I value reading, philosophy and independent thinking, and I hope to stay skeptical of society’s standards of success. Yet sometimes I measure my inner life by the same logic of achievement: how many books I have read, how many ideas I have understood, whether I am more mature than before, whether my judgment is more independent. Even self-reflection can be folded into a narrative of continuous progress. I try to gain freedom by constantly perfecting myself, and gradually find that the self that must always become better may be exactly why I cannot find peace."],
+      ["克尔凯郭尔对绝望的分析，最精彩之处在于他区分了不同的自我关系。软弱的绝望表现为不愿成为自己，而反抗的绝望则表现为执意以自己的力量成为自己。后者尤其值得深思：一个人看似已经摆脱了外界评价，拥有强烈的独立意识，却可能只是将自己变成了新的权威。他拒绝接受自身的有限性，试图成为自己存在的最终设计者，甚至将对命运的反抗当作自我认同的基础。他越是坚持绝对自主，就越无法摆脱那个必须由自己创造、证明和维持的自我。",
+       "The most brilliant part of Kierkegaard’s analysis of despair is how he distinguishes different relations to the self. The despair of weakness shows itself as being unwilling to be oneself, while the despair of defiance shows itself as insisting on becoming oneself by one’s own strength. The latter deserves particular thought: a person who seems to have shed outside judgment and has a strong sense of independence may merely have made themselves the new authority. They refuse to accept their own finitude, try to be the final designer of their own existence, and even make defiance of fate the basis of their identity. The more they insist on absolute autonomy, the less they can escape the self that has to be created, proved and maintained by themselves alone."],
+      ["我也开始从日常生活中理解这种矛盾。旅行、阅读或与家人相处，本应是暂时摆脱目标与效率的时刻，但我有时仍会不自觉地思考如何更充分地利用时间，如何让一次经历变得更有意义。仿佛只有当一段时间产生了可以被记住、解释或证明的价值，它才算没有被浪费。然而，生活中真正珍贵的部分，往往恰恰无法被提前规划，也未必能够转化为某种成果。我希望自己能够自由地生活，却又难以放弃对自由本身的管理。",
+       "I have also begun to understand this contradiction in everyday life. Traveling, reading or spending time with family should be moments of temporary release from goals and efficiency, yet I sometimes catch myself thinking about how to make fuller use of the time, how to make an experience more meaningful. As if time is not wasted only when it produces value that can be remembered, explained or proved. But the truly precious parts of life often cannot be planned in advance, and may not be convertible into any result. I want to live freely, yet find it hard to give up managing freedom itself."],
+      ["这也是《致死的疾病》在哲学上最令我信服的洞察：自我意识并不天然意味着自由。克尔凯郭尔将人理解为有限与无限、可能性与必然性的综合，而自我则是这种关系对自身的反思。一个人可能沉溺于无限的可能性，失去现实生活的根基；也可能被既定的身份与处境束缚，忘记自己仍然拥有改变的可能。绝望并非简单地来自某种缺失，而是来自自我内部关系的失衡。我们既无法彻底逃离自己的处境，也无法仅凭意志创造一个完全独立于现实的自己。",
+       "This is also the insight in *The Sickness Unto Death* that I find most philosophically convincing: self-consciousness does not naturally mean freedom. Kierkegaard understands the human being as a synthesis of the finite and the infinite, of possibility and necessity, and the self as the relation relating itself to itself. A person may be lost in infinite possibilities and lose their footing in real life, or be bound by given identities and circumstances and forget that they can still change. Despair does not simply come from some lack; it comes from an imbalance in the self’s inner relations. We can neither escape our situation entirely nor create, by will alone, a self wholly independent of reality."],
+      ["不过，我也对克尔凯郭尔的最终回答有所保留。他认为，自我只有在与建立自身的力量——即上帝——建立正确关系时，才能真正摆脱绝望。这一宗教性的结论赋予了他的分析完整的结构，却也提出了一个困难：对于无法接受基督教信仰的人而言，是否就不存在真正与自我和解的可能？我更愿意从中读出一种对绝对自我主宰的质疑：人或许永远无法完全依靠自己的意志、理性与成就来确立自身，因为我们的存在始终受到他人、历史、偶然性与有限生命的制约。当然，这种世俗化的理解，也无法完全取代他原本的神学立场。",
+       "I do have reservations about Kierkegaard’s final answer, though. He holds that the self can truly escape despair only by relating rightly to the power that established it, that is, God. This religious conclusion gives his analysis a complete structure, but it also raises a difficulty: for those who cannot accept Christian faith, is there no real possibility of being reconciled with oneself? I would rather read in it a questioning of absolute self-mastery: perhaps a person can never establish themselves wholly through their own will, reason and achievements, because our existence is always conditioned by other people, history, contingency and finite life. Of course, this secularized reading cannot fully replace his original theological position."],
+      ["从文学与哲学的角度看，《致死的疾病》并不是一本容易阅读的作品。它的概念高度抽象，论证不断围绕自我、意识与绝望展开，有时甚至显得晦涩而重复。但这种近乎执拗的分析也构成了它独特的力量：克尔凯郭尔并不急于提供安慰，而是不断剥除我们用来解释和保护自己的理由。与《非此即彼》中通过人物与叙事展现存在困境的方式不同，这本书以近乎严酷的概念分析，迫使读者直面自我与自身的关系。它的价值不在于提供一套令人安心的生活哲学，而在于使那些看似理所当然的自我认知重新变得可疑。",
+       "Seen as literature and philosophy, *The Sickness Unto Death* is not an easy book to read. Its concepts are highly abstract, its argument circles around the self, consciousness and despair, and at times it seems obscure and repetitive. But this almost stubborn analysis is also its distinctive strength: Kierkegaard is in no hurry to console, and keeps stripping away the reasons we use to explain and protect ourselves. Unlike *Either/Or*, which shows existential predicaments through characters and narrative, this book uses nearly harsh conceptual analysis to force the reader to face the self’s relation to itself. Its value lies not in offering a reassuring philosophy of life, but in making seemingly self-evident self-understanding doubtful again."],
+      ["读到最后，我开始怀疑，我们对自由的追求，是否经常建立在一个无法实现的愿望之上：希望有一天能够彻底理解自己、掌握生活，并成为一个不再矛盾、不再依赖任何外部条件的人。但如果人的存在本身就意味着有限、依赖与不确定，那么真正的自由或许并不在于消除这些条件，而在于学会如何与它们共处。我们如此执着于成为理想中的自己，却很少追问，为什么现实中的自己始终不值得被接受。而《致死的疾病》最深刻的提醒，也许正是：一个人最难摆脱的囚禁，并非来自外部世界，而是来自他与自身永无休止的对抗。",
+       "By the end I began to wonder whether our pursuit of freedom is often built on an unattainable wish: that one day we will fully understand ourselves, master our lives, and become people who are no longer contradictory and no longer depend on any external conditions. But if human existence itself means finitude, dependence and uncertainty, then real freedom may lie not in eliminating these conditions but in learning to live with them. We are so fixated on becoming our ideal selves, yet rarely ask why the actual self never seems worthy of acceptance. And the deepest reminder of *The Sickness Unto Death* may be this: the prison a person finds hardest to escape comes not from the outside world, but from his unending struggle against himself."]
+    ]
+  },
+  {
+    "date": "2019-12-07",
+    "title": "Between Losing and Regaining",
+    "slug": "between-losing-and-regaining",
+    "category": "Philosophy",
+    "book": {
+      "cover": "fear_and_trembling_repetition.jpg",
+      "title": "Fear and Trembling / Repetition",
+      "author": "Søren Kierkegaard",
+      "language": "English",
+      "country": "Denmark",
+      "original": "Danish",
+      "lines": [
+        "Philosophy · Danish original, both first published 1843",
+        "Two companion works: Abraham’s sacrifice of Isaac as a test of faith, and a young man’s failed attempt to repeat a happy trip to Berlin."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["我一直相信，理性规划能够使人获得更大的自由。无论是职业发展、家庭生活，还是对未来的安排，我都习惯于分析风险、比较选择，并尽可能为各种结果做好准备。我曾将这种能力视为成熟与责任感的体现：一个人只有充分掌握自己的生活，才能更从容地承担对他人的责任。然而，克尔凯郭尔让我意识到一个更深刻的悖论：我越是努力为未来消除不确定性，就越可能失去面对不确定性的勇气。原本帮助我承担风险的理性，逐渐变成了推迟承担风险的理由。",
+       "I have always believed that rational planning gives a person greater freedom. Whether in career, family life or arrangements for the future, I am used to analyzing risks, comparing options and preparing for every outcome as far as I can. I took this ability as a sign of maturity and responsibility: only someone who fully commands their life can bear responsibility for others with ease. But Kierkegaard made me see a deeper paradox: the harder I work to remove uncertainty from the future, the more likely I am to lose the courage to face uncertainty. The reason that was meant to help me bear risk has gradually become a reason to postpone it."],
+      ["这种矛盾在亲密关系与家庭生活中尤其明显。我希望为所爱的人创造稳定的生活，因此习惯于提前考虑各种可能出现的问题。但爱与责任并不是一份能够通过充分准备来保证结果的契约。我们可以规划共同的未来，却无法保证彼此永远不会改变；可以尽力保护家人，却无法替他们安排命运。我曾以为，承担责任意味着尽可能避免失去，如今却开始怀疑，真正的责任是否恰恰意味着明知可能失去，仍然愿意毫无保留地投入其中。",
+       "This contradiction is especially plain in intimate relationships and family life. I want to create a stable life for the people I love, so I am used to thinking ahead about every problem that might arise. But love and responsibility are not a contract whose outcome can be guaranteed by thorough preparation. We can plan a shared future, but cannot guarantee that we will never change; we can do our best to protect our family, but cannot arrange their fate for them. I used to think that bearing responsibility meant avoiding loss as far as possible. Now I begin to wonder whether real responsibility means, precisely, knowing one may lose and still being willing to give oneself in without reserve."],
+      ["《恐惧与战栗》中亚伯拉罕的困境，使这种矛盾显得格外尖锐。无限弃绝的骑士能够接受失去，而信仰的骑士却在放弃一切的同时，仍然相信自己将重新获得所爱之物。克尔凯郭尔所描述的信仰，并不是对结果的乐观预测，而是一种无法从理性计算中推导出来的存在姿态。我当然无法将自己的日常选择与亚伯拉罕的宗教考验等同，但这个故事让我意识到，我所追求的确定性，可能恰恰是我不愿面对选择本身的表现。我希望先知道某种付出最终值得，再决定是否付出；希望先确认一段生活不会令我后悔，再允许自己真正选择它。",
+       "Abraham’s predicament in *Fear and Trembling* makes this contradiction especially sharp. The knight of infinite resignation can accept loss, while the knight of faith, even as he gives up everything, still believes he will receive back what he loves. The faith Kierkegaard describes is not an optimistic prediction of outcomes but a way of existing that cannot be derived from rational calculation. I cannot, of course, equate my everyday choices with Abraham’s religious trial, but the story made me realize that the certainty I seek may be precisely a way of refusing to face choice itself. I want to know first that a sacrifice will turn out to be worth it, and only then decide whether to make it; I want to be sure a life will not leave me with regrets before I allow myself to really choose it."],
+      ["而《重复》则从另一个方向揭示了这种困境。康斯坦丁试图通过重返柏林恢复过去的快乐，却发现相同的条件无法产生相同的体验。这让我意识到，理性能够帮助我们安排生活的外部条件，却无法保证生活本身的意义。我们可以精心规划一次旅行、一段关系，甚至未来几十年的人生，却无法确保那些真正重要的体验会如期发生。更重要的是，当现实不再符合最初的期待，我们是否仍然能够重新肯定自己的选择？重复并不是让过去原样归来，而是追问人在经历变化与失去之后，是否仍然可能重新获得自己的生活。",
+       "*Repetition* reveals the same predicament from another direction. Constantin tries to recover a past happiness by returning to Berlin, only to find that the same conditions do not produce the same experience. This made me realize that reason can help us arrange the external conditions of life but cannot guarantee its meaning. We can carefully plan a trip, a relationship, even the decades ahead, but cannot make sure the truly important experiences will arrive as scheduled. More important, when reality no longer matches our first expectations, can we still affirm our choice anew? Repetition is not the past returning as it was, but a question: after change and loss, is it still possible to regain one’s own life?"],
+      ["我逐渐发现，自己真正渴望的或许并不只是自由，而是一种不必承担自由之代价的自由。我希望拥有充分的选择权，却不愿放弃其他可能；希望建立持久的关系，却害怕不可逆转的承诺；希望生活充满意义，却又期待意义能够在行动之前得到证明。于是，我不断为未来创造更好的条件，却始终保留着一个理由：现在还不是完全投入的时候。我以为自己是在为生活作准备，却可能只是把准备本身变成了生活。",
+       "I gradually find that what I truly crave may not be freedom alone, but a freedom that does not have to pay freedom’s price. I want full choice without giving up the other possibilities; lasting relationships without the fear of irreversible commitment; a life full of meaning, but with the meaning proved before I act. So I keep creating better conditions for the future while always keeping one reason in reserve: now is not yet the time to commit fully. I thought I was preparing for life, but I may only have turned the preparation itself into my life."],
+      ["这或许才是两部作品对我最深刻的挑战。理性的局限并不意味着我们应该放弃判断，更不意味着盲目信仰值得赞美。恰恰相反，理性能够帮助我们理解选择的后果，却无法替我们完成选择；能够揭示风险，却无法消除存在本身的不确定性。我不需要停止规划，而是需要承认规划终究有其边界。真正的成熟，也许不是终于拥有足够的能力，使自己不再需要冒险，而是在已经尽力思考之后，仍然愿意承担那些无法保证结果的责任。",
+       "This may be the deepest challenge the two works pose to me. The limits of reason do not mean we should give up judgment, still less that blind faith deserves praise. On the contrary, reason can help us understand the consequences of a choice but cannot make the choice for us; it can reveal risk but cannot remove the uncertainty of existence itself. I do not need to stop planning; I need to admit that planning has its limits. Real maturity may not be finally having enough capability that one no longer needs to take risks, but being willing, after thinking as hard as one can, to bear responsibilities whose outcomes cannot be guaranteed."],
+      ["我一直努力让自己变得足够自由，以便有一天能够毫无顾虑地选择生活；但如果真正的自由只能通过选择来实现，那么我是否正在以追求自由之名，无限推迟自由本身？",
+       "I have been working hard to make myself free enough that one day I can choose life without any misgivings; but if real freedom can only be realized through choosing, am I, in the name of pursuing freedom, endlessly postponing freedom itself?"]
+    ]
+  },
+  {
+    "date": "2015-08-19",
+    "title": "Rules Still Need People",
+    "slug": "rules-still-need-people",
+    "category": "History",
+    "book": {
+      "cover": "the_nine.jpg",
+      "title": "The Nine",
+      "author": "Jeffrey Toobin",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "History · English original, first published 2007",
+        "An inside account of the U.S. Supreme Court from the 1980s to the mid-2000s, told through the justices and the cases that divided them."
+      ]
+    },
+    "place": "于华盛顿州贝尔维尤\nBellevue, WA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["美国最高法院在我的想象中，曾经代表着一种近乎理想化的制度理性：九位大法官依据宪法、先例与法律原则，对社会最复杂的争议作出最终判断。法律似乎应当超越个人的情绪、政治立场与时代偏见。然而，杰弗里·图宾在《九人》中揭示的，却是一个远比这种想象更加复杂的世界。那些决定宪法意义的人，同样拥有自己的信念、野心、友谊、偏见与局限。我们设计制度，是为了限制个人偏见与权力的任意性；但制度的解释、运行与维护，又不可避免地依赖那些需要被限制的人。",
+       "In my imagination, the U.S. Supreme Court once stood for an almost idealized institutional reason: nine justices, guided by the Constitution, precedent and legal principle, delivering final judgment on society’s most complicated disputes. Law, it seemed, should rise above personal emotion, political allegiance and the prejudices of an age. But what Jeffrey Toobin reveals in *The Nine* is a world far more complicated than that. The people who decide what the Constitution means have their own convictions, ambitions, friendships, biases and limits. We design institutions to restrain personal bias and the arbitrariness of power; yet the interpreting, running and upholding of those institutions inevitably depends on the very people who need restraining."],
+      ["《九人》最出色的地方，是它将最高法院从抽象的法律机构还原为一个充满人际关系、思想冲突与权力互动的现实组织。尤其是桑德拉·戴·奥康纳与安东尼·肯尼迪在诸多案件中的关键地位，使我意识到，宪法的实际意义不仅取决于文本本身，也取决于解释者如何理解自由、平等与国家权力。同一部宪法，在不同法官手中，可能产生截然不同的法律结论。制度试图消除个人意志的任意性，却又不得不赋予少数个人决定制度意义的巨大权力。",
+       "The best thing about *The Nine* is that it turns the Supreme Court from an abstract legal body back into a real organization full of personal relationships, clashes of ideas and play of power. The pivotal position of Sandra Day O’Connor and Anthony Kennedy in so many cases in particular made me realize that the practical meaning of the Constitution depends not only on its text but on how its interpreters understand liberty, equality and state power. The same Constitution in different judges’ hands can yield very different legal conclusions. The institution tries to remove the arbitrariness of individual will, yet has to give a few individuals enormous power to decide what the institution means."],
+      ["2000年的 *Bush v. Gore* 或许是这种悖论最鲜明的体现。佛罗里达州总统选举结果极其接近，各地对争议选票的人工重新计票缺乏统一标准。最高法院认为，这种差异违反了平等保护原则，而五位大法官最终认定，在既定期限内无法完成符合宪法要求的重新计票，从而使选举争议得到终结。问题在于，法院原本是为了维护选票平等而介入，却通过终止重新计票，作出了具有决定性政治后果的裁决。多数意见强调程序一致性，异议意见则质疑为何不能通过统一标准继续计票。法律程序究竟是在保护民主，还是在特定时刻限制了民主程序本身？这一案件最令人不安的，不只是它影响了总统选举结果，而是司法权威必须依靠自身的解释，来决定自己介入政治争议的边界。",
+       "*Bush v. Gore* in 2000 may be the sharpest embodiment of this paradox. The Florida presidential result was extremely close, and the manual recounts of disputed ballots lacked uniform standards across the state. The Court held that these differences violated equal protection, and five justices finally concluded that a constitutionally adequate recount could not be completed within the deadline, which brought the election dispute to an end. The problem is that the Court stepped in to protect the equality of votes, yet by halting the recount it issued a ruling with decisive political consequences. The majority stressed procedural consistency, while the dissenters asked why the count could not continue under a uniform standard. Was legal procedure protecting democracy, or, at that moment, limiting democratic process itself? What is most disturbing about the case is not only that it affected the outcome of a presidential election, but that judicial authority must rely on its own interpretation to decide where its intervention in political disputes should stop."],
+      ["1992年的 *Planned Parenthood v. Casey* 则揭示了另一种制度张力。法院以五比四的结果保留了 *Roe v. Wade* 所承认的堕胎权核心，同时以“不当负担”标准取代了原有的孕期框架，并允许宾夕法尼亚州的大部分限制措施继续实施。奥康纳、肯尼迪与苏特共同撰写的意见，尤其强调遵循先例对于法院制度正当性的重要意义。然而，先例究竟应当在多大程度上约束法官？如果先前的裁决被认为存在错误，维护制度稳定是否仍然值得优先考虑？这里的矛盾在于，遵循先例原本是为了限制法官个人判断，但决定何时坚持、何时推翻先例，本身又需要法官作出判断。法律的连续性并非自动产生，而是依赖解释者对稳定与变革的权衡。",
+       "*Planned Parenthood v. Casey* in 1992 reveals another institutional tension. By a vote of five to four the Court preserved the core of the abortion right recognized in *Roe v. Wade*, while replacing the original trimester framework with an “undue burden” standard and allowing most of Pennsylvania’s restrictions to stand. The joint opinion of O’Connor, Kennedy and Souter stressed in particular how important adherence to precedent is to the Court’s institutional legitimacy. But how far should precedent bind judges? If an earlier ruling is thought to be wrong, is institutional stability still worth putting first? The contradiction is that following precedent exists to limit judges’ personal judgment, yet deciding when to hold to precedent and when to overturn it itself requires judges to exercise judgment. The continuity of law does not arise automatically; it depends on interpreters weighing stability against change."],
+      ["2003年的 *Lawrence v. Texas* 进一步展示了司法解释如何改变自由的边界。最高法院以六比三推翻了得克萨斯州禁止成年人私下自愿同性性行为的刑事法律，并推翻1986年的 *Bowers v. Hardwick* 判例。肯尼迪撰写的多数意见强调个人尊严、自由与私人生活不应受到不当刑事干预，而斯卡利亚的异议则批评法院以自身判断取代民主立法。这使我意识到，宪法中的自由并不是一个完全静止的概念。法官必须决定哪些个人行为属于国家不得干涉的领域，而这种决定不可避免地涉及对社会价值与个人自主的理解。司法解释既可能保护少数人的权利免受多数意志侵害，也必须面对自身民主正当性的质疑。",
+       "*Lawrence v. Texas* in 2003 shows further how judicial interpretation can move the boundaries of liberty. By six to three the Court struck down a Texas criminal law banning private, consensual same-sex sexual conduct between adults, and overruled the 1986 precedent *Bowers v. Hardwick*. Kennedy’s majority opinion stressed that personal dignity, liberty and private life should not suffer improper criminal interference, while Scalia’s dissent criticized the Court for substituting its own judgment for democratic legislation. This made me realize that liberty in the Constitution is not a wholly static concept. Judges must decide which personal conduct lies in a domain the state may not enter, and that decision inevitably involves an understanding of social values and individual autonomy. Judicial interpretation may protect minority rights from the will of the majority, but it must also face doubts about its own democratic legitimacy."],
+      ["同样是在2003年，*Grutter v. Bollinger* 展现了平等原则内部的冲突。密歇根大学法学院在招生中将种族作为综合评价的因素之一，最高法院以五比四认定，在当时的严格审查框架下，该政策可以服务于学生群体多样性的重大教育利益。奥康纳撰写的多数意见试图在禁止种族歧视与承认历史和现实差异之间寻找平衡。然而，平等究竟意味着政府必须完全忽略种族，还是在某些条件下允许考虑种族，以回应既有的不平等？两种立场都可能援引宪法的平等保护原则，却导向不同的政策结果。这一案件让我看到，制度并不能单凭“平等”这样的抽象原则解决争议，因为真正的分歧往往发生在原则如何被定义和实践的层面。值得注意的是，该案确立的相关招生规则后来已在2023年的判决中被实质性推翻，这也进一步说明宪法解释并非一成不变。",
+       "Also in 2003, *Grutter v. Bollinger* displays a conflict within the principle of equality. The University of Michigan Law School used race as one factor in a holistic review of applicants, and by five to four the Court held that, under the strict scrutiny framework of the time, the policy could serve a compelling educational interest in a diverse student body. O’Connor’s majority opinion tried to find a balance between prohibiting racial discrimination and acknowledging historical and present differences. But does equality mean that government must ignore race altogether, or may it, under certain conditions, take race into account to respond to existing inequality? Both positions can invoke the Constitution’s equal protection principle and lead to different policy results. This case showed me that an institution cannot settle disputes by an abstract principle like “equality” alone, because the real disagreement usually lies in how the principle is defined and put into practice. It is worth noting that the admissions rules the case established were later substantially overturned in a 2023 decision, which further shows that constitutional interpretation is not fixed."],
+      ["2005年的 *Roper v. Simmons* 则将这一问题延伸至死刑。最高法院以五比四裁定，对犯罪时未满十八岁的人执行死刑违反第八修正案禁止残酷和非常刑罚的原则。肯尼迪的多数意见考虑了未成年人的责任能力、美国各州的法律实践，以及国际社会的相关标准；斯卡利亚等人的异议则反对法院过度依赖法官对社会共识与道德进步的判断。宪法中的“残酷”究竟应当按照制定时的理解解释，还是随着社会道德观念的变化而发展？如果宪法意义可以演变，谁有权判断这种演变已经发生？如果宪法意义完全固定，法律又如何回应新的社会认识？这一案件让我意识到，司法解释既需要历史的约束，也无法完全回避当下的道德判断。",
+       "*Roper v. Simmons* in 2005 extends the question to the death penalty. By five to four the Court held that executing people who were under eighteen at the time of their crimes violates the Eighth Amendment’s ban on cruel and unusual punishment. Kennedy’s majority opinion considered the culpability of minors, the practice of the states, and relevant international standards; Scalia and the other dissenters objected that the Court relied too heavily on judges’ own sense of social consensus and moral progress. Should “cruel” in the Constitution be read as it was understood when written, or evolve as moral ideas in society change? If constitutional meaning can evolve, who has the right to judge that it has? If it is entirely fixed, how can law respond to new social understanding? This case made me realize that judicial interpretation needs the discipline of history and yet cannot wholly avoid present moral judgment."],
+      ["2006年的 *Hamdan v. Rumsfeld* 则从另一个方向展示了司法制度的必要性。面对反恐战争中行政权力的扩张，最高法院以五比三认定，布什政府为关塔那摩被拘押者设立的军事委员会缺乏充分法律授权，其程序也不符合相关军事法律与《日内瓦公约》共同第三条的要求。这个案件提醒我，司法权力虽然同样受到个人判断的影响，却也是限制其他国家权力的重要机制。总统可以援引国家安全与战争需要，国会可以制定授权规则，而法院则必须判断行政行为是否超越法律边界。权力制衡并不是让任何一个机构完全摆脱政治，而是让不同机构的权力彼此受到约束。制度的价值，恰恰可能体现在这些不完美的权力之间持续存在的张力之中。",
+       "*Hamdan v. Rumsfeld* in 2006 shows the necessity of the judicial system from another direction. Faced with the expansion of executive power in the war on terror, the Court held by five to three that the military commissions the Bush administration set up for Guantánamo detainees lacked sufficient legal authorization and that their procedures did not meet the requirements of the relevant military law and Common Article 3 of the Geneva Conventions. The case reminds me that judicial power, though equally shaped by individual judgment, is also an important mechanism for restraining other state powers. The president can invoke national security and the needs of war, Congress can write rules of authorization, and the courts must judge whether executive action exceeds the bounds of law. Checks and balances do not free any one institution from politics; they let the powers of different institutions bind one another. The value of the system may lie precisely in the continuing tension among these imperfect powers."],
+      ["将这些案件放在一起，我逐渐意识到，司法制度最深刻的矛盾并不是法官偶尔受到政治影响，而是法律原则本身经常无法直接决定唯一的答案。平等可能意味着相同待遇，也可能要求关注现实差异；自由既可能需要司法保护，也可能与民主立法发生冲突；遵循先例能够维护稳定，却也可能延续错误；国家安全需要行政效率，却不能因此取消法律约束。法律并非缺少原则，而是不同原则之间的冲突，最终仍然需要人来判断。",
+       "Putting these cases together, I gradually realized that the deepest contradiction of the judicial system is not that judges are occasionally swayed by politics, but that legal principles themselves often cannot dictate a single answer. Equality may mean identical treatment, or may require attention to real differences; liberty may need judicial protection, or may collide with democratic legislation; following precedent preserves stability but may perpetuate error; national security calls for executive efficiency but cannot cancel legal constraint. Law does not lack principles; it is that conflicts among principles in the end still have to be judged by people."],
+      ["这种认识也让我重新审视自己对理性与制度的信任。我习惯于相信，清晰的规则、充分的证据与严谨的程序，能够帮助人们克服主观偏见。但我也逐渐发现，即使所有人都声称遵循相同的原则，他们对问题的定义、证据的选择以及价值的排序，仍然可能截然不同。更值得警惕的是，我自己也未必能够始终保持客观。当某项裁决符合我的价值判断时，我更容易赞赏法官的勇气与独立；当结果与我的立场相反时，我又可能指责他们将个人信念凌驾于法律之上。我所尊重的究竟是司法独立本身，还是司法独立恰好产生了我所赞同的结果？",
+       "This realization also made me re-examine my trust in reason and institutions. I used to believe that clear rules, sufficient evidence and rigorous procedure could help people overcome subjective bias. But I gradually found that even when everyone claims to follow the same principles, they may define the problem, select the evidence and rank values in very different ways. More worrying, I may not always be objective myself. When a ruling fits my values, I am readier to praise the judges’ courage and independence; when the result runs against my position, I may accuse them of putting personal belief above the law. What do I actually respect: judicial independence itself, or judicial independence when it happens to produce results I agree with?"],
+      ["不过，我也认为图宾的叙事存在值得警惕的局限。他擅长通过法官的性格、私人关系与思想冲突解释重大裁决，使复杂的法律历史具有小说般的可读性，却也容易让读者过度关注人物动机，而忽略法律论证自身的力量。他对温和派法官的欣赏，以及对保守派司法运动的批判，构成了全书鲜明的叙事立场。但一个法官的判断是否正当，不能仅凭其政治后果或个人背景来决定。司法理念之间存在真实而严肃的分歧，不能将所有分歧都还原为党派利益。尤其考虑到本书出版于2007年，它更适合作为理解特定历史阶段最高法院的政治与制度史，而非解释当代所有司法争议的完整框架。",
+       "I also think Toobin’s narrative has limits worth being wary of. He is good at explaining major rulings through the judges’ characters, private relationships and clashes of ideas, giving a complicated legal history the readability of a novel, but this also makes it easy for readers to focus too much on personal motives and overlook the force of legal argument itself. His admiration for the moderate justices and his criticism of the conservative judicial movement give the book a distinct narrative stance. But whether a judge’s judgment is legitimate cannot be decided by its political consequences or the judge’s background alone. Real and serious disagreements exist between judicial philosophies, and not all of them can be reduced to partisan interest. Especially since the book was published in 2007, it serves better as a political and institutional history of the Court in a particular period than as a full framework for explaining every contemporary judicial dispute."],
+      ["在我看来，《九人》最重要的贡献，是它既揭示了司法制度的脆弱，也让这种脆弱变得可以理解。制度不可能消除人性，因为制度本身就是由人设计、解释和维护的。真正成熟的制度，并不是假设掌权者永远公正，而是承认他们可能犯错、存在偏见，甚至滥用权力，并通过公开论证、程序约束、先例、异议意见与权力制衡，尽可能限制这些风险。九位大法官并非宪法真理的化身，他们的权威也不应来自个人的道德完美，而应来自其判断能够接受持续的法律与公共检验。",
+       "To my mind, the most important contribution of *The Nine* is that it exposes the fragility of the judicial system and also makes that fragility understandable. An institution cannot eliminate human nature, because institutions are themselves designed, interpreted and upheld by people. A truly mature institution does not assume that those in power are always just; it admits that they may err, be biased, even abuse power, and tries to limit these risks through open argument, procedural constraint, precedent, dissenting opinions and checks and balances. The nine justices are not embodiments of constitutional truth, and their authority should come not from personal moral perfection but from the fact that their judgments can withstand continuing legal and public scrutiny."],
+      ["读完《九人》，我对司法权威的理解不再那么理想化，却也并未因此走向犬儒。承认法律无法完全摆脱政治，不等于认为所有裁决都只是政治；承认法官具有个人偏见，也不意味着法律原则失去了独立价值。真正困难的，是在尊重制度的同时保有批判制度的能力，在质疑具体裁决的同时不轻易否定法治本身。我们建立制度，是因为不敢将权力完全托付给任何一个人；但制度最终仍然需要由人来守护。这不是制度可以彻底解决的缺陷，而是法治必须永远面对的条件。",
+       "After finishing *The Nine*, my understanding of judicial authority is less idealized, but I have not turned cynical because of it. Admitting that law cannot fully escape politics does not mean believing that every ruling is merely political; admitting that judges have personal biases does not mean legal principles lose their independent value. The real difficulty is to keep the capacity to criticize an institution while respecting it, and to question particular rulings without lightly dismissing the rule of law itself. We build institutions because we dare not entrust power wholly to any one person; yet institutions in the end still have to be guarded by people. This is not a flaw that institutions can fully cure, but a condition the rule of law must always face."]
+    ]
+  },
+  {
+    "date": "2020-06-19",
+    "title": "Philosophers Are Only Human",
+    "slug": "philosophers-are-only-human",
+    "category": "History",
+    "book": {
+      "cover": "existentialist_cafe.jpg",
+      "title": "At the Existentialist Café",
+      "author": "Sarah Bakewell",
+      "language": "English",
+      "country": "United Kingdom",
+      "original": "English",
+      "lines": [
+        "History · English original, first published 2016",
+        "Sartre, Beauvoir, Heidegger, Camus, Merleau-Ponty and others, and the lives and quarrels behind existentialism and phenomenology."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["1933年，三个年轻人在巴黎的一家咖啡馆里谈论哲学。雷蒙·阿隆向萨特介绍德国现象学，指着桌上的杏子鸡尾酒告诉他，哲学甚至可以从眼前这杯酒开始。这个后来被反复讲述的场景，几乎概括了莎拉·贝克韦尔《存在主义咖啡馆》的全部魅力：哲学不必始于抽象的体系，也可以始于一杯酒、一段爱情、一场争吵，或者一个人对自己所处世界的困惑。",
+       "In 1933, three young people were talking philosophy in a Paris café. Raymond Aron introduced Sartre to German phenomenology, pointing at the apricot cocktail on the table and telling him that philosophy could begin even with the drink in front of him. This scene, retold again and again, almost sums up the whole charm of Sarah Bakewell’s *At the Existentialist Café*: philosophy need not begin with an abstract system; it can begin with a drink, a love affair, a quarrel, or one person’s bewilderment about the world they find themselves in."],
+      ["我尤其喜欢贝克韦尔处理思想史的方式。她没有将萨特、波伏娃、海德格尔、加缪和梅洛-庞蒂塑造成一群永远正确的思想巨人，而是让他们重新成为有欲望、有偏见、会嫉妒、会犯错的普通人。他们讨论自由，却不断陷入复杂的情感关系；批判社会的虚伪，却未必能够诚实地面对自己；试图理解历史，却又在历史的关键时刻作出截然不同的政治选择。哲学不再是一套脱离生活的理论，而成为这些人理解、辩护甚至误解自身生活的方式。",
+       "I especially like how Bakewell handles the history of ideas. She does not turn Sartre, Beauvoir, Heidegger, Camus and Merleau-Ponty into giants who are always right, but lets them become ordinary people again, with desires, prejudices, jealousy and mistakes. They discuss freedom yet keep falling into tangled emotional relationships; they criticize the hypocrisy of society but cannot always face themselves honestly; they try to understand history, yet at its critical moments make very different political choices. Philosophy is no longer a body of theory detached from life but the way these people understood, justified and even misunderstood their own lives."],
+      ["其中最令我感兴趣的，是萨特与波伏娃之间的关系。他们试图以自由和坦诚重新定义亲密关系，拒绝传统婚姻所包含的占有与排他性，却也在实践中制造了复杂的情感伤害。他们所追求的自由，并没有自动带来关系中的平等。尤其当我们将波伏娃关于他者与女性处境的思想，同她自身的生活经历放在一起阅读时，便会发现一个耐人寻味的矛盾：一个人能够提出极其深刻的伦理问题，却未必能够在私人生活中妥善回答它们。",
+       "What interested me most was the relationship between Sartre and Beauvoir. They tried to redefine intimacy through freedom and candor, rejecting the possessiveness and exclusivity of traditional marriage, yet in practice they also caused complicated emotional harm. The freedom they pursued did not automatically bring equality into the relationship. Reading Beauvoir’s thinking on the Other and on women’s situation alongside her own life experience, one finds an intriguing contradiction: a person can raise extremely profound ethical questions and still fail to answer them well in private life."],
+      ["海德格尔的故事则更加令人不安。他对本真性、死亡与日常沉沦的思考，深刻影响了二十世纪哲学，却又曾公开支持纳粹政权。一个能够如此敏锐地分析人的存在处境的哲学家，为什么会在政治判断上陷入如此严重的错误？贝克韦尔没有试图用他的哲学成就为其政治行为开脱，也没有因为他的政治污点就否认其思想影响。她让两者之间的矛盾始终存在，而这恰恰比简单的道德审判更有力量。",
+       "Heidegger’s story is more disturbing still. His thinking on authenticity, death and everyday fallenness deeply shaped twentieth-century philosophy, yet he publicly supported the Nazi regime. Why would a philosopher who could analyze the human condition so acutely fall into such grave error in political judgment? Bakewell does not try to excuse his politics by his philosophical achievements, nor deny his intellectual influence because of his political stain. She lets the contradiction between the two stand, and that is more powerful than a simple moral verdict."],
+      ["相比之下，我对梅洛-庞蒂的思想产生了更强烈的认同。萨特强调人的自由选择，而梅洛-庞蒂则提醒我们，人首先是一个拥有身体、历史与具体处境的存在者。我们并不是站在世界之外作出决定的纯粹意识，而是早已置身于世界之中。我们的判断受到经验塑造，行动受到环境限制，甚至对自身的理解也无法完全脱离他人的目光。这种哲学没有否认自由，却使自由摆脱了某种过于英雄主义的想象。",
+       "By contrast, I identified more strongly with Merleau-Ponty’s thought. Sartre stresses free human choice, while Merleau-Ponty reminds us that a person is first of all a being with a body, a history and a concrete situation. We are not pure consciousnesses standing outside the world and deciding; we are already in it. Our judgments are shaped by experience, our actions limited by circumstance, and even our understanding of ourselves cannot be wholly separated from the gaze of others. This philosophy does not deny freedom, but frees it from an overly heroic picture."],
+      ["这也改变了我对个人独立的理解。我曾经十分欣赏那种能够不受外界影响、完全按照自身判断生活的人，但现在越来越觉得，这样的独立或许从来不存在。我的教育、职业经历、家庭关系，甚至我所阅读的书籍，都在不断塑造我的价值判断。我所认为的独立思想，也许只是许多外部影响在我身上形成的一种独特组合。承认这一点并不意味着放弃自主性，而是让我不再把独立误认为一种可以彻底摆脱他人的状态。",
+       "This also changed my understanding of personal independence. I once greatly admired people who could live entirely by their own judgment, unaffected by outside influence, but increasingly I think such independence may never have existed. My education, my career, my family relationships, even the books I read keep shaping my values. What I take for independent thought may simply be a distinctive combination of many outside influences coming together in me. Admitting this does not mean giving up autonomy; it means no longer mistaking independence for a state of being completely free of other people."],
+      ["贝克韦尔对存在主义的描绘，还有一个值得欣赏的特点：她没有将哲学家的私人生活当作无关紧要的轶事。相反，那些友谊的破裂、政治立场的转变和爱情中的矛盾，往往使抽象概念获得了更丰富的意义。萨特与加缪的决裂，不仅是两个人的性格冲突，也反映了他们对革命暴力、历史责任与政治道德的不同理解。存在主义从来不只是个人如何面对荒诞的问题，它也始终与二十世纪欧洲的战争、极权主义和社会变革紧密相连。",
+       "Another admirable feature of Bakewell’s portrait of existentialism is that she does not treat the philosophers’ private lives as irrelevant anecdote. On the contrary, the broken friendships, shifts of political position and contradictions in love often give abstract concepts a richer meaning. The break between Sartre and Camus was not only a clash of two personalities but reflected their different understandings of revolutionary violence, historical responsibility and political morality. Existentialism was never only about how an individual faces the absurd; it was always closely tied to the wars, totalitarianism and social change of twentieth-century Europe."],
+      ["不过，我也认为贝克韦尔的写法存在某种危险。当哲学史被讲述得如此生动，读者很容易因为喜欢某位哲学家的性格而接受其思想，或者因为厌恶他的个人行为而否定其理论。人物传记能够帮助我们理解思想产生的背景，却不能代替对思想本身的论证。萨特是否正确，并不取决于他的私人关系是否成功；海德格尔的政治错误固然需要严肃审视，却也不能自动回答他的存在论是否成立。贝克韦尔最精彩的叙事方式，有时也可能成为理解哲学的障碍。",
+       "Still, I think Bakewell’s approach carries a certain danger. When the history of philosophy is told so vividly, readers can easily accept a thinker’s ideas because they like his personality, or reject his theory because they dislike his personal conduct. Biography helps us understand the background in which ideas arise, but it cannot replace argument about the ideas themselves. Whether Sartre is right does not depend on whether his private relationships succeeded; Heidegger’s political errors certainly demand serious scrutiny, but they cannot automatically answer whether his ontology holds. Bakewell’s most brilliant way of narrating can sometimes become an obstacle to understanding philosophy."],
+      ["我尤其欣赏这本书没有将存在主义描绘成一种统一而完整的学说。萨特的自由、波伏娃的伦理、梅洛-庞蒂的身体经验，以及加缪对荒诞与反抗的思考，彼此之间存在真实的分歧。这些思想家共享某些时代问题，却没有给出相同的答案。他们不断争论、修正，甚至否定彼此，而这种不一致反而使存在主义显得更加真实。哲学的发展并不是一系列正确答案的累积，而是一群具体的人在共同的历史处境中，不断尝试理解自己所面对的问题。",
+       "I especially appreciate that the book does not present existentialism as a unified and complete doctrine. Sartre’s freedom, Beauvoir’s ethics, Merleau-Ponty’s bodily experience and Camus’s reflections on the absurd and revolt differ from one another in real ways. These thinkers share certain questions of their time without giving the same answers. They keep arguing, revising and even denying one another, and this inconsistency makes existentialism seem all the more real. Philosophy does not advance as an accumulation of correct answers, but as a group of particular people, in a shared historical situation, trying again and again to understand the problems they face."],
+      ["读完《存在主义咖啡馆》，我反而不再那么急于寻找一套能够指导人生的哲学体系。过去阅读哲学时，我常常希望从不同思想家那里获得某种清晰的结论，仿佛只要理解得足够深入，就能够形成更加成熟、完整的世界观。但贝克韦尔让我看到，思想本身也有历史，有偶然性，有未被解决的矛盾。那些最伟大的哲学家，终其一生也未必能够让自己的思想与生活完全一致。",
+       "After finishing *At the Existentialist Café*, I am less eager to look for a philosophical system that can guide my life. When I read philosophy before, I often hoped to take some clear conclusion from each thinker, as if understanding deeply enough would give me a more mature, complete worldview. But Bakewell showed me that thought itself has a history, contingency and unresolved contradictions. Even the greatest philosophers may never, in a whole lifetime, bring their thought and their lives fully into line."],
+      ["这本书最打动我的，并不是存在主义关于自由的豪迈宣言，而是它所呈现的思想与人生之间永远无法彻底消除的距离。我们当然可以要求哲学家对自己的行为负责，却不必期待他们成为自身理论的完美化身。或许阅读哲学真正有趣的地方，也不在于寻找一个值得效仿的人，而在于看见那些比我们更加敏锐的头脑，如何同样困惑、犹豫、犯错，并试图在不完美的生活中理解世界。",
+       "What moved me most in this book is not existentialism’s bold declarations about freedom but the distance between thought and life that can never be fully closed. We can of course hold philosophers responsible for their conduct, without expecting them to be perfect embodiments of their own theories. Perhaps the real interest of reading philosophy lies not in finding someone worth imitating, but in seeing how minds sharper than ours are just as puzzled, hesitant and error-prone, and still try to understand the world within imperfect lives."],
+      ["哲学家并不因为理解人生而超越人生。恰恰相反，他们最值得阅读的地方，或许正是他们始终无法完全解决自己提出的问题。",
+       "Philosophers do not transcend life by understanding it. On the contrary, what makes them most worth reading may be precisely that they never fully solve the very problems they raise."]
+    ]
+  },
+  {
+    "date": "2022-11-19",
+    "title": "The Lives That Might Have Been",
+    "slug": "the-lives-that-might-have-been",
+    "category": "Art",
+    "book": {
+      "cover": "possible_life_boltanski.jpg",
+      "title": "The Possible Life of Christian Boltanski",
+      "author": "Christian Boltanski & Catherine Grenier",
+      "language": "English",
+      "country": "France",
+      "original": "French",
+      "lines": [
+        "Art · French original, first published 2007",
+        "A long conversation between the artist and the curator Catherine Grenier about his childhood, his work on memory and archives, and death."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["一个人究竟在多大程度上了解自己的过去？我们习惯于相信，记忆构成了身份的基础，而照片、文字与档案则为记忆提供了客观的证据。然而，如果记忆可以被制造，档案可以被重新排列，而同一段人生能够被讲述成截然不同的故事，那么我们究竟凭什么相信自己拥有一段真实而完整的人生？克里斯蒂安·波尔坦斯基的艺术让我意识到，我们所认为的自我，或许并不是一个等待被发现的真实存在，而是一个在回忆与叙述中不断被重新创造的人。",
+       "To what extent does a person really know their own past? We tend to believe that memory is the foundation of identity, and that photographs, words and archives supply objective evidence for memory. But if memories can be manufactured, archives rearranged, and the same life told as very different stories, on what grounds do we believe we have a real and complete life? Christian Boltanski’s art made me realize that the self we take ourselves to be may not be a real entity waiting to be discovered, but a person continually re-created in recollection and narration."],
+      ["波尔坦斯基出生于1944年的巴黎。他的犹太裔父亲曾在纳粹占领期间藏身于家中的地板夹层，以躲避迫害。这段家庭历史为他的艺术赋予了特殊的背景：一个人可以真实地活着，却必须从公共世界中消失；一个人的存在可以被保存下来，却未必能够留下任何可靠的证据。《The Possible Life of Christian Boltanski》通过凯瑟琳·格勒尼耶与艺术家的长篇访谈，呈现了他如何理解自己的童年、创作与死亡。但书名中的“Possible”尤其耐人寻味：为什么一个人回顾亲身经历的生活，却只能称之为一种“可能的人生”？",
+       "Boltanski was born in Paris in 1944. His Jewish father hid under the floorboards of the family home during the Nazi occupation to escape persecution. This family history gives his art a particular background: a person can be truly alive yet have to vanish from the public world; a person’s existence can be preserved without leaving any reliable evidence. Through a long conversation between Catherine Grenier and the artist, *The Possible Life of Christian Boltanski* shows how he understands his childhood, his work and death. But the word “Possible” in the title is especially intriguing: why can a person looking back on the life they actually lived call it only a “possible life”?"],
+      ["这种不确定性贯穿了他的早期作品。在《Recherche et présentation de tout ce qui reste de mon enfance, 1944–1950》中，他以档案研究的形式呈现童年遗留下来的痕迹，模糊了真实记忆与人为重构之间的边界。档案看似拥有客观性，却无法证明它所暗示的故事必然真实。一张照片可以证明某个人曾经出现在某个地方，却无法说明他当时的感受；一件旧物可以证明某段生活留下过痕迹，却无法还原那段生活的意义。证据能够证明某件事情发生过，却未必能够证明我们后来赋予它的解释。",
+       "This uncertainty runs through his early work. In *Recherche et présentation de tout ce qui reste de mon enfance, 1944–1950*, he presents the traces left from his childhood in the form of archival research, blurring the line between real memory and artificial reconstruction. An archive seems objective but cannot prove that the story it implies is true. A photograph can prove that someone was once in some place, but not what they felt then; an old object can prove that a life left a trace, but cannot restore that life’s meaning. Evidence can prove that something happened, but not necessarily the interpretation we later give it."],
+      ["在《Monuments》系列中，波尔坦斯基将旧照片与灯光组合成近似宗教祭坛的装置，使陌生人的面孔获得某种纪念碑式的庄严。《Réserve》系列则通过堆积衣物，让已经缺席的身体变得仿佛仍然可以感知。这些作品让我想到一个矛盾：我们越是努力通过物件保存一个人，就越容易意识到那个人已经不在其中。照片没有记忆，衣服也没有生命；它们之所以令人悲伤，恰恰因为我们知道自己无法从中重新获得那个曾经存在的人。",
+       "In the *Monuments* series, Boltanski combines old photographs and lights into installations resembling religious altars, giving strangers’ faces a monumental solemnity. The *Réserve* series piles up clothing so that absent bodies seem almost perceptible again. These works made me think of a contradiction: the harder we try to preserve a person through objects, the more readily we realize that the person is no longer in them. Photographs have no memory and clothes have no life; they are sad precisely because we know we cannot regain, through them, the person who once existed."],
+      ["我对这种困境并不陌生。旅行时，我经常拍照，希望保存某个值得记住的瞬间；整理旧照片时，却发现自己已经无法准确回忆当时的心情。有些画面甚至让我产生陌生感，仿佛照片中的人并不是现在的自己。更有意思的是，当我向别人讲述同一段经历时，我会根据谈话的对象与当下的心境，强调不同的细节。久而久之，我记住的可能不再是事情最初发生的模样，而是自己后来反复讲述的版本。我以为自己在回忆过去，却可能正在用现在的自己重新发明过去。",
+       "This predicament is not unfamiliar to me. When I travel I often take photographs, hoping to keep a moment worth remembering; going through old photos, I find I can no longer recall exactly how I felt. Some images even feel strange, as if the person in the picture were not the person I am now. More interesting still, when I tell others about the same experience, I stress different details depending on who I am talking to and my mood at the time. Over time what I remember may no longer be how things first happened, but the version I have told again and again. I think I am recalling the past, but I may be reinventing it with the self I am now."],
+      ["这也让我重新思考个人身份的连续性。我们喜欢将人生理解为一条具有明确方向的道路，仿佛过去的每一次选择都在为今天作准备。然而，这种连贯性往往是事后建立的。那些没有实现的愿望、被放弃的计划、偶然改变的决定，在回顾人生时容易被整理成某种必然的成长过程。我可以把自己的职业经历讲述为一系列经过深思熟虑的选择，也可以将它理解为机遇、环境与偶然因素共同作用的结果。两种叙述都可能包含事实，却未必有任何一种能够完整代表我的人生。",
+       "It also made me rethink the continuity of personal identity. We like to understand a life as a road with a clear direction, as if every past choice were preparing for today. But this coherence is usually built after the fact. Unfulfilled wishes, abandoned plans and decisions changed by chance are easily arranged, in retrospect, into a kind of inevitable growth. I can tell my career as a series of carefully considered choices, or understand it as the joint result of opportunity, circumstance and accident. Both accounts may contain facts, yet neither may fully represent my life."],
+      ["波尔坦斯基的创作因此提出了一个比遗忘更加令人不安的问题：如果我们无法完整保存过去，是否至少能够诚实地讲述过去？我认为他的回答并不乐观。记忆不是一座等待发掘的仓库，而是一种不断发生的重构。我们选择记住什么、忽略什么，以及如何解释曾经的自己，都受到现在的欲望与价值判断影响。一个人的自传因此既是对过去的记录，也是对当下身份的塑造。我们并不只是过去的产物，也在不断创造一个能够解释现在的过去。",
+       "Boltanski’s work thus poses a question more unsettling than forgetting: if we cannot preserve the past in full, can we at least tell it honestly? I think his answer is not optimistic. Memory is not a storehouse waiting to be excavated but a reconstruction that keeps happening. What we choose to remember and ignore, and how we explain our former selves, are shaped by present desires and value judgments. A person’s autobiography is therefore both a record of the past and a shaping of present identity. We are not only products of the past; we are also constantly creating a past that can explain the present."],
+      ["不过，我并不完全赞同将这种不确定性推向极端。波尔坦斯基模糊真实与虚构的艺术策略具有强烈的感染力，却也存在伦理上的风险。尤其当作品涉及大屠杀与集体创伤时，历史事实不能因为记忆具有主观性就失去其客观地位。个人如何记住历史，与历史究竟发生过什么，是两个不同的问题。档案固然不完整，却仍然能够提供可以检验的证据；叙述固然具有选择性，也并不意味着所有叙述都同样可信。记忆的不可靠不应成为否定历史真实的理由，而应使我们更加谨慎地区分事实与解释。",
+       "Still, I do not fully agree with pushing this uncertainty to the extreme. Boltanski’s artistic strategy of blurring the real and the fictional is powerfully affecting, but it carries an ethical risk. Especially when the work touches the Holocaust and collective trauma, historical fact cannot lose its objective standing because memory is subjective. How an individual remembers history and what actually happened in history are two different questions. Archives are incomplete, yet they can still provide evidence that can be tested; narratives are selective, but that does not mean all narratives are equally credible. The unreliability of memory should not be a reason to deny historical truth; it should make us more careful in distinguishing fact from interpretation."],
+      ["这也是我对本书访谈形式既欣赏又有所保留的原因。格勒尼耶试图通过提问重建艺术家的人生，而波尔坦斯基的回答却不断暴露这种重建的局限。他的幽默、矛盾与自我修正，使自传本身成为一种艺术性的表演。但当艺术家拥有解释自己作品的主要话语权时，我们也需要警惕，是否正在将他的自我叙述误认为作品的最终意义。一个人如何理解自己，并不必然比他人如何理解他更加接近全部真相。",
+       "This is also why I both admire and have reservations about the book’s interview form. Grenier tries to rebuild the artist’s life through questions, while Boltanski’s answers keep exposing the limits of such rebuilding. His humor, contradictions and self-corrections make the autobiography itself an artistic performance. But when the artist holds the main authority to explain his own work, we should also be wary of mistaking his self-narration for the final meaning of the work. How a person understands himself is not necessarily closer to the whole truth than how others understand him."],
+      ["《The Possible Life of Christian Boltanski》最终让我重新理解了“真实”这个词。真实的人生或许确实存在，但它并不等同于我们能够记住、记录或讲述的人生。我们留下的照片、文字与物件只是有限的证据，而我们赋予这些证据的意义，则会随着时间不断变化。最令人不安的也许不是我们终将被别人遗忘，而是即使在活着的时候，我们也已经无法完整记住自己。",
+       "*The Possible Life of Christian Boltanski* finally made me understand the word “real” anew. A real life may well exist, but it is not the same as the life we can remember, record or tell. The photographs, words and objects we leave are only limited evidence, and the meaning we give that evidence keeps changing with time. What is most unsettling may not be that others will forget us in the end, but that even while we are alive we can no longer fully remember ourselves."],
+      ["波尔坦斯基并没有因此证明人生是虚构的。他真正揭示的是，人生的真实与人生的叙述之间，始终存在一道无法彻底弥合的距离。我们确实经历过那些时刻，却只能通过残缺的记忆重新接近它们；我们确实拥有自己的过去，却无法拥有对过去的最终解释。也许一个人最真实的部分，恰恰是那些无法被档案证明、无法被故事整理，甚至无法再被自己准确记起的生活。",
+       "Boltanski does not thereby prove that life is fiction. What he really reveals is that between the reality of a life and its narration there is always a distance that can never be fully closed. We did live through those moments, yet can approach them again only through broken memory; we do have our own past, yet cannot have a final interpretation of it. Perhaps the truest part of a person is exactly the life that no archive can prove, no story can arrange, and even they themselves can no longer accurately recall."]
+    ]
+  },
+  {
+    "date": "2026-02-05",
+    "title": "When All the Words Already Exist",
+    "slug": "when-all-the-words-already-exist",
+    "category": "Literature",
+    "book": {
+      "cover": "borges_conversations.jpg",
+      "title": "博尔赫斯谈话录 (Conversations with Borges)",
+      "author": "豪尔赫·路易斯·博尔赫斯 Jorge Luis Borges",
+      "language": "Chinese",
+      "country": "Argentina",
+      "original": "Spanish",
+      "lines": [
+        "Literature · Chinese translation",
+        "Borges in conversation on language, poetry, time and philosophy, moving from a casual detail into the deepest questions."
+      ]
+    },
+    "place": "于加州利弗莫尔\nLivermore, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "我曾在日记中问自己：写作时最在意的究竟是什么？不是完成一篇结构完整的文章，也不是找到某种准确而漂亮的表达，而是埋头于字里行间时，偶然出现的那一瞬间灵光。我愿意将它称为 *aura*，一种难以解释、也无法刻意制造的神韵。甚至可以说，那些连篇累牍、删了又改的废话，都是为了等待它的出现。写作最令人着迷的地方，或许并不是最终留下了什么，而是某个瞬间，语言突然表达出了连自己此前都未曾完全意识到的东西。",
+        "I once asked myself in my journal what I care about most when I write. It is not finishing a well-structured essay, nor finding some precise and beautiful phrasing, but the flash of inspiration that comes by chance while I am lost in the lines. I like to call it *aura*, a quality that is hard to explain and cannot be manufactured on purpose. One could even say that all the rambling, deleted and rewritten nonsense exists only to wait for it. Perhaps what fascinates me most about writing is not what is finally left behind, but the moment when language suddenly expresses something I had not fully realized myself."
+      ],
+      [
+        "两三年前，我尤其喜欢读博尔赫斯。那时ChatGPT刚开始展露头角，我几乎立刻联想到了他的《巴别图书馆》。在博尔赫斯的想象中，图书馆包含一切可能的书籍：真实的历史、虚假的传记、尚未写出的诗歌，以及无穷无尽毫无意义的字符组合。它拥有近乎神性的完整性，却并不因此拥有智慧。所有真理都可能已经存在其中，但找到真理与辨认真理，反而成为几乎不可能完成的任务。",
+        "Two or three years ago I especially loved reading Borges. ChatGPT had just begun to emerge, and I immediately thought of his “The Library of Babel.” In Borges’s imagination the library contains every possible book: true histories, false biographies, poems not yet written, and endless meaningless combinations of characters. It has an almost divine completeness, yet it is not wise for that. All truths may already be in it, but finding a truth and recognizing it become almost impossible tasks."
+      ],
+      [
+        "某种意义上，人工智能也让我想到这样一座有些神性却无神韵的巴别图书馆。它能够以惊人的速度生成文章、诗歌与论证，仿佛无数可能的表达都已等待被调用。但语言的丰富并不必然意味着经验的丰富。无论它能够如何准确地描写马黛茶的苦涩，或如何精巧地重现博尔赫斯梦中的老虎，图书馆本身既喝不到，也抓不着。它能够排列关于世界的文字，却不能仅凭排列文字而拥有文字所指向的生活。",
+        "In a sense, artificial intelligence reminds me of such a Library of Babel, somewhat divine yet without *aura*. It can generate essays, poems and arguments at astonishing speed, as if countless possible expressions were waiting to be called up. But richness of language does not necessarily mean richness of experience. However accurately it describes the bitterness of mate, or however deftly it recreates the tiger in Borges’s dream, the library itself can neither drink it nor grasp it. It can arrange words about the world, but it cannot, merely by arranging words, have the life those words point to."
+      ],
+      [
+        "当然，这并不意味着人工智能无法产生令人惊讶或富有美感的作品，也不能据此断言意义只属于人类。真正让我在意的，是文本的生成与意义的发生并不是同一回事。一句话可以在形式上完全正确，却仍然没有触及写作者真正想表达的东西；而一句偶然写下、甚至不够完美的话，却可能因为它与某段具体经验之间的联系，获得不可替代的分量。**当所有可能的文本都可以被生成时，真正的问题便不再是还能写出什么，而是为什么偏偏是这些文字，对某个人而言具有意义。**",
+        "Of course, this does not mean AI cannot produce surprising or beautiful work, nor can we conclude from it that meaning belongs only to humans. What really concerns me is that the generation of a text and the occurrence of meaning are not the same thing. A sentence can be formally flawless and still not touch what the writer truly wanted to say, while a sentence written by chance, even an imperfect one, can gain irreplaceable weight through its connection to a specific experience. **When every possible text can be generated, the real question is no longer what else can be written, but why these particular words are meaningful to a particular person.**"
+      ],
+      [
+        "博尔赫斯对这种矛盾似乎早有预感。《皮埃尔·梅纳尔，〈堂吉诃德〉的作者》设想一位后世作家写出与塞万提斯完全相同的文字，但相同的句子因为作者与时代的不同，竟然获得截然不同的意义。这是我理解博尔赫斯最重要的一把钥匙：文字并不独自拥有意义，意义还存在于写作的处境、阅读的历史，以及文字与世界之间不断变化的关系之中。即使一座图书馆能够穷尽所有可能的文本，它也无法穷尽这些文本在不同生命中产生的意义。",
+        "Borges seems to have anticipated this contradiction. “Pierre Menard, Author of the *Quixote*” imagines a later writer producing words identical to Cervantes’s, yet the same sentences take on entirely different meanings because of the different author and age. This is the most important key I have for understanding Borges: words do not own meaning alone; meaning also lives in the circumstances of writing, the history of reading, and the ever-changing relation between words and the world. Even if a library could exhaust every possible text, it could not exhaust the meanings those texts produce in different lives."
+      ],
+      [
+        "博尔赫斯对时间的理解尤其令我着迷。在《小径分岔的花园》中，时间不再是一条从过去通向未来的单一道路，而成为无数可能性同时展开的迷宫；《另一个人》则让年轻与年老的博尔赫斯相遇，使个人身份的连续性变得可疑。谈话中的博尔赫斯同样反复回到这些问题。他似乎始终怀疑，我们所谓的过去是否真的以某种完整的形式存在，还是只存在于不断变化的记忆之中。一个人今天回忆的童年，与十年前回忆的童年，究竟哪一个更加真实？",
+        "Borges’s understanding of time fascinates me most. In “The Garden of Forking Paths,” time is no longer a single road from past to future but a labyrinth in which countless possibilities unfold at once; “The Other” lets the young and the old Borges meet and makes the continuity of personal identity doubtful. The Borges of these conversations returns to the same questions again and again. He seems always to doubt whether what we call the past exists in any complete form, or only in ever-changing memory. Which is more real: the childhood a person remembers today, or the one they remembered ten years ago?"
+      ],
+      [
+        "这种对时间的怀疑，也让我重新理解写作时所追求的 *aura*。它并不一定来自某种前所未有的原创性，也不意味着机器生成的文字必然缺乏美感。或许它只是一个瞬间：某些早已存在的词语，因为与自己的经验发生了意想不到的联系，突然变得不可替代。我们反复修改，并不是因为世界上缺少足够好的句子，而是因为那些现成的句子尚未真正成为自己的表达。",
+        "This doubt about time also changes how I understand the *aura* I look for in writing. It does not necessarily come from unprecedented originality, nor does it mean machine-generated words must lack beauty. Perhaps it is only a moment when words that have long existed suddenly become irreplaceable because they connect unexpectedly with one’s own experience. We revise again and again not because the world lacks good enough sentences, but because those ready-made sentences have not yet truly become our own expression."
+      ],
+      [
+        "《博尔赫斯谈话录》让我欣赏的，正是博尔赫斯面对文学时那种近乎游戏般的自由。他谈论语言、诗歌、时间与哲学，常常从一个看似随意的细节进入深不可测的问题。他并不急于建立严密的体系，也不总是试图证明某种终极真理。相反，他似乎更享受思想在不同作品与语言之间意外相遇的时刻。这种态度让我觉得，阅读与写作未必是为了不断积累知识或生产观点，有时仅仅是为了让某种尚未被意识到的联系突然显现。",
+        "What I admire in *Conversations with Borges* is exactly his almost playful freedom toward literature. He talks about language, poetry, time and philosophy, often entering unfathomable questions through a seemingly casual detail. He is in no hurry to build a rigorous system, nor does he always try to prove some ultimate truth. He seems instead to enjoy the moments when ideas meet unexpectedly across different works and languages. This attitude makes me feel that reading and writing are not necessarily for accumulating knowledge or producing opinions; sometimes they are only for letting a connection we had not yet noticed suddenly appear."
+      ],
+      [
+        "不过，我也并不完全认同博尔赫斯对文学的处理方式。他对无限、镜像、迷宫与虚构文本的迷恋，具有令人惊叹的智识美感，却有时使真实的身体、情感与历史退居背景。当文学不断成为关于文学的文学，语言是否也可能逐渐脱离它原本试图触及的世界？这种疑问在人工智能时代反而显得更加尖锐。我们已经拥有越来越强大的文本生产能力，却未必因此获得更加丰富的现实经验。文学如果只是无限地引用、改写与重组自身，最终也可能成为另一座精巧而封闭的图书馆。",
+        "Still, I do not fully agree with how Borges treats literature. His fascination with infinity, mirrors, labyrinths and fictional texts has a stunning intellectual beauty, but it sometimes pushes real bodies, feelings and history into the background. When literature keeps becoming literature about literature, might language also drift away from the world it first tried to reach? In the age of AI this doubt only sharpens. We have ever stronger power to produce text, yet not necessarily richer experience of reality. If literature only quotes, rewrites and recombines itself without end, it may finally become another exquisite, closed library."
+      ],
+      [
+        "但博尔赫斯本人又不断抵抗着这种过于简单的理解。他喜爱古老语言的声音、诗歌的节奏、马黛茶的滋味，以及那些反复出现在梦境与记忆中的老虎。他的文学固然充满抽象结构，却也始终保留着某些极其私人、近乎固执的意象。这些意象之所以动人，不仅因为它们能够被巧妙地写进故事，也因为它们属于一个具体的人理解世界的方式。巴别图书馆可以包含所有关于老虎的描述，却无法因此拥有博尔赫斯对老虎的迷恋。",
+        "But Borges himself keeps resisting this too-simple reading. He loved the sound of ancient languages, the rhythm of poetry, the taste of mate, and the tigers that recur in his dreams and memories. His literature is full of abstract structures, yet it always keeps certain deeply private, almost stubborn images. They move us not only because they can be cleverly written into stories, but because they belong to one particular person’s way of understanding the world. The Library of Babel can contain every description of tigers, but it cannot thereby have Borges’s fascination with them."
+      ],
+      [
+        "《博尔赫斯谈话录》最有趣的地方，是它让一个创造了无数文学迷宫的人，以轻松、幽默而充满好奇的方式谈论自己的阅读与生活。它的局限也正在于此：谈话中的机智未必等于严密的论证，作者对自身作品的解释也未必拥有最终权威。但我喜欢这种不完整。它使博尔赫斯不再只是一个关于无限与时间的文学符号，而是一个仍然会被某个词语、某首诗或某种声音打动的人。",
+        "The most interesting thing about *Conversations with Borges* is that it lets a man who built countless literary labyrinths talk about his reading and his life in a relaxed, humorous and curious way. Its limitation lies in the same place: wit in conversation does not necessarily amount to rigorous argument, and an author’s explanation of his own work has no final authority. But I like this incompleteness. It makes Borges no longer just a literary symbol of infinity and time, but a person who can still be moved by a word, a poem or a sound."
+      ],
+      [
+        "我曾以为，《巴别图书馆》最可怕的地方，是它包含了所有可能的书籍，使真正有价值的文字淹没在无穷无尽的废话之中。现在我却觉得，问题或许不在于文字太多，而在于我们太容易将文字的存在误认为意义的存在。图书馆可以拥有所有关于爱情、死亡与幸福的句子，却不因此爱过、死过或幸福过。**当所有可能的文本都已存在，写作仍然值得继续，不是因为我们还能创造图书馆里没有的句子，而是因为我们仍然拥有图书馆无法替我们经历的人生。**",
+        "I used to think the most terrifying thing about “The Library of Babel” was that it contains every possible book, drowning the truly valuable words in endless nonsense. Now I think the problem may not be too many words, but how easily we mistake the existence of words for the existence of meaning. A library can hold every sentence about love, death and happiness without having loved, died or been happy. **When every possible text already exists, writing is still worth continuing, not because we can still create sentences the library lacks, but because we still have a life the library cannot live for us.**"
+      ]
+    ]
+  },
+  {
+    "date": "2023-11-08",
+    "title": "The Beautiful Boulevard and the Cracks Behind It",
+    "slug": "fin-de-siecle-vienna",
+    "category": "History",
+    "book": {
+      "cover": "fin_de_siecle_vienna.jpg",
+      "title": "Fin-de-Siècle Vienna",
+      "author": "Carl E. Schorske",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "History · English original, first published 1980",
+        "Schorske’s study of how Vienna’s liberal crisis shaped Freud, Klimt, Schoenberg and the birth of modern culture."
+      ]
+    },
+    "place": "于瑞士卢加诺\nLugano, Switzerland",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "十九世纪末的维也纳，是欧洲文化史上最令人困惑的城市之一。弗洛伊德正在探索梦与无意识，克里姆特逐渐摆脱古典绘画的规范，勋伯格开始动摇传统音乐的调性秩序，文学、建筑与哲学也经历着深刻的变革。然而，这座孕育了现代主义的城市，同时也是自由主义衰退、民族主义兴起与反犹主义政治化的舞台。为什么一个社会能够在文化上如此富有创造力，却在政治上逐渐走向分裂？卡尔·舒尔斯克的《世纪末的维也纳》最吸引我的，正是它揭示了一个令人不安的悖论：**文明的创造力可以达到前所未有的高度，而文明对自身的理解却可能同时陷入危机。**",
+        "Fin-de-siècle Vienna is one of the most bewildering cities in European cultural history. Freud was exploring dreams and the unconscious, Klimt was breaking away from the rules of classical painting, Schoenberg was beginning to shake the tonal order of traditional music, and literature, architecture and philosophy were all undergoing deep change. Yet the city that nurtured modernism was also the stage for the decline of liberalism, the rise of nationalism and the politicization of antisemitism. How can a society be so creative culturally and yet drift toward political division? What drew me most to Carl Schorske’s *Fin-de-Siècle Vienna* is the unsettling paradox it reveals: **a civilization’s creativity can reach unprecedented heights while its understanding of itself falls into crisis at the same time.**"
+      ],
+      [
+        "舒尔斯克没有将维也纳现代主义写成一群天才突然出现的故事，而是将文化创新置于奥匈帝国自由主义的历史困境之中。十九世纪的自由派资产阶级相信理性、教育、法治与进步，试图通过文化教养建立现代社会的共同价值。维也纳环城大道（Ringstrasse）便是这种理想的建筑表达。议会大厦采用古希腊风格，市政厅借鉴哥特式建筑，大学与剧院则通过历史主义形式宣示知识与文化的权威。整条大道仿佛一座关于文明进步的纪念碑，但它的壮丽也掩盖了一个问题：当自由主义的社会基础开始动摇，建筑所展示的历史秩序是否还能代表现实？",
+        "Schorske does not tell Viennese modernism as the sudden appearance of a group of geniuses; he places cultural innovation within the historical predicament of Habsburg liberalism. The liberal bourgeoisie of the nineteenth century believed in reason, education, the rule of law and progress, and tried to build the shared values of a modern society through cultivation. The Ringstrasse was the architectural expression of that ideal. The Parliament took a Greek style, the City Hall borrowed from the Gothic, and the university and theaters proclaimed the authority of knowledge and culture through historicist forms. The whole boulevard was like a monument to civilizational progress, but its grandeur also hid a problem: once the social foundations of liberalism began to shake, could the historical order the buildings displayed still represent reality?"
+      ],
+      [
+        "这种矛盾在政治领域表现得更加直接。舒尔斯克分析了格奥尔格·冯·舍纳勒尔、卡尔·卢埃格尔与西奥多·赫茨尔等人物，展示大众政治如何逐渐摆脱自由主义精英所推崇的理性讨论，转而诉诸民族身份、集体情绪与政治动员。尤其是卢埃格尔对反犹主义的利用，说明现代政治并不必然随着教育普及和社会发展而变得更加理性。一个社会可以拥有先进的文化机构与高度发达的公共生活，却依然允许偏见成为有效的政治资源。文明并不是一种一旦获得便不会失去的成就。",
+        "This contradiction appears even more directly in politics. Schorske analyzes figures such as Georg von Schönerer, Karl Lueger and Theodor Herzl, showing how mass politics gradually broke away from the rational discussion prized by liberal elites and turned to national identity, collective emotion and mobilization. Lueger’s use of antisemitism in particular shows that modern politics does not necessarily grow more rational with wider education and social development. A society can have advanced cultural institutions and a highly developed public life and still allow prejudice to serve as an effective political resource. Civilization is not an achievement that, once gained, cannot be lost."
+      ],
+      [
+        "弗洛伊德的出现，使这种危机从公共世界进入人的内心。舒尔斯克将《梦的解析》放在维也纳自由主义的政治与文化背景中理解，认为弗洛伊德对无意识、压抑与父权关系的探索，也可以被视为对旧有理性主体观念的挑战。启蒙传统曾经相信，人能够通过理性理解并掌握自己；精神分析却揭示，人甚至无法完全知道自己为什么如此思考和行动。更有意思的是，弗洛伊德并没有简单抛弃科学理性，而是试图以科学的方法研究理性无法直接掌握的领域。现代主义因此不只是对旧秩序的否定，也是一种在旧秩序失效后重新寻找解释方式的努力。",
+        "Freud’s arrival carried this crisis from the public world into the human interior. Schorske reads *The Interpretation of Dreams* against the political and cultural background of Viennese liberalism, suggesting that Freud’s exploration of the unconscious, repression and the father relationship can also be seen as a challenge to the old idea of the rational subject. The Enlightenment tradition believed people could understand and master themselves through reason; psychoanalysis revealed that we cannot even fully know why we think and act as we do. More interesting still, Freud did not simply abandon scientific rationality but tried to study, by scientific methods, a realm reason cannot directly command. Modernism was thus not only a negation of the old order but an effort to find new ways of explanation after the old order had failed."
+      ],
+      [
+        "克里姆特的绘画则以更加直观的方式表现了这种变化。舒尔斯克对维也纳大学委托创作的三幅学院画——《哲学》《医学》与《法学》——的分析尤其具有说服力。原本应当歌颂知识、科学与法律权威的公共艺术，却在克里姆特笔下呈现出充满欲望、死亡与不可控制力量的人类世界。这些作品引发争议，并非仅仅因为形式上的大胆，而是因为它们拒绝为自由主义社会提供期待中的理性与进步形象。艺术不再承担装饰文明的职责，而开始揭露文明无法解释的部分。",
+        "Klimt’s painting expresses this change more directly. Schorske’s analysis of the three faculty paintings commissioned by the University of Vienna, *Philosophy*, *Medicine* and *Jurisprudence*, is especially persuasive. Public art that was meant to celebrate knowledge, science and the authority of law instead shows, in Klimt’s hands, a human world full of desire, death and uncontrollable forces. These works caused controversy not merely for their formal boldness but because they refused to give liberal society the image of reason and progress it expected. Art no longer decorated civilization; it began to expose what civilization could not explain."
+      ],
+      [
+        "读到这里，我不由得想到今天的硅谷。我们同样生活在一个崇尚创新、效率与技术突破的环境中。人工智能的进步令人惊叹，资本、人才与社会注意力以前所未有的速度向少数技术领域集中。新的模型、新的产品与新的能力不断出现，仿佛技术发展的速度本身已经足以证明社会正在进步。然而，我越来越怀疑，**我们是否正在用技术创新的繁荣，掩盖自己对于社会价值的贫乏理解？** 我们能够越来越准确地衡量模型性能、计算效率与商业增长，却很难用同样严谨的方式回答：这些进步究竟改善了谁的生活，又让哪些人的处境变得更加脆弱？",
+        "Reading this, I could not help thinking of today’s Silicon Valley. We too live in an environment that prizes innovation, efficiency and technological breakthrough. The progress of artificial intelligence is astonishing, and capital, talent and public attention are concentrating on a few technical fields at unprecedented speed. New models, products and capabilities keep appearing, as if the pace of technology were itself proof that society is advancing. Yet I increasingly wonder: **are we using the boom of technological innovation to cover a poor understanding of social value?** We can measure model performance, computing efficiency and business growth ever more precisely, but we can hardly answer with the same rigor whose lives these advances actually improve, and whose positions they make more vulnerable."
+      ],
+      [
+        "这种怀疑也来自我对技术行业内部文化的观察。在一个高度重视创新的环境中，创造新事物很容易成为一种自我证明。人们不断强调工作的突破性、影响力与未来潜力，而这些判断往往建立在行业内部形成的评价体系之上。某项技术可能在专业指标上取得显著进展，却未必对社会产生同等程度的价值。更微妙的是，当所有人都在使用相似的语言赞美创新时，质疑创新的实际意义反而可能显得不合时宜。我有时觉得，这与舒尔斯克笔下的维也纳资产阶级存在某种相似性：一个群体可以拥有高度精致的文化，却逐渐失去从外部审视自身价值的能力。",
+        "This doubt also comes from what I have observed of the tech industry’s internal culture. In an environment that values innovation so highly, creating something new easily becomes a form of self-justification. People keep stressing the breakthrough, impact and future potential of their work, and these judgments are often built on evaluation systems formed inside the industry. A technology may make remarkable progress on professional metrics without producing a comparable value for society. More subtly, when everyone praises innovation in similar language, questioning its actual meaning can seem out of place. I sometimes feel this resembles Schorske’s Viennese bourgeoisie: a group can have a highly refined culture and yet gradually lose the ability to examine its own values from outside."
+      ],
+      [
+        "不过，两者之间存在一个值得注意的区别。世纪末维也纳的现代主义艺术家，往往通过创作揭露文明的裂缝。弗洛伊德质疑理性主体的透明性，克里姆特拒绝以和谐的图像掩盖生命的混乱，勋伯格则开始探索传统调性之外的表达方式。他们的创新并不总是为了证明社会正在变得更好，反而常常来自对既有秩序的不信任。相比之下，今天的科技产业更习惯于将创新描述为解决问题的力量。我们不仅创造新的工具，也不断创造关于这些工具将如何改变世界的宏大叙事。**维也纳的现代主义试图打破进步的幻觉，而硅谷的技术文化却可能正在制造一种新的进步幻觉。**",
+        "There is, however, a difference worth noting. The modernist artists of fin-de-siècle Vienna often used their work to expose the cracks in civilization. Freud questioned the transparency of the rational subject, Klimt refused to cover life’s disorder with harmonious images, and Schoenberg began to explore expression beyond traditional tonality. Their innovations were not always meant to prove that society was getting better; they often came from distrust of the established order. By contrast, today’s tech industry is more used to describing innovation as a force for solving problems. We create not only new tools but also grand narratives about how those tools will change the world. **Viennese modernism tried to break the illusion of progress, while Silicon Valley’s technology culture may be producing a new one.**"
+      ],
+      [
+        "当然，这种比较也有其局限。维也纳的艺术革命与今天的技术发展具有不同的历史条件、社会结构与实际影响。人工智能、医学与工程领域的进步确实能够创造重要的公共价值，不能因为产业存在夸大的宣传，就否认技术本身的意义。真正需要警惕的，并不是创新，而是将创新等同于进步的习惯。当技术能力的增长被自动解释为社会价值的增长，我们便可能失去判断两者之间差异的能力。",
+        "Of course, the comparison has its limits. Vienna’s artistic revolution and today’s technological development have different historical conditions, social structures and real impact. Progress in AI, medicine and engineering can indeed create important public value, and we cannot deny the meaning of technology itself because the industry exaggerates its claims. What deserves vigilance is not innovation but the habit of equating innovation with progress. When growth in technical capability is automatically read as growth in social value, we may lose the ability to judge the difference between them."
+      ],
+      [
+        "这种思考也让我重新审视自己在技术环境中的位置。我可以批判行业对于创新的过度赞美，却也享受这种文化所提供的机会、认可与物质回报。我能够看见其中的夸张与自我陶醉，却仍然愿意参与其中，甚至在某些时刻使用同样的语言解释自己的工作。这并不意味着所有参与都是虚伪的，而是提醒我，批判一个体系与摆脱一个体系，从来不是同一回事。**一个人可以在思想上看穿某种时代神话，却仍然在生活中依赖它赋予自己的意义。** 也许真正困难的，不是识别行业叙事中的夸张，而是在自身利益与批判判断发生冲突时，仍然能够诚实地衡量工作的价值。",
+        "This line of thought also made me reexamine my own place in the tech world. I can criticize the industry’s excessive praise of innovation, yet I also enjoy the opportunities, recognition and material rewards this culture provides. I can see its exaggeration and self-intoxication and still be willing to take part, even using the same language at times to explain my own work. This does not mean all participation is hypocritical; it reminds me that criticizing a system and escaping it are never the same thing. **A person can see through the myth of an age in thought and still depend, in life, on the meaning it gives them.** Perhaps the real difficulty is not recognizing the exaggeration in the industry’s narrative, but still weighing the value of one’s work honestly when self-interest conflicts with critical judgment."
+      ],
+      [
+        "从历史研究的角度看，我尤其欣赏舒尔斯克跨越学科边界的能力。他将政治史、建筑史、精神分析、文学与音乐联系起来，使读者看到同一时代的不同文化形式如何回应共同的问题。但这种宏大的综合也存在局限。弗洛伊德的精神分析、克里姆特的绘画与勋伯格的音乐，固然受到维也纳社会环境的影响，却不能完全被解释为自由主义衰退的结果。艺术家拥有自身的美学传统、技术问题与个人追求，而现代主义的发展也受到跨国思想交流的影响。历史解释越是优美完整，我们越需要警惕它是否将复杂的偶然性整理成过于整齐的因果关系。",
+        "As historical scholarship, I especially admire Schorske’s ability to cross disciplinary boundaries. He connects political history, architectural history, psychoanalysis, literature and music, letting readers see how different cultural forms of one era answered shared problems. But such grand synthesis has limits. Freud’s psychoanalysis, Klimt’s painting and Schoenberg’s music were certainly shaped by Vienna’s social environment, yet they cannot be fully explained as results of liberalism’s decline. Artists have their own aesthetic traditions, technical problems and personal pursuits, and the development of modernism was also influenced by international exchange of ideas. The more elegant and complete a historical explanation, the more we must ask whether it has tidied complex contingency into too neat a chain of cause and effect."
+      ],
+      [
+        "《世纪末的维也纳》最深刻的地方，不在于它证明了文化繁荣必然伴随社会衰退，而在于它迫使我们放弃一种过于简单的进步观。一个社会可以在某些领域不断突破，同时在另一些领域陷入停滞；可以拥有令人惊叹的创造能力，却无法建立与之相称的公共信任与社会共识。技术与文化的发展固然值得赞美，但它们不能替代对政治、伦理与社会责任的讨论。",
+        "The most profound thing about *Fin-de-Siècle Vienna* is not that it proves cultural flourishing must accompany social decline, but that it forces us to give up an overly simple view of progress. A society can keep breaking through in some fields while stagnating in others; it can have astonishing creative power and yet fail to build a matching public trust and social consensus. The development of technology and culture is worth celebrating, but it cannot replace discussion of politics, ethics and social responsibility."
+      ],
+      [
+        "**也许一个时代最危险的幻觉，并不是它相信自己已经解决了所有问题，而是它不断创造新事物，以至于逐渐忘记追问这些创造究竟是为了解决什么问题。** 世纪末的维也纳提醒我，文明的精致与文明的健全，从来不是同一回事。而对于今天的我们，真正值得警惕的或许也不是创新停止的那一天，而是创新仍然以惊人的速度继续，我们却已经不再认真追问它的意义。",
+        "**Perhaps the most dangerous illusion of an age is not that it believes it has solved every problem, but that it keeps creating new things until it forgets to ask what problem the creations were meant to solve.** Fin-de-siècle Vienna reminds me that a civilization’s refinement and its health are never the same thing. And for us today, what deserves vigilance may not be the day innovation stops, but the day it continues at astonishing speed while we no longer seriously ask what it means."
+      ]
+    ]
+  },
+  {
+    "date": "2020-11-15",
+    "title": "The Weight of One",
+    "slug": "the-weight-of-one",
+    "category": "Philosophy",
+    "book": {
+      "cover": "trolley_problem.jpg",
+      "title": "The Trolley Problem",
+      "author": "Thomas Cathcart",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Philosophy · English original, first published 2013",
+        "Full title: The Trolley Problem, or Would You Throw the Fat Guy Off the Bridge? A philosophical conundrum told as a comic courtroom trial."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "在哲学的诸多思想实验中，恐怕很少有比电车难题更加粗暴的。五个人被困在铁轨上，一辆失控的电车正迎面驶来，而你只需要扳动道岔，便能以一个人的死亡换取五个人的生存。问题似乎简单得近乎残忍，直到哲学家把场景移到一座天桥上：如果必须亲手将一个无辜的胖子推下去，才能阻止电车，我们还愿意作出同样的选择吗？数字没有改变，死亡的数量也没有改变，改变的只是我们与死亡之间的距离。",
+        "Among philosophy’s many thought experiments, few are cruder than the trolley problem. Five people are trapped on the tracks, a runaway trolley is bearing down on them, and all you have to do is throw a switch to trade one person’s death for five lives. The problem seems almost cruelly simple, until the philosopher moves the scene to a footbridge: if you must push an innocent fat man off with your own hands to stop the trolley, would you still make the same choice? The numbers have not changed, nor has the number of deaths. What has changed is only our distance from the death."
+      ],
+      [
+        "托马斯·卡思卡特在《电车难题》中，将这个原本属于伦理学课堂的思想实验改写成一场荒诞的法庭审判。一个人因为将胖子推下桥而受到指控，律师、证人与哲学家轮番登场，试图为这场死亡寻找能够成立的道德解释。卡思卡特最巧妙的地方，是让那些通常安静地躺在哲学著作中的概念，突然拥有了法庭上的声音。功利主义、义务论与道德直觉不再只是抽象的理论，而成为彼此质询、相互拆台的辩护词。读者既像陪审员，又像那个站在桥上的人，不得不在各种看似合理的论证之间寻找自己的立场。",
+        "In *The Trolley Problem*, Thomas Cathcart rewrites this thought experiment, which belongs to the ethics classroom, as an absurd courtroom trial. A man is charged with pushing a fat man off a bridge, and lawyers, witnesses and philosophers take the stand in turn, trying to find a moral explanation for the death that will hold up. Cathcart’s cleverest move is to give concepts that usually lie quietly in philosophy books a voice in court. Utilitarianism, deontology and moral intuition are no longer just abstract theories but arguments that cross-examine and undermine one another. The reader is both juror and the person standing on the bridge, forced to find a position among arguments that all seem reasonable."
+      ],
+      [
+        "但这场审判越是热闹，那个被推下桥的人反而越显得沉默。他没有复杂的过去，没有家庭，没有名字，甚至没有属于自己的声音。他存在的全部意义，似乎就是拥有足够的体重，可以阻挡一辆电车。这种近乎滑稽的设定，恰恰暴露了思想实验的某种残酷：为了使道德问题变得清晰，哲学首先必须剥夺人物的复杂性。五个人被简化为数字，一个人被简化为重量，而我们则被要求在这些经过精心删减的生命之间作出选择。",
+        "But the livelier the trial becomes, the more silent the man pushed off the bridge seems. He has no complicated past, no family, no name, not even a voice of his own. The whole meaning of his existence seems to be having enough weight to stop a trolley. This almost comic setup exposes a certain cruelty in thought experiments: to make a moral problem clear, philosophy must first strip people of their complexity. Five people are reduced to a number, one person to a weight, and we are asked to choose among lives that have been carefully pared down."
+      ],
+      [
+        "我尤其在意这种抽象所带来的不安。功利主义的计算并不难理解，五条生命当然多于一条生命。但当一个人被描述为可以牺牲的单位时，我们似乎已经悄悄接受了某种前提：人的生命能够被放进同一张表格，并根据数量决定其价值。康德式的义务论试图抵抗这种计算，坚持人不能仅仅被当作实现其他目的的工具。然而，当我们拒绝推人下桥时，是否真的因为尊重人的尊严，还是仅仅因为无法忍受自己成为直接杀人的那个人？道德原则与个人情感之间的界限，远比哲学家希望的更加模糊。",
+        "I am especially troubled by the unease this abstraction brings. Utilitarian calculation is not hard to understand: five lives are of course more than one. But when a person is described as a unit that can be sacrificed, we seem to have quietly accepted a premise: that human lives can be put in one table and their value decided by quantity. Kantian deontology tries to resist this calculation, insisting that a person must never be treated merely as a means to other ends. Yet when we refuse to push the man off the bridge, is it really out of respect for human dignity, or only because we cannot bear to be the one who kills directly? The line between moral principle and personal feeling is far blurrier than philosophers would like."
+      ],
+      [
+        "卡思卡特的幽默使这种矛盾显得格外尖锐。他并不急于告诉读者应该相信哪一种伦理学说，而是不断让某个看似无懈可击的论证遭遇新的反例。我们刚刚相信结果比意图重要，便发现这种逻辑可能允许牺牲无辜者；刚刚坚持绝不能主动伤害他人，又不得不面对袖手旁观所造成的死亡。每一种理论都试图为道德建立清晰的边界，却又不断被具体情境所破坏。哲学在这里不是消除困惑的工具，反而是一种使困惑更加精确的艺术。",
+        "Cathcart’s humor makes the contradiction especially sharp. He is in no hurry to tell the reader which ethical theory to believe, but keeps letting a seemingly airtight argument meet a new counterexample. No sooner do we believe that outcomes matter more than intentions than we find this logic may permit sacrificing the innocent; no sooner do we insist that one must never actively harm others than we must face the deaths caused by standing by. Each theory tries to draw a clear boundary for morality, and each is repeatedly broken by concrete situations. Philosophy here is not a tool for dispelling confusion but an art of making confusion more precise."
+      ],
+      [
+        "我也逐渐意识到，电车难题之所以令人难忘，并不只是因为它考验我们的道德直觉，更因为它揭示了现代社会处理死亡的一种特殊方式。现实中的生命很少以如此直观的形式摆在我们面前。它们更多时候出现在统计报告、公共预算、风险评估与政策模型之中。我们可以冷静地讨论某项措施能够减少多少死亡，却很难想象自己亲手决定某个具体的人必须牺牲。数字让大规模的痛苦变得可以理解，也让个体的痛苦变得容易忽略。某种意义上，现代社会每天都在进行没有电车、没有天桥，也没有明确行动者的道德计算。",
+        "I have also come to see that the trolley problem is memorable not only because it tests our moral intuitions but because it reveals a particular way modern society deals with death. Real lives are seldom set before us in such a vivid form. More often they appear in statistical reports, public budgets, risk assessments and policy models. We can calmly discuss how many deaths a measure would prevent, yet can hardly imagine deciding with our own hands that a specific person must be sacrificed. Numbers make mass suffering comprehensible and make individual suffering easy to ignore. In a sense, modern society carries out moral calculations every day with no trolley, no footbridge and no clear actor."
+      ],
+      [
+        "但我并不愿意因此否定计算的必要性。一个社会如果拒绝比较政策的后果，反而可能造成更多本可避免的伤害。真正令我怀疑的，是我们是否过于容易将计算的结果误认为道德的答案。一个模型能够告诉我们怎样减少总体风险，却无法仅凭数学证明谁应该承担剩余的风险。那些被称为最优的决定，往往只是在某些预先设定的价值标准下最优。卡思卡特的思想实验虽然极端，却使这些通常隐藏在制度语言背后的价值判断重新显露出来。",
+        "But I do not want to deny the necessity of calculation. A society that refuses to compare the consequences of policies may cause even more avoidable harm. What I doubt is whether we too easily mistake the result of a calculation for a moral answer. A model can tell us how to reduce overall risk but cannot prove, by mathematics alone, who should bear the remaining risk. Decisions called optimal are often optimal only under certain preset standards of value. Cathcart’s thought experiment, extreme as it is, brings back into view the value judgments usually hidden behind institutional language."
+      ],
+      [
+        "作为一部哲学普及作品，《电车难题》的魅力来自它近乎戏剧性的叙事形式。卡思卡特善于利用法庭辩论的节奏，将复杂的伦理学争论转化为机智、荒诞而富有讽刺意味的对话。它不像严肃的哲学论文那样逐层建立论证，而是让不同立场在相互碰撞中暴露自身的局限。不过，这种轻巧也构成了本书的弱点。人物有时更像某种理论的代言人，而不是拥有独立生命的个体；哲学分歧则容易被压缩成一场聪明的语言游戏。读者可能记住了那些令人捧腹的反驳，却未必真正理解不同伦理传统背后更复杂的思想基础。",
+        "As a work of popular philosophy, *The Trolley Problem* draws its charm from its almost theatrical narrative form. Cathcart makes good use of the rhythm of courtroom debate, turning complex ethical arguments into witty, absurd and satirical dialogue. Unlike a serious philosophy paper, it does not build an argument layer by layer but lets different positions expose their own limits as they collide. Yet this lightness is also the book’s weakness. Characters sometimes feel more like spokespeople for a theory than individuals with lives of their own, and philosophical disagreement is easily compressed into a clever language game. Readers may remember the laugh-out-loud rebuttals without really understanding the more complex intellectual foundations of the different ethical traditions."
+      ],
+      [
+        "更值得怀疑的，是思想实验本身所设置的封闭世界。在那里，电车必然失控，五个人必然被困，桥上的胖子必然能够阻止灾难，而我们只能在两个残酷的选项之间作出决定。所有能够改变问题的现实条件，都被哲学家提前排除。这种设计使道德冲突变得纯粹，却也让责任变得异常狭窄。我们只需要回答是否应该牺牲一个人，而不必追问为什么有人会被绑在铁轨上，为什么没有其他安全措施，或者是谁创造了这种必须以死亡换取生存的处境。思想实验的清晰，有时恰恰来自它对现实复杂性的拒绝。",
+        "More doubtful still is the closed world the thought experiment sets up. There the trolley must be out of control, the five must be trapped, the fat man on the bridge must be able to stop the disaster, and we can only decide between two cruel options. All the real conditions that could change the problem are excluded in advance by the philosopher. This design makes the moral conflict pure, but it also makes responsibility strangely narrow. We need only answer whether to sacrifice one person, without asking why someone was tied to the tracks, why there are no other safety measures, or who created a situation in which survival must be bought with death. The clarity of a thought experiment sometimes comes precisely from its refusal of real-world complexity."
+      ],
+      [
+        "这也是我对卡思卡特既欣赏又有所保留的原因。他成功地让伦理学重新具有了文学的趣味，却也提醒我，哲学与文学处理人的方式并不相同。哲学为了检验原则，往往需要剥除人物的具体性；文学却恰恰通过恢复人物的名字、记忆与生活，使任何关于人的抽象判断变得困难。如果桥上的胖子不再只是一个足以阻挡电车的身体，而是一个拥有童年、爱人、恐惧与未完成愿望的人，那么我们或许便无法如此轻松地讨论他的死亡。",
+        "This is why I both admire and have reservations about Cathcart. He succeeds in giving ethics the pleasures of literature again, but he also reminds me that philosophy and literature treat people differently. To test principles, philosophy often has to strip people of their particularity; literature, by restoring a person’s name, memories and life, makes any abstract judgment about people difficult. If the fat man on the bridge were no longer just a body big enough to stop a trolley, but a person with a childhood, a lover, fears and unfinished wishes, we might not be able to discuss his death so easily."
+      ],
+      [
+        "读完这本书，我仍然不知道自己会不会扳动道岔，更无法确信在天桥上会作出什么选择。但我开始觉得，电车难题真正令人不安的，并不是它没有提供一个令人满意的答案，而是它使我们如此轻易地接受了一个人可以被化约为一道算术题的前提。我们争论五是否大于一，却很少追问那个“一”究竟意味着什么。",
+        "Having finished the book, I still do not know whether I would throw the switch, and I cannot be sure what I would choose on the footbridge. But I have begun to feel that what is truly disturbing about the trolley problem is not that it offers no satisfying answer, but that it makes us accept so easily the premise that a person can be reduced to an arithmetic problem. We argue over whether five is greater than one, and seldom ask what that “one” really means."
+      ],
+      [
+        "**也许电车难题最残酷的地方，并不是它要求我们牺牲一个人，而是为了让牺牲变得可以讨论，它首先必须让那个人失去作为一个人的全部重量。**",
+        "**Perhaps the cruelest thing about the trolley problem is not that it asks us to sacrifice one person, but that, to make the sacrifice discussable, it must first strip that person of all the weight of being a person.**"
+      ]
+    ]
+  },
+  {
+    "date": "2018-09-22",
+    "title": "The Voices History Cannot Absorb",
+    "slug": "zinky-boys",
+    "category": "Oral history",
+    "book": {
+      "cover": "zinky_boys.jpg",
+      "title": "Zinky Boys",
+      "author": "Svetlana Alexievich",
+      "language": "English",
+      "country": "Russia",
+      "original": "Russian",
+      "lines": [
+        "Oral history · Russian original, first published 1991",
+        "Testimony from Soviet soldiers, nurses, mothers and widows of the war in Afghanistan, woven into a book with no single narrator."
+      ]
+    },
+    "place": "于中国上海\nShanghai, China",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "战争结束之后，士兵被装进锌皮棺材运回故乡。棺材被封死，家属甚至无法再看一眼死者的面容。一个活生生的人，就这样从儿子、丈夫、恋人，变成一具不能打开的棺材，以及一套关于英勇牺牲的官方说辞。斯维特兰娜·阿列克谢耶维奇的《锌皮娃娃兵》写的是苏联入侵阿富汗的战争，却几乎不关心战场上的胜负。她关心的是那些从战争中回来的人，或者更准确地说，那些再也无法真正回来的人。",
+        "After the war, soldiers were shipped home in zinc coffins. The coffins were sealed, and families could not even look at the dead one last time. A living person thus went from son, husband and lover to a coffin that could not be opened, and an official rhetoric of heroic sacrifice. Svetlana Alexievich’s *Zinky Boys* is about the Soviet invasion of Afghanistan, yet it hardly cares about victory or defeat on the battlefield. It cares about those who came back from the war, or more precisely, those who can never truly come back."
+      ],
+      [
+        "阿列克谢耶维奇最独特的地方，在于她没有选择传统战争小说的叙事方式。她不创造一个能够代表战争经验的主人公，不安排人物经历从天真到幻灭的完整成长，也不试图以一条清晰的因果线解释战争如何开始、如何结束。她收集士兵、军官、护士、母亲与妻子的证言，将彼此矛盾、相互纠缠的声音编织成一部没有单一中心的作品。有人仍然相信自己曾经为祖国而战，有人承认参与过残酷的杀戮，有人无法摆脱战场上的恐惧，也有人只想知道自己的孩子究竟为什么死去。这些声音并不总是相互理解，却共同构成了一种无法被统一叙事轻易容纳的历史。",
+        "What is most distinctive about Alexievich is that she does not use the narrative mode of the traditional war novel. She creates no protagonist to represent the experience of war, arranges no complete arc from innocence to disillusionment, and does not try to explain with a clear causal line how the war began and ended. She gathers testimony from soldiers, officers, nurses, mothers and wives, and weaves their contradictory, entangled voices into a work with no single center. Some still believe they fought for their country, some admit to taking part in brutal killing, some cannot escape the fear of the battlefield, and some only want to know why their child died. These voices do not always understand one another, but together they form a history that no unified narrative can easily hold."
+      ],
+      [
+        "我越来越觉得，这种形式本身就是阿列克谢耶维奇最重要的思想表达。传统的战争叙事，无论是歌颂英雄还是控诉暴行，往往仍然需要某种中心：一个主人公、一条情节线，或者一个能够统摄所有事件的历史判断。阿列克谢耶维奇却有意让这种中心缺席。她并不提供一个最终能够解释所有证言的权威声音，而是让读者不断遭遇彼此冲突的记忆。战争在这里不是一个等待被完整讲述的故事，而是无数无法相互还原的个人经验。**如果战争本身就是对人类生活秩序的摧毁，那么任何过于完整、过于和谐的战争叙事，是否也可能在形式上背叛战争的真实？**",
+        "I increasingly feel that this form is itself Alexievich’s most important statement of thought. Traditional war narratives, whether they praise heroes or denounce atrocities, usually still need some center: a protagonist, a plot line, or a historical judgment that governs all events. Alexievich deliberately leaves that center absent. She offers no authoritative voice that finally explains all the testimony, but lets readers keep running into conflicting memories. War here is not a story waiting to be told whole but countless personal experiences that cannot be reduced to one another. **If war is itself the destruction of the order of human life, might any war narrative that is too complete and too harmonious also betray the truth of war in its form?**"
+      ],
+      [
+        "最令我难忘的是书中那些母亲的声音。战争在政治语言中意味着国家、边界、意识形态与历史使命，但对于母亲而言，战争首先意味着一个曾经生活在自己身边的孩子突然消失了。她们记得儿子的童年、性格与生活中的琐事，却必须接受国家以某种庄严而抽象的语言解释他的死亡。勋章、悼词与葬礼可以赋予牺牲一种公共意义，却无法回答一个更加私人、也更加残酷的问题：为什么偏偏是我的孩子？阿列克谢耶维奇并不试图将这些母亲塑造成某种象征。她让她们反复讲述、迟疑、愤怒，甚至说出彼此矛盾的话。正是这种不整齐，使悲伤不再只是文学中一个可以被理解的主题，而成为一种始终无法被解释完毕的经验。",
+        "What I remember most are the voices of the mothers in the book. In political language war means the state, borders, ideology and historical mission, but for a mother it means first of all that a child who lived at her side has suddenly vanished. She remembers her son’s childhood, his character and the small things of daily life, yet must accept that the state explains his death in solemn, abstract language. Medals, eulogies and funerals can give the sacrifice a public meaning, but they cannot answer a more private and crueler question: why my child? Alexievich does not try to turn these mothers into symbols. She lets them tell their stories over and over, hesitate, rage, even contradict themselves. This untidiness turns grief from a theme literature can understand into an experience that can never be fully explained."
+      ],
+      [
+        "她对士兵的书写同样拒绝简单的道德分类。许多人既是被战争伤害的人，也是伤害他人的人。他们可能曾经怀抱理想奔赴阿富汗，却在那里学会了杀戮、掠夺与对死亡的麻木。一个人可以在战场上做出平时无法想象的事情，又在回到故乡之后，被要求重新成为一个普通的儿子、丈夫或邻居。阿列克谢耶维奇没有替他们完成这种道德上的自我和解。她允许一个人同时值得同情与谴责，允许受害者的身份与加害者的责任并存。文学在这里并不是为人物寻找一个可以安放的位置，而是拒绝让任何单一身份解释他们的全部经历。",
+        "Her writing about soldiers likewise refuses simple moral categories. Many were both harmed by the war and harmful to others. They may have gone to Afghanistan with ideals, only to learn there to kill, to plunder and to grow numb to death. A person can do on the battlefield what is unimaginable in ordinary life, and after returning home is asked to become again an ordinary son, husband or neighbor. Alexievich does not complete this moral self-reconciliation for them. She allows one person to deserve both sympathy and condemnation, and lets the identity of victim and the responsibility of perpetrator coexist. Literature here does not find a place to settle the characters but refuses to let any single identity explain all they lived through."
+      ],
+      [
+        "这种写作让我想到巴赫金所说的复调，但阿列克谢耶维奇又与陀思妥耶夫斯基式的复调小说有所不同。她的声音来自真实的历史见证者，而非完全虚构的人物；它们之间的矛盾也不仅是思想立场的冲突，更涉及记忆、创伤与自我辩护。一个士兵对战争的解释，可能与母亲对儿子死亡的理解截然不同；同一个人也可能在不同时间改变自己的叙述。阿列克谢耶维奇并不急于消除这些不一致。相反，她让矛盾成为作品的结构，使读者无法轻易获得一个稳定、完整而令人安心的结论。",
+        "This writing recalls Bakhtin’s polyphony, but Alexievich differs from the Dostoevskian polyphonic novel. Her voices come from real witnesses of history, not wholly invented characters, and their contradictions are not only clashes of ideological position but involve memory, trauma and self-justification. A soldier’s explanation of the war may differ completely from a mother’s understanding of her son’s death, and the same person may change their account at different times. Alexievich is in no hurry to remove these inconsistencies. Instead she makes contradiction the structure of the work, so that readers cannot easily reach a stable, complete and reassuring conclusion."
+      ],
+      [
+        "这也让我重新思考自己在工作中理解现实的方式。无论是技术研发还是公共政策分析，我都习惯于将复杂的问题转化为可以比较的指标、分类与结论。数据能够帮助我们识别趋势，模型能够帮助我们作出预测，报告则试图从大量事实中提炼出可供决策的判断。这些方法当然有其必要性，但它们也不可避免地要求我们舍弃某些细节。一个人的生活经验可能最终变成一条数据，一种复杂的社会处境可能被归入某个统计类别。我们越是追求分析的清晰与可操作性，就越容易忘记那些无法被模型充分表达的差异。",
+        "This also made me rethink how I understand reality in my work. Whether in technical development or public policy analysis, I am used to turning complex problems into comparable metrics, categories and conclusions. Data helps us identify trends, models help us predict, and reports try to distill judgments for decision-making from a mass of facts. These methods are of course necessary, but they inevitably require us to discard some details. A person’s lived experience may end up as one data point, and a complex social situation may be filed under a statistical category. The more we pursue clarity and actionability in analysis, the easier it is to forget the differences a model cannot adequately express."
+      ],
+      [
+        "阿列克谢耶维奇的写作几乎朝着相反的方向前进。她不急于消除噪声，不将相互冲突的证言平均成某种共识，也不把所有个人经验压缩成一个可以用于证明结论的案例。她保留重复、停顿、情绪与叙述中的不一致，使那些在正式报告中通常会被删去的部分，成为作品真正的内容。这让我意识到，**我们有时以为自己是在通过抽象理解世界，却可能也在通过抽象使世界变得更容易被自己接受。** 一份清晰的报告可以帮助我们认识问题的规模，却未必能够让我们理解问题对于某个具体的人意味着什么。",
+        "Alexievich’s writing moves in almost the opposite direction. She is in no hurry to remove noise, does not average conflicting testimony into a consensus, and does not compress personal experience into a case that proves a conclusion. She keeps the repetitions, pauses, emotions and inconsistencies of the telling, so that what a formal report would usually cut becomes the real content of the work. This made me realize that **we sometimes think we understand the world through abstraction, when we may also be using abstraction to make the world easier for ourselves to accept.** A clear report can help us grasp the scale of a problem, but it cannot necessarily make us understand what the problem means to a particular person."
+      ],
+      [
+        "不过，我并不认为这种文学形式天然比历史研究或数据分析更加接近真相。阿列克谢耶维奇并非一个透明的记录装置。她决定采访谁、保留哪些话语、如何剪裁与排列证言，也决定了读者将如何理解这些声音。看似没有中心叙述者的作品，实际上仍然存在一个强大的作者意识。她通过让自己退居幕后，使不同证言获得了独立的表现空间，却也可能让读者忽略这些声音已经经过文学加工。**复调并不意味着作者权力的消失，而意味着作者将自己的权力从直接解释转移到了选择与编排之中。**",
+        "Still, I do not think this literary form is inherently closer to the truth than historical research or data analysis. Alexievich is not a transparent recording device. Whom she interviews, which words she keeps, and how she cuts and arranges the testimony also decide how readers will understand these voices. A work that seems to have no central narrator in fact still has a powerful authorial consciousness. By stepping behind the scenes she gives each testimony independent room, but she may also let readers forget that the voices have been literarily shaped. **Polyphony does not mean the disappearance of the author’s power; it means the author moves that power from direct explanation into selection and arrangement.**"
+      ],
+      [
+        "这一点在《锌皮娃娃兵》出版后引发的争议中显得尤其重要。部分受访者及其家属对书中的呈现提出异议，作品也曾引发诉讼。这样的争议不能简单证明作者失实，也不能因为作品具有反战立场就被一笔带过。一个人愿意讲述自己的痛苦，并不必然意味着他愿意让这些话语在新的文学结构中获得作者赋予的意义。见证文学由此面临一种特殊的伦理困境：它希望将被压抑的个人声音从官方历史中解放出来，却又不可避免地将这些声音纳入作者自己的叙事。文学究竟是在让他人说话，还是在借助他人的话语完成自己的表达？我认为，这个问题没有简单的答案，却恰恰构成了阿列克谢耶维奇写作最值得认真讨论的部分。",
+        "This matters especially given the controversy after *Zinky Boys* was published. Some interviewees and their families objected to how they were presented, and the work even led to lawsuits. Such disputes cannot simply prove the author inaccurate, nor can they be brushed aside because the book takes an anti-war stance. A person’s willingness to tell their pain does not necessarily mean they are willing for those words to take on the meaning an author gives them in a new literary structure. Testimonial literature thus faces a particular ethical dilemma: it wants to free suppressed personal voices from official history, yet inevitably folds them into the author’s own narrative. Is literature letting others speak, or using their words to complete its own expression? I think there is no simple answer, and this is exactly the part of Alexievich’s writing most worth serious discussion."
+      ],
+      [
+        "我也逐渐意识到，《锌皮娃娃兵》的复调形式之所以具有如此强烈的反战力量，并不是因为它让更多人证明战争残酷，而是因为它破坏了战争最依赖的叙事机制。战争需要一个能够超越个体生命的理由：国家的安全、历史的使命、集体的荣誉，或者未来某种更美好的秩序。只有当无数人的死亡能够被纳入一个共同的故事，牺牲才可能显得值得。但阿列克谢耶维奇不断将这个共同的故事拆解成无法相互替代的私人记忆。一个母亲的悲伤无法被另一个母亲的悲伤抵消，一个士兵的恐惧也无法因为另一场胜利而消失。她不是通过提出一套新的宏大理论反驳战争，而是让宏大理论无法继续完整地解释这些人的生活。",
+        "I have also come to see that the polyphonic form of *Zinky Boys* has such strong anti-war force not because it lets more people prove war is cruel, but because it destroys the narrative mechanism war depends on most. War needs a reason that transcends individual lives: national security, a historical mission, collective honor, or some better future order. Only when countless deaths can be folded into one common story can sacrifice seem worthwhile. But Alexievich keeps breaking this common story into private memories that cannot replace one another. One mother’s grief cannot be offset by another’s, and one soldier’s fear does not vanish because of another victory. She does not refute war by proposing a new grand theory; she makes grand theory unable to go on fully explaining these people’s lives."
+      ],
+      [
+        "当然，文学无法代替历史学回答战争的全部问题。苏联为什么入侵阿富汗，战争如何改变国际政治，具体的军事决策又如何造成灾难，都需要更广泛的史料与制度分析。阿列克谢耶维奇的作品不提供这样的全景，也不应该被要求提供。它的价值恰恰在于揭示历史全景所无法容纳的部分。历史学需要解释事件如何发生，见证文学则不断提醒我们：即使事件已经得到解释，人的痛苦也未必因此获得理解。",
+        "Of course, literature cannot replace history in answering all the questions of war. Why the Soviet Union invaded Afghanistan, how the war changed international politics, and how specific military decisions led to disaster all require broader sources and institutional analysis. Alexievich’s work does not provide such a panorama and should not be asked to. Its value lies in revealing what the historical panorama cannot hold. History must explain how events happened, while testimonial literature keeps reminding us that even when events have been explained, human suffering is not thereby understood."
+      ],
+      [
+        "读完这本书，我最难忘的不是某个关于战争的结论，而是那些始终无法被归纳为结论的声音。它们反复讲述同样的恐惧，记住一些旁人看来微不足道的细节，也在回忆中不断改变对自己的理解。阿列克谢耶维奇没有赋予它们一个整齐的结局，因为现实中的悲伤原本就不按照文学的节奏结束。战争可以结束，政权可以改变，历史评价也可以被推翻，但母亲失去的孩子仍然不会回来。那些曾经被赋予崇高意义的牺牲，一旦失去政治上的正当性，甚至可能使生者承受第二次伤害：他们不仅失去了亲人，还失去了曾经用来理解这种失去的理由。",
+        "After finishing the book, what I remember most is not any conclusion about war but the voices that can never be summarized into a conclusion. They repeat the same fears, remember details that seem trivial to others, and keep changing how they understand themselves in recollection. Alexievich gives them no tidy ending, because real grief never ends at literature’s pace. A war can end, a regime can change, historical verdicts can be overturned, but the child a mother lost still does not return. Sacrifices once given a lofty meaning may, when they lose political legitimacy, even inflict a second wound on the living: they have lost not only their loved ones but the reasons they once used to understand that loss."
+      ],
+      [
+        "**我们总希望历史能够给出一个完整的解释，仿佛只要理解了战争为什么发生，就能够理解战争中发生的一切。但阿列克谢耶维奇让我怀疑，某些经验之所以需要文学，并不是因为它们尚未得到解释，而是因为任何解释都无法穷尽它们。**",
+        "**We always hope history will give a complete explanation, as if understanding why a war happened would let us understand everything that happened in it. But Alexievich makes me suspect that some experiences need literature not because they have not yet been explained, but because no explanation can exhaust them.**"
+      ],
+      [
+        "也许这正是《锌皮娃娃兵》最深刻的文学成就。它没有为战争寻找一个更好的故事，而是让那些被战争破坏的人生，拒绝成为任何故事中可以轻易安放的一部分。历史总试图将无数人的命运整理成一条可以理解的道路，而阿列克谢耶维奇让我们听见，道路两旁那些永远无法被带走的声音。",
+        "Perhaps this is the deepest literary achievement of *Zinky Boys*. It does not look for a better story of war but lets the lives war destroyed refuse to be easily placed in any story. History always tries to arrange countless fates into a road that can be understood, and Alexievich lets us hear the voices on either side of that road that can never be carried away."
+      ]
+    ]
+  },
+  {
+    "date": "2018-10-12",
+    "title": "Snow Falls on Varykino",
+    "slug": "snow-falls-on-varykino",
+    "category": "Novel",
+    "book": {
+      "cover": "doctor_zhivago.jpg",
+      "title": "Doctor Zhivago",
+      "author": "Boris Pasternak",
+      "language": "English",
+      "country": "Russia",
+      "original": "Russian",
+      "lines": [
+        "Novel · Russian original, first published 1957",
+        "A doctor and poet lives through the Russian Revolution and civil war, and his love for Lara in a snowbound house at Varykino."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      [
+        "瓦雷金诺的冬天，房屋被积雪包围，窗玻璃结着厚厚的冰霜。日瓦戈与拉拉暂时躲开了战争，在这座几乎与外界隔绝的房子里生活。白天，他们为取暖、食物和日常琐事忙碌；夜晚，日瓦戈重新开始写诗。屋外的俄国正在经历革命与内战，屋内却仍然有人读书、相爱，留意雪地里的光线。读《日瓦戈医生》，我最难忘的不是革命如何改变了俄国，而是帕斯捷尔纳克竟然愿意花费如此多的笔墨，描写那些在历史看来微不足道的时刻。",
+        "In the winter at Varykino, the house is ringed by snow and the windowpanes are crusted with thick frost. Zhivago and Lara have escaped the war for a while and live in a house almost cut off from the world. By day they are busy with warmth, food and daily chores; by night Zhivago begins to write poems again. Outside, Russia is going through revolution and civil war, yet inside there are still people who read, love, and notice the light on the snow. What I remember most from *Doctor Zhivago* is not how the revolution changed Russia, but that Pasternak was willing to spend so many words on moments history considers insignificant."
+      ],
+      [
+        "日瓦戈是一名医生，也是诗人。他能够理解革命最初的理想，却无法接受革命逐渐要求每个人以同一种语言思考和生活。在游击队中，他被迫随军行动，目睹暴力如何使原本具体的人变成敌我双方的符号。帕斯捷尔纳克没有让他成为一个勇敢的反抗者。他时常犹豫，缺乏行动能力，甚至无法保护自己珍视的人。这样的主人公很难令人崇拜，却也正因为他的不坚定，小说才避免成为另一种政治宣言。",
+        "Zhivago is a doctor and also a poet. He can understand the original ideals of the revolution, but cannot accept that it gradually demands that everyone think and live in the same language. With the partisans he is forced to move with the army, watching how violence turns concrete individuals into symbols of friend and enemy. Pasternak does not make him a brave rebel. He often hesitates, lacks the capacity to act, and cannot even protect the people he treasures. Such a protagonist is hard to admire, but it is precisely because of his wavering that the novel avoids becoming another political manifesto."
+      ],
+      [
+        "但我并不愿意把日瓦戈的遭遇简单理解为革命对个人自由的摧毁。旧俄国的贫困、土地分配不公、阶级特权与政治专制，同样构成了真实的暴力，只是这种暴力更为缓慢，也更容易被日常生活所掩盖。对于一个能够读诗、行医并拥有私人生活的知识分子而言，革命可能意味着秩序的崩溃；对于长期被排斥在这种生活之外的人而言，革命却可能意味着第一次有机会改变自己的命运。**我们不能因为革命最终背叛了自己的理想，就否认那些理想最初回应过的真实苦难。** 否则，对革命暴力的批判也可能不知不觉变成对旧秩序的怀念。",
+        "But I am unwilling to read Zhivago’s fate simply as the revolution destroying individual freedom. The poverty of old Russia, the unjust distribution of land, class privilege and political autocracy were also real violence, only slower and easier for everyday life to conceal. For an intellectual who can read poetry, practice medicine and have a private life, revolution may mean the collapse of order; for those long excluded from such a life, it may mean the first chance to change their fate. **We cannot deny the real suffering that those ideals first answered just because the revolution ended up betraying them.** Otherwise, criticism of revolutionary violence may unwittingly turn into nostalgia for the old order."
+      ],
+      [
+        "这种矛盾在斯特列利尼科夫身上尤其明显。拉拉的丈夫帕维尔·安季波夫，原本是一个有着私人情感与理想的人，后来却将自己改造成革命意志的执行者。他相信历史必须朝着某个方向前进，而个人的幸福可以为此牺牲。日瓦戈无法将自己变成历史的工具，斯特列利尼科夫却几乎不再允许自己成为一个普通人。我并不认为后者的悲剧证明革命信念本身必然错误。真正令人恐惧的，是当一个人确信自己代表历史的正确方向时，他便可能逐渐失去怀疑自身行为的能力。**革命原本试图使人摆脱被支配的命运，却可能在取得权力之后，要求人们以服从革命的方式证明自己获得了解放。**",
+        "This contradiction is especially clear in Strelnikov. Lara’s husband, Pavel Antipov, was once a man with private feelings and ideals, but he remade himself into an executor of revolutionary will. He believes history must move in a certain direction and that individual happiness can be sacrificed for it. Zhivago cannot turn himself into an instrument of history, while Strelnikov almost no longer allows himself to be an ordinary person. I do not think the latter’s tragedy proves that revolutionary conviction is necessarily wrong. What is truly frightening is that once a person is sure he represents the right direction of history, he may gradually lose the ability to doubt his own actions. **The revolution set out to free people from being dominated, yet once in power it may demand that people prove they have been liberated by obeying it.**"
+      ],
+      [
+        "但反过来说，日瓦戈的道德敏感也并非没有局限。他拒绝将个人生命化约为政治目的，却很少能够提出改变社会不公的实际办法。他对日常生活的珍视令人动容，但这种生活所需要的教育、闲暇与物质条件，并不是旧俄国所有人都能够享有的。一个人可以正当地反对革命暴力，却仍然需要回答：如果不通过革命，原有的压迫又应当如何结束？帕斯捷尔纳克让我们深切感受到革命摧毁了什么，却较少让那些原本没有什么可失去的人获得同等充分的表达。这既是小说的立场，也是它的局限。",
+        "Conversely, Zhivago’s moral sensitivity is not without limits. He refuses to reduce individual life to political ends, yet rarely offers any practical way to change social injustice. His devotion to everyday life is moving, but the education, leisure and material conditions that such a life requires were not available to everyone in old Russia. A person may rightly oppose revolutionary violence and still must answer: if not through revolution, how was the existing oppression to end? Pasternak makes us feel deeply what the revolution destroyed, but gives less equally full expression to those who had little to lose in the first place. This is both the novel’s position and its limitation."
+      ],
+      [
+        "我尤其喜欢帕斯捷尔纳克对自然的描写。雪、森林、春天的融水与窗边的光，并不只是人物命运的背景。革命者相信历史有明确的方向，人的生活必须服从未来的某种秩序；自然却依照自己的节奏生长、衰败与复苏。瓦雷金诺的雪不会因为革命胜利而停止落下，春天也不会因为某种政治理想而提前到来。帕斯捷尔纳克让两种时间在小说中并存：一种由历史事件构成，另一种则存在于季节、身体与日常感受之中。然而，自然的美也无法替代社会正义。一个人在雪景中获得的精神自由，并不能使另一个人的贫困因此变得可以接受。",
+        "I especially love Pasternak’s descriptions of nature. Snow, forest, spring meltwater and the light at a window are not merely a backdrop to the characters’ fates. Revolutionaries believe history has a clear direction and that human life must obey some future order; nature grows, decays and revives at its own pace. The snow at Varykino does not stop falling because the revolution wins, and spring does not arrive early for any political ideal. Pasternak lets two kinds of time coexist in the novel: one made of historical events, the other found in seasons, bodies and everyday sensation. Yet the beauty of nature cannot replace social justice. The spiritual freedom one person finds in a snowscape cannot make another person’s poverty acceptable."
+      ],
+      [
+        "拉拉与日瓦戈的爱情，恰恰发生在这两种时间的缝隙里。他们在瓦雷金诺获得了一段短暂的共同生活，但这份幸福从一开始就带着无法长久的预感。日瓦戈仍然牵挂妻子冬妮娅与孩子，拉拉也有自己的家庭和过去。帕斯捷尔纳克并没有真正解决这些感情之间的冲突。日瓦戈对拉拉的爱可以是真实的，对冬妮娅的亏欠也同样真实。一个人能够敏锐地感受生活的美，却未必因此拥有处理生活的勇气。小说的诗意在这里反而显出某种残酷：美并不能替人承担责任。",
+        "The love between Lara and Zhivago happens precisely in the gap between these two times. They are given a brief life together at Varykino, but this happiness carries from the start a premonition that it cannot last. Zhivago still cares for his wife Tonya and their child, and Lara has her own family and past. Pasternak does not truly resolve the conflict among these feelings. Zhivago’s love for Lara can be real, and his debt to Tonya is just as real. A person can feel the beauty of life keenly without having the courage to manage it. The poetry of the novel here shows a certain cruelty: beauty cannot bear responsibility on anyone’s behalf."
+      ],
+      [
+        "小说的叙事也有些奇特。人物在辽阔的俄国土地上反复偶遇，许多情节带着近乎不可信的巧合，人物有时会突然说出一大段关于历史与生命的议论。若以托尔斯泰式的现实主义衡量，这些安排未必严密。但帕斯捷尔纳克首先是一位诗人。他更在意意象之间的呼应，而不是事件之间无懈可击的因果关系。一盏灯、一场雪、一个在远处出现的人影，都可能在相隔许多章节之后重新获得意义。历史不断试图将人的命运组织成一条可以解释的道路，小说却让生活保持着偶然、散乱与不可预料。",
+        "The narrative is also somewhat strange. Characters meet again and again by chance across the vast Russian land, many plot turns rely on almost unbelievable coincidence, and characters sometimes burst into long speeches about history and life. By the measure of Tolstoyan realism these arrangements are not tight. But Pasternak is first of all a poet. He cares more about the echoes among images than about airtight causality between events. A lamp, a snowfall, a figure appearing in the distance may regain meaning many chapters later. History keeps trying to organize human fates into a road that can be explained, while the novel keeps life accidental, scattered and unpredictable."
+      ],
+      [
+        "我读这本书时，也常想到自己对于生活的安排。我们习惯于为未来制定计划，相信只要事业、家庭与物质条件逐渐稳定，就能够拥有更多自由。但瓦雷金诺的冬天让我想到，生活并不会等到一切安排妥当才开始。那些真正令人难忘的时刻，往往既不符合计划，也无法在日后重新补偿。它们可能只是一场雪、一顿晚餐，或某个突然意识到自己正在幸福的下午。然而，我也不愿将这种私人幸福浪漫化到足以否定社会变革的必要性。一个人有权珍惜自己的生活，另一个人同样有权要求改变使自己无法正常生活的制度。",
+        "While reading, I often thought about how I arrange my own life. We are used to planning for the future, believing that once career, family and material conditions steadily settle we will have more freedom. But the winter at Varykino reminded me that life does not wait until everything is arranged before it begins. The truly memorable moments often fit no plan and cannot be made up for later. They may be only a snowfall, a dinner, or an afternoon when one suddenly realizes one is happy. Yet I am also unwilling to romanticize private happiness to the point of denying the need for social change. One person has the right to treasure their life, and another has the same right to demand a change to the system that keeps them from living normally."
+      ],
+      [
+        "也许革命最难解决的矛盾正在这里。没有对现存秩序的否定，许多不公便可能永远延续；但当否定成为革命的全部语言，革命又可能失去对具体生命的尊重。我们不能要求所有受压迫者无限等待温和的改革，也不能因为某种未来的正义值得追求，就允许现在的人被无限牺牲。**革命的正当性既不能仅凭它反对了什么来证明，也不能仅凭它最终建立了什么来衡量；它还必须接受那些在革命过程中被伤害的人所提出的质问。**",
+        "Perhaps this is the hardest contradiction of revolution. Without negating the existing order, much injustice may continue forever; but when negation becomes the whole language of revolution, it may lose respect for concrete lives. We cannot ask all the oppressed to wait endlessly for gentle reform, nor allow people in the present to be sacrificed without limit because some future justice is worth pursuing. **The legitimacy of a revolution can be proved neither by what it opposed nor measured only by what it finally built; it must also accept the questioning of those who were harmed along the way.**"
+      ],
+      [
+        "小说结尾附有日瓦戈的诗篇。这些诗无法挽回他的爱情，无法改变他逐渐衰败的命运，也无法为历史提供另一种结局。但它们让人重新想起那个曾经站在窗前、看见雪光的人。日瓦戈没有成为革命的英雄，也没有成为自己生活的主人。他留下的只是一些诗，以及那些被诗保存下来的感受。",
+        "The novel ends with Zhivago’s poems appended. They cannot win back his love, change his slow decline, or offer history another ending. But they make us remember the man who once stood at the window and saw the light on the snow. Zhivago did not become a hero of the revolution, nor the master of his own life. All he left were some poems, and the feelings the poems preserved."
+      ],
+      [
+        "合上书后，我想到的仍然是瓦雷金诺那座被雪覆盖的房子。它没有真正保护过任何人，甚至连短暂的幸福也终究消失了。但我也知道，屋外那些渴望改变命运的人，并不比屋内的人更不值得被理解。**一场革命既应当被追问它为什么必须发生，也应当被追问它为什么让某些人无法继续生活。** 帕斯捷尔纳克最动人的地方，是他让我们看见历史理想无法替代的私人生命；而阅读这部小说时，我希望自己仍能记得，那些要求改变历史的人，也同样拥有具体而不可替代的人生。",
+        "After closing the book, what I still think of is the snow-covered house at Varykino. It never truly protected anyone, and even its brief happiness finally vanished. But I also know that the people outside who longed to change their fate are no less deserving of understanding than those inside. **A revolution should be asked why it had to happen, and also why it left some people unable to go on living.** What moves me most in Pasternak is that he lets us see private lives that historical ideals cannot replace; and in reading this novel I hope to remember that those who demand a change in history also have concrete, irreplaceable lives."
+      ]
     ]
   }
 ];

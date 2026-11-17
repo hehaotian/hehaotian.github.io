@@ -106,6 +106,11 @@ body[data-tab="gigs"] { --frame: 880px; }
 .copy { margin: 64px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 .stars { color: var(--muted); font-size: 14px; letter-spacing: 1px; }
 .total { margin: -24px 0 24px; color: var(--muted); }
+/* Plates: the achievements row is a read-only stat band (mark on top, count below, one row between two hairlines), unlike the pill filters under it */
+#plates .total { display: grid; grid-template-columns: repeat(auto-fit, minmax(76px, 1fr)); gap: 18px 0; margin: -8px 0 32px; padding: 22px 0 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+#plates .total .ts { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+#plates .total .tl { display: flex; align-items: center; justify-content: center; height: 24px; }
+#plates .total .ts b { font-weight: 300; font-size: 26px; line-height: 1; color: var(--text); font-variant-numeric: tabular-nums; }
 .cbar { padding: 7px 0; border-radius: 4px; }
 .chead { display: flex; justify-content: space-between; gap: 12px; font-variant-numeric: tabular-nums; }
 .chead .where { color: var(--muted); }
@@ -246,20 +251,20 @@ a.plate:hover { border-color: #aaa; }
 .plate .yr { color: var(--muted); font-size: 13px; margin-top: auto; padding-top: 14px; font-variant-numeric: tabular-nums; }
 .mstar { height: 16px; width: auto; margin-right: 5px; vertical-align: -2px; }
 .mbib { height: 18px; width: auto; vertical-align: -3px; }
-.total .mstar { height: 14px; margin-right: 2px; vertical-align: -2px; }
-.total .mbib { height: 16px; vertical-align: -3px; }
+.total .mstar { height: 16px; margin-right: 1px; vertical-align: 0; }
+.total .mbib { height: 22px; vertical-align: 0; }
 
 /* Blue Ribbon Survey mark (a transparent PNG) */
 .mbr { height: 18px; width: auto; margin-right: 3px; vertical-align: -3px; }
 /* The World's 50 Best Restaurants mark (a transparent PNG, navy lettering) */
 .mw50 { height: 20px; width: auto; vertical-align: -4px; }
-.total .mw50 { height: 16px; vertical-align: -3px; }
+.total .mw50 { height: 24px; vertical-align: 0; }
 .tag .mw50 { height: 17px; vertical-align: -4px; }
 #reader .kind .mw50 { height: 24px; vertical-align: -6px; }
 .msep { display: inline-block; width: 1px; height: 16px; margin: 0 10px 0 7px; background: #cfcfcf; vertical-align: -3px; }
 #reader .kind .msep { height: 18px; margin: 0 8px 0 6px; vertical-align: -4px; }
 .total .msep, .tag .msep { display: none; }
-.total .mbr { height: 14px; margin-right: 1px; vertical-align: -2px; }
+.total .mbr { height: 18px; margin: 0; vertical-align: 0; }
 .tag .mbr { height: 15px; margin: 0; vertical-align: -3px; }
 #reader .kind .mbr { height: 22px; margin: 0 2px; vertical-align: -5px; }
 
@@ -270,7 +275,7 @@ a.plate:hover { border-color: #aaa; }
 #reader .kind .mbib { height: 20px; vertical-align: -4px; }
 #reader .place a { color: inherit; }
 .mrec { height: 20px; width: auto; vertical-align: -4px; }
-.total .mrec { height: 16px; vertical-align: -3px; }
+.total .mrec { height: 22px; vertical-align: 0; }
 #reader .kind .mrec { height: 22px; vertical-align: -5px; }
 
 /* long bilingual pieces: epigraph, numbered sections, references */
@@ -313,16 +318,19 @@ a.plate:hover { border-color: #aaa; }
 #reader .langsw { margin: 14px 0 0; display: flex; justify-content: center; gap: 6px; }
 #reader .langsw button { font: inherit; font-size: 13px; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 1px 11px; cursor: pointer; }
 #reader .langsw button.on { color: inherit; border-color: currentColor; }
+#reader .aitag { margin: 8px 0 0; text-align: center; color: var(--muted); font-size: 12px; letter-spacing: .6px; }
+#reader .aitag span { margin-right: 3px; }
+#reader .aidisc { margin: 28px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; font-style: italic; }
 
 /* Haotian Recommend mark (gold H badge) */
 .mhr { height: 20px; width: auto; vertical-align: -4px; }
-.total .mhr { height: 16px; vertical-align: -3px; }
+.total .mhr { height: 22px; vertical-align: 0; }
 .tag .mhr { height: 16px; vertical-align: -3px; }
 #reader .kind .mhr { height: 22px; vertical-align: -5px; }
 
 /* Apple Caffè mark (rainbow logo) */
 .mapl { height: 18px; width: auto; vertical-align: -3px; }
-.total .mapl { height: 15px; vertical-align: -2px; }
+.total .mapl { height: 20px; vertical-align: 0; }
 .tag .mapl { height: 15px; vertical-align: -2px; }
 #reader .kind .mapl { height: 20px; vertical-align: -4px; }
 

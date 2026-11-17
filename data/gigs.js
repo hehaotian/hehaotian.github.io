@@ -7,5 +7,5 @@ window.GIGS = [
    "cover": "food_truck_cover.jpg",
    "summary": "I invested in a new Asian fusion food truck, planned to start operating around March 2027 in Seattle neighborhoods such as Ballard and South Lake Union.",
    "tags": ["Food truck", "Asian fusion", "Catering"],
-   "body": ["I invested in a new Asian fusion food truck, planned to start operating around March 2027 in Seattle neighborhoods such as Ballard and South Lake Union."]}
+   "body": ["I invested in a new Asian fusion food truck, planned to start operating around March 2027 in Seattle neighborhoods such as Ballard and South Lake Union.", {"photo": "food_truck_cover.jpg"}]}
 ];
