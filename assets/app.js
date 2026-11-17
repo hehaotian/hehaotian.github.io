@@ -341,15 +341,15 @@ legacyReads();
   // if a file is missing the page falls back to a plain star / the word Bib.
   const starImg = '<img class="mstar" src="assets/michelin-star.webp" alt="star" onerror="this.replaceWith(\'★\')">';
   // Blue Ribbon Survey (Korea's own restaurant guide): one ribbon per level on a card (blueRibbon: 1-3), a single ribbon in the tally and the filter
-  const ribbon = '<img class="mbr" src="assets/blue-ribbon.png" alt="Blue Ribbon" title="Blue Ribbon Survey" onerror="this.replaceWith(\'Blue Ribbon\')">';
+  const ribbon = '<img class="mbr" src="assets/blue-ribbon.png" alt="Blue Ribbon" data-tip="Blue Ribbon Survey" onerror="this.replaceWith(\'Blue Ribbon\')">';
   const bibImg = '<img class="mbib" src="assets/michelin-bib.svg" alt="Bib Gourmand" onerror="this.replaceWith(\'Bib\')">';
   // The World's 50 Best Restaurants (world50: true): its own category, shown after the Michelin mark and before any ribbons
-  const w50Img = '<img class="mw50" src="assets/world-50-best.png" alt="The World’s 50 Best Restaurants" title="The World’s 50 Best Restaurants" onerror="this.replaceWith(\'50 Best\')">';
-  // world50 can be true, its place on the list (48), or the name of another 50 Best list ("Vineyards"): the logo's hover text and screen-reader text say which; nothing is printed beside it
-  const w50Of = p => { const t = `The World’s 50 Best ${typeof p.world50 === "string" ? p.world50 : "Restaurants"}${+p.world50 > 1 ? ", No. " + (+p.world50) : ""}`; return w50Img.replace(/(alt|title)="The World’s 50 Best Restaurants"/g, `$1="${t}"`); };
-  const aplImg = '<img class="mapl" src="assets/apple-logo.webp" alt="Apple Caffè" title="Apple Caffè" onerror="this.replaceWith(\'Apple\')">';
-  const recImg = '<img class="mrec" src="assets/michelin-recommended.svg" alt="Michelin recommended" title="Michelin recommended" onerror="this.replaceWith(\'Rec.\')">';
-  const hrImg = '<img class="mhr" src="assets/haotian-recommend.svg" alt="Haotian Recommend" title="Haotian Recommend" onerror="this.replaceWith(\'H\')">';   // every place without a Michelin or Apple mark
+  const w50Img = '<img class="mw50" src="assets/world-50-best.png" alt="The World’s 50 Best Restaurants" data-tip="The World’s 50 Best Restaurants" onerror="this.replaceWith(\'50 Best\')">';
+  // world50 can be true, its place on the World's list (48), the name of another World's list ("Vineyards"), or {"list": "North America's 50 Best Restaurants", "rank": 32} for any list: the logo's hover text and screen-reader text say which; nothing is printed beside it
+  const w50Of = p => { const w = p.world50, o = w && typeof w === "object" ? w : null; const list = o ? o.list : typeof w === "string" ? `The World’s 50 Best ${w}` : "The World’s 50 Best Restaurants"; const rank = o ? +o.rank : +w > 1 ? +w : 0; const t = list + (rank ? ", No. " + rank : ""); return w50Img.replace(/(alt|data-tip)="The World’s 50 Best Restaurants"/g, `$1="${t}"`); };
+  const aplImg = '<img class="mapl" src="assets/apple-logo.webp" alt="Apple Caffè" data-tip="Apple Caffè" onerror="this.replaceWith(\'Apple\')">';
+  const recImg = '<img class="mrec" src="assets/michelin-recommended.svg" alt="Michelin recommended" data-tip="Michelin recommended" onerror="this.replaceWith(\'Rec.\')">';
+  const hrImg = '<img class="mhr" src="assets/haotian-recommend.svg" alt="Haotian Recommend" data-tip="Haotian Recommend" onerror="this.replaceWith(\'H\')">';   // every place without a Michelin or Apple mark
   // date may be "YYYY-MM-DD", "YYYY-MM" or "YYYY"; show as much of it as is given
   const when = (d, mo) => { d = String(d); const [y, m, day] = d.split("-"); return !m ? y : new Date(`${y}-${m}-${day || "01"}T00:00:00`).toLocaleDateString("en-US", { year: "numeric", month: mo, ...(day && { day: "numeric" }) }); };
   // the Michelin / Apple mark (or Haotian Recommend when there is nothing else), then the ribbons after a thin divider
@@ -360,13 +360,14 @@ legacyReads();
   const card = (p, i) => `<a class="plate" href="#plates/${ids[i]}">${p.cover ? `<img class="cov" ${thumb(p.cover)} alt="" loading="lazy" decoding="async">` : ""}<span class="st">${mark(p)}</span><span class="nm">${esc(p.name)}</span>
       <span class="ct">${esc(p.city)}</span>${p.date ? `<span class="yr">${esc(when(p.date, "short"))}</span>` : ""}</a>`;
   // categories: a place counts in its Michelin-side category AND in its ribbon level, so one with both (a star and 2 ribbons) is found under each
-  const CATS = [["w50", "W50"], [3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], ["br3", "BR3"], ["br2", "BR2"], ["br1", "BR1"], ["hao3", "HAO3"], ["hao2", "HAO2"], ["hao1", "HAO1"], ["apl3", "APL3"], ["apl2", "APL2"], ["apl1", "APL1"]];
-  const inCat = (p, k) => k === "w50" ? !!p.world50 : typeof k === "string" ? (k.startsWith("apl") ? apples(p) === +k.slice(3) : k.startsWith("hao") ? haos(p) === +k.slice(3) : ribbons(p) === +k.slice(2)) : mRank(p) === k;
+  const CATS = [["w50", "W50"], ["w50r", "W50R"], ["w50n", "W50N"], ["w50v", "W50V"], [3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], ["br3", "BR3"], ["br2", "BR2"], ["br1", "BR1"], ["hao3", "HAO3"], ["hao2", "HAO2"], ["hao1", "HAO1"], ["apl3", "APL3"], ["apl2", "APL2"], ["apl1", "APL1"]];
+  const w50List = p => { const w = p.world50, n = String(w && typeof w === "object" ? w.list : typeof w === "string" ? w : ""); return /vineyard/i.test(n) ? "w50v" : /north america/i.test(n) ? "w50n" : "w50r"; };   // which 50 Best list: restaurants, North America or vineyards
+  const inCat = (p, k) => k === "w50" ? !!p.world50 : typeof k === "string" && k.startsWith("w50") ? !!p.world50 && w50List(p) === k : typeof k === "string" ? (k.startsWith("apl") ? apples(p) === +k.slice(3) : k.startsWith("hao") ? haos(p) === +k.slice(3) : ribbons(p) === +k.slice(2)) : mRank(p) === k;
   const count = k => list.filter(p => inCat(p, k)).length;
-  const label = s => s.replace(/★/g, starImg).replace(/^W50$/, w50Img).replace(/^Bib$/, bibImg).replace(/^BR([123])$/, (m, n) => ribbon.repeat(+n)).replace(/^REC$/, recImg).replace(/^APL([123])$/, (m, n) => aplImg.repeat(+n)).replace(/^HAO([123])$/, (m, n) => hrImg.repeat(+n));
+  const label = s => s.replace(/★/g, starImg).replace(/^W50$/, w50Img).replace(/^W50R$/, "Worldwide").replace(/^W50N$/, "North America").replace(/^W50V$/, "Vineyards").replace(/^Bib$/, bibImg).replace(/^BR([123])$/, (m, n) => ribbon.repeat(+n)).replace(/^REC$/, recImg).replace(/^APL([123])$/, (m, n) => aplImg.repeat(+n)).replace(/^HAO([123])$/, (m, n) => hrImg.repeat(+n));
   // five collection cards (World's 50 Best, Michelin, Blue Ribbon, Haotian Recommends, Apple Caffè Macs); a card filters the grid, and Michelin / Blue Ribbon list their levels
   const GROUPS = [
-    { key: "w50", name: "The 50 Best", logo: w50Img, cats: ["w50"] },
+    { key: "w50", name: "The 50 Best", logo: w50Img, cats: ["w50r", "w50n", "w50v"] },
     { key: "mich", name: "Michelin", logo: starImg, cats: [3, 2, 1, 0.5, 0.25], lines: [[3], [2], [1, 0.5, 0.25]] },
     { key: "br", name: "Blue Ribbon", logo: ribbon, cats: ["br3", "br2", "br1"] },
     { key: "hao", name: "Haotian Haochi", logo: hrImg, cats: ["hao3", "hao2", "hao1"] },
@@ -552,3 +553,17 @@ fillLatest();
 })();
 
 syncReader();                            // open a pop-up straight from a shared link
+
+// Plates: hover text on the marks (50 Best list and rank, Blue Ribbon, Apple...). The browser's own title tooltip is slow and unreliable on small marks inside a link, so the shared #gtip is used here; Goods has its own handler
+(function () {
+  const tip = document.getElementById("gtip");
+  if (!tip) return;
+  const over = e => {
+    const t = e.target.closest ? e.target.closest("[data-tip]") : null;
+    if (!t || t.closest("#goods")) return;
+    tip.textContent = t.dataset.tip; tip.hidden = false;
+    tip.style.left = Math.max(8, Math.min(e.clientX + 12, innerWidth - tip.offsetWidth - 8)) + "px"; tip.style.top = e.clientY + 16 + "px";
+  };
+  document.addEventListener("mousemove", e => { if (e.target.closest && e.target.closest("[data-tip]")) over(e); else if (!e.target.closest("#goods")) tip.hidden = true; });
+  document.addEventListener("mouseleave", () => { tip.hidden = true; });
+})();
