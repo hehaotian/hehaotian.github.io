@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Haotian">
 <meta property="og:title" content="Haotian">
-<meta property="og:description" content="Notes, reads, plates, goods and steps. Have a nice day.">
+<meta property="og:description" content="Writings, reads, plates, goods and steps. Have a nice day.">
 <meta property="og:url" content="https://hehaotian.com/">
 <meta property="og:image" content="https://hehaotian.com/assets/photos/home.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -21,7 +21,7 @@
   <a class="brand" href="#home">He</a>
   <button id="menu" class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="tabs"><span></span><span></span><span></span></button>
   <nav id="tabs" aria-label="Sections">
-    <a href="#notes" data-tab="notes">Notes</a>
+    <a href="#notes" data-tab="notes">Writings</a>
     <a href="#reads" data-tab="reads">Reads</a>
     <a href="#plates" data-tab="plates">Plates</a>
     <a href="#goods" data-tab="goods">Goods</a>
@@ -43,7 +43,7 @@
       </figure>
       <div class="pages">
         <ul class="links">
-          <li><a href="#notes">Notes</a><span>No bots, just soul.</span><a class="lat" data-latest="note" hidden></a></li>
+          <li><a href="#notes">Writings</a><span>No bots, just soul.</span><a class="lat" data-latest="note" hidden></a></li>
           <li><a href="#reads">Reads</a><span>What books left me with.</span><a class="lat" data-latest="read" hidden></a></li>
           <li><a href="#plates">Plates</a><span>Eating my way around.</span><a class="lat" data-latest="plate" hidden></a></li>
           <li><a href="#goods">Goods</a><span>Small things, shared.</span><a class="lat" data-latest="gift" hidden></a></li>
@@ -62,10 +62,16 @@
   <section id="plates" class="tab" hidden>
     <div class="col">
       <h2>Plates</h2>
-      <div class="total" id="plates-tally"></div>
-      <div id="plates-cats" class="tags filters"></div>
-      <div id="plates-countries" class="tags filters"></div>
-      <div class="plates" id="plates-list"></div>
+      <div class="rlayout">
+        <aside class="rside">
+          <div class="total" id="plates-tally"></div>
+          <div id="plates-cats" class="tags filters"></div>
+          <div class="pmap"><div id="plates-countries" class="tags filters"></div></div>
+        </aside>
+        <div class="rmain">
+          <div class="plates" id="plates-list"></div>
+        </div>
+      </div>
       <p class="copy" id="plates-copy"></p>
     </div>
   </section>
@@ -97,12 +103,17 @@
 
   <section id="notes" class="tab" hidden>
     <div class="col">
-      <h2>Notes</h2>
-      <div class="nfilters">
-        <div id="notes-tags" class="tags"></div>
-        <div id="notes-langs" class="tags"></div>
+      <h2>Writings</h2>
+      <div class="rlayout">
+        <aside class="rside">
+          <figure class="rchart" id="notes-chart" hidden></figure>
+          <div class="total" id="notes-tags"></div>
+          <div class="pmap"><div id="notes-countries" class="tags filters"></div></div>
+        </aside>
+        <div class="rmain">
+          <div id="notes-list"></div>
+        </div>
       </div>
-      <div id="notes-list"></div>
       <p class="copy" id="notes-copy"></p>
     </div>
   </section>
@@ -110,8 +121,16 @@
   <section id="reads" class="tab" hidden>
     <div class="col">
       <h2>Reads</h2>
-      <div class="nfilters"><div id="reads-countries" class="tags"></div></div>
-      <div class="reads" id="reads-list"></div>
+      <div class="rlayout">
+        <aside class="rside">
+          <figure class="rchart" id="reads-chart" hidden></figure>
+          <div class="total" id="reads-genres"></div>
+          <div id="reads-countries" class="tags filters"></div>
+        </aside>
+        <div class="rmain">
+          <div class="reads" id="reads-list"></div>
+        </div>
+      </div>
       <p class="copy" id="reads-copy"></p>
     </div>
   </section>
@@ -122,6 +141,8 @@
 <script src="data/goods.js"></script>
 <script src="data/notes.js"></script>
 <script src="data/reads.js"></script>
+<script src="data/reads_words.js"></script>
+<script src="data/worldmap.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/cursor.js"></script>
 </body>

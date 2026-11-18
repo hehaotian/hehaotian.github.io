@@ -10,13 +10,13 @@ function show(name) {
   if (!TABS.includes(name)) name = "home";
   TABS.forEach(t => {
     document.getElementById(t).hidden = t !== name;
-    const link = document.querySelector(`[data-tab="${t}"]`);          // Home has no nav link; the name in the header is it
+    const link = document.querySelector(`#tabs [data-tab="${t}"]`);          // Home has no nav link; the name in the header is it
     if (link) link.classList.toggle("active", t === name);
   });
   // the heavy map page loads only the first time you open Steps
   if (name === "steps" && (sub || !frame.src)) frame.src = frame.dataset.src + (sub ? "#" + encodeURIComponent(sub) : "");
   document.body.dataset.tab = name;                                  // lets the CSS match the top bar to this page's column width
-  document.title = name === "home" ? "Haotian" : `${name[0].toUpperCase() + name.slice(1)} · Haotian`;
+  document.title = name === "home" ? "Haotian" : `${{ notes: "Writings" }[name] || name[0].toUpperCase() + name.slice(1)} · Haotian`;   // #notes keeps its address, the page is called Writings
   if (name !== currentTab) window.scrollTo(0, 0);   // opening a pop-up on the same tab keeps the page where it is
   currentTab = name;
 }
@@ -35,9 +35,81 @@ window.addEventListener("hashchange", () => setMenu(false));
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const fmtDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 // country flags for the filter buttons (Notes and Plates); unknown countries fall back to their name
-const FLAGS = { "Peru": "🇵🇪", "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽", "Egypt": "🇪🇬", "Chile": "🇨🇱", "Greece": "🇬🇷", "India": "🇮🇳", "Argentina": "🇦🇷", "Russia": "🇷🇺" };
+const FLAGS = { "Peru": "🇵🇪", "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽", "Egypt": "🇪🇬", "Chile": "🇨🇱", "Greece": "🇬🇷", "India": "🇮🇳", "Argentina": "🇦🇷", "Russia": "🇷🇺", "Israel": "🇮🇱", "Colombia": "🇨🇴", "Belarus": "🇧🇾", "New Zealand": "🇳🇿" };
 const fullDate = d => { d = String(d || ""); return d.length === 4 ? d + "-01-01" : d.length === 7 ? d + "-01" : d; };   // "2026" / "2026-10" / "2026-10-10" compare correctly
 const thumb = f => `src="assets/thumbs/${esc(f)}" onerror="this.onerror=null;this.src='assets/photos/${esc(f)}'"`;   // small copy for the grids (tools/make_thumbs.sh); falls back to the full photo
+// dot-matrix world map (data/worldmap.js), shared by Reads and Plates: land is a grid of dots, each country in counts ({name: n}) gets a marker shaded by n (hover for the name and count, click to filter, click again to clear).
+// A country with no position in COUNTRY_XY stays a flag button. Clicks are handled by the caller on [data-v]; mapTip(el) adds the hover label.
+const worldMap = (counts, selected, label) => {
+  const LAND = window.WORLD_LAND || [], XY = window.COUNTRY_XY || {}, cell = 5, W = 480, S = W / 72, H = LAND.length * S;
+  const names = Object.keys(counts), n = v => counts[v], mx = Math.max(1, ...names.map(n));
+  const dots = []; LAND.forEach((rs, r) => { for (let c = 0; c < 72; c++) { const lon = -180 + cell * c + cell / 2; if (rs.some(([a, b]) => lon >= a && lon <= b)) dots.push(`<circle cx="${((c + .5) * S).toFixed(1)}" cy="${((r + .5) * S).toFixed(1)}" r="1.9"/>`); } });
+  const pins = names.filter(v => XY[v]).sort((a, b) => n(b) - n(a)).map(v => {   // big markers first, so small ones stay on top and clickable
+    const [lat, lon] = XY[v], x = (lon + 180) / 360 * W, y = (77.5 - lat) / cell * S + S / 2, k = n(v), r = 4.5 + Math.sqrt(k) * 1.5, a = (.35 + .65 * k / mx).toFixed(2);
+    return `<circle class="pin${v === selected ? " on" : ""}" data-name="${esc(v)}" data-v="${v === selected ? "" : esc(v)}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" style="fill-opacity:${a}" tabindex="0" role="button" aria-pressed="${v === selected}" data-n="${k}" aria-label="${esc(v)}, ${k}"></circle>`;
+  }).join("");
+  const rest = names.filter(v => !XY[v]).map(v => `<button type="button" class="tag${v === selected ? " on" : ""}" data-v="${v === selected ? "" : esc(v)}" title="${esc(v)}">${FLAGS[v] || esc(v)}</button>`).join("");
+  return `<svg viewBox="0 0 ${W} ${H.toFixed(1)}" role="group" aria-label="${esc(label)}"><g class="land">${dots.join("")}</g>${pins}</svg>${rest ? `<div class="tags">${rest}</div>` : ""}`;
+};
+// hover / focus a map marker: a small label with the flag, the country name and its count; el's parent must be position: relative
+const mapTip = (el, unit) => {
+  const tip = document.createElement("div"); tip.className = "mtip"; tip.hidden = true; el.after(tip);
+  const place = p => { const r = p.getBoundingClientRect(), box = el.parentNode.getBoundingClientRect(), k = p.dataset.n;
+    tip.innerHTML = `<span class="mf">${FLAGS[p.dataset.name] || ""}</span><span><b>${esc(p.dataset.name)}</b><i>${k} ${unit}${k === "1" ? "" : "s"}</i></span>`; tip.hidden = false;
+    tip.style.left = Math.max(0, Math.min(box.width - tip.offsetWidth, r.left - box.left + r.width / 2 - tip.offsetWidth / 2)) + "px";
+    tip.style.top = (r.top - box.top - tip.offsetHeight - 8) + "px"; };
+  el.addEventListener("pointerover", e => { const p = e.target.closest(".pin"); if (p) place(p); });
+  el.addEventListener("pointerout", e => { if (e.target.closest(".pin")) tip.hidden = true; });
+  el.addEventListener("focusin", e => { const p = e.target.closest(".pin"); if (p) place(p); });
+  el.addEventListener("focusout", () => { tip.hidden = true; });
+};
+// line chart of estimated words per year, shared by Reads and Notes: words(n) is an entry's length, label(n) its name in the hover list, noun what an entry is called ("read" / "note").
+// Hover / touch a year for its total and entries; click a year to show only that year (getYear / setYear keep the page's own filter; click again, or "Show all", to clear). Returns { sync() }, to call after every render.
+const yearChart = (el, { list, words, label, noun, caption, getYear, setYear }) => {
+    const yrs = list.map(n => +n.date.slice(0, 4));
+    if (!yrs.length || !list.some(words)) return { sync() {} };
+    const lo = Math.min(...yrs), hi = Math.max(...yrs), years = Array.from({ length: hi - lo + 1 }, (_, i) => lo + i);
+    const tot = Object.fromEntries(years.map(y => [y, 0])), books = Object.fromEntries(years.map(y => [y, []]));
+    list.forEach(n => { const y = +n.date.slice(0, 4); tot[y] += words(n); books[y].push(label(n)); });
+    // the axis starts at 0, unless every year sits well above it (lowest year over 40% of the highest): then it starts at a round number just under the lowest year, so the line fills the chart instead of floating above an empty band
+    const max = Math.max(...years.map(y => tot[y])), low = Math.min(...years.map(y => tot[y])), cut = low >= .4 * max && max > low, span = cut ? max - low : max, want = span / (cut ? 3 : 5) || 1;
+    const step = ((raw, mag) => [1, 2, 5, 10].map(m => m * mag).find(v => v >= raw))(want, 10 ** Math.floor(Math.log10(want))), pad = cut ? .1 * span : 0;
+    const base = cut ? Math.max(0, Math.floor((low - pad) / step) * step) : 0, top = Math.ceil((max + pad) / step) * step;
+    const w = 480, h = 300, L = 42, R = 14, T = 14, B = 28, x = i => L + (years.length > 1 ? i * (w - L - R) / (years.length - 1) : 0), yv = v => T + (h - T - B) * (1 - (v - base) / (top - base));
+    const k = v => v >= 1e6 ? v / 1e6 + "M" : v >= 10000 ? v / 1000 + "k" : v.toLocaleString("en-US"), fmt = v => v >= 1e6 ? (v / 1e6).toFixed(2).replace(/0$/, "") + "M" : v >= 10000 ? Math.round(v / 1000) + "k" : Math.round(v).toLocaleString("en-US");
+    const grid = []; for (let v = base; v <= top; v += step) grid.push(`<line x1="${L}" x2="${w - R}" y1="${yv(v)}" y2="${yv(v)}"/><text x="${L - 6}" y="${yv(v) + 4}" text-anchor="end">${k(v)}</text>`);
+    const pts = years.map((y, i) => `${x(i).toFixed(1)},${yv(tot[y]).toFixed(1)}`).join(" ");
+    const every = years.length > 7 ? 2 : 1;   // the chart is drawn at its real size (480 wide), so labels are thinned to stay readable
+    el.innerHTML = `<figcaption><span>${esc(caption)}</span><button type="button" class="rclear" hidden></button></figcaption>
+      <svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(caption)}; click a year to show only its ${noun}s"><g class="g">${grid.join("")}</g>
+      <line class="guide" y1="${T}" y2="${h - B}" style="display:none"/><polyline points="${pts}"/>
+      ${years.map((y, i) => `<circle data-y="${y}" cx="${x(i).toFixed(1)}" cy="${yv(tot[y]).toFixed(1)}" r="3.5"/>${i % every === 0 ? `<text class="x" data-y="${y}" x="${x(i).toFixed(1)}" y="${h - 8}" text-anchor="middle">${y}</text>` : ""}`).join("")}
+      <rect class="hit" x="0" y="0" width="${w}" height="${h}" fill="transparent"/></svg><div class="rtip" hidden></div>`;
+    el.hidden = false;
+    const svg = el.querySelector("svg"), guide = el.querySelector(".guide"), tip = el.querySelector(".rtip"), clear = el.querySelector(".rclear");
+    const at = e => { const r = svg.getBoundingClientRect(), px = (e.clientX - r.left) / r.width * w; return Math.max(0, Math.min(years.length - 1, Math.round((px - L) / ((w - L - R) / Math.max(1, years.length - 1))))); };
+    const show = i => {
+      const y = years[i], n = books[y].length, shown = books[y].slice(0, 4);
+      guide.setAttribute("x1", x(i)); guide.setAttribute("x2", x(i)); guide.style.display = "";
+      el.querySelectorAll("circle").forEach(c => c.classList.toggle("hov", +c.dataset.y === y));
+      tip.innerHTML = `<b>${y}</b> · about ${fmt(tot[y])} words · ${n} ${noun}${n === 1 ? "" : "s"}${n ? `<span>${shown.map(esc).join("<br>")}${n > 4 ? `<br>+${n - 4} more` : ""}</span>` : ""}`;
+      tip.hidden = false;
+      const r = svg.getBoundingClientRect(), f = el.getBoundingClientRect(), cx = r.left - f.left + x(i) / w * r.width;
+      tip.style.left = Math.max(0, Math.min(f.width - tip.offsetWidth, cx - tip.offsetWidth / 2)) + "px";
+      tip.style.top = Math.max(26, r.top - f.top + yv(tot[y]) / h * r.height - tip.offsetHeight - 12) + "px";
+    };
+    const hide = () => { guide.style.display = getYear() ? "" : "none"; tip.hidden = true; el.querySelectorAll("circle").forEach(c => c.classList.toggle("hov", false)); if (getYear()) guide.setAttribute("x1", x(years.indexOf(getYear()))), guide.setAttribute("x2", x(years.indexOf(getYear()))); };
+    svg.addEventListener("pointermove", e => show(at(e)));
+    svg.addEventListener("pointerdown", e => show(at(e)));
+    svg.addEventListener("pointerleave", hide);
+    svg.addEventListener("click", e => { const y = years[at(e)]; setYear(getYear() === y ? 0 : y); });
+    clear.addEventListener("click", () => setYear(0));
+    return { sync() {   // called by render(): mark the chosen year
+      el.querySelectorAll("circle").forEach(c => c.classList.toggle("on", +c.dataset.y === getYear()));
+      clear.hidden = !getYear(); clear.textContent = getYear() ? getYear() + " · Show all" : "";
+      hide();
+    } };
+};
 const orders = {};                       // tab -> [{slug, title}] newest first: the older / newer links at the foot of a page
 const latest = [];                       // newest entry of each kind, for the line on Home
 const slugify = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -243,38 +315,57 @@ const notePage = (() => {
   const list = (window.NOTES || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
   const ids = slugs(list, n => n.title);
   const listEl = document.getElementById("notes-list"), tagsEl = document.getElementById("notes-tags");
-  const cats = [...new Set(list.map(n => n.category).filter(Boolean))];
-  const langs = [...new Set(list.flatMap(n => n.languages || []))].sort((a, b) => list.filter(n => hasLang(n, b)).length - list.filter(n => hasLang(n, a)).length || (a < b ? -1 : 1));
-  const langsEl = document.getElementById("notes-langs");
+  // where each note was written: the country is the last part of the English line of its "place" ("Tokyo, Japan", "Livermore, CA"); a US state code or a Korean / Chinese line falls back to the United States
+  const US_STATES = "AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC".split(" ");
+  const countryOf = n => { const ls = String(n.place || "").split("\n"), t = (ls[1] || "").split(",").pop().trim(); return US_STATES.includes(t) || /미국|美国/.test(ls.join(" ")) ? "United States" : t === "South Korea" ? "Korea" : /^[A-Za-z .'-]+$/.test(t) ? t : ""; };
+  // the Chinese reviews in Reads are writing too, so they count toward the yearly total and the map (a read that shares another read's text, sameAs, is counted once)
+  const chineseReads = (window.READS || []).filter(r => !r.sameAs && (r.languages || []).some(l => /Chinese/.test(l)));
+  const everything = [...list, ...chineseReads];
+  // the list shows these reads too, by their review title, each linking to its page in Reads (same link names as the Reads page gives them)
+  const allReads = (window.READS || []).map(n => n.sameAs ? { ...window.READS.find(x => x.slug === n.sameAs), ...n } : n).sort((a, b) => (a.date < b.date ? 1 : -1));
+  const readIds = slugs(allReads, n => n.title);
+  const entries = [...list.map((n, i) => ({ n, href: "#notes/" + ids[i], cat: n.category })), ...allReads.map((n, i) => ({ n, href: "#notes/book-" + readIds[i], cat: "Book" })).filter(e => !e.n.sameAs && (e.n.languages || []).some(l => /Chinese/.test(l)))].sort((a, b) => (a.n.date < b.n.date ? 1 : -1));
+  // on this page every read is simply a "Book" (its own genre stays on its pop-up); the category cards count notes and books together, most first
+  const cats = [...new Set(entries.map(e => e.cat).filter(Boolean))].sort((a, b) => entries.filter(e => e.cat === b).length - entries.filter(e => e.cat === a).length);
+  const countries = [...new Set(everything.map(countryOf).filter(Boolean))].sort((a, b) => everything.filter(n => countryOf(n) === b).length - everything.filter(n => countryOf(n) === a).length || (a < b ? -1 : 1));
+  const countriesEl = document.getElementById("notes-countries");
   orders.notes = list.map((n, i) => ({ slug: ids[i], title: n.title }));
   if (list[0]) latest.push({ date: list[0].date, kind: "note", title: list[0].title, href: "#notes/" + ids[0] });
-  const on = { cat: "", lang: "" };
-  const row = (items, key) => items.length > 1 ? ["", ...items].map(v =>
-    `<button type="button" class="tag${v === on[key] ? " on" : ""}" data-key="${key}" data-v="${esc(v)}"${key === "lang" && LANG_FLAGS[v] ? ` title="${esc(v)}" aria-label="${esc(v)}"` : ""}>${v ? (key === "lang" && LANG_FLAGS[v]) || esc(v) : "All"}</button>`).join("") : "";
+  const on = { cat: "", country: "", year: 0 };
+  // words written per year: the English side of each note (prose, blocks, poem and stanza pairs), counted as words
+  const wc = t => (String(t || "").match(/[A-Za-z0-9\u00C0-\u024F]+(?:[’'-][A-Za-z0-9\u00C0-\u024F]+)*/g) || []).length;
+  const wordsOf = n => (n.prose || []).reduce((t, p) => t + wc(p[1]), 0) + (n.blocks || []).reduce((t, b) => t + wc(b[2]), 0) + ((n.poem || {}).pairs || []).reduce((t, p) => t + wc(p[1]), 0) + (n.pairStanzas || []).flat().reduce((t, p) => t + wc(p[1]), 0) + (n.stanzas || []).flat().reduce((t, l) => t + wc(l), 0) + (n.body || []).reduce((t, p) => t + wc(p), 0);
+  const chart = yearChart(document.getElementById("notes-chart"), { list: everything, words: wordsOf, label: n => n.title, noun: "piece", caption: "Words written per year", getYear: () => on.year, setYear: y => { on.year = y; renderList(); } });
+  // left column: a card per category (like the Plates / Reads cards) and a world map of where the notes were written; a card or a country filters the list, click it again to clear
+  const catCards = () => cats.length > 1 ? cats.map(v => `<button type="button" class="pcard${v === on.cat ? " on" : ""}" data-key="cat" data-v="${v === on.cat ? "" : esc(v)}" aria-pressed="${v === on.cat}"><span class="pn">${esc(v)}</span><b class="pc">${entries.filter(e => e.cat === v).length}</b></button>`).join("") : "";
   // grouped by year, newest year open; older years fold away (a filter opens every year that has a match)
-  const years = [...new Set(list.map(n => n.date.slice(0, 4)))];
+  const years = [...new Set(entries.map(e => e.n.date.slice(0, 4)))];
   const openYears = new Set(years.slice(0, 1));
   const shortDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
   const renderList = () => {
-    const filtered = !!(on.cat || on.lang);
-    const shown = list.filter(n => (!on.cat || n.category === on.cat) && (!on.lang || hasLang(n, on.lang)));
-    const byYear = years.map(y => [y, shown.filter(n => n.date.startsWith(y))]).filter(([, ns]) => ns.length);
+    const filtered = !!(on.cat || on.country || on.year);
+    const shown = entries.filter(({ n, cat }) => (!on.cat || cat === on.cat) && (!on.country || countryOf(n) === on.country) && (!on.year || +n.date.slice(0, 4) === on.year));
+    const byYear = years.map(y => [y, shown.filter(e => e.n.date.startsWith(y))]).filter(([, ns]) => ns.length);
     listEl.innerHTML = byYear.length ? byYear.map(([y, ns]) => {
       const open = filtered || openYears.has(y);
       return `<section class="ny${open ? " open" : ""}"><button type="button" class="yh" data-year="${y}" aria-expanded="${open}"${filtered ? " tabindex=\"-1\"" : ""}><span class="yr">${y}</span><span class="yc">${ns.length}</span></button>
-      <div class="yl"${open ? "" : " hidden"}>${ns.map(n => `<a class="note" href="#notes/${ids[list.indexOf(n)]}"><span class="d">${shortDate(n.date)}</span><span class="t">${esc(n.title)}</span>${n.category ? `<span class="cat">${esc(n.category)}</span>` : ""}</a>`).join("")}</div></section>`;
+      <div class="yl"${open ? "" : " hidden"}>${ns.map(({ n, href, cat }) => `<a class="note" href="${href}"><span class="d">${shortDate(n.date)}</span><span class="t">${esc(n.title)}</span>${cat ? `<span class="cat">${esc(cat)}</span>` : ""}</a>`).join("")}</div></section>`;
     }).join("") : `<p class="empty">Nothing yet.</p>`;
-    tagsEl.innerHTML = row(cats, "cat");
-    langsEl.innerHTML = row(langs, "lang");
+    tagsEl.innerHTML = catCards();
+    countriesEl.innerHTML = countries.length > 1 ? worldMap(Object.fromEntries(countries.map(c => [c, everything.filter(n => countryOf(n) === c).length])), on.country, "Where the notes were written") : "";
+    chart.sync();
   };
+  mapTip(countriesEl, "piece");
+  countriesEl.addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (b) { on.country = b.dataset.v; renderList(); } });
   document.getElementById("notes").addEventListener("click", e => {
     const h = e.target.closest(".yh");   // opening a year folds the others
-    if (h) { if (!on.cat && !on.lang) { const y = h.dataset.year; const was = openYears.has(y); openYears.clear(); if (!was) openYears.add(y); renderList(); } return; }
+    if (h) { if (!on.cat && !on.country && !on.year) { const y = h.dataset.year; const was = openYears.has(y); openYears.clear(); if (!was) openYears.add(y); renderList(); } return; }
     const b = e.target.closest("button[data-key]");
     if (b) { on[b.dataset.key] = b.dataset.v; renderList(); }
   });
   renderList();
-  popups.notes = slug => { const n = list[ids.indexOf(slug)]; return n && notePage(n); };
+  // a book opened from this page is #notes/book-<its Reads link name>: the page behind stays Writings, so closing it comes back here
+  popups.notes = slug => { const n = list[ids.indexOf(slug)]; return n ? notePage(n) : slug.startsWith("book-") && popups.reads ? popups.reads(slug.slice(5)) : undefined; };
   // copyright line on the list page: the years the notes were written
   const ys = list.map(n => +n.date.slice(0, 4));
   if (ys.length) {
@@ -289,7 +380,7 @@ const notePage = (() => {
   const list = raw.map(n => n.sameAs ? { ...raw.find(x => x.slug === n.sameAs), ...n } : n).sort((a, b) => (a.date < b.date ? 1 : -1));   // sameAs: the text of another read
   const ids = slugs(list, n => n.title);
   // on the wall a book goes by its own name: "棉花帝国 (Empire of Cotton)" shows as 棉花帝国, "林奕含 Lin Yi-han" as 林奕含 (the page keeps both)
-  const nonLatin = t => /[^\u0000-\u024f\u2000-\u206f]/.test(t);
+  const nonLatin = t => /[^\u0000-\u024f\u1e00-\u1eff\u2000-\u206f]/.test(t);
   const ownTitle = t => { const m = String(t).match(/^(.*?)\s*\([^)]*\)\s*$/); return m && nonLatin(m[1]) ? m[1] : t; };
   const ownAuthor = a => { const m = String(a).match(/^(.*?)\s+[\p{Script=Latin}][\p{Script=Latin}\s.'’-]*$/u); return m && nonLatin(m[1]) ? m[1] : a; };
   orders.reads = list.map((n, i) => ({ slug: ids[i], title: ownTitle((n.book || {}).title || n.title) }));
@@ -301,13 +392,30 @@ const notePage = (() => {
   const countriesOf = n => [].concat((n.book || {}).country || []);
   const countries = [...new Set(list.flatMap(countriesOf))].sort((a, b) => list.filter(n => countriesOf(n).includes(b)).length - list.filter(n => countriesOf(n).includes(a)).length || (a < b ? -1 : 1));
   const countriesEl = document.getElementById("reads-countries"), listEl = document.getElementById("reads-list");
-  let country = "";
+  // genre cards (like the Plates collection cards): a card filters the wall by book.category / the note's category and combines with the country flags; "More" is every other category
+  const GENRES = [["novel", "Novels", ["Novel", "Short stories"]], ["history", "History", ["History", "Oral history", "Ethnography"]], ["philosophy", "Philosophy", ["Philosophy", "Political thought"]], ["economics", "Economics", ["Economics"]], ["memoir", "Memoirs", ["Memoir"]]];
+  const known = GENRES.flatMap(g => g[2]);
+  const inGenre = (n, k) => { const c = n.category || (n.book || {}).category || ""; const g = GENRES.find(x => x[0] === k); return g ? g[2].includes(c) : !known.includes(c); };
+  // line chart: estimated words read per year (book length from data/reads_words.js, by the year of each read's date; years in between with no read count as 0). Combines with the genre cards and flags.
+  const READ_W = window.READ_WORDS || {};
+  const chart = yearChart(document.getElementById("reads-chart"), { list, words: n => READ_W[(n.book || {}).cover] || 0, label: n => ownTitle((n.book || {}).title || n.title), noun: "read", caption: "Estimated words read per year", getYear: () => year, setYear: y => { year = y; render(); } });
+  // country filter as a dot-matrix world map (data/worldmap.js): land is a grid of dots, each country with books gets a marker shaded by how many (hover for the name and count, click to filter, click again to clear).
+  // Set MAP to false to go back to the row of flag buttons.
+  const MAP = true;
+  const mapHtml = () => worldMap(Object.fromEntries(countries.map(v => [v, list.filter(b => countriesOf(b).includes(v)).length])), country, "Where the books were first published");
+  const genreEl = document.getElementById("reads-genres");
+  let genre = "", country = "", year = 0;
   const render = () => {
-    const shown = list.map((n, i) => [n, i]).filter(([n]) => !country || countriesOf(n).includes(country));
+    const shown = list.map((n, i) => [n, i]).filter(([n]) => (!genre || inGenre(n, genre)) && (!country || countriesOf(n).includes(country)) && (!year || +n.date.slice(0, 4) === year));
     listEl.innerHTML = shown.length ? shown.map(([n, i]) => card(n, i)).join("") : `<p class="empty">Nothing yet.</p>`;
-    countriesEl.innerHTML = countries.length > 1 ? ["", ...countries].map(v => `<button type="button" class="tag${v === country ? " on" : ""}" data-v="${esc(v)}"${v ? ` title="${esc(v)}" aria-label="${esc(v)}"` : ""}>${v ? FLAGS[v] || esc(v) : "All"}</button>`).join("") : "";
+    genreEl.innerHTML = [...GENRES.map(g => [g[0], g[1]]), ["more", "More"]].filter(([k]) => list.some(n => inGenre(n, k))).map(([k, l]) =>
+      `<button type="button" class="pcard${k === genre ? " on" : ""}" data-genre="${k === genre ? "" : k}" aria-pressed="${k === genre}"><span class="pn">${l}</span><b class="pc">${list.filter(n => inGenre(n, k)).length}</b></button>`).join("");
+    countriesEl.innerHTML = countries.length > 1 ? (MAP ? mapHtml() : countries.map(v => `<button type="button" class="tag${v === country ? " on" : ""}" data-v="${v === country ? "" : esc(v)}" title="${esc(v)}" aria-label="${esc(v)}" aria-pressed="${v === country}">${FLAGS[v] || esc(v)}</button>`).join("")) : "";   // no "All": click the chosen one again to clear it
+    chart.sync();
   };
-  countriesEl.addEventListener("click", e => { const b = e.target.closest("button[data-v]"); if (b) { country = b.dataset.v; render(); } });
+  if (MAP) mapTip(countriesEl, "book");
+  countriesEl.addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (b) { country = b.dataset.v; render(); } });
+  genreEl.addEventListener("click", e => { const b = e.target.closest("button[data-genre]"); if (b) { genre = b.dataset.genre; render(); } });
   render();
   popups.reads = slug => { const n = list[ids.indexOf(slug)]; return n && notePage(n); };
   const ys = list.map(n => +n.date.slice(0, 4));
@@ -325,14 +433,13 @@ legacyReads();
 // ---- plates: a collector's grid, write-ups first, then bare entries; each part grouped by distinction (3 stars first), newest first inside each group
 (function plates() {
   const list = (window.PLATES || []).slice();
-  // A place can carry a Michelin / Apple mark AND Blue Ribbons (blueRibbon: 1-3, Korea's own restaurant survey), so the two are kept apart:
+  // A place can carry a Michelin mark AND Blue Ribbons (blueRibbon: 1-3, Korea's own restaurant survey), so the two are kept apart:
   //   ribbons(p) = its Blue Ribbon level; mRank(p) = its Michelin-side category (null for a place that only has ribbons)
   const ribbons = p => Math.max(0, Math.min(3, +p.blueRibbon || 0));
-  const mRank = p => p.stars || (p.bib ? 0.5 : p.recommended ? 0.25 : p.apple ? 0.2 : ribbons(p) || p.world50 ? null : 0.22);
-  // grid order: stars > Bib > Michelin recommended > Blue Ribbon only (3, 2, 1) > Haotian Recommend (everything else) > Apple; ribbons break ties inside a group
-  const apples = p => (p.apple ? Math.max(1, Math.min(3, +p.apple || 1)) : 0);
+  const mRank = p => p.stars || (p.bib ? 0.5 : p.recommended ? 0.25 : ribbons(p) || p.world50 ? null : 0.22);
+  // grid order: stars > Bib > Michelin recommended > Blue Ribbon only (3, 2, 1) > Haotian Recommend (everything else); ribbons break ties inside a group
   const haos = p => (mRank(p) === 0.22 ? Math.max(1, Math.min(3, +p.haotian || 1)) : 0);
-  const rank = p => (mRank(p) ?? 0.24) + ribbons(p) * 0.001 + (p.world50 ? 0.005 : 0) + apples(p) * 0.001 + haos(p) * 0.001;   // "world50: true" = on The World's 50 Best Restaurants list, a tie-breaker inside a group
+  const rank = p => (mRank(p) ?? 0.24) + ribbons(p) * 0.001 + (p.world50 ? 0.005 : 0) + haos(p) * 0.001;   // "world50: true" = on The World's 50 Best Restaurants list, a tie-breaker inside a group
   const sortKey = p => (p.keepOrder ? "" : p.date) || "";   // keepOrder: show the date but keep the old place in the grid
   const hasText = p => (p.body && p.body.length ? 1 : 0);   // places with a write-up come first, bare ones sink to the bottom; each half keeps the star order
   list.sort((a, b) => hasText(b) - hasText(a) || rank(b) - rank(a) || (sortKey(a) < sortKey(b) ? 1 : -1));
@@ -347,31 +454,29 @@ legacyReads();
   const w50Img = '<img class="mw50" src="assets/world-50-best.png" alt="The World’s 50 Best Restaurants" data-tip="The World’s 50 Best Restaurants" onerror="this.replaceWith(\'50 Best\')">';
   // world50 can be true, its place on the World's list (48), the name of another World's list ("Vineyards"), or {"list": "North America's 50 Best Restaurants", "rank": 32} for any list: the logo's hover text and screen-reader text say which; nothing is printed beside it
   const w50Of = p => { const w = p.world50, o = w && typeof w === "object" ? w : null; const list = o ? o.list : typeof w === "string" ? `The World’s 50 Best ${w}` : "The World’s 50 Best Restaurants"; const rank = o ? +o.rank : +w > 1 ? +w : 0; const t = list + (rank ? ", No. " + rank : ""); return w50Img.replace(/(alt|data-tip)="The World’s 50 Best Restaurants"/g, `$1="${t}"`); };
-  const aplImg = '<img class="mapl" src="assets/apple-logo.webp" alt="Apple Caffè" data-tip="Apple Caffè" onerror="this.replaceWith(\'Apple\')">';
   const recImg = '<img class="mrec" src="assets/michelin-recommended.svg" alt="Michelin recommended" data-tip="Michelin recommended" onerror="this.replaceWith(\'Rec.\')">';
   const hrImg = '<img class="mhr" src="assets/haotian-recommend.svg" alt="Haotian Recommend" data-tip="Haotian Recommend" onerror="this.replaceWith(\'H\')">';   // every place without a Michelin or Apple mark
   // date may be "YYYY-MM-DD", "YYYY-MM" or "YYYY"; show as much of it as is given
   const when = (d, mo) => { d = String(d); const [y, m, day] = d.split("-"); return !m ? y : new Date(`${y}-${m}-${day || "01"}T00:00:00`).toLocaleDateString("en-US", { year: "numeric", month: mo, ...(day && { day: "numeric" }) }); };
-  // the Michelin / Apple mark (or Haotian Recommend when there is nothing else), then the ribbons after a thin divider
+  // the Michelin mark (or Haotian Recommend when there is nothing else), then the ribbons after a thin divider
   const mark = p => {
-    const m = p.stars ? starImg.repeat(p.stars) : p.bib ? bibImg : p.recommended ? recImg : p.apple ? aplImg.repeat(apples(p)) : ribbons(p) || p.world50 ? "" : hrImg.repeat(haos(p));
+    const m = p.stars ? starImg.repeat(p.stars) : p.bib ? bibImg : p.recommended ? recImg : ribbons(p) || p.world50 ? "" : hrImg.repeat(haos(p));
     return [m, p.world50 ? w50Of(p) : "", ribbons(p) ? ribbon.repeat(ribbons(p)) : ""].filter(Boolean).join('<span class="msep"></span>');
   };
   const card = (p, i) => `<a class="plate" href="#plates/${ids[i]}">${p.cover ? `<img class="cov" ${thumb(p.cover)} alt="" loading="lazy" decoding="async">` : ""}<span class="st">${mark(p)}</span><span class="nm">${esc(p.name)}</span>
       <span class="ct">${esc(p.city)}</span>${p.date ? `<span class="yr">${esc(when(p.date, "short"))}</span>` : ""}</a>`;
   // categories: a place counts in its Michelin-side category AND in its ribbon level, so one with both (a star and 2 ribbons) is found under each
-  const CATS = [["w50", "W50"], ["w50r", "W50R"], ["w50n", "W50N"], ["w50v", "W50V"], [3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], ["br3", "BR3"], ["br2", "BR2"], ["br1", "BR1"], ["hao3", "HAO3"], ["hao2", "HAO2"], ["hao1", "HAO1"], ["apl3", "APL3"], ["apl2", "APL2"], ["apl1", "APL1"]];
+  const CATS = [["w50", "W50"], ["w50r", "W50R"], ["w50n", "W50N"], ["w50v", "W50V"], [3, "★★★"], [2, "★★"], [1, "★"], [0.5, "Bib"], [0.25, "REC"], ["br3", "BR3"], ["br2", "BR2"], ["br1", "BR1"], ["hao3", "HAO3"], ["hao2", "HAO2"], ["hao1", "HAO1"]];
   const w50List = p => { const w = p.world50, n = String(w && typeof w === "object" ? w.list : typeof w === "string" ? w : ""); return /vineyard/i.test(n) ? "w50v" : /north america/i.test(n) ? "w50n" : "w50r"; };   // which 50 Best list: restaurants, North America or vineyards
-  const inCat = (p, k) => k === "w50" ? !!p.world50 : typeof k === "string" && k.startsWith("w50") ? !!p.world50 && w50List(p) === k : typeof k === "string" ? (k.startsWith("apl") ? apples(p) === +k.slice(3) : k.startsWith("hao") ? haos(p) === +k.slice(3) : ribbons(p) === +k.slice(2)) : mRank(p) === k;
+  const inCat = (p, k) => k === "w50" ? !!p.world50 : typeof k === "string" && k.startsWith("w50") ? !!p.world50 && w50List(p) === k : typeof k === "string" ? (k.startsWith("hao") ? haos(p) === +k.slice(3) : ribbons(p) === +k.slice(2)) : mRank(p) === k;
   const count = k => list.filter(p => inCat(p, k)).length;
-  const label = s => s.replace(/★/g, starImg).replace(/^W50$/, w50Img).replace(/^W50R$/, "Worldwide").replace(/^W50N$/, "North America").replace(/^W50V$/, "Vineyards").replace(/^Bib$/, bibImg).replace(/^BR([123])$/, (m, n) => ribbon.repeat(+n)).replace(/^REC$/, recImg).replace(/^APL([123])$/, (m, n) => aplImg.repeat(+n)).replace(/^HAO([123])$/, (m, n) => hrImg.repeat(+n));
-  // five collection cards (World's 50 Best, Michelin, Blue Ribbon, Haotian Recommends, Apple Caffè Macs); a card filters the grid, and Michelin / Blue Ribbon list their levels
+  const label = s => s.replace(/★/g, starImg).replace(/^W50$/, w50Img).replace(/^W50R$/, "Worldwide").replace(/^W50N$/, "North America").replace(/^W50V$/, "Vineyards").replace(/^Bib$/, bibImg).replace(/^BR([123])$/, (m, n) => ribbon.repeat(+n)).replace(/^REC$/, recImg).replace(/^HAO([123])$/, (m, n) => hrImg.repeat(+n));
+  // four collection cards (World's 50 Best, Michelin, Blue Ribbon, Haotian Recommends); a card filters the grid, and Michelin / Blue Ribbon list their levels
   const GROUPS = [
     { key: "w50", name: "The 50 Best", logo: w50Img, cats: ["w50r", "w50n", "w50v"] },
     { key: "mich", name: "Michelin", logo: starImg, cats: [3, 2, 1, 0.5, 0.25], lines: [[3], [2], [1, 0.5, 0.25]] },
     { key: "br", name: "Blue Ribbon", logo: ribbon, cats: ["br3", "br2", "br1"] },
-    { key: "hao", name: "Haotian Haochi", logo: hrImg, cats: ["hao3", "hao2", "hao1"] },
-    { key: "apl", name: "Caffè Macs", logo: aplImg, cats: ["apl3", "apl2", "apl1"] }
+    { key: "hao", name: "Haotian Haochi", logo: hrImg, cats: ["hao3", "hao2", "hao1"] }
   ];
   const inGroup = (p, g) => g.cats.some(k => inCat(p, k));
   const groupCount = g => list.filter(p => inGroup(p, g)).length;
@@ -380,7 +485,7 @@ legacyReads();
   const CA = ["AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT"];
   const US = "AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC PR".split(" ");   // so "London, UK" is not read as a state
   const countryOf = p => { const t = (p.city || "").split(",").pop().trim(); return CA.includes(t) ? "Canada" : US.includes(t) ? "United States" : t; };
-    const countries = [...new Set(list.map(countryOf).filter(Boolean))].sort((a, b) => list.filter(p => countryOf(p) === b).length - list.filter(p => countryOf(p) === a).length || (a < b ? -1 : 1));
+  const countries = [...new Set(list.map(countryOf).filter(Boolean))].sort((a, b) => list.filter(p => countryOf(p) === b).length - list.filter(p => countryOf(p) === a).length || (a < b ? -1 : 1));
   const on = { group: "", cat: "", country: "" };
   const newest = list.filter(p => p.date).sort((a, b) => (fullDate(a.date) < fullDate(b.date) ? 1 : -1))[0];
   if (newest) latest.push({ date: fullDate(newest.date), kind: "plate", title: newest.name, href: "#plates/" + ids[list.indexOf(newest)] });
@@ -397,8 +502,10 @@ legacyReads();
       return `<button type="button" class="pcard${x.key === on.group ? " on" : ""}" data-key="group" data-v="${x.key === on.group ? "" : x.key}" aria-pressed="${x.key === on.group}"><span class="pl">${x.logo}</span><span class="pn">${x.name}</span><b class="pc">${groupCount(x)}</b>${subs ? `<span class="psub">${subs}</span>` : ""}</button>`;
     }).join("");
     catsEl.innerHTML = g && g.cats.length > 1 ? row(g.cats.filter(k => count(k)).map(k => [k, catLabel[k]]), "cat") : "";
-    countriesEl.innerHTML = row(countries.map(c => [c, c]), "country");
+    countriesEl.innerHTML = countries.length > 1 ? worldMap(Object.fromEntries(countries.map(c => [c, list.filter(p => countryOf(p) === c).length])), on.country, "Where the restaurants are") : "";   // click a marker to filter, again to clear
   };
+  mapTip(countriesEl, "restaurant");
+  countriesEl.addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (b) { on.country = b.dataset.v; renderPlates(); } });
   document.getElementById("plates").addEventListener("click", e => {
     const b = e.target.closest("button[data-key]");
     if (b) { on[b.dataset.key] = b.dataset.v; if (b.dataset.key === "group") on.cat = ""; renderPlates(); }
@@ -554,7 +661,7 @@ fillLatest();
 
 syncReader();                            // open a pop-up straight from a shared link
 
-// Plates: hover text on the marks (50 Best list and rank, Blue Ribbon, Apple...). The browser's own title tooltip is slow and unreliable on small marks inside a link, so the shared #gtip is used here; Goods has its own handler
+// Plates: hover text on the marks (50 Best list and rank, Blue Ribbon...). The browser's own title tooltip is slow and unreliable on small marks inside a link, so the shared #gtip is used here; Goods has its own handler
 (function () {
   const tip = document.getElementById("gtip");
   if (!tip) return;

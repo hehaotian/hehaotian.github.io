@@ -10,9 +10,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 /* header: the name on the left and a three-line menu button on the right, both on the same left/right edges as the text column below,
    so "Haotian" in the bar always sits right above "Haotian" on the home page. The section links open in a panel under the bar. */
 :root { --gutter: 24px; --frame: 600px; }   /* --frame: width of the text column; the bar follows it, so a wider page (Plates) widens both */
-body[data-tab="plates"] { --frame: 880px; }
-body[data-tab="reads"] { --frame: 880px; }
-body[data-tab="notes"] { --frame: 800px; }   /* wide enough that the longest note title (44 characters) sits on one line beside its date and category */
+body[data-tab="plates"] { --frame: 1240px; }
+body[data-tab="reads"] { --frame: 1240px; }
+body[data-tab="notes"] { --frame: 1240px; }   /* wide enough that the longest note title (44 characters) sits on one line beside its date and category */
 body[data-tab="steps"] { --frame: 100vw; }   /* the map is full width, so the bar spans it too */
 #top { position: fixed; inset: 0 0 auto 0; height: var(--nav-h); z-index: 10; display: flex; align-items: center; justify-content: space-between;
        padding: 0 max(var(--gutter), calc((100% - var(--frame)) / 2 + var(--gutter)));
@@ -113,7 +113,7 @@ body[data-tab="gigs"] { --frame: 880px; }
 .pcard.on { border-color: var(--text); box-shadow: 0 0 0 1px var(--text) inset; }
 .pcard .pl { display: flex; align-items: center; height: 32px; margin-bottom: 8px; }
 .pcard .pl img { margin: 0; vertical-align: 0; }
-.pcard .pl .mstar { height: 26px; } .pcard .pl .mbr { height: 28px; } .pcard .pl .mw50 { height: 30px; } .pcard .pl .mhr { height: 30px; } .pcard .pl .mapl { height: 28px; }
+.pcard .pl .mstar { height: 26px; } .pcard .pl .mbr { height: 28px; } .pcard .pl .mw50 { height: 30px; } .pcard .pl .mhr { height: 30px; }
 .pcard .pn { font-weight: 600; font-size: 15px; line-height: 1.3; min-height: 2.6em; }
 .pcard .pc { font-weight: 300; font-size: 30px; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .pcard .psub { display: flex; flex-direction: column; gap: 6px; padding-top: 10px; color: var(--muted); font-size: 13px; }
@@ -122,6 +122,60 @@ body[data-tab="gigs"] { --frame: 880px; }
 .pcard .ps b { font-weight: 400; font-variant-numeric: tabular-nums; }
 .pcard .ps img { margin: 0; vertical-align: 0; height: 13px; }
 .pcard .ps .mbib, .pcard .ps .mrec { height: 15px; }
+/* Reads: line chart of words read per year */
+.rchart { margin: -8px 0 28px; }
+.rchart svg { display: block; width: 100%; height: auto; overflow: visible; font-size: 12px; fill: var(--muted); }
+.rchart .g line { stroke: var(--line); stroke-width: 1; }
+.rchart polyline { fill: none; stroke: var(--text); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
+.rchart circle { fill: #fff; stroke: var(--text); stroke-width: 1.5; }
+.rchart { position: relative; }
+.rchart figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 0 0 10px; color: var(--text); font-weight: 600; font-size: 15px; }
+.rchart .rclear { font: inherit; font-size: 13px; font-weight: 400; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.rchart .rclear:hover { color: var(--text); }
+.rchart .hit { cursor: pointer; touch-action: pan-y; }
+.rchart .guide { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; pointer-events: none; }
+.rchart circle { pointer-events: none; transition: r .1s; }
+.rchart circle.hov { r: 5; fill: var(--text); }
+.rchart circle.on { r: 5; fill: var(--text); }
+.rchart .rtip { position: absolute; z-index: 2; max-width: 280px; padding: 8px 10px; font-size: 13px; line-height: 1.4; color: var(--text); background: #fff; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.08); pointer-events: none; white-space: nowrap; }
+.rchart .rtip span { display: block; margin-top: 4px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; }
+/* Reads: genre cards, same card as Plates without a logo */
+/* Reads is two columns: the chart and genre cards on the left (they stay in view while the wall scrolls), the flag filter and the book wall on the right */
+.rlayout { display: grid; grid-template-columns: 480px minmax(0, 1fr); gap: 0 40px; align-items: start; }
+.rside { position: sticky; top: calc(var(--nav-h) + 20px); }
+#reads .rside .tags.filters { margin: 16px 0 0; }
+/* Reads country map: dot-matrix land, one marker per country (darker = more books) */
+#reads-countries svg, #plates-countries svg, #notes-countries svg { display: block; width: 100%; height: auto; }
+#reads-countries .land circle, #plates-countries .land circle, #notes-countries .land circle { fill: #d9d6cd; }
+#reads-countries .pin, #plates-countries .pin, #notes-countries .pin { fill: var(--text); stroke: #fff; stroke-width: 1; cursor: pointer; outline: none; transition: fill-opacity .15s; }
+#reads-countries .pin:hover, #reads-countries .pin:focus-visible, #plates-countries .pin:hover, #plates-countries .pin:focus-visible, #notes-countries .pin:hover, #notes-countries .pin:focus-visible { fill-opacity: 1 !important; stroke: var(--text); }
+#reads-countries .pin.on, #plates-countries .pin.on, #notes-countries .pin.on { fill: #d4602f; fill-opacity: 1 !important; stroke: var(--text); stroke-width: 1.5; }
+#reads-countries .tags, #plates-countries .tags, #notes-countries .tags { margin: 10px 0 0; }
+.pmap { position: relative; margin: 24px 0 0; }
+#plates .pmap .tags.filters, #notes .pmap .tags.filters { margin: 0; }
+.mtip { position: absolute; z-index: 3; display: flex; align-items: center; gap: 8px; padding: 6px 10px; line-height: 1.25; white-space: nowrap; color: var(--text); background: #fff; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.08); pointer-events: none; }
+.mtip[hidden] { display: none; }
+.mtip .mf { font-size: 22px; line-height: 1; }
+.mtip b { display: block; font-weight: 600; font-size: 14px; }
+.mtip i { display: block; font-style: normal; font-size: 12px; color: var(--muted); }
+#reads .rchart, #notes .rchart { margin: 0 0 24px; }
+/* Plates: the cards, level filter and map sit in the left column (same layout as Reads), the restaurants on the right */
+#plates .total { grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 0; }
+#plates .pcard { padding: 14px 14px 12px; }
+#plates .pcard .pn { min-height: 0; }
+#plates .pcard:last-child:nth-child(odd) { grid-column: span 2; }
+#plates .plates { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#plates .rside .tags.filters, #notes .rside .tags.filters { margin: 16px 0 0; }
+#plates .rside .pmap .tags.filters, #notes .rside .pmap .tags.filters { margin: 0; }
+#reads .total, #notes .total { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 0; }
+#reads .total:empty, #notes .total:empty { display: none; }
+#reads .pcard, #notes .pcard { padding: 12px 14px 10px; gap: 4px; }
+#reads .pcard .pn, #notes .pcard .pn { min-height: 0; }
+#reads .pcard:last-child:nth-child(odd), #notes .pcard:last-child:nth-child(odd) { grid-column: span 2; }
+#reads .reads { grid-template-columns: repeat(3, 1fr); gap: 32px 24px; }
+@media (max-width: 440px) { #reads .reads { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 1000px) { .rlayout { grid-template-columns: 1fr; gap: 0; } .rside { position: relative; margin-bottom: 28px; } #reads .rchart, #notes .rchart, #plates .total, #plates .pmap, #notes .total, #notes .pmap { max-width: 560px; } }
+@media (max-width: 700px) { #notes .pcard:last-child:nth-child(even) { grid-column: auto; } }
 @media (max-width: 700px) { #plates .total { grid-template-columns: repeat(2, 1fr); } .pcard:last-child { grid-column: span 2; } .pcard:last-child .pn { min-height: 0; } .pcard:last-child .psub { flex-direction: row; flex-wrap: wrap; gap: 6px 18px; } }
 .cbar { padding: 7px 0; border-radius: 4px; }
 .chead { display: flex; justify-content: space-between; gap: 12px; font-variant-numeric: tabular-nums; }
@@ -306,9 +360,6 @@ a.plate:hover { border-color: #aaa; }
 
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: -20px 0 28px; }
 .tag { font: inherit; font-size: 14px; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; cursor: pointer; }
-#notes-tags:not(:empty) { margin-bottom: 12px; }
-#notes-langs { margin-top: 0; }
-#notes-langs:empty { display: none; }
 .tags.filters { margin: 0 0 12px; }
 .tags.filters:empty { display: none; }
 .tag:hover { color: inherit; }
@@ -341,26 +392,11 @@ a.plate:hover { border-color: #aaa; }
 .tag .mhr { height: 16px; vertical-align: -3px; }
 #reader .kind .mhr { height: 22px; vertical-align: -5px; }
 
-/* Apple Caffè mark (rainbow logo) */
-.mapl { height: 18px; width: auto; margin-right: 4px; vertical-align: -3px; }
-.mapl:last-child { margin-right: 0; }
-.total .mapl { height: 20px; vertical-align: 0; }
-.tag .mapl { height: 15px; vertical-align: -2px; }
-#reader .kind .mapl { height: 20px; vertical-align: -4px; }
 
 /* short looping clip under a note */
 #reader video.pvid { display: block; width: 100%; height: auto; margin: 0 0 22px; background: #eee; }
 
 /* Notes: a quiet index. One filter line, years in the margin (newest open, older folded), no rules between rows */
-#notes .nfilters { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px 24px; margin: -8px 0 36px; }
-#notes .nfilters .tags, #notes .nfilters #notes-tags:not(:empty), #reads .nfilters .tags { margin: 0; gap: 4px 20px; }
-#notes .nfilters #notes-langs { gap: 4px 12px; }
-#notes .nfilters .tag, #reads .nfilters .tag { border: 0; border-radius: 0; padding: 0 0 2px; font-size: 14px; letter-spacing: .2px; border-bottom: 1px solid transparent; }
-#notes .nfilters .tag.on, #reads .nfilters .tag.on { border-bottom-color: currentColor; }
-#notes .nfilters #notes-langs .tag, #reads .nfilters .tag { font-size: 15px; }
-#reads .nfilters { margin: -8px 0 28px; }
-#reads .nfilters .tags { gap: 4px 12px; }
-#reads .nfilters:has(.tags:empty) { display: none; }
 .ny { display: grid; grid-template-columns: 110px 1fr; column-gap: 24px; padding: 22px 0 8px; border-top: 1px solid var(--line); }
 .ny .yh { grid-column: 1; align-self: start; justify-self: start; display: flex; align-items: baseline; gap: 8px; font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
 .ny .yr { font-size: 28px; font-weight: 300; letter-spacing: -.5px; line-height: 1.1; font-variant-numeric: tabular-nums; }
