@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <title>Haotian</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Haotian He: notes, reads, plates, goods and steps.">
+<meta name="description" content="Haotian He: notes, reads, plates, givings and travels.">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Haotian">
 <meta property="og:title" content="Haotian">
-<meta property="og:description" content="Writings, reads, plates, goods and steps. Have a nice day.">
+<meta property="og:description" content="Writings, reads, plates, travels and givings. Have a nice day.">
 <meta property="og:url" content="https://hehaotian.com/">
 <meta property="og:image" content="https://hehaotian.com/assets/photos/home.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,8 +24,8 @@
     <a href="#notes" data-tab="notes">Writings</a>
     <a href="#reads" data-tab="reads">Reads</a>
     <a href="#plates" data-tab="plates">Plates</a>
-    <a href="#goods" data-tab="goods">Goods</a>
-    <a href="#steps" data-tab="steps">Steps</a>
+    <a href="#travels" data-tab="travels">Travels</a>
+    <a href="#goods" data-tab="goods">Givings</a>
     <a href="#gigs" data-tab="gigs">Gigs</a>
   </nav>
 </header>
@@ -46,17 +46,33 @@
           <li><a href="#notes">Writings</a><span>No bots, just soul.</span><a class="lat" data-latest="note" hidden></a></li>
           <li><a href="#reads">Reads</a><span>What books left me with.</span><a class="lat" data-latest="read" hidden></a></li>
           <li><a href="#plates">Plates</a><span>Eating my way around.</span><a class="lat" data-latest="plate" hidden></a></li>
-          <li><a href="#goods">Goods</a><span>Small things, shared.</span><a class="lat" data-latest="gift" hidden></a></li>
-          <li><a href="#steps">Steps</a><span>Every place since 1989.</span><a class="lat" data-latest="step" hidden></a></li>
+          <li><a href="#travels">Travels</a><span>Where I’ve been, pin by pin.</span><a class="lat" data-latest="step" hidden></a></li>
+          <li><a href="#goods">Givings</a><span>Small things, shared.</span><a class="lat" data-latest="gift" hidden></a></li>
           <li><a href="#gigs">Gigs</a><span>Hands busy, mind open.</span><a class="lat" data-latest="gig" hidden></a></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- The Steps map is its own page, loaded on first visit -->
-  <section id="steps" class="tab tab-full" hidden>
-    <iframe id="steps-frame" title="Map of places since 1989" data-src="steps/index.html" allow="fullscreen"></iframe>
+  <section id="travels" class="tab" hidden>
+    <div class="col">
+      <h2>Travels</h2>
+      <div class="kpis tkpis">
+        <div id="travels-count" style="display: contents"></div>
+        <!-- Steps is its own full-screen page (steps/index.html), opened in a new window -->
+        <a class="kpi stepskpi" href="steps/index.html" target="_blank" rel="noopener" aria-label="Steps: replay every place since 1989 on an interactive map">
+          <svg class="sk-route" viewBox="0 0 240 120" preserveAspectRatio="none" aria-hidden="true"><path d="M-4 113 C 50 103, 100 117, 160 107 S 226 96, 244 99"/></svg>
+          <span class="sk-text"><span class="kv sk-title">Interactive Steps</span><span class="ks">Replay every place since 1989</span></span>
+          <span class="sk-play" aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="travels-flags" class="tags filters"></div>
+      <div class="pmap"><div id="travels-countries" class="tags filters"></div></div>
+      <div id="travels-country" hidden>
+        <div class="tcard" id="travels-head"></div>
+        <div id="travels-leaflet"></div>
+      </div>
+    </div>
   </section>
 
   <section id="plates" class="tab" hidden>
@@ -78,16 +94,22 @@
 
   <section id="goods" class="tab" hidden>
     <div class="col">
-      <h2>Goods</h2>
-      <div id="goods-kpis" class="kpis"></div>
-      <p class="rnote">Amounts are rounded to the nearest $1,000.</p>
-      <section id="goods-verdict" class="verdict" hidden aria-label="AI assessment of my giving"></section>
-      <div class="dash">
-        <section class="card wide"><h3>By year</h3><div id="goods-years"></div><p class="cnote">Each column is 100% of that year’s giving, split by cause.</p></section>
-        <section class="card"><h3>By cause</h3><div id="goods-causes"></div><p class="cnote">Each bar shows its share of everything given.</p></section>
+      <h2>Givings</h2>
+      <div class="rlayout">
+        <aside class="rside">
+          <div id="goods-kpis" class="kpis"></div>
+          <p class="rnote">Amounts are rounded to the nearest $1,000.</p>
+          <div class="dash">
+            <section class="card wide"><h3>By year</h3><div id="goods-years"></div><p class="cnote">Each column is 100% of that year’s giving, split by cause.</p></section>
+            <section class="card"><h3>By cause</h3><div id="goods-causes"></div><p class="cnote">Each bar shows its share of everything given.</p></section>
+          </div>
+        </aside>
+        <div class="rmain">
+          <section id="goods-verdict" class="verdict" hidden aria-label="AI assessment of my giving"></section>
+          <h3 class="dh">Recipients <span>· tap a card for every giving</span></h3>
+          <div id="goods-list" class="rgrid"></div>
+        </div>
       </div>
-      <h3 class="dh">Recipients <span>· tap a card for every gift</span></h3>
-      <div id="goods-list" class="rgrid"></div>
     </div>
   </section>
 
@@ -142,6 +164,7 @@
 <script src="data/notes.js"></script>
 <script src="data/reads.js"></script>
 <script src="data/reads_words.js"></script>
+<script src="data/related.js"></script>
 <script src="data/worldmap.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/cursor.js"></script>

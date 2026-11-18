@@ -33,7 +33,7 @@ window.WORLD_LAND = [
 ];
 window.COUNTRY_XY = {
   "United States": [39, -98], "United Kingdom": [54, -2], "France": [46.5, 2.5], "Italy": [42.8, 12.5], "Denmark": [56, 9.5], "Switzerland": [46.8, 8.2],
-  "Spain": [40, -3.5], "Greece": [39, 22], "Russia": [58, 45], "Belarus": [53.5, 28], "China": [35, 103], "Japan": [36, 138], "South Korea": [36.5, 128], "Korea": [36.5, 128],
+  "Spain": [40, -3.5], "Greece": [39, 22], "Russia": [58, 45], "Belarus": [53.5, 28], "Croatia": [45.2, 15.5], "Afghanistan": [33.9, 66.5], "China": [35, 103], "Japan": [36, 138], "South Korea": [36.5, 128], "Korea": [36.5, 128],
   "Taiwan": [23.7, 121], "Hong Kong": [22.3, 114.2], "New Zealand": [-41, 174], "Argentina": [-34, -64], "Canada": [58, -100], "Germany": [51, 10.5],
   "Austria": [47.5, 14], "Netherlands": [52.2, 5.3], "Belgium": [50.6, 4.6], "Sweden": [62, 15], "Norway": [62, 9], "Czech Republic": [49.8, 15.5],
   "Poland": [52, 19], "Portugal": [39.5, -8], "Ireland": [53.3, -8], "India": [22, 79], "Australia": [-25, 134], "Brazil": [-10, -52], "Mexico": [24, -102],

@@ -13,7 +13,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 body[data-tab="plates"] { --frame: 1240px; }
 body[data-tab="reads"] { --frame: 1240px; }
 body[data-tab="notes"] { --frame: 1240px; }   /* wide enough that the longest note title (44 characters) sits on one line beside its date and category */
-body[data-tab="steps"] { --frame: 100vw; }   /* the map is full width, so the bar spans it too */
+body[data-tab="travels"] { --frame: 1240px; }
 #top { position: fixed; inset: 0 0 auto 0; height: var(--nav-h); z-index: 10; display: flex; align-items: center; justify-content: space-between;
        padding: 0 max(var(--gutter), calc((100% - var(--frame)) / 2 + var(--gutter)));
        background: rgba(255,255,255,.82); -webkit-backdrop-filter: saturate(180%) blur(16px); backdrop-filter: saturate(180%) blur(16px);
@@ -64,9 +64,59 @@ h3 { font-size: 13px; font-weight: 400; color: var(--muted); margin: 48px 0 8px;
 .links li { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .links span { color: var(--muted); }
 
-/* Steps: the map page fills everything under the header */
-.tab-full { position: fixed; inset: var(--nav-h) 0 0 0; }
-.tab-full iframe { width: 100%; height: 100%; border: 0; display: block; }
+/* Travels: a row of flags for every country, a world map, and (after a flag is clicked) a street map of that country's places */
+.kpis.tkpis { grid-template-columns: repeat(4, 1fr); margin: 0 0 16px; }
+@media (max-width: 760px) { .kpis.tkpis { grid-template-columns: repeat(2, 1fr); } }
+#travels-flags { display: block; overflow: hidden; margin: 0 0 18px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
+#travels-flags .tag { flex: none; font-size: 20px; line-height: 1.4; padding: 2px 10px; }
+.fl-track { display: flex; width: max-content; animation: fl-slide var(--secs, 60s) linear infinite; }
+.fl-set { display: flex; gap: 8px; padding-right: 8px; }
+#travels-flags:hover .fl-track, #travels-flags:focus-within .fl-track { animation-play-state: paused; }
+@keyframes fl-slide { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .fl-track { animation: none; } #travels-flags { overflow-x: auto; -webkit-mask-image: none; mask-image: none; } .fl-set[aria-hidden] { display: none; } }
+#travels-flags:empty { display: none; }
+.tcard { margin: 0 0 14px; padding: 22px 24px; border: 1px solid var(--line); border-radius: 8px; }
+.tc-top { display: flex; align-items: center; gap: 16px; }
+.tc-top .tf { font-size: 44px; line-height: 1; }
+.tc-top b { display: block; font-size: 22px; font-weight: 600; letter-spacing: -.3px; line-height: 1.2; }
+.tc-top div span { color: var(--muted); font-size: 14px; }
+.tc-top .rclear { margin-left: auto; align-self: flex-start; font: inherit; font-size: 14px; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.tc-top .rclear:hover { color: var(--text); }
+.tc-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 20px 0 0; }
+.tc-stats div { padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; min-width: 0; }
+.tc-stats small, .tc-places small { display: block; color: var(--muted); font-size: 12px; }
+.tc-stats b { display: block; margin: 4px 0 2px; font-size: 22px; font-weight: 600; letter-spacing: -.4px; line-height: 1.15; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tc-stats span { display: block; color: var(--muted); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tc-places { margin: 20px 0 0; }
+.tc-row { font: inherit; color: inherit; background: none; border: 0; width: 100%; text-align: left; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) 90px 32px; align-items: center; gap: 14px; padding: 6px 0; font-size: 14px; }
+.tc-row:hover .tc-n, .tc-row.on .tc-n { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.tc-n { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tc-n i { margin-left: 8px; font-style: normal; color: var(--muted); font-size: 12px; }
+.tc-bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.tc-bar i { display: block; height: 100%; background: var(--text); border-radius: 3px; }
+.tc-c { text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tc-more { margin: 6px 0 0; color: var(--muted); font-size: 12px; }
+
+/* a selected country is two columns: the card on the left, its map on the right (stacked on narrow screens) */
+#travels-country:not([hidden]) { display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 0 32px; align-items: stretch; }   /* both sides always end at the same height: the map stretches to the card */
+#travels-country .tcard { margin: 0; }
+@media (max-width: 1000px) { #travels-country:not([hidden]) { grid-template-columns: 1fr; } #travels-country .tcard { margin-bottom: 14px; } #travels-leaflet { height: 480px; min-height: 0; } }
+#travels-leaflet { min-height: 540px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #f3f3f3; }
+#travels-leaflet .leaflet-tile-pane { filter: grayscale(1) contrast(.95); }   /* a quiet black-and-white street map */
+/* Travels: the fourth tile opens the Steps page (the animated map of every place since 1989) */
+.stepskpi { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px; overflow: hidden; color: inherit; text-decoration: none; background: #fafaf8; transition: border-color .15s; }
+.stepskpi:hover { border-color: var(--text); }
+.stepskpi .sk-text { position: relative; z-index: 1; display: block; min-width: 0; }
+.stepskpi .sk-text > span { display: block; }   /* the three lines are the same .kl / .kv / .ks as the other tiles, so they match at every screen size */
+.stepskpi .kv.sk-title { margin: 0 0 6px; font-size: 21px; line-height: 1.2; letter-spacing: -.3px; white-space: nowrap; }   /* one phrase, one size and weight */
+.stepskpi .sk-route { position: absolute; inset: 0; width: 100%; height: 100%; }   /* a faint dashed route behind the text */
+.stepskpi .sk-route path { fill: none; stroke: #cfcfc8; stroke-width: 1.5; stroke-dasharray: 3 5; vector-effect: non-scaling-stroke; }
+.stepskpi:hover .sk-route path { stroke: #8a8a82; animation: sk-march 1.2s linear infinite; }
+@keyframes sk-march { to { stroke-dashoffset: -16; } }
+.stepskpi .sk-play { position: relative; z-index: 1; flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--text); transition: transform .2s ease; }
+.stepskpi .sk-play::after { content: ""; position: absolute; left: 16px; top: 12px; width: 14px; height: 18px; background: #fff; clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.stepskpi:hover .sk-play { transform: scale(1.1); }
+@media (prefers-reduced-motion: reduce) { .stepskpi:hover .sk-route path { animation: none; } }
 
 /* Gigs */
 /* Gigs: project cards (cover, title, summary, tags, place and date) */
@@ -145,10 +195,10 @@ body[data-tab="gigs"] { --frame: 880px; }
 .rside { position: sticky; top: calc(var(--nav-h) + 20px); }
 #reads .rside .tags.filters { margin: 16px 0 0; }
 /* Reads country map: dot-matrix land, one marker per country (darker = more books) */
-#reads-countries svg, #plates-countries svg, #notes-countries svg { display: block; width: 100%; height: auto; }
+#reads-countries svg, #plates-countries svg, #notes-countries svg, #travels-countries svg { display: block; width: 100%; height: auto; }
 #reads-countries .land circle, #plates-countries .land circle, #notes-countries .land circle { fill: #d9d6cd; }
-#reads-countries .pin, #plates-countries .pin, #notes-countries .pin { fill: var(--text); stroke: #fff; stroke-width: 1; cursor: pointer; outline: none; transition: fill-opacity .15s; }
-#reads-countries .pin:hover, #reads-countries .pin:focus-visible, #plates-countries .pin:hover, #plates-countries .pin:focus-visible, #notes-countries .pin:hover, #notes-countries .pin:focus-visible { fill-opacity: 1 !important; stroke: var(--text); }
+#reads-countries .pin, #plates-countries .pin, #notes-countries .pin, #travels-countries .pin { fill: var(--text); stroke: #fff; stroke-width: 1; cursor: pointer; outline: none; transition: fill-opacity .15s; }
+#reads-countries .pin:hover, #reads-countries .pin:focus-visible, #plates-countries .pin:hover, #plates-countries .pin:focus-visible, #notes-countries .pin:hover, #notes-countries .pin:focus-visible, #travels-countries .pin:hover, #travels-countries .pin:focus-visible { fill-opacity: 1 !important; stroke: var(--text); }
 #reads-countries .pin.on, #plates-countries .pin.on, #notes-countries .pin.on { fill: #d4602f; fill-opacity: 1 !important; stroke: var(--text); stroke-width: 1.5; }
 #reads-countries .tags, #plates-countries .tags, #notes-countries .tags { margin: 10px 0 0; }
 .pmap { position: relative; margin: 24px 0 0; }
@@ -193,7 +243,18 @@ body[data-tab="gigs"] { --frame: 880px; }
 .cbar:hover .cfill, .cbar:focus .cfill, .ycol:hover .stack i, .ycol:focus .stack i { filter: brightness(.88); }
 .cbar:focus-visible, .ycol:focus-visible { outline: 1px solid var(--muted); outline-offset: 2px; }
 /* Goods dashboard: a wider page, hairline cards, one black KPI tile; every bar on a card spans the same width */
-body[data-tab="goods"] { --frame: 1000px; }
+body[data-tab="goods"] { --frame: 1240px; }
+/* Givings is two columns like Writings and Reads: the figures and charts on the left, the assessment and the recipient cards on the right.
+   The left column is taller than a screen, so it scrolls with the page instead of sticking. */
+#goods .rside { position: relative; top: auto; }
+#goods .kpis { grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 0 0 10px; }
+#goods .kpi { padding: 14px 16px; }
+#goods .kpi .kv { font-size: 26px; }
+#goods .dash { grid-template-columns: 1fr; gap: 10px; }
+#goods .card { padding: 18px 20px; }
+#goods .rgrid { grid-template-columns: 1fr; }
+#goods .dh { margin: 28px 0 14px; }
+#goods .rmain > .dh:first-child { margin-top: 0; }
 .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 8px 0 16px; }
 .rnote { margin: 0 0 16px; color: var(--muted); font-size: 12px; }
 .kpi { padding: 20px 22px; border: 1px solid var(--line); border-radius: 8px; min-width: 0; }
@@ -408,6 +469,12 @@ a.plate:hover { border-color: #aaa; }
 .ny .note { border-top: 0; padding: 9px 0; gap: 20px; }
 .ny .note .d { width: 52px; font-size: 14px; padding-top: 1px; }
 .ny .note .cat { font-size: 12px; letter-spacing: .6px; text-transform: uppercase; padding-top: 2px; }
+/* the books of a year, folded into one line under that year's own pieces */
+.ny .bkfold { display: flex; gap: 20px; width: 100%; padding: 9px 0; font: inherit; font-size: 14px; color: var(--muted); background: none; border: 0; text-align: left; cursor: pointer; }
+.ny .bkfold .d { width: 52px; flex: none; }
+.ny .bkfold .bt::before { content: "▸"; display: inline-block; margin-right: 8px; font-size: 11px; transition: transform .15s; }
+.ny .bkfold[aria-expanded="true"] .bt::before { transform: rotate(90deg); }
+.ny .bkfold:hover { color: var(--text); }
 @media (max-width: 640px) {
   .ny { grid-template-columns: 1fr; padding-top: 18px; }
   .ny .yl { grid-column: 1; margin-top: 6px; }
@@ -457,5 +524,32 @@ body[data-tab="home"] { --frame: 1040px; }
 #reader .pn a:hover { color: var(--text); }
 #reader .pn a.older { margin-left: auto; text-align: right; }
 #reader .pn small { display: block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; opacity: .8; margin-bottom: 2px; }
+/* reader: related pieces */
+#reader .rel { margin: 0 84px; padding: 22px 0 8px; border-top: 1px solid #cfc9bb; font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+#reader .rel > small { display: block; margin-bottom: 8px; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); opacity: .8; }
+#reader .rel a { display: flex; align-items: baseline; gap: 12px; padding: 6px 0; color: inherit; text-decoration: none; }
+#reader .rel a em { flex: none; width: 56px; font-style: normal; font-size: 11px; letter-spacing: .8px; text-transform: uppercase; color: var(--muted); }
+#reader .rel .rt { min-width: 0; }
+#reader .rel .rs { margin-left: auto; padding-left: 12px; flex: none; color: var(--muted); font-size: 12px; max-width: 40%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#reader .rel a:hover .rt { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+@media (max-width: 640px) { #reader .rel { margin: 0 32px; } #reader .rel .rs { display: none; } }
 #reader .sheet:focus { outline: none; }
 @media (max-width: 640px) { #reader .pn { margin: 0 32px; } }
+
+/* a city on the country map opens a pop-up beside its pin (the photo keeps its own shape; nothing is cropped) */
+.tpop .leaflet-popup-content-wrapper { display: flow-root; padding: 0; border-radius: 10px; box-shadow: 0 6px 24px rgba(0,0,0,.22); }
+.tpop .leaflet-popup-content { margin: 24px 26px 20px; font-family: inherit; line-height: 1.3; }
+.tpop a.leaflet-popup-close-button { top: 10px; right: 10px; width: 24px; height: 24px; font-size: 20px; line-height: 22px; color: var(--muted); }
+.tcc-top b { display: block; padding-right: 22px; font-size: 19px; font-weight: 600; line-height: 1.3; color: var(--text); }   /* the local-language name first, the English name under it */
+.tcc-top span { display: block; color: var(--muted); font-size: 13px; }
+.tcc-meta { margin: 4px 0 16px !important; color: var(--muted); font-size: 13px; }
+.tcc-meta:last-child { margin-bottom: 0 !important; }
+.tcc-ph { position: relative; margin: 0; touch-action: pan-y; user-select: none; }
+.tcc-ph img { -webkit-user-drag: none; }
+.tcc-ph img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: contain; border-radius: 6px; background: #f3f3f3; }
+.tcc-ph figcaption { margin-top: 10px; color: var(--muted); font-size: 12px; }
+.tcc-nav { position: absolute; top: calc(50% - 22px); width: 30px; height: 30px; padding: 0 0 3px; border: 0; border-radius: 50%; background: rgba(255,255,255,.88); color: var(--text); font: inherit; font-size: 20px; line-height: 1; cursor: pointer; box-shadow: 0 1px 6px rgba(0,0,0,.25); }
+.tcc-nav.prev { left: 8px; } .tcc-nav.next { right: 8px; }
+#travels-leaflet .leaflet-tooltip { padding: 6px 10px; line-height: 1.35; font-size: 13px; color: var(--muted); border-radius: 8px; border: 1px solid var(--line); box-shadow: 0 2px 10px rgba(0,0,0,.12); }
+#travels-leaflet .leaflet-tooltip b { display: block; color: var(--text); font-size: 14px; font-weight: 600; }
+#travels-leaflet .leaflet-tooltip .tt-n { font-size: 12px; opacity: .8; }

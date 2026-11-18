@@ -309,7 +309,7 @@ window.NOTES = [
     "title": "Walked Back",
     "slug": "walked-back",
     "category": "Poem",
-    "place": "于华州西雅图\nSeattle, WA",
+    "place": "于华盛顿州西雅图\nSeattle, WA",
     "languages": ["Chinese", "English"],
     "pairStanzas": [
       [

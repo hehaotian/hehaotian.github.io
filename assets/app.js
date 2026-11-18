@@ -1,22 +1,19 @@
-// ---- tab routing: #home #notes #reads #plates #goods #steps #gigs (the old #travels link still works)
-const TABS = ["home", "notes", "reads", "plates", "goods", "steps", "gigs"];
-const frame = document.getElementById("steps-frame");
+// ---- tab routing: #home #notes #reads #plates #goods #travels #gigs (the Steps map is its own page, steps/index.html, opened from Travels)
+const TABS = ["home", "notes", "reads", "plates", "goods", "travels", "gigs"];
 let currentTab = "";
 
 function show(name) {
-  const sub = name.split("/")[1];                                    // "#steps/2026-11-06" opens the map at that stop
+  const sub = name.split("/")[1];
   name = name.split("/")[0];                                         // "#notes/delivery" is the Notes tab with a note open
-  if (name === "travels") name = "steps";
+  if (name === "steps" || name === "travels" && sub) { location.replace("steps/index.html" + (sub ? "#" + sub : "")); return; }   // old #steps links go to the map page
   if (!TABS.includes(name)) name = "home";
   TABS.forEach(t => {
     document.getElementById(t).hidden = t !== name;
     const link = document.querySelector(`#tabs [data-tab="${t}"]`);          // Home has no nav link; the name in the header is it
     if (link) link.classList.toggle("active", t === name);
   });
-  // the heavy map page loads only the first time you open Steps
-  if (name === "steps" && (sub || !frame.src)) frame.src = frame.dataset.src + (sub ? "#" + encodeURIComponent(sub) : "");
   document.body.dataset.tab = name;                                  // lets the CSS match the top bar to this page's column width
-  document.title = name === "home" ? "Haotian" : `${{ notes: "Writings" }[name] || name[0].toUpperCase() + name.slice(1)} · Haotian`;   // #notes keeps its address, the page is called Writings
+  document.title = name === "home" ? "Haotian" : `${{ notes: "Writings", goods: "Givings" }[name] || name[0].toUpperCase() + name.slice(1)} · Haotian`;   // #notes keeps its address, the page is called Writings
   if (name !== currentTab) window.scrollTo(0, 0);   // opening a pop-up on the same tab keeps the page where it is
   currentTab = name;
 }
@@ -35,17 +32,17 @@ window.addEventListener("hashchange", () => setMenu(false));
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const fmtDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 // country flags for the filter buttons (Notes and Plates); unknown countries fall back to their name
-const FLAGS = { "Peru": "🇵🇪", "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽", "Egypt": "🇪🇬", "Chile": "🇨🇱", "Greece": "🇬🇷", "India": "🇮🇳", "Argentina": "🇦🇷", "Russia": "🇷🇺", "Israel": "🇮🇱", "Colombia": "🇨🇴", "Belarus": "🇧🇾", "New Zealand": "🇳🇿" };
+const FLAGS = { "Peru": "🇵🇪", "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽", "Egypt": "🇪🇬", "Chile": "🇨🇱", "Greece": "🇬🇷", "India": "🇮🇳", "Argentina": "🇦🇷", "Russia": "🇷🇺", "Israel": "🇮🇱", "Colombia": "🇨🇴", "Belarus": "🇧🇾", "Nigeria": "🇳🇬", "Croatia": "🇭🇷", "Afghanistan": "🇦🇫", "South Africa": "🇿🇦", "Vietnam": "🇻🇳", "New Zealand": "🇳🇿" };
 const fullDate = d => { d = String(d || ""); return d.length === 4 ? d + "-01-01" : d.length === 7 ? d + "-01" : d; };   // "2026" / "2026-10" / "2026-10-10" compare correctly
 const thumb = f => `src="assets/thumbs/${esc(f)}" onerror="this.onerror=null;this.src='assets/photos/${esc(f)}'"`;   // small copy for the grids (tools/make_thumbs.sh); falls back to the full photo
 // dot-matrix world map (data/worldmap.js), shared by Reads and Plates: land is a grid of dots, each country in counts ({name: n}) gets a marker shaded by n (hover for the name and count, click to filter, click again to clear).
 // A country with no position in COUNTRY_XY stays a flag button. Clicks are handled by the caller on [data-v]; mapTip(el) adds the hover label.
-const worldMap = (counts, selected, label) => {
-  const LAND = window.WORLD_LAND || [], XY = window.COUNTRY_XY || {}, cell = 5, W = 480, S = W / 72, H = LAND.length * S;
+const worldMap = (counts, selected, label, rmax = 99, vs = 1) => {   // vs stretches the rows apart (dots stay round) for a taller map   // rmax caps a marker's radius (Travels has countries with hundreds of visits)
+  const LAND = window.WORLD_LAND || [], XY = window.COUNTRY_XY || {}, cell = 5, W = 480, S = W / 72, H = LAND.length * S * vs;
   const names = Object.keys(counts), n = v => counts[v], mx = Math.max(1, ...names.map(n));
-  const dots = []; LAND.forEach((rs, r) => { for (let c = 0; c < 72; c++) { const lon = -180 + cell * c + cell / 2; if (rs.some(([a, b]) => lon >= a && lon <= b)) dots.push(`<circle cx="${((c + .5) * S).toFixed(1)}" cy="${((r + .5) * S).toFixed(1)}" r="1.9"/>`); } });
+  const dots = []; LAND.forEach((rs, r) => { for (let c = 0; c < 72; c++) { const lon = -180 + cell * c + cell / 2; if (rs.some(([a, b]) => lon >= a && lon <= b)) dots.push(`<circle cx="${((c + .5) * S).toFixed(1)}" cy="${((r + .5) * S * vs).toFixed(1)}" r="1.9"/>`); } });
   const pins = names.filter(v => XY[v]).sort((a, b) => n(b) - n(a)).map(v => {   // big markers first, so small ones stay on top and clickable
-    const [lat, lon] = XY[v], x = (lon + 180) / 360 * W, y = (77.5 - lat) / cell * S + S / 2, k = n(v), r = 4.5 + Math.sqrt(k) * 1.5, a = (.35 + .65 * k / mx).toFixed(2);
+    const [lat, lon] = XY[v], x = (lon + 180) / 360 * W, y = ((77.5 - lat) / cell * S + S / 2) * vs, k = n(v), r = Math.min(rmax, 4.5 + Math.sqrt(k) * 1.5), a = (.35 + .65 * k / mx).toFixed(2);
     return `<circle class="pin${v === selected ? " on" : ""}" data-name="${esc(v)}" data-v="${v === selected ? "" : esc(v)}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" style="fill-opacity:${a}" tabindex="0" role="button" aria-pressed="${v === selected}" data-n="${k}" aria-label="${esc(v)}, ${k}"></circle>`;
   }).join("");
   const rest = names.filter(v => !XY[v]).map(v => `<button type="button" class="tag${v === selected ? " on" : ""}" data-v="${v === selected ? "" : esc(v)}" title="${esc(v)}">${FLAGS[v] || esc(v)}</button>`).join("");
@@ -117,6 +114,23 @@ const reader = document.createElement("div");
 reader.id = "reader"; reader.hidden = true;
 document.body.append(reader);
 const popups = {};                       // tab -> slug -> html of the page body
+// cross-references (data/related.js): every piece is known as "n:Title" (a Writing) or "r:Title" (a Read), so groups can point at each other
+const xkeys = { notes: {}, reads: {} }, xinfo = {};
+const xnorm = t => String(t).replace(/[’‘]/g, "'").trim();
+function relatedHTML(tab, slug) {
+  const key = tab === "notes" && slug.startsWith("book-") ? xkeys.reads[slug.slice(5)] : (xkeys[tab] || {})[slug];
+  if (!key) return "";
+  const out = [];
+  for (const g of window.RELATED || []) {
+    const ks = g.map(x => xnorm(x)), i = ks.indexOf(xnorm(key));
+    if (i < 0) continue;
+    for (const k of ks) if (k !== xnorm(key) && xinfo[k] && !out.includes(k)) out.push(k);
+    if (out.length >= 5) break;
+  }
+  if (!out.length) return "";
+  const fromWritings = tab === "notes";
+  return `<nav class="rel" aria-label="Related"><small>Related</small>${out.slice(0, 5).map(k => { const x = xinfo[k]; return `<a href="${x.tag === "Book" && fromWritings ? x.hrefInNotes : x.href}"><em>${x.tag}</em><span class="rt">${esc(x.title)}</span>${x.sub ? `<span class="rs">${esc(x.sub)}</span>` : ""}</a>`; }).join("")}</nav>`;
+}
 let openTab = "";
 let lastFocus = null, savedY = 0;   // savedY: where the page behind was scrolled when a pop-up opened
 reader.setAttribute("role", "dialog"); reader.setAttribute("aria-modal", "true");
@@ -139,7 +153,7 @@ function syncReader() {
   }
   openTab = m[1];
   if (!was) { lastFocus = document.activeElement; savedY = window.scrollY; }
-  reader.innerHTML = `<div class="sheet" tabindex="-1"><div class="bar"><button type="button" class="save" title="Save as image" aria-label="Save as image">↓</button><a class="close" href="#${openTab}" title="Close" aria-label="Close">✕</a></div><article>${html}</article>${pageNav(openTab, m[2])}</div>`;
+  reader.innerHTML = `<div class="sheet" tabindex="-1"><div class="bar"><button type="button" class="save" title="Save as image" aria-label="Save as image">↓</button><a class="close" href="#${openTab}" title="Close" aria-label="Close">✕</a></div><article>${html}</article>${relatedHTML(openTab, decodeURIComponent(m[2]))}${pageNav(openTab, m[2])}</div>`;
   reader.setAttribute("aria-label", (reader.querySelector("h1") || {}).textContent || "Page");
   reader.hidden = false; reader.scrollTop = 0;
   document.body.classList.add("reading"); lock(true);
@@ -326,10 +340,12 @@ const notePage = (() => {
   const readIds = slugs(allReads, n => n.title);
   const entries = [...list.map((n, i) => ({ n, href: "#notes/" + ids[i], cat: n.category })), ...allReads.map((n, i) => ({ n, href: "#notes/book-" + readIds[i], cat: "Book" })).filter(e => !e.n.sameAs && (e.n.languages || []).some(l => /Chinese/.test(l)))].sort((a, b) => (a.n.date < b.n.date ? 1 : -1));
   // on this page every read is simply a "Book" (its own genre stays on its pop-up); the category cards count notes and books together, most first
-  const cats = [...new Set(entries.map(e => e.cat).filter(Boolean))].sort((a, b) => entries.filter(e => e.cat === b).length - entries.filter(e => e.cat === a).length);
+  const cats = [...new Set([...entries.map(e => e.cat).filter(Boolean), "Fiction"])].sort(   // Fiction: a placeholder card (0 for now) until the first piece of fiction goes in
+    (a, b) => entries.filter(e => e.cat === b).length - entries.filter(e => e.cat === a).length);
   const countries = [...new Set(everything.map(countryOf).filter(Boolean))].sort((a, b) => everything.filter(n => countryOf(n) === b).length - everything.filter(n => countryOf(n) === a).length || (a < b ? -1 : 1));
   const countriesEl = document.getElementById("notes-countries");
   orders.notes = list.map((n, i) => ({ slug: ids[i], title: n.title }));
+  list.forEach((n, i) => { const k = "n:" + xnorm(n.title); xkeys.notes[ids[i]] = k; xinfo[k] = { tag: "Writing", title: n.title, sub: n.category, href: "#notes/" + ids[i] }; });
   if (list[0]) latest.push({ date: list[0].date, kind: "note", title: list[0].title, href: "#notes/" + ids[0] });
   const on = { cat: "", country: "", year: 0 };
   // words written per year: the English side of each note (prose, blocks, poem and stanza pairs), counted as words
@@ -342,14 +358,18 @@ const notePage = (() => {
   const years = [...new Set(entries.map(e => e.n.date.slice(0, 4)))];
   const openYears = new Set(years.slice(0, 1));
   const shortDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  const openBooks = new Set();   // years whose folded books are opened
+  const rows = es => es.map(({ n, href, cat }) => `<a class="note" href="${href}"><span class="d">${shortDate(n.date)}</span><span class="t">${esc(n.title)}</span>${cat ? `<span class="cat">${esc(cat)}</span>` : ""}</a>`).join("");
   const renderList = () => {
     const filtered = !!(on.cat || on.country || on.year);
     const shown = entries.filter(({ n, cat }) => (!on.cat || cat === on.cat) && (!on.country || countryOf(n) === on.country) && (!on.year || +n.date.slice(0, 4) === on.year));
     const byYear = years.map(y => [y, shown.filter(e => e.n.date.startsWith(y))]).filter(([, ns]) => ns.length);
     listEl.innerHTML = byYear.length ? byYear.map(([y, ns]) => {
       const open = filtered || openYears.has(y);
+      // with no filter, a year shows your own pieces and folds its books into one line; any filter (Book card, a year, a country) lists them all
+      const notes = filtered ? ns : ns.filter(e => e.cat !== "Book"), books = filtered ? [] : ns.filter(e => e.cat === "Book");
       return `<section class="ny${open ? " open" : ""}"><button type="button" class="yh" data-year="${y}" aria-expanded="${open}"${filtered ? " tabindex=\"-1\"" : ""}><span class="yr">${y}</span><span class="yc">${ns.length}</span></button>
-      <div class="yl"${open ? "" : " hidden"}>${ns.map(({ n, href, cat }) => `<a class="note" href="${href}"><span class="d">${shortDate(n.date)}</span><span class="t">${esc(n.title)}</span>${cat ? `<span class="cat">${esc(cat)}</span>` : ""}</a>`).join("")}</div></section>`;
+      <div class="yl"${open ? "" : " hidden"}>${rows(notes)}${books.length ? `<button type="button" class="bkfold" data-bk="${y}" aria-expanded="${openBooks.has(y)}"><span class="d"></span><span class="bt">${books.length} ${books.length === 1 ? "book" : "books"}</span></button>${openBooks.has(y) ? `<div class="bklist">${rows(books)}</div>` : ""}` : ""}</div></section>`;
     }).join("") : `<p class="empty">Nothing yet.</p>`;
     tagsEl.innerHTML = catCards();
     countriesEl.innerHTML = countries.length > 1 ? worldMap(Object.fromEntries(countries.map(c => [c, everything.filter(n => countryOf(n) === c).length])), on.country, "Where the notes were written") : "";
@@ -358,6 +378,8 @@ const notePage = (() => {
   mapTip(countriesEl, "piece");
   countriesEl.addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (b) { on.country = b.dataset.v; renderList(); } });
   document.getElementById("notes").addEventListener("click", e => {
+    const bk = e.target.closest(".bkfold");
+    if (bk) { const y = bk.dataset.bk; if (openBooks.has(y)) openBooks.delete(y); else openBooks.add(y); renderList(); return; }
     const h = e.target.closest(".yh");   // opening a year folds the others
     if (h) { if (!on.cat && !on.country && !on.year) { const y = h.dataset.year; const was = openYears.has(y); openYears.clear(); if (!was) openYears.add(y); renderList(); } return; }
     const b = e.target.closest("button[data-key]");
@@ -384,6 +406,7 @@ const notePage = (() => {
   const ownTitle = t => { const m = String(t).match(/^(.*?)\s*\([^)]*\)\s*$/); return m && nonLatin(m[1]) ? m[1] : t; };
   const ownAuthor = a => { const m = String(a).match(/^(.*?)\s+[\p{Script=Latin}][\p{Script=Latin}\s.'’-]*$/u); return m && nonLatin(m[1]) ? m[1] : a; };
   orders.reads = list.map((n, i) => ({ slug: ids[i], title: ownTitle((n.book || {}).title || n.title) }));
+  list.forEach((n, i) => { if (n.sameAs) return; const k = "r:" + xnorm(n.title); xkeys.reads[ids[i]] = k; xinfo[k] = { tag: "Book", title: n.title, sub: ownTitle((n.book || {}).title || ""), href: "#reads/" + ids[i], hrefInNotes: "#notes/book-" + ids[i] }; });
   if (list[0]) latest.push({ date: list[0].date, kind: "read", title: orders.reads[0].title, href: "#reads/" + ids[0] });
   const card = (n, i) => { const b = n.book || {};
     return `<a class="read" href="#reads/${ids[i]}">${b.cover ? `<img class="rcov" ${thumb(b.cover)} alt="" loading="lazy" decoding="async">` : `<span class="rcov none"></span>`}
@@ -536,7 +559,7 @@ legacyReads();
   const month = d => new Date(d + "-01T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "short" });
   const money = n => "$" + n.toLocaleString();
   const pc = f => f > 0 && f < .005 ? "<1%" : Math.round(f * 100) + "%";   // never show a real gift as 0%
-  const gifts = n => `${n} ${n === 1 ? "gift" : "gifts"}`;
+  const gifts = n => `${n} ${n === 1 ? "giving" : "givings"}`;
   const amt = g => Number(g.amount) || 0;
   const cz = g => g.cause || "Other";   // the cause belongs to each gift: one recipient can be given to for several causes
   const places = window.GOOD_PLACES || {};
@@ -557,9 +580,9 @@ legacyReads();
   const big = list.reduce((a, g) => (amt(g) > amt(a) ? g : a));
   const kpis = [
     { dark: 1, label: "Total given", value: money(sum), sub: `since ${first}` },
-    { label: "Gifts", value: list.length, sub: `over ${last - first + 1} ${last - first ? "years" : "year"}` },
+    { label: "Givings", value: list.length, sub: `over ${last - first + 1} ${last - first ? "years" : "year"}` },
     { label: "Recipients", value: new Set(list.map(g => g.what)).size, sub: `${causes.length} ${causes.length === 1 ? "cause" : "causes"}` },
-    { label: "Largest gift", value: money(amt(big)), sub: `${esc(big.what)} · ${month(big.date)}` },
+    { label: "Largest giving", value: money(amt(big)), sub: `${esc(big.what)} · ${month(big.date)}` },
   ];
   $("goods-kpis").innerHTML = kpis.map(k => `<div class="kpi${k.dark ? " dark" : ""}"><p class="kl">${k.label}</p><p class="kv">${k.value}</p><p class="ks">${k.sub}</p></div>`).join("");
 
@@ -572,7 +595,7 @@ legacyReads();
       <h3 class="vh">${esc(V.headline)}</h3>
       <div class="vp">${(V.points || []).map(([lead, text]) => `<p><strong>${esc(lead)}</strong> ${esc(text)}</p>`).join("")}</div>
       ${V.verdict ? `<p class="vv"><strong>Verdict.</strong> ${esc(V.verdict)}</p>` : ""}
-      <p class="vf">Written by ${esc(V.by || "AI")} from ${V.gifts || list.length} gifts${asOf ? ` through ${asOf}` : ""}. An opinion from the numbers, not financial or tax advice.${since > 0 ? ` <em>${since} ${since === 1 ? "gift has" : "gifts have"} been added since, so this may be out of date.</em>` : ""}</p>`;
+      <p class="vf">Written by ${esc(V.by || "AI")} from ${V.gifts || list.length} givings${asOf ? ` through ${asOf}` : ""}. An opinion from the numbers, not financial or tax advice.${since > 0 ? ` <em>${since} ${since === 1 ? "giving has" : "givings have"} been added since, so this may be out of date.</em>` : ""}</p>`;
     $("goods-verdict").hidden = false;
   }
 
@@ -589,7 +612,7 @@ legacyReads();
     const gs = list.filter(g => g.date.startsWith(y)), tot = gs.reduce((t, g) => t + amt(g), 0);
     const parts = bySlot.map(c => [c, gs.filter(g => cz(g) === c).reduce((t, g) => t + amt(g), 0)]).filter(p => p[1] > 0).reverse();
     const detail = parts.slice().reverse().map(([c, v]) => `${c} ${pc(v / tot)} (${money(v)})`).join(", ");
-    return `<div class="ycol" tabindex="0" data-tip="${esc(`${y} · ${tot ? `${money(tot)} · ${gifts(gs.length)} · ${detail}` : "no gifts"}`)}">
+    return `<div class="ycol" tabindex="0" data-tip="${esc(`${y} · ${tot ? `${money(tot)} · ${gifts(gs.length)} · ${detail}` : "no givings"}`)}">
       <div class="stack${tot ? "" : " none"}">${parts.map(([c, v]) => `<i class="s${slot(c)}" style="flex:${v};background:${paint(c)}">${v / tot >= .12 ? pc(v / tot) : ""}</i>`).join("")}</div></div>`;
   }).join("");
   $("goods-years").innerHTML = `<div class="legend">${bySlot.map(c => `<span><i class="sw" style="background:${paint(c)}"></i>${esc(c)}</span>`).join("")}</div>
@@ -629,7 +652,8 @@ function fillLatest() {
     const x = latest.find(l => l.kind === el.dataset.latest);
     if (!x) return;
     const when = new Date(fullDate(x.date) + "T00:00:00").toLocaleDateString("en-US", { month: "long", year: "numeric" });   // "November 2026"
-    el.href = x.href; el.innerHTML = `<small>Latest</small><span class="lt">${esc(x.title)}</span><span class="ld">${when}</span>`; el.hidden = false;
+    el.href = x.href; if (x.href.startsWith("steps/")) { el.target = "_blank"; el.rel = "noopener"; }   // the Steps map opens in a new window
+    el.innerHTML = `<small>Latest</small><span class="lt">${esc(x.title)}</span><span class="ld">${when}</span>`; el.hidden = false;
   });
 }
 fillLatest();
@@ -645,18 +669,163 @@ fillLatest();
     const sc = document.createElement("script");
     sc.src = "steps/places.js";
     sc.onload = () => {
+      if (window.travelsInit) window.travelsInit(window.PLACES || []);   // Travels uses the same place list
       // the stop list holds real dates, planned trips included: "latest" is the last stop away from home that has begun by today's date on the real calendar (local time), recomputed every time the page loads
       const today = new Date().toLocaleDateString("en-CA");   // YYYY-MM-DD
       const here = (window.PLACES || []).filter(p => p.from <= today && !atHome(p)).sort((a, b) => (a.from < b.from ? -1 : 1)).pop();
       if (!here) return;
       const [city, region, country] = here.name.split(",").map(t => t.trim());
       const where = country === "United States" && ST[region] ? `${city}, ${ST[region]}` : `${city}, ${country || region}`;
-      latest.push({ date: here.from, kind: "step", title: where, href: "#steps/" + here.from });
+      latest.push({ date: here.from, kind: "step", title: where, href: "steps/index.html#" + here.from });
       fillLatest();
     };
     document.head.append(sc);
   };
   (window.requestIdleCallback || (f => setTimeout(f, 300)))(go);
+})();
+
+// ---- travels: a flag for every country in the Steps place list; a flag (or a pin) switches the world map to that country's cities
+(function travels() {
+  const ISO = { "United States": "US", "China": "CN", "Canada": "CA", "Japan": "JP", "South Korea": "KR", "Taiwan": "TW", "France": "FR", "Italy": "IT", "United Kingdom": "GB", "Russia": "RU", "Mexico": "MX", "Vietnam": "VN", "Germany": "DE", "Spain": "ES", "Peru": "PE", "Denmark": "DK", "Portugal": "PT", "Belgium": "BE", "Switzerland": "CH", "Chile": "CL", "Iceland": "IS", "The Bahamas": "BS", "Cambodia": "KH", "Sweden": "SE", "Netherlands": "NL", "Philippines": "PH", "Indonesia": "ID", "Greece": "GR", "Türkiye": "TR", "Mongolia": "MN", "Singapore": "SG", "Greenland": "GL", "Morocco": "MA", "Panama": "PA", "Ireland": "IE", "Belize": "BZ", "Norway": "NO", "Andorra": "AD", "Egypt": "EG", "Monaco": "MC", "Sudan": "SD", "French Polynesia": "PF", "United Arab Emirates": "AE", "Thailand": "TH", "Austria": "AT", "Hong Kong": "HK", "India": "IN", "Australia": "AU", "New Zealand": "NZ", "Czechia": "CZ", "Hungary": "HU", "Poland": "PL", "Finland": "FI", "Croatia": "HR", "Malaysia": "MY", "Argentina": "AR", "Brazil": "BR", "Colombia": "CO", "Cuba": "CU", "Costa Rica": "CR" };
+  // what a country calls its first-level divisions (the second part of "City, Region, Country"); "" = a city-state with none. Anything not listed says "region".
+  const DIV = { "United States": "state", "Canada": "province", "China": "province", "Japan": "prefecture", "South Korea": "province", "Taiwan": "city/county", "Mexico": "state", "Germany": "state", "Australia": "state/territory", "Russia": "region", "Vietnam": "province", "Cambodia": "province", "Mongolia": "province", "Sudan": "state", "Argentina": "province", "Netherlands": "province", "Switzerland": "canton", "Belgium": "region", "Italy": "region", "France": "region", "Spain": "community", "Denmark": "region", "Sweden": "county", "Norway": "county", "Ireland": "province", "United Kingdom": "nation", "Portugal": "district", "Peru": "region", "Chile": "region", "Greece": "region", "Egypt": "governorate", "Morocco": "region", "Türkiye": "province", "Panama": "province", "Belize": "district", "The Bahamas": "district", "Iceland": "region", "United Arab Emirates": "emirate", "Greenland": "municipality", "French Polynesia": "island group", "Philippines": "region", "Indonesia": "province", "Andorra": "parish", "Singapore": "", "Monaco": "" };
+  const PLURAL = { "city/county": "cities/counties", "state/territory": "states/territories" };
+  const divWord = (c, n) => { const w = c in DIV ? DIV[c] : "region"; return !w ? "city-state" : n === 1 ? w : PLURAL[w] || (/[^aeiou]y$/.test(w) ? w.slice(0, -1) + "ies" : w + "s"); };
+  const flag = c => ISO[c] ? String.fromCodePoint(...[...ISO[c]].map(ch => 127397 + ch.charCodeAt(0))) : "";
+  const flagsEl = document.getElementById("travels-flags"), mapEl = document.getElementById("travels-countries"), pane = document.getElementById("travels-country"), head = document.getElementById("travels-head");
+  let byCountry = {}, order = [], current = "", lmap = null, layer = null, loading = null, markers = {}, sel = null;
+  const loadLeaflet = () => loading || (loading = new Promise((ok, no) => {
+    const css = document.createElement("link"); css.rel = "stylesheet"; css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"; document.head.append(css);
+    const sc = document.createElement("script"); sc.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"; sc.onload = ok; sc.onerror = () => { loading = null; no(); }; document.head.append(sc);
+  }));
+  // a city on the country map opens a pop-up next to its pin: local name first, English second, its visits and (when matched) its photos at their natural shape
+  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  // the map is only as tall as it needs to be (540px at least); a pop-up taller than that stretches it, and it relaxes again on close
+  const fitMap = m => {
+    const box = document.getElementById("travels-leaflet"), pop = m.getPopup() && m.getPopup().getElement();
+    if (!pop || !m.isPopupOpen()) return;
+    const need = pop.querySelector(".leaflet-popup-content-wrapper").offsetHeight + 110;
+    const want = need > 540 ? need + "px" : "";
+    if (box.style.minHeight !== want) { box.style.minHeight = want; lmap.invalidateSize(); m.getPopup().update(); }
+  };
+  const paintSel = () => Object.entries(markers).forEach(([k, m]) => m.setStyle(k === sel ? { fillColor: "#fff", color: "#111", weight: 3, fillOpacity: 1 } : { fillColor: "#111", color: "#fff", weight: 1.5, fillOpacity: .8 }));
+  const popupNode = c => {
+    const box = document.createElement("div"); box.className = "tcc"; let idx = 0;
+    const mon = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" }), ds = c.dates.slice().sort();
+    // built once, so the arrow you click is never replaced under the pointer (Leaflet treats a click on a removed element as a click on the map and closes the pop-up)
+    c.render = () => {
+      const ph0 = c.photos[0];
+      box.innerHTML = `<div class="tcc-top">${c.localCity ? `<b>${esc(c.localCity)}</b><span>${esc(c.city)}${c.region ? `, ${esc(c.region)}` : ""}</span>` : `<b>${esc(c.city)}</b>${c.region ? `<span>${esc(c.region)}</span>` : ""}`}</div>
+        <p class="tcc-meta">${c.n} ${c.n === 1 ? "visit" : "visits"} · ${ds.length > 1 && mon(ds[0]) !== mon(ds[ds.length - 1]) ? `${mon(ds[0])} – ${mon(ds[ds.length - 1])}` : mon(ds[0])}</p>
+        ${ph0 ? `<figure class="tcc-ph"><img alt=""><figcaption></figcaption>${c.photos.length > 1 ? `<button type="button" class="tcc-nav prev" aria-label="Previous photo">‹</button><button type="button" class="tcc-nav next" aria-label="Next photo">›</button>` : ""}</figure>` : ""}`;
+      const fig = box.querySelector("figure"); if (!fig) return;
+      const img = fig.querySelector("img"), cap = fig.querySelector("figcaption");
+      const show = () => { const ph = c.photos[idx]; img.alt = `${c.city}, ${ph.cap}`; img.src = ph.src; cap.textContent = `${ph.cap}${c.photos.length > 1 ? ` · ${idx + 1} / ${c.photos.length}` : ""}`; };
+      const go = d => { idx = (idx + d + c.photos.length) % c.photos.length; show(); };
+      img.addEventListener("load", () => { const m = markers[c.key]; if (m && m.isPopupOpen()) { m.getPopup().update(); fitMap(m); } });   // the pop-up grows to the photo's own shape, and the map with it if needed
+      fig.querySelectorAll(".tcc-nav").forEach(b => b.addEventListener("click", e => { e.stopPropagation(); e.preventDefault(); go(b.classList.contains("next") ? 1 : -1); }));
+      // swipe (or drag) the photo sideways for the next / previous one
+      let x0 = null;
+      fig.addEventListener("pointerdown", e => { if (!e.target.closest(".tcc-nav")) x0 = e.clientX; });
+      fig.addEventListener("pointerup", e => { if (x0 !== null && c.photos.length > 1 && Math.abs(e.clientX - x0) > 36) go(e.clientX < x0 ? 1 : -1); x0 = null; });
+      fig.addEventListener("pointercancel", () => { x0 = null; });
+      if (idx >= c.photos.length) idx = 0;
+      show();
+    };
+    c.render(); return box;
+  };
+  // pick a city from "Most visited": fly to it, then open its pop-up
+  const showCity = key => {
+    const m = markers[key], c = byCountry[current] && byCountry[current].cities[key];
+    if (!m || !c) return;
+    lmap.once("moveend", () => m.openPopup());
+    lmap.flyTo([c.lat, c.lng], Math.max(lmap.getZoom(), 9), { duration: .8 });
+  };
+  const draw = () => {
+    const g = byCountry[current]; if (!g) return;
+    const cities = Object.values(g.cities);
+    if (!lmap) { lmap = L.map("travels-leaflet", { worldCopyJump: true, scrollWheelZoom: false }); L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: "&copy; OpenStreetMap contributors", referrerPolicy: "origin" }).addTo(lmap);
+      if (window.ResizeObserver) new ResizeObserver(() => lmap.invalidateSize()).observe(document.getElementById("travels-leaflet")); }   // the map follows the card's height
+    if (layer) layer.remove();
+    markers = {};
+    layer = L.layerGroup(cities.map(c => (markers[c.key] = L.circleMarker([c.lat, c.lng], { radius: 5 + Math.sqrt(c.n) * 2, color: "#fff", weight: 1.5, fillColor: "#111", fillOpacity: .8 }))
+      .bindTooltip(`${c.local ? `<b>${esc(c.local)}</b><br>` : ""}${esc(c.name)}<br><span class="tt-n">${c.n} ${c.n === 1 ? "visit" : "visits"}${c.photos.length ? ` · ${c.photos.length} ${c.photos.length === 1 ? "photo" : "photos"}` : ""}</span>`, { direction: "top", offset: [0, -4] })
+      .bindPopup(popupNode(c), { className: "tpop", minWidth: 340, maxWidth: 460, autoPanPadding: [24, 24], keepInView: true, offset: [0, -2] })
+      .on("popupopen", () => { sel = c.key; paintSel(); fitMap(markers[c.key]); markers[c.key].closeTooltip(); head.querySelectorAll(".tc-row").forEach(r => r.classList.toggle("on", r.dataset.city === c.key)); })
+      .on("popupclose", () => { if (sel === c.key) sel = null; paintSel(); if (!sel) document.getElementById("travels-leaflet").style.minHeight = ""; head.querySelectorAll(".tc-row").forEach(r => r.classList.remove("on")); }))).addTo(lmap);
+    lmap.invalidateSize();
+    lmap.fitBounds(L.latLngBounds(cities.map(c => [c.lat, c.lng])), { padding: [48, 48], maxZoom: 8 });
+  };
+  const select = c => {
+    current = c === current ? "" : c; sel = null;
+    flagsEl.querySelectorAll(".tag").forEach(b => { const on = b.dataset.c === current; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
+    mapEl.parentNode.hidden = !!current; pane.hidden = !current;
+    if (!current) { head.innerHTML = ""; return; }
+    const g = byCountry[current];
+    const cities = Object.values(g.cities).sort((a, b) => b.n - a.n || (a.label < b.label ? -1 : 1)), top = cities.slice(0, 5), mx = top[0].n;
+    const yrs = [...g.years].sort(), mon = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" });
+    const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+    const tiles = [
+      ["Visits", g.n, `since ${g.first.slice(0, 4)}`],
+      ["Places", cities.length, (() => { const dc = current === "United States" && g.regions.has("District of Columbia"), n = g.regions.size - (dc ? 1 : 0); return DIV[current] === "" ? "city-state" : `${n} ${divWord(current, n)}${dc ? " + DC" : ""}`; })()],
+      ["Years", yrs.length, yrs.length > 1 ? `${yrs[0]}–${yrs[yrs.length - 1]}` : yrs[0]],
+      ["Latest", mon(g.last), `first: ${mon(g.first)}`]];
+    head.innerHTML = `<div class="tc-top"><span class="tf">${flag(current)}</span><div><b>${esc(current)}</b><span>${plural(cities.length, "place")} · ${plural(g.n, "visit")}</span></div><button type="button" class="rclear">← World</button></div>
+      <div class="tc-stats">${tiles.map(([k, v, sub]) => `<div><small>${k}</small><b>${v}</b><span>${sub}</span></div>`).join("")}</div>
+      <div class="tc-places"><small>Most visited</small>${top.map(c => `<button type="button" class="tc-row" data-city="${esc(c.key)}"><span class="tc-n">${esc(c.city)}${c.region ? `<i>${esc(c.region)}</i>` : ""}</span><span class="tc-bar"><i style="width:${Math.max(4, Math.round(c.n / mx * 100))}%"></i></span><span class="tc-c">${c.n}</span></button>`).join("")}${cities.length > top.length ? `<p class="tc-more">+ ${cities.length - top.length} more on the map</p>` : ""}</div>`;
+    loadLeaflet().then(draw, () => { head.insertAdjacentHTML("beforeend", `<p class="tc-more">Couldn’t load the map.</p>`); });
+  };
+  window.travelsInit = places => {
+    const today = new Date().toLocaleDateString("en-CA");
+    places.filter(p => p.from <= today).forEach(p => {
+      const parts = p.name.split(",").map(t => t.trim()), country = parts[parts.length - 1], key = p.name;
+      const g = byCountry[country] || (byCountry[country] = { n: 0, cities: {}, first: p.from, last: p.from, years: new Set(), regions: new Set() });
+      g.n++; if (p.from < g.first) g.first = p.from; if (p.from > g.last) g.last = p.from; g.years.add(p.from.slice(0, 4)); if (parts.length > 2) g.regions.add(parts[1]);
+      (g.cities[key] || (g.cities[key] = { key, name: p.name, local: p.local && p.local !== p.name ? p.local : "", localCity: p.localCity && p.localCity !== parts[0] ? p.localCity : "", dates: [], photos: [], lat: p.lat, lng: p.lng, n: 0, city: parts[0], region: parts.length > 2 && parts[1] !== parts[0] ? parts[1] : "", label: parts.slice(0, -1).filter((t, i, a) => i === 0 || t !== a[0]).join(", ") })).n++;
+      byCountry[country].cities[key].dates.push(p.from);
+    });
+    order = Object.keys(byCountry).sort((a, b) => byCountry[b].n - byCountry[a].n || (a < b ? -1 : 1));
+    // flags and pins for countries the world map has no position for yet
+    const XY = window.COUNTRY_XY = window.COUNTRY_XY || {};
+    order.forEach(c => { if (!XY[c]) { const cs = Object.values(byCountry[c].cities); XY[c] = [cs.reduce((t, x) => t + x.lat, 0) / cs.length, cs.reduce((t, x) => t + x.lng, 0) / cs.length]; } if (!FLAGS[c] && flag(c)) FLAGS[c] = flag(c); });
+    mapEl.innerHTML = worldMap(Object.fromEntries(order.map(c => [c, byCountry[c].n])), "", "Countries I have been to", 13, 1.4);
+    mapTip(mapEl, "visit");
+    // one moving row of flags: the set is drawn twice and the track slides by exactly one set, so the loop has no seam; hover pauses it
+    const btn = (c, dup) => `<button type="button" class="tag" data-c="${esc(c)}" aria-pressed="false"${dup ? ' tabindex="-1"' : ""} title="${esc(c)} · ${byCountry[c].n} ${byCountry[c].n === 1 ? "visit" : "visits"}">${flag(c) || esc(c)}</button>`;
+    flagsEl.innerHTML = `<div class="fl-track" style="--secs:${Math.max(20, order.length * 1.8)}s"><div class="fl-set">${order.map(c => btn(c)).join("")}</div><div class="fl-set" aria-hidden="true">${order.map(c => btn(c, true)).join("")}</div></div>`;
+    // photos: steps/photos.js lists steps/img/cityname_YYYYMM.ext; each goes to the stop of that city in the closest month, as on the Steps map
+    const slugOf = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z]/g, "");
+    const stopSlugs = p => { const city = p.name.split(",")[0], a = [slugOf(city), slugOf(city.split(" ")[0])]; if (a[0] === "saintlouis") a.push("stlouis"); if (a[0] === "koreandmz") a.push("dmz"); return a; };
+    const monthIdx = d => +d.slice(0, 4) * 12 + (+d.slice(5, 7) - 1), stopsAll = places.slice().sort((x, y) => (x.from < y.from ? -1 : 1));
+    const attachPhotos = () => {
+      (window.PHOTOS || []).forEach(file => {
+        const m = file.match(/^([A-Za-z]+)_(\d{4})(\d{2})(?:_(\d+))?\./); if (!m) return;
+        const pm = +m[2] * 12 + (+m[3] - 1), visit = +(m[4] || 1); let bestD = 99, group = [];
+        stopsAll.forEach(p => { if (!stopSlugs(p).includes(m[1].toLowerCase())) return; const d = Math.abs(monthIdx(p.from) - pm); if (d < bestD) { bestD = d; group = []; } if (d === bestD) group.push(p); });
+        if (!group.length) return;
+        const best = group[Math.min(visit, group.length) - 1], parts = best.name.split(",").map(t => t.trim()), g = byCountry[parts[parts.length - 1]], c = g && g.cities[best.name];
+        if (c) c.photos.push({ src: "steps/img/" + file, cap: `${MON[+m[3] - 1]} ${m[2]}` });
+      });
+      Object.values(byCountry).forEach(g => Object.values(g.cities).forEach(c => c.photos.sort((a, b) => (a.src < b.src ? -1 : 1))));
+      Object.values(byCountry).forEach(g => Object.values(g.cities).forEach(c => c.render && c.render()));   // photos arrived after a pop-up was built
+    };
+    if (window.PHOTOS) attachPhotos(); else { const sc = document.createElement("script"); sc.src = "steps/photos.js"; sc.onload = attachPhotos; document.head.append(sc); }
+    // the headline figures: countries, cities and miles (great-circle legs between consecutive stops, the same sum the Steps map shows)
+    const seen = places.filter(p => p.from <= today).sort((x, y) => (x.from < y.from ? -1 : 1));
+    const rad = d => d * Math.PI / 180, mi = (x, y) => 2 * 3958.8 * Math.asin(Math.sqrt(Math.sin(rad(y.lat - x.lat) / 2) ** 2 + Math.cos(rad(x.lat)) * Math.cos(rad(y.lat)) * Math.sin(rad(y.lng - x.lng) / 2) ** 2));
+    const miles = seen.reduce((t, p, i) => t + (i ? mi(seen[i - 1], p) : 0), 0), cityCount = new Set(seen.map(p => p.name)).size, num = n => Math.round(n).toLocaleString("en-US");
+    document.getElementById("travels-count").innerHTML = [
+      ["Countries", order.length, `since ${seen[0].from.slice(0, 4)}`, 1],
+      ["Cities", num(cityCount), `${num(seen.length)} stops`],
+      ["Miles", num(miles), `${num(miles * 1.609344)} km · ${(miles / 24901).toFixed(1)}× around the Earth`]
+    ].map(([k, v, sub, dark]) => `<div class="kpi${dark ? " dark" : ""}"><p class="kl">${k}</p><p class="kv">${v}</p><p class="ks">${sub}</p></div>`).join("");
+  };
+  document.getElementById("travels").addEventListener("click", e => {
+    const b = e.target.closest("[data-c]"), pin = e.target.closest(".pin"), back = e.target.closest(".rclear");
+    const row = e.target.closest(".tc-row");
+    if (row) showCity(row.dataset.city);
+    else if (b) select(b.dataset.c); else if (pin && pin.dataset.name) select(pin.dataset.name); else if (back) select(current);
+  });
 })();
 
 syncReader();                            // open a pop-up straight from a shared link
