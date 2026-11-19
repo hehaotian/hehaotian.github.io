@@ -5,6 +5,761 @@
 // slug: optional short link name (needed when the title isn't plain English letters).
 window.READS = [
   {
+    "date": "2015-12-02",
+    "title": "Between Law and Darkness",
+    "slug": "between-law-and-darkness",
+    "category": "Play",
+    "book": {
+      "cover": "13305951.jpg",
+      "title": "Antigonick",
+      "author": "Anne Carson",
+      "language": "English",
+      "country": "Canada",
+      "original": "English",
+      "lines": [
+        "Play · A translation of Sophocles’ Antigone, first published 2012",
+        "Carson’s Antigone, with a silent figure named Nick who measures the time."
+      ]
+    },
+    "place": "于加拿大列治文\nRichmond, BC, Canada",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "pairStanzas": [
+      [
+        [
+          "克瑞翁说：城邦必须有法律。",
+          "Creon says: a city must have law."
+        ],
+        [
+          "νόμος，nomos。",
+          "νόμος, nomos."
+        ],
+        [
+          "一个如此端正的希腊词，",
+          "Such an upright Greek word,"
+        ],
+        [
+          "仿佛只要写在石头上，",
+          "as if, once written on stone,"
+        ],
+        [
+          "便能使人的意志",
+          "it could give human will"
+        ],
+        [
+          "获得大理石的寿命。",
+          "the lifespan of marble."
+        ]
+      ],
+      [
+        [
+          "安提戈涅没有反驳。",
+          "Antigone does not argue back."
+        ]
+      ],
+      [
+        [
+          "她只是要埋葬一个人。",
+          "She only wants to bury someone."
+        ]
+      ],
+      [
+        [
+          "不是英雄，",
+          "Not a hero,"
+        ],
+        [
+          "不是叛徒，",
+          "not a traitor,"
+        ],
+        [
+          "不是底比斯城门外",
+          "not the last footnote to some war"
+        ],
+        [
+          "某场战争的最后注脚。",
+          "outside the gates of Thebes."
+        ]
+      ],
+      [
+        [
+          "是她的兄弟。",
+          "He is her brother."
+        ]
+      ],
+      [
+        [
+          "*",
+          ""
+        ]
+      ],
+      [
+        [
+          "索福克勒斯让她说起",
+          "Sophocles has her speak of"
+        ],
+        [
+          "那些不成文、不可动摇的神圣法则：",
+          "those unwritten, unshakable laws of the gods:"
+        ]
+      ],
+      [
+        [
+          "ἄγραπτα κἀσφαλῆ θεῶν νόμιμα。",
+          "ἄγραπτα κἀσφαλῆ θεῶν νόμιμα."
+        ]
+      ],
+      [
+        [
+          "而罗马人后来会说：",
+          "And the Romans would later say:"
+        ]
+      ],
+      [
+        [
+          "lex iniusta non est lex——",
+          "lex iniusta non est lex—"
+        ],
+        [
+          "不义之法，便不成其为法。",
+          "an unjust law is no law at all."
+        ]
+      ],
+      [
+        [
+          "但安妮·卡森似乎不愿",
+          "But Anne Carson seems unwilling"
+        ],
+        [
+          "让事情如此容易。",
+          "to make it so easy."
+        ]
+      ],
+      [
+        [
+          "如果神法必然高于人法，",
+          "If divine law must stand above human law,"
+        ],
+        [
+          "悲剧便不过是一道",
+          "tragedy is no more than an exam"
+        ],
+        [
+          "答案早已写好的考题。",
+          "whose answer was written in advance."
+        ]
+      ],
+      [
+        [
+          "安提戈涅真正令人不安的，",
+          "What is truly unsettling about Antigone"
+        ],
+        [
+          "不是她知道什么是正义，",
+          "is not that she knows what justice is,"
+        ]
+      ],
+      [
+        [
+          "而是她必须亲手",
+          "but that she must with her own hands"
+        ],
+        [
+          "把自己的确信",
+          "turn her own certainty"
+        ],
+        [
+          "变成另一个人的死亡。",
+          "into another person’s death."
+        ]
+      ],
+      [
+        [
+          "*",
+          ""
+        ]
+      ],
+      [
+        [
+          "卡森在古老的悲剧里",
+          "Into the ancient tragedy Carson places"
+        ],
+        [
+          "放进一个叫 Nick 的人。",
+          "a man called Nick."
+        ]
+      ],
+      [
+        [
+          "他不说话。",
+          "He does not speak."
+        ]
+      ],
+      [
+        [
+          "他只测量。",
+          "He only measures."
+        ]
+      ],
+      [
+        [
+          "仿佛时间也需要一个工匠，",
+          "As if time, too, needed a craftsman,"
+        ],
+        [
+          "用绳索、刻度与沉默，",
+          "who with cord, scale and silence"
+        ],
+        [
+          "量出每个人",
+          "measures how far each person is"
+        ],
+        [
+          "离结局还有多远。",
+          "from the end."
+        ]
+      ],
+      [
+        [
+          "χρόνος，chronos，",
+          "χρόνος, chronos,"
+        ],
+        [
+          "流逝的时间。",
+          "time that passes."
+        ],
+        [
+          "καιρός，kairos，",
+          "καιρός, kairos,"
+        ],
+        [
+          "那个不可错过的时刻。",
+          "the moment that cannot be missed."
+        ]
+      ],
+      [
+        [
+          "安提戈涅拥有后者，",
+          "Antigone has the latter,"
+        ],
+        [
+          "却几乎没有前者。",
+          "and almost none of the former."
+        ]
+      ],
+      [
+        [
+          "她来得太早，",
+          "She comes too early,"
+        ],
+        [
+          "早于城邦的宽恕；",
+          "before the city’s forgiveness;"
+        ]
+      ],
+      [
+        [
+          "克瑞翁醒悟得太晚，",
+          "Creon wakes too late,"
+        ],
+        [
+          "晚于任何能够挽回的事情。",
+          "later than anything that could still be mended."
+        ]
+      ],
+      [
+        [
+          "希腊悲剧最残忍的地方，",
+          "The cruelest thing about Greek tragedy"
+        ],
+        [
+          "也许从来不是命运不可改变，",
+          "is perhaps never that fate cannot be changed,"
+        ]
+      ],
+      [
+        [
+          "而是每个人",
+          "but that by the time each person"
+        ],
+        [
+          "终于明白的时候，",
+          "finally understands,"
+        ],
+        [
+          "都已经错过了",
+          "the moment to change it"
+        ],
+        [
+          "能够改变它的时刻。",
+          "has already been missed."
+        ]
+      ],
+      [
+        [
+          "*",
+          ""
+        ]
+      ],
+      [
+        [
+          "我想到拉丁语的 pietas。",
+          "I think of the Latin pietas."
+        ]
+      ],
+      [
+        [
+          "埃涅阿斯背负父亲，",
+          "Aeneas carries his father"
+        ],
+        [
+          "从燃烧的特洛伊离开。",
+          "out of burning Troy."
+        ]
+      ],
+      [
+        [
+          "他被称为 pius Aeneas，",
+          "He is called pius Aeneas,"
+        ],
+        [
+          "虔敬的埃涅阿斯。",
+          "dutiful Aeneas."
+        ]
+      ],
+      [
+        [
+          "而安提戈涅",
+          "And what Antigone carries"
+        ],
+        [
+          "背负的是一个不能被埋葬的兄弟。",
+          "is a brother who may not be buried."
+        ]
+      ],
+      [
+        [
+          "同样是对亲人的义务，",
+          "The same duty to kin:"
+        ],
+        [
+          "一个人因此成为帝国的祖先，",
+          "one person becomes the ancestor of an empire,"
+        ],
+        [
+          "另一个人因此成为城邦的罪犯。",
+          "another becomes a criminal of the city."
+        ]
+      ],
+      [
+        [
+          "历史喜欢前一种忠诚。",
+          "History prefers the former loyalty."
+        ]
+      ],
+      [
+        [
+          "它需要活下来的人",
+          "It needs the ones who survive"
+        ],
+        [
+          "建立城市，传递火种，",
+          "to found cities, to pass on the fire,"
+        ],
+        [
+          "把家族的名字",
+          "to write the family name"
+        ],
+        [
+          "写进未来。",
+          "into the future."
+        ]
+      ],
+      [
+        [
+          "但安提戈涅拒绝未来。",
+          "But Antigone refuses the future."
+        ]
+      ],
+      [
+        [
+          "她只要求",
+          "She asks only"
+        ],
+        [
+          "让死者回到泥土。",
+          "that the dead return to the earth."
+        ]
+      ],
+      [
+        [
+          "γῆ，gē。",
+          "γῆ, gē."
+        ]
+      ],
+      [
+        [
+          "大地。",
+          "Earth."
+        ]
+      ],
+      [
+        [
+          "那是她全部的政治。",
+          "That is the whole of her politics."
+        ]
+      ],
+      [
+        [
+          "*",
+          ""
+        ]
+      ],
+      [
+        [
+          "然而卡森没有把她",
+          "Yet Carson does not carve her"
+        ],
+        [
+          "雕刻成一尊",
+          "into a statue"
+        ],
+        [
+          "永远正确的少女。",
+          "of a girl who is always right."
+        ]
+      ],
+      [
+        [
+          "她的语言尖锐，",
+          "Her language is sharp,"
+        ],
+        [
+          "她的爱近乎固执。",
+          "her love close to stubbornness."
+        ]
+      ],
+      [
+        [
+          "她与克瑞翁互相说话，",
+          "She and Creon talk to each other,"
+        ],
+        [
+          "却仿佛站在两种",
+          "yet as if standing in two grammars"
+        ],
+        [
+          "无法相互翻译的语法里。",
+          "that cannot be translated into one another."
+        ]
+      ],
+      [
+        [
+          "一个说国家。",
+          "One says state."
+        ],
+        [
+          "一个说兄弟。",
+          "One says brother."
+        ],
+        [
+          "一个说秩序。",
+          "One says order."
+        ],
+        [
+          "一个说尸体。",
+          "One says corpse."
+        ]
+      ],
+      [
+        [
+          "他们都没有说出",
+          "Neither says"
+        ],
+        [
+          "另一个人",
+          "the word the other"
+        ],
+        [
+          "真正能够听懂的词。",
+          "could truly understand."
+        ]
+      ],
+      [
+        [
+          "于是悲剧发生。",
+          "And so the tragedy happens."
+        ]
+      ],
+      [
+        [
+          "不是因为无人开口，",
+          "Not because no one speaks,"
+        ],
+        [
+          "而是因为",
+          "but because"
+        ],
+        [
+          "所有人都在说话。",
+          "everyone is speaking."
+        ]
+      ],
+      [
+        [
+          "*",
+          ""
+        ]
+      ],
+      [
+        [
+          "亚里士多德称悲剧的转折为",
+          "Aristotle calls the turn of a tragedy"
+        ],
+        [
+          "περιπέτεια，peripeteia；",
+          "περιπέτεια, peripeteia;"
+        ],
+        [
+          "称认识为",
+          "and recognition"
+        ],
+        [
+          "ἀναγνώρισις，anagnōrisis。",
+          "ἀναγνώρισις, anagnōrisis."
+        ]
+      ],
+      [
+        [
+          "可是认识又能怎样？",
+          "But what does recognition change?"
+        ]
+      ],
+      [
+        [
+          "克瑞翁终于知道自己错了。",
+          "Creon finally knows he was wrong."
+        ]
+      ],
+      [
+        [
+          "知道得如此彻底，",
+          "He knows it so thoroughly"
+        ],
+        [
+          "以至于他余下的生命",
+          "that the rest of his life"
+        ],
+        [
+          "都必须与这个知识共处。",
+          "must be lived alongside this knowledge."
+        ]
+      ],
+      [
+        [
+          "Errare humanum est.",
+          "Errare humanum est."
+        ]
+      ],
+      [
+        [
+          "犯错是人的本性。",
+          "To err is human."
+        ]
+      ],
+      [
+        [
+          "然而希腊人比罗马人的格言",
+          "Yet the Greeks are more cruel"
+        ],
+        [
+          "更加残酷：",
+          "than the Roman maxim:"
+        ]
+      ],
+      [
+        [
+          "有些错误",
+          "some errors"
+        ],
+        [
+          "并不因为被认识",
+          "are not pardoned"
+        ],
+        [
+          "便获得赦免。",
+          "merely because they are recognized."
+        ]
+      ],
+      [
+        [
+          "*",
+          ""
+        ]
+      ],
+      [
+        [
+          "我读《Antigonick》，",
+          "Reading Antigonick,"
+        ],
+        [
+          "越来越觉得 Nick",
+          "I feel more and more that Nick"
+        ],
+        [
+          "才是这部作品",
+          "is the quietest witness"
+        ],
+        [
+          "最安静的见证人。",
+          "of this work."
+        ]
+      ],
+      [
+        [
+          "他不审判克瑞翁，",
+          "He does not judge Creon,"
+        ],
+        [
+          "不赞美安提戈涅，",
+          "does not praise Antigone,"
+        ],
+        [
+          "不替诸神解释",
+          "does not explain for the gods"
+        ],
+        [
+          "为什么沉默。",
+          "why they are silent."
+        ]
+      ],
+      [
+        [
+          "他只是继续测量。",
+          "He simply goes on measuring."
+        ]
+      ],
+      [
+        [
+          "量一具尸体与泥土的距离，",
+          "The distance between a corpse and the earth,"
+        ],
+        [
+          "量一句命令与一场葬礼的距离，",
+          "between a command and a funeral,"
+        ],
+        [
+          "量一个父亲",
+          "the time a father needs"
+        ],
+        [
+          "从确信走向悔恨",
+          "to travel from certainty"
+        ],
+        [
+          "所需要的时间。",
+          "to remorse."
+        ]
+      ],
+      [
+        [
+          "而那时间",
+          "And that time"
+        ],
+        [
+          "恰好比一个儿子的生命",
+          "happens to be a little longer"
+        ],
+        [
+          "长了一点。",
+          "than a son’s life."
+        ]
+      ],
+      [
+        [
+          "*",
+          ""
+        ]
+      ],
+      [
+        [
+          "最后，我想起",
+          "Finally, I remember"
+        ],
+        [
+          "古希腊墓碑上常见的告别：",
+          "the farewell common on ancient Greek gravestones:"
+        ]
+      ],
+      [
+        [
+          "χαῖρε。",
+          "χαῖρε."
+        ]
+      ],
+      [
+        [
+          "Chaire.",
+          "Chaire."
+        ]
+      ],
+      [
+        [
+          "它既可以是问候，",
+          "It can be a greeting,"
+        ],
+        [
+          "也可以是永别。",
+          "or it can be a last goodbye."
+        ]
+      ],
+      [
+        [
+          "同一个词，",
+          "The same word"
+        ],
+        [
+          "用于迎接活人，",
+          "used to welcome the living"
+        ],
+        [
+          "也用于送走死者。",
+          "also sends off the dead."
+        ]
+      ],
+      [
+        [
+          "安提戈涅不过想",
+          "Antigone only wanted"
+        ],
+        [
+          "对自己的兄弟",
+          "to say that word"
+        ],
+        [
+          "说完这个词。",
+          "to her own brother."
+        ]
+      ],
+      [
+        [
+          "而整座底比斯，",
+          "And all of Thebes"
+        ],
+        [
+          "竟容不下",
+          "could not make room"
+        ],
+        [
+          "如此短暂的一声告别。",
+          "for so brief a farewell."
+        ]
+      ]
+    ]
+  },
+  {
     "date": "2016-12-03",
     "title": "A Man Who Does Not Repent",
     "slug": "a-man-who-does-not-repent",
@@ -197,7 +952,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2019-11-24",
+    "date": "2015-02-02",
     "title": "Choosing Not to Repeat the Harm",
     "slug": "choosing-not-to-repeat-the-harm",
     "category": "Novel",
@@ -213,7 +968,7 @@ window.READS = [
         "On the Yorkshire moors, an orphan from Liverpool and the Earnshaw daughter he loves, and the harm that passes to the next generation."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于华盛顿州西雅图\nSeattle, WA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["我一直觉得，《呼啸山庄》最令人不安的地方，是 Emily Brontë 从来没有试图让爱情变得美好。约克郡荒原上的狂风、潮湿的石墙、荒凉的山丘，以及两座彼此对望的庄园，构成了一个几乎与外部世界隔绝的空间。但这片看似远离文明的土地，实际上从未脱离英国社会的阶级秩序，甚至与大英帝国的殖民历史存在隐秘的联系。",
@@ -467,7 +1222,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2015-10-11",
+    "date": "2015-12-12",
     "title": "An Autobiography Without a Straight Road",
     "slug": "an-autobiography-without-a-straight-road",
     "category": "Novel in verse",
@@ -483,7 +1238,7 @@ window.READS = [
         "Geryon, the red winged monster of Greek myth, grows up, falls in love with Herakles and learns photography."
       ]
     },
-    "place": "于华盛顿州西雅图\nSeattle, WA",
+    "place": "于加利福尼亚州圣迭戈\nSan Diego, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["一、关于一种不可能的文体",
@@ -657,7 +1412,107 @@ window.READS = [
     ]
   },
   {
-    "date": "2020-03-01",
+    "date": "2014-01-21",
+    "title": "Who Decides Who Is Fully Human?",
+    "slug": "who-decides-who-is-fully-human",
+    "category": "Novel",
+    "book": {
+      "cover": "this_earth_of_mankind.jpg",
+      "title": "This Earth of Mankind",
+      "author": "Pramoedya Ananta Toer",
+      "language": "English",
+      "country": "Indonesia",
+      "original": "Indonesian",
+      "lines": [
+        "Novel · English translation of Bumi Manusia, first published 1980",
+        "Minke, a young native student in colonial Java, falls in love with a mixed-race girl and learns the limits of colonial law."
+      ]
+    },
+    "place": "于华盛顿州西雅图\nSeattle, WA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["明克会说荷兰语，读欧洲的书，接受殖民者引以为傲的现代教育。他相信理性、自由与法律，相信知识能够使人摆脱出身的限制。然而，当他试图与安妮莉丝共同生活时，法律却提醒他：无论接受过多少教育，他仍然只是一个土著。",
+       "Minke speaks Dutch, reads European books, and receives the modern education the colonizers are proud of. He believes in reason, freedom and law, and believes knowledge can free a person from the limits of birth. Yet when he tries to live together with Annelies, the law reminds him: however much education he has received, he is still only a native."],
+      ["**殖民者教会他相信人的普遍价值，却始终保留着决定谁有资格成为一个完整的人的权力。**",
+       "**The colonizers taught him to believe in universal human worth, while always keeping the power to decide who is qualified to be a full human being.**"],
+      ["比明克更令我难忘的是妮·翁托索罗。这个被卖给荷兰商人的爪哇女人，没有受过正规教育，却凭借自学经营产业、抚养子女，表现出远比许多殖民者更充分的理性与尊严。然而，当荷兰法院决定安妮莉丝的归属时，她作为母亲付出的一切，都无法转化为法律认可的权利。",
+       "More memorable to me than Minke is Nyai Ontosoroh. This Javanese woman, sold to a Dutch businessman, had no formal education, yet by teaching herself she ran a business and raised her children, showing far fuller reason and dignity than many colonizers. Yet when the Dutch court decides where Annelies belongs, everything she gave as a mother cannot be converted into a right the law recognizes."],
+      ["她不是因为不够文明而失败，而是因为她的文明始终不被允许成为一种权利。",
+       "She does not fail for being insufficiently civilized; she fails because her civilization is never allowed to become a right."],
+      ["普拉默迪亚最深刻的批判，并不在于揭露殖民者的残暴，而在于揭露文明本身如何成为统治的语言。法律可以程序严密，却建立在身份的不平等之上；教育可以传播自由的观念，却不必给予受教育者自由。那些被统治者甚至必须借用统治者的标准，证明自己值得作为一个人受到尊重。",
+       "Pramoedya’s deepest critique lies not in exposing the colonizers’ brutality but in exposing how civilization itself becomes the language of rule. Law can be procedurally rigorous yet founded on inequality of status; education can spread ideas of freedom without having to give the educated freedom. The ruled must even borrow the rulers’ standards to prove they deserve to be respected as human beings."],
+      ["这使我对现代社会所谓的进步始终保留一分怀疑。我们太容易相信，制度越完善，社会便越公正；知识越普及，人便越自由。但真正的问题或许从来不是一个社会拥有多少文明的工具，而是谁有权决定这些工具如何使用，又有谁始终被排除在它们的保障之外。",
+       "This keeps me always somewhat skeptical of so-called progress in modern society. We too easily believe that the more complete the institutions, the more just the society; the more widespread the knowledge, the freer the people. But the real question may never be how many instruments of civilization a society has, but who has the right to decide how they are used, and who is always excluded from their protection."],
+      ["小说结尾，妮·翁托索罗与明克终究没能阻止安妮莉丝被带走。普拉默迪亚没有让知识战胜权力，也没有让正义在最后一刻获得补偿。",
+       "At the end of the novel, Nyai Ontosoroh and Minke cannot in the end stop Annelies from being taken away. Pramoedya does not let knowledge defeat power, nor let justice be compensated at the last moment."],
+      ["他们尽力反抗，仍然失败了。",
+       "They resist with all their strength, and still fail."],
+      ["然而，**法律能够决定一个母亲是否拥有女儿的监护权，却无法因此决定她是否曾经是一个母亲。**",
+       "Yet **the law can decide whether a mother has custody of her daughter, but cannot thereby decide whether she was ever a mother.**"],
+      ["妮·翁托索罗失去了女儿。",
+       "Nyai Ontosoroh loses her daughter."],
+      ["她没有失去判断这场裁决是否公正的能力。",
+       "She does not lose the ability to judge whether the ruling is just."]
+    ]
+  },
+  {
+    "date": "2014-02-28",
+    "title": "Speaking for Someone Else",
+    "slug": "speaking-for-someone-else",
+    "category": "Novel",
+    "book": {
+      "cover": "child_of_all_nations.jpg",
+      "title": "Child of All Nations",
+      "author": "Pramoedya Ananta Toer",
+      "language": "English",
+      "country": "Indonesia",
+      "original": "Indonesian",
+      "lines": [
+        "Novel · English translation of Anak Semua Bangsa, first published 1980",
+        "Minke, the young native writer of colonial Java, meets the peasant Trunodongso and has to ask how he has been seeing the people of his own land."
+      ]
+    },
+    "place": "于华盛顿州西雅图\nSeattle, WA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["明克第一次真正走近爪哇农民特朗图斯的生活时，他发现自己竟然不知道该怎样理解眼前的土地。",
+       "When Minke first truly steps into the life of the Javanese peasant Trunodongso, he discovers that he has no idea how to make sense of the land in front of him."],
+      ["他熟悉欧洲的文学、革命与思想，却不熟悉农民如何耕种，如何与土地相处，又如何在日复一日的劳作中维持一家人的生活。特朗图斯讲述自己的遭遇，明克起初仍习惯从一个受过教育的旁观者的角度去理解。",
+       "He knows European literature, revolutions and ideas, but not how peasants farm, how they live with the land, or how they keep a family alive through days of unbroken labor. Trunodongso tells of what has happened to him, and Minke at first still tries to understand it the way an educated onlooker would."],
+      ["我觉得，《Child of All Nations》最动人的变化，并不是明克终于认识了殖民主义的不公，而是他开始怀疑自己认识世界的方式。",
+       "I think the most moving change in *Child of All Nations* is not that Minke finally recognizes the injustice of colonialism, but that he begins to doubt the way he has been coming to know the world."],
+      ["在《This Earth of Mankind》中，他面对的是殖民者如何看待自己；到了《Child of All Nations》，他不得不面对一个更难堪的问题：**自己又是怎样看待那些与自己生活在同一片土地上的人？**",
+       "In *This Earth of Mankind* he faces how the colonizers see him; by *Child of All Nations* he has to face a more uncomfortable question: **how does he himself see the people who live on the same land as he does?**"],
+      ["他可以为农民的遭遇感到愤怒，却未必真正懂得农民的生活。他能够把苦难写成文章，却不能因此声称自己已经理解了苦难。尤其当他试图替别人说话时，他必须承认，那些人的声音并不天然属于他。",
+       "He can be angry at what happens to the peasants without truly understanding their lives. He can turn suffering into an article, but cannot claim by that to have understood it. Above all, when he tries to speak for others, he has to admit that their voices do not belong to him by default."],
+      ["这使我重新理解书名中的“万国”。",
+       "This made me understand the “all nations” of the title anew."],
+      ["明克曾经向往一种超越民族与地域的世界。他阅读欧洲，也关心中国、日本以及其他地方正在发生的变化。对他而言，世界意味着无数可以学习的思想、可以抵达的远方。",
+       "Minke once longed for a world beyond nation and region. He reads Europe, and he also cares about the changes taking place in China, Japan and elsewhere. For him, the world means countless ideas to learn from and distant places to reach."],
+      ["然而，特朗图斯的出现，使这种辽阔突然显得有些空洞。",
+       "Yet Trunodongso’s appearance makes that vastness suddenly seem somewhat hollow."],
+      ["一个人可以关心遥远民族的命运，却对自己故乡的农民知之甚少；可以热爱抽象的人类，却从未认真听过一个具体的人讲述自己的生活。",
+       "A person can care about the fate of distant peoples and yet know very little about the peasants of his own homeland; can love humanity in the abstract and never have seriously listened to one particular person tell of his own life."],
+      ["这不是虚伪，而是一种更难察觉的疏离。因为远方的人容易成为理想，身边的人却有自己的脾气、偏见、沉默与无法被概括的日常。",
+       "This is not hypocrisy but a kind of estrangement that is harder to notice. People far away easily become an ideal, while the people beside us have their own tempers, prejudices, silences and a daily life that cannot be summed up."],
+      ["普拉姆迪亚并没有让特朗图斯成为等待知识分子启蒙的农民。他拥有明克所欠缺的经验，也有自己的判断。明克必须学习的，不只是如何描写他，更是如何接受自己并不比他更懂这片土地。",
+       "Pramoedya does not turn Trunodongso into a peasant waiting to be enlightened by an intellectual. He has the experience Minke lacks, and he has judgments of his own. What Minke has to learn is not only how to describe him, but how to accept that he does not understand this land better than Trunodongso does."],
+      ["因此，《Child of All Nations》在我看来并不是一个青年从世界主义退回民族主义的故事。恰恰相反，它追问的是：一个声称属于所有民族的人，能否真正容纳那些不按照自己的知识、语言与理想生活的人？",
+       "So to me *Child of All Nations* is not the story of a young man retreating from cosmopolitanism into nationalism. Quite the opposite, it asks: can someone who claims to belong to all nations truly make room for people who do not live by his knowledge, his language and his ideals?"],
+      ["明克最终仍然要写作。",
+       "Minke will still write in the end."],
+      ["只是这一次，他不能再像从前那样轻易落笔。",
+       "Only this time, he can no longer put pen to paper as easily as before."],
+      ["特朗图斯说过的话，他记得。那些田地、村舍和劳作的身影，他也记得。",
+       "He remembers what Trunodongso said. He remembers the fields, the huts and the figures at work as well."],
+      ["可当他坐下来，准备把这一切写成文章时，我总觉得，他最需要克制的，是替那个农民把话说完的冲动。",
+       "But when he sits down to turn all of this into an article, I always feel that what he most needs to restrain is the urge to finish the peasant’s sentences for him."],
+      ["**一个人也许要走过许多国家，才能发现自己尚未学会如何走进别人的生活。**",
+       "**A person may have to pass through many countries before discovering that he has not yet learned how to enter another person’s life.**"]
+    ]
+  },
+  {
+    "date": "2014-03-01",
     "title": "Where Does a Person Belong?",
     "slug": "where-does-a-person-belong",
     "category": "Novel",
@@ -673,7 +1528,7 @@ window.READS = [
         "Saleem Sinai, born at the stroke of midnight on India’s independence, tells his life as if it were the history of the nation."
       ]
     },
-    "place": "于加州圣何塞\nSan Jose, CA",
+    "place": "于华盛顿州西雅图\nSeattle, WA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["我一直觉得，一个人出生在哪里，与他后来认为自己属于哪里，并不一定是同一回事。", "I have always felt that where a person is born and where he later considers himself to belong are not necessarily the same thing."],
@@ -1117,7 +1972,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2026-09-11",
+    "date": "2025-09-11",
     "title": "Heirs to the California Dream",
     "category": "Novel",
     "book": {
@@ -1289,6 +2144,70 @@ window.READS = [
     ]
   },
   {
+    "date": "2026-11-18",
+    "title": "The Unseen Person and the Unseen Homeland",
+    "slug": "the-unseen-person-and-the-unseen-homeland",
+    "category": "Novel",
+    "book": {
+      "cover": "liu_su_di.jpg",
+      "title": "流俗地",
+      "author": "黎紫書 Li Zishu",
+      "language": "Traditional Chinese",
+      "country": "Malaysia",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Traditional Chinese original, 2019",
+        "Yinxia, a blind girl in the Malaysian town of Ipoh, and the people around her over decades of change."
+      ]
+    },
+    "place": "於加州利弗莫爾\nLivermore, CA",
+    "languages": ["Traditional Chinese", "English"],
+    "prose": [
+      ["銀霞看不見。",
+       "Yinxia cannot see."],
+      ["然而，在《流俗地》中，我始終覺得，真正值得追問的不是一個盲女如何認識世界，而是一個社會究竟如何看待那些生活在其中、卻始終無法被完整看見的人。",
+       "Yet in *Liu Su Di*, I have always felt, what truly deserves asking is not how a blind girl comes to know the world but how a society regards those who live in it and can never be fully seen."],
+      ["銀霞無法辨認怡保街道的顏色，卻能通過聲音、觸覺與記憶建立自己的生活。周圍的人能夠看見她，卻往往先看見她的失明，看見她需要照顧的處境，而不是她作為一個人的慾望、判斷與尊嚴。",
+       "Yinxia cannot make out the colors of Ipoh’s streets, but builds her own life through sound, touch and memory. The people around her can see her, yet often see first her blindness, her situation of needing care, rather than her desires, judgment and dignity as a person."],
+      ["**銀霞無法看見別人的面孔，別人卻常常只能看見她的身份。**",
+       "**Yinxia cannot see other people’s faces, while others often can see only her status.**"],
+      ["這種錯位，使我想到馬來西亞華人更為複雜的歷史處境。",
+       "This dislocation makes me think of the more complicated historical situation of Malaysian Chinese."],
+      ["怡保曾因錫礦業而繁榮，大量華人移民在殖民經濟中成為礦工、商人和城市居民。他們在這片土地上建立家庭、學校、社團與街市，逐漸形成自己的語言和地方記憶。然而，經濟生活中的深度紮根，並不意味著文化身份與國家歸屬之間的矛盾便會自然消失。",
+       "Ipoh once prospered on tin mining, and large numbers of Chinese immigrants became miners, merchants and city dwellers in the colonial economy. On this land they built families, schools, associations and markets, gradually forming their own language and local memory. But deep rootedness in economic life does not mean the tension between cultural identity and national belonging disappears of itself."],
+      ["尤其在1969年族群衝突及其後的國家重組過程中，馬來西亞社會的族群分類獲得了更加明確的制度意義。華人既是國家歷史的參與者，也不斷需要在族群、語言與公民身份之間重新理解自己的位置。",
+       "Especially in the ethnic conflict of 1969 and the national reorganization that followed, ethnic categories in Malaysian society acquired a more explicit institutional meaning. The Chinese are both participants in the nation’s history and people who must repeatedly reunderstand their position between ethnicity, language and citizenship."],
+      ["我認為，理解這種處境，不能簡單套用海外華人思念中國的敘事。對於幾代生活在馬來西亞的華人而言，中國可能是祖輩的來處，卻未必是自己失去的故鄉。他們真正熟悉的，是怡保的街道、馬來西亞的氣候，以及華語、方言、馬來語和英語交錯的日常生活。",
+       "I think understanding this situation cannot simply apply the narrative of overseas Chinese longing for China. For Chinese who have lived in Malaysia for generations, China may be where their forebears came from but not necessarily a homeland they have lost. What they truly know are Ipoh’s streets, Malaysia’s climate, and a daily life where Mandarin, dialects, Malay and English intersect."],
+      ["**他們並非生活在故鄉之外，而是生活在一個有時仍要求他們解釋自己為何屬於這裡的故鄉之中。**",
+       "**They do not live outside their homeland; they live in a homeland that sometimes still asks them to explain why they belong here.**"],
+      ["這也是《流俗地》的地方書寫令我感興趣的原因。黎紫書沒有把馬來西亞華人的歷史簡化為一場關於身份認同的公開辯論。那些宏大的政治與文化問題，更多時候沉澱為普通人的生活習慣：說什麼語言，接受什麼教育，如何謀生，與誰來往，又如何記住那些逐漸消失的街道和人物。",
+       "This is also why the local writing in *Liu Su Di* interests me. Li Zishu does not reduce the history of Malaysian Chinese to a public debate about identity. Those grand political and cultural questions more often settle into the habits of ordinary people’s lives: what language to speak, what education to receive, how to make a living, whom to associate with, and how to remember the streets and people gradually vanishing."],
+      ["但我也不願把銀霞的失明直接解釋成華人處境的象徵。那樣反而會再次剝奪她作為獨立人物的複雜性。她首先是銀霞，而不是某個族群的寓言。她的身體經驗、情感與命運，不應該僅僅為了說明一段歷史而存在。",
+       "But I am also unwilling to explain Yinxia’s blindness directly as a symbol of the Chinese situation. That would in turn strip her of the complexity of an independent character. She is first Yinxia, not an allegory of an ethnic group. Her bodily experience, feelings and fate should not exist merely to illustrate a stretch of history."],
+      ["真正值得建立的聯繫，是兩者都使我們意識到：被看見與被理解，從來不是一回事。",
+       "The connection really worth making is that both make us realize that being seen and being understood have never been the same thing."],
+      ["一個族群可以在經濟統計中十分顯著，在城市景觀中留下深刻痕跡，卻仍然難以使自身複雜的歷史擺脫單一的身份標籤。同樣，一個人可以被鄰里熟知一生，卻始終沒有被真正理解。",
+       "An ethnic group can be very prominent in economic statistics and leave deep traces in the urban landscape, yet still find it hard to free its complex history from a single identity label. Likewise a person can be known to neighbors all his life without ever being truly understood."],
+      ["而華人社會自身也並非沒有這種盲點。它保存語言、宗族記憶和互助傳統，也可能以家庭責任、體面與成功的標準，遮蔽那些不符合期待的個體。一個共同體在努力爭取外部承認時，未必總能看見內部那些沉默的人。",
+       "And Chinese society itself is not without such blind spots. It preserves language, lineage memory and traditions of mutual aid, and may also, by standards of family duty, respectability and success, obscure individuals who do not meet expectations. A community striving for outside recognition does not always see the silent people within."],
+      ["因此，《流俗地》最有分量的地方，不是替馬來西亞華人證明他們屬於這片土地，而是讓他們不必時時以族群身份出現。他們可以自私，可以善良，可以庸俗，可以終其一生沒有什麼成就。他們不需要成為勤勞、堅韌或成功的華人典範，才值得被寫進文學。",
+       "So the most weighty thing about *Liu Su Di* is not proving on behalf of Malaysian Chinese that they belong to this land, but letting them not have to appear always as an ethnic identity. They can be selfish, kind, vulgar, and can go through life with no achievement. They need not be exemplary Chinese, hardworking, resilient or successful, to deserve to be written into literature."],
+      ["畢竟，一個人真正屬於某個地方，也許並不是因為他能夠為自己的存在提供充分的歷史理由，而是因為他有權在那裡過一種不必被賦予特殊意義的生活。",
+       "After all, a person truly belongs to a place perhaps not because he can supply sufficient historical reasons for his existence but because he has the right to live there a life that need not be given special meaning."],
+      ["銀霞看不見怡保。",
+       "Yinxia cannot see Ipoh."],
+      ["而那些能夠看見怡保的人，往往看見它的礦業興衰、族群分佈、商業成就與城市變遷，卻未必看見其中某個普通人漫長而無聲的一生。",
+       "And those who can see Ipoh often see its mining booms and busts, ethnic distribution, commercial achievements and urban change, without necessarily seeing the long, silent life of some ordinary person within it."],
+      ["黎紫書沒有讓銀霞替這座城市發言。",
+       "Li Zishu does not let Yinxia speak for this city."],
+      ["她只是讓銀霞生活在那裡。",
+       "She only lets Yinxia live there."],
+      ["**也許一座城市真正成為故鄉，並不是因為歷史終於承認了誰的貢獻，而是因為那些無須證明自己有所貢獻的人，也能夠在其中留下不可替代的生命。**",
+       "**Perhaps a city truly becomes a homeland not because history finally acknowledges someone’s contribution but because those who need not prove they have contributed can also leave an irreplaceable life in it.**"]
+    ]
+  },
+  {
     "date": "2026-10-26",
     "title": "When the Observer Becomes the Observed",
     "category": "Exhibition catalogue",
@@ -1401,7 +2320,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2026-04-29",
+    "date": "2025-04-29",
     "title": "Doubt and Origin",
     "slug": "where-i-was-from",
     "category": "Memoir",
@@ -1496,7 +2415,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2026-08-16",
+    "date": "2024-08-16",
     "title": "Rebellion and Freedom",
     "slug": "rebellion-and-freedom",
     "category": "Poetry",
@@ -1815,7 +2734,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2022-02-24",
+    "date": "2020-11-24",
     "title": "Will We Become the Adults We Hate?",
     "slug": "lying-life-of-adults",
     "category": "Novel",
@@ -1891,6 +2810,64 @@ window.READS = [
         "也许，成熟并不是终于学会如何适应这个充满谎言的世界，而是在理解了谎言为何存在之后，依然保有质疑自己的能力。",
         "Perhaps maturity is not finally learning how to adapt to a world full of lies, but, having understood why the lies exist, still keeping the ability to question ourselves."
       ]
+    ]
+  },
+  {
+    "date": "2024-01-16",
+    "title": "The Cloth With No One at the Other End",
+    "slug": "the-cloth-with-no-one-at-the-other-end",
+    "category": "Novel",
+    "book": {
+      "cover": "the_guest_hwang.jpg",
+      "title": "손님 (The Guest)",
+      "author": "황석영 Hwang Sok-yong",
+      "language": "Korean",
+      "country": "South Korea",
+      "original": "Korean",
+      "lines": [
+        "Novel · Changbi, 2001 · Korean original",
+        "The dead of the 1950 Sinchon massacre speak in the form of a shamanic rite, accusing and defending themselves."
+      ]
+    },
+    "place": "于韩国釜山\nBusan, South Korea",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["镇魂巫祭（진오기굿）中，有一个意味深长的动作：为亡者开路。",
+       "In the Jinogi gut, the shamanic rite for the dead, there is a meaningful gesture: opening a road for the dead."],
+      ["在送魂的仪节里，巫者可以借助布帛象征阴阳之间的道路，以歌声引导亡灵离开人世。布被展开，仿佛活人与死者之间终于出现了一条可以通行的路。然而，仪式最困难的部分并不是把路打开，而是让亡灵愿意走过去。",
+       "In the rites for sending off souls, the shaman may use cloth to symbolize the road between the worlds of yin and yang, and guide the spirit out of the human world with song. The cloth is spread, as if a passable road had at last appeared between the living and the dead. But the hardest part of the ritual is not opening the road; it is making the spirit willing to walk across."],
+      ["读黄晳暎的《客人》，我始终想到这块布。",
+       "Reading Hwang Sok-yong’s *The Guest*, I could not stop thinking of this cloth."],
+      ["小说借用了镇魂巫祭的结构，让信川惨剧中死去的人重新说话。他们一个接一个讲述自己的死亡，也讲述自己曾经怎样对待别人。那些声音彼此冲突，互相指责，有时甚至连同一件事情都无法说成同一个样子。",
+       "The novel borrows the structure of the gut and lets those who died in the Sinchon tragedy speak again. One after another they tell of their deaths, and also of how they once treated others. The voices conflict with and accuse one another, and sometimes cannot even tell the same event in the same way."],
+      ["这与我们习惯的历史叙述截然不同。历史总希望把事情解释清楚：谁是凶手，谁是受害者，谁应当负责。然而，巫祭并不要求亡灵先达成一致，才允许他们开口。",
+       "This is quite unlike the historical narratives we are used to. History always wants to make things clear: who is the killer, who the victim, who should be held responsible. But the gut does not require the spirits to reach agreement before allowing them to speak."],
+      ["一个人的冤屈，并不会因为另一个人也有冤屈而消失。",
+       "One person’s grievance does not vanish because another person has a grievance too."],
+      ["我尤其在意，镇魂巫祭的目的原本是送走死者，而不是让死者永远留在人间。亡灵说出怨恨，接受祭奠，最终应当沿着那条象征性的道路离去。活人也因此得以重新生活。",
+       "I care especially that the purpose of the gut is to send the dead off, not to keep them in the human world forever. The spirits voice their resentments, accept the offerings, and in the end should leave along that symbolic road. The living are thereby able to live again."],
+      ["可是《客人》里的死者，真的能够被送走吗？",
+       "But can the dead in *The Guest* really be sent away?"],
+      ["那些被杀害的人，生前与凶手住在同一个村庄。他们知道彼此的名字，认得彼此的家门，有些人甚至曾经一起吃饭。战争结束以后，凶手可以老去，幸存者可以沉默，村庄也可以恢复日常生活。但死者最后记住的，也许仍然是那个熟悉的人举起武器时的面孔。",
+       "Those who were killed lived in the same village as their killers. They knew one another’s names, recognized one another’s doors, and some had even eaten together. After the war, killers can grow old, survivors can fall silent, and the village can resume everyday life. But what the dead last remember may still be the face of that familiar person raising a weapon."],
+      ["这样的亡灵，要走向哪里？",
+       "Where is such a spirit to go?"],
+      ["如果巫者告诉他，一切已经过去，他凭什么相信？如果活人请求宽恕，他又为什么必须答应？难道因为几十年已经过去，死者便有义务替活人结束这段历史？",
+       "If the shaman tells him that it is all past, why should he believe it? If the living ask for forgiveness, why must he grant it? Do the dead, because decades have passed, have a duty to end this history on behalf of the living?"],
+      ["于是，那块为亡灵铺开的布，在我看来逐渐有了另一层意味。",
+       "And so the cloth spread for the spirits gradually took on, for me, another layer of meaning."],
+      ["它原本连接生死两界，到了黄晳暎笔下，却仿佛横在两个无法彼此抵达的记忆之间。活人希望死者离开，好让生活继续；死者却仍有话没有说完。",
+       "It originally joins the two realms of life and death, but in Hwang Sok-yong’s writing seems to lie between two memories that cannot reach each other. The living want the dead to leave so that life may go on; the dead still have words unspoken."],
+      ["我们总以为祭祀是活人对死者尽最后的责任，却很少追问，所谓让死者安息，究竟是为了死者，还是为了使活人不必再受打扰。",
+       "We always think sacrifice is the last duty the living perform for the dead, but seldom ask whether letting the dead rest in peace is for the dead’s sake or so that the living need no longer be disturbed."],
+      ["巫祭终究有结束的时候。",
+       "The gut, in the end, has an end."],
+      ["歌声渐渐低下去。巫者收起铺在地上的布，撤去祭品。有人走过来，帮忙把桌椅搬回屋里。天亮以后，村庄仍要生火做饭，仍有人从那条路上经过。",
+       "The singing gradually lowers. The shaman gathers the cloth spread on the ground and clears the offerings. Someone comes over to help carry the tables and chairs back inside. After daybreak the village will still light fires and cook, and people will still pass along that road."],
+      ["一切似乎都回到了原来的位置。",
+       "Everything seems to return to its former place."],
+      ["只是收布的时候，有一端始终没有人接。",
+       "Only, when the cloth is gathered, one end has no one to take it."]
     ]
   },
   {
@@ -2317,7 +3294,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2019-12-20",
+    "date": "2017-12-20",
     "title": "The Things I Once Took for Granted",
     "slug": "the-things-i-once-took-for-granted",
     "category": "Novel",
@@ -2443,7 +3420,229 @@ window.READS = [
     ]
   },
   {
-    "date": "2018-09-20",
+    "date": "2018-04-21",
+    "title": "The Hand That Stayed Raised",
+    "slug": "the-hand-that-stayed-raised",
+    "category": "Novel",
+    "book": {
+      "cover": "crime_and_punishment.jpg",
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "language": "English",
+      "country": "Russia",
+      "original": "Russian",
+      "lines": [
+        "Novel · English translation by Michael R. Katz of the Russian original, first published 1866",
+        "Raskolnikov, a poor student in Petersburg, murders a pawnbroker, and is slowly undone by what he has done."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["他杀了人。",
+       "He has killed a person."],
+      ["可是拿破仑呢？拿破仑杀过多少人？那些将军、皇帝、立法者，他们难道不曾踩着尸体走向自己的纪念碑？历史甚至替他们计算功绩，却从不逐一清点死者的姓名。",
+       "But what of Napoleon? How many did Napoleon kill? Those generals, emperors, lawgivers, did they not walk over corpses to their own monuments? History even tallies their achievements, but never counts the names of the dead one by one."],
+      ["而他呢？一个老太婆。一个放高利贷的老太婆。",
+       "And what of him? An old woman. A moneylending old woman."],
+      ["他突然觉得可笑。为了这样一个人，他竟然发起烧来！",
+       "Suddenly it seems laughable to him. For such a person, he has actually come down with a fever!"],
+      ["房间里闷得令人窒息。墙纸剥落了，窗外传来马车碾过石板的声音。他已经第三次检查门闩了。为什么？门明明锁着。没有人知道。即使有人知道，又能怎样？",
+       "The room is stifling. The wallpaper is peeling, and from outside comes the sound of a carriage rolling over paving stones. He has checked the latch a third time. Why? The door is plainly locked. No one knows. Even if someone knew, what then?"],
+      ["他重新躺下，却立刻坐了起来。",
+       "He lies down again, and at once sits up."],
+      ["楼梯上有人。",
+       "There is someone on the stairs."],
+      ["脚步声停了。",
+       "The footsteps stop."],
+      ["他屏住呼吸，等了很久，才发现那人不过是走进了隔壁的房间。",
+       "He holds his breath and waits a long time before finding that the person has merely gone into the next room."],
+      ["多么荒唐！他愤怒地笑了一声。拿破仑也会这样吗？拿破仑会在一间破阁楼里，竖起耳朵听一个醉汉上楼吗？",
+       "How absurd! He lets out an angry laugh. Would Napoleon do this? Would Napoleon, in a wretched attic, prick up his ears to hear a drunk climbing the stairs?"],
+      ["可是丽扎韦塔呢？",
+       "But what of Lizaveta?"],
+      ["这个名字不知从哪里冒了出来。",
+       "The name has come from nowhere."],
+      ["他没有想过她。此前没有，此后也竭力不去想。她只是忽然走进房间，站在那里，甚至没有来得及喊叫。",
+       "He had not thought of her. Not before, and afterward he tried hard not to. She simply walked into the room, stood there, and did not even have time to cry out."],
+      ["他记得她举起的手。",
+       "He remembers the hand she raised."],
+      ["奇怪，为什么偏偏记得那只手？他记不清她倒下时的声音，却记得她的手指张开着，仿佛要挡住什么，又仿佛什么也不打算挡。",
+       "Strange, why that hand of all things? He cannot clearly recall the sound of her falling, but remembers her fingers spread open, as if to ward something off, and as if not intending to ward off anything."],
+      ["他猛地翻过身去。",
+       "He turns over sharply."],
+      ["有什么可想的？事情已经过去了。死人不会再说话。",
+       "What is there to think about? It is over. The dead do not speak again."],
+      ["可是那只手始终举着。",
+       "But the hand stays raised."],
+      ["后来，他向索尼娅讲起这一切。他说得很快，有时又突然停下来，仿佛在等待她提出某个问题。她却不问。她只是望着他，那目光使他恼怒。",
+       "Later he tells Sonya all of this. He speaks quickly, and sometimes stops suddenly, as if waiting for her to ask something. She does not ask. She only looks at him, and that look irritates him."],
+      ["他宁愿她害怕，宁愿她责骂，甚至宁愿她转身离开。",
+       "He would rather she were afraid, rather she scolded him, even rather she turned and left."],
+      ["可是她哭了。",
+       "But she weeps."],
+      ["他不明白她为什么哭。她又不认识那个老太婆！何况他已经说得那么清楚了，那么多理由，那么多不得不如此的理由！她难道一句也没有听进去？",
+       "He does not understand why she weeps. She did not even know the old woman! Besides, he has explained so clearly, so many reasons, so many reasons why it had to be! Has she not taken in a single word?"],
+      ["他想再解释一次，却发现自己已经忘了刚才说到哪里。",
+       "He wants to explain once more, but finds he has forgotten where he had got to."],
+      ["窗外天色渐渐暗了。",
+       "Outside the window the light is dimming."],
+      ["索尼娅仍然坐在那里。",
+       "Sonya still sits there."],
+      ["他忽然想起，丽扎韦塔曾经认识她。",
+       "He suddenly remembers that Lizaveta had known her."],
+      ["这件事他原本知道，却直到此刻才觉得有些奇怪。原来那个女人在走进那间屋子以前，还曾走进过别人的生活。有人同她说过话，有人认得她的声音。她也许曾经在某个傍晚，像索尼娅现在这样，坐在一扇窗前。",
+       "He had known this, yet only now does it seem strange. So that woman, before walking into that room, had also walked into other people’s lives. Someone had spoken to her, someone knew her voice. She may once have sat at a window of an evening, as Sonya does now."],
+      ["他不愿再想下去。",
+       "He does not want to think further."],
+      ["许久以后，在西伯利亚，他仍然时常想起自己的案子。他想起那些论证，那些曾经使他激动得彻夜不眠的念头。有时他甚至觉得，只要重新整理一遍，便能找出当初究竟错在什么地方。",
+       "Long afterward, in Siberia, he still often thinks of his case. He thinks of those arguments, those ideas that once excited him through sleepless nights. Sometimes he even feels that if he could only arrange them again, he could find where exactly it had gone wrong."],
+      ["可是那些念头已经不像从前那样清楚了。",
+       "But those ideas are no longer as clear as they were."],
+      ["有一天，索尼娅坐在他身旁。他握住她的手，很久没有说话。",
+       "One day Sonya sits beside him. He takes her hand and says nothing for a long time."],
+      ["远处的河水在春天的阳光下流动。对岸有人走过，身影小得几乎辨认不出。",
+       "Far off the river flows in the spring sun. Someone passes on the opposite bank, a figure so small as to be hardly recognizable."],
+      ["他忽然又想起那只举起来的手。",
+       "He suddenly remembers again the hand that was raised."],
+      ["这一次，他没有急着把它忘掉。",
+       "This time, he is in no hurry to forget it."]
+    ]
+  },
+  {
+    "date": "2018-06-20",
+    "title": "Names Still on the Books",
+    "slug": "names-still-on-the-books",
+    "category": "Novel",
+    "book": {
+      "cover": "dead_souls.jpg",
+      "title": "Мёртвые души (Dead Souls)",
+      "author": "Николай Гоголь Nikolai Gogol",
+      "language": "Russian",
+      "country": "Russia",
+      "original": "Russian",
+      "lines": [
+        "Novel · Russian original, first published 1842",
+        "Chichikov travels the provinces buying the names of dead serfs that are still on the tax rolls."
+      ]
+    },
+    "place": "于加州旧金山\nSan Francisco, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["一个人死了，这原本是再简单不过的事情。棺材钉好了，泥土填平了，亲戚哭过了，神父祈祷过了，至于死者本人，自然再没有什么意见。然而在俄罗斯帝国的账簿上，事情却远没有结束。一个人可以停止呼吸，却不能擅自停止纳税；可以离开人世，却不能未经核准便离开财产名册。上帝收走了他的灵魂，地主保留了他的名字，官府则十分公正地认为，只要下一次人口清查尚未到来，这个人就仍然活着。",
+       "That a person has died is the simplest thing in the world. The coffin is nailed, the earth is leveled, the relatives have wept, the priest has prayed, and as for the dead man himself, naturally he has no further opinions. Yet in the ledgers of the Russian Empire, the matter is far from over. A person may stop breathing but may not stop paying tax on his own authority; may leave the world but not leave the property register without approval. God has taken his soul, the landowner has kept his name, and the authorities, most fairly, hold that until the next census comes the man is still alive."],
+      ["于是乞乞科夫来了。",
+       "And so Chichikov arrives."],
+      ["他并不打算惊扰死者。恰恰相反，他对死者怀有一种活人难以得到的尊重：他们不会逃跑，不会酗酒，不会生病，更不会向主人索要面包。他们是最理想的农奴，唯一的缺点是已经死了，而这点缺陷，在一张盖着印章的文书面前，实在算不得什么。",
+       "He has no intention of disturbing the dead. On the contrary, he holds for them a respect the living can hardly earn: they do not run away, do not drink, do not fall ill, and certainly do not ask their master for bread. They are the ideal serfs, with the single defect of being dead, and this defect, before a stamped document, really counts for nothing."],
+      ["倘若有人问起这些人的生平，事情便会变得十分麻烦。一个叫彼得的人也许有过妻子，一个叫斯捷潘的人也许会做靴子，另一个叫伊万的人也许在某个冬天冻死于归乡途中。但这些都是无关紧要的细节。账簿不需要知道彼得是否爱过他的妻子，只需要知道他属于哪位地主；不需要知道斯捷潘做过多少双靴子，只需要知道他的名字是否仍在册上。",
+       "If anyone were to ask about the lives of these people, things would become troublesome. A man called Pyotr may have had a wife, a man called Stepan may have made boots, another called Ivan may have frozen to death one winter on the way home. But these are irrelevant details. The ledger need not know whether Pyotr loved his wife, only which landowner he belongs to; need not know how many pairs of boots Stepan made, only whether his name is still on the register."],
+      ["**一个人活着的时候，未必有人愿意听他说话；死了以后，却有许多人认真讨论他的价钱。**",
+       "**While a person lives, perhaps no one is willing to listen to him; once dead, many people earnestly discuss his price.**"],
+      ["而果戈里偏偏不肯让事情就此了结。他让那些被写在纸上的名字重新生出面孔、职业、脾气和命运，仿佛在一场已经完成的交易之后，又不合时宜地追问：且慢，诸位先生，我们刚才卖掉的，究竟是什么人？",
+       "But Gogol, for his part, will not let the matter end there. He lets those names written on paper grow faces, trades, tempers and fates again, as if, after a completed transaction, he asked untimely: wait a moment, gentlemen, what exactly was it that we have just sold?"],
+      ["这问题当然没有人回答。买卖已经成交，契约已经签署，官员也已尽了自己的职责。",
+       "Of course no one answers. The deal is closed, the contract signed, and the officials have done their duty."],
+      ["至于那些人曾经怎样活过——",
+       "As for how those people once lived —"],
+      ["这不属于账簿的管辖范围。",
+       "that does not fall within the ledger’s jurisdiction."]
+    ]
+  },
+  {
+    "date": "2018-09-05",
+    "title": "Only One Son Left",
+    "slug": "only-one-son-left",
+    "category": "Novel",
+    "book": {
+      "cover": "and_quiet_flows_the_don.jpg",
+      "title": "And Quiet Flows the Don",
+      "author": "Mikhail Sholokhov",
+      "language": "English",
+      "country": "Russia",
+      "original": "Russian",
+      "lines": [
+        "Novel · English translation of the Russian original, 1928–40",
+        "Grigory Melekhov, a Don Cossack, is torn between Reds and Whites through war, revolution and civil war."
+      ]
+    },
+    "place": "于夏威夷州檀香山\nHonolulu, HI",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["葛利高里回到家时，儿子米沙特卡还活着。",
+       "When Grigory returns home, his son Mishatka is still alive."],
+      ["肖洛霍夫在小说最后写道，葛利高里抱着儿子，站在自家的门前。这就是他生活中所剩下的一切，也是他与土地、与整个广阔世界之间仅存的联系。",
+       "At the end of the novel Sholokhov writes that Grigory, holding his son, stands before the door of his own house. This is all that is left in his life, and the only remaining tie between him and the land, and the whole wide world."],
+      ["我反复想到“所剩下”这三个字。",
+       "I keep thinking of the words “what is left.”"],
+      ["它意味着葛利高里的一生仿佛经历了一场漫长的减法。战争夺走父母，夺走妻子和情人，夺走兄弟与女儿，最后连他曾经相信的荣誉、正义和哥萨克的生活方式，也一并夺走。",
+       "They mean that Grigory’s life has gone through a long subtraction. War takes his parents, his wife and his lover, his brother and his daughter, and finally even the honor, justice and Cossack way of life he once believed in."],
+      ["但一个儿子，为什么能够成为一个人与整个世界之间最后的联系？",
+       "But why can a son be the last tie between a person and the whole world?"],
+      ["我想，并不是因为血缘能够弥补一切。",
+       "I think it is not because blood can make up for everything."],
+      ["恰恰相反，米沙特卡的存在使葛利高里不得不面对一个更加残酷的事实：**他还有未来，而那些死去的人已经没有了。**",
+       "On the contrary, Mishatka’s existence forces Grigory to face a crueler fact: **he still has a future, and those who died have none.**"],
+      ["对于一个失去一切的人，死亡有时反而是最容易理解的结局。它能够使苦难停止，使一个充满矛盾的人生获得某种确定的终点。但儿子还活着，意味着葛利高里不能把自己的故事就此结束。",
+       "For a man who has lost everything, death is sometimes the most comprehensible ending. It can stop the suffering and give a life full of contradiction a certain end. But his son being alive means Grigory cannot end his story here."],
+      ["他必须继续做父亲。",
+       "He must go on being a father."],
+      ["他必须面对孩子明天吃什么，冬天如何过，庄稼何时播种。那些在战争中显得微不足道的事情，重新成为他无法推卸的责任。",
+       "He must face what the child will eat tomorrow, how to get through the winter, when to sow the crops. The things that seemed trivial in war become, again, a responsibility he cannot shirk."],
+      ["而这种责任并不要求他先弄明白自己的一生。",
+       "And this responsibility does not require him first to work out his own life."],
+      ["米沙特卡不会因为父亲曾经站错队伍，就不再需要父亲；也不会因为父亲终于悔悟，便替他原谅过去的杀戮。",
+       "Mishatka does not cease to need his father because his father stood on the wrong side; nor will he forgive past killings for his father because the father has finally repented."],
+      ["孩子既不是审判者，也不是救赎者。",
+       "The child is neither judge nor redeemer."],
+      ["他只是一个仍然需要被照顾的人。",
+       "He is simply someone who still needs to be cared for."],
+      ["我觉得，这正是肖洛霍夫没有让葛利高里在结尾获得思想觉醒的原因。倘若他终于理解了革命，或者终于认识到自己全部的错误，那么这个结尾便很容易成为一种道德上的结算：一个人历尽苦难，终于懂得了什么。",
+       "I think this is why Sholokhov does not give Grigory an intellectual awakening at the end. Had he finally understood the revolution, or finally recognized all his mistakes, the ending would easily become a moral settling of accounts: a man, after all his suffering, finally learns something."],
+      ["但生活并不总是等待人们懂得之后才继续。",
+       "But life does not always wait for people to understand before it goes on."],
+      ["**有时，一个人还没有找到活下去的理由，就已经有人需要他活下去。**",
+       "**Sometimes, before a person has found a reason to live on, someone already needs him to live on.**"],
+      ["更深一层看，米沙特卡并不只是葛利高里仅存的亲人。他还是一个尚未被历史完全定义的人。",
+       "Looked at more deeply, Mishatka is not only Grigory’s one remaining relative. He is also someone not yet fully defined by history."],
+      ["在父亲的世界里，一个人必须是红军或白军，是革命者或反革命者，是忠诚者或叛徒。每一种身份都意味着选择，每一种选择都可能要求另一个人死去。",
+       "In his father’s world, a person must be Red or White, revolutionary or counter-revolutionary, loyal or traitor. Every identity means a choice, and every choice may require another person to die."],
+      ["但米沙特卡还只是米沙特卡。",
+       "But Mishatka is still just Mishatka."],
+      ["他尚未为任何旗帜杀人，也不需要为任何主义牺牲。他的未来尚未成为某种历史叙事的证据。",
+       "He has not killed for any flag, nor does he need to sacrifice for any doctrine. His future has not yet become evidence for any historical narrative."],
+      ["葛利高里抱着他，或许第一次不必通过敌我、胜负与忠诚来确认自己与另一个人的关系。",
+       "Holding him, Grigory perhaps for the first time need not confirm his relation to another person through friend or foe, victory or defeat, loyalty."],
+      ["然而，这里面仍然隐藏着一种令人不安的希望。",
+       "Yet an unsettling hope is hidden here too."],
+      ["父亲经历过的历史，并不会因为儿子年幼就停止。米沙特卡终究会长大，也终究会进入那个曾经摧毁父亲一生的世界。葛利高里无法保证儿子不会重复自己的命运，甚至无法保证自己能够陪伴他长大。",
+       "The history the father went through does not stop because the son is young. Mishatka will grow up and in the end enter the world that once destroyed his father’s life. Grigory cannot guarantee that his son will not repeat his fate, nor even that he can accompany him as he grows up."],
+      ["所以，这个拥抱不是胜利。",
+       "So this embrace is not a victory."],
+      ["它只是一个被历史反复剥夺的人，暂时握住了某种尚未被剥夺的东西。",
+       "It is only a person repeatedly stripped by history, for the moment holding something not yet taken."],
+      ["我想，肖洛霍夫最深刻的克制，就在于他没有告诉我们这个孩子后来怎样了。",
+       "I think Sholokhov’s deepest restraint lies in not telling us what became of the child."],
+      ["因为一旦写出米沙特卡的未来，我们便又会忍不住用结局衡量这个拥抱的意义。如果儿子后来幸福，父亲的苦难似乎终于获得补偿；如果儿子也遭遇不幸，这最后一点希望便仿佛失去了价值。",
+       "Because once Mishatka’s future is written, we would again be unable to help measuring the meaning of this embrace by the ending. If the son later is happy, the father’s suffering seems finally compensated; if the son also meets misfortune, this last bit of hope seems to lose its value."],
+      ["但孩子活着，本来就不需要由未来的幸福来证明其意义。",
+       "But a child’s being alive never needed future happiness to prove its meaning."],
+      ["**米沙特卡不是葛利高里苦难的补偿，更不是历史欠他的奖赏。他是一个独立的生命，不能被用来抵消那些已经失去的生命。**",
+       "**Mishatka is not compensation for Grigory’s suffering, still less a reward history owes him. He is an independent life, and cannot be used to offset the lives already lost.**"],
+      ["葛利高里也不知道这个孩子将来会怎样。自己走过的路，未必能使儿子少走一步。",
+       "Grigory too does not know what will become of the child. The road he has walked may not spare his son a single step."],
+      ["肖洛霍夫没有让他得到宽恕，也没有让他看见希望。",
+       "Sholokhov does not let him receive forgiveness, nor see hope."],
+      ["他只是回到了家门前。",
+       "He has only come back to the door of his house."],
+      ["怀里的孩子还小，往后的日子还长。有些事情葛利高里永远无法挽回，有些事情却仍然要由他亲手去做。",
+       "The child in his arms is small, and the days ahead are long. Some things Grigory can never undo, and some things he must still do with his own hands."],
+      ["他抱着儿子，站在那里。",
+       "He holds his son, and stands there."]
+    ]
+  },
+  {
+    "date": "2017-09-20",
     "title": "A Cholera That Lasted Fifty-Three Years",
     "slug": "a-cholera-that-lasted-fifty-three-years",
     "category": "Novel",
@@ -3330,7 +4529,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2014-10-10",
+    "date": "2016-10-10",
     "title": "That Night, He Did Not Go Upstairs",
     "slug": "that-night-he-did-not-go-upstairs",
     "category": "Novel",
@@ -4015,7 +5214,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2018-11-19",
+    "date": "2014-11-19",
     "title": "The Lives That Might Have Been",
     "slug": "the-lives-that-might-have-been",
     "category": "Art",
@@ -4206,6 +5405,86 @@ window.READS = [
         "**也许一个时代最危险的幻觉，并不是它相信自己已经解决了所有问题，而是它不断创造新事物，以至于逐渐忘记追问这些创造究竟是为了解决什么问题。** 世纪末的维也纳提醒我，文明的精致与文明的健全，从来不是同一回事。而对于今天的我们，真正值得警惕的或许也不是创新停止的那一天，而是创新仍然以惊人的速度继续，我们却已经不再认真追问它的意义。",
         "**Perhaps the most dangerous illusion of an age is not that it believes it has solved every problem, but that it keeps creating new things until it forgets to ask what problem the creations were meant to solve.** Fin-de-siècle Vienna reminds me that a civilization’s refinement and its health are never the same thing. And for us today, what deserves vigilance may not be the day innovation stops, but the day it continues at astonishing speed while we no longer seriously ask what it means."
       ]
+    ]
+  },
+  {
+    "date": "2020-10-11",
+    "title": "What the Passport Taught Zweig",
+    "slug": "what-the-passport-taught-zweig",
+    "category": "Memoir",
+    "book": {
+      "cover": "world_of_yesterday.jpg",
+      "title": "昨日的世界 (The World of Yesterday)",
+      "author": "斯蒂芬·茨威格 Stefan Zweig",
+      "language": "Chinese",
+      "country": "Austria",
+      "original": "German",
+      "lines": [
+        "Memoir · Chinese translation of Die Welt von Gestern, 1942",
+        "Zweig’s memoir of the Europe he grew up in, from Vienna before 1914 to exile and the wars."
+      ]
+    },
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["茨威格在《昨日的世界》中反复提到护照。",
+       "In *The World of Yesterday*, Zweig mentions passports again and again."],
+      ["在他年轻的时候，一个欧洲人可以相对自由地穿越国境，而到了晚年，他必须依靠签证、居留许可和各种身份证明，才能获得暂时停留的权利。这个变化看似只是行政手续的繁复，却包含着一种深刻的历史倒退：**一个人原本因为生活在世界上而拥有行动的自由，后来却必须不断证明自己有资格生活在世界的某个地方。**",
+       "In his youth a European could cross borders with relative freedom; in his later years he had to rely on visas, residence permits and all sorts of identity papers to win the right to stay for a while. This change seems merely a matter of more complicated administrative procedure, yet it contains a deep historical regression: **a person who once had freedom of movement simply by living in the world must now keep proving that he is entitled to live in some corner of it.**"],
+      ["我始终觉得，护照是理解《昨日的世界》最好的切入点。它将茨威格笔下那些宏大的历史变故，压缩成了个人与国家之间一种极其具体的关系。一个人可以拥有语言、文化、记忆、声誉和朋友，却仍然可能在一夜之间失去合法的归属。现代国家能够承认一个人的身份，也能够使他成为无处可去的人。所谓文明社会的安全感，原来在很大程度上依赖于我们平时根本不会注意的制度性许可。",
+       "I have always felt that the passport is the best way into *The World of Yesterday*. It compresses the grand historical upheavals in Zweig’s writing into an extremely concrete relation between the individual and the state. A person can have language, culture, memory, reputation and friends, and still lose his legal belonging overnight. The modern state can recognize a person’s identity and can also make him someone with nowhere to go. The so-called security of civilized society turns out to depend largely on institutional permissions we normally never notice."],
+      ["但我并不完全相信茨威格所怀念的那个世界。",
+       "But I do not wholly trust the world Zweig misses."],
+      ["他笔下的战前欧洲，尤其是哈布斯堡帝国晚期的维也纳，拥有一种近乎令人眩晕的文化繁荣。文学、音乐、哲学和艺术仿佛共同构成了一个超越民族与政治的精神共和国。然而，这种世界主义有其明确的社会条件。茨威格出生于富裕的犹太资产阶级家庭，拥有良好的教育、经济上的自由，以及进入欧洲文化精英圈子的机会。他所体验到的国境开放与文明宽容，并不必然属于帝国境内的贫困农民、产业工人或受到民族压迫的人群。",
+       "The prewar Europe in his writing, especially Vienna in the late Habsburg Empire, has a cultural flourishing almost dizzying. Literature, music, philosophy and art seem together to form a republic of the spirit above nation and politics. But this cosmopolitanism had definite social conditions. Zweig was born into a wealthy Jewish bourgeois family, with a good education, economic freedom and access to circles of Europe’s cultural elite. The open borders and civilized tolerance he experienced did not necessarily belong to the poor peasants, industrial workers or nationally oppressed peoples within the empire."],
+      ["换言之，他失去的那个世界，并不是所有人都曾经拥有的世界。",
+       "In other words, the world he lost was not a world everyone had once had."],
+      ["这一点并不削弱《昨日的世界》的价值，反而使它更加复杂。茨威格的悲剧不只是一个美好时代遭到野蛮摧毁，也是一个深信文化进步能够保障政治文明的人，终于发现二者之间并不存在必然联系。",
+       "This does not diminish the value of *The World of Yesterday* but makes it more complex. Zweig’s tragedy is not only a lovely age destroyed by barbarism but also that of a man who firmly believed cultural progress could guarantee political civilization, finally discovering that there is no necessary link between the two."],
+      ["**一个社会可以拥有最杰出的音乐家、最精密的科学、最繁荣的出版业，却仍然无法阻止自身走向野蛮。**",
+       "**A society can have the most outstanding musicians, the most precise science and the most flourishing publishing industry, and still be unable to stop itself from sliding into barbarism.**"],
+      ["这是我认为茨威格留给后世最值得思考的问题。",
+       "This, I think, is the question Zweig leaves to later generations most worth thinking about."],
+      ["我们习惯于把经济发展、技术进步、教育普及与社会文明视为同一个过程，仿佛财富积累得越多，人类便越理性；知识传播得越广，偏见便越难存在；国家之间的贸易越密切，战争便越不可能发生。但二十世纪欧洲的历史恰恰表明，这些进步不仅不能自动消除人类的破坏性，有时甚至能够为破坏提供更有效率的工具。",
+       "We are used to treating economic development, technological progress, the spread of education and social civilization as one process, as if the more wealth is accumulated the more rational humanity becomes; the wider knowledge spreads the harder prejudice finds to exist; the closer the trade between nations the less likely war is. But the history of twentieth-century Europe shows precisely that these advances not only cannot automatically remove human destructiveness but can sometimes even supply it with more efficient tools."],
+      ["铁路既能运送旅客，也能运送被驱逐的人。现代官僚制度既能保障社会福利，也能系统地剥夺个人权利。大众传播既能促进知识交流，也能使谎言获得前所未有的规模。",
+       "Railways can carry travelers and also the deported. Modern bureaucracy can guarantee social welfare and can also systematically strip individuals of their rights. Mass communication can promote the exchange of knowledge and can also give lies an unprecedented scale."],
+      ["文明的工具与文明的目的，从来不是一回事。",
+       "The tools of civilization and the ends of civilization have never been the same thing."],
+      ["而今天的世界，或许比茨威格的时代更容易使人产生另一种进步的幻觉。我们拥有跨越国境的资本、即时翻译的语言技术、几乎无限的信息获取能力。一个人可以同时在几个国家拥有资产，为另一个大陆的企业工作，与素未谋面的人进行实时交流。世界在经济与技术意义上从未如此紧密。",
+       "And today’s world may more easily produce another illusion of progress than Zweig’s age. We have capital that crosses borders, language technology that translates instantly, and almost unlimited access to information. A person can hold assets in several countries at once, work for a company on another continent, and communicate in real time with people he has never met. The world has never been so closely tied together in the economic and technological sense."],
+      ["然而，联系的密度并不等于理解的深度。",
+       "Yet the density of connection is not the depth of understanding."],
+      ["我们能够在几秒钟内知道远方发生了什么，却未必因此更愿意理解远方的人。我们可以精确计算一个国家的生产率、一个企业的市值、一项技术的效率，却越来越难回答这些进步究竟使谁的生活变得更有尊严。甚至连人的价值，也日益容易被转换成收入、产出、竞争力和某种可以量化的社会贡献。",
+       "We can know in seconds what is happening far away without necessarily becoming more willing to understand the people there. We can precisely compute a nation’s productivity, a company’s market value, a technology’s efficiency, yet find it ever harder to answer whose lives these advances make more dignified. Even a person’s worth is increasingly easily converted into income, output, competitiveness and some quantifiable social contribution."],
+      ["我并不反对这些衡量。恰恰相反，现代社会不可能脱离经济计算和技术理性而运转。真正值得警惕的是，当这些手段逐渐成为目的本身，我们便可能在物质上越来越富裕，在精神上却越来越难以说明，究竟什么样的生活值得追求。",
+       "I do not oppose these measures. On the contrary, modern society cannot run without economic calculation and technical rationality. What truly deserves wariness is that when these means gradually become ends in themselves, we may grow ever richer materially while finding it ever harder spiritually to say what kind of life is worth pursuing."],
+      ["茨威格的局限也正在这里。他对欧洲文化共同体抱有深厚的感情，却似乎始终不愿充分承认，文化上的相互欣赏并不能代替政治上的制度保障。一个人可以热爱贝多芬，同时拥护战争；可以熟读歌德，同时接受对邻人的迫害。文学和艺术能够丰富人的感受，却不能保证人会将这种感受转化为对他人的尊重。",
+       "Zweig’s limitation lies here too. He had a deep feeling for the European cultural community, but seems never fully willing to admit that mutual cultural appreciation cannot replace institutional guarantees in politics. A person can love Beethoven and support war; can know Goethe well and accept the persecution of his neighbors. Literature and art can enrich a person’s feeling but cannot ensure he will turn that feeling into respect for others."],
+      ["因此，我不愿把《昨日的世界》简单理解为一曲献给旧欧洲的挽歌。它真正令人不安的地方，是茨威格直到晚年仍然无法理解：为什么一个在文化上如此成熟的社会，会在政治与道德上如此迅速地瓦解？",
+       "So I am unwilling to read *The World of Yesterday* simply as an elegy for old Europe. What is truly unsettling about it is that even in his later years Zweig could not understand: why does a society so culturally mature collapse so quickly politically and morally?"],
+      ["或许因为他始终相信，文明是一种可以积累的财富。",
+       "Perhaps because he always believed civilization was a kind of wealth that could be accumulated."],
+      ["但文明更接近一种必须不断实践的关系。它存在于一个社会如何对待陌生人、少数者、失败者，以及那些无法为社会提供明显经济价值的人。它不取决于一个国家拥有多少伟大的作家，而取决于普通人在不需要伟大作家为自己辩护时，是否仍然能够获得基本的尊严。",
+       "But civilization is closer to a relation that must be continually practiced. It lives in how a society treats strangers, minorities, failures, and those who cannot offer society any evident economic value. It depends not on how many great writers a country has but on whether ordinary people, when they have no great writer to defend them, can still get basic dignity."],
+      ["茨威格最终没有等到欧洲战争结束。他在1942年的巴西结束了生命，而我们知道此后发生的一切：战争终结，欧洲重建，新的国际秩序逐渐形成。他所怀念的某些自由后来得以恢复，另一些则以完全不同的制度形式重新出现。",
+       "Zweig did not live to see the end of the European war. He ended his life in Brazil in 1942, and we know what happened afterward: the war ended, Europe was rebuilt, and a new international order gradually formed. Some of the freedoms he missed were later restored, and others reappeared in entirely different institutional forms."],
+      ["但我不认为这些后来的历史能够反过来证明他的绝望是错误的。后人总是容易把已经发生的结局，当成当时的人理应看见的希望。",
+       "But I do not think this later history can prove his despair mistaken. Later generations too easily take the ending that has already happened as the hope people of the time ought to have seen."],
+      ["我们今天同样生活在某种自以为稳固的秩序之中。我们相信自己的职业、财产、国籍、教育和技术能够提供足够的安全，相信即使发生危机，社会最终仍会沿着某种可以理解的方向继续前进。",
+       "We too live today in an order we take to be stable. We believe our careers, property, nationality, education and technology can provide enough security, and that even if a crisis comes, society will in the end move on in some comprehensible direction."],
+      ["也许我们是对的。",
+       "Perhaps we are right."],
+      ["但茨威格年轻时的人们，大概也曾这样想过。",
+       "But the people of Zweig’s youth probably thought so too."],
+      ["**《昨日的世界》真正值得我们继承的，不是对昨日的怀念，而是对今日的怀疑。**",
+       "**What is truly worth inheriting from *The World of Yesterday* is not nostalgia for yesterday but doubt about today.**"],
+      ["一个社会最危险的时刻，未必是它已经意识到自己正在失去文明的时候，而可能是它仍然确信，凭借已有的繁荣、知识和成就，文明便不会离它而去。",
+       "A society’s most dangerous moment is not necessarily when it has realized it is losing civilization, but may be when it still feels sure that, with its existing prosperity, knowledge and achievements, civilization will not leave it."],
+      ["茨威格曾经把这种确信称为安全。",
+       "Zweig once called this certainty security."],
+      ["后来，他用余生为它写了一本回忆录。",
+       "Later, he spent the rest of his life writing a memoir for it."]
     ]
   },
   {
@@ -4437,7 +5716,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2018-02-03",
+    "date": "2019-02-03",
     "title": "A Man Who Would Not Speak Plainly",
     "slug": "a-man-who-would-not-speak-plainly",
     "category": "Philosophy",
@@ -4675,7 +5954,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2014-04-15",
+    "date": "2011-04-15",
     "title": "History Has No Rehearsal",
     "slug": "history-has-no-rehearsal",
     "category": "History",
@@ -4691,7 +5970,7 @@ window.READS = [
         "Historical miniatures of fateful moments, among them Napoleon’s defeat at Waterloo."
       ]
     },
-    "place": "于华盛顿州西雅图\nSeattle, WA",
+    "place": "于中国北京\nBeijing, China",
     "languages": ["Chinese", "English"],
     "prose": [
       ["西雅图的四月仍然阴雨不断。华盛顿大学的樱花已经开过，雨水把最后几片花瓣冲进路边的排水沟。下午从图书馆出来，咖啡馆里坐满了学生。有人准备考试，有人修改简历，有人讨论暑期实习。每个人都在为尚未发生的事情做准备，仿佛只要准备得足够充分，未来便会按照预想的方式展开。",
@@ -5016,7 +6295,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2018-05-16",
+    "date": "2023-11-21",
     "title": "What Can Literature Say for Someone History Has Killed?",
     "slug": "what-literature-can-say",
     "category": "Novel",
@@ -5032,7 +6311,7 @@ window.READS = [
         "The Gwangju uprising of May 1980, told through the dead, the survivors and those who remember."
       ]
     },
-    "place": "于韩国首尔\nSeoul, South Korea",
+    "place": "于韩国釜山\nBusan, South Korea",
     "languages": ["Chinese", "English"],
     "prose": [
       ["韩江选择从死者的身体开始。",
@@ -5055,8 +6334,8 @@ window.READS = [
        "Han Kang’s literature resists precisely this rationalization."],
       ["她不断改变叙述视角，让死者、幸存者与后来追忆事件的人交替发声。那些声音并不能拼凑出一幅完整的历史图景，反而让我们意识到，有些经验注定无法被后来者彻底理解。",
        "She keeps changing the narrative viewpoint, letting the dead, the survivors and those who later recall the events speak in turn. Those voices cannot be pieced into a complete picture of history; instead they make us realize that some experiences are bound never to be fully understood by those who come after."],
-      ["2018年的今天，我们已经能够通过韩国社会的公共记忆，感受到光州事件在当代韩国民主政治中的特殊位置。但小说让我意识到，公共纪念与个人哀悼之间，始终存在一道无法完全弥合的裂缝。",
-       "Today, in 2018, we can already sense, through South Korean society’s public memory, the special place the Gwangju uprising holds in contemporary Korean democratic politics. But the novel made me realize that between public commemoration and personal mourning there is always a rift that cannot be fully closed."],
+      ["2023年的今天，我们已经能够通过韩国社会的公共记忆，感受到光州事件在当代韩国民主政治中的特殊位置。但小说让我意识到，公共纪念与个人哀悼之间，始终存在一道无法完全弥合的裂缝。",
+       "Today, in 2023, we can already sense, through South Korean society’s public memory, the special place the Gwangju uprising holds in contemporary Korean democratic politics. But the novel made me realize that between public commemoration and personal mourning there is always a rift that cannot be fully closed."],
       ["国家可以承认错误，历史可以重新书写，纪念碑可以建立。",
        "A state can admit its wrong, history can be rewritten, monuments can be built."],
       ["可是那个没有活到今天的少年，仍然没有回来。",
@@ -5584,7 +6863,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2015-02-02",
+    "date": "2019-11-24",
     "title": "Why Didn’t Daisy Make the Call?",
     "slug": "why-didnt-daisy-make-the-call",
     "category": "Novel",
@@ -5600,7 +6879,7 @@ window.READS = [
         "Nick Carraway watches his neighbor Jay Gatsby chase the past, and Daisy Buchanan, across Long Island."
       ]
     },
-    "place": "于华盛顿州西雅图\nSeattle, WA",
+    "place": "于加州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["盖茨比死前，一直在等黛西的电话。",
@@ -5906,7 +7185,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2021-11-01",
+    "date": "2023-11-01",
     "title": "I Am a Beneficiary of Globalization",
     "slug": "i-am-a-beneficiary-of-globalization",
     "category": "Economics",
@@ -5969,6 +7248,52 @@ window.READS = [
        "I think this has also changed how I understand globalization. It is no longer only a grand narrative about open markets and economic growth, but a history written jointly by many different fates, without a single narrator. What I read in it is the possibility that education, career and wealth bring; others read in it industrial decline, disrupted lives and partings they could not choose."],
       ["**我依然喜欢全球化。但斯蒂格利茨使我意识到，我所熟悉的那个开放而慷慨的世界，只是这部历史中恰好由我讲述的一章。**",
        "**I still like globalization. But Stiglitz made me realize that the open and generous world I know is only the one chapter of this history that happens to be told by me.**"]
+    ]
+  },
+  {
+    "date": "2024-08-19",
+    "title": "Outside the Ripples",
+    "slug": "outside-the-ripples",
+    "category": "Sociology",
+    "book": {
+      "cover": "xiangtu_zhongguo.jpg",
+      "title": "乡土中国",
+      "author": "费孝通 Fei Xiaotong",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Sociology · Chinese original, first published 1947 (English: From the Soil)",
+        "Fei Xiaotong’s essays on how rural Chinese society is organized: the web of kinship and acquaintance, and the “differential mode of association” that spreads outward like ripples."
+      ]
+    },
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["一个人来到陌生的城市，替父亲去医院挂专家号。他清晨排队，等到窗口前，却被告知当天的名额已经没有了。", "A man arrives alone in an unfamiliar city to register for a specialist appointment at a hospital on his father’s behalf. He queues from early morning, and when he finally reaches the window he is told that the day’s places are gone."],
+      ["旁边有人打了通电话，不久便被领进诊室。", "Someone nearby makes a phone call and is soon led into a consulting room."],
+      ["他不知道那人是否有预约，是否病情更加紧急，也不知道那通电话究竟起了什么作用。他只知道自己没有一个可以拨打的号码。", "He does not know whether that person had an appointment, whether the illness was more urgent, or what the call actually did. He only knows that he has no number he can dial."],
+      ["然而，假如第二天有人告诉他，一位远房亲戚恰好认识这家医院的医生，他大概也会毫不犹豫地打去电话。得到帮助之后，他甚至会真诚地感激那位亲戚，觉得人情的可贵正在于此。", "And yet, if someone told him the next day that a distant relative happened to know a doctor at this hospital, he would probably make the call without hesitating. Once helped, he might even be sincerely grateful to that relative, feeling that this is exactly where the value of human ties lies."],
+      ["**他所怀疑的关系，恰恰也是他在需要时最希望拥有的关系。**", "**The connections he distrusts are the very connections he most wants to have when he needs them.**"],
+      ["读费孝通的《乡土中国》，我认为这才是“差序格局”最值得深究的矛盾。它并不简单地将人划分为特权者与受害者。我们希望别人不因关系而获得优待，却又很难拒绝关系可能带给自己的便利；我们赞成公共事务遵循统一规则，却也相信照顾亲友是一种值得珍惜的德行。", "Reading Fei Xiaotong’s *Xiangtu Zhongguo* (*From the Soil*), I think this is the contradiction in the “differential mode of association” (*chaxu geju*) most worth probing. It does not simply sort people into the privileged and the wronged. We hope others will not gain favor through connections, yet find it hard to refuse the convenience connections may bring us; we approve of public affairs following uniform rules, yet also believe that looking after family and friends is a virtue worth cherishing."],
+      ["费孝通将中国传统社会的关系比作石子投入水中后向外扩散的波纹。每个人都是自己关系网络的中心，亲疏远近随着具体的人和事而变化。在这样的结构中，道德义务并非均匀地分配给所有人，而是沿着关系逐层展开。", "Fei likens relationships in traditional Chinese society to the ripples that spread outward when a stone is dropped into water. Each person is the center of their own network, and nearness and distance shift with the particular person and matter. In such a structure, moral obligation is not distributed evenly to everyone but unfolds layer by layer along the ties."],
+      ["一个人可以是极其孝顺的儿子、慷慨的朋友、可靠的邻居，却未必是一个公正的公共事务参与者。这些品质之间并不存在必然的连续性。", "A person can be an extremely filial son, a generous friend, a reliable neighbor, and still not be a fair participant in public affairs. These qualities do not necessarily carry over from one to the other."],
+      ["但这并不意味着他的善意是虚伪的。", "But this does not mean his kindness is false."],
+      ["恰恰相反，差序格局最难处理的地方，在于它所依赖的感情往往真实而可贵。父母对子女的照顾、朋友之间的扶持、邻里在困难时的互助，本身并没有什么值得谴责的。倘若一个人对自己的母亲和素不相识的路人毫无区别，我们恐怕也不会因此认为他具有更高的道德境界。", "Quite the opposite: the hardest thing about the differential mode of association is that the feelings it relies on are so often real and precious. A parent’s care for a child, support among friends, neighbors helping one another in hard times—there is nothing in these to condemn. If a person made no distinction between his own mother and a passing stranger, we would hardly think him morally higher for it."],
+      ["**问题不在于人们爱自己的亲人胜过陌生人，而在于这种私人情感一旦进入公共资源的分配，便可能使陌生人承担其代价。**", "**The problem is not that people love their own kin more than strangers, but that once such private feeling enters the distribution of public resources, strangers may end up paying the cost.**"],
+      ["替朋友介绍医生，是关怀还是优待？向熟人打听办事程序，是获取信息还是利用关系？这些问题不能仅凭行为者的善意得到回答。同一件事情，对于关系内部的人可能意味着责任，对于关系外部的人却可能意味着不公。", "Introducing a friend to a doctor: is it care, or favoritism? Asking an acquaintance how to handle some procedure: is it gathering information, or using connections? These questions cannot be answered by the actor’s good intentions alone. The same act may mean responsibility to those inside the relationship and unfairness to those outside it."],
+      ["我尤其不愿将这一现象简单归结为中国人的文化缺陷。费孝通讨论的是特定社会条件下形成的结构，而不是某种永恒不变的民族性格。在人口流动有限、共同生活高度稳定的乡土社会中，熟悉本身就是一种信用机制。人们知道谁可靠，谁值得托付，谁应当承担什么责任。关系带来便利，也意味着监督、义务和难以逃避的社会评价。", "I especially do not want to reduce this phenomenon to a cultural defect of the Chinese. What Fei discusses is a structure formed under particular social conditions, not some unchanging national character. In a rural society with limited mobility and a highly stable common life, familiarity is itself a mechanism of credit. People know who is reliable, who can be trusted with what, who should bear which responsibility. Relationships bring convenience, and they also mean supervision, obligation and a social judgment that is hard to escape."],
+      ["因此，离开乡土并不必然意味着摆脱这种关系结构。今天，人们通过同学、同事、校友和职业圈层建立联系，通讯录取代了村庄，关系却仍然能够跨越地域发挥作用。现代社会的问题，不是人情为什么还没有消失，而是一个不认识任何人的人，能否不依赖人情获得应有的对待。", "So leaving the countryside does not necessarily mean escaping this relational structure. Today people build ties through classmates, colleagues, alumni and professional circles; the address book has replaced the village, yet relationships can still work across distance. The problem of modern society is not why favors of personal connection have not disappeared, but whether someone who knows no one can receive what is due to them without relying on such favors."],
+      ["医院里的那个人并不一定想获得特权。他只是担心父亲的病情，害怕耽误治疗。如果有人愿意帮忙，他为什么应当拒绝？可是另一个同样焦急、同样担心父亲病情，却没有任何熟人的人，又应当怎么办？", "The man in the hospital does not necessarily want a privilege. He is simply worried about his father’s illness and afraid of delaying treatment. If someone is willing to help, why should he refuse? But what is the other person to do, just as anxious, just as worried about his father, with no acquaintances at all?"],
+      ["两个人都没有什么难以理解的私心。", "Neither has any selfish motive that is hard to understand."],
+      ["但他们的处境并不相同。", "But their situations are not the same."],
+      ["这或许比简单的道德谴责更令人不安。因为一个社会的不平等，并不总是由明确的恶意造成的。它也可能产生于无数个可以理解的私人选择，产生于父母对子女的爱、朋友之间的义气，以及每个人在困难面前希望得到一点额外照顾的愿望。", "This may be more unsettling than plain moral condemnation. For a society’s inequality is not always caused by clear malice. It can arise from countless understandable private choices, from a parent’s love for a child, loyalty among friends, and everyone’s wish for a little extra care when facing difficulty."],
+      ["真正困难的，不是建立一套人人赞同的公平原则，而是当这些原则与自己珍惜的关系发生冲突时，我们是否仍然愿意承认它们的约束。", "What is truly hard is not establishing a principle of fairness that everyone endorses, but whether we are still willing to accept its constraints when it conflicts with the relationships we cherish."],
+      ["我又想起医院里的那个人。", "I think again of the man in the hospital."],
+      ["假如有一天，他终于认识了那位医生，能够不再排队等候，不再担心挂不上号，他会怎样看待当年站在窗口前的自己？", "Suppose one day he finally comes to know that doctor, and no longer has to queue or worry about failing to get an appointment. How will he regard himself, who once stood at that window?"],
+      ["也许他会觉得终于有了依靠。", "Perhaps he will feel that he finally has someone to rely on."],
+      ["也许他会把医生的联系方式留给朋友，朋友再转给自己的亲戚。一次善意的帮助，就这样沿着关系的波纹向外扩散。每一个得到帮助的人都心怀感激，每一个提供帮助的人都觉得自己做了一件好事。", "Perhaps he will pass the doctor’s contact on to a friend, and the friend to his own relatives. One act of kindness spreads outward along the ripples of relationships. Everyone who is helped is grateful, and everyone who helps feels they have done a good thing."],
+      ["至于那些仍然站在窗口前的人，没有人刻意为难他们。", "As for those still standing at the window, no one deliberately makes things hard for them."],
+      ["他们只是恰好不在任何一道波纹之中。", "They simply happen not to be in any ripple."]
     ]
   },
   {
@@ -6058,6 +7383,66 @@ window.READS = [
     ]
   },
   {
+    "date": "2016-10-25",
+    "title": "How a Piece of Cloth Becomes an Institution",
+    "slug": "how-a-piece-of-cloth-becomes-an-institution",
+    "category": "Graphic memoir",
+    "book": {
+      "cover": "persepolis.jpg",
+      "title": "Persepolis",
+      "author": "Marjane Satrapi",
+      "language": "English",
+      "country": "France",
+      "original": "French",
+      "lines": [
+        "Graphic memoir · English translation of the French original, 2000–03",
+        "Marjane Satrapi’s childhood and youth in Iran during and after the Islamic Revolution, drawn in black and white."
+      ]
+    },
+    "place": "于华盛顿特区\nWashington, DC",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["《我在伊朗长大》的开头，女孩们刚刚被要求戴上头巾，却还不知道这东西究竟有什么用。有人拿它跳绳，有人蒙住自己的眼睛，还有人把它当作缰绳，骑在同伴身上玩耍。",
+       "At the start of *Persepolis* (in Chinese, *I Grew Up in Iran*), the girls have just been told to wear the veil, and do not yet know what it is for. Some use it to skip rope, some cover their own eyes with it, and others treat it as reins, riding on a companion’s back."],
+      ["我很喜欢莎塔碧画下这一幕时的冷静。她没有急着告诉读者，这些孩子即将失去多少自由。她只是让一块本应象征庄严与服从的布，在孩子手中变成毫无意义的玩具。",
+       "I like very much the calm with which Satrapi draws this scene. She is in no hurry to tell the reader how much freedom these children are about to lose. She simply lets a piece of cloth that should symbolize solemnity and obedience become, in children’s hands, a meaningless toy."],
+      ["而这恰恰是整本书最令人不安的地方：**头巾原本没有改变任何一个女孩，却逐渐改变了别人看待她们的方式。**",
+       "And this is precisely the most unsettling thing about the whole book: **the veil did not change any of the girls in the first place, yet it gradually changed how others look at them.**"],
+      ["1979年革命后的伊朗，头巾不再只是个人信仰、家庭传统或文化习惯的一部分。随着强制着装规定逐步确立，它成为国家判断女性是否遵守公共秩序的可见标志。",
+       "In Iran after the revolution of 1979, the veil was no longer only a part of personal faith, family tradition or cultural habit. As compulsory dress rules were gradually established, it became the visible mark by which the state judged whether a woman obeyed public order."],
+      ["这种变化最深刻之处，并不是女人必须多穿一件衣服，而是她们的身体从此成了一份随时可能接受检查的证件。",
+       "The deepest thing about this change is not that women must wear one more garment but that their bodies have become a document liable to inspection at any moment."],
+      ["在学校，老师可以纠正女孩的穿着；在街上，陌生人可以依据一缕露出的头发判断她是否端庄；在公共场所，服装不再只是个人的选择，而成了他人干预她的理由。",
+       "At school, teachers can correct a girl’s dress; in the street, a stranger can judge from a strand of exposed hair whether she is modest; in public places, clothing is no longer only a personal choice but becomes a reason for others to intervene."],
+      ["制度甚至不必时时出现。一个女孩只要知道有人可能检查，便会在出门前反复整理头巾，经过街角时下意识地拉低布边。",
+       "The system does not even need to be present all the time. A girl who knows someone may check will adjust her veil again and again before going out, and tug down its edge by reflex when passing a corner."],
+      ["**权力最彻底的时刻，或许不是有人命令你遮住头发，而是你已经学会在无人命令时，替他们检查自己。**",
+       "**The most thorough moment of power may not be when someone orders you to cover your hair, but when you have learned, with no one ordering, to inspect yourself on their behalf.**"],
+      ["然而，莎塔碧并没有把所有戴头巾的女性写成同一种人。这一点尤其重要。她所质疑的并不是一块布本身，更不是女性选择佩戴它的信仰，而是当选择被取消以后，个人的虔诚与服从国家规定竟变得无法区分。",
+       "Yet Satrapi does not write all women who wear the veil as one kind of person. This is especially important. What she questions is not a piece of cloth itself, still less the faith of women who choose to wear it, but that once choice is taken away, personal piety and obedience to state rules become indistinguishable."],
+      ["一个女人可以真诚地相信遮发的意义，也可以厌恶它。但当两个人都必须以同样的方式出现在街上时，外人再也无法从她们的衣着辨认其中的区别。",
+       "A woman can sincerely believe in the meaning of covering the hair, and can also dislike it. But when both must appear in the street in the same way, outsiders can no longer tell the difference from their clothing."],
+      ["制度制造了整齐，却把人的差异藏了起来。",
+       "The system produces uniformity, and hides people’s differences."],
+      ["因此，回头看开篇那几个玩耍的女孩，我觉得最动人的并非她们尚未理解政治，而是她们仍然拥有解释一件东西的自由。",
+       "So looking back at those playing girls at the start, what moves me most is not that they do not yet understand politics but that they still have the freedom to interpret a thing."],
+      ["头巾可以是绳子，可以是缰绳，可以蒙住眼睛，也可以被随手扔在一旁。它的意义尚未固定，孩子们可以按照自己的想象重新使用它。",
+       "The veil can be a rope, can be reins, can cover the eyes, or be tossed aside. Its meaning is not yet fixed, and the children can use it anew as their imagination suggests."],
+      ["后来，她们学会了正确的戴法。",
+       "Later, they learn the correct way to wear it."],
+      ["有人告诉她们，布应该遮住哪里，头发不能露出多少，什么样的穿着才算合宜。那些曾经被用来玩耍的动作，逐渐有了对错。",
+       "Someone tells them where the cloth should cover, how much hair may not show, what dress counts as proper. The motions once used for play gradually acquire right and wrong."],
+      ["我想，莎塔碧真正画出的，不仅是一代伊朗女孩如何被迫戴上头巾。",
+       "I think what Satrapi truly draws is not only how a generation of Iranian girls were made to put on the veil."],
+      ["而是一个孩子如何在长大的过程中，慢慢失去了把一块布当作一块布的权利。",
+       "It is how a child, in growing up, slowly loses the right to treat a piece of cloth as a piece of cloth."],
+      ["多年以后，她们也许早已忘记小时候怎样拿头巾跳绳。",
+       "Years later, they may have long forgotten how they skipped rope with the veil as children."],
+      ["但每次出门，手仍会不自觉地伸向额前，摸一摸有没有头发露出来。",
+       "But every time they go out, their hand still reaches, without thinking, toward the forehead to feel whether any hair is showing."]
+    ]
+  },
+  {
     "date": "2016-11-05",
     "title": "Who Has the Right to Tell a Family’s Past?",
     "slug": "who-has-the-right-to-tell-a-familys-past",
@@ -6120,7 +7505,49 @@ window.READS = [
     ]
   },
   {
-    "date": "2014-06-11",
+    "date": "2012-08-04",
+    "title": "I Stopped at the Year My Father Left",
+    "slug": "i-stopped-at-the-year-my-father-left",
+    "category": "Memoir",
+    "book": {
+      "cover": "first_they_killed_my_father.jpg",
+      "title": "First They Killed My Father",
+      "author": "Loung Ung",
+      "language": "English",
+      "country": "Cambodia",
+      "original": "English",
+      "lines": [
+        "Memoir · English original, first published 2000",
+        "Loung Ung recalls, from a child’s view, the Khmer Rouge years in Cambodia and the loss of her family."
+      ]
+    },
+    "place": "于柬埔寨金边\nPhnom Penh, Cambodia",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["我后来长大了，离开柬埔寨，学会用另一种语言讲述自己的童年。人们说我活了下来，说我勇敢，说我终于走出了那段历史。",
+       "I grew up later, left Cambodia, and learned to tell my childhood in another language. People said I survived, said I was brave, said I had finally come out of that history."],
+      ["可是我始终觉得，自己有一部分留在了父亲被带走的那一年。",
+       "But I have always felt that a part of me stayed in the year my father was taken away."],
+      ["那时候，我已经学会挨饿，学会不哭，学会在陌生人面前忘记父亲曾经的身份。我甚至学会了不问他什么时候回来。因为每当我问起，大人们便不再看我的眼睛。",
+       "By then I had learned to go hungry, to not cry, to forget before strangers who my father once was. I even learned not to ask when he would come back. Because whenever I asked, the grown-ups stopped looking me in the eye."],
+      ["我记得父亲叫我不要害怕。可我后来才明白，他说这句话的时候，自己也许比我更害怕。",
+       "I remember my father telling me not to be afraid. But I understood only later that when he said it, he may have been more afraid than I was."],
+      ["许多年过去，我终于知道那些人为什么带走他，知道他的职业为什么成了罪名，知道一个国家怎样把杀人称作革命。",
+       "Many years passed, and I finally learned why those people took him, why his profession became a crime, how a country can call killing a revolution."],
+      ["可是知道这些，又有什么用呢？",
+       "But what use is knowing all this?"],
+      ["我能够解释父亲的死，却始终无法理解，为什么那天他必须离开我。",
+       "I can explain my father’s death, but have never been able to understand why, that day, he had to leave me."],
+      ["有时我甚至害怕自己已经记不清他的声音。那些关于他的记忆，究竟是我亲眼见过的，还是后来一次次想念时重新拼凑出来的？",
+       "Sometimes I am even afraid I can no longer remember his voice. Those memories of him, did I see them with my own eyes, or were they pieced together afresh over the many times I missed him?"],
+      ["我已经比父亲离开时的自己年长了许多。可每当想起他，我仍然是那个不敢哭出声的孩子。",
+       "I am now much older than I was when my father left. But whenever I think of him, I am still that child who dared not cry out loud."],
+      ["**人们以为幸存意味着时间终于继续向前。可他们不知道，有些孩子只是身体长大了，而那个等待父亲回家的自己，从来没有等到第二天。**",
+       "**People think survival means time finally moves on. But they do not know that some children have only grown in body, and the self who waited for her father to come home never reached the next day.**"]
+    ]
+  },
+  {
+    "date": "2013-06-11",
     "title": "A War Already Lost?",
     "slug": "a-war-already-lost",
     "category": "History",

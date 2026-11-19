@@ -362,7 +362,7 @@ body.reading { overflow: hidden; }
 #reader .phead p { font-weight: 600; }
 #reader .prose .en { color: #6f6b62; font-size: 16px; line-height: 1.65; }
 #reader .pair em { display: block; color: #6f6b62; font-size: 16px; }
-#reader .end { text-align: center; margin: 72px 0 0; font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--muted); }
+#reader .end { text-align: center; margin: 0; padding: 40px 84px 64px; font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--muted); }
 @media (max-width: 640px) { #reader { padding: 0; } #reader .sheet { max-height: 100vh; height: 100%; border-radius: 0; } #reader article { padding: 0 32px 64px; } #reader .bar { padding: 20px 24px 0; } #reader h1 { font-size: 28px; } }
 
 /* Plates: collector's grid */
@@ -469,12 +469,19 @@ a.plate:hover { border-color: #aaa; }
 .ny .note { border-top: 0; padding: 9px 0; gap: 20px; }
 .ny .note .d { width: 52px; font-size: 14px; padding-top: 1px; }
 .ny .note .cat { font-size: 12px; letter-spacing: .6px; text-transform: uppercase; padding-top: 2px; }
-/* the books of a year, folded into one line under that year's own pieces */
-.ny .bkfold { display: flex; gap: 20px; width: 100%; padding: 9px 0; font: inherit; font-size: 14px; color: var(--muted); background: none; border: 0; text-align: left; cursor: pointer; }
-.ny .bkfold .d { width: 52px; flex: none; }
-.ny .bkfold .bt::before { content: "▸"; display: inline-block; margin-right: 8px; font-size: 11px; transition: transform .15s; }
-.ny .bkfold[aria-expanded="true"] .bt::before { transform: rotate(90deg); }
-.ny .bkfold:hover { color: var(--text); }
+/* the books of a year: one row of covers that drifts slowly (like the Travels flags); hover pauses it */
+.ny .bkrow { display: flex; padding: 12px 0; font-size: 14px; color: var(--muted); }
+.ny .bkview { flex: 1; min-width: 0; overflow: hidden; }
+.ny .bkrow.moves .bkview { -webkit-mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent); mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent); }
+.bk-track { display: flex; width: max-content; }
+.bkrow.moves .bk-track { animation: bk-slide var(--secs, 40s) linear infinite; }
+.bkrow.moves:hover .bk-track, .bkrow.moves:focus-within .bk-track { animation-play-state: paused; }
+.bk-set { display: flex; gap: 8px; padding-right: 8px; }
+.bc { flex: none; display: block; }
+.bc img, .bc .none { display: block; height: 216px; width: 144px; aspect-ratio: 2 / 3; object-fit: cover; border: 1px solid var(--line); background: #f1eee7; transition: transform .15s; }
+.bc:hover img { transform: translateY(-3px); border-color: #aaa; }
+@keyframes bk-slide { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .bkrow.moves .bk-track { animation: none; } .bkrow.moves .bkview { overflow-x: auto; -webkit-mask-image: none; mask-image: none; } .bkrow .bk-set[aria-hidden] { display: none; } }
 @media (max-width: 640px) {
   .ny { grid-template-columns: 1fr; padding-top: 18px; }
   .ny .yl { grid-column: 1; margin-top: 6px; }
@@ -534,7 +541,7 @@ body[data-tab="home"] { --frame: 1040px; }
 #reader .rel a:hover .rt { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 @media (max-width: 640px) { #reader .rel { margin: 0 32px; } #reader .rel .rs { display: none; } }
 #reader .sheet:focus { outline: none; }
-@media (max-width: 640px) { #reader .pn { margin: 0 32px; } }
+@media (max-width: 640px) { #reader .pn { margin: 0 32px; } #reader .end { padding: 32px 32px 48px; } }
 
 /* a city on the country map opens a pop-up beside its pin (the photo keeps its own shape; nothing is cropped) */
 .tpop .leaflet-popup-content-wrapper { display: flow-root; padding: 0; border-radius: 10px; box-shadow: 0 6px 24px rgba(0,0,0,.22); }
@@ -553,3 +560,25 @@ body[data-tab="home"] { --frame: 1040px; }
 #travels-leaflet .leaflet-tooltip { padding: 6px 10px; line-height: 1.35; font-size: 13px; color: var(--muted); border-radius: 8px; border: 1px solid var(--line); box-shadow: 0 2px 10px rgba(0,0,0,.12); }
 #travels-leaflet .leaflet-tooltip b { display: block; color: var(--text); font-size: 14px; font-weight: 600; }
 #travels-leaflet .leaflet-tooltip .tt-n { font-size: 12px; opacity: .8; }
+
+/* Writings timeline: a horizontal line of years (oldest left, newest right); the open year is filled, a click opens it and jumps to it */
+.tl { position: relative; display: flex; gap: 0; overflow-x: auto; margin: 0 0 18px; padding: 4px 0 6px; scrollbar-width: none; }
+.tl::-webkit-scrollbar { display: none; }
+.tl button::before { content: ""; position: absolute; left: 0; right: 0; top: 9px; height: 1px; background: var(--line); }   /* each year draws its own stretch of the line, so it runs the whole way when the row scrolls */
+.tl button { position: relative; flex: 1 0 58px; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0; font: inherit; color: var(--muted); background: none; border: 0; cursor: pointer; font-variant-numeric: tabular-nums; }
+.tl .dot { width: 11px; height: 11px; margin-top: 4px; box-sizing: border-box; border-radius: 50%; border: 1px solid var(--muted); background: #fff; z-index: 1; transition: transform .15s; }
+.tl .ty { font-size: 13px; line-height: 1.2; }
+.tl .tc { font-size: 11px; opacity: .7; line-height: 1; }
+.tl button:hover { color: var(--text); }
+.tl button:hover .dot { transform: scale(1.3); }
+.tl button.on { color: var(--text); }
+.tl button.on .dot { background: var(--text); border-color: var(--text); }
+.tl button.none { pointer-events: none; }
+.tl button.none .dot, .tl button.none .ty, .tl button.none .tc { opacity: .35; }   /* faded, but the line through it stays whole */
+.ny { grid-template-columns: 1fr; padding-top: 0; border-top: 0; }
+.ny .yl { grid-column: 1; margin-top: 0; }
+/* the year's books: their own section under the pieces, with a heading and a line of subtitle */
+.ny .bksec { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--line); }
+.ny .bksec .sub { margin: 0 0 6px; font-size: 20px; font-weight: 300; letter-spacing: -.2px; color: var(--text); }
+.ny .bksec .bkrow { padding: 10px 0 0; }
+.ny .yl > .bksec:first-child { margin-top: 0; padding-top: 0; border-top: 0; }   /* no pieces above the books: no divider either */
