@@ -536,7 +536,7 @@ legacyReads();
     { key: "w50", name: "The 50 Best", logo: w50Img, cats: ["w50r", "w50n", "w50v"] },
     { key: "mich", name: "Michelin", logo: starImg, cats: [3, 2, 1, 0.5, 0.25], lines: [[3], [2], [1, 0.5, 0.25]] },
     { key: "br", name: "Blue Ribbon", logo: ribbon, cats: ["br3", "br2", "br1"] },
-    { key: "hao", name: "Haotian Haochi", logo: hrImg, cats: ["hao3", "hao2", "hao1"] }
+    { key: "hao", name: "Haochi", logo: hrImg, cats: ["hao3", "hao2", "hao1"] }
   ];
   const inGroup = (p, g) => g.cats.some(k => inCat(p, k));
   const groupCount = g => list.filter(p => inGroup(p, g)).length;
