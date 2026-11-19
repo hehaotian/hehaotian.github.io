@@ -15,7 +15,7 @@ window.NOTES = [
     "title": "Blind Spot",
     "slug": "blind-spot",
     "category": "Reflection",
-    "place": "于加州山景城\nMountain View, CA",
+    "place": "于加利福尼亚州山景城\nMountain View, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       [
@@ -357,7 +357,7 @@ window.NOTES = [
     "title": "Goodbye, Expensive Hallucination",
     "slug": "expensive-hallucination",
     "category": "Journal",
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       [
@@ -418,7 +418,7 @@ window.NOTES = [
     "title": "Grip",
     "slug": "grip",
     "category": "Poem",
-    "place": "于加州库比蒂诺\nCupertino, CA",
+    "place": "于加利福尼亚州库比蒂诺\nCupertino, CA",
     "languages": ["Chinese", "English"],
     "pairStanzas": [
       [
@@ -508,7 +508,7 @@ window.NOTES = [
     "title": "Continuous and Discrete",
     "slug": "continuous-and-discrete",
     "category": "Journal",
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       [
@@ -534,7 +534,7 @@ window.NOTES = [
     "title": "You Are Absolutely Right",
     "slug": "you-are-absolutely-right",
     "category": "Journal",
-    "place": "于加州都柏林\nDublin, CA",
+    "place": "于加利福尼亚州都柏林\nDublin, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       [
@@ -556,7 +556,7 @@ window.NOTES = [
     "title": "No Drinking in Class",
     "slug": "before-a-good-student",
     "category": "Reflection",
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "blocks": [
       [
@@ -664,7 +664,7 @@ window.NOTES = [
     "date": "2026-11-03",
     "title": "Polis and Civitas",
     "category": "Reflection",
-    "place": "于加州圣拉蒙\nSan Ramon, CA",
+    "place": "于加利福尼亚州圣拉蒙\nSan Ramon, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["古典学课上讲了Polis与Civitas相反的社会观。", "In Classics class we covered two opposing visions of society: the polis and the civitas."],
@@ -694,7 +694,7 @@ window.NOTES = [
     "date": "2026-09-27",
     "title": "Delivery",
     "category": "Poem",
-    "place": "于加州弗里蒙特\nFremont, CA",
+    "place": "于加利福尼亚州弗里蒙特\nFremont, CA",
     "languages": ["Chinese", "English"],
     "poem": {
       "heading": "Delivery",
@@ -752,7 +752,7 @@ window.NOTES = [
     "title": "Zest > Attention > Time > Money",
     "slug": "zest-attention-time-money",
     "category": "Reflection",
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       [
@@ -810,7 +810,7 @@ window.NOTES = [
     "title": "History and Power",
     "slug": "history-and-power",
     "category": "Reflection",
-    "place": "于加州斯坦福\nStanford, CA",
+    "place": "于加利福尼亚州斯坦福\nStanford, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       [
@@ -848,7 +848,7 @@ window.NOTES = [
     "title": "Polymetis",
     "slug": "polymetis",
     "category": "Reflection",
-    "place": "于加州都柏林\nDublin, CA",
+    "place": "于加利福尼亚州都柏林\nDublin, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       [
@@ -912,7 +912,7 @@ window.NOTES = [
     "title": "The Remaining 27%",
     "slug": "the-remaining-27-percent",
     "category": "Reflection",
-    "place": "于加州库比蒂诺\nCupertino, CA",
+    "place": "于加利福尼亚州库比蒂诺\nCupertino, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       [
@@ -1034,7 +1034,7 @@ window.NOTES = [
     "title": "Steinbeck Country",
     "slug": "steinbeck-country",
     "category": "Journal",
-    "place": "于加州萨利纳斯\nSalinas, CA",
+    "place": "于加利福尼亚州萨利纳斯\nSalinas, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       [

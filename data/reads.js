@@ -21,7 +21,7 @@ window.READS = [
         "Louise Glück’s collected poems, from Firstborn to Winter Recipes from the Collective, including The Wild Iris."
       ]
     },
-    "place": "于加州库比蒂诺\nCupertino, CA",
+    "place": "于加利福尼亚州库比蒂诺\nCupertino, CA",
     "languages": [
       "Chinese",
       "English"
@@ -1006,7 +1006,7 @@ window.READS = [
         "In 1980s Nigeria, Yejide cannot conceive, and her husband’s family, a false pregnancy and three children’s names turn her body into the place where a whole family’s hopes are tested."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["“留在我身边。”",
@@ -1156,6 +1156,7 @@ window.READS = [
         "A simple principle for letting other people be, and putting your energy back into what you can decide."
       ]
     },
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["我发现自己越来越难以忍受事情不按照预期发展。",
@@ -1255,7 +1256,7 @@ window.READS = [
         "A grandmother tells her granddaughter the story of the family, through famine, land reform and the American bombing of Hanoi."
       ]
     },
-    "place": "于加州帕洛阿尔托\nPalo Alto, CA",
+    "place": "于加利福尼亚州帕洛阿尔托\nPalo Alto, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["雨季里有人在田里播下稻种，收获以后有人把稻谷搬进仓房，有人在屋前栽下一棵果树。又有人在某个清晨仓皇离开，再也没有回来。土地都记得。",
@@ -1305,7 +1306,7 @@ window.READS = [
         "In the New Zealand gold-rush town of Hokitika in 1866, a newcomer’s arrival unravels a web of disappearance, death, gold and identity, built on an astrological plan."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["1866年，新西兰淘金小镇霍基蒂卡，一个陌生人到来，牵出一连串关于失踪、死亡、黄金与身份的谜团。卡顿借用十九世纪维多利亚小说的叙事方式，却设计了极精密的占星结构：人物对应黄道十二宫与行星，小说的十二个部分逐渐缩短，像月亮由盈转亏。比起结构本身多么精巧，我更想谈它与小说所写的资本主义世界之间的关系。",
@@ -1923,7 +1924,7 @@ window.READS = [
         "Book one of the Neapolitan Novels: two girls grow up in a poor neighborhood of postwar Naples, and school sends them in different directions."
       ]
     },
-    "place": "于加州库比蒂诺\nCupertino, CA",
+    "place": "于加利福尼亚州库比蒂诺\nCupertino, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["莉拉和莱农住在那不勒斯，却从没真正见过大海。城市就在眼前，她们的世界只有街区那么大：鞋匠、杂货商、放高利贷的人，楼梯间里的争吵，父亲打孩子的声音。Ferrante 从战后那不勒斯一个贫穷的街区写起，我喜欢这样的开头。",
@@ -2089,7 +2090,7 @@ window.READS = [
         "Levy travels between London, Paris and Berlin, studying other people’s houses and imagining one of her own."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "pairStanzas": [
       [
@@ -2383,7 +2384,7 @@ window.READS = [
         "After her marriage ends, Levy moves into a rented London flat with her two daughters and learns to live on her own."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["亲爱的德博拉：",
@@ -2417,7 +2418,7 @@ window.READS = [
         "Levy begins with a breakdown on a Mallorcan hillside and works back through a South African childhood, a father jailed for opposing apartheid, and the weariness of marriage and motherhood."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["他问：一本回忆录从中年女人在马略卡岛的山坡上骑车、忽然哭个不停写起，这算什么开头？",
@@ -2458,7 +2459,7 @@ window.READS = [
         "Didion’s novel of an old landowning family in the Sacramento Valley, and of a California that is passing away."
       ]
     },
-    "place": "于加州伯克利\nBerkeley, CA",
+    "place": "于加利福尼亚州伯克利\nBerkeley, CA",
     "languages": [
       "Chinese",
       "English"
@@ -2496,7 +2497,7 @@ window.READS = [
         "Didion’s essays on California and America at the end of the 1960s, where hippie freedom, Hollywood, political radicalism and conflicts of race and class run together."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": [
       "Chinese",
       "English"
@@ -2534,7 +2535,7 @@ window.READS = [
         "Didion’s novel of Hollywood and Los Angeles, and of Maria Wyeth, who keeps driving the freeways with no destination."
       ]
     },
-    "place": "于加州库比蒂诺\nCupertino, CA",
+    "place": "于加利福尼亚州库比蒂诺\nCupertino, CA",
     "languages": [
       "Chinese",
       "English"
@@ -2622,7 +2623,7 @@ window.READS = [
         "The catalogue of the exhibition of the same name, curated by Hilton Als, that places Didion’s writing among photographs, artworks and archival material."
       ]
     },
-    "place": "于加州奥克兰\nOakland, CA",
+    "place": "于加利福尼亚州奥克兰\nOakland, CA",
     "languages": [
       "Chinese",
       "English"
@@ -3210,7 +3211,7 @@ window.READS = [
       "original": "English",
       "lines": ["Memoir · Knopf, 2003", "Didion’s memoir of California and her family, and of the pioneer myth she grew up inside."]
     },
-    "place": "于加州伯克利\nBerkeley, CA",
+    "place": "于加利福尼亚州伯克利\nBerkeley, CA",
     "languages": ["Chinese", "English"],
     "photo": {
       "file": "where_i_was_from_reading.jpg",
@@ -3259,7 +3260,7 @@ window.READS = [
       "original": "English",
       "lines": ["Poetry · Edited by Michael Schumacher, 2015", "A selection of Allen Ginsberg’s poems, including “Howl”."]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "photo": {
       "file": "ginsberg_reading.jpg",
@@ -3313,7 +3314,7 @@ window.READS = [
         "Hsu’s memoir of his college friendship with Ken, who was killed in a carjacking, and of the music and zines of their Berkeley years."
       ]
     },
-    "place": "于加州旧金山\nSan Francisco, CA",
+    "place": "于加利福尼亚州旧金山\nSan Francisco, CA",
     "languages": [
       "Chinese",
       "English"
@@ -3372,7 +3373,7 @@ window.READS = [
         "Beckert’s global history of how cotton built modern capitalism, through slavery, colonial conquest and state power."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": [
       "Chinese",
       "English"
@@ -3409,7 +3410,7 @@ window.READS = [
         "After a dream, a woman named Yeong-hye stops eating meat, and her family turns against her."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "photo": {
       "file": "vegetarian_reading.jpg",
@@ -3451,7 +3452,7 @@ window.READS = [
         "In 1768, rumors that sorcerers were stealing souls by clipping queues swept the Qing empire, and the Qianlong emperor turned a village panic into a nationwide hunt for conspirators."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["1768年，乾隆皇帝下令追查妖术。起初只是民间的不安和猜疑，有人说辫子被剪，魂被摄走。可皇帝把它看成对统治秩序的威胁，地方官就不得不在压力下找出嫌犯。",
@@ -3497,7 +3498,7 @@ window.READS = [
         "In Naples, a girl overhears her father compare her to his estranged sister, and begins to look for the truth behind the adults’ lies."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "photo": {
       "file": "lying_life_reading.jpg",
@@ -4099,7 +4100,7 @@ window.READS = [
         "A fever leaves its victims repeating the routines of their old lives. Candace Chen, a Bible production coordinator in New York, keeps going to work."
       ]
     },
-    "place": "于麻省波士顿\nBoston, MA",
+    "place": "于马萨诸塞州波士顿\nBoston, MA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["马凌的小说《断裂》里，Candace 每天仍走进那栋空楼上班。她在一家出版公司负责《宝石圣经》的生产协调。纽约渐渐空了，没有人再需要那些《圣经》，工作却还在继续。这算不上崇高的坚守，更像是习惯接管了她。",
@@ -4131,7 +4132,7 @@ window.READS = [
       "original": "English",
       "lines": ["Novel · Simplified Chinese edition", "A letter from a son, nicknamed Little Dog, to his mother, who cannot read it."]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["《大地上我们转瞬即逝的绚烂》里，小狗对母亲说：“你打开前门，对着我人生中的第一场雪，耳语道：看。”（王鸥行 14）",
@@ -4158,7 +4159,7 @@ window.READS = [
     "date": "2020-05-01",
     "title": "The Color of Law",
     "slug": "the-color-of-law",
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "category": "History",
     "book": {
@@ -4363,7 +4364,7 @@ window.READS = [
         "Raskolnikov, a poor student in Petersburg, murders a pawnbroker, and is slowly undone by what he has done."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "pairStanzas": [
       [
@@ -4901,7 +4902,7 @@ window.READS = [
         "Chichikov travels the provinces buying the names of dead serfs that are still on the tax rolls."
       ]
     },
-    "place": "于加州旧金山\nSan Francisco, CA",
+    "place": "于加利福尼亚州旧金山\nSan Francisco, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["果戈里先生：",
@@ -5027,7 +5028,7 @@ window.READS = [
         "Florentino Ariza waits fifty-three years for Fermina Daza, who marries a doctor in between."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["马格达莱纳河上，一艘轮船升起了黄色的旗。那是霍乱疫情的标记，为的是不让别的乘客上船。甲板上有两个老人。他们并没有生病。",
@@ -5085,7 +5086,7 @@ window.READS = [
         "The three Karamazov brothers and their father, a murder and a trial, with Ivan’s revolt against a world built on children’s suffering."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["他问：假如上帝亲口向伊万解释了一切，伊万还有什么理由拒绝？",
@@ -5147,7 +5148,7 @@ window.READS = [
         "Harari traces how Homo sapiens came to dominate the earth, from the Cognitive Revolution to the present."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["1. 假如四万年前的欧洲有一位历史学家，他未必会认为智人是演化的最终胜利者。",
@@ -5243,7 +5244,7 @@ window.READS = [
         "An ethnography of Chungking Mansions in Hong Kong and the traders, migrants and asylum seekers who make a living there."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "photo": {
       "file": "chungking_mansions_reading.jpg",
@@ -5285,7 +5286,7 @@ window.READS = [
         "Two economists on how the poor actually live and decide, drawn from field experiments around the world."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "photo": {
       "file": "poor_economics_reading.jpg",
@@ -5371,7 +5372,7 @@ window.READS = [
         "Tara Westover grows up in a survivalist family in Idaho, never attends school, and finds her way to Cambridge."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "pairStanzas": [
       [
@@ -5741,7 +5742,7 @@ window.READS = [
         "Four friends in New York over several decades, and at the center of the book, the life of one of them, Jude."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "photo": {
       "file": "a_little_life_reading.jpg",
@@ -5783,7 +5784,7 @@ window.READS = [
         "Herodotus’s inquiry into the Greco-Persian Wars and the peoples around them. In its opening book, the Lydian king Croesus asks the Athenian Solon who is the happiest man in the world."
       ]
     },
-    "place": "于加州斯坦福\nStanford, CA",
+    "place": "于加利福尼亚州斯坦福\nStanford, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["希罗多德《历史》中最让我印象深刻的，并不是波澜壮阔的希波战争，而是开篇吕底亚国王克洛伊索斯与雅典人梭伦的一段对话。拥有巨大财富与权力的克洛伊索斯，向梭伦展示自己的富足，期待被称为世上最幸福的人。梭伦却认为，在一个人的生命结束之前，我们无法真正判断他是否幸福。后来克洛伊索斯失去王国，才终于理解这句话的分量。",
@@ -5867,7 +5868,7 @@ window.READS = [
         "Liang Xiaosheng’s analysis of how China’s social classes fared through reform and opening up, and who gained and who lost."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["郑娟一个人带着年迈的母亲和年幼的孩子。周秉昆明知这段关系会给家里添压力，还是一步步担起照顾她们的责任。后来周家出了变故，周母失去自理能力，又是郑娟长年守在床边。这些事没带来什么社会地位，也很难用收入或职业成就去量，一个家却靠它们撑着。读梁晓声的《人世间》，我最先想起的是这些。",
@@ -5907,7 +5908,7 @@ window.READS = [
         "Liang Xiaosheng’s Mao Dun Prize-winning novel, following the three children of a working-class family in northeast China through decades of change."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA"
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA"
   },
   {
     "date": "2023-06-13",
@@ -6928,7 +6929,7 @@ window.READS = [
         "Nozick argues for a minimal state and an entitlement theory of justice in holdings, in answer to Rawls."
       ]
     },
-    "place": "于加州旧金山\nSan Francisco, CA",
+    "place": "于加利福尼亚州旧金山\nSan Francisco, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["1. 诺齐克最让我着迷的地方，在于他不从贫富差距合不合理出发，先问的是：一个人凭什么有权干预另一个人的财产？",
@@ -6972,7 +6973,7 @@ window.READS = [
         "Diamond explains why wealth, technology and power ended up so unevenly spread across the world, tracing it back to geography."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["1532年，卡哈马卡。人数有限的西班牙征服者俘虏了印加皇帝阿塔瓦尔帕。戴蒙德把这一刻拆开来看：马匹、钢铁武器、文字、军事经验，还有传染病，一样一样摆在桌上。",
@@ -7024,7 +7025,7 @@ window.READS = [
         "Part I gathers the papers of an aesthetic young man, from the “Rotation of Crops” to “The Seducer’s Diary,” and shows a life lived at a distance from choice."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["先说《轮作法》。审美者在里面靠不断改变体验与观看世界的方式，抵御无聊。他并不缺洞察力，他太擅长观察、分析和解释生活，以至于现实本身也成了可以保持距离的审美对象。他拥有理解生活的自由，缺的是选择生活的勇气。读《非此即彼》第一卷，最令我不安的，是审美者这种以清醒逃避生活的能力，克尔凯郭尔对享乐主义的批判倒在其次。",
@@ -7068,7 +7069,7 @@ window.READS = [
         "A series of Christian deliberations on loving one’s neighbor, in which love is measured by deeds and duty rather than by feeling."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["克尔凯郭尔在《爱的作为》里触到的，是思想与行动之间的裂隙。他讲爱邻人，讲的是具体的责任。他不满足于把爱看成一种情感、吸引或精神体验。《非此即彼》里那个把生活不断变成审美对象的人，在这里被要求走出自己，承认别人不是自己情感与思想的附属品。爱不取决于我如何感受自己，取决于我如何对待另一个人。这个转变逼我重新审视自己追求的成功、自由与人生意义。",
@@ -7106,7 +7107,7 @@ window.READS = [
         "A close analysis of despair as the self’s failure to rightly become itself, and of faith as the way out."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["开头几十页，《致死的疾病》读得很慢。概念高度抽象，论证绕着自我、意识与绝望一圈圈地转，有时显得晦涩，也有点重复。可我慢慢看出这种近乎执拗的分析是它的力量所在。克尔凯郭尔不急着安慰人，他一层层剥掉我们用来解释和保护自己的理由。和《非此即彼》借人物与叙事展现存在困境不同，这本书用近乎严酷的概念分析，逼读者面对自我与自身的关系。它的价值不在给我一套令人安心的生活哲学，在让那些看似理所当然的自我认知重新变得可疑。",
@@ -7146,7 +7147,7 @@ window.READS = [
         "Two companion works: Abraham’s sacrifice of Isaac as a test of faith, and a young man’s failed attempt to repeat a happy trip to Berlin."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["我一直相信，理性规划能够使人获得更大的自由。无论是职业发展、家庭生活，还是对未来的安排，我都习惯于分析风险、比较选择，并尽可能为各种结果做好准备。我曾将这种能力视为成熟与责任感的体现：一个人只有充分掌握自己的生活，才能更从容地承担对他人的责任。然而，克尔凯郭尔让我意识到一个更深刻的悖论：我越是努力为未来消除不确定性，就越可能失去面对不确定性的勇气。原本帮助我承担风险的理性，逐渐变成了推迟承担风险的理由。",
@@ -7230,7 +7231,7 @@ window.READS = [
         "Sartre, Beauvoir, Heidegger, Camus, Merleau-Ponty and others, and the lives and quarrels behind existentialism and phenomenology."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["1. 1933年，巴黎一家咖啡馆里，三个年轻人在谈哲学。雷蒙·阿隆向萨特介绍德国现象学，指着桌上的杏子鸡尾酒，说哲学甚至可以从眼前这杯酒开始。",
@@ -7280,7 +7281,7 @@ window.READS = [
         "A long conversation between the artist and the curator Catherine Grenier about his childhood, his work on memory and archives, and death."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于华盛顿州西雅图\nSeattle, WA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["地板下面藏着一个人。那是纳粹占领下的巴黎，克里斯蒂安·波尔坦斯基的犹太裔父亲躲在自家地板的夹层里，躲避迫害。1944年，波尔坦斯基在这座城市出生。一个人真实地活着，却必须从公共世界里消失；他的存在被保存下来，却未必留下任何可靠的证据。他的艺术从这里开始。我们习惯相信，记忆是身份的基础，照片、文字和档案为记忆提供客观的证据。记忆若能被制造，档案若能被重新排列，同一段人生若能被讲成截然不同的故事，我们就很难再确信自己拥有一段真实而完整的人生。",
@@ -7322,7 +7323,7 @@ window.READS = [
         "Borges in conversation on language, poetry, time and philosophy, moving from a casual detail into the deepest questions."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": [
       "Chinese",
       "English"
@@ -7426,7 +7427,7 @@ window.READS = [
         "Zweig’s memoir of the Europe he grew up in, from Vienna before 1914 to exile and the wars."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["护照又出现了。这在《昨日的世界》里已经不知是第几次。茨威格年轻时，欧洲人可以相对自由地过境；到了晚年，他得靠签证、居留许可和各种证明，才换来暂时停留的权利。读到这里我停了一会儿。听上去只是手续变多，可一个人原本凭活在世上就有的行动自由，变成了得不停证明自己有资格待在世界的某个角落。",
@@ -7470,7 +7471,7 @@ window.READS = [
         "Full title: The Trolley Problem, or Would You Throw the Fat Guy Off the Bridge? A philosophical conundrum told as a comic courtroom trial."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": [
       "Chinese",
       "English"
@@ -7618,7 +7619,7 @@ window.READS = [
         "A doctor and poet lives through the Russian Revolution and civil war, and his love for Lara in a snowbound house at Varykino."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["瓦雷金诺的冬天，房子被积雪围着，窗玻璃上结了厚厚的冰霜。日瓦戈和拉拉暂时躲开了战争，住进这座几乎与外界断了联系的房子。白天为取暖、食物和零碎的日常事忙；夜里，日瓦戈又开始写诗。屋外的俄国在革命和内战里翻腾，屋里却有人读书，有人相爱，有人留意雪地上的光。读《日瓦戈医生》，我记得最牢的是这间屋子。帕斯捷尔纳克愿意花那么多笔墨，写历史看来微不足道的时刻。",
@@ -7706,7 +7707,7 @@ window.READS = [
         "Two centuries of tax, inheritance and income records, and the argument that when capital grows faster than the economy, the past comes to rule the future."
       ]
     },
-    "place": "于加州桑尼维尔\nSunnyvale, CA",
+    "place": "于加利福尼亚州桑尼维尔\nSunnyvale, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["伏脱冷对年轻的拉斯蒂涅说过一番话，皮凯蒂在书里引了它：靠勤奋与才华挣来的职业收入，远不如通过婚姻得到一笔像样的财产。那是巴尔扎克《高老头》里的场景。在那个世袭财富占主导的社会，一个人的经济前途，往往早已由家庭背景决定。",
@@ -9184,6 +9185,7 @@ window.READS = [
         "Three young men from Matsuyama, the brothers Akiyama and the poet Masaoka Shiki, grow up with Meiji Japan through the Sino-Japanese and Russo-Japanese wars."
       ]
     },
+    "place": "于华盛顿州西雅图\nSeattle, WA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["读司马辽太郎的《坂上之云》，开头，伊予松山。秋山好古、秋山真之、正冈子规，后来分别是骑兵将领、海军参谋和近代俳句革新的代表。可司马一开始不急着给他们历史的分量。读完之后，我记得最牢的是这几个年轻人，比东乡平八郎在日本海海战里的胜利记得更牢。",
@@ -9611,7 +9613,7 @@ window.READS = [
         "Nick Carraway watches his neighbor Jay Gatsby chase the past, and Daisy Buchanan, across Long Island."
       ]
     },
-    "place": "于加州圣克拉拉\nSanta Clara, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "pairStanzas": [
       [
@@ -10205,7 +10207,7 @@ window.READS = [
         "A Nobel laureate and former World Bank chief economist on how the IMF and the global financial system failed the countries they were meant to help."
       ]
     },
-    "place": "于加州利弗莫尔\nLivermore, CA",
+    "place": "于加利福尼亚州圣克拉拉\nSanta Clara, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["我在西雅图的华盛顿大学读书，毕业后留在硅谷工作。同时，我用房地产和股票把自己的经济生活，连到不同地区、不同国家的市场上。教育、职业、资本，三条本来可能被地域限住的路，因为世界更开放，接在了一起。要我反对全球化，我大概找不出一个有说服力的理由。",
@@ -10271,6 +10273,7 @@ window.READS = [
         "Fei Xiaotong’s essays on how rural Chinese society is organized: the web of kinship and acquaintance, and the “differential mode of association” that spreads outward like ripples."
       ]
     },
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["读到“差序格局”这一章，先想起一件事。一个人到陌生的城市，替父亲去医院挂专家号。清晨就去排队，排到窗口，被告知当天的名额没有了。",
@@ -11128,7 +11131,7 @@ window.READS = [
         "Dispossessed Oklahoma farmers, the Joad family, travel Route 66 to California in search of work and find hunger and exploitation."
       ]
     },
-    "place": "于加州蒙特雷\nMonterey, CA",
+    "place": "于加利福尼亚州蒙特雷\nMonterey, CA",
     "languages": ["Chinese", "English"],
     "prose": [
       ["亲爱的斯坦贝克先生：",

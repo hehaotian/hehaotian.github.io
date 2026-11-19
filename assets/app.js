@@ -354,12 +354,12 @@ const notePage = (() => {
   // words written per year: the English side of each note (prose, blocks, poem and stanza pairs), counted as words
   const wc = t => (String(t || "").match(/[A-Za-z0-9\u00C0-\u024F]+(?:[’'-][A-Za-z0-9\u00C0-\u024F]+)*/g) || []).length;
   const wordsOf = n => (n.prose || []).reduce((t, p) => t + wc(p[1]), 0) + (n.blocks || []).reduce((t, b) => t + wc(b[2]), 0) + ((n.poem || {}).pairs || []).reduce((t, p) => t + wc(p[1]), 0) + (n.pairStanzas || []).flat().reduce((t, p) => t + wc(p[1]), 0) + (n.stanzas || []).flat().reduce((t, l) => t + wc(l), 0) + (n.body || []).reduce((t, p) => t + wc(p), 0);
-  const chart = yearChart(document.getElementById("notes-chart"), { list: everything, words: wordsOf, label: n => n.title, noun: "piece", caption: "Words written per year", getYear: () => on.year, setYear: y => { on.year = y; renderList(); } });
+  const chart = yearChart(document.getElementById("notes-chart"), { list: everything, words: wordsOf, label: n => n.title, noun: "writing", caption: "Words written per year", getYear: () => on.year, setYear: y => { on.year = y; renderList(); } });
   // left column: a card per category (like the Plates / Reads cards) and a world map of where the notes were written; a card or a country filters the list, click it again to clear
   const catCards = () => cats.length > 1 ? cats.map(v => `<button type="button" class="pcard${v === on.cat ? " on" : ""}" data-key="cat" data-v="${v === on.cat ? "" : esc(v)}" aria-pressed="${v === on.cat}"><span class="pn">${esc(v)}</span><b class="pc">${entries.filter(e => e.cat === v).length}</b></button>`).join("") : "";
   // grouped by year, newest year open; older years fold away (a filter opens every year that has a match)
   const years = [...new Set(entries.map(e => e.n.date.slice(0, 4)))];
-  let sel = years[0];   // the year shown on the right
+  let sel = years.includes(String(new Date().getFullYear())) ? String(new Date().getFullYear()) : years[0];   // the year shown on the right: the current year, or the newest one that has pieces
   const shortDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
   // a year's books as one slow row of covers (like the flags in Travels): hover pauses it, a cover opens the book; a short row stays still
   const bookRow = books => {
@@ -368,20 +368,9 @@ const notePage = (() => {
     return `<div class="bkrow${moves ? " moves" : ""}"><div class="bkview"><div class="bk-track" style="--secs:${Math.max(20, books.length * 3)}s"><div class="bk-set">${books.map(e => cov(e)).join("")}</div>${moves ? `<div class="bk-set" aria-hidden="true">${books.map(e => cov(e, true)).join("")}</div>` : ""}</div></div></div>`;
   };
   const rows = es => es.map(({ n, href, cat }) => `<a class="note" href="${href}"><span class="d">${shortDate(n.date)}</span><span class="t">${esc(n.title)}</span>${cat ? `<span class="cat">${esc(cat)}</span>` : ""}</a>`).join("");
-  const renderList = () => {
-    const filtered = !!(on.cat || on.country || on.year);
-    const shown = entries.filter(({ n, cat }) => (!on.cat || cat === on.cat) && (!on.country || countryOf(n) === on.country) && (!on.year || +n.date.slice(0, 4) === on.year));
-    const byYear = years.map(y => [y, shown.filter(e => e.n.date.startsWith(y))]).filter(([, ns]) => ns.length);
-    // the list shows one year at a time: the one picked on the timeline (the year filter picks it too); a year with no match falls back to the newest year that has one
-    if (on.year) sel = String(on.year);
-    if (!byYear.some(([y]) => y === sel)) sel = byYear.length ? byYear[0][0] : sel;
-    const tl = `<div class="tl" role="group" aria-label="Timeline">${[...years].reverse().map(y => { const n = (byYear.find(b => b[0] === y) || [0, []])[1].length; return `<button type="button" data-tl="${y}" class="${n ? "" : "none"}${y === sel ? " on" : ""}" aria-pressed="${y === sel}" aria-label="${y}, ${n} ${n === 1 ? "piece" : "pieces"}"><span class="dot"></span><span class="ty">${y}</span><span class="tc">${n}</span></button>`; }).join("")}</div>`;
-    const cur1 = byYear.find(([y]) => y === sel);
-    // with no filter, the year shows your own pieces and folds its books into one row of covers; any filter (Book card, a country) lists them all
-    const body = cur1 ? (() => { const ns = cur1[1], notes = filtered ? ns : ns.filter(e => e.cat !== "Book"), books = filtered ? [] : ns.filter(e => e.cat === "Book"); return `<section class="ny open"><div class="yl">${rows(notes)}${books.length ? `<div class="bksec"><p class="sub">${books.length} ${books.length === 1 ? "book" : "books"} read in ${sel}</p>${bookRow(books)}</div>` : ""}</div></section>`; })() : `<p class="empty">Nothing yet.</p>`;
-    listEl.innerHTML = tl + body;
-    // a year's cover row drifts whatever the number of books: the set is repeated until it is wider than the row, then drawn twice so the loop has no seam
-    listEl.querySelectorAll(".bkrow").forEach(row => {
+  // a year's cover row drifts whatever the number of books: the set is repeated until it is wider than the row, then drawn twice so the loop has no seam
+  const paintRows = () => {
+    listEl.querySelectorAll(".bkrow:not(.moves)").forEach(row => {
       const view = row.querySelector(".bkview"), track = row.querySelector(".bk-track"), set = track.querySelector(".bk-set");
       if (!set || set.children.length <= 4) return;   // four books or fewer stay still
       const one = set.innerHTML, w1 = set.offsetWidth;
@@ -393,15 +382,38 @@ const notePage = (() => {
       track.style.setProperty("--secs", Math.max(20, Math.round(w1 * reps / 40)) + "s");   // about 40px a second
       row.classList.add("moves");
     });
-    // the timeline is redrawn on every pick, so bring the chosen year back to the middle of it
+  };
+  // the timeline is redrawn on every pick, so bring the chosen year back to the middle of it; while the page is hidden nothing can be measured, so it is tried again once the page shows
+  let tlPending = false;
+  const centerTl = () => {
     const tlEl = listEl.querySelector(".tl"), cur = tlEl && tlEl.querySelector("button.on");
-    if (cur) tlEl.scrollLeft = cur.offsetLeft - (tlEl.clientWidth - cur.offsetWidth) / 2;
+    if (!cur) return;
+    if (!tlEl.clientWidth) { tlPending = true; return; }
+    tlPending = false;
+    tlEl.scrollLeft = cur.offsetLeft - (tlEl.clientWidth - cur.offsetWidth) / 2;
+  };
+  const renderList = () => {
+    const filtered = !!(on.cat || on.country || on.year);
+    const shown = entries.filter(({ n, cat }) => (!on.cat || cat === on.cat) && (!on.country || countryOf(n) === on.country) && (!on.year || +n.date.slice(0, 4) === on.year));
+    const byYear = years.map(y => [y, shown.filter(e => e.n.date.startsWith(y))]).filter(([, ns]) => ns.length);
+    // the list shows one year at a time: the one picked on the timeline (the year filter picks it too); a year with no match falls back to the newest year that has one
+    if (on.year) sel = String(on.year);
+    if (!byYear.some(([y]) => y === sel)) sel = byYear.length ? byYear[0][0] : sel;
+    const tl = `<div class="tl" role="group" aria-label="Timeline">${[...years].reverse().map(y => { const n = (byYear.find(b => b[0] === y) || [0, []])[1].length; return `<button type="button" data-tl="${y}" class="${n ? "" : "none"}${y === sel ? " on" : ""}" aria-pressed="${y === sel}" aria-label="${y}, ${n} ${n === 1 ? "writing" : "writings"}"><span class="dot"></span><span class="ty">${y}</span><span class="tc">${n}</span></button>`; }).join("")}</div>`;
+    const cur1 = byYear.find(([y]) => y === sel);
+    // with no filter, the year shows your own pieces and folds its books into one row of covers; any filter (Book card, a country) lists them all
+    const body = cur1 ? (() => { const ns = cur1[1], notes = filtered ? ns : ns.filter(e => e.cat !== "Book"), books = filtered ? [] : ns.filter(e => e.cat === "Book"); return `<section class="ny open"><div class="yl">${rows(notes)}${books.length ? `<div class="bksec"><p class="sub">${books.length} ${books.length === 1 ? "book" : "books"} read in ${sel}</p>${bookRow(books)}</div>` : ""}</div></section>`; })() : `<p class="empty">Nothing yet.</p>`;
+    listEl.innerHTML = tl + body;
+    paintRows();
+    // the timeline is redrawn on every pick, so bring the chosen year back to the middle of it
+    centerTl();
     tagsEl.innerHTML = catCards();
     countriesEl.innerHTML = countries.length > 1 ? worldMap(Object.fromEntries(countries.map(c => [c, everything.filter(n => countryOf(n) === c).length])), on.country, "Where the notes were written") : "";
     chart.sync();
   };
-  mapTip(countriesEl, "piece");
+  mapTip(countriesEl, "writing");
   countriesEl.addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (b) { on.country = b.dataset.v; renderList(); } });
+  new ResizeObserver(() => { paintRows(); if (tlPending) centerTl(); }).observe(listEl);   // the page starts hidden unless it is the one opened: start the covers drifting as soon as it has a width
   document.getElementById("notes").addEventListener("click", e => {
     const tb = e.target.closest("[data-tl]");   // a year on the timeline: show just that year
     if (tb) { sel = tb.dataset.tl; if (on.year) on.year = +sel; renderList(); return; }
