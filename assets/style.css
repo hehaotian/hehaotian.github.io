@@ -225,7 +225,7 @@ body[data-tab="gigs"] { --frame: 880px; }
 #notes .pcard:last-child:nth-child(odd) { grid-column: span 2; }
 #reads .reads { grid-template-columns: repeat(3, 1fr); gap: 32px 24px; }
 @media (max-width: 440px) { #reads .reads { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 1000px) { .rlayout { grid-template-columns: 1fr; gap: 0; } .rside { position: relative; margin-bottom: 28px; } #reads .rchart, #notes .rchart, #plates .total, #plates .pmap, #notes .total, #notes .pmap { max-width: 560px; } }
+@media (max-width: 1000px) { .rlayout { grid-template-columns: minmax(0, 1fr); gap: 0; } .rside { position: relative; margin-bottom: 28px; } #reads .rchart, #notes .rchart, #plates .total, #plates .pmap, #notes .total, #notes .pmap { max-width: 560px; } }
 @media (max-width: 700px) { #notes .pcard:last-child:nth-child(even) { grid-column: auto; } }
 @media (max-width: 700px) { #plates .total { grid-template-columns: repeat(2, 1fr); } .pcard:last-child { grid-column: span 2; } #reads .pcard:last-child { grid-column: auto; } .pcard:last-child .pn { min-height: 0; } .pcard:last-child .psub { flex-direction: row; flex-wrap: wrap; gap: 6px 18px; } }
 .cbar { padding: 7px 0; border-radius: 4px; }
