@@ -451,7 +451,7 @@ const notePage = (() => {
   const countries = [...new Set(list.flatMap(countriesOf))].sort((a, b) => list.filter(n => countriesOf(n).includes(b)).length - list.filter(n => countriesOf(n).includes(a)).length || (a < b ? -1 : 1));
   const countriesEl = document.getElementById("reads-countries"), listEl = document.getElementById("reads-list");
   // genre cards (like the Plates collection cards): a card filters the wall by book.category / the note's category and combines with the country flags; "More" is every other category
-  const GENRES = [["novel", "Novels", ["Novel", "Short stories"]], ["history", "History", ["History", "Oral history", "Ethnography"]], ["philosophy", "Philosophy", ["Philosophy", "Political thought"]], ["economics", "Economics", ["Economics"]], ["memoir", "Memoirs", ["Memoir"]]];
+  const GENRES = [["novel", "Novels", ["Novel", "Short stories"]], ["history", "History", ["History", "Oral history", "Ethnography"]], ["philosophy", "Philosophy", ["Philosophy", "Political thought"]], ["memoir", "Memoirs", ["Memoir"]], ["economics", "Economics", ["Economics"]]];
   const known = GENRES.flatMap(g => g[2]);
   const inGenre = (n, k) => { const c = n.category || (n.book || {}).category || ""; const g = GENRES.find(x => x[0] === k); return g ? g[2].includes(c) : !known.includes(c); };
   // line chart: words read per year (catalog word counts, with explicitly marked fallbacks where no edition-level count is published online). Combines with the genre cards and flags.
