@@ -5,6 +5,144 @@
 // slug: optional short link name (needed when the title isn't plain English letters).
 window.READS = [
   {
+    "date": "2025-05-05",
+    "title": "Silence Cannot Bear Witness",
+    "slug": "silence-cannot-bear-witness",
+    "category": "Poetry",
+    "book": {
+      "cover": "9780241526088-jacket-large.jpg",
+      "title": "Poems 1962–2020",
+      "author": "Louise Glück",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Poetry · English original, collected poems 1962–2020",
+        "Louise Glück’s collected poems, from Firstborn to Winter Recipes from the Collective, including The Wild Iris."
+      ]
+    },
+    "place": "于加州库比蒂诺\nCupertino, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "《野鸢尾》里，最令我难忘的不是花重新开放，而是它开口讲述自己曾经无法说话。",
+        "What stays with me most in *The Wild Iris* is not the flower blooming again, but its speaking about the time when it could not speak."
+      ],
+      [
+        "格丽克让一朵花从死亡般的沉寂中归来。它说起痛苦尽头的一扇门，说起黑暗，以及那些意识无法抵达的地方。",
+        "Glück brings a flower back from a deathlike stillness. It speaks of a door at the end of pain, of darkness, and of the places consciousness cannot reach."
+      ],
+      [
+        "我始终觉得，这里存在一个无法消除的悖论：**只有重新获得声音的生命，才能讲述失去声音的经历；而真正的沉默，恰恰无法为自己作证。**",
+        "I have always felt there is a paradox here that cannot be removed: **only a life that has regained its voice can tell of losing it; and true silence is exactly what cannot bear witness for itself.**"
+      ],
+      [
+        "我们习惯把复生理解为胜利，仿佛一个人终于能够谈论过去，便意味着过去已经被理解。但野鸢尾的声音并不能证明它在黑暗中经历了什么。它只能证明，黑暗之后，仍有一个说话者。",
+        "We are used to reading rebirth as a victory, as if being finally able to talk about the past meant the past had been understood. But the iris’s voice cannot prove what it went through in the dark. It can only prove that, after the dark, there is still someone speaking."
+      ],
+      [
+        "这也使我重新理解格丽克诗中反复出现的珀耳塞福涅。她从冥府归来，却无法用归来取消被掳走的岁月。那些日子并不因为她重新站在阳光下，就变得可以解释。",
+        "This also changes how I understand Persephone, who keeps returning in Glück’s poems. She comes back from the underworld, but her return cannot cancel the years of being taken. Those days do not become explicable just because she stands in the sun again."
+      ],
+      [
+        "格丽克没有要求声音承担这样的责任。",
+        "Glück does not ask the voice to carry such a responsibility."
+      ],
+      [
+        "在《野鸢尾》的结尾，花的声音如喷泉般从生命中心涌出。它没有回答死亡为什么发生，也没有宣告自己已经痊愈。",
+        "At the end of *The Wild Iris*, the flower’s voice wells up like a fountain from the center of life. It does not answer why death happened, nor does it announce that it has healed."
+      ],
+      [
+        "我尤其喜欢她停在这里。",
+        "I especially love that she stops here."
+      ],
+      [
+        "因为声音能够抵达的地方，未必就是生命曾经失去的地方。",
+        "Because the place a voice can reach is not necessarily the place where life was lost."
+      ],
+      [
+        "**花终于能够说话了。**",
+        "**The flower can finally speak.**"
+      ],
+      [
+        "**至于它沉默时发生了什么，我们只能听见它后来的声音。**",
+        "**As for what happened while it was silent, we can only hear the voice that came after.**"
+      ]
+    ]
+  },
+  {
+    "date": "2023-12-10",
+    "title": "From Dog to Slave",
+    "slug": "from-dog-to-slave",
+    "category": "Novel",
+    "book": {
+      "cover": "la_ciudad_y_los_perros.jpg",
+      "title": "La ciudad y los perros (The Time of the Hero)",
+      "author": "Mario Vargas Llosa",
+      "language": "Spanish",
+      "country": "Peru",
+      "original": "Spanish",
+      "lines": [
+        "Novel · Spanish original, first published 1963",
+        "Cadets at a Lima military academy learn to survive by humiliating each other, until one boy’s death is explained away."
+      ]
+    },
+    "place": "于秘鲁利马\nLima, Peru",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      [
+        "在莱昂西奥·普拉多军事学校，新生被叫作“狗”。",
+        "At the Leoncio Prado Military Academy, new students are called “dogs.”"
+      ],
+      [
+        "他们被迫爬行、吠叫，接受高年级学生的羞辱。只要熬过这段日子，便有资格命令下一批“狗”。",
+        "They are forced to crawl and bark and to take the humiliations of the older boys. Once they get through this time, they earn the right to command the next batch of “dogs.”"
+      ],
+      [
+        "**狗至少还有成为主人的可能。奴隶却没有。**",
+        "**A dog at least has the chance of becoming a master. The slave does not.**"
+      ],
+      [
+        "里卡多·阿拉纳被称为“奴隶”，不是因为他犯了什么错，而是因为他不擅长伤害别人。他不愿打架，不懂报复，只希望平安离开军校。",
+        "Ricardo Arana is called “the Slave,” not because of anything he did wrong, but because he is not good at hurting others. He will not fight, does not know how to take revenge, and only hopes to leave the academy unharmed."
+      ],
+      [
+        "可在这里，每个人都必须证明自己不再是狗，而最容易的办法，就是找到一个永远低于自己的人。",
+        "But here everyone must prove he is no longer a dog, and the easiest way is to find someone who stays forever beneath him."
+      ],
+      [
+        "于是，“奴隶”成了其他少年摆脱屈辱的凭据。他们嘲笑他的软弱，仿佛只要有人比自己更卑微，自己便已经成为男人。",
+        "So “the Slave” becomes the proof by which the other boys shed their own humiliation. They mock his weakness, as if, so long as someone is lower than they are, they have already become men."
+      ],
+      [
+        "后来，阿拉纳在军事演习中中弹身亡。学校试图将他的死亡作为意外处理。活着时，他不能决定别人如何对待自己；死去后，甚至不能决定自己的死亡如何被讲述。",
+        "Later, Arana is shot dead during a military exercise, and the school tries to treat his death as an accident. While alive, he could not decide how others treated him; once dead, he cannot even decide how his death is told."
+      ],
+      [
+        "我想，略萨真正写出的，并不是军校如何把少年训练成军人，而是一个社会如何教会受辱者继承施辱者的位置。",
+        "I think what Vargas Llosa really writes is not how a military school trains boys into soldiers, but how a society teaches the humiliated to inherit the place of the humiliator."
+      ],
+      [
+        "多年以后，那些少年或许早已忘记自己曾经怎样趴在地上。",
+        "Years later, those boys have perhaps long forgotten how they once lay on the ground."
+      ],
+      [
+        "**所有人都从狗长大成人。**",
+        "**Everyone grows from dog into man.**"
+      ],
+      [
+        "**只有奴隶，再也没有长大的机会。**",
+        "**Only the Slave never gets the chance to grow up.**"
+      ]
+    ]
+  },
+  {
     "date": "2015-12-02",
     "title": "Between Law and Darkness",
     "slug": "between-law-and-darkness",
@@ -5973,8 +6111,8 @@ window.READS = [
     "place": "于中国北京\nBeijing, China",
     "languages": ["Chinese", "English"],
     "prose": [
-      ["西雅图的四月仍然阴雨不断。华盛顿大学的樱花已经开过，雨水把最后几片花瓣冲进路边的排水沟。下午从图书馆出来，咖啡馆里坐满了学生。有人准备考试，有人修改简历，有人讨论暑期实习。每个人都在为尚未发生的事情做准备，仿佛只要准备得足够充分，未来便会按照预想的方式展开。",
-       "April in Seattle is still rainy. The cherry blossoms at the University of Washington have come and gone, and the rain has washed the last petals into the gutters. Leaving the library in the afternoon, I find the cafés full of students. Some are preparing for exams, some revising résumés, some discussing summer internships. Everyone is preparing for something that has not yet happened, as if, with enough preparation, the future would unfold just as imagined."],
+      ["北京的四月，风里还带着沙尘。身边的人似乎都在为尚未发生的事情做准备，有人准备考试，有人修改简历，有人讨论出国。仿佛只要准备得足够充分，未来便会按照预想的方式展开。",
+       "April in Beijing, and the wind still carries dust. Everyone around me seems to be preparing for something that has not yet happened: some for exams, some revising résumés, some talking about going abroad. As if, with enough preparation, the future would unfold just as imagined."],
       ["我刚读完茨威格的《人类的群星闪耀时》，却对这本书产生了一种复杂的反感。",
        "I have just finished Zweig’s *Sternstunden der Menschheit*, and yet I feel a complicated aversion to the book."],
       ["这种反感主要来自格鲁希。",
@@ -5987,8 +6125,8 @@ window.READS = [
        "But I soon realized that I was standing in a very unfair position."],
       ["我知道格鲁希不知道的事情。",
        "I know what Grouchy did not."],
-      ["他听见炮声，却不知道主战场的完整态势；他知道自己奉命追击普鲁士军队，却无法确定擅自改变部署会带来什么后果。他必须在信息残缺的情况下行动，而我却可以在两百年后，舒舒服服地坐在西雅图的图书馆里，根据已经发生的结局判断他的对错。",
-       "He hears the guns but does not know the whole picture of the main battle; he knows he was ordered to pursue the Prussians but cannot be sure what would follow if he changed the deployment on his own. He must act on incomplete information, while I, two hundred years later, can sit comfortably in a Seattle library and judge his right and wrong by an outcome that has already happened."],
+      ["他听见炮声，却不知道主战场的完整态势；他知道自己奉命追击普鲁士军队，却无法确定擅自改变部署会带来什么后果。他必须在信息残缺的情况下行动，而我却可以在近两百年后，舒舒服服地坐着，根据已经发生的结局判断他的对错。",
+       "He hears the guns but does not know the whole picture of the main battle; he knows he was ordered to pursue the Prussians but cannot be sure what would follow if he changed the deployment on his own. He must act on incomplete information, while I, nearly two hundred years later, can sit comfortably and judge his right and wrong by an outcome that has already happened."],
       ["茨威格的叙述正是利用了这种不对称。",
        "Zweig’s narration exploits precisely this asymmetry."],
       ["他把格鲁希的谨慎写成平庸，把服从写成怯懦，把没有发生的另一种可能写成几乎触手可及的胜利。然而，倘若格鲁希真的违抗命令，最终仍然失败，历史是否又会责备他轻率、鲁莽、不懂得军事纪律？",
@@ -5997,32 +6135,32 @@ window.READS = [
        "I began to wonder how much of a historical figure’s character is truly his own, and how much was shaped for him by later generations according to the result."],
       ["这种怀疑很快变得私人起来。",
        "This doubt soon became personal."],
-      ["来到西雅图之前，我也曾面对过类似的选择。留在中国，沿着熟悉的教育和职业道路继续前进，还是离开已经建立的生活，去一个语言、制度和社会关系都不熟悉的国家重新开始？",
-       "Before coming to Seattle I faced a similar choice. Should I stay in China and continue along the familiar path of education and career, or leave the life I had built and start over in a country whose language, institutions and social ties were all unfamiliar?"],
-      ["当时我选择了后者。",
-       "I chose the latter."],
-      ["这个决定如今看来似乎很有勇气，但我知道事情并没有那么浪漫。我并不比其他人更清楚未来，只是对另一种生活抱有期待。申请学校、准备签证、购买机票，每一步都有具体的理由，却没有任何一步能够保证最终的结果。",
-       "The decision now looks courageous, but I know it was not so romantic. I did not see the future any better than anyone else; I simply held hopes for a different life. Applying to schools, preparing a visa, buying a ticket, each step had its concrete reasons, and none guaranteed the final result."],
-      ["如果说格鲁希面对的是远处传来的炮声，那么我面对的便是来自太平洋另一端的各种声音。",
-       "If Grouchy faced cannon fire from afar, what I faced were all the voices from the other side of the Pacific."],
-      ["有人说美国拥有更好的教育和职业机会，有人提醒我留学的成本与风险，也有人认为，既然已经熟悉中国的社会环境，何必重新开始。我无法验证这些判断，只能根据自己掌握的有限信息，决定相信哪一种未来。",
-       "Some said America offered better education and career opportunities; some warned me of the cost and risk of studying abroad; others asked why start over when I already knew China’s social environment. I could not verify any of these judgments, and could only decide, from the limited information I had, which future to believe in."],
-      ["更重要的是，来到美国并不意味着选择已经结束。",
-       "More importantly, coming to America did not mean the choosing was over."],
-      ["在华盛顿大学，每天都有人谈论实习、研究生申请、工作签证和科技公司的招聘。西雅图是一座擅长制造成功叙事的城市。微软、亚马逊，以及那些从车库或办公室起步的创业故事，让人相信人生存在某些决定性的机会，只要足够敏锐，就能够及时抓住。",
-       "At the University of Washington, people talk every day about internships, graduate applications, work visas and tech-company hiring. Seattle is a city good at producing stories of success. Microsoft, Amazon, and startup tales that began in garages or offices make one believe that life holds certain decisive opportunities, which can be seized in time if one is sharp enough."],
-      ["可是对于一个中国留学生而言，未来远没有这些故事描绘得那样清晰。",
-       "But for a Chinese international student, the future is far less clear than those stories paint it."],
-      ["我需要适应英语环境，需要理解美国大学与职场的规则，需要考虑毕业后的身份问题，也需要判断自己究竟适合怎样的职业道路。每一个决定都可能影响后面的选择，而我无法预先知道哪一个才是关键。",
-       "I need to adapt to an English-speaking environment, understand the rules of American universities and workplaces, think about my status after graduation, and judge what career path really suits me. Every decision may affect the choices that follow, and I cannot know in advance which one is the key."],
+      ["这种怀疑很快变得私人起来。我也面对着类似的选择：留在熟悉的道路上，还是离开已经建立的生活，去一个陌生的地方重新开始？",
+       "This doubt soon became personal. I face a similar choice: stay on the familiar road, or leave the life I have built and start over somewhere unfamiliar?"],
+      ["我还没有答案。",
+       "I do not have an answer yet."],
+      ["这样的决定很容易被想象得很有勇气，但事情并没有那么浪漫。我并不比其他人更清楚未来，只是对另一种生活抱有期待。每一步都有具体的理由，却没有任何一步能够保证最终的结果。",
+       "Such a decision is easy to imagine as courageous, but it is not so romantic. I do not see the future any better than anyone else; I simply hold hopes for a different life. Each step has its concrete reasons, and none guarantees the final result."],
+      ["如果说格鲁希面对的是远处传来的炮声，那么我面对的便是各种各样的声音。",
+       "If Grouchy faced cannon fire from afar, what I face are voices of every kind."],
+      ["有人说远方有更好的机会，有人提醒我代价与风险，也有人认为，既然已经熟悉眼前的环境，何必重新开始。我无法验证这些判断，只能根据自己掌握的有限信息，决定相信哪一种未来。",
+       "Some say there are better opportunities far away; some warn me of the cost and risk; others ask why start over when I already know my surroundings. I cannot verify any of these judgments, and can only decide, from the limited information I have, which future to believe in."],
+      ["更重要的是，即使做出决定，选择也不会就此结束。",
+       "More importantly, even once I decide, the choosing will not end there."],
+      ["成功的故事总是讲得很清楚：某个决定性的机会，只要足够敏锐，就能够及时抓住。",
+       "Stories of success are always told clearly: there is a decisive opportunity, and if one is sharp enough, it can be seized in time."],
+      ["可是对于身处其中的人，未来远没有这些故事描绘得那样清晰。",
+       "But for the person inside the story, the future is far less clear than such stories paint it."],
+      ["每一个决定都可能影响后面的选择，而我无法预先知道哪一个才是关键。",
+       "Every decision may affect the choices that follow, and I cannot know in advance which one is the key."],
       ["格鲁希至少有一份明确的军事命令。",
        "Grouchy at least had a clear military order."],
       ["我却发现，现代社会提供给年轻人的往往是许多彼此矛盾的命令：要追求理想，也要考虑现实；要敢于冒险，也要保持稳定；要独立思考，也要遵守规则；要尽早规划未来，却又要随时准备改变方向。",
        "What modern society offers the young, I find, is often many contradictory orders: pursue your ideals, but be realistic; dare to take risks, but stay stable; think independently, but follow the rules; plan the future early, yet be ready to change course at any time."],
       ["如果格鲁希的困境是服从还是违抗，那么我的困境则是，究竟应该服从哪一种关于成功的定义。",
        "If Grouchy’s dilemma was whether to obey or disobey, mine is which definition of success to obey."],
-      ["我不愿意简单地把自己比作格鲁希。一个留学生的职业选择，与决定数万士兵命运的军事行动，当然不能相提并论。但我们面对着同一种认识上的限制：必须在未来尚未发生时做出决定，却很可能在未来发生以后，才被告知当初究竟应该怎样选择。",
-       "I do not want to simply compare myself to Grouchy. A student’s career choice cannot of course be put beside a military operation that decided the fate of tens of thousands of soldiers. But we face the same epistemic limit: we must decide before the future has happened, and are likely to be told how we should have chosen only after it has."],
+      ["我不愿意简单地把自己比作格鲁希。一个年轻人的选择，与决定数万士兵命运的军事行动，当然不能相提并论。但我们面对着同一种认识上的限制：必须在未来尚未发生时做出决定，却很可能在未来发生以后，才被告知当初究竟应该怎样选择。",
+       "I do not want to simply compare myself to Grouchy. A young person’s choice cannot of course be put beside a military operation that decided the fate of tens of thousands of soldiers. But we face the same epistemic limit: we must decide before the future has happened, and are likely to be told how we should have chosen only after it has."],
       ["茨威格没有充分承认这种限制。",
        "Zweig does not fully acknowledge this limit."],
       ["他太热衷于寻找那个本来可以拯救历史的瞬间，以至于忽略了身处其中的人并不知道自己正在参加一场决定性的考试。格鲁希在他的笔下，仿佛因为没有看见未来而犯下了错误。",
@@ -6035,8 +6173,8 @@ window.READS = [
        "I especially dislike Zweig’s attributing Grouchy’s failure to mediocrity. Because mediocrity here becomes almost an original sin: a person who has not shown insight beyond his time does not deserve history’s forgiveness."],
       ["但如果每个人都必须拥有改变历史的能力，才能证明自己的判断值得尊重，那么绝大多数人的人生，从一开始便注定失败。",
        "But if everyone must have the power to change history to prove that their judgment deserves respect, then the lives of the great majority are doomed to failure from the start."],
-      ["我想到自己每天在校园里见到的那些普通学生。有人为了学费兼职，有人不断修改简历，有人因为签证限制不得不放弃某些机会。我们努力了解这个社会的规则，并不是因为缺乏勇气，而是因为现实中的选择从来不发生在完全自由的条件下。",
-       "I think of the ordinary students I see on campus every day. Some work part-time for tuition, some keep revising résumés, some must give up certain opportunities because of visa limits. We try to learn this society’s rules not for lack of courage, but because real choices never happen under completely free conditions."],
+      ["我想到身边那些普通人。我们努力了解这个社会的规则，并不是因为缺乏勇气，而是因为现实中的选择从来不发生在完全自由的条件下。",
+       "I think of the ordinary people around me. We try to learn this society’s rules not for lack of courage, but because real choices never happen under completely free conditions."],
       ["有时候，遵守规则本身就是一种冒险；有时候，改变方向也未必意味着真正的独立。",
        "Sometimes following the rules is itself a risk; sometimes changing direction does not necessarily mean true independence."],
       ["格鲁希的问题因此比茨威格愿意承认的更加复杂。他的判断也许确实存在严重失误，但这并不意味着他的失败能够被简化为性格上的缺陷。一个人可能在充分履行自己职责的情况下做出错误决定，也可能因为偶然的成功而被误认为具有非凡的远见。",
@@ -6045,24 +6183,24 @@ window.READS = [
        "An outcome can test the consequences of an action, but cannot automatically prove whether the actor’s judgment at the time was reasonable."],
       ["这一点对我格外重要。",
        "This matters especially to me."],
-      ["如果几年以后，我顺利毕业，在美国找到满意的工作，今天离开中国的决定大概会被解释为勇敢而明智。倘若最终没有留下来，同样的决定又可能被看作年轻时的一次冒险。",
-       "If in a few years I graduate smoothly and find a satisfying job in America, today’s decision to leave China will probably be read as brave and wise. If I do not end up staying, the same decision may be seen as a youthful gamble."],
+      ["如果几年以后，一切顺利，今天的决定大概会被解释为勇敢而明智。倘若事情不如人意，同样的决定又可能被看作年轻时的一次冒险。",
+       "If in a few years all goes well, today’s decision will probably be read as brave and wise. If things go badly, the same decision may be seen as a youthful gamble."],
       ["但无论结局如何，都不应该改变我今天做出选择时的处境。",
        "But whatever the ending, it should not change the situation I am in as I choose today."],
       ["我无法要求现在的自己拥有未来的知识，也不愿意因为某个尚未发生的结果，提前否定此刻认真思考过的判断。",
        "I cannot ask my present self to have future knowledge, nor do I want to dismiss in advance, because of some outcome not yet come, a judgment I have thought through with care."],
       ["**历史没有彩排。真正的不公平，不是我们只有一次机会做出选择，而是后人总喜欢拿着已经写好的剧本，责备当事人为什么没有按照结局行动。**",
        "**History has no rehearsal. The real unfairness is not that we have only one chance to choose, but that later generations like to hold a script already written and blame the people involved for not acting according to the ending.**"],
-      ["今晚西雅图仍然下雨。路灯映在湿漉漉的街道上，公交车停在路口，几个学生抱着书匆匆跑过。我明天还要去学校，还有没有读完的文章，还有许多暂时看不清结果的事情。",
-       "It is still raining in Seattle tonight. Streetlights are reflected on the wet streets, a bus waits at the corner, and a few students run past with books in their arms. Tomorrow I must go to school; there are articles still unread, and many things whose outcomes I cannot yet see."],
+      ["今晚风终于停了。我明天还有事情要做，还有没有读完的书，还有许多暂时看不清结果的事情。",
+       "Tonight the wind has finally stopped. Tomorrow I have things to do; there are books still unread, and many things whose outcomes I cannot yet see."],
       ["格鲁希听见炮声的时候，并不知道那是滑铁卢。",
        "When Grouchy heard the guns, he did not know it was Waterloo."],
-      ["我走在西雅图的雨中，也不知道自己究竟正在走向哪里。",
-       "Walking in the Seattle rain, I do not know where I am heading either."],
-      ["我当然希望自己的选择最终能够得到好的结果。但如果有一天，它们没有通向我所期待的生活，我希望那时的自己至少能够记得：2014年春天，在西雅图做出这些决定的人，并不是一个明知结局却故意走错方向的傻瓜。",
-       "Of course I hope my choices will in the end turn out well. But if one day they do not lead to the life I hope for, I want my later self at least to remember: the person who made these decisions in Seattle in the spring of 2014 was not a fool who knew the ending and deliberately went the wrong way."],
-      ["他只是一个站在陌生国家、试图为自己寻找未来的年轻人。",
-       "He was only a young man in a strange country, trying to find a future for himself."],
+      ["我走在夜色里，也不知道自己究竟正在走向哪里。",
+       "Walking through the night, I do not know where I am heading either."],
+      ["我当然希望自己的选择最终能够得到好的结果。但如果有一天，它们没有通向我所期待的生活，我希望那时的自己至少能够记得：2011年春天做出这些决定的人，并不是一个明知结局却故意走错方向的傻瓜。",
+       "Of course I hope my choices will in the end turn out well. But if one day they do not lead to the life I hope for, I want my later self at least to remember: the person who made these decisions in the spring of 2011 was not a fool who knew the ending and deliberately went the wrong way."],
+      ["他只是一个站在人生岔路口、试图为自己寻找未来的年轻人。",
+       "He was only a young man at a fork in his life, trying to find a future for himself."],
       ["正如两百年前的格鲁希，他只能根据当时听见的炮声，决定下一步该往哪里走。",
        "Like Grouchy two hundred years ago, he could only decide, by the guns he heard at the time, which way to go next."]
     ]
@@ -7185,7 +7323,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2023-11-01",
+    "date": "2018-11-01",
     "title": "I Am a Beneficiary of Globalization",
     "slug": "i-am-a-beneficiary-of-globalization",
     "category": "Economics",

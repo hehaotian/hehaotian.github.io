@@ -29,6 +29,11 @@ window.RELATED = [
   ["n:Tokyo Nocturne", "n:Unwinding Light", "n:Folding Back", "n:Above the Clouds"],
   ["n:The Back of the Queue", "n:Mountain, Sea, Sun", "n:Still Warm"],
   ["n:Grip", "n:Taipei Station", "n:Balcony in Nice", "r:That Night, He Did Not Go Upstairs", "r:A Cholera That Lasted Fifty-Three Years"],
+  // ---- new Reads: the same author, the same question
+  ["r:Between Law and Darkness", "r:An Autobiography Without a Straight Road", "r:What Can Literature Say for Someone History Has Killed?", "r:Why Didn’t Odysseus Recognize His Own Home at Once?", "r:Luck Is Not Fate"],
+  ["r:Silence Cannot Bear Witness", "r:Between Law and Darkness", "r:What Can Literature Say for Someone History Has Killed?", "r:The Voices History Cannot Absorb", "r:Rebellion and Freedom"],
+  ["r:From Dog to Slave", "r:Normal as Violence", "r:The Complicity of the Clear-Sighted", "r:Who Decides Who Is Fully Human?", "r:I Stopped at the Year My Father Left"],
+  ["r:History Has No Rehearsal", "r:What the Passport Taught Zweig", "r:Luck Is Not Fate", "r:Personal Effort Cannot Explain Fate", "r:Who Pays for Prudence?"],
   // ---- looser ties: the same journey in a year
   ["n:Fate and Plasticity", "n:Zabbaleen", "n:Balcony in Nice", "n:The Other End"],
   ["n:Yeosu", "n:Between Two Summers", "n:See You, Seoul", "n:사랑하는 당신에게", "r:Stillness"],

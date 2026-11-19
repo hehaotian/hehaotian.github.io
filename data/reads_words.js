@@ -115,4 +115,6 @@ window.READ_WORDS = {
   "grapes_of_wrath.jpg": { words: 178787, kind: "catalog", source: "https://readingrate.com/books/the-grapes-of-wrath" },
   "kyoto_hayashiya.jpg": { words: 60000, kind: "fallback" },
   "13305951.jpg": { words: 8000, kind: "fallback" },
+  "la_ciudad_y_los_perros.jpg": { words: 105000, kind: "fallback" },
+  "9780241526088-jacket-large.jpg": { words: 90000, kind: "fallback" },
 };
