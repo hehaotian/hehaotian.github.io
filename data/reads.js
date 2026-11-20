@@ -6,6 +6,57 @@
 // noPost: true is a book with no review: it shows on the Reads wall (cover, title, author, no link) and counts in the words-per-year chart, the map and the genre cards, but has no pop-up and is left out of Writings, Related and Older / Newer. It needs only date, category and book { cover, title, author, country, ... } (no prose); put its word count in data/reads_words.js under the cover file name.
 window.READS = [
   {
+    "date": "2026-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "democracy_didion.jpg",
+      "title": "Democracy",
+      "author": "Joan Didion",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1984",
+        "Inez Victor, her politician husband and the Pacific, from Honolulu to the fall of Saigon."
+      ]
+    }
+  },
+  {
+    "date": "2026-01-01",
+    "category": "Essays",
+    "noPost": true,
+    "book": {
+      "cover": "let_me_tell_you_what_i_mean.jpg",
+      "title": "Let Me Tell You What I Mean",
+      "author": "Joan Didion",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Essays · English original, published 2021",
+        "Twelve early essays, from 1968 to 2000, on writing, politics and California."
+      ]
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "category": "Biography",
+    "noPost": true,
+    "book": {
+      "cover": "world_according_to_joan_didion.jpg",
+      "title": "The World According to Joan Didion",
+      "author": "Evelyn McDonnell",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Biography · English original, published 2023",
+        "A critical biography of Didion, reading her life through her work and her time."
+      ]
+    }
+  },
+  {
     "date": "2022-01-01",
     "category": "Essays",
     "noPost": true,
@@ -23,9 +74,10 @@ window.READS = [
     }
   },
   {
-    "date": "2026-01-01",
+    "date": "2026-11-20",
+    "title": "The Missing File of Elena McMahon",
+    "slug": "the-missing-file-of-elena-mcmahon",
     "category": "Novel",
-    "noPost": true,
     "book": {
       "cover": "the_last_thing_he_wanted.jpg",
       "title": "The Last Thing He Wanted",
@@ -37,12 +89,91 @@ window.READS = [
         "Novel · English original, first published 1996",
         "A reporter drawn into an arms deal in Central America during the 1980s."
       ]
-    }
+    },
+    "place": "于加利福尼亚州尔湾\nIrvine, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["档案编号：不详\n姓　　名：Elena McMahon\n职　　业：记者\n最后确认身份：存疑\n案件性质：无法归类",
+       "File number: unknown\nName: Elena McMahon\nOccupation: reporter\nLast confirmed identity: in doubt\nNature of case: unclassifiable", "file"],
+      ["一、关于她是谁",
+       "I. On Who She Is", "h"],
+      ["根据现有资料，埃琳娜·麦克马洪曾经是一名记者。",
+       "According to the available material, Elena McMahon was once a reporter."],
+      ["这意味着她受过某种训练：不轻易相信别人提供的解释，尽可能找到第二个消息来源，将亲眼所见与他人转述区分开来。她知道一份文件可能撒谎，一张照片可能被误读，一名政府官员可能只说出事实中对自己有利的部分。",
+       "That means she had a certain training: not to accept an explanation just because someone offered it, to find a second source whenever possible, to tell what she had seen herself from what others reported. She knew a document could lie, a photograph could be misread, and a government official might state only the part of the facts that served him."],
+      ["后来，她替父亲完成了一桩军火交易。",
+       "Later, she carried out an arms deal for her father."],
+      ["从这一刻起，她掌握的职业知识开始失效。她不再是调查交易的人，而是交易的一部分。她所做的每一件事，都可能被另一个调查者重新排列，成为证明某种结论的材料。",
+       "From that moment, the professional knowledge she held began to fail her. She was no longer the person investigating the deal but a part of it. Everything she did could be rearranged by another investigator into material for proving some conclusion."],
+      ["她曾经负责核实别人的身份。\n现在，别人负责核实她的身份。",
+       "She used to be the one who verified other people’s identities.\nNow others are verifying hers."],
+      ["二、关于她为什么在那里",
+       "II. On Why She Was There", "h"],
+      ["可能的解释如下：\nA. 她参与了某项秘密行动。\nB. 她知道某项秘密行动。\nC. 她受父亲委托，完成一件自己并不完全理解的事情。\nD. 以上解释都可以成立，取决于谁负责撰写报告。",
+       "Possible explanations are as follows:\nA. She took part in a secret operation.\nB. She knew of a secret operation.\nC. She was asked by her father to do something she did not fully understand.\nD. All of the above may hold, depending on who writes the report."],
+      ["调查人员倾向于寻找动机，因为动机能够把分散的行为连接起来，使一个人看上去前后一致。",
+       "Investigators tend to look for motives, because a motive connects scattered acts and makes a person look consistent from start to finish."],
+      ["但人并不总是按照一种可以被归档的动机生活。",
+       "But people do not always live according to a motive that can be filed."],
+      ["一个女儿可能因为父亲衰老而答应一件荒唐的事，因为一时的责任感登上飞机，因为不愿让某个人失望而越过自己原本不会越过的界线。她未必在任何一个时刻决定成为阴谋的一部分。",
+       "A daughter may agree to something absurd because her father is growing old, board a plane out of a passing sense of duty, cross a line she would not otherwise cross because she does not want to let someone down. She need not have decided, at any single moment, to become part of a conspiracy."],
+      ["可是，当这些动作被放进同一份档案，它们便开始呈现出阴谋的形状。\n**人是在时间里犹豫着行动的，档案却总在事后把犹豫整理成意图。**",
+       "But once these actions are placed in the same file, they begin to take the shape of a conspiracy.\n**People act hesitantly, in time; a file always arranges the hesitation into intention after the fact.**"],
+      ["三、关于证据",
+       "III. On Evidence", "h"],
+      ["已知她旅行过。\n已知她接触过某些人。\n已知某些物品经过她的手。",
+       "Known: she traveled.\nKnown: she came into contact with certain people.\nKnown: certain objects passed through her hands."],
+      ["这些事实可以核实，却不足以说明她是谁。",
+       "These facts can be verified, but they do not suffice to say who she is."],
+      ["然而，一份报告并不需要解释一个人的全部生活。它只需要从生活中选出足够多的事实，让某种结论显得可信。",
+       "A report, however, does not need to explain a person’s whole life. It only needs to select enough facts from that life to make a certain conclusion look credible."],
+      ["这正是证据最令人不安的地方。\n证据可以是真的。\n结论也可以是错的。\n两者之间甚至不需要出现一句谎言。",
+       "This is exactly what is most unsettling about evidence.\nThe evidence can be true.\nThe conclusion can still be wrong.\nNot a single lie need appear between the two."],
+      ["四、关于父亲",
+       "IV. On the Father", "h"],
+      ["本档案无法解释，为什么一名经验丰富的记者会替父亲完成一桩危险的军火交易。也许应该另立一份档案，调查父亲的生意、关系与政治背景。",
+       "This file cannot explain why an experienced reporter would carry out a dangerous arms deal for her father. Perhaps another file should be opened, to investigate the father’s business, connections and political background."],
+      ["但仍然会遗漏一件事：她是他的女儿。",
+       "But one thing would still be left out: she is his daughter."],
+      ["这种关系很难被转化成可靠的政治动机。它没有明确的交易条件，也未必符合利益计算。一个人可以不再相信父亲的判断，却仍然无法拒绝父亲最后一次请求。",
+       "This relationship is hard to turn into a reliable political motive. It has no explicit terms of exchange and does not necessarily fit a calculation of interest. A person can stop trusting her father’s judgment and still be unable to refuse his last request."],
+      ["她替父亲完成的，究竟是一笔交易，还是一种迟迟无法结束的亲子义务？\n档案无法回答。\n它只能记录交易发生了。",
+       "What she carried out for her father: was it a deal, or a filial obligation that would not end?\nThe file cannot answer.\nIt can only record that the deal took place."],
+      ["五、关于历史背景",
+       "V. On the Historical Background", "h"],
+      ["地点：中美洲。\n时间：冷战。\n涉及事项：军火、情报、政治干预，以及若干无法确认的中间人。",
+       "Place: Central America.\nTime: the Cold War.\nMatters involved: arms, intelligence, political intervention, and several intermediaries who cannot be confirmed."],
+      ["在这样的历史中，真正拥有决定权的人往往不必亲自出现。他们留下政策、命令、预算和经过修饰的措辞。相反，那些并不掌握全局的人，却可能因为一次旅行、一次签字、一件随身携带的物品，而成为事件中最清晰可辨的面孔。",
+       "In a history like this, those who truly hold the power to decide often need not appear in person. They leave policies, orders, budgets and carefully polished wording. By contrast, people who never held the whole picture may, because of a trip, a signature, an object carried on their person, become the most clearly identifiable faces in the event."],
+      ["历史并不平均地保存所有人的痕迹。\n它有时让决策者成为背景，让执行者成为证据。\n埃琳娜恰好站在这个颠倒的位置上。",
+       "History does not preserve everyone’s traces equally.\nSometimes it makes the decision-makers the background and the executors the evidence.\nElena happened to stand in exactly this inverted position."],
+      ["六、关于叙述者",
+       "VI. On the Narrator", "h"],
+      ["琼·狄迪恩并没有提供一份能够最终澄清案件的报告。她不断补充信息，修正叙述，暴露消息来源的局限，仿佛也在调查一件自己无法完全掌握的事情。",
+       "Joan Didion does not provide a report that finally clears up the case. She keeps adding information, revising the account, exposing the limits of her sources, as if she too were investigating something she could not fully grasp."],
+      ["读者习惯于等待最后的解释：究竟是谁策划了一切？谁在撒谎？埃琳娜到底知道多少？但这些问题预设了一个前提：只要掌握足够多的材料，便能够还原一个人的命运。",
+       "Readers are used to waiting for the final explanation: who planned it all? Who is lying? How much did Elena really know? But these questions presuppose that if one holds enough material, one can reconstruct a person’s fate."],
+      ["狄迪恩似乎并不相信这个前提。我想，这也是为什么她的小说读起来不像一场等待揭晓的悬疑，而像一份始终无法结案的调查。\n调查者越接近事实，越发现事实本身并不保证理解。",
+       "Didion does not seem to believe this premise. I think that is why her novel reads less like a suspense waiting to be revealed than like an investigation that can never be closed.\nThe closer the investigator gets to the facts, the more she finds that facts alone do not guarantee understanding."],
+      ["七、最终结论",
+       "VII. Final Conclusion", "h"],
+      ["根据现有资料，可以确认埃琳娜·麦克马洪曾经存在，曾经旅行，曾经参与某些交易，并因此卷入一场远远超出她个人意图的政治事件。至于她为什么做出那些决定，她是否充分理解自己的处境，以及她希望别人如何记住自己，现有资料不足以判断。",
+       "On the available material, it can be confirmed that Elena McMahon existed, traveled, took part in certain transactions, and was thereby drawn into a political event far beyond her own intentions. As for why she made those decisions, whether she fully understood her situation, and how she wished to be remembered, the available material is not enough to judge."],
+      ["本档案至此结束。\n但我怀疑，真正应该被调查的并不是埃琳娜。\n而是为什么一个人必须先被整理成某种可以解释的身份，才有资格进入历史。",
+       "This file ends here.\nBut I suspect that what should really be investigated is not Elena.\nIt is why a person must first be arranged into an identity that can be explained before she is qualified to enter history."],
+      ["我们要求死者留下证据，却很少要求掌握证据的人解释自己。\n**埃琳娜失去的最后一样东西，不是生命，也不是清白，而是对自己一生的解释权。**",
+       "We demand that the dead leave evidence, and rarely demand that those who hold the evidence explain themselves.\n**The last thing Elena lost was neither her life nor her innocence but the right to explain her own life.**"],
+      ["档案状态：已归档。\n事实状态：部分确认。\n真相状态：未能恢复。",
+       "File status: archived.\nStatus of facts: partially confirmed.\nStatus of truth: not recovered.", "file"],
+      ["附注：\n如果多年以后，有人重新打开这份档案，他将知道埃琳娜去了哪里，见过谁，做过什么。他可能仍然不知道，她原本只是想替父亲办完一件事。而那或许是整份档案里，最接近她本人的部分。",
+       "Note:\nIf years from now someone reopens this file, he will know where Elena went, whom she met, what she did. He may still not know that she only wanted to finish one errand for her father. And that may be the part of the whole file closest to her.", "file"]
+    ]
   },
   {
-    "date": "2026-01-01",
+    "date": "2026-04-13",
+    "title": "The Gravestone Not Found",
+    "slug": "the-gravestone-not-found",
     "category": "Essays",
-    "noPost": true,
     "book": {
       "cover": "south_and_west.jpg",
       "title": "South and West: From a Notebook",
@@ -54,7 +185,31 @@ window.READS = [
         "Notebook · English original, first published 2017",
         "Didion’s 1970 notes from a road trip through the American South, and a draft of an unwritten piece on California."
       ]
-    }
+    },
+    "place": "于加利福尼亚州米尔谷\nMill Valley, CA",
+    "languages": ["Chinese", "English"],
+    "prose": [
+      ["1970年，琼·狄迪恩来到密西西比州牛津镇，寻找威廉·福克纳的坟墓。她没有找到。",
+       "In 1970, Joan Didion went to Oxford, Mississippi, to look for William Faulkner’s grave. She did not find it."],
+      ["我始终觉得，这个细节比她在南方记录的许多谈话更值得玩味。一个以书写美国南方的过去而闻名的作家，死后竟然无法被另一位作家轻易找到。福克纳在小说里创造了约克纳帕塔法县，让几代人的罪孽、血统与记忆彼此纠缠；而现实中的牛津镇，却没有按照文学史的安排，将他的死亡变成一处清晰可辨的地标。",
+       "I have always found this detail more worth turning over than many of the conversations she recorded in the South. A writer famous for writing the American South’s past could not, after his death, be easily found by another writer. In his novels Faulkner created Yoknapatawpha County, where the sins, bloodlines and memories of generations are tangled together; yet the real Oxford did not follow the arrangements of literary history and turn his death into a clearly marked landmark."],
+      ["墓碑本应是历史最确定的形式。一个名字，两组日期，一块石头。它把漫长而混乱的一生压缩成可以指认的地点，仿佛只要找到了墓碑，便终于能够说：这个人的故事已经结束。但福克纳笔下的人物从来没有这样的幸运。他们继承的并不只是土地和姓氏，还有自己未曾参与的罪行。祖辈犯下的错误不会随着祖辈下葬而消失，反而以家族荣誉、种族秩序和地方传统的名义，继续支配活着的人。**墓碑能够证明一个人已经死去，却不能证明他所代表的历史已经结束。**",
+       "A gravestone should be the most certain form history takes. A name, two dates, a stone. It compresses a long and tangled life into a place you can point to, as if finding the grave allowed us at last to say: this person’s story is over. But Faulkner’s characters were never so lucky. What they inherit is not only land and a family name but crimes they took no part in. The errors of their forefathers do not vanish when the forefathers are buried; in the name of family honor, racial order and local tradition, they go on ruling the living. **A gravestone can prove that a person is dead. It cannot prove that the history he stood for has ended.**"],
+      ["狄迪恩沿着美国南方旅行时，不断遇见这种尚未结束的过去。人们谈论家族、出身、祖先，仿佛一个人的身份早在出生以前便已确定。那些早已消失的社会秩序，仍然通过餐桌上的谈话、人与人之间的礼节，以及某些不必说出口的禁忌维持着自身。然而，我不愿意把这种对过去的执着简单理解为南方人的怀旧。怀旧至少意味着，人们知道自己怀念的东西已经失去。更危险的情况是，某种历史已经成为生活的习惯，以至于人们不再意识到自己仍然生活在它的内部。",
+       "As Didion traveled through the South, she kept meeting this past that had not ended. People talked about family, origins, ancestors, as if a person’s identity had been settled long before birth. Social orders long gone still sustained themselves through talk at the dinner table, through courtesies between people, through certain taboos that need not be spoken. Yet I am unwilling to read this attachment to the past simply as Southern nostalgia. Nostalgia at least implies that people know what they long for has been lost. The more dangerous case is when a history has become a habit of life, so that people no longer realize they are still living inside it."],
+      ["福克纳对此有一种近乎残酷的敏感。他笔下的过去并不是供人追忆的往事，而是一种不断发生的现在。那些死去的人并没有离开，只是换了一种方式继续决定活人的命运。狄迪恩来自加利福尼亚。与南方相比，西部似乎更愿意相信个人可以摆脱出身，重新发明自己。人们向西迁徙，不只是为了寻找土地和机会，也为了获得一种与过去断绝关系的可能。但我逐渐觉得，南方与西部的区别，并不是一个地方被历史束缚，另一个地方真正获得了自由。**南方把过去称为传统，西部把遗忘称为重新开始。**",
+       "Faulkner had an almost cruel sensitivity to this. The past in his work is not something remembered but a present that keeps happening. The dead have not left; they have only found another way to go on deciding the fates of the living. Didion came from California. Compared with the South, the West seems readier to believe that a person can shed where they come from and reinvent themselves. People moved west not only for land and opportunity but for the chance of cutting ties with the past. But I have come to feel that the difference between South and West is not that one place is bound by history while the other has truly gained its freedom. **The South calls the past tradition; the West calls forgetting a fresh start.**"],
+      ["两者都在选择如何讲述历史。南方的家族叙事可以把奴隶制与种族暴力转化成失落的荣耀；西部的开拓叙事则可以把征服、驱逐与占有转化成个人勇气。一个不断纪念自己失去的东西，另一个不断赞美自己获得的东西。被遮蔽的，往往是同一类人。因此，真正值得怀疑的不是记忆与遗忘哪一种更加诚实，而是谁拥有决定什么应当被记住的权力。",
+       "Both are choosing how to tell history. The South’s family narratives can turn slavery and racial violence into lost glory; the West’s story of settlement can turn conquest, expulsion and appropriation into personal courage. One keeps commemorating what it has lost, the other keeps praising what it has gained. The people who get hidden are often the same. So what deserves suspicion is not which of memory and forgetting is the more honest, but who holds the power to decide what ought to be remembered."],
+      ["这也使《南方与西方》的未完成形式显得格外重要。狄迪恩没有把旅途中的见闻整理成一套关于美国的完整理论。她留下的是笔记：未经充分解释的对话，彼此矛盾的印象，突然中断的观察。我喜欢这种不完整。完整的叙述总有一种危险：它使作者获得最后的解释权。一个地方的历史、一群人的生活，最终被压缩成几条可以带走的结论。读者合上书，仿佛也就理解了那个地方。而笔记拒绝给予这种满足。",
+       "This makes the unfinished form of *South and West* especially important. Didion did not arrange what she saw on the road into a complete theory of America. What she left are notes: conversations not fully explained, impressions that contradict one another, observations that break off. I like this incompleteness. A complete account always carries a danger: it gives the author the last word of interpretation. The history of a place and the lives of a people are compressed into a few conclusions that can be carried away. The reader closes the book as if they now understood the place. Notes refuse to grant that satisfaction."],
+      ["它让我们看见，一个敏锐的观察者仍然可能误解自己看见的事物；一个善于描述他人的人，也未必能够准确辨认自己在历史中的位置。狄迪恩后来转向加利福尼亚，原本试图理解帕蒂·赫斯特的故事，却逐渐触及自己熟悉的家族、阶级与社会关系。她终于不得不面对一个问题：如果南方人无法摆脱祖先，那么来自西部的观察者，凭什么相信自己能够站在历史之外？",
+       "They show us that a keen observer can still misread what she sees, and that someone good at describing others may not accurately recognize her own place in history. Didion later turned to California, first trying to understand the story of Patty Hearst, and gradually touching the families, class and social relations she knew best. In the end she had to face a question: if Southerners cannot shake off their ancestors, what makes an observer from the West believe she can stand outside history?"],
+      ["我想起那块始终没有找到的墓碑。起初，它似乎只是旅途中的一次小小失误。后来却越来越像一个提醒：历史并不因为我们找到了它的象征，就变得可以理解；也不因为我们找不到它的遗迹，就真的消失。",
+       "I think of the gravestone that was never found. At first it seemed only a small mishap on the road. Later it came to look more and more like a reminder: history does not become understandable because we have found its symbol, nor does it truly vanish because we cannot find its remains."],
+      ["狄迪恩可以离开牛津镇，继续她的旅行。福克纳仍然埋在那里。而那些他曾经写过、狄迪恩又试图理解的往事，既不在墓碑之下，也不完全留在南方。它们仍然活在那些相信自己已经告别过去的人身上。",
+       "Didion could leave Oxford and continue her journey. Faulkner is still buried there. And the past he wrote about and Didion tried to understand lies neither beneath the gravestone nor wholly in the South. It lives on in those who believe they have said goodbye to it."]
+    ]
   },
   {
     "date": "2022-01-01",
@@ -1695,23 +1850,6 @@ window.READS = [
     "category": "Novel",
     "noPost": true,
     "book": {
-      "cover": "white_castle.jpg",
-      "title": "The White Castle",
-      "author": "Orhan Pamuk",
-      "language": "English",
-      "country": "Turkey",
-      "original": "Turkish",
-      "lines": [
-        "Novel · Turkish original (Beyaz Kale), first published 1985 · English translation",
-        "A Venetian slave and the Ottoman scholar who looks exactly like him."
-      ]
-    }
-  },
-  {
-    "date": "2015-01-01",
-    "category": "Novel",
-    "noPost": true,
-    "book": {
       "cover": "strangeness_in_my_mind.jpg",
       "title": "A Strangeness in My Mind",
       "author": "Orhan Pamuk",
@@ -2197,23 +2335,6 @@ window.READS = [
       "lines": [
         "Essays and conversations · French original (La Vie matérielle), first published 1987",
         "Duras talks about writing, alcohol, housework and her own life."
-      ]
-    }
-  },
-  {
-    "date": "2012-01-01",
-    "category": "Novel",
-    "noPost": true,
-    "book": {
-      "cover": "destroy_she_said.jpg",
-      "title": "Destroy, She Said",
-      "author": "Marguerite Duras",
-      "language": "English",
-      "country": "France",
-      "original": "French",
-      "lines": [
-        "Novel · French original (Détruire dit-elle), first published 1969",
-        "Four guests at a hotel near a forest meet and unsettle one another."
       ]
     }
   },
@@ -4890,7 +5011,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2026-11-18",
+    "date": "2026-11-13",
     "title": "The Unseen Person and the Unseen Homeland",
     "slug": "the-unseen-person-and-the-unseen-homeland",
     "category": "Novel",

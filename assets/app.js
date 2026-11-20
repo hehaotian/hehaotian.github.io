@@ -310,7 +310,7 @@ const notePage = (() => {
     ? n.poem.pairs.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")
     : n.pairStanzas ? n.pairStanzas.map(st => `<div class="pstanza">${st.map(([a, b]) => `<p class="pair">${esc(a)}<em>${esc(b)}</em></p>`).join("")}</div>`).join("")
     : n.stanzas ? n.stanzas.map(st => `<p class="stanza">${st.map(esc).join("<br>")}</p>`).join("")
-    : n.prose ? n.prose.map(([a, b, kind]) => `<div class="prose${kind === "h" ? " phead" : ""}"><p>${rich(a)}</p>${b ? `<p class="en">${rich(b)}</p>` : ""}</div>`).join("")
+    : n.prose ? n.prose.map(([a, b, kind]) => `<div class="prose${kind === "h" ? " phead" : kind === "file" ? " pfile" : ""}"><p>${rich(a).replace(/\n/g, "<br>")}</p>${b ? `<p class="en">${rich(b).replace(/\n/g, "<br>")}</p>` : ""}</div>`).join("")
     : (n.body || []).map(p => `<p>${esc(p)}</p>`).join("");
   // book intro for Book: book: { cover: "file.jpg" (in assets/photos/), title, author, lines: ["detail", ...] }
   const bookHtml = b => !b ? "" : `<div class="book">${b.cover ? `<img class="bcover" src="assets/photos/${esc(b.cover)}" alt="">` : ""}

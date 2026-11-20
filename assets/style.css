@@ -599,3 +599,8 @@ body[data-tab="home"] { --frame: 1040px; }
 .acard .acovs img { height: 52px; width: 35px; object-fit: cover; border: 1px solid var(--line); border-radius: 2px; background: #f1eee7; margin-right: -10px; box-shadow: 1px 0 3px rgba(0,0,0,.12); }
 .acard .an { font-weight: 600; font-size: 14px; line-height: 1.25; min-height: 2.5em; overflow-wrap: anywhere; }
 .acard .ac { color: var(--muted); font-size: 12.5px; }
+
+/* archive-style file blocks (prose kind "file"): a ruled record card in monospace */
+#reader .prose.pfile { padding: 16px 20px; border: 1px solid var(--line); border-left: 3px solid var(--muted); border-radius: 4px; background: rgba(0,0,0,.025); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+#reader .prose.pfile p { margin: 0; font-size: 15px; line-height: 1.9; letter-spacing: .2px; }
+#reader .prose.pfile p.en { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); font-size: 13px; line-height: 1.8; }

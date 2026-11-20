@@ -4,6 +4,9 @@
 // A piece shows up to 3 related ones (RELATED_MAX in assets/app.js): those from the first group it appears in come first, so put tighter groups higher.
 window.RELATED = [
   // ---- newest posts: they come first, so older pieces on the same theme show them
+  ["r:The Gravestone Not Found", "r:When Everyone Thinks They Are Changing the World", "r:When America Is No Longer a Story That Can Be Told"],
+  ["r:The Missing File of Elena McMahon", "r:When Everyone Thinks They Are Changing the World", "r:When the Observer Becomes the Observed"],
+  ["r:The Gravestone Not Found", "r:The Missing File of Elena McMahon"],
   ["r:The Days That Were Not Compressed", "n:Gestalt"],
   ["r:The Days That Were Not Compressed", "r:What Memory Makes of Love", "r:A Lifetime of Making Peace With the Past"],
   ["r:What If Coco Never Remembered?", "r:The One-Inch Gap", "r:When Memory Is No Longer Content to Be Told"],

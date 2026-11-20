@@ -130,7 +130,6 @@ window.READ_WORDS = {
   "blue_eyes_black_hair.jpg": { words: 25000, kind: "fallback" },
   "emily_l.jpg": { words: 28000, kind: "fallback" },
   "practicalities.jpg": { words: 35000, kind: "fallback" },
-  "destroy_she_said.jpg": { words: 20000, kind: "fallback" },
   "ordinary_world.jpg": { words: 1100000, kind: "fallback" },
   "resurrection.jpg": { words: 400000, kind: "fallback" },
   "white_nights.jpg": { words: 60000, kind: "fallback" },
@@ -154,7 +153,6 @@ window.READ_WORDS = {
   "boys_in_the_boat.jpg": { words: 110000, kind: "fallback" },
   "my_name_is_red.jpg": { words: 200000, kind: "fallback" },
   "istanbul_pamuk.jpg": { words: 120000, kind: "fallback" },
-  "white_castle.jpg": { words: 55000, kind: "fallback" },
   "strangeness_in_my_mind.jpg": { words: 220000, kind: "fallback" },
   "silent_house.jpg": { words: 90000, kind: "fallback" },
   "first_four_books_of_poems.jpg": { words: 30000, kind: "fallback" },
@@ -244,4 +242,7 @@ window.READ_WORDS = {
   "the_last_thing_he_wanted.jpg": { words: 75000, kind: "fallback" },
   "south_and_west.jpg": { words: 20000, kind: "fallback" },
   "in_the_margins.jpg": { words: 25000, kind: "fallback" },
+  "democracy_didion.jpg": { words: 60000, kind: "fallback" },
+  "let_me_tell_you_what_i_mean.jpg": { words: 35000, kind: "fallback" },
+  "world_according_to_joan_didion.jpg": { words: 75000, kind: "fallback" },
 };
