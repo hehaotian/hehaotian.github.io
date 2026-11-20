@@ -107,6 +107,12 @@
  "2015/626781338.jpg": {
   "cover": "xianshi_yizhong.jpg"
  },
+ "2015/71LE3DDelpL._AC_UF1000,1000_QL80_.jpg": {
+  "cover": "rituals_nooteboom.jpg"
+ },
+ "2015/71ijt4dOKQL._AC_UF1000,1000_QL80_.jpg": {
+  "cover": "self_portrait_of_an_other.jpg"
+ },
  "2015/919D0AD8tSL._UF1000,1000_QL80_.jpg": {
   "cover": "shelley_selected_poems_and_prose.jpg"
  },
@@ -126,7 +132,8 @@
   "cover": "blood_merchant.jpg"
  },
  "2016/6282753.jpg": {
-  "cover": "museum_of_innocence.jpg"
+  "cover": null,
+  "removed": true
  },
  "2016/71UD0NEpkAL._AC_UF1000,1000_QL80_.jpg": {
   "cover": "ergun_he_youan.jpg"
@@ -278,8 +285,14 @@
  "2022/818l7Ujz5-L._AC_UF1000,1000_QL80_.jpg": {
   "cover": "three_body_problem.jpg"
  },
+ "2022/81cOLhzG0SL._AC_UF1000,1000_QL80_.jpg": {
+  "cover": "venice_nooteboom.jpg"
+ },
  "2022/9780525657743.jpg": {
   "cover": "crying_in_h_mart.jpg"
+ },
+ "2022/Inthemargins.jpg": {
+  "cover": "in_the_margins.jpg"
  },
  "2022/images-2.jpeg": {
   "cover": "anthropocene_reviewed.jpg"
@@ -361,5 +374,14 @@
  },
  "2026/11.jpg.webp": {
   "cover": "taiwan_manyou_lu.jpg"
+ },
+ "2026/9780525434191.jpeg": {
+  "cover": "south_and_west.jpg"
+ },
+ "2026/9780679752851.jpeg": {
+  "cover": "the_last_thing_he_wanted.jpg"
+ },
+ "2026/hbg-title-9781529402582-46.jpg.webp": {
+  "cover": "533_a_book_of_days.jpg"
  }
 }

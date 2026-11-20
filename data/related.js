@@ -3,6 +3,13 @@
 // Name a piece as "n:" + the Writing's title, or "r:" + the Read's title (the review title, not the book's).
 // A piece shows up to 3 related ones (RELATED_MAX in assets/app.js): those from the first group it appears in come first, so put tighter groups higher.
 window.RELATED = [
+  // ---- newest posts: they come first, so older pieces on the same theme show them
+  ["r:The Days That Were Not Compressed", "n:Gestalt"],
+  ["r:The Days That Were Not Compressed", "r:What Memory Makes of Love", "r:A Lifetime of Making Peace With the Past"],
+  ["r:What If Coco Never Remembered?", "r:The One-Inch Gap", "r:When Memory Is No Longer Content to Be Told"],
+  ["r:Taking Kuankuan Away", "r:The Distance of a Melon Seed", "r:The Things I Once Took for Granted"],
+  ["r:The Distance of a Melon Seed", "r:The Complicity of the Clear-Sighted", "r:Who Decides Who Is Fully Human?"],
+  ["r:The Distance of a Melon Seed", "n:Taipei Station", "n:Still Warm"],
   // ---- tight ties: the same trip, the same book, the same question
   ["n:Fate and Plasticity", "n:Zabbaleen"],
   ["n:Steinbeck Country", "r:We All Came to California, but Reached Two Americas", "r:Heirs to the California Dream", "r:When America Is No Longer a Story That Can Be Told", "r:When Everyone Thinks They Are Changing the World", "r:Doubt and Origin", "r:Rebellion and Freedom", "r:When the Observer Becomes the Observed"],

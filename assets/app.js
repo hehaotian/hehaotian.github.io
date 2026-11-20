@@ -466,9 +466,30 @@ const notePage = (() => {
   const wordLabel = w => w ? (w >= 1e6 ? (w / 1e6).toFixed(2).replace(/0$/, "") + "M" : w >= 10000 ? Math.round(w / 1000) + "k" : w.toLocaleString("en-US")) + " words" : "";
   const mapHtml = () => worldMap(Object.fromEntries(countries.map(v => [v, list.filter(b => countriesOf(b).includes(v)).length])), country, "Where the books were first published", 99, 1, Object.fromEntries(countries.map(v => [v, wordLabel(wordsIn(v))])));
   const genreEl = document.getElementById("reads-genres");
-  let genre = "", country = "", year = 0;
+  // every author as a card, most books first (a tie goes to the favorites in data/favorite_authors.js); the row is a strip you slide sideways
+  const authorKey = a => {
+    let t = String(a || "").split(/\s+(?:and|&)\s+|\s*,\s*(?:ed|eds|edited|tr|translator)\b|\s+ed\./i)[0].replace(/\s*·\s*$/, "").trim();
+    const lat = (t.match(/[\p{Script=Latin}][\p{Script=Latin}.'’\- ]*$/u) || [""])[0].trim();
+    t = lat.length > 2 ? lat : t;
+    return (window.AUTHOR_ALIASES || {})[t] || t;
+  };
+  const favDefs = window.FAVORITE_AUTHORS || [], groups = favDefs.map(f => ({ name: f.name, books: [] })), rest = new Map();
+  list.forEach(n => {
+    const au = String((n.book || {}).author || ""), fi = favDefs.findIndex(f => f.match.some(m => au.includes(m)));
+    if (fi >= 0) { groups[fi].books.push(n); return; }
+    const name = authorKey(au), key = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    if (!rest.has(key)) rest.set(key, { name, books: [] }); rest.get(key).books.push(n);
+  });
+  const FAVS = [...groups.filter(g => g.books.length).map((g, i) => ({ ...g, fav: i })), ...[...rest.values()].map(g => ({ ...g, fav: 99 }))].sort((x, y) => y.books.length - x.books.length || x.fav - y.fav || (x.name < y.name ? -1 : 1));   // most books first; on a tie the favorites go first
+  const authorsEl = document.getElementById("reads-authors");
+  let genre = "", country = "", year = 0, author = "";
+  const inAuthor = (n, name) => { const f = FAVS.find(x => x.name === name); return !!f && f.books.includes(n); };
+  const authorCard = f => `<button type="button" class="acard" data-author="${esc(f.name)}" aria-pressed="false"><span class="acovs">${f.books.filter(b => (b.book || {}).cover).slice(0, 3).map(b => `<img ${thumb(b.book.cover)} alt="" loading="lazy" decoding="async">`).join("")}</span><span class="an">${esc(f.name)}</span><span class="ac">${f.books.length} ${f.books.length === 1 ? "book" : "books"}</span></button>`;
+  // drawn once; the row is not animated, you slide it yourself (swipe, trackpad or scrollbar)
+  authorsEl.innerHTML = FAVS.length ? `<div class="au-set">${FAVS.map(f => authorCard(f)).join("")}</div>` : "";
   const render = () => {
-    const shown = list.map((n, i) => [n, i]).filter(([n]) => (!genre || inGenre(n, genre)) && (!country || countriesOf(n).includes(country)) && (!year || +n.date.slice(0, 4) === year));
+    const shown = list.map((n, i) => [n, i]).filter(([n]) => (!author || inAuthor(n, author)) && (!genre || inGenre(n, genre)) && (!country || countriesOf(n).includes(country)) && (!year || +n.date.slice(0, 4) === year));
+    authorsEl.querySelectorAll(".acard").forEach(c => { const on = c.dataset.author === author; c.classList.toggle("on", on); c.setAttribute("aria-pressed", on); });
     listEl.innerHTML = shown.length ? shown.map(([n, i]) => card(n, i)).join("") : `<p class="empty">Nothing yet.</p>`;
     genreEl.innerHTML = [...GENRES.map(g => [g[0], g[1]]), ["more", "More"]].filter(([k]) => list.some(n => inGenre(n, k))).map(([k, l]) =>
       `<button type="button" class="pcard${k === genre ? " on" : ""}" data-genre="${k === genre ? "" : k}" aria-pressed="${k === genre}"><span class="pn">${l}</span><b class="pc">${list.filter(n => inGenre(n, k)).length}</b></button>`).join("");
@@ -477,6 +498,7 @@ const notePage = (() => {
   };
   if (MAP) mapTip(countriesEl, "book");
   countriesEl.addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (b) { country = b.dataset.v; render(); } });
+  authorsEl.addEventListener("click", e => { const b = e.target.closest("button[data-author]"); if (b) { author = b.dataset.author === author ? "" : b.dataset.author; render(); } });
   genreEl.addEventListener("click", e => { const b = e.target.closest("button[data-genre]"); if (b) { genre = b.dataset.genre; render(); } });
   render();
   popups.reads = slug => { const n = list[ids.indexOf(slug)]; return n && !n.noPost ? notePage(n) : undefined; };

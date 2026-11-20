@@ -6,6 +6,149 @@
 // noPost: true is a book with no review: it shows on the Reads wall (cover, title, author, no link) and counts in the words-per-year chart, the map and the genre cards, but has no pop-up and is left out of Writings, Related and Older / Newer. It needs only date, category and book { cover, title, author, country, ... } (no prose); put its word count in data/reads_words.js under the cover file name.
 window.READS = [
   {
+    "date": "2022-01-01",
+    "category": "Essays",
+    "noPost": true,
+    "book": {
+      "cover": "in_the_margins.jpg",
+      "title": "In the Margins: On the Pleasures of Reading and Writing",
+      "author": "Elena Ferrante",
+      "language": "English",
+      "country": "Italy",
+      "original": "Italian",
+      "lines": [
+        "Essays · Italian original (L’invenzione occasionale), first published 2019 · English translation by Ann Goldstein",
+        "Ferrante’s lectures on reading, writing and the women writers who shaped her."
+      ]
+    }
+  },
+  {
+    "date": "2026-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "the_last_thing_he_wanted.jpg",
+      "title": "The Last Thing He Wanted",
+      "author": "Joan Didion",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1996",
+        "A reporter drawn into an arms deal in Central America during the 1980s."
+      ]
+    }
+  },
+  {
+    "date": "2026-01-01",
+    "category": "Essays",
+    "noPost": true,
+    "book": {
+      "cover": "south_and_west.jpg",
+      "title": "South and West: From a Notebook",
+      "author": "Joan Didion",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Notebook · English original, first published 2017",
+        "Didion’s 1970 notes from a road trip through the American South, and a draft of an unwritten piece on California."
+      ]
+    }
+  },
+  {
+    "date": "2022-01-01",
+    "category": "Travel writing",
+    "noPost": true,
+    "book": {
+      "cover": "venice_nooteboom.jpg",
+      "title": "Venice: The Lion, the City and the Water",
+      "author": "Cees Nooteboom",
+      "language": "English",
+      "country": "Netherlands",
+      "original": "Dutch",
+      "lines": [
+        "Travel writing · Dutch original, English translation · photographs by Simone Sassen",
+        "Nooteboom’s portrait of Venice, its history, its art and its light on water."
+      ]
+    }
+  },
+  {
+    "date": "2015-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "rituals_nooteboom.jpg",
+      "title": "Rituals",
+      "author": "Cees Nooteboom",
+      "language": "English",
+      "country": "Netherlands",
+      "original": "Dutch",
+      "lines": [
+        "Novel · Dutch original (Rituelen), first published 1980 · English translation",
+        "Three men in postwar Amsterdam and the rituals each builds against emptiness."
+      ]
+    }
+  },
+  {
+    "date": "2016-01-01",
+    "category": "Poetry",
+    "noPost": true,
+    "book": {
+      "cover": "self_portrait_of_an_other.jpg",
+      "title": "Self-Portrait of an Other",
+      "author": "Cees Nooteboom and Max Neumann",
+      "language": "English",
+      "country": "Netherlands",
+      "original": "Dutch",
+      "lines": [
+        "Prose poems and drawings · Dutch original · English translation by David Colmer",
+        "Short texts by Nooteboom set against Max Neumann’s drawings of faces and figures."
+      ]
+    }
+  },
+  {
+    "date": "2026-07-30",
+    "title": "The Days That Were Not Compressed",
+    "slug": "the-days-that-were-not-compressed",
+    "category": "Memoir",
+    "book": {
+      "cover": "533_a_book_of_days.jpg",
+      "title": "533: A Book of Days",
+      "author": "Cees Nooteboom",
+      "language": "English",
+      "country": "Netherlands",
+      "original": "Dutch",
+      "lines": [
+        "Journal · Dutch original, English translation",
+        "A book of daily entries on memory, time and travel from his later years."
+      ]
+    },
+    "place": "于荷兰鹿特丹\nRotterdam, Netherlands",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      ["诺特博姆说，他要把一头驴子咀嚼胡萝卜的声音带进坟墓。",
+       "Nooteboom says he will take with him to the grave the sound of a donkey chewing a carrot."],
+      ["我曾经认为，人的记忆像一种有损压缩：日期、地点、人物逐渐消失，无数离散的经历，最后只剩下一种难以言说却异常准确的整体感受。我甚至借用机器学习的说法来理解它：模型不必保留每一笔训练数据，也能学到某种结构；人也一样，忘记了经历的细节，却留下了它们塑造的自己。",
+       "I used to think human memory was a kind of lossy compression: dates, places and people fade, and countless separate experiences are left as a single feeling that is hard to put into words but remarkably accurate. I even borrowed the language of machine learning to understand it. A model does not need to keep every piece of training data to learn some structure from it, and people are the same: we forget the details of what happened and keep the selves those details shaped."],
+      ["诺特博姆的驴子让我开始怀疑这个比喻。一个走过世界、读过无数书的人，为什么偏偏记住一头驴子吃胡萝卜的声音？如果记忆真在提取人生的重要特征，这个声音早该被丢弃。它没有改变他的命运，没有带来启示，甚至算不上一件事。可它留下来了。",
+       "Nooteboom’s donkey made me doubt the metaphor. Why would a man who has traveled the world and read countless books remember, of all things, the sound of a donkey eating a carrot? If memory really extracted the important features of a life, this sound would have been discarded long ago. It did not change his fate, it brought no revelation, it is hardly even an event. And yet it stayed."],
+      ["这让我意识到，**记忆与压缩最根本的差别，在于我们并不知道记忆究竟在优化什么。**我们以为它保留重要的东西，但重要是谁决定的？一场战争可以被压缩成历史，一段爱情可以被压缩成遗憾，一座城市可以被压缩成一种气味。经历一旦获得意义，就很容易被收进一个完整的人生叙事。驴子咀嚼胡萝卜的声音却进不去。它没有需要完成的故事，也不象征什么，只是某个傍晚发生过的一件小事。",
+       "It made me see that **the deepest difference between memory and compression is that we do not know what memory is optimizing for.** We assume it keeps what is important, but who decides what is important? A war can be compressed into history, a love into regret, a city into a smell. Once an experience acquires meaning, it is easily taken up into a complete life story. The sound of a donkey chewing a carrot cannot be. It has no story to finish and symbolizes nothing; it is only a small thing that happened one evening."],
+      ["我在 *Gestalt* 里写过，时间回头看总像被压缩成完整的一块，只剩一种味道。我仍然相信这一点，只是开始觉得，那种完整没有想象中那么完整。我们可以记得一座城市带给自己的感觉，却忘了走过的街道；记得一个人如何改变了自己，却忘了他某天说过的话。偶尔，一个毫无道理的声音突然浮现，使这个看似完整的整体裂开一道缝。",
+       "In *Gestalt* I wrote that time, looked at in retrospect, always seems compressed into one whole piece with a single flavor left. I still believe that; I have only begun to feel that the whole is less whole than it seems. We can remember how a city made us feel and forget the streets we walked, remember how a person changed us and forget what he said one day. Now and then a sound with no reason behind it surfaces and opens a crack in the whole that seemed complete."],
+      ["**记忆最接近真实的时刻，也许不是它把人生整理成某种意义，而是它偶尔让一件无法解释的小事，原封不动地留在那里。**",
+       "**Memory may come closest to the truth not when it arranges a life into some meaning, but when it now and then leaves a small, unexplainable thing exactly where it was.**"],
+      ["诺特博姆知道自己终将死去。他带不走梅诺卡岛的傍晚，带不走那头驴子，甚至不能确定自己还能记住多少。但他记得那个声音。",
+       "Nooteboom knows he will die. He cannot take the evenings on Menorca with him, or the donkey, and cannot even be sure how much he will still remember. But he remembers the sound."],
+      ["我不知道多年以后，自己还会不会记得阿姆斯特丹的街道和运河，或那几天究竟想过什么。也许最后只剩一种味道，也许还会剩下一件完全不重要的小事。我现在还不知道是哪一件。",
+       "I do not know whether, years from now, I will still remember Amsterdam’s streets and canals, or what I was thinking in those days. Perhaps only a single flavor will remain, perhaps also one small thing of no importance at all. I do not yet know which."]
+    ]
+  },
+  {
     "date": "2025-01-01",
     "category": "Novel",
     "noPost": true,
@@ -159,9 +302,10 @@ window.READS = [
     }
   },
   {
-    "date": "2026-01-01",
+    "date": "2026-05-19",
+    "title": "The Distance of a Melon Seed",
+    "slug": "the-distance-of-a-melon-seed",
     "category": "Novel",
-    "noPost": true,
     "book": {
       "cover": "taiwan_manyou_lu.jpg",
       "title": "臺灣漫遊錄",
@@ -173,10 +317,57 @@ window.READS = [
         "Novel · Chinese original, first published 2020 · Traditional Chinese edition",
         "A Japanese writer’s 1938 tour of Taiwan, told through her travel diary and her Taiwanese interpreter."
       ]
-    }
+    },
+    "place": "於德國海德堡\nHeidelberg, Germany",
+    "languages": [
+      "Traditional Chinese",
+      "English"
+    ],
+    "prose": [
+      ["青山千鶴子不會嗑瓜子。",
+       "Aoyama Chizuko does not know how to crack melon seeds."],
+      ["王千鶴教她把瓜子豎起來，放在門牙之間，輕輕咬開外殼，再用舌尖取出裡面的仁。",
+       "Wang Qianhe teaches her to stand the seed upright between her front teeth, bite the shell open gently, and take out the kernel with the tip of her tongue."],
+      ["這個動作太小了，小到幾乎不值得寫進一部關於殖民地的小說。",
+       "The gesture is so small that it hardly seems worth writing into a novel about a colony."],
+      ["但我總覺得，兩個女人之間最難跨越的距離，恰恰藏在這一咬之間。",
+       "But I always feel that the hardest distance between the two women lies hidden in this one bite."],
+      ["千鶴子來自日本，可以用自己的語言描寫臺灣，將沿途所見變成文章。她擁有觀看、命名與解釋的自由，卻不知道如何吃一粒臺灣街市上尋常的瓜子。",
+       "Chizuko comes from Japan and can describe Taiwan in her own language, turning what she sees along the way into prose. She has the freedom to look, to name and to explain, and yet she does not know how to eat a melon seed that is an everyday sight in Taiwan’s street markets."],
+      ["王千鶴不需要思考這個動作。她的牙齒早已記得。這種知識不是從書本或學校裡學來的，而是在漫長的日常生活中，不知不覺成為身體的一部分。",
+       "Qianhe does not need to think about the gesture. Her teeth already remember. This kind of knowledge is not learned from books or schools; it becomes part of the body without anyone noticing, through long years of daily life."],
+      ["**帝國可以教人如何理解一片土地，卻不能替人經歷在那片土地上長大的歲月。**",
+       "**An empire can teach people how to understand a land, but it cannot live for them the years of growing up on it.**"],
+      ["於是，在這短暫的一刻，殖民者成了學生，被殖民者成了老師。",
+       "So, for this brief moment, the colonizer becomes the student and the colonized becomes the teacher."],
+      ["但這種顛倒並不意味著平等。",
+       "But this reversal does not mean equality."],
+      ["千鶴子學會之後，可以把瓜子的滋味寫進遊記，讓它成為自己認識臺灣的一段經驗。王千鶴卻不能以同樣的自由，把自己的日常生活變成一段可以結束的異國見聞。",
+       "Once Chizuko has learned, she can write the taste of melon seeds into her travelogue and let it become one part of how she came to know Taiwan. Qianhe cannot, with the same freedom, turn her daily life into a foreign experience that can end."],
+      ["一個人學會了如何進入另一個人的世界，另一個人卻沒有因此獲得離開自己世界的權利。",
+       "One person learns how to enter another’s world, and the other gains no right to leave her own."],
+      ["我想，殖民最隱蔽的地方，並不是它使兩種文化無法相互理解，而是它讓理解本身成為一種不對等的權利。",
+       "I think the most hidden thing about colonialism is not that it makes two cultures unable to understand each other, but that it makes understanding itself an unequal right."],
+      ["千鶴子可以真誠地喜愛臺灣，可以學習它的語言、食物與風俗，甚至可以愛上王千鶴。但她始終有權決定，這段經歷將在自己的生命裡占據多大的位置。",
+       "Chizuko can sincerely love Taiwan, can learn its language, food and customs, can even fall in love with Qianhe. But she always has the right to decide how large a place this experience will take in her own life."],
+      ["對王千鶴而言，這卻不是一段經歷，而是她無法置身事外的生活。",
+       "For Qianhe, it is not an experience but a life she cannot stand outside of."],
+      ["**千鶴子可以選擇理解臺灣，王千鶴卻不能選擇不被殖民。**",
+       "**Chizuko can choose to understand Taiwan; Qianhe cannot choose not to be colonized.**"],
+      ["那粒瓜子終於被咬開了。",
+       "At last the melon seed is cracked open."],
+      ["千鶴子嚐到了裡面的仁。從此，她也知道該怎樣嗑瓜子。",
+       "Chizuko tastes the kernel inside. From then on, she knows how to crack melon seeds."],
+      ["但知道一粒瓜子應該如何咬開，與知道一個人為什麼必須生活在這裡，終究是兩回事。",
+       "But knowing how a melon seed should be bitten open and knowing why a person must live here are, in the end, two different things."],
+      ["王千鶴或許還會教她許多東西。",
+       "Qianhe may well teach her many more things."],
+      ["只是有些事情，並不是學會了，就能共同承擔。",
+       "It is only that some things cannot be shared just because they have been learned."]
+    ]
   },
   {
-    "date": "2021-01-01",
+    "date": "2016-01-01",
     "category": "Novel",
     "noPost": true,
     "book": {
@@ -210,9 +401,10 @@ window.READS = [
     }
   },
   {
-    "date": "2026-01-01",
+    "date": "2026-02-27",
+    "title": "What If Coco Never Remembered?",
+    "slug": "what-if-coco-never-remembered",
     "category": "Novel",
-    "noPost": true,
     "book": {
       "cover": "emperor_of_gladness.jpg",
       "title": "The Emperor of Gladness",
@@ -224,7 +416,74 @@ window.READS = [
         "Novel · English original, first published 2025",
         "A young man in a Connecticut town is pulled back from the edge by an elderly woman with dementia."
       ]
-    }
+    },
+    "place": "于加利福尼亚州利弗莫尔\nLivermore, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      ["夜里，烟火声惊醒了格拉齐娜。",
+       "At night, the sound of fireworks wakes Grazina."],
+      ["她以为德国人的炮火又来了。那个早已离开立陶宛几十年的老人，仿佛重新回到了战争之中。海试图使她平静下来，最后却不得不改变自己的身份。",
+       "She thinks the German guns have come again. The old woman, who left Lithuania decades ago, seems to be back in the war. Hai tries to calm her, and in the end has to change who he is."],
+      ["他成了佩珀中士，一名奉命护送她逃往美国的士兵。",
+       "He becomes Sergeant Pepper, a soldier under orders to escort her out to America."],
+      ["格拉齐娜开始听从他的指挥。他们在屋子里躲避敌人，模拟交火，把寻常的家具变成战场上的掩体。她用手指充当手枪，而海这个几乎不了解欧洲战争的年轻人，只能凭借零碎的军事知识，临时编造一条逃生路线。",
+       "Grazina begins to follow his orders. They hide from the enemy inside the house, simulate an exchange of fire, and turn ordinary furniture into cover on a battlefield. She uses her finger as a pistol, and Hai, a young man who knows almost nothing of Europe’s wars, can only improvise an escape route from scraps of military knowledge."],
+      ["我尤其在意那根伸出去的手指。",
+       "I keep returning to that outstretched finger."],
+      ["它当然不可能射出子弹。海知道，读者知道，格拉齐娜在清醒的时候也知道。但在那个瞬间，她需要的不是一支真正的枪，而是相信自己终于有能力反抗。",
+       "Of course it cannot fire a bullet. Hai knows it, the reader knows it, and Grazina, when she is lucid, knows it too. But in that moment what she needs is not a real gun but the belief that she is finally able to resist."],
+      ["**她无法选择回到哪个年代，却仍然可以在那个年代里，暂时不做一个任人追赶的难民。**",
+       "**She cannot choose which era she returns to, but she can still, within it, stop being a refugee for anyone to chase, if only for a while.**"],
+      ["更奇异的是，海的扮演并不完全由他控制。他随口指认某个地方，格拉齐娜便可能从中辨认出失去的亲人、故乡的道路，甚至补充出他从未听说过的细节。一个人编造的故事，成了另一个人记忆得以展开的地方。",
+       "Stranger still, Hai’s role-play is not entirely in his control. He names a place offhand, and Grazina may recognize in it a lost relative, a road back home, even details he has never heard of. A story one person invents becomes the place where another person’s memory can unfold."],
+      ["可是那些细节并不总能相互吻合。",
+       "But those details do not always fit together."],
+      ["海逐渐意识到，格拉齐娜也许不只是在重温过去。她可能正在利用过去，重新编造眼前的生活。",
+       "Hai gradually realizes that Grazina may not only be reliving the past. She may be using the past to reinvent the life in front of her."],
+      ["这使我想起《寻梦环游记》里米格为曾祖母可可唱起《Remember Me》的场景。",
+       "This reminds me of the scene in *Coco* where Miguel sings “Remember Me” for his great-grandmother Coco."],
+      ["可可终于想起了父亲。那首歌使一个即将被遗忘的人重新获得了存在的位置。",
+       "Coco finally remembers her father. The song gives a person about to be forgotten his place in the world again."],
+      ["但我始终想问：如果可可没有想起来呢？",
+       "But I have always wanted to ask: what if Coco had not remembered?"],
+      ["如果她只是茫然地望着米格，没有认出照片，也没有接上旋律，那么那首歌是否就失去了意义？",
+       "If she had simply looked blankly at Miguel, not recognized the photograph, not picked up the melody, would the song then have lost its meaning?"],
+      ["电影让记忆归来，使爱获得证明。格拉齐娜的故事却没有这种保证。她可能在第二天忘记佩珀中士，忘记他们共同经历的枪战，甚至忘记海曾经陪她度过那个夜晚。",
+       "The film lets memory return and so lets love be proved. Grazina’s story offers no such guarantee. She may forget Sergeant Pepper the next day, forget the gunfight they went through together, even forget that Hai stayed with her that night."],
+      ["而海不能要求她记住。",
+       "And Hai cannot ask her to remember."],
+      ["我觉得，王鸥行在这里写出的并不只是善意的欺骗，而是一种更困难的关怀：**他必须承认，自己无法把格拉齐娜带回现实，却仍然有责任回应她在另一个现实中感受到的恐惧。**",
+       "I think what Ocean Vuong writes here is not only a kindly deception but a harder kind of care: **he must admit that he cannot bring Grazina back to reality, and yet he is still responsible for answering the fear she feels in another reality.**"],
+      ["更重要的是，海并不是一个真正能够拯救别人的英雄。他自己也曾站在桥上，准备结束生命；他同样依靠谎言维持着与母亲的关系，甚至无法确定自己将来会怎样。",
+       "More important, Hai is not a hero who can truly save anyone. He once stood on a bridge himself, ready to end his life; he too relies on lies to hold his relationship with his mother together, and cannot even be sure what will become of him."],
+      ["一个连自己都无法拯救的年轻人，却在老人的幻觉里扮演起救援者。",
+       "A young man who cannot save even himself plays the rescuer inside an old woman’s hallucination."],
+      ["这多少有些荒诞。",
+       "There is something absurd in that."],
+      ["但格拉齐娜曾经在桥下叫住了他。她并不知道那个年轻人以后会不会好起来，只是在他准备消失的时候，让他留下。",
+       "But Grazina was the one who called out to him from beneath the bridge. She did not know whether the young man would ever be all right; she only asked him to stay when he was about to disappear."],
+      ["如今，海也以同样的方式留在她身边。",
+       "Now Hai stays by her side in the same way."],
+      ["他们并没有真正拯救彼此。格拉齐娜仍然会遗忘，海也仍然需要面对自己的生活。那些在房间里被击退的敌人，甚至从来没有存在过。",
+       "They do not truly save each other. Grazina will still forget, and Hai will still have to face his own life. The enemies they drove back in that room never existed at all."],
+      ["可那一夜的恐惧确实存在。",
+       "But the fear of that night did exist."],
+      ["我想，《寻梦环游记》真正动人的地方，也许不应该只是可可终于记起父亲，而是米格在不知道她能否想起来的时候，仍然唱了那首歌。",
+       "I think what truly moves me in *Coco* should perhaps not be only that Coco finally remembers her father, but that Miguel sang the song without knowing whether she would remember."],
+      ["**记忆的恢复只是幸运，不应该成为关怀获得意义的条件。**",
+       "**The return of memory is only luck, and should not be the condition under which care has meaning.**"],
+      ["海后来或许还要一次次成为佩珀中士。",
+       "Hai may have to become Sergeant Pepper again and again."],
+      ["他需要重新介绍自己，重新确认敌人的位置，重新护送格拉齐娜逃离一场早已结束的战争。",
+       "He will have to introduce himself again, confirm the enemy’s position again, and escort Grazina again out of a war that ended long ago."],
+      ["他知道他们从未真正离开过那间屋子。",
+       "He knows they never really left that house."],
+      ["但对格拉齐娜来说，那一夜，他们确实逃出来了。",
+       "But for Grazina, that night, they truly got out."]
+    ]
   },
   {
     "date": "2024-01-01",
@@ -295,9 +554,10 @@ window.READS = [
     }
   },
   {
-    "date": "2025-01-01",
+    "date": "2025-04-14",
+    "title": "Taking Kuankuan Away",
+    "slug": "taking-kuankuan-away",
     "category": "Novel",
-    "noPost": true,
     "book": {
       "cover": "women_seated.jpg",
       "title": "Women, Seated",
@@ -309,7 +569,38 @@ window.READS = [
         "Novel · Chinese original · English translation by Jeremy Tiang",
         "Women of one family across generations in a Chinese city."
       ]
-    }
+    },
+    "place": "于加利福尼亚州库比蒂诺\nCupertino, CA",
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "prose": [
+      ["余玲抱起宽宽，准备把他带走。",
+       "Yu Ling picks up Kuankuan, ready to take him away."],
+      ["这个动作，她已经做过无数次。孩子的重量、身体依偎过来的姿势、手臂应该托住的位置，她都熟悉。宽宽也熟悉她的怀抱。",
+       "She has done this countless times. She knows the child’s weight, the way his body leans into her, where her arms should hold him. Kuankuan knows her arms too."],
+      ["只是这一次，她不打算把他送回去。",
+       "Only this time, she does not intend to bring him back."],
+      ["我觉得，这个情节最令人不安的地方，是绑架与照顾竟然可以拥有完全相同的姿势。",
+       "What unsettles me most about this scene is that kidnapping and caregiving can share exactly the same posture."],
+      ["一个女人抱起孩子，旁人看见的是亲密与信任。没有挣扎，没有陌生人的强迫，甚至不需要一句谎言。多年照顾所建立的依赖，此刻成了带走他的便利。",
+       "A woman picks up a child, and what onlookers see is closeness and trust. There is no struggle, no stranger using force, not even a need for a lie. The dependence built over years of care becomes, now, the convenience that lets her take him."],
+      ["余玲并非不曾爱过宽宽。但爱并没有阻止她把这个孩子变成改变自身命运的筹码。",
+       "It is not that Yu Ling never loved Kuankuan. But love did not stop her from turning the child into a bargaining chip to change her own fate."],
+      ["而宽宽不知道。",
+       "And Kuankuan does not know."],
+      ["他无法理解，为什么同样的双臂，昨天意味着保护，今天却可能意味着危险。他甚至不需要重新决定是否相信她，因为信任早已成为身体的习惯。",
+       "He cannot understand why the same arms that meant protection yesterday might mean danger today. He does not even have to decide again whether to trust her, because trust has long been a habit of the body."],
+      ["**成年人可以在一瞬间改变一个动作的意义，孩子却仍然生活在这个动作过去的意义里。**",
+       "**An adult can change the meaning of a gesture in an instant, while the child still lives in what that gesture used to mean.**"],
+      ["余玲抱着他。",
+       "Yu Ling holds him."],
+      ["她知道自己要去哪里。",
+       "She knows where she is going."],
+      ["宽宽只知道，是她抱着自己。",
+       "All Kuankuan knows is that it is she who is holding him."]
+    ]
   },
   {
     "date": "2024-01-01",
@@ -414,7 +705,7 @@ window.READS = [
     }
   },
   {
-    "date": "2023-01-01",
+    "date": "2024-01-01",
     "category": "Novel",
     "noPost": true,
     "book": {
@@ -754,7 +1045,7 @@ window.READS = [
     }
   },
   {
-    "date": "2020-01-01",
+    "date": "2018-01-01",
     "category": "Novel",
     "noPost": true,
     "book": {
@@ -992,7 +1283,7 @@ window.READS = [
     }
   },
   {
-    "date": "2015-01-01",
+    "date": "2016-01-01",
     "category": "Political thought",
     "noPost": true,
     "book": {
@@ -1362,23 +1653,6 @@ window.READS = [
       "lines": [
         "Poetry · English original, first published 2021",
         "Glück’s last collection, with poems of winter, aging and memory."
-      ]
-    }
-  },
-  {
-    "date": "2016-01-01",
-    "category": "Novel",
-    "noPost": true,
-    "book": {
-      "cover": "museum_of_innocence.jpg",
-      "title": "The Museum of Innocence",
-      "author": "Orhan Pamuk",
-      "language": "English",
-      "country": "Turkey",
-      "original": "Turkish",
-      "lines": [
-        "Novel · Turkish original (Masumiyet Müzesi), first published 2008 · English translation",
-        "A wealthy Istanbul man’s obsessive love for a distant cousin, and the objects he collects of her."
       ]
     }
   },
