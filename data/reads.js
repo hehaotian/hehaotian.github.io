@@ -3,7 +3,2065 @@
 // book: { cover: "file.jpg" (in assets/photos/), title, author, language (the edition read), country (where the book was first published, or a list), original (the language it was written in), lines: ["detail", ...] } is the book the response is about; the cover is what the Reads page shows. The Reads filter uses country (as a flag); original is kept for reference.
 // sameAs: "other-slug" makes a read share another read's title and text (one response to two books); give it its own date, slug, book and place.
 // slug: optional short link name (needed when the title isn't plain English letters).
+// noPost: true is a book with no review: it shows on the Reads wall (cover, title, author, no link) and counts in the words-per-year chart, the map and the genre cards, but has no pop-up and is left out of Writings, Related and Older / Newer. It needs only date, category and book { cover, title, author, country, ... } (no prose); put its word count in data/reads_words.js under the cover file name.
 window.READS = [
+  {
+    "date": "2025-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "jawbone_ojeda.jpg",
+      "title": "Jawbone",
+      "author": "Mónica Ojeda",
+      "language": "English",
+      "country": "Ecuador",
+      "original": "Spanish",
+      "lines": [
+        "Novel · Spanish original (Mandíbula), first published 2018 · English translation by Sarah Booker",
+        "Teenage girls at a Catholic school in Ecuador and the horror stories that take over their world."
+      ]
+    }
+  },
+  {
+    "date": "2025-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "glory_bulawayo.jpg",
+      "title": "Glory",
+      "author": "NoViolet Bulawayo",
+      "language": "English",
+      "country": "Zimbabwe",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 2022",
+        "A fable of a fictional African country, told through its animals after the fall of a long-ruling leader."
+      ]
+    }
+  },
+  {
+    "date": "2025-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "a_new_name_fosse.jpg",
+      "title": "A New Name: Septology VI–VII",
+      "author": "Jon Fosse",
+      "language": "English",
+      "country": "Norway",
+      "original": "Norwegian",
+      "lines": [
+        "Novel · Norwegian original, first published 2021 · English translation by Damion Searls",
+        "The last volume of Fosse’s Septology, a single unbroken sentence of an old painter’s thoughts."
+      ]
+    }
+  },
+  {
+    "date": "2025-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "enter_ghost.jpg",
+      "title": "Enter Ghost",
+      "author": "Isabella Hammad",
+      "language": "English",
+      "country": "United Kingdom",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 2023",
+        "A British Palestinian actress returns to the West Bank to play Gertrude in a staging of Hamlet."
+      ]
+    }
+  },
+  {
+    "date": "2025-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "the_books_of_jacob.jpg",
+      "title": "The Books of Jacob",
+      "author": "Olga Tokarczuk",
+      "language": "English",
+      "country": "Poland",
+      "original": "Polish",
+      "lines": [
+        "Novel · Polish original, first published 2014 · English translation by Jennifer Croft",
+        "The eighteenth-century false messiah Jacob Frank and the people around him, across Europe."
+      ]
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "time_shelter.jpg",
+      "title": "Time Shelter",
+      "author": "Georgi Gospodinov",
+      "language": "English",
+      "country": "Bulgaria",
+      "original": "Bulgarian",
+      "lines": [
+        "Novel · Bulgarian original (Времеубежище), first published 2020 · English translation by Angela Rodel",
+        "A clinic for Alzheimer’s patients recreates past decades, and then the whole of Europe begins to choose its own past."
+      ]
+    }
+  },
+  {
+    "date": "2024-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "small_things_like_these.jpg",
+      "title": "Small Things Like These",
+      "author": "Claire Keegan",
+      "language": "English",
+      "country": "Ireland",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 2021",
+        "A coal merchant in 1985 Ireland discovers what is happening at the local convent."
+      ]
+    }
+  },
+  {
+    "date": "2015-01-01",
+    "category": "Poetry",
+    "noPost": true,
+    "book": {
+      "cover": "shelley_selected_poems_and_prose.jpg",
+      "title": "Selected Poems and Prose",
+      "author": "Percy Shelley",
+      "language": "English",
+      "country": "United Kingdom",
+      "original": "English",
+      "lines": [
+        "Poetry · English originals, 1810s–1820s · Penguin Classics",
+        "Shelley’s lyrics, longer poems and essays, from Ozymandias to A Defence of Poetry."
+      ]
+    }
+  },
+  {
+    "date": "2016-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "ergun_he_youan.jpg",
+      "title": "额尔古纳河右岸",
+      "author": "迟子建",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 2005 · People’s Literature Publishing House",
+        "The last chieftain’s wife of the Ewenki people tells a century of her reindeer-herding community."
+      ]
+    }
+  },
+  {
+    "date": "2026-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "taiwan_manyou_lu.jpg",
+      "title": "臺灣漫遊錄",
+      "author": "楊双子",
+      "language": "Traditional Chinese",
+      "country": "Taiwan",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 2020 · Traditional Chinese edition",
+        "A Japanese writer’s 1938 tour of Taiwan, told through her travel diary and her Taiwanese interpreter."
+      ]
+    }
+  },
+  {
+    "date": "2021-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "qun_xiang.jpg",
+      "title": "群象",
+      "author": "張貴興",
+      "language": "Traditional Chinese",
+      "country": "Malaysia",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1998 · Traditional Chinese edition",
+        "A Malaysian Chinese man returns to Borneo’s rainforest, where elephants, memory and family history converge."
+      ]
+    }
+  },
+  {
+    "date": "2024-01-01",
+    "category": "Literary criticism",
+    "noPost": true,
+    "book": {
+      "cover": "qi_zhui_ji.jpg",
+      "title": "七缀集",
+      "author": "钱锺书",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Literary criticism · Chinese original, first published 1985 · Qian Zhongshu Collection",
+        "Seven essays by Qian Zhongshu on Chinese and Western literature, translation and poetry."
+      ]
+    }
+  },
+  {
+    "date": "2026-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "emperor_of_gladness.jpg",
+      "title": "The Emperor of Gladness",
+      "author": "Ocean Vuong",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 2025",
+        "A young man in a Connecticut town is pulled back from the edge by an elderly woman with dementia."
+      ]
+    }
+  },
+  {
+    "date": "2024-01-01",
+    "category": "History",
+    "noPost": true,
+    "book": {
+      "cover": "elon_musk.jpg",
+      "title": "Elon Musk",
+      "author": "Walter Isaacson",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "History · English original, first published 2023",
+        "Biography of Elon Musk, drawn from two years of access to him and his circle."
+      ]
+    }
+  },
+  {
+    "date": "2025-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "flesh_szalay.jpg",
+      "title": "Flesh",
+      "author": "David Szalay",
+      "language": "English",
+      "country": "Hungary",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 2025",
+        "A Hungarian boy’s life from adolescence to wealth, told in sparse, silent scenes."
+      ]
+    }
+  },
+  {
+    "date": "2025-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "under_the_eye_of_the_big_bird.jpg",
+      "title": "Under the Eye of the Big Bird",
+      "author": "Hiromi Kawakami",
+      "language": "English",
+      "country": "Japan",
+      "original": "Japanese",
+      "lines": [
+        "Novel · Japanese original, first published 2016 · English translation by Asa Yoneda",
+        "Linked stories of a far-future world after the collapse of civilization."
+      ]
+    }
+  },
+  {
+    "date": "2025-01-01",
+    "category": "Short stories",
+    "noPost": true,
+    "book": {
+      "cover": "heart_lamp.jpg",
+      "title": "Heart Lamp: Selected Stories",
+      "author": "Banu Mushtaq",
+      "language": "English",
+      "country": "India",
+      "original": "Kannada",
+      "lines": [
+        "Short stories · Kannada originals · English translation by Deepa Bhasthi",
+        "Stories of Muslim women in southern India, winner of the 2025 International Booker Prize."
+      ]
+    }
+  },
+  {
+    "date": "2025-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "women_seated.jpg",
+      "title": "Women, Seated",
+      "author": "Zhang Yueran",
+      "language": "English",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original · English translation by Jeremy Tiang",
+        "Women of one family across generations in a Chinese city."
+      ]
+    }
+  },
+  {
+    "date": "2024-01-01",
+    "category": "Sociology",
+    "noPost": true,
+    "book": {
+      "cover": "fei_xiaotong_xiao_chengzhen.jpg",
+      "title": "费孝通论小城镇建设",
+      "author": "费孝通",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Sociology · Chinese original, edited by Fang Lili · The Commercial Press",
+        "Fei Xiaotong’s writings on the development of small towns in rural China."
+      ]
+    }
+  },
+  {
+    "date": "2018-01-01",
+    "category": "Literary criticism",
+    "noPost": true,
+    "book": {
+      "cover": "guanzhui_bian.jpg",
+      "title": "管錐編",
+      "author": "錢鍾書",
+      "language": "Traditional Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Literary criticism · Chinese original, first published 1979 · Traditional Chinese edition, Qian Zhongshu Collection",
+        "Qian Zhongshu’s notes on classical Chinese texts, drawn together with Western and Chinese literature."
+      ]
+    }
+  },
+  {
+    "date": "2024-01-01",
+    "category": "Sociology",
+    "noPost": true,
+    "book": {
+      "cover": "shengyu_zhidu.jpg",
+      "title": "生育制度",
+      "author": "费孝通",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Sociology · Chinese original, first published 1947",
+        "Fei Xiaotong on the family and the institutions that organize reproduction and child-rearing."
+      ]
+    }
+  },
+  {
+    "date": "2024-01-01",
+    "category": "Sociology",
+    "noPost": true,
+    "book": {
+      "cover": "jiangcun_jingji.jpg",
+      "title": "江村经济",
+      "author": "费孝通",
+      "language": "Chinese",
+      "country": "China",
+      "original": "English",
+      "lines": [
+        "Sociology · English original (Peasant Life in China), 1939 · Chinese translation by Dai Kejing",
+        "A study of one Jiangsu village, Kaixian Gong, and its household economy and silk industry."
+      ]
+    }
+  },
+  {
+    "date": "2024-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "kuxin_shouchang.jpg",
+      "title": "空芯手帳",
+      "author": "八木詠美",
+      "language": "Japanese",
+      "country": "Japan",
+      "original": "Japanese",
+      "lines": [
+        "Novel · Japanese original, first published 2020",
+        "A woman in her thirties pretends to be pregnant to get shorter hours, and the lie begins to grow."
+      ]
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "blue_sky_tschinag.jpg",
+      "title": "The Blue Sky",
+      "author": "Galsan Tschinag",
+      "language": "English",
+      "country": "Mongolia",
+      "original": "German",
+      "lines": [
+        "Novel · German original (Der blaue Himmel), first published 1994 · English translation",
+        "A boy’s childhood among nomadic herders in the Altai mountains of Mongolia."
+      ]
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "green_eyed_lama.jpg",
+      "title": "The Green-Eyed Lama",
+      "author": "Oyungerel Tsedevdamba and Jeffrey L. Falt",
+      "language": "English",
+      "country": "Mongolia",
+      "original": "English",
+      "lines": [
+        "Novel · English edition, based on a true story",
+        "A Mongolian lama and the upheavals of the 1920s and ’30s."
+      ]
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "qianli_jiangshan_tu.jpg",
+      "title": "千里江山图",
+      "author": "孙甘露",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 2021",
+        "Shanghai in 1933, where underground agents prepare a secret operation."
+      ]
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "trust_diaz.jpg",
+      "title": "Trust",
+      "author": "Hernan Diaz",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 2022",
+        "Four versions of one New York fortune and the marriage behind it."
+      ]
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "the_sympathizer.jpg",
+      "title": "The Sympathizer",
+      "author": "Viet Thanh Nguyen",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 2015",
+        "A Vietnamese double agent’s confession after the fall of Saigon."
+      ]
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "category": "Short stories",
+    "noPost": true,
+    "book": {
+      "cover": "cursed_bunny.jpg",
+      "title": "저주토끼",
+      "author": "정보라",
+      "language": "Korean",
+      "country": "South Korea",
+      "original": "Korean",
+      "lines": [
+        "Short stories · Korean original, first published 2017",
+        "Horror and fantasy stories on patriarchy, capitalism and the body."
+      ]
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "heaven_kawakami.jpg",
+      "title": "ヘヴン",
+      "author": "川上未映子",
+      "language": "Japanese",
+      "country": "Japan",
+      "original": "Japanese",
+      "lines": [
+        "Novel · Japanese original, first published 2009",
+        "Two bullied teenagers form a quiet bond over a school year."
+      ]
+    }
+  },
+  {
+    "date": "2022-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "three_body_problem.jpg",
+      "title": "The Three-Body Problem",
+      "author": "Cixin Liu",
+      "language": "English",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original (三体), first published 2008 · English translation by Ken Liu",
+        "A secret military project during the Cultural Revolution makes contact with an alien civilization."
+      ]
+    }
+  },
+  {
+    "date": "2021-01-01",
+    "category": "History",
+    "noPost": true,
+    "book": {
+      "cover": "the_code_breaker.jpg",
+      "title": "The Code Breaker: Jennifer Doudna, Gene Editing, and the Future of the Human Race",
+      "author": "Walter Isaacson",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "History · English original, first published 2021",
+        "Biography of Jennifer Doudna and the race to edit the human genome with CRISPR."
+      ]
+    }
+  },
+  {
+    "date": "2022-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "seven_moons_of_maali_almeida.jpg",
+      "title": "The Seven Moons of Maali Almeida",
+      "author": "Shehan Karunatilaka",
+      "language": "English",
+      "country": "Sri Lanka",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 2022",
+        "A murdered war photographer has seven moons to find who killed him in Sri Lanka’s civil war."
+      ]
+    }
+  },
+  {
+    "date": "2022-01-01",
+    "category": "Essays",
+    "noPost": true,
+    "book": {
+      "cover": "anthropocene_reviewed.jpg",
+      "title": "The Anthropocene Reviewed: Essays on a Human-Centered Planet",
+      "author": "John Green",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Essays · English original, first published 2021",
+        "Short essays that rate parts of the human world on a five-star scale."
+      ]
+    }
+  },
+  {
+    "date": "2021-01-01",
+    "category": "Self-help",
+    "noPost": true,
+    "book": {
+      "cover": "principles.jpg",
+      "title": "Principles",
+      "author": "Ray Dalio",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Business · English original, first published 2017",
+        "Ray Dalio’s rules for life and work, drawn from running an investment firm."
+      ]
+    }
+  },
+  {
+    "date": "2022-01-01",
+    "category": "History",
+    "noPost": true,
+    "book": {
+      "cover": "empire_of_pain.jpg",
+      "title": "Empire of Pain: The Secret History of the Sackler Dynasty",
+      "author": "Patrick Radden Keefe",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "History · English original, first published 2021",
+        "The Sackler family and how OxyContin built their fortune."
+      ]
+    }
+  },
+  {
+    "date": "2022-01-01",
+    "category": "Self-help",
+    "noPost": true,
+    "book": {
+      "cover": "atomic_habits.jpg",
+      "title": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+      "author": "James Clear",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Self-help · English original, first published 2018",
+        "How small daily changes compound into large results."
+      ]
+    }
+  },
+  {
+    "date": "2022-01-01",
+    "category": "Memoir",
+    "noPost": true,
+    "book": {
+      "cover": "crying_in_h_mart.jpg",
+      "title": "Crying in H Mart",
+      "author": "Michelle Zauner",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Memoir · English original, first published 2021",
+        "A Korean American musician’s grief for her mother, told through Korean food."
+      ]
+    }
+  },
+  {
+    "date": "2022-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "midnight_library.jpg",
+      "title": "The Midnight Library",
+      "author": "Matt Haig",
+      "language": "English",
+      "country": "United Kingdom",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 2020",
+        "A woman between life and death chooses among the other lives she might have lived."
+      ]
+    }
+  },
+  {
+    "date": "2022-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "gu_chuan.jpg",
+      "title": "古船",
+      "author": "张炜",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1986",
+        "A shoreside village and the families whose fortunes turn with each political era."
+      ]
+    }
+  },
+  {
+    "date": "2021-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "ma_qiao_cidian.jpg",
+      "title": "马桥词典",
+      "author": "韩少功",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1996 · revised edition",
+        "A village in Hunan told as a dictionary of its own words."
+      ]
+    }
+  },
+  {
+    "date": "2021-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "yi_ju_ding_yi_wan_ju.jpg",
+      "title": "一句顶一万句",
+      "author": "刘震云",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 2009",
+        "Lonely people across a Henan county and their search for someone who understands them."
+      ]
+    }
+  },
+  {
+    "date": "2021-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "klara_and_the_sun.jpg",
+      "title": "Klara and the Sun",
+      "author": "Kazuo Ishiguro",
+      "language": "English",
+      "country": "United Kingdom",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 2021",
+        "An artificial friend watches over a sick girl and waits for the sun’s help."
+      ]
+    }
+  },
+  {
+    "date": "2021-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "the_promise.jpg",
+      "title": "The Promise",
+      "author": "Damon Galgut",
+      "language": "English",
+      "country": "South Africa",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 2021",
+        "A South African family and the promise to a Black servant that is broken over four decades."
+      ]
+    }
+  },
+  {
+    "date": "2020-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "ling_shan.jpg",
+      "title": "靈山",
+      "author": "高行健",
+      "language": "Traditional Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1990 · Traditional Chinese edition, 30th anniversary",
+        "A journey through China’s southwest in search of Lingshan, woven from memory and folk tales."
+      ]
+    }
+  },
+  {
+    "date": "2020-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "yi_ge_ren_de_shengjing.jpg",
+      "title": "一個人的聖經",
+      "author": "高行健",
+      "language": "Traditional Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1999 · Traditional Chinese edition, 20th anniversary",
+        "A man looks back on the Cultural Revolution and his life in exile."
+      ]
+    }
+  },
+  {
+    "date": "2020-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "ta_mingjiao_hudie.jpg",
+      "title": "她名叫蝴蝶",
+      "author": "施叔青",
+      "language": "Traditional Chinese",
+      "country": "Taiwan",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1993 · Traditional Chinese edition · Hong Kong Trilogy, Part 1",
+        "A Dongguan girl sold into a Hong Kong brothel in the 1840s and the colony’s early years."
+      ]
+    }
+  },
+  {
+    "date": "2020-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "bianshan_yangzijing.jpg",
+      "title": "遍山洋紫荊",
+      "author": "施叔青",
+      "language": "Traditional Chinese",
+      "country": "Taiwan",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1995 · Traditional Chinese edition · Hong Kong Trilogy, Part 2",
+        "Hong Kong in the early twentieth century, as the colony and its people change."
+      ]
+    }
+  },
+  {
+    "date": "2020-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "jimo_yunyuan.jpg",
+      "title": "寂寞雲園",
+      "author": "施叔青",
+      "language": "Traditional Chinese",
+      "country": "Taiwan",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1997 · Traditional Chinese edition · Hong Kong Trilogy, Part 3",
+        "The last book of the trilogy, set in Hong Kong shortly before the 1997 handover."
+      ]
+    }
+  },
+  {
+    "date": "2016-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "fan_hua.jpg",
+      "title": "繁花",
+      "author": "金宇澄",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 2012",
+        "Shanghai from the 1960s to the 1990s, told through a circle of friends and lovers."
+      ]
+    }
+  },
+  {
+    "date": "2019-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "huang_ni_jie.jpg",
+      "title": "黄泥街",
+      "author": "残雪",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, 1986",
+        "A dusty street where rumor and decay turn ordinary life into a nightmare."
+      ]
+    }
+  },
+  {
+    "date": "2015-01-01",
+    "category": "Short stories",
+    "noPost": true,
+    "book": {
+      "cover": "xianshi_yizhong.jpg",
+      "title": "現實一種",
+      "author": "余華",
+      "language": "Traditional Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Short stories · Chinese original, 1987 · Traditional Chinese edition",
+        "Early stories in which family cruelty is told with a cold, steady voice."
+      ]
+    }
+  },
+  {
+    "date": "2021-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "qiqie_chengqun.jpg",
+      "title": "妻妾成群",
+      "author": "苏童",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, 1989",
+        "A young woman enters a rich household as the fourth concubine in the 1920s."
+      ]
+    }
+  },
+  {
+    "date": "2019-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "chang_hen_ge.jpg",
+      "title": "长恨歌",
+      "author": "王安忆",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1995",
+        "A Shanghai beauty’s life from the 1940s to the 1980s."
+      ]
+    }
+  },
+  {
+    "date": "2019-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "qin_qiang.jpg",
+      "title": "秦腔",
+      "author": "贾平凹",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 2005",
+        "A year in a Shaanxi village as old ways, opera and farmland fade."
+      ]
+    }
+  },
+  {
+    "date": "2021-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "bai_lu_yuan.jpg",
+      "title": "白鹿原",
+      "author": "陈忠实",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1993",
+        "Two clans on the Bailu plain through half a century of upheaval."
+      ]
+    }
+  },
+  {
+    "date": "2016-01-01",
+    "category": "Memoir",
+    "noPost": true,
+    "book": {
+      "cover": "walden.jpg",
+      "title": "Walden; or, Life in the Woods",
+      "author": "Henry D. Thoreau",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Memoir · English original, first published 1854",
+        "Two years in a cabin at Walden Pond, and what Thoreau made of living simply."
+      ]
+    }
+  },
+  {
+    "date": "2018-01-01",
+    "category": "Essays",
+    "noPost": true,
+    "book": {
+      "cover": "souls_of_black_folk.jpg",
+      "title": "The Souls of Black Folk",
+      "author": "W. E. B. Du Bois",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Essays · English original, first published 1903",
+        "Essays on race, double consciousness and the color line in America."
+      ]
+    }
+  },
+  {
+    "date": "2015-01-01",
+    "category": "Political thought",
+    "noPost": true,
+    "book": {
+      "cover": "common_sense.jpg",
+      "title": "Common Sense",
+      "author": "Thomas Paine",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Political thought · English original, first published 1776",
+        "Paine’s pamphlet arguing for American independence from Britain."
+      ]
+    }
+  },
+  {
+    "date": "2025-01-01",
+    "category": "History",
+    "noPost": true,
+    "book": {
+      "cover": "the_power_broker.jpg",
+      "title": "The Power Broker: Robert Moses and the Fall of New York",
+      "author": "Robert A. Caro",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "History · English original, first published 1974",
+        "The biography of Robert Moses, who rebuilt New York with roads and bridges and little accountability."
+      ]
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "category": "Memoir",
+    "noPost": true,
+    "book": {
+      "cover": "equiano_narrative.jpg",
+      "title": "The Interesting Narrative of the Life of Olaudah Equiano",
+      "author": "Olaudah Equiano",
+      "language": "English",
+      "country": "United Kingdom",
+      "original": "English",
+      "lines": [
+        "Memoir · English original, first published 1789",
+        "A formerly enslaved man’s account of capture, the Middle Passage and his freedom."
+      ]
+    }
+  },
+  {
+    "date": "2019-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "two_solitudes.jpg",
+      "title": "Two Solitudes",
+      "author": "Hugh MacLennan",
+      "language": "English",
+      "country": "Canada",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1945",
+        "English and French Canada side by side in Quebec from the First World War onward."
+      ]
+    }
+  },
+  {
+    "date": "2019-01-01",
+    "category": "History",
+    "noPost": true,
+    "book": {
+      "cover": "peoples_history_of_the_united_states.jpg",
+      "title": "A People’s History of the United States",
+      "author": "Howard Zinn",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "History · English original, first published 1980",
+        "American history told from the side of workers, slaves, women and the dispossessed."
+      ]
+    }
+  },
+  {
+    "date": "2019-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "babbitt.jpg",
+      "title": "Babbitt",
+      "author": "Sinclair Lewis",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1922",
+        "A prosperous real-estate man in a Midwestern city and his small rebellion."
+      ]
+    }
+  },
+  {
+    "date": "2021-01-01",
+    "category": "Economics",
+    "noPost": true,
+    "book": {
+      "cover": "psychology_of_money.jpg",
+      "title": "The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness",
+      "author": "Morgan Housel",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Economics · English original, first published 2020",
+        "Short stories on how people think about money and why behavior matters more than knowledge."
+      ]
+    }
+  },
+  {
+    "date": "2020-01-01",
+    "category": "Science",
+    "noPost": true,
+    "book": {
+      "cover": "why_we_sleep.jpg",
+      "title": "Why We Sleep: Unlocking the Power of Sleep and Dreams",
+      "author": "Matthew Walker",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Science · English original, first published 2017",
+        "A sleep scientist on why we sleep and what a lack of it does to body and mind."
+      ]
+    }
+  },
+  {
+    "date": "2017-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "the_idiot.jpg",
+      "title": "The Idiot",
+      "author": "Fyodor Dostoevsky",
+      "language": "English",
+      "country": "Russia",
+      "original": "Russian",
+      "lines": [
+        "Novel · Russian original, 1869 · English translation by Michael R. Katz",
+        "Prince Myshkin returns to St Petersburg and is drawn into a triangle of love and ruin."
+      ]
+    }
+  },
+  {
+    "date": "2017-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "huckleberry_finn.jpg",
+      "title": "Adventures of Huckleberry Finn",
+      "author": "Mark Twain",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1884",
+        "A boy and the escaped slave Jim drift down the Mississippi on a raft."
+      ]
+    }
+  },
+  {
+    "date": "2017-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "moby_dick.jpg",
+      "title": "Moby-Dick; or, The Whale",
+      "author": "Herman Melville",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1851",
+        "Captain Ahab’s hunt for the white whale, told by the sailor Ishmael."
+      ]
+    }
+  },
+  {
+    "date": "2017-01-01",
+    "category": "Political thought",
+    "noPost": true,
+    "book": {
+      "cover": "democracy_in_america.jpg",
+      "title": "Democracy in America",
+      "author": "Alexis de Tocqueville",
+      "language": "English",
+      "country": "France",
+      "original": "French",
+      "lines": [
+        "Political thought · French original, 1835 and 1840 · English translation by Harvey C. Mansfield and Delba Winthrop",
+        "Tocqueville’s study of American democracy, its habits and its dangers."
+      ]
+    }
+  },
+  {
+    "date": "2017-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "in_the_skin_of_a_lion.jpg",
+      "title": "In the Skin of a Lion",
+      "author": "Michael Ondaatje",
+      "language": "English",
+      "country": "Canada",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1987",
+        "Immigrant workers building Toronto’s bridges, tunnels and waterworks in the 1920s and ’30s."
+      ]
+    }
+  },
+  {
+    "date": "2017-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "the_tin_flute.jpg",
+      "title": "The Tin Flute",
+      "author": "Gabrielle Roy",
+      "language": "English",
+      "country": "Canada",
+      "original": "French",
+      "lines": [
+        "Novel · French original (Bonheur d’occasion), first published 1945 · English translation",
+        "A working-class family in Montreal’s Saint-Henri during the Second World War."
+      ]
+    }
+  },
+  {
+    "date": "2015-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "cries_in_the_drizzle.jpg",
+      "title": "在细雨中呼喊",
+      "author": "余华",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1991",
+        "A man looks back on a childhood in a southern Chinese village, shaped by loss and a family that failed him."
+      ]
+    }
+  },
+  {
+    "date": "2015-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "blood_merchant.jpg",
+      "title": "許三觀賣血記",
+      "author": "余華",
+      "language": "Traditional Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1995 · Traditional Chinese edition",
+        "A silk-factory worker sells his blood to pay for his family’s crises."
+      ]
+    }
+  },
+  {
+    "date": "2016-01-01",
+    "category": "Poetry",
+    "noPost": true,
+    "book": {
+      "cover": "first_four_books_of_poems.jpg",
+      "title": "The First Four Books of Poems",
+      "author": "Louise Glück",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Poetry · English original, collected 1995",
+        "Firstborn, The House on Marshland, Descending Figure and The Triumph of Achilles in one volume."
+      ]
+    }
+  },
+  {
+    "date": "2016-01-01",
+    "category": "Poetry",
+    "noPost": true,
+    "book": {
+      "cover": "a_village_life.jpg",
+      "title": "A Village Life",
+      "author": "Louise Glück",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Poetry · English original, first published 2009",
+        "Poems of one village and its fields, houses and seasons."
+      ]
+    }
+  },
+  {
+    "date": "2016-01-01",
+    "category": "Play",
+    "noPost": true,
+    "book": {
+      "cover": "an_oresteia.jpg",
+      "title": "An Oresteia",
+      "author": "Anne Carson",
+      "language": "English",
+      "country": "Canada",
+      "original": "Ancient Greek",
+      "lines": [
+        "Plays · Ancient Greek originals, translated by Anne Carson, 2009",
+        "Aeschylus’ Agamemnon, Sophocles’ Elektra and Euripides’ Orestes."
+      ]
+    }
+  },
+  {
+    "date": "2016-01-01",
+    "category": "Poetry",
+    "noPost": true,
+    "book": {
+      "cover": "wrong_norma.jpg",
+      "title": "Wrong Norma",
+      "author": "Anne Carson",
+      "language": "English",
+      "country": "Canada",
+      "original": "English",
+      "lines": [
+        "Poetry and prose · English original, first published 2024",
+        "Carson’s collection of short pieces, drawings and small essays."
+      ]
+    }
+  },
+  {
+    "date": "2016-01-01",
+    "category": "Poetry",
+    "noPost": true,
+    "book": {
+      "cover": "glass_and_god.jpg",
+      "title": "Glass and God",
+      "author": "Anne Carson",
+      "language": "English",
+      "country": "Canada",
+      "original": "English",
+      "lines": [
+        "Poetry · English original (Glass, Irony and God), first published 1995 · Cape Poetry edition",
+        "Long poems on desire, grief and the thin glass between a person and the world."
+      ]
+    }
+  },
+  {
+    "date": "2016-01-01",
+    "category": "Poetry",
+    "noPost": true,
+    "book": {
+      "cover": "winter_recipes_from_the_collective.jpg",
+      "title": "Winter Recipes from the Collective",
+      "author": "Louise Glück",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Poetry · English original, first published 2021",
+        "Glück’s last collection, with poems of winter, aging and memory."
+      ]
+    }
+  },
+  {
+    "date": "2016-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "museum_of_innocence.jpg",
+      "title": "The Museum of Innocence",
+      "author": "Orhan Pamuk",
+      "language": "English",
+      "country": "Turkey",
+      "original": "Turkish",
+      "lines": [
+        "Novel · Turkish original (Masumiyet Müzesi), first published 2008 · English translation",
+        "A wealthy Istanbul man’s obsessive love for a distant cousin, and the objects he collects of her."
+      ]
+    }
+  },
+  {
+    "date": "2014-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "my_name_is_red.jpg",
+      "title": "My Name Is Red",
+      "author": "Orhan Pamuk",
+      "language": "English",
+      "country": "Turkey",
+      "original": "Turkish",
+      "lines": [
+        "Novel · Turkish original (Benim Adım Kırmızı), first published 1998 · English translation",
+        "A murder among the miniaturists of sixteenth-century Istanbul."
+      ]
+    }
+  },
+  {
+    "date": "2014-01-01",
+    "category": "Memoir",
+    "noPost": true,
+    "book": {
+      "cover": "istanbul_pamuk.jpg",
+      "title": "Istanbul: Memories and the City",
+      "author": "Orhan Pamuk",
+      "language": "English",
+      "country": "Turkey",
+      "original": "Turkish",
+      "lines": [
+        "Memoir · Turkish original, first published 2003 · English translation",
+        "Pamuk’s memoir of growing up in Istanbul and of the city’s melancholy."
+      ]
+    }
+  },
+  {
+    "date": "2015-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "white_castle.jpg",
+      "title": "The White Castle",
+      "author": "Orhan Pamuk",
+      "language": "English",
+      "country": "Turkey",
+      "original": "Turkish",
+      "lines": [
+        "Novel · Turkish original (Beyaz Kale), first published 1985 · English translation",
+        "A Venetian slave and the Ottoman scholar who looks exactly like him."
+      ]
+    }
+  },
+  {
+    "date": "2015-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "strangeness_in_my_mind.jpg",
+      "title": "A Strangeness in My Mind",
+      "author": "Orhan Pamuk",
+      "language": "English",
+      "country": "Turkey",
+      "original": "Turkish",
+      "lines": [
+        "Novel · Turkish original (Kafamda Bir Tuhaflık), first published 2014 · English translation",
+        "A street vendor in Istanbul and the decades of the city’s change."
+      ]
+    }
+  },
+  {
+    "date": "2015-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "silent_house.jpg",
+      "title": "Silent House",
+      "author": "Orhan Pamuk",
+      "language": "English",
+      "country": "Turkey",
+      "original": "Turkish",
+      "lines": [
+        "Novel · Turkish original (Sessiz Ev), first published 1983 · English translation",
+        "Three grandchildren visit their grandmother in a seaside house in 1980."
+      ]
+    }
+  },
+  {
+    "date": "2014-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "snow_falling_on_cedars.jpg",
+      "title": "Snow Falling on Cedars",
+      "author": "David Guterson",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1994",
+        "A Japanese American fisherman’s murder trial on a Puget Sound island in 1954."
+      ]
+    }
+  },
+  {
+    "date": "2014-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "the_living.jpg",
+      "title": "The Living",
+      "author": "Annie Dillard",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1992",
+        "Settlers on the Washington coast in the late nineteenth century."
+      ]
+    }
+  },
+  {
+    "date": "2014-01-01",
+    "category": "History",
+    "noPost": true,
+    "book": {
+      "cover": "skid_road.jpg",
+      "title": "Skid Road: An Informal Portrait of Seattle",
+      "author": "Murray Morgan",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "History · English original, first published 1951",
+        "Seattle’s history from the first settlers to the mid-twentieth century."
+      ]
+    }
+  },
+  {
+    "date": "2014-01-01",
+    "category": "History",
+    "noPost": true,
+    "book": {
+      "cover": "boys_in_the_boat.jpg",
+      "title": "The Boys in the Boat",
+      "author": "Daniel James Brown",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "History · English original, first published 2013",
+        "The University of Washington rowing crew that won gold at the 1936 Berlin Olympics."
+      ]
+    }
+  },
+  {
+    "date": "2022-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "east_of_eden.jpg",
+      "title": "East of Eden",
+      "author": "John Steinbeck",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1952",
+        "Two families in California’s Salinas Valley and the Cain and Abel story they repeat."
+      ]
+    }
+  },
+  {
+    "date": "2013-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "of_mice_and_men.jpg",
+      "title": "Of Mice and Men",
+      "author": "John Steinbeck",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1937",
+        "Two migrant farm workers in California who dream of a small piece of land."
+      ]
+    }
+  },
+  {
+    "date": "2014-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "to_a_god_unknown.jpg",
+      "title": "To a God Unknown",
+      "author": "John Steinbeck",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1933",
+        "A homesteader in California’s Valley becomes bound to a great oak tree."
+      ]
+    }
+  },
+  {
+    "date": "2014-01-01",
+    "category": "Travel writing",
+    "noPost": true,
+    "book": {
+      "cover": "a_russian_journal.jpg",
+      "title": "A Russian Journal",
+      "author": "John Steinbeck",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Travel writing · English original, first published 1948 · with photographs by Robert Capa",
+        "Steinbeck and Capa’s trip through the Soviet Union in 1947."
+      ]
+    }
+  },
+  {
+    "date": "2024-01-01",
+    "category": "Letters",
+    "noPost": true,
+    "book": {
+      "cover": "steinbeck_life_in_letters.jpg",
+      "title": "Steinbeck: A Life in Letters",
+      "author": "Elaine Steinbeck and Robert Wallsten, eds.",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Letters · English original, first published 1975",
+        "Steinbeck’s letters, from his student years to the last years of his life."
+      ]
+    }
+  },
+  {
+    "date": "2014-01-01",
+    "category": "Short stories",
+    "noPost": true,
+    "book": {
+      "cover": "pastures_of_heaven.jpg",
+      "title": "The Pastures of Heaven",
+      "author": "John Steinbeck",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Short stories · English original, first published 1932",
+        "Linked stories about the families of a California valley and the one family that unsettles it."
+      ]
+    }
+  },
+  {
+    "date": "2014-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "tortilla_flat.jpg",
+      "title": "Tortilla Flat",
+      "author": "John Steinbeck",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1935",
+        "Danny and his friends in Monterey’s paisano quarter."
+      ]
+    }
+  },
+  {
+    "date": "2013-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "gates_of_fire.jpg",
+      "title": "Gates of Fire",
+      "author": "Steven Pressfield",
+      "language": "English",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1998",
+        "The battle of Thermopylae told by the Spartan helot who survived it."
+      ]
+    }
+  },
+  {
+    "date": "2013-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "all_quiet_on_the_western_front.jpg",
+      "title": "All Quiet on the Western Front",
+      "author": "Erich Maria Remarque",
+      "language": "English",
+      "country": "Germany",
+      "original": "German",
+      "lines": [
+        "Novel · German original (Im Westen nichts Neues), first published 1929 · English translation",
+        "A German schoolboy turned soldier on the Western Front, and what the war leaves of him."
+      ]
+    }
+  },
+  {
+    "date": "2013-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "birdsong.jpg",
+      "title": "Birdsong",
+      "author": "Sebastian Faulks",
+      "language": "English",
+      "country": "United Kingdom",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1993",
+        "An English officer on the Western Front and the love affair he carries back through the war."
+      ]
+    }
+  },
+  {
+    "date": "2013-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "men_at_arms.jpg",
+      "title": "Men at Arms",
+      "author": "Evelyn Waugh",
+      "language": "English",
+      "country": "United Kingdom",
+      "original": "English",
+      "lines": [
+        "Novel · English original, first published 1952",
+        "Guy Crouchback joins the Royal Halberdiers in the early years of the Second World War."
+      ]
+    }
+  },
+  {
+    "date": "2013-01-01",
+    "category": "Short stories",
+    "noPost": true,
+    "book": {
+      "cover": "white_nights.jpg",
+      "title": "White Nights and Other Stories",
+      "author": "Fyodor Dostoevsky",
+      "language": "English",
+      "country": "Russia",
+      "original": "Russian",
+      "lines": [
+        "Short stories · Russian originals, 1840s–1870s · English translation",
+        "Early stories, including White Nights, of lonely young men in St Petersburg."
+      ]
+    }
+  },
+  {
+    "date": "2013-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "war_and_peace.jpg",
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "language": "English",
+      "country": "Russia",
+      "original": "Russian",
+      "lines": [
+        "Novel · Russian original, 1869 · English translation by Richard Pevear and Larissa Volokhonsky",
+        "Five Russian families through the Napoleonic Wars."
+      ]
+    }
+  },
+  {
+    "date": "2021-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "demons.jpg",
+      "title": "Demons",
+      "author": "Fyodor Dostoevsky",
+      "language": "English",
+      "country": "Russia",
+      "original": "Russian",
+      "lines": [
+        "Novel · Russian original (Бесы), 1872 · English translation by Richard Pevear and Larissa Volokhonsky",
+        "A provincial town and the circle of radicals that spirals into murder."
+      ]
+    }
+  },
+  {
+    "date": "2020-01-01",
+    "category": "Short stories",
+    "noPost": true,
+    "book": {
+      "cover": "late_bloomer.jpg",
+      "title": "晚熟的人",
+      "author": "莫言",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Short stories · Chinese original, 2020 · People’s Literature Publishing House",
+        "Mo Yan’s first collection after the Nobel Prize, set in his home village."
+      ]
+    }
+  },
+  {
+    "date": "2012-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "ordinary_world.jpg",
+      "title": "平凡的世界",
+      "author": "路遙",
+      "language": "Traditional Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, 1986–88, three volumes · Traditional Chinese edition, The Commercial Press",
+        "Two brothers and their families in a Shaanxi village and county town through the first decade of reform."
+      ]
+    }
+  },
+  {
+    "date": "2017-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "resurrection.jpg",
+      "title": "復活",
+      "author": "列夫·托爾斯泰",
+      "language": "Traditional Chinese",
+      "country": "Russia",
+      "original": "Russian",
+      "lines": [
+        "Novel · Russian original (Воскресение), first published 1899 · Traditional Chinese translation by Liu Wenfei",
+        "A nobleman recognizes the woman he once wronged on trial for murder, and follows her to Siberia."
+      ]
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "shengsi_pilao.jpg",
+      "title": "生死疲劳",
+      "author": "莫言",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 2006",
+        "A landlord executed in 1950 is reborn as a donkey, ox, pig, dog and monkey on the same village’s land."
+      ]
+    }
+  },
+  {
+    "date": "2012-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "the_easy_life.jpg",
+      "title": "The Easy Life",
+      "author": "Marguerite Duras",
+      "language": "English",
+      "country": "France",
+      "original": "French",
+      "lines": [
+        "Novel · French original (La Vie tranquille), first published 1944",
+        "A young woman’s year in a provincial family after a cousin’s death."
+      ]
+    }
+  },
+  {
+    "date": "2012-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "wuchi_zhitu.jpg",
+      "title": "无耻之徒",
+      "author": "玛格丽特·杜拉斯",
+      "language": "Chinese",
+      "country": "France",
+      "original": "French",
+      "lines": [
+        "Novel · French original, first published 1943 · Chinese translation",
+        "Duras’s first novel, about a family and the lives that tangle around its country house."
+      ]
+    }
+  },
+  {
+    "date": "2012-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "blue_eyes_black_hair.jpg",
+      "title": "Blue Eyes, Black Hair",
+      "author": "Marguerite Duras",
+      "language": "English",
+      "country": "France",
+      "original": "French",
+      "lines": [
+        "Novel · French original (Les Yeux bleus cheveux noirs), first published 1986",
+        "A man hires a young man to share a room by the sea and sleep beside him in silence."
+      ]
+    }
+  },
+  {
+    "date": "2012-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "emily_l.jpg",
+      "title": "Emily L.",
+      "author": "Marguerite Duras",
+      "language": "English",
+      "country": "France",
+      "original": "French",
+      "lines": [
+        "Novel · French original, first published 1987",
+        "A couple at a seaside café watch an English woman and recall a story she once lived."
+      ]
+    }
+  },
+  {
+    "date": "2012-01-01",
+    "category": "Essays",
+    "noPost": true,
+    "book": {
+      "cover": "practicalities.jpg",
+      "title": "Practicalities",
+      "author": "Marguerite Duras",
+      "language": "English",
+      "country": "France",
+      "original": "French",
+      "lines": [
+        "Essays and conversations · French original (La Vie matérielle), first published 1987",
+        "Duras talks about writing, alcohol, housework and her own life."
+      ]
+    }
+  },
+  {
+    "date": "2012-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "destroy_she_said.jpg",
+      "title": "Destroy, She Said",
+      "author": "Marguerite Duras",
+      "language": "English",
+      "country": "France",
+      "original": "French",
+      "lines": [
+        "Novel · French original (Détruire dit-elle), first published 1969",
+        "Four guests at a hotel near a forest meet and unsettle one another."
+      ]
+    }
+  },
+  {
+    "date": "2011-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "ren_sheng.jpg",
+      "title": "人生",
+      "author": "路遥",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 1982",
+        "A young villager who has gone to school returns to the land, and the choices that follow."
+      ]
+    }
+  },
+  {
+    "date": "2011-01-01",
+    "category": "Play",
+    "noPost": true,
+    "book": {
+      "cover": "the_clouds.jpg",
+      "title": "The Clouds",
+      "author": "Aristophanes",
+      "language": "English",
+      "country": "Greece",
+      "original": "Ancient Greek",
+      "lines": [
+        "Play · Ancient Greek comedy, 423 BC · English translation by William Arrowsmith",
+        "Strepsiades enrolls in Socrates’ school to learn how to argue his way out of his debts."
+      ]
+    }
+  },
+  {
+    "date": "2011-01-01",
+    "category": "Epic poem",
+    "noPost": true,
+    "book": {
+      "cover": "iliad.jpg",
+      "title": "The Iliad",
+      "author": "Homer",
+      "language": "English",
+      "country": "Greece",
+      "original": "Ancient Greek",
+      "lines": [
+        "Epic poem · Ancient Greek original · English edition bound with The Odyssey",
+        "The wrath of Achilles and the last weeks of the Trojan War."
+      ]
+    }
+  },
+  {
+    "date": "2011-01-01",
+    "category": "Memoir",
+    "noPost": true,
+    "book": {
+      "cover": "tolstoy_last_diary.jpg",
+      "title": "托尔斯泰最后的日记",
+      "author": "列夫·托尔斯泰",
+      "language": "Chinese",
+      "country": "Russia",
+      "original": "Russian",
+      "lines": [
+        "Diary · Russian original, 1910 · Chinese translation by Ren Jun, Tianjin People’s Publishing House",
+        "Tolstoy’s last months, ending with his flight from Yasnaya Polyana."
+      ]
+    }
+  },
+  {
+    "date": "2011-01-01",
+    "category": "History",
+    "noPost": true,
+    "book": {
+      "cover": "chinese_thought_and_institutions.jpg",
+      "title": "中国的思想与制度",
+      "author": "费正清",
+      "language": "Chinese",
+      "country": "United States",
+      "original": "English",
+      "lines": [
+        "History · English original, 1957 · Chinese edition, World Publishing Corporation",
+        "Essays by Fairbank and others on the ideas and institutions of imperial China."
+      ]
+    }
+  },
+  {
+    "date": "2011-01-01",
+    "category": "Novel",
+    "noPost": true,
+    "book": {
+      "cover": "frog_mo_yan.jpg",
+      "title": "蛙",
+      "author": "莫言",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Novel · Chinese original, first published 2009",
+        "A village obstetrician’s life through the decades of China’s birth-control policy."
+      ]
+    }
+  },
+  {
+    "date": "2011-01-01",
+    "category": "Short stories",
+    "noPost": true,
+    "book": {
+      "cover": "shifu_yuelaiyue_youmo.jpg",
+      "title": "师傅越来越幽默",
+      "author": "莫言",
+      "language": "Chinese",
+      "country": "China",
+      "original": "Chinese",
+      "lines": [
+        "Short stories · Chinese original · Shanghai Literature and Art Publishing House",
+        "A collection of Mo Yan’s short stories and novellas."
+      ]
+    }
+  },
   {
     "date": "2025-05-05",
     "title": "Silence Cannot Bear Witness",
@@ -2444,7 +4502,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2025-09-11",
+    "date": "2026-03-31",
     "title": "Heirs to the California Dream",
     "category": "Novel",
     "book": {
@@ -2482,7 +4540,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2025-12-10",
+    "date": "2026-10-10",
     "title": "When America Is No Longer a Story That Can Be Told",
     "category": "Essays",
     "book": {
@@ -2520,7 +4578,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2025-12-25",
+    "date": "2026-01-05",
     "title": "When Everyone Thinks They Are Changing the World",
     "category": "Novel",
     "book": {
@@ -3198,7 +5256,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2025-04-29",
+    "date": "2026-04-29",
     "title": "Doubt and Origin",
     "slug": "where-i-was-from",
     "category": "Memoir",
@@ -4120,7 +6178,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2026-02-28",
+    "date": "2024-02-28",
     "title": "The One-Inch Gap",
     "category": "Novel",
     "book": {
@@ -4294,7 +6352,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2017-12-20",
+    "date": "2022-12-30",
     "title": "The Things I Once Took for Granted",
     "slug": "the-things-i-once-took-for-granted",
     "category": "Novel",
@@ -4310,7 +6368,7 @@ window.READS = [
         "The life of an ordinary Korean woman from birth to motherhood, told like a case file, until she begins to speak in other women’s voices."
       ]
     },
-    "place": "於加州聖克拉拉\nSanta Clara, CA",
+    "place": "於韓國首爾\nSeoul, South Korea",
     "languages": ["Traditional Chinese", "English"],
     "prose": [
       ["翻開《82年生的金智英》之前，我自認對韓國社會並不陌生。",
@@ -5356,7 +7414,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2021-01-02",
+    "date": "2020-01-02",
     "title": "The Footnotes That Set Tara Free",
     "slug": "the-footnotes-that-set-tara-free",
     "category": "Memoir",
@@ -5893,6 +7951,7 @@ window.READS = [
   },
   {
     "date": "2022-11-10",
+    "title": "Whose Life Got Better?",
     "slug": "ren-shi-jian",
     "sameAs": "social-classes-in-china",
     "category": "Novel",
@@ -6051,7 +8110,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2019-05-20",
+    "date": "2022-12-20",
     "title": "The Freedom to Leave, the Price of Staying",
     "slug": "because-i-hate-korea",
     "category": "Novel",
@@ -10191,7 +12250,7 @@ window.READS = [
     ]
   },
   {
-    "date": "2018-11-01",
+    "date": "2025-11-01",
     "title": "I Am a Beneficiary of Globalization",
     "slug": "i-am-a-beneficiary-of-globalization",
     "category": "Economics",

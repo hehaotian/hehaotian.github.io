@@ -32,7 +32,7 @@ window.addEventListener("hashchange", () => setMenu(false));
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const fmtDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 // country flags for the filter buttons (Notes and Plates); unknown countries fall back to their name
-const FLAGS = { "Peru": "🇵🇪", "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽", "Egypt": "🇪🇬", "Chile": "🇨🇱", "Greece": "🇬🇷", "India": "🇮🇳", "Argentina": "🇦🇷", "Uruguay": "🇺🇾", "Russia": "🇷🇺", "Israel": "🇮🇱", "Colombia": "🇨🇴", "Malaysia": "🇲🇾", "Belarus": "🇧🇾", "Nigeria": "🇳🇬", "Croatia": "🇭🇷", "Afghanistan": "🇦🇫", "South Africa": "🇿🇦", "Vietnam": "🇻🇳", "Cambodia": "🇰🇭", "New Zealand": "🇳🇿" };
+const FLAGS = { "Peru": "🇵🇪", "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧", "Korea": "🇰🇷", "South Korea": "🇰🇷", "Japan": "🇯🇵", "China": "🇨🇳", "Taiwan": "🇹🇼", "Hong Kong": "🇭🇰", "Singapore": "🇸🇬", "Thailand": "🇹🇭", "France": "🇫🇷", "Italy": "🇮🇹", "Spain": "🇪🇸", "Germany": "🇩🇪", "Netherlands": "🇳🇱", "Belgium": "🇧🇪", "Switzerland": "🇨🇭", "Austria": "🇦🇹", "Denmark": "🇩🇰", "Sweden": "🇸🇪", "Norway": "🇳🇴", "Portugal": "🇵🇹", "Mexico": "🇲🇽", "Egypt": "🇪🇬", "Chile": "🇨🇱", "Greece": "🇬🇷", "India": "🇮🇳", "Argentina": "🇦🇷", "Uruguay": "🇺🇾", "Russia": "🇷🇺", "Israel": "🇮🇱", "Colombia": "🇨🇴", "Malaysia": "🇲🇾", "Belarus": "🇧🇾", "Nigeria": "🇳🇬", "Croatia": "🇭🇷", "Afghanistan": "🇦🇫", "South Africa": "🇿🇦", "Vietnam": "🇻🇳", "Cambodia": "🇰🇭", "Sri Lanka": "🇱🇰", "Mongolia": "🇲🇳", "Bulgaria": "🇧🇬", "Ecuador": "🇪🇨", "Zimbabwe": "🇿🇼", "Poland": "🇵🇱", "Hungary": "🇭🇺", "Ireland": "🇮🇪", "Turkey": "🇹🇷", "Indonesia": "🇮🇩", "New Zealand": "🇳🇿" };
 const fullDate = d => { d = String(d || ""); return d.length === 4 ? d + "-01-01" : d.length === 7 ? d + "-01" : d; };   // "2026" / "2026-10" / "2026-10-10" compare correctly
 const thumb = f => `src="assets/thumbs/${esc(f)}" onerror="this.onerror=null;this.src='assets/photos/${esc(f)}'"`;   // small copy for the grids (tools/make_thumbs.sh); falls back to the full photo
 // dot-matrix world map (data/worldmap.js), shared by Reads and Plates: land is a grid of dots, each country in counts ({name: n}) gets a marker shaded by n (hover for the name and count, click to filter, click again to clear).
@@ -117,6 +117,7 @@ const popups = {};                       // tab -> slug -> html of the page body
 // cross-references (data/related.js): every piece is known as "n:Title" (a Writing) or "r:Title" (a Read), so groups can point at each other
 const xkeys = { notes: {}, reads: {} }, xinfo = {};
 const xnorm = t => String(t).replace(/[’‘]/g, "'").trim();
+const RELATED_MAX = 3;   // how many related pieces a pop-up shows (the first groups in data/related.js come first)
 function relatedHTML(tab, slug) {
   const key = tab === "notes" && slug.startsWith("book-") ? xkeys.reads[slug.slice(5)] : (xkeys[tab] || {})[slug];
   if (!key) return "";
@@ -125,11 +126,11 @@ function relatedHTML(tab, slug) {
     const ks = g.map(x => xnorm(x)), i = ks.indexOf(xnorm(key));
     if (i < 0) continue;
     for (const k of ks) if (k !== xnorm(key) && xinfo[k] && !out.includes(k)) out.push(k);
-    if (out.length >= 5) break;
+    if (out.length >= RELATED_MAX) break;
   }
   if (!out.length) return "";
   const fromWritings = tab === "notes";
-  return `<nav class="rel" aria-label="Related"><small>Related</small>${out.slice(0, 5).map(k => { const x = xinfo[k]; return `<a href="${x.tag === "Book" && fromWritings ? x.hrefInNotes : x.href}"><em>${x.tag}</em><span class="rt">${esc(x.title)}</span>${x.sub ? `<span class="rs">${esc(x.sub)}</span>` : ""}</a>`; }).join("")}</nav>`;
+  return `<nav class="rel" aria-label="Related"><small>Related</small>${out.slice(0, RELATED_MAX).map(k => { const x = xinfo[k]; return `<a href="${x.tag === "Book" && fromWritings ? x.hrefInNotes : x.href}"><em>${x.tag}</em><span class="rt">${esc(x.title)}</span>${x.sub ? `<span class="rs">${esc(x.sub)}</span>` : ""}</a>`; }).join("")}</nav>`;
 }
 let openTab = "";
 let lastFocus = null, savedY = 0;   // savedY: where the page behind was scrolled when a pop-up opened
@@ -336,10 +337,10 @@ const notePage = (() => {
   const US_STATES = "AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC".split(" ");
   const countryOf = n => { const ls = String(n.place || "").split("\n"), t = (ls[1] || "").split(",").pop().trim(); return US_STATES.includes(t) || /미국|美国/.test(ls.join(" ")) ? "United States" : t === "South Korea" ? "Korea" : /^[A-Za-z .'-]+$/.test(t) ? t : ""; };
   // the Chinese reviews in Reads are writing too, so they count toward the yearly total and the map (a read that shares another read's text, sameAs, is counted once)
-  const chineseReads = (window.READS || []).filter(r => !r.sameAs && (r.languages || []).some(l => /Chinese/.test(l)));
+  const chineseReads = (window.READS || []).filter(r => !r.sameAs && !r.noPost && (r.languages || []).some(l => /Chinese/.test(l)));
   const everything = [...list, ...chineseReads];
   // the list shows these reads too, by their review title, each linking to its page in Reads (same link names as the Reads page gives them)
-  const allReads = (window.READS || []).map(n => n.sameAs ? { ...window.READS.find(x => x.slug === n.sameAs), ...n } : n).sort((a, b) => (a.date < b.date ? 1 : -1));
+  const allReads = (window.READS || []).filter(n => !n.noPost).map(n => n.sameAs ? { ...window.READS.find(x => x.slug === n.sameAs), ...n } : n).sort((a, b) => (a.date < b.date ? 1 : -1));
   const readIds = slugs(allReads, n => n.title);
   const entries = [...list.map((n, i) => ({ n, href: "#notes/" + ids[i], cat: n.category })), ...allReads.map((n, i) => ({ n, href: "#notes/book-" + readIds[i], cat: "Book" })).filter(e => (e.n.languages || []).some(l => /Chinese/.test(l)))].sort((a, b) => (a.n.date < b.n.date ? 1 : -1));
   // on this page every read is simply a "Book" (its own genre stays on its pop-up); the category cards count notes and books together, most first
@@ -435,23 +436,24 @@ const notePage = (() => {
 (function reads() {
   const raw = window.READS || [];
   const list = raw.map(n => n.sameAs ? { ...raw.find(x => x.slug === n.sameAs), ...n } : n).sort((a, b) => (a.date < b.date ? 1 : -1));   // sameAs: the text of another read
-  const ids = slugs(list, n => n.title);
+  const ids = slugs(list, n => n.title || (n.book || {}).title);   // noPost: true = a book on the wall and in the charts, with no review and no pop-up
   // on the wall a book goes by its own name: "棉花帝国 (Empire of Cotton)" shows as 棉花帝国, "林奕含 Lin Yi-han" as 林奕含 (the page keeps both)
   const nonLatin = t => /[^\u0000-\u024f\u1e00-\u1eff\u2000-\u206f]/.test(t);
   const ownTitle = t => { const m = String(t).match(/^(.*?)\s*\([^)]*\)\s*$/); return m && nonLatin(m[1]) ? m[1] : t; };
   const ownAuthor = a => { const m = String(a).match(/^(.*?)\s+[\p{Script=Latin}][\p{Script=Latin}\s.'’-]*$/u); return m && nonLatin(m[1]) ? m[1] : a; };
-  orders.reads = list.map((n, i) => ({ slug: ids[i], title: ownTitle((n.book || {}).title || n.title) }));
-  list.forEach((n, i) => { if (n.sameAs) return; const k = "r:" + xnorm(n.title); xkeys.reads[ids[i]] = k; xinfo[k] = { tag: "Book", title: n.title, sub: ownTitle((n.book || {}).title || ""), href: "#reads/" + ids[i], hrefInNotes: "#notes/book-" + ids[i] }; });
-  if (list[0]) latest.push({ date: list[0].date, kind: "read", title: orders.reads[0].title, href: "#reads/" + ids[0] });
-  const card = (n, i) => { const b = n.book || {};
-    return `<a class="read" href="#reads/${ids[i]}">${b.cover ? `<img class="rcov" ${thumb(b.cover)} alt="" loading="lazy" decoding="async">` : `<span class="rcov none"></span>`}
-      <span class="rt">${esc(ownTitle(b.title || n.title))}</span>${b.author ? `<span class="ra">${esc(ownAuthor(b.author))}</span>` : ""}</a>`; };
+  orders.reads = list.map((n, i) => ({ slug: ids[i], title: ownTitle((n.book || {}).title || n.title) })).filter((o, i) => !list[i].noPost);   // Older / Newer skip books without a review
+  list.forEach((n, i) => { if (n.noPost || (n.sameAs && n.title === (raw.find(x => x.slug === n.sameAs) || {}).title)) return; const k = "r:" + xnorm(n.title); xkeys.reads[ids[i]] = k; xinfo[k] = { tag: "Book", title: n.title, sub: ownTitle((n.book || {}).title || ""), href: "#reads/" + ids[i], hrefInNotes: "#notes/book-" + ids[i] }; });
+  const firstReview = list.findIndex(n => !n.noPost);
+  if (firstReview >= 0) latest.push({ date: list[firstReview].date, kind: "read", title: orders.reads[0].title, href: "#reads/" + ids[firstReview] });
+  const card = (n, i) => { const b = n.book || {}, tag = n.noPost ? `div class="read nopost"` : `a class="read" href="#reads/${ids[i]}"`, end = n.noPost ? "div" : "a";
+    return `<${tag}>${b.cover ? `<img class="rcov" ${thumb(b.cover)} alt="" loading="lazy" decoding="async">` : `<span class="rcov none"></span>`}
+      <span class="rt">${esc(ownTitle(b.title || n.title))}</span>${b.author ? `<span class="ra">${esc(ownAuthor(b.author))}</span>` : ""}</${end}>`; };
   // filter by the country the book was first published in (book.country, a string or a list) as a flag, most common first; no filter row when there is only one
   const countriesOf = n => [].concat((n.book || {}).country || []);
   const countries = [...new Set(list.flatMap(countriesOf))].sort((a, b) => list.filter(n => countriesOf(n).includes(b)).length - list.filter(n => countriesOf(n).includes(a)).length || (a < b ? -1 : 1));
   const countriesEl = document.getElementById("reads-countries"), listEl = document.getElementById("reads-list");
   // genre cards (like the Plates collection cards): a card filters the wall by book.category / the note's category and combines with the country flags; "More" is every other category
-  const GENRES = [["novel", "Novels", ["Novel", "Short stories"]], ["history", "History", ["History", "Oral history", "Ethnography"]], ["philosophy", "Philosophy", ["Philosophy", "Political thought"]], ["memoir", "Memoirs", ["Memoir"]], ["economics", "Economics", ["Economics"]]];
+  const GENRES = [["novel", "Novels", ["Novel", "Short stories"]], ["history", "History", ["History", "Oral history", "Ethnography"]], ["memoir", "Memoirs", ["Memoir"]], ["philosophy", "Philosophy", ["Philosophy", "Political thought"]], ["poetry", "Poetry", ["Poetry", "Epic poem", "Novel in verse"]]];
   const known = GENRES.flatMap(g => g[2]);
   const inGenre = (n, k) => { const c = n.category || (n.book || {}).category || ""; const g = GENRES.find(x => x[0] === k); return g ? g[2].includes(c) : !known.includes(c); };
   // line chart: words read per year (catalog word counts, with explicitly marked fallbacks where no edition-level count is published online). Combines with the genre cards and flags.
@@ -477,7 +479,7 @@ const notePage = (() => {
   countriesEl.addEventListener("click", e => { const b = e.target.closest("[data-v]"); if (b) { country = b.dataset.v; render(); } });
   genreEl.addEventListener("click", e => { const b = e.target.closest("button[data-genre]"); if (b) { genre = b.dataset.genre; render(); } });
   render();
-  popups.reads = slug => { const n = list[ids.indexOf(slug)]; return n && notePage(n); };
+  popups.reads = slug => { const n = list[ids.indexOf(slug)]; return n && !n.noPost ? notePage(n) : undefined; };
   const ys = list.map(n => +n.date.slice(0, 4));
   if (ys.length) { const lo = Math.min(...ys), hi = Math.max(...ys); document.getElementById("reads-copy").textContent = `© ${lo === hi ? lo : lo + "–" + hi} Haotian He · hehaotian.com. All rights reserved.`; }
 })();

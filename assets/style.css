@@ -142,6 +142,8 @@ body[data-tab="gigs"] { --frame: 880px; }
 .read { display: flex; flex-direction: column; color: var(--text); text-decoration: none; }
 .read .rcov { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border: 1px solid var(--line); background: #f1eee7; }
 .read:hover .rcov { border-color: #aaa; }
+.read.nopost { cursor: default; }
+.read.nopost:hover .rcov { border-color: var(--line); }   /* a book without a review: on the wall and in the charts, but nothing to open */
 .read .rt { font-weight: 600; font-size: 15px; line-height: 1.3; margin-top: 10px; }
 .read .ra { color: var(--muted); font-size: 14px; }
 

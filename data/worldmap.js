@@ -38,5 +38,5 @@ window.COUNTRY_XY = {
   "Austria": [47.5, 14], "Netherlands": [52.2, 5.3], "Belgium": [50.6, 4.6], "Sweden": [62, 15], "Norway": [62, 9], "Czech Republic": [49.8, 15.5],
   "Poland": [52, 19], "Portugal": [39.5, -8], "Ireland": [53.3, -8], "India": [22, 79], "Australia": [-25, 134], "Brazil": [-10, -52], "Mexico": [24, -102],
   "Chile": [-33, -71], "Colombia": [4, -73], "Peru": [-10, -75], "Egypt": [27, 30], "Malaysia": [3.5, 102], "Indonesia": [-2, 115], "Turkey": [39, 35], "Israel": [31.5, 35], "Iran": [32, 53], "Vietnam": [16, 107],
-  "Thailand": [15, 101], "Singapore": [1.4, 103.8], "Nigeria": [9, 8], "South Africa": [-29, 24], "Ukraine": [49, 32], "Hungary": [47, 19.5], "Romania": [46, 25], "Cambodia": [12.5, 105]
+  "Thailand": [15, 101], "Singapore": [1.4, 103.8], "Nigeria": [9, 8], "South Africa": [-29, 24], "Ukraine": [49, 32], "Hungary": [47, 19.5], "Romania": [46, 25], "Cambodia": [12.5, 105], "Sri Lanka": [7.5, 80.7], "Mongolia": [46.9, 103.8], "Bulgaria": [42.7, 25.5], "Ecuador": [-1.8, -78.2], "Zimbabwe": [-19, 29.9]
 };
